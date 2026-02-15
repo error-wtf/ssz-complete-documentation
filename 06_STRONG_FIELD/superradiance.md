@@ -1,31 +1,41 @@
-# SSZ Regulator of Superradiant Instabilities
+# Superradiance Stabilization
 
-**Paper:** 12 (SSZ as Natural Regulator of Superradiant Instabilities)
+**Status:** CANONICAL
+**Paper:** 12 — SSZ as Natural Regulator of Superradiant Instabilities
 
 ---
 
-## The Black Hole Bomb Problem
+## The Problem
 
-In GR, superradiant scattering can extract rotational energy from a Kerr black hole. With a confining mechanism (e.g., massive bosons), this creates an exponentially growing instability — the "black hole bomb."
+Superradiant instabilities occur in rotating black holes (Kerr BHs) when bosonic fields extract rotational energy. In GR, this can lead to runaway amplification — the "black hole bomb" scenario.
 
 ---
 
 ## SSZ Stabilization
 
-SSZ provides a natural regulator through:
+SSZ naturally regulates superradiance because:
 
+1. **Bounded Ξ:** The segment density saturates at Ξ_max = 0.802, preventing infinite amplification
+2. **Finite D:** Time dilation at the horizon is D = 0.555 (not zero), so the amplification condition is modified
+3. **No ergoregion singularity:** The SSZ metric doesn't develop the extreme properties that enable unlimited energy extraction
+
+### SSZ Superradiance Formula
 ```
 G_SSZ = exp[∫γ ds] · ∏ e^{-λ_A σ(θ_k)} · R(1-K)
 S = Δ_unstable + ⟨Δlog G⟩
 ```
 
-The S-index quantifies stability. SSZ's segment density provides:
-1. **Natural damping** through Ξ-dependent effective potential modifications
-2. **Saturation ceiling** preventing runaway growth
-3. **Finite horizon effects** modifying the superradiance condition
+The gain factor G_SSZ is bounded, unlike the GR version which can diverge.
 
 ---
 
-## Result
+## Physical Consequence
 
-The SSZ framework naturally prevents the black hole bomb instability without additional assumptions, because the segment density saturates and D remains finite at the horizon.
+- SSZ predicts **stable** rapidly-rotating compact objects
+- No superradiant "explosion" or runaway energy extraction
+- Modified spin-down rates for near-extremal objects
+- Testable via gravitational wave ringdown (LISA, 2034+)
+
+---
+
+© 2025–2026 Carmen N. Wrede, Lino P. Casu

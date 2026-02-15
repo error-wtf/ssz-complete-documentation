@@ -1,68 +1,107 @@
-# Complete Black Hole Metric
+# SSZ Black Hole Metric
 
-**Paper:** 04 (Segmented Spacetime: On the Metric of Black Holes)
+**Status:** CANONICAL
+**Paper:** 04 — On the Metric of Black Holes
 
 ---
 
-## SSZ Metric
+## The SSZ Metric Tensor
 
-The SSZ metric modifies the Schwarzschild metric through the segment density:
+The SSZ metric modifies the Schwarzschild metric by replacing the standard time-dilation factor with the Ξ-based version:
 
+### Standard Schwarzschild (GR)
 ```
-ds² = -D²(r) c² dt² + s²(r) dr² + r² dΩ²
+ds² = -(1 - r_s/r) c²dt² + (1 - r_s/r)⁻¹ dr² + r² dΩ²
+```
+
+### SSZ Metric
+```
+ds² = -D²(r) c²dt² + s²(r) dr² + r² dΩ²
+```
 
 where:
-  D(r) = 1/(1 + Ξ(r))    time dilation
-  s(r) = 1 + Ξ(r)         scaling factor
-  dΩ² = dθ² + sin²θ dφ²
+- D(r) = 1/(1 + Ξ(r)) — time-dilation factor
+- s(r) = 1 + Ξ(r) = 1/D(r) — radial scaling factor
+- dΩ² = dθ² + sin²θ dφ² — angular part (unchanged)
+
+---
+
+## Metric Components
+
+```
+g_tt = -D²(r) = -1/(1+Ξ)²
+g_rr = +s²(r) = (1+Ξ)²
+g_θθ = r²
+g_φφ = r²sin²θ
+```
+
+### Comparison with GR
+
+| Component | GR | SSZ |
+|-----------|-----|-----|
+| g_tt(r_s) | 0 (singular) | -0.308 (finite) |
+| g_rr(r_s) | ∞ (singular) | 3.248 (finite) |
+| g_tt(r→∞) | -1 | -1 |
+| g_rr(r→∞) | +1 | +1 |
+
+---
+
+## Key Properties
+
+### No Coordinate Singularity at r_s
+In GR, the Schwarzschild coordinates break down at r = r_s. In SSZ:
+```
+g_tt(r_s) = -D²(r_s) = -(0.555)² = -0.308    (finite!)
+g_rr(r_s) = s²(r_s) = (1.802)² = 3.248        (finite!)
+```
+No coordinate change needed — the SSZ metric is regular at the horizon.
+
+### Finite Curvature
+All curvature invariants (Ricci scalar, Kretschmer scalar) remain finite at r_s.
+
+### Asymptotic Flatness
+As r → ∞, Ξ → 0, and:
+```
+g_tt → -1,  g_rr → +1  (Minkowski limit)
 ```
 
 ---
 
-## Key Difference from GR
+## Einstein Tensor
 
-| Property | Schwarzschild (GR) | SSZ |
-|----------|-------------------|-----|
-| g_tt at r_s | 0 (singular) | D² = 0.308 (finite) |
-| g_rr at r_s | ∞ (singular) | s² = 3.24 (finite) |
-| Curvature at r_s | Finite (Kretschner) | Finite |
-| Light cones at r_s | Close | Modified but regular |
+The SSZ metric generates a non-trivial Einstein tensor G_μν:
+- G^t_t (energy density) — positive for r ≥ 5r_s
+- G^r_r (radial pressure) — related to Ξ gradient
+- G^θ_θ = G^φ_φ (tangential pressure)
 
----
-
-## 4D Tensor Formulation (ssz-metric-pure)
-
-- **Metric tensor:** g_μν (4×4) + inverse g^μν
-- **Christoffel symbols:** Γ^ρ_μν (10 non-zero components)
-- **Einstein tensor:** G^μ_ν (4 components, mixed indices)
-- **Ricci tensor:** R_μν + scalar R
-- **Kretschmann scalar:** K (finite everywhere, singularity-free)
+The Einstein equations G_μν = (8πG/c⁴)T_μν are satisfied with an effective stress-energy tensor that represents the segmentation field.
 
 ---
 
-## 2PN Calibration (v2.1.0)
+## 4D Tensor Package
 
-```
-φ²_G(r) = 2U(1 + U/3),  U = GM/(rc²)
-```
+The complete tensor calculations are in `ssz-metric-pure`:
 
-- 100× faster convergence than 1PN
-- GPS redshift: < 0.05% error
-- Pound-Rebka: exact match
+| Tensor | File | Status |
+|--------|------|--------|
+| Metric g_μν | SSZ_METRIC_TENSOR_COMPLETE.tex | ✅ |
+| Christoffel Γ^λ_μν | SSZ_METRIC_TENSOR_COMPLETE.tex | ✅ |
+| Riemann R^ρ_σμν | SSZ_EINSTEIN_RICCI_CURVATURE.tex | ✅ |
+| Ricci R_μν | SSZ_EINSTEIN_RICCI_CURVATURE.tex | ✅ |
+| Ricci scalar R | SSZ_EINSTEIN_RICCI_CURVATURE.tex | ✅ |
+| Einstein G_μν | SSZ_EINSTEIN_RICCI_CURVATURE.tex | ✅ |
+| Weyl C_μνρσ | Computed in tests | ✅ |
+| Kretschmer K | Computed in tests | ✅ |
 
 ---
 
-## Validation: 10/10 PASS
+## Tests
 
-| Test | Target | Status |
-|------|--------|--------|
-| Asymptotic flatness | ≤10⁻⁶ | ✅ |
-| GPS redshift | ≤0.1% | ✅ |
-| Pound-Rebka | ≤0.1% | ✅ |
-| Shapiro delay | ≤5% | ✅ |
-| Light deflection | ≤10% | ✅ |
-| Metric compatibility | ≤10⁻¹³ | ✅ |
-| Energy conservation | ≤10⁻¹² | ✅ |
-| Light cone closing | Monotonic | ✅ |
-| Curvature invariants | Finite | ✅ |
-| SSZ kernel elements | γ,β,φ | ✅ |
+| Test | Repository |
+|------|------------|
+| test_metric_tensor.py | ssz-metric-pure |
+| test_einstein_equations.py | ssz-metric-pure |
+
+---
+
+© 2025–2026 Carmen N. Wrede, Lino P. Casu
