@@ -1,57 +1,65 @@
-# Method Assignment Table
+# Method Assignment
+
+**Status:** CANONICAL — ALWAYS FOLLOW
 
 ---
 
-## When to Use What
+## The Assignment Table
 
-| Observable | Method | Formula | Why |
-|-----------|--------|---------|-----|
-| Time dilation | Ξ | D = 1/(1+Ξ) | Only g_tt component |
-| Frequency shift | Ξ | ν_obs = ν_emit × D | Same as time dilation |
-| **Light deflection** | **PPN (1+γ)** | α = (1+γ)r_s/b = 2r_s/b | Needs g_tt + g_rr |
-| **Shapiro delay** | **PPN (1+γ)** | Δt = (1+γ)Δt_Ξ | Needs g_tt + g_rr |
-| Perihelion precession | PPN | Standard formula | Standard PPN |
-
----
-
-## Why the "Factor 2"?
-
-```
-Ξ-integration captures only g_tt (temporal component)
-PPN captures g_tt + g_rr (temporal + spatial)
-
-α_total = α_tt + α_rr = r_s/b + r_s/b = 2r_s/b ✓
-```
-
-Getting 50% of GR for a null observable means you used Ξ-only instead of PPN. This is the expected g_tt-only result, not a bug.
+| Observable | Type | Method | Formula |
+|-----------|------|--------|---------|
+| Time dilation | Timelike (clock) | Ξ | D = 1/(1+Ξ) |
+| Gravitational redshift | Timelike (clock) | Ξ | z = Ξ(r) |
+| Frequency shift | Timelike (clock) | Ξ | ν_obs = ν_emit × D |
+| GPS correction | Timelike (clock) | Ξ | ΔD × t |
+| Pound-Rebka | Timelike (clock) | Ξ | Δν/ν = ΔΞ |
+| **Lensing deflection** | **Null (light)** | **PPN** | **α = (1+γ)r_s/b = 2r_s/b** |
+| **Shapiro delay** | **Null (light)** | **PPN** | **Δt = (1+γ)(r_s/c)ln(...)** |
+| **VLBI delay** | **Null (light)** | **PPN** | **(1+γ) factor** |
+| Perihelion precession | Timelike (orbit) | PPN | Δω = 6πGM/[a(1-e²)c²] |
+| Frame dragging | Timelike (orbit) | PPN | Standard Lense-Thirring |
+| Geodetic precession | Timelike (orbit) | PPN | Standard PPN |
 
 ---
 
-## PPN Parameters in SSZ
+## Why This Matters
 
-```
-γ = 1 (exact in weak field)
-β = 1 (exact)
-```
+Using the wrong method produces the wrong answer:
 
-These are exact, not approximations.
+| Observable | Wrong method (Ξ-only) | Right method | Error |
+|-----------|----------------------|-------------|-------|
+| Lensing | α = r_s/b | α = 2r_s/b | **50% too low** |
+| Shapiro | Δt_Ξ | 2×Δt_Ξ | **50% too low** |
+| Time dilation | D_PPN (overcounted) | D_Ξ | Overcounted |
 
----
-
-## Shapiro: One-Way vs Round-Trip
-
-Always distinguish:
-- **One-way signal delay** vs **Round-trip radar echo** (extra factor 2)
-- This is **separate from** the PPN (1+γ) factor
-- Never conflate them
+The factor-2 discrepancy is NOT a bug — it's the difference between g_tt-only (Ξ) and g_tt+g_rr (PPN).
 
 ---
 
-## Energy Accounting
+## PPN Parameters
 
-**NEVER** add SR + GR + "extra" energies linearly (triple counting).
+```
+β = 1 (exact in SSZ)
+γ = 1 (exact in SSZ)
+```
 
-**USE** multiplicative factor bookkeeping:
+Confirmed: Cassini (2003): γ = 1.000021 ± 0.000023
+
+---
+
+## Decision Flowchart
+
 ```
-E_obs = E_rest × (transform factors)
+1. Identify the observable
+2. Classify: Does it involve LIGHT PATH or CLOCK/ORBIT?
+   → Light path (null geodesic) → PPN with (1+γ)
+   → Clock comparison (static) → Ξ directly
+   → Orbital dynamics → PPN (β,γ) machinery
+3. Determine regime (r/r_s)
+4. Select correct Ξ formula for that regime
+5. Calculate
 ```
+
+---
+
+© 2025–2026 Carmen N. Wrede, Lino P. Casu

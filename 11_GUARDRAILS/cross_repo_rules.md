@@ -1,56 +1,76 @@
 # Cross-Repository Rules
 
+**Status:** CANONICAL
+
 ---
 
-## The Core Problem
+## Core Principle
 
-"Apparent contradictions" between repos arise from **missing documentation**, not faulty physics. Each repo is internally consistent but may use different scopes, methods, or regime ranges.
+> **Guardrails = Documentation hardening, NOT error correction.**
+
+The repos are **physically correct and internally consistent.** Guardrails prevent:
+1. Cross-repo confusion from comparing different-scope results
+2. Silent wrong-method application
+3. Future misunderstandings when extending the framework
 
 ---
 
 ## Repo Scope Index
 
-| Repo | Scope | Ξ Formula | PPN? |
-|------|-------|-----------|------|
-| ssz-qubits | Weak | r_s/(2r) | NO |
-| ssz-metric-pure | Strong | 1-exp(-φr_s/r) | YES |
-| maxwell/lensing | Blend | Hermite C² | YES |
-| Unified-Results | Strong | Ξ_max(1-exp(...)) | YES |
-| frequency-curvature | Weak+PPN | r_s/(2r) | YES |
+| Repository | Scope | Ξ Formula | PPN? | Primary Use |
+|-----------|-------|-----------|------|------------|
+| segmented-calculation-suite | All regimes | Full (weak+strong+blend) | YES | Core engine |
+| ssz-qubits | Weak field | r_s/(2r) | NO | GPS, PR, S2 |
+| frequency-curvature-validation | Weak field | r_s/(2r) | YES | Shapiro, lensing |
+| ssz-lensing | Weak-to-strong | Full | YES | Gravitational lensing |
+| ssz-metric-pure | Strong field | 1-exp(-φr_s/r) | YES | 4D tensors |
+| maxwell | Blend | Hermite C² | YES | EM fields |
+| Unified-Results | All regimes | Full | YES | 25 test suites |
+| g79-cygnus-tests | Specific object | As needed | NO | G79 nebula |
+| ssz-schumann | Exploratory | As needed | NO | Schumann resonance |
 
 ---
 
 ## Rules
 
-1. **ALWAYS** classify the observable before calculating
-2. **NEVER** compare repos without checking their scope
-3. **50%** of GR for null observables is **NOT A BUG** (Ξ-only vs PPN)
+### Rule 1: Scope Check Before Comparison
+Before comparing Ξ values between repos, check their scope. A weak-field repo (ssz-qubits) and a strong-field repo (ssz-metric-pure) use **different formulas by design.**
+
+### Rule 2: Method Check Before Calculation
+Before computing an observable, verify the method assignment:
+- Clock/redshift → Ξ
+- Light path → PPN (1+γ)
+- Orbit → PPN (β,γ)
+
+### Rule 3: Deprecated Formula Ban
+The formula `Ξ = (r_s/r)² × exp(-r/r_φ)` is **FORBIDDEN** everywhere. If found in any active code path, it must be replaced.
+
+| Location | Action |
+|----------|--------|
+| **Active code path** (computation) | REPLACE immediately |
+| **Notes/old code only** | Mark as deprecated, don't patch |
+
+### Rule 4: Regime Boundary Consistency
+All repos must use the same regime boundaries:
+- Blend zone: 1.8 ≤ r/r_s ≤ 2.2
+- NOT 90/110 (those are probe radii for testing)
+
+### Rule 5: r*/r_s Values
+Two r* values exist — both are correct:
+- **r*/r_s ≈ 1.595:** Ξ_weak ∩ D_GR (weak-field proxy intersection)
+- **r*/r_s ≈ 1.387:** Ξ_strong ∩ D_GR (strong-field intersection)
+
+These are regime-appropriate descriptions, NOT contradictions.
 
 ---
 
-## False Alarm Detection
+## Correct Interpretation
 
-| Symptom | Actual Cause |
-|---------|-------------|
-| 50% of GR result | Ξ-only instead of PPN |
-| Formulas look different | Different scope/regime |
-| Tests contradict each other | Different observables |
-| Different r*/r_s values | Different Ξ forms (1.595 vs 1.387) |
+```
+"Internally consistent" = Code/Physics OK
+"Not compliant"         = Conventions not explicitly documented
+```
 
 ---
 
-## Deprecated Formula Handling
-
-| Where Found | Action |
-|-------------|--------|
-| Active calculation path | **REPLACE** immediately |
-| Notes/old code only | Mark as deprecated, don't patch |
-
----
-
-## Key Insight
-
-> **Guardrails = Documentation hardening, NOT error correction.**
->
-> The repos are physically correct and internally consistent.
-> Guardrails prevent cross-repo misunderstandings.
+© 2025–2026 Carmen N. Wrede, Lino P. Casu
