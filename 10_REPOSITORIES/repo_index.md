@@ -62,7 +62,7 @@
 
 | # | Repository | Description | Branch |
 |---|-----------|-------------|--------|
-| 26 | [error-wtf.github.io](https://github.com/error-wtf/error-wtf.github.io) | Matrix Portal — browse all public repos | main |
+| 26 | [error-wtf.github.io](https://github.com/error-wtf/error-wtf.github.io) | Matrix Portal — 35 repos, terminal with Tetris, talk, hack, quotes | main |
 | 27 | [mastodon-matrix-theme](https://github.com/error-wtf/mastodon-matrix-theme) | Cyberpunk Matrix theme for Mastodon v4.3+ | master |
 | 28 | [errordon](https://github.com/error-wtf/errordon) | Mastodon fork with media tabs, 250MB uploads | develop |
 | 29 | [matrixshell-web](https://github.com/error-wtf/matrixshell-web) | Matrix shell web application | main |
@@ -78,7 +78,7 @@
 | # | Repository | Description | Branch |
 |---|-----------|-------------|--------|
 | 34 | [TRYING-FETCH-LIGO](https://github.com/error-wtf/TRYING-FETCH-LIGO) | LIGO data fetching *(private)* | main |
-| 35 | *(1 repo not visible in paginated API results)* | — | — |
+| 35 | [speach](https://github.com/error-wtf/speach) | Voice AI Agent with Ollama + faster-whisper + ElevenLabs | main |
 
 ---
 
