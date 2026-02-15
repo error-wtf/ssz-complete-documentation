@@ -33,7 +33,7 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 | 07 | [Validation](07_VALIDATION/) | Test methodology, cross-repo results, GR vs SSZ tables |
 | 08 | [Falsification](08_FALSIFICATION/) | Testable predictions, instruments, falsification criteria |
 | 09 | [Papers](09_PAPERS/) | All 25 papers, bibliography, preprints |
-| 10 | [Repositories](10_REPOSITORIES/) | 13 repos, test index, reproducibility |
+| 10 | [Repositories](10_REPOSITORIES/) | All 35 repos, test index, reproducibility |
 | 11 | [Guardrails](11_GUARDRAILS/) | Prime directive, method assignment, confusion prevention |
 | 12 | [Glossary](12_GLOSSARY/) | EN/DE terminology |
 
@@ -44,9 +44,9 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 | Metric | Value |
 |--------|-------|
 | Papers | 25 primary + 7 additional |
-| Repositories | 13 active (GitHub: error-wtf) |
-| Tests | 747+ validated, 183 test files |
-| Documentation files | 1,786+ across all repos |
+| Repositories | 35 total (17 SSZ, 2 math, 3 research, 3 tools, 8 web, 2 private) |
+| Tests | 747+ validated, 200+ test files |
+| Documentation files | 1,803+ across all repos |
 | Consistency checks | 171/171 PASS |
 | Book chapters | 30 (8 parts + appendices A–G) |
 | Manuscript | ~90,000 words, ~300 pages |
