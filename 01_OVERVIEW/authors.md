@@ -1,31 +1,43 @@
-# Authors & Credits
+# Authors & Contributors
 
 ---
 
-## Primary Authors
+## Human Authors
 
 ### Carmen N. Wrede
-- Lead theorist, formula development, physical interpretation
-- Independent researcher, 25+ SSZ papers on ResearchGate
+- **Role:** Co-creator, lead physicist
+- **Contributions:** Theory development, φ-geometry framework, regime definitions, paper writing, experimental design, falsification criteria
 
 ### Lino P. Casu
-- Co-author, validation, mathematical physics
-- Test frameworks, numerical verification
+- **Role:** Co-creator, lead physicist
+- **Contributions:** Core SSZ formulation, metric tensor development, validation framework, mathematical proofs, paper writing
 
 ---
 
 ## AI Assistants
 
-- **Bingsi:** Computational assistance, code generation, validation pipelines
-- **Akira:** Mathematical assistance, paper drafting, formula verification
+### Bingsi (Microsoft Copilot)
+- **Role:** Research assistant, early development support
+- **Contributions:** Early paper exploration, formula checking, literature search
+
+### Akira (Windsurf Cascade)
+- **Role:** Technical implementation, validation pipeline
+- **Contributions:** Code development, test suite engineering, cross-repo validation, documentation compilation, consistency checking
 
 ---
 
-## Publication
+## Contact
 
-- 25 primary papers on ResearchGate (2025)
-- 7 additional works (overview, theorems, syntheses)
-- 13 code repositories on GitHub (error-wtf)
-- 1 book manuscript (~90,000 words, 30 chapters + 7 appendices)
+- **Email:** mail@error.wtf
+- **GitHub:** [github.com/error-wtf](https://github.com/error-wtf)
+- **Papers:** Available on ResearchGate under author profiles
 
-**GitHub:** [github.com/error-wtf](https://github.com/error-wtf)
+---
+
+## License
+
+All SSZ work is published under the **Anti-Capitalist Software License v1.4**.
+
+---
+
+© 2025–2026 Carmen N. Wrede, Lino P. Casu
