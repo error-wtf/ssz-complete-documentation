@@ -1,30 +1,49 @@
-# Local Lorentz Invariance and Frame Dragging
+# Frame Dragging
 
-**Paper:** 24 (Transformation-Based Definition of Local Lorentz Invariance)
+**Status:** CANONICAL
+**Paper:** 24 — A Transformation-Based Definition of Local Lorentz Invariance and Its Connection to Frame Dragging
 
 ---
 
-## Local Lorentz Invariance in SSZ
+## Frame Dragging in SSZ
+
+Frame dragging (Lense-Thirring effect) in GR arises from the off-diagonal g_{tφ} metric components near rotating masses. SSZ does not modify the angular structure but affects the time component through Ξ.
+
+---
+
+## SSZ Approach
+
+For a rotating mass (Kerr-like geometry):
+- The angular momentum J creates an off-diagonal metric term
+- SSZ modifies the g_tt component: g_tt = -(1 - 2Ξ(r)) instead of -(1 - r_s/r)
+- The g_{tφ} cross-term is treated via standard PPN orbit machinery
+
+### Method Assignment
+Frame dragging is a **timelike orbit observable** → uses **PPN (β, γ)**, NOT Ξ-only.
+
+---
+
+## Local Lorentz Invariance
 
 SSZ maintains local Lorentz invariance by construction:
-- The speed of light c is locally invariant
+- The speed of light c is locally invariant everywhere
 - Effects arise from geometry/path + clock mapping, not local speed changes
-- The segment density Ξ modifies the clock rate, not the local physics
+- The transformation between frames preserves the local light cone structure
+
+The transformation-based definition (Paper 24) shows that SSZ's modified time dilation is compatible with local Lorentz invariance because Ξ enters as a position-dependent scale, not a velocity-dependent one.
 
 ---
 
-## Connection to Frame Dragging
+## Observable Consequences
 
-Paper 24 establishes the connection between:
-- SSZ's transformation-based definition of local invariance
-- Classical frame-dragging effects (Lense-Thirring, geodetic precession)
+| Observable | Method | SSZ vs GR |
+|-----------|--------|-----------|
+| Lense-Thirring precession | PPN | Identical (weak field) |
+| Geodetic precession | PPN | Identical (weak field) |
+| Frame dragging near NS | PPN + Ξ correction | Different (strong field) |
 
-The key insight: SSZ's time dilation factor D(r) is consistent with the frame-dragging predictions of GR in the weak field, while providing a finite, well-behaved description in the strong field.
+In the weak field (where frame dragging has been measured, e.g., Gravity Probe B), SSZ = GR exactly.
 
 ---
 
-## Implications
-
-- No violation of local Lorentz symmetry
-- Frame-dragging effects are reproduced in the PPN limit
-- Strong-field modifications come from Ξ saturation, not symmetry breaking
+© 2025–2026 Carmen N. Wrede, Lino P. Casu

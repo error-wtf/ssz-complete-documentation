@@ -1,37 +1,60 @@
 # Lorentz Indeterminacy at v=0
 
-**Paper:** 19 (Geometric Resolution of the Lorentz Indeterminacy at v=0)
+**Status:** CANONICAL
+**Paper:** 19 — Geometric Resolution of the Lorentz Indeterminacy at v=0
 
 ---
 
-## The GR Problem
+## The Problem
 
+In standard Special Relativity, the Lorentz factor at v=0 is trivially:
 ```
-γ_GR(v) = 1 / √(1 - v²/c²)
-
-At v = 0: γ_GR = 1 (trivial)
+γ_SR(v=0) = 1/√(1-0) = 1
 ```
 
-The standard Lorentz factor at v=0 gives no information about the gravitational environment. A clock at rest in a gravitational field has γ=1 regardless of field strength — but it IS time-dilated.
+This says "nothing happens at zero velocity." But in a gravitational field, a stationary clock still experiences time dilation — the Lorentz factor misses this gravitational encoding.
 
 ---
 
-## The SSZ Solution
+## SSZ Resolution
+
+SSZ introduces a modified Lorentz factor that includes gravitational segmentation:
 
 ```
 γ_SSZ(v) = exp(Ξ · v²/c²)
-
-At v = 0: γ_SSZ = exp(0) = 1
 ```
 
-This is **regular** (no indeterminacy), and the gravitational encoding persists through the Ξ parameter even when v=0.
+At v=0:
+```
+γ_SSZ(v=0) = exp(0) = 1
+```
 
-The segment density Ξ provides the "missing" gravitational information that the standard Lorentz factor cannot encode at zero velocity.
+The result is still 1 at v=0, but the **functional form** carries gravitational information through Ξ. This means:
+- The v-dependence is Ξ-modulated
+- Gravitational effects are encoded in the velocity-dependence curve, not just the v=0 limit
+- The expression is regular (no singularity, no indeterminacy)
 
 ---
 
-## Key Insight
+## Why This Matters
 
-In SSZ, the gravitational time dilation is encoded in Ξ itself, not in a velocity-dependent factor. The v=0 problem is resolved by construction: D(r) = 1/(1+Ξ(r)) works at all velocities including v=0.
+The standard Lorentz factor γ = 1/√(1-v²/c²) treats gravity and velocity as separate phenomena. SSZ's formulation unifies them:
 
-**Test:** `test_lorentz_limit.py`
+| Property | Standard SR | SSZ |
+|----------|------------|-----|
+| γ(v=0) | 1 (trivial) | 1 (with Ξ encoding) |
+| γ(v→c) | ∞ | exp(Ξ) (bounded) |
+| Gravity included | No | Yes (through Ξ) |
+| Singularity | At v=c | None |
+
+---
+
+## Test
+
+| Test | Repository |
+|------|------------|
+| test_lorentz_limit.py | segmented-calculation-suite |
+
+---
+
+© 2025–2026 Carmen N. Wrede, Lino P. Casu

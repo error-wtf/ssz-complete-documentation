@@ -1,31 +1,56 @@
 # Maxwell Waves as Rotating Space
 
-**Paper:** 22 (Maxwell Waves as Rotating Space)
+**Status:** CANONICAL
+**Paper:** 22 — Maxwell Waves as Rotating Space
 
 ---
 
-## Concept
+## Core Concept
 
-In SSZ, electromagnetic waves can be interpreted as manifestations of rotating spatial structure within segmented spacetime.
+Paper 22 reinterprets electromagnetic wave propagation in segmented spacetime as a manifestation of "rotating space" — the wave equation in the scaled coordinates dρ = s(r)·dr has the form of propagation through a medium with a position-dependent refractive index.
 
 ---
 
-## Scaled Maxwell Equations
+## The Wave Equation
 
+In segmented spacetime, the Maxwell wave equation becomes:
 ```
-∇ · (s² E) = 0
-∇ × (s² B) = μ₀ε₀ s² ∂E/∂t
+(1/s) ∂/∂r [(1/s) ∂E/∂r] - (1/c²) ∂²E/∂t² = 0
 ```
 
-The scaling factor s(r) = 1 + Ξ(r) modifies Maxwell's equations by entering as s².
+with s(r) = 1 + Ξ(r).
+
+This is NOT the standard wave equation in curved spacetime. The key difference is the explicit s(r) dependence, which introduces:
+- Modified dispersion
+- Position-dependent phase velocity
+- Additional coupling between field components
 
 ---
 
-## Spiral Structure
+## Technical Warning
 
-The connection between EM propagation and spiral geometry:
-- Light follows paths modified by the segment density
-- The spiral motif of φ-geometry naturally describes wave propagation
-- Logarithmic spiral: r(θ) = r₀ · e^{bθ} with b = lnφ/Δθ
+For oscillatory fields (large k·ρ):
+- **DO NOT** validate using finite-difference second derivatives
+- **USE** analytic chain rule
 
-This is consistent with the Euler embedding from Paper 06.
+The second-derivative operator in transformed coordinates:
+```
+d²/dρ² = (1/s²) d²/dr² - (s'/s³) d/dr
+```
+
+Missing the s'/s³ term is a **technical error**, not physics.
+
+---
+
+## Connection to Radial Scaling
+
+The "rotating space" picture is equivalent to the radial scaling gauge (Paper 01):
+- s(r) = effective refractive index
+- E' = s·E, B' = s·B
+- ∇·(s²E) = 0
+
+The rotation metaphor captures how the scaled coordinates introduce a spiral-like structure in the field propagation.
+
+---
+
+© 2025–2026 Carmen N. Wrede, Lino P. Casu
