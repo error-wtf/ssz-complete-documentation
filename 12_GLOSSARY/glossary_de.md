@@ -1,33 +1,91 @@
-# Glossar (Deutsch)
+# SSZ Glossar (Deutsch)
+
+**Status:** KANONISCH
 
 ---
 
+## Kernkonzepte
+
+| Begriff | Symbol | Definition |
+|---------|--------|------------|
+| **Segmentdichte** | Ξ (Xi) | Dimensionsloses Skalarfeld zur Messung der Raumzeitsegmentierung am Radius r. Bereich: 0 ≤ Ξ ≤ 0.802 |
+| **Zeitdilatation** | D | SSZ-Zeitdilatationsfaktor: D = 1/(1+Ξ). Verhältnis von Eigenzeit zu Koordinatenzeit |
+| **Skalierungsfaktor** | s | Radiale Skalierung: s = 1+Ξ = 1/D. Effektiver Brechungsindex |
+| **Schwarzschild-Radius** | r_s | r_s = 2GM/c². Charakteristischer Gravitationsradius |
+| **Goldener Schnitt** | φ | φ = (1+√5)/2 = 1.618... Strukturkonstante in SSZ |
+| **Schnittpunkt** | r* | Radius wo Ξ_weak = Ξ_strong: r*/r_s = 1.595 |
+
+---
+
+## Regime
+
 | Begriff | Definition |
 |---------|------------|
-| **Anti-Zirkularität** | Designprinzip, das zirkuläre Abhängigkeiten in SSZ ausschließt |
-| **Blend-Zone** | Radialbereich 1.8 ≤ r/r_s ≤ 2.2, wo Hermite-C²-Interpolation die Regimes verbindet |
-| **C²-Stetigkeit** | Stetigkeit von Wert, erster und zweiter Ableitung an Regime-Grenzen |
-| **Kohärenz-Kollaps** | Irreversibler Übergang von g₁ (schwach) zu g₂ (stark) |
-| **Kopplungsradius r_φ** | Natürliche Grenze aus φ-Geometrie: r_φ = (φ/2)r_s[1+βΔ(M)] |
-| **Dunkler Stern** | Historisches Konzept (Michell/Laplace) mit v_esc > c; in SSZ reinterpretiert |
-| **Duale Geschwindigkeiten** | Paar (v_esc, v_fall) mit v_esc × v_fall = c² |
-| **Falsifizierung** | Prüfung der SSZ-Vorhersagen gegen Beobachtungen |
-| **g₁-Regime** | Schwachfeld-Regime, wo SSZ = GR |
-| **g₂-Regime** | Starkfeld-Regime mit Ξ-Sättigung |
-| **Goldener Schnitt φ** | (1+√5)/2 = 1.618...; strukturelle Konstante in SSZ |
-| **Guardrails** | Dokumentationsregeln gegen Cross-Repo-Verwechslungen |
-| **Hermite-Interpolation** | Quintisches Polynom für C²-Glattheit in der Blend-Zone |
-| **Kinematische Schließung** | Die Identität v_esc × v_fall = c² |
-| **Natürliche Grenze** | Minimaler Annäherungsradius r_φ aus φ-Geometrie |
-| **Observable-Klassifikation** | Einordnung in Null/zeitartig-statisch/zeitartig-Orbit |
-| **PPN (Parametrisierter Post-Newtonscher Formalismus)** | β=γ=1 in SSZ |
-| **Prime Directive** | Nie eine einzige Methode für alle Observablen verwenden |
-| **Radiale Skalierung** | s(r) = 1+Ξ(r), angewandt auf Maxwell-Felder |
-| **Regime** | Radiale Zone (schwach/blend/stark) für Ξ-Formelwahl |
-| **Skalierungsfaktor s(r)** | s = 1 + Ξ = 1/D |
-| **Schwarzschild-Radius r_s** | r_s = 2GM/c² |
-| **Segmentdichte Ξ(r)** | Dimensionsloses Feld für Raumzeit-Segmentierung |
-| **Segmentierte Raumzeit (SSZ)** | Falsifizierbare GR-Erweiterung basierend auf Ξ |
-| **Superradianz** | Energieextraktion aus rotierenden SL; SSZ-Stabilisierung |
-| **Zeitdilatation D(r)** | D = 1/(1+Ξ); Eigenzeit-zu-Koordinatenzeit-Verhältnis |
-| **Universeller Schnittpunkt r*** | r*/r_s = 1.595, wo D_SSZ = D_GR exakt |
+| **g1 (Schwaches Feld)** | Bereich r/r_s > 10. SSZ ≡ ART. Formel: Ξ = r_s/(2r) |
+| **g2 (Starkes Feld)** | Bereich r/r_s < 1.8. SSZ ≠ ART. Formel: Ξ = 1-exp(-φr_s/r) |
+| **Mischzone** | Übergangsbereich 1.8 ≤ r/r_s ≤ 2.2. Hermite-C²-Interpolation |
+| **Photonensphäre** | Bereich 2.2 ≤ r/r_s ≤ 3.0. SSZ-optimale Zone |
+| **Kohärenz-Kollaps** | Irreversibler Übergang g1→g2. Nicht umkehrbar |
+
+---
+
+## Methoden
+
+| Begriff | Definition |
+|---------|------------|
+| **Ξ-Proxy** | Direkte Verwendung von Ξ für zeitartige Observablen (Uhren, Rotverschiebung) |
+| **PPN** | Parametrisierter Post-Newtonscher Formalismus. Für Null- (Licht) und Orbitobservablen |
+| **PPN-Vervollständigung** | Multiplikation des Ξ-Ergebnisses mit (1+γ) für Null-Observablen |
+| **Faktor-2-Regel** | Null-Observablen brauchen PPN (1+γ)=2, nicht nur Ξ |
+| **Anti-Zirkularität** | Prinzip: Formeln nie gegen Daten kalibrieren, die sie vorhersagen |
+
+---
+
+## Schlüsselwerte
+
+| Begriff | Wert | Bedeutung |
+|---------|------|-----------|
+| **Ξ_max** | 0.802 | Maximale Segmentdichte (am Horizont) |
+| **D_min** | 0.555 | Minimale Zeitdilatation (am Horizont) |
+| **z_max** | 0.802 | Maximale Rotverschiebung (am Horizont) |
+| **r*/r_s** | 1.595 | Universeller Schnittpunkt (Weak-Proxy) |
+| **r*/r_s** | 1.387 | Universeller Schnittpunkt (Strong-Field) |
+| **φ/2** | 0.809 | Kopplungsfaktor |
+
+---
+
+## Objekte & Experimente
+
+| Begriff | Definition |
+|---------|------------|
+| **Dunkler Stern** | SSZ-Alternative zum Schwarzen Loch — keine Singularität, kein Ereignishorizont, endliches D |
+| **Natürliche Grenze** | SSZ-Ersatz für Ereignishorizont: r_φ = (φ/2)·r_s·[1+β·Δ(M)] |
+| **Pound-Rebka** | 1960er Experiment zur Bestätigung der gravitativen Rotverschiebung über 22.6 m |
+| **Cassini** | 2003 Shapiro-Verzögerungsmessung: γ = 1.000021 ± 0.000023 |
+| **S2-Stern** | Stern in Sgr-A*-Orbit — Schwachfeld-Test (SSZ ≡ ART) |
+| **G79.29+0.46** | LBV-Nebel — 6/6 SSZ-Vorhersagen bestätigt |
+
+---
+
+## Mathematische Begriffe
+
+| Begriff | Definition |
+|---------|------------|
+| **Hermite-C²-Interpolation** | Quintisches Polynom mit Stetigkeit von Funktion, erster und zweiter Ableitung |
+| **Δ(M)** | Massenabhängige Korrektur: Δ = A·exp(-α/M^B). Aus φ-Geometrie, nicht Fitting |
+| **v_esc** | Fluchtgeschwindigkeit: c·√(r_s/r) |
+| **v_fall** | Fallgeschwindigkeit: c·√(r/r_s) |
+| **Kinematische Schließung** | v_esc × v_fall = c² (universelle Invariante) |
+
+---
+
+## Veraltet (VERBOTEN)
+
+| Begriff | Status |
+|---------|--------|
+| **Ξ = (r_s/r)² × exp(-r/r_φ)** | ❌ VERBOTEN — veraltete Formel, nie verwenden |
+| **90/110 Regimegrenzen** | ❌ Das sind Testpunkte, KEINE Regimegrenzen |
+
+---
+
+© 2025–2026 Carmen N. Wrede, Lino P. Casu

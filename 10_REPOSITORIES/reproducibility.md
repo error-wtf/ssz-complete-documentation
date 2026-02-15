@@ -1,77 +1,87 @@
 # Reproducibility Guide
 
+**Status:** CANONICAL
+
 ---
 
 ## Requirements
 
 - **Python:** 3.10+
-- **Packages:** numpy, scipy, matplotlib
-- **Optional:** sympy (for symbolic computation in ssz-metric-pure)
+- **Core packages:** numpy, scipy, matplotlib
+- **Optional:** astropy, pandas (for some repos)
+- **OS:** Windows, Linux, macOS
 
 ---
 
-## Quick Start
+## How to Reproduce
 
+### 1. Clone All Repos
 ```bash
-# Clone any repository
-git clone https://github.com/error-wtf/<repo-name>.git
-cd <repo-name>
+git clone https://github.com/error-wtf/segmented-calculation-suite
+git clone https://github.com/error-wtf/ssz-qubits
+git clone https://github.com/error-wtf/frequency-curvature-validation
+git clone https://github.com/error-wtf/ssz-lensing
+git clone https://github.com/error-wtf/ssz-metric-pure
+git clone https://github.com/error-wtf/ssz-schumann
+git clone https://github.com/error-wtf/g79-cygnus-tests
+git clone https://github.com/error-wtf/ssz-paper-plots
+git clone https://github.com/error-wtf/segmented-energy
+git clone https://github.com/error-wtf/Segmented-Spacetime-Mass-Projection-Unified-Results
+git clone https://github.com/error-wtf/Segmented-Spacetime-Starmaps
+```
 
-# Install dependencies
+### 2. Install Dependencies
+```bash
 pip install numpy scipy matplotlib
-
-# Run tests
-python -m pytest tests/ -v
 ```
 
----
-
-## Key Repositories to Start With
-
-1. **segmented-calculation-suite** — Core formulas and regime logic
-2. **ssz-qubits** — Real-data validation (GPS, Pound-Rebka, S2)
-3. **frequency-curvature-validation** — PPN tests (Shapiro, lensing)
-4. **ssz-metric-pure** — 4D tensor formulation
-
----
-
-## Automated Test Runner
-
-```powershell
-# PowerShell (Windows)
-.\run_consistency_suite.ps1
-```
-
----
-
-## Symbolic Computation (ssz-metric-pure)
-
-3 modes:
-- **complete:** 10–30 min (full proofs)
-- **fast:** 1–3 min (key results)
-- **sparse:** 1–2 min (minimal check)
-
----
-
-## Anti-Circularity Verification
-
-To verify that no circular dependencies exist:
+### 3. Run Tests
 ```bash
+# Individual repo
 cd segmented-calculation-suite
-python -m pytest tests/test_anti_circularity.py -v
+python -m pytest tests/
+
+# Or run all tests
+python run_consistency_suite.ps1  # PowerShell
 ```
 
-This test verifies the acyclic dependency graph (Level 0→5).
+### 4. Verify Key Results
+
+Check these values match:
+```
+Ξ(r_s) = 0.80171
+D(r_s) = 0.55503
+r*/r_s = 1.59481
+β = γ = 1
+```
 
 ---
 
-## Data Sources (External)
+## Validation Levels
 
-All validation data comes from published external sources:
-- GPS timing: BIPM/US Naval Observatory
-- Pound-Rebka: Pound & Rebka (1960)
-- S2 star: ESO/GRAVITY Collaboration
-- Neutron stars: NASA/NICER
-- BH shadow: EHT Collaboration
+| Level | Description | Pass Criteria |
+|-------|-------------|---------------|
+| L1: Unit | Individual function tests | All assertions pass |
+| L2: Integration | Multi-function tests | Consistent results |
+| L3: Cross-repo | Same calculation in multiple repos | Values agree |
+| L4: Observational | Comparison to real data | Within measurement error |
 
-None of this data was used for SSZ calibration (anti-circularity).
+---
+
+## Unified Test Suite
+
+The `Unified-Results` repository runs all 25 test suites:
+- Runtime: ~231 seconds
+- Result: 25/25 suites PASS
+- 97.9% ESO accuracy
+- Full report: `reports/full-output.md`
+
+---
+
+## Commit Hashes
+
+For exact reproduction, each repo's commit hash at validation time is documented in the Unified-Results repository.
+
+---
+
+© 2025–2026 Carmen N. Wrede, Lino P. Casu

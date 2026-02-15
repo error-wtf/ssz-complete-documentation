@@ -1,81 +1,68 @@
 # SSZ Quick Reference Card
 
+**Status:** CANONICAL — Laminate and keep handy!
+
 ---
 
-## Core Equations
+## Core Formulas
 
 ```
-Ξ_weak(r)   = r_s / (2r)                  [r/r_s > 10]
-Ξ_strong(r) = 1 - exp(-φ · r_s/r)         [r/r_s < 1.8]
+Ξ_weak(r)   = r_s / (2r)              [r/r_s > 10]
+Ξ_strong(r) = 1 - exp(-φ·r_s/r)       [r/r_s < 1.8]
 D(r)        = 1 / (1 + Ξ(r))
-z(r)        = Ξ(r)
 s(r)        = 1 + Ξ(r) = 1/D(r)
-r_s         = 2GM / c²
+z(r)        = Ξ(r)
+r_s         = 2GM/c²
 ```
-
----
-
-## Method Selection
-
-```
-Observable Type     → Method
-─────────────────────────────────
-NULL (light)        → PPN (1+γ)
-TIMELIKE (clocks)   → Ξ-proxy
-TIMELIKE (orbits)   → PPN (γ,β)
-```
-
----
-
-## Regime Selection
-
-```
-Regime              → Formula
-─────────────────────────────────
-r/r_s > 10          → Ξ = r_s/(2r)
-1.8 < r/r_s < 2.2   → Hermite C² blend
-r/r_s < 1.8         → Ξ = 1-exp(-φr_s/r)
-```
-
----
 
 ## Key Values
 
 ```
-Ξ(r_s) = 0.802       D(r_s) = 0.555
-r*/r_s = 1.595       D*     = 0.611
-φ/2    = 0.809       γ = β = 1
+Ξ(r_s) = 0.802    D(r_s) = 0.555    z(r_s) = 0.802
+r*/r_s = 1.595     φ = 1.618          φ/2 = 0.809
+β = 1              γ = 1
+```
+
+## Method Assignment
+
+```
+NULL (light)      → PPN (1+γ) = ×2
+TIMELIKE (clocks) → Ξ directly
+TIMELIKE (orbits) → PPN (β,γ)
+```
+
+## Regime Boundaries
+
+```
+very_close:    r/r_s < 1.8    → Ξ_strong
+blended:       1.8 – 2.2      → Hermite C²
+photon_sphere: 2.2 – 3.0      → Ξ_strong
+strong:        3.0 – 10.0     → Ξ_strong
+weak:          > 10.0         → Ξ_weak
+```
+
+## PPN Formulas
+
+```
+α_lens = (1+γ)r_s/b = 2r_s/b
+Δt_Shapiro = (1+γ)(r_s/c)ln(4r₁r₂/d²)
+Δω = 6πGM/[a(1-e²)c²]
+```
+
+## Kinematic Closure
+
+```
+v_esc × v_fall = c²   (always, mass-independent)
+v_esc = c·√(r_s/r)    v_fall = c·√(r/r_s)
+```
+
+## FORBIDDEN
+
+```
+❌ Ξ = (r_s/r)² × exp(-r/r_φ)   — DEPRECATED, NEVER USE
+❌ 90/110 as regime boundaries    — Those are probe radii
 ```
 
 ---
 
-## Quick Formulas
-
-```
-s(r) = 1 + Ξ(r)              Scaling factor
-D(r) = 1/s(r)                Time dilation
-v_esc · v_fall = c²           Kinematic closure
-R = φ^N                      Frequency lattice
-dρ = s(r)dr                  Physical distance
-1+z = D_obs/D_emit           Redshift
-α = 2r_s/b                   Lensing (PPN)
-Δt = 2(r_s/c)ln(...)         Shapiro (PPN)
-```
-
----
-
-## The Mantra
-
-> **Observable → Class → Method → Scope → Then calculate.**
-
----
-
-## Forbidden
-
-```
-❌ Ξ = (r_s/r)² exp(-r/r_φ)   DEPRECATED
-❌ D = 1/(1+2Ξ)               WRONG
-❌ r_s = GM/c²                 MISSING FACTOR 2
-❌ PPN for time dilation       USE Ξ INSTEAD
-❌ Δ(M) in weak field          WEAK = EXACT GR
-```
+© 2025–2026 Carmen N. Wrede, Lino P. Casu
