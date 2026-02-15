@@ -1,48 +1,69 @@
 # Falsification Criteria
 
----
-
-## What Would Definitively Falsify SSZ?
-
-| Measurement | SSZ Falsified If | Confidence |
-|-------------|-----------------|------------|
-| NS redshift | z_obs = z_GR ± 5% (not z_SSZ) | 3σ |
-| Pulsar timing | Δt_obs = Δt_GR ± 10% (not Δt_SSZ) | 3σ |
-| r*/r_s | Value ≠ 1.595 ± 0.01 | Direct |
-| D(r_s) | Consistent with D=0 (GR) | Conceptual |
+**Status:** CANONICAL
 
 ---
 
-## The Falsifiability Principle
+## SSZ Would Be DEFINITIVELY FALSIFIED If:
 
-SSZ is designed to be **easily falsifiable**:
+### 1. Neutron Star Redshift
+```
+z_obs ≠ z_SSZ ± 5%
+```
+SSZ predicts z_SSZ = z_GR + 13%. If observed NS redshifts match GR exactly (or are lower), SSZ is wrong.
 
-1. **No post-hoc adjustment:** If a prediction fails, SSZ is wrong. No parameter tuning.
-2. **Clear numerical targets:** Specific % deviations from GR are predicted.
-3. **Timeline:** Most tests feasible within 2025–2030.
-4. **Multiple independent tests:** Failure of any single prediction is sufficient.
+**Instrument:** NICER, XMM-Newton
+**Timeline:** 2025–2027
+
+### 2. Pulsar Timing
+```
+Δt_obs ≠ Δt_SSZ ± 10%
+```
+SSZ predicts enhanced Shapiro delays near compact objects.
+
+**Instrument:** NANOGrav, SKA
+**Timeline:** 2025–2028
+
+### 3. Universal Intersection Point
+```
+r*/r_s ≠ 1.595 ± 0.01
+```
+The mass-independent intersection point is a hard geometric prediction. If observations of multiple compact objects show no convergence at this value, SSZ fails.
+
+**Method:** Multi-object NS comparison
+**Timeline:** Ongoing
+
+### 4. Black Hole Shadow
+```
+Shadow diameter inconsistent with D_SSZ(r_s) = 0.555
+```
+SSZ predicts a slightly smaller shadow (-1.3% vs GR). If ngEHT measures a shadow consistent with GR's D(r_s) = 0, SSZ is falsified.
+
+**Instrument:** ngEHT
+**Timeline:** 2028–2030
 
 ---
 
-## What Would NOT Falsify SSZ
+## SSZ Would Be SUPPORTED If:
 
-- Weak-field measurements agreeing with GR (expected — SSZ = GR there)
-- Numerical precision issues in code (implementation, not physics)
-- Different repos giving different-looking results (different scopes/methods)
-- Finding that φ is "just a number" (SSZ works regardless of philosophical interpretation)
+1. NS redshifts systematically exceed GR by ~13%
+2. Pulsar timing shows enhanced delays consistent with SSZ
+3. BH shadow is slightly smaller than GR prediction
+4. Multiple compact objects converge on r*/r_s = 1.595
+5. No information loss signatures at horizons
 
 ---
 
-## The Decisive Experiments
+## Design Philosophy
 
-### 1. NICER NS Redshift (2025–2027)
-Most imminent test. If high-quality NS surface redshifts match GR within 5%, SSZ is in serious trouble.
+SSZ is deliberately constructed to be **easily falsifiable**:
+- Zero free parameters → no knobs to adjust
+- Specific numerical predictions → clear pass/fail
+- Forward prediction only → no post-hoc fitting
+- Multiple independent tests → overdetermined
 
-### 2. NANOGrav Pulsar Timing (2025–2028)
-Pulsar timing arrays should show SSZ's predicted +30% excess if SSZ is correct.
+> Quick rejection is a feature, not a bug.
 
-### 3. ngEHT BH Shadow (2028–2030)
-Next-generation Event Horizon Telescope can resolve the predicted -1.3% shadow size difference.
+---
 
-### 4. Multi-NS r* Measurement (2027+)
-If multiple neutron stars show the same r*/r_s = 1.595 intersection independent of mass, this is strong SSZ evidence.
+© 2025–2026 Carmen N. Wrede, Lino P. Casu

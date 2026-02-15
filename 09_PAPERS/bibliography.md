@@ -1,61 +1,47 @@
-# Bibliography
+# Complete Bibliography
 
----
-
-## SSZ Primary Papers (BibTeX Keys)
-
-| # | Key | Title | Year |
-|---|-----|-------|------|
-| 01 | wrede2025radial | Radial Scaling Gauge for Maxwell Fields | 2025 |
-| 02 | wrede2025dualvelocities | Dual Velocities: Escape, Fall, and Redshift | 2025 |
-| 03 | wrede2025frequency | Frequency-Based Framework for Gravity, Light, BHs | 2025 |
-| 04 | wrede2025metric | On the Metric of Black Holes | 2025 |
-| 05 | wrede2025infalling | Infalling Matter and Radiowaves | 2025 |
-| 06 | wrede2025euler | Von Φ-Segmentierung zu Euler | 2025 |
-| 07 | wrede2025kinematic | Kinematische Schließung | 2025 |
-| 08 | wrede2025groupvelocity | Segment-Based Group Velocity | 2025 |
-| 09 | wrede2025darkstar | The Dark Star Problem | 2025 |
-| 10 | wrede2025curvature | Frequency-Based Curvature Detection | 2025 |
-| 11 | wrede2025nebulae | Molecular Zones in Expanding Nebulae | 2025 |
-| 12 | wrede2025superradiance | Natural Regulator of Superradiant Instabilities | 2025 |
-| 13 | wrede2025pi | φ and π as Structural Constants | 2025 |
-| 14 | wrede2025emergent | Emergent Spatial Axes | 2025 |
-| 15 | wrede2025finestructure | Bound Energy and Fine-Structure Constant | 2025 |
-| 16 | wrede2025singularity | Solution to the Paradox of Singularities | 2025 |
-| 17 | wrede2025censorship | Natural Boundary and Cosmic Censorship | 2025 |
-| 18 | wrede2025calibration | φ/2 and β Calibration | 2025 |
-| 19 | wrede2025lorentz | Geometric Resolution of Lorentz Indeterminacy | 2025 |
-| 20 | wrede2025temporal | φ as Temporal Growth Function | 2025 |
-| 21 | wrede2025redshift | Interpretation of Gravitational Redshift | 2025 |
-| 22 | wrede2025maxwell | Maxwell Waves as Rotating Space | 2025 |
-| 23 | wrede2025additive | Additive Light-Travel Time Decomposition | 2025 |
-| 24 | wrede2025transformation | Local Lorentz Invariance and Frame Dragging | 2025 |
-| 25 | wrede2025coherence | Irreversible Coherence-Collapse Law | 2025 |
+**Status:** CANONICAL
 
 ---
 
 ## Standard Physics References
 
-| Key | Authors | Title | Journal | Year |
-|-----|---------|-------|---------|------|
-| einstein1915 | Einstein, A. | Die Feldgleichungen der Gravitation | Sitz. Preuss. Akad. | 1915 |
+| BibTeX Key | Authors | Title | Journal | Year |
+|-----------|---------|-------|---------|------|
+| einstein1915 | Einstein, A. | Die Feldgleichungen der Gravitation | Sitz. Preuss. Akad. Wiss. | 1915 |
 | schwarzschild1916 | Schwarzschild, K. | Über das Gravitationsfeld eines Massenpunktes | Sitz. Königl. Preuss. Akad. | 1916 |
-| will2014 | Will, C. M. | Confrontation between GR and Experiment | Living Rev. Rel. 17, 4 | 2014 |
-| bertotti2003 | Bertotti, Iess, Tortora | Test of GR using Cassini spacecraft | Nature 425, 374 | 2003 |
-| pound1960 | Pound, Rebka | Apparent Weight of Photons | PRL 4, 337 | 1960 |
-| eht2019 | EHT Collaboration | First M87 EHT Results | ApJ Lett. 875, L1 | 2019 |
+| will2014 | Will, C. M. | The Confrontation between GR and Experiment | Living Rev. Relativity 17, 4 | 2014 |
+| bertotti2003 | Bertotti, B.; Iess, L.; Tortora, P. | A test of GR using radio links with Cassini | Nature 425, 374–376 | 2003 |
+| pound1960 | Pound, R. V.; Rebka Jr., G. A. | Apparent Weight of Photons | Phys. Rev. Lett. 4, 337–341 | 1960 |
+| eht2019 | EHT Collaboration | First M87 Event Horizon Telescope Results. I. | ApJ Letters 875, L1 | 2019 |
 
 ---
 
-## Experimental Data Sources
+## Recommended References by Topic
 
-| Source | Data | Use in SSZ |
-|--------|------|------------|
-| ESO/GRAVITY | S-star orbits | Perihelion, weak-field validation |
-| NASA/NICER | NS mass-radius | Strong-field predictions |
-| US Naval Obs./BIPM | GPS timing | Weak-field validation |
-| Pound & Rebka (1960) | Gravitational redshift | Weak-field validation |
-| EHT | BH shadow | Shadow size prediction |
-| ESA/Gaia DR3 | Stellar catalog | Parameter validation |
-| NASA/IRSA | 2MASS, WISE, Spitzer | Nebula analysis (G79) |
-| Schumann observatories | Resonance data | Exploratory scaling |
+| Topic | Source |
+|-------|--------|
+| PPN Formalism | Will, C. M. (2018). Theory and Experiment in Gravitational Physics. Cambridge. |
+| Neutron Stars | Özel, F. & Freire, P. (2016). Masses, Radii, and the EOS of Neutron Stars. ARA&A 54, 401. |
+| Golden Ratio | Livio, M. (2002). The Golden Ratio. Broadway Books. |
+| Hermite Interpolation | de Boor, C. (2001). A Practical Guide to Splines. Springer. |
+| S-Star Orbits | GRAVITY Collaboration (2020). Detection of the Schwarzschild precession in S2. A&A 636, L5. |
+| Pulsar Timing | NANOGrav Collaboration (2023). The NANOGrav 15 yr Data Set. ApJ Lett. 951, L8. |
+
+---
+
+## Cross-Reference: Data Source → Documentation Chapter
+
+| Data Source | Documentation Section |
+|-------------|----------------------|
+| GPS, Pound-Rebka | 01_OVERVIEW, 07_VALIDATION |
+| ESO S-Stars | 07_VALIDATION, 08_FALSIFICATION |
+| NICER Neutron Stars | 07_VALIDATION, 08_FALSIFICATION |
+| EHT M87*/Sgr A* | 06_STRONG_FIELD, 08_FALSIFICATION |
+| G79 Nebula | 07_VALIDATION |
+| Schumann | 10_REPOSITORIES (ssz-schumann) |
+| Gaia/IRSA | 07_VALIDATION |
+
+---
+
+© 2025–2026 Carmen N. Wrede, Lino P. Casu

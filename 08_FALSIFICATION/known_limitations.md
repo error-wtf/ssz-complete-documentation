@@ -1,31 +1,70 @@
-# Known Limitations and Open Questions
+# Known Limitations
+
+**Status:** CANONICAL
 
 ---
 
-## Known Limitations
+## What SSZ Does NOT Cover
 
-1. **Strong-field predictions untested:** The +13% NS redshift prediction has not been experimentally verified yet
-2. **No quantum gravity connection:** SSZ is phenomenological, not derived from a quantum theory
-3. **Rotating black holes:** The Kerr analog of the SSZ metric is not fully developed
-4. **Cosmological coupling:** The cosmology scaffold is minimal (constraint-only)
-5. **Gravitational waves:** SSZ modifications to GW waveforms are not yet calculated in detail
+### 1. Quantum Gravity
+SSZ is a **phenomenological framework**, not a quantum theory of gravity. It does not:
+- Derive Ξ from quantum mechanics
+- Explain the microphysical origin of segmentation
+- Make Planck-scale predictions
+
+### 2. Full Cosmology
+SSZ's cosmology module is a **constraint scaffold**, not a complete FLRW alternative:
+- It checks whether SSZ disturbs CMB/BBN/growth
+- It does NOT provide a full dark energy explanation
+- It does NOT replace ΛCDM
+
+### 3. Gravitational Waves (Full Treatment)
+- SSZ modifies the metric → gravitational wave propagation is affected
+- But a complete GW waveform calculation in SSZ is not yet available
+- Ringdown frequency predictions exist but need full numerical relativity
+
+### 4. Rotating Black Holes (Full Kerr)
+- SSZ currently treats the Schwarzschild (non-rotating) case in detail
+- Kerr extension is outlined but not fully computed
+- Frame dragging uses PPN approximation
 
 ---
 
-## Open Questions
+## Known Precision Limits
 
-1. **Why φ?** Is the golden ratio fundamentally necessary, or could another constant work?
-2. **Microphysics:** What physical mechanism produces segmentation?
-3. **Quantum regime:** How does SSZ connect to quantum gravity proposals?
-4. **Kerr metric:** Full rotating black hole metric in SSZ?
-5. **Cosmological perturbations:** Does SSZ modify structure formation?
-6. **Gravitational wave ringdown:** Modified quasi-normal modes?
+### Blend Zone
+The Hermite C² interpolation at 1.8–2.2 r/r_s is smooth but introduces a ~0.1% uncertainty band in the transition region.
+
+### Mass-Dependent Correction
+The Δ(M) correction:
+```
+Δ(M) = A · exp(-α/M^B)
+```
+is derived from φ-geometry but has limited observational verification for extreme masses.
+
+### Strong Lensing
+Strong-field lensing predictions exist but have not been tested against data (no suitable strong-lensing measurements near neutron stars yet).
 
 ---
 
-## Edge Cases in Implementation
+## What SSZ Claims It IS
 
-- Numerical precision: ∇g < 10⁻¹⁰ (documented)
-- Energy conservation: Drift < 10⁻⁶ (documented)
-- Blend zone: C² continuity verified but not C∞
-- z → 0 limit: Handled correctly in all repos
+1. A **falsifiable extension** of GR
+2. A **forward predictor** with zero free parameters
+3. A **test harness** for strong-field deviations
+4. **Consistent with all existing** weak-field observations
+5. **Specific and testable** in the strong field
+
+---
+
+## What SSZ Does NOT Claim
+
+1. NOT that spacetime is literally a discrete lattice
+2. NOT that there is a specific microphysical segmentation mechanism
+3. NOT that it replaces GR in any tested regime
+4. NOT that it explains dark energy or dark matter
+5. NOT that φ has a fundamental-physics derivation (yet)
+
+---
+
+© 2025–2026 Carmen N. Wrede, Lino P. Casu
