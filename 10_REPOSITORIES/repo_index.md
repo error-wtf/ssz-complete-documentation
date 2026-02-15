@@ -1,78 +1,113 @@
-# Repository Index
+# Complete Repository Index
 
-**GitHub Organization:** [github.com/error-wtf](https://github.com/error-wtf)
-
----
-
-## Active Repositories
-
-| # | Repository | Python | Tests | Docs | Topic |
-|---|-----------|--------|-------|------|-------|
-| 1 | [segmented-calculation-suite](https://github.com/error-wtf/segmented-calculation-suite) | 73 | 24 | 69 | Core SSZ engine: Ξ, D, z, regime, C² blend |
-| 2 | [Unified-Results](https://github.com/error-wtf/Segmented-Spacetime-Mass-Projection-Unified-Results) | 395 | 47 | 1189 | Unified test framework, 25 suites |
-| 3 | [ssz-qubits](https://github.com/error-wtf/ssz-qubits) | 54 | 12 | 89 | Qubit corrections, GPS, Pound-Rebka, S2 |
-| 4 | [frequency-curvature-validation](https://github.com/error-wtf/frequency-curvature-validation) | 13 | 11 | 5 | PPN, Shapiro, lensing, Cassini |
-| 5 | [ssz-lensing](https://github.com/error-wtf/ssz-lensing) | 117 | 23 | 39 | Gravitational lensing, root solver |
-| 6 | [ssz-metric-pure](https://github.com/error-wtf/ssz-metric-pure) | 53 | 7 | 44 | 4D metric tensor, Einstein/Ricci |
-| 7 | [ssz-schumann](https://github.com/error-wtf/ssz-schumann) | 100 | 12 | 39 | Schumann resonance, SSZ scaling |
-| 8 | [g79-cygnus-tests](https://github.com/error-wtf/g79-cygnus-tests) | 35 | 7 | 66 | G79.29+0.46 LBV nebula validation |
-| 9 | [ssz-paper-plots](https://github.com/error-wtf/ssz-paper-plots) | 49 | 6 | 52 | Paper plot generation |
-| 10 | [segmented-energy](https://github.com/error-wtf/segmented-energy) | 19 | 3 | 14 | Energy analysis, power laws |
-| 11 | [Starmaps](https://github.com/error-wtf/Segmented-Spacetime-Starmaps) | 161 | 46 | 156 | Star map validation |
-| 12 | [SEGMENTED_SPACETIME](https://github.com/error-wtf/SEGMENTED_SPACETIME) | 0 | 0 | 21 | Theory papers (no code) |
-| 13 | [emergent-spacetime](https://github.com/error-wtf/emergent-spacetime) | 1 | 0 | 20 | Emergent spatial axes |
-| **TOTAL** | | **1,070** | **198** | **1,803** | |
+**GitHub:** [github.com/error-wtf](https://github.com/error-wtf)
+**Total Repositories:** 35 (33 public, 2 private)
 
 ---
 
-## Key Documents Per Repository
+## A) SSZ / Physics Repositories (17)
 
-### segmented-calculation-suite (Core)
-```
-docs/ANTI_CIRCULARITY.md           Anti-circularity proof
-docs/FORMULA_VERIFICATION.md       Formula verification
-docs/INVENTORY_METHODS.md          Method inventory
-docs/G1_G2_METHODS_NOTE.md         g1/g2 regime methods
-tests/test_xi_calculations.py      Ξ weak/strong field
-tests/test_time_dilation.py        D-factor
-tests/test_regime_definitions.py   Regime boundaries & C²
-tests/test_anti_circularity.py     Anti-circularity
-tests/test_intersection_point.py   r*/r_s
-```
+| # | Repository | Description | Tests | Branch |
+|---|-----------|-------------|-------|--------|
+| 1 | [segmented-calculation-suite](https://github.com/error-wtf/segmented-calculation-suite) | Core SSZ engine: Ξ, D, z, regime, C² blend | 186 | main |
+| 2 | [Unified-Results](https://github.com/error-wtf/Segmented-Spacetime-Mass-Projection-Unified-Results) | Unified test framework, 25 suites | 47 | main |
+| 3 | [ssz-qubits](https://github.com/error-wtf/ssz-qubits) | Qubit corrections, GPS, Pound-Rebka, S2 | 74 | main |
+| 4 | [frequency-curvature-validation](https://github.com/error-wtf/frequency-curvature-validation) | PPN, Shapiro, lensing, Cassini — 56/56 PASS | 56 | main |
+| 5 | [ssz-lensing](https://github.com/error-wtf/ssz-lensing) | Gravitational lensing — 28/28 PASS | 28 | master |
+| 6 | [ssz-metric-pure](https://github.com/error-wtf/ssz-metric-pure) | 4D metric tensor, Einstein/Ricci (SSZ only) | 7 | main |
+| 7 | [ssz-metric-final](https://github.com/error-wtf/ssz-metric-final) | Singularity-free BH solution (SSZ + GR combined) | — | master |
+| 8 | [ssz-full-metric](https://github.com/error-wtf/ssz-full-metric) | Full metric package, production-ready | 24 | master |
+| 9 | [ssz-schumann](https://github.com/error-wtf/ssz-schumann) | Schumann resonance, SSZ scaling | 94 | main |
+| 10 | [g79-cygnus-tests](https://github.com/error-wtf/g79-cygnus-tests) | G79.29+0.46 LBV nebula validation | 14 | main |
+| 11 | [ssz-paper-plots](https://github.com/error-wtf/ssz-paper-plots) | Paper plot generation | 6 | main |
+| 12 | [segmented-energy](https://github.com/error-wtf/segmented-energy) | Energy analysis, 129 astronomical objects | 3 | main |
+| 13 | [Starmaps](https://github.com/error-wtf/Segmented-Spacetime-Starmaps) | Star map validation, SSZ physics plots | 46 | main |
+| 14 | [SEGMENTED_SPACETIME](https://github.com/error-wtf/SEGMENTED_SPACETIME) | Theory papers (no code) | — | main |
+| 15 | [emergent-spacetime](https://github.com/error-wtf/emergent-spacetime) | Emergent spatial axes from temporal interference | — | main |
+| 16 | [ssz-complete-documentation](https://github.com/error-wtf/ssz-complete-documentation) | This documentation repository | — | main |
+| 17 | [TRY_TO_CALCULATE_CHIRP_MASS_OUT_OF_LIGO_STRAINS](https://github.com/error-wtf/TRY_TO_CALCULATE_CHIRP_MASS_OUT_OF_LIGO_STRAINS) | LIGO chirp mass calculation | — | main |
 
-### ssz-qubits
-```
-docs/SSZ_FORMULA_DOCUMENTATION.md  Formula documentation
-docs/SSZ_MATHEMATICAL_PHYSICS.md   Mathematical physics
-docs/SSZ_QUBIT_APPLICATIONS.md     Qubit applications
-tests/test_validation.py           GPS, Pound-Rebka, S2
-tests/test_qubit_corrections.py    Qubit corrections
-tests/test_fundamental.py          Fundamental SSZ tests
-```
+---
 
-### frequency-curvature-validation
-```
-docs/SHAPIRO_DELAY_VALIDATION_REPORT.md  Shapiro validation
-tests/test_ppn_parameters.py       γ=β=1
-tests/test_shapiro_delay.py        Shapiro delay
-tests/test_light_deflection.py     Lensing PPN
-tests/test_perihelion.py           Mercury precession
-tests/test_cassini.py              Cassini conjunction
-```
+## B) Mathematics Repositories (2)
 
-### ssz-metric-pure
-```
-SSZ_VALIDATION_SUMMARY_V2.md       Validation summary
-LINO_SPEC_VERIFICATION.md          Specification verification
-COMPLETE_TENSOR_PACKAGE_README.md  Tensor package
-tests/test_metric_tensor.py        4D metric tensor
-tests/test_einstein_equations.py   Einstein equations
-```
+| # | Repository | Description | Branch |
+|---|-----------|-------------|--------|
+| 18 | [CALCULATION_OF_NUMBER_PI](https://github.com/error-wtf/CALCULATION_OF_NUMBER_PI) | Pi calculation after Chudnovsky | main |
+| 19 | [Riemann-Zeta-Zero-Finding-Suite](https://github.com/error-wtf/Riemann-Zeta-Zero-Finding-Suite) | Riemann zeta function zeros on the critical line | main |
 
-### Unified-Results
-```
-reports/full-output.md             25/25 test suites (231s)
-validation_complete_extended/
-  reports/TEST_METHODOLOGY_COMPLETE.md  Test methodology
-tests/ (47 test files across all suites)
-```
+---
+
+## C) Research & Political Repositories (3)
+
+| # | Repository | Description | Branch |
+|---|-----------|-------------|--------|
+| 20 | [AfD-Verbotsverfahren-Grundlagenforschung](https://github.com/error-wtf/AfD-Verbotsverfahren-Grundlagenforschung) | AfD ban proceedings research | main |
+| 21 | [TODESSTATISTIKEN](https://github.com/error-wtf/TODESSTATISTIKEN) | Death statistics — from mass shootings to alcohol | main |
+| 22 | [LOST_EINSTEIN_PAPERS](https://github.com/error-wtf/LOST_EINSTEIN_PAPERS) | Einstein papers archive (before 2026 paywall) | main |
+
+---
+
+## D) Tools & Applications (3)
+
+| # | Repository | Description | Branch |
+|---|-----------|-------------|--------|
+| 23 | [pdf-translator-enhanced](https://github.com/error-wtf/pdf-translator-enhanced) | PDF translator preserving LaTeX formulas, 20 languages | main |
+| 24 | [madnews-repo](https://github.com/error-wtf/madnews-repo) | MAD NEWS — satirical news generator with Ollama | master |
+| 25 | [MP3-Playlist-Cleaner-Scanner](https://github.com/error-wtf/MP3-Playlist-Cleaner-Scanner) | MP3 tag-based playlist generator | main |
+
+---
+
+## E) Web / Matrix / Mastodon (8)
+
+| # | Repository | Description | Branch |
+|---|-----------|-------------|--------|
+| 26 | [error-wtf.github.io](https://github.com/error-wtf/error-wtf.github.io) | Matrix Portal — browse all public repos | main |
+| 27 | [mastodon-matrix-theme](https://github.com/error-wtf/mastodon-matrix-theme) | Cyberpunk Matrix theme for Mastodon v4.3+ | master |
+| 28 | [errordon](https://github.com/error-wtf/errordon) | Mastodon fork with media tabs, 250MB uploads | develop |
+| 29 | [matrixshell-web](https://github.com/error-wtf/matrixshell-web) | Matrix shell web application | main |
+| 30 | [matrix-full](https://github.com/error-wtf/matrix-full) | Matrix Terminal + Tetris combined | master |
+| 31 | [matrix-tetris](https://github.com/error-wtf/matrix-tetris) | Tetris in Matrix style | master |
+| 32 | [block-bots](https://github.com/error-wtf/block-bots) | Bot blocker | main |
+| 33 | [mastodon-media-columns](https://github.com/error-wtf/mastodon-media-columns) | Mastodon media columns fork *(private)* | master |
+
+---
+
+## F) Private / Experimental (2)
+
+| # | Repository | Description | Branch |
+|---|-----------|-------------|--------|
+| 34 | [TRYING-FETCH-LIGO](https://github.com/error-wtf/TRYING-FETCH-LIGO) | LIGO data fetching *(private)* | main |
+| 35 | *(1 repo not visible in paginated API results)* | — | — |
+
+---
+
+## SSZ Repository Statistics
+
+| Metric | Value |
+|--------|-------|
+| SSZ-specific repos | 17 |
+| Total Python lines | 1,070+ |
+| Total test files | 200+ |
+| Total test functions | 1,128 |
+| Total assertions | ~1,918 |
+| Pass rate | 100% |
+
+---
+
+## Repo Scope Index (SSZ Method Assignment)
+
+| Repo | Scope | Ξ Formula | PPN? |
+|------|-------|-----------|------|
+| ssz-qubits | Weak | r_s/(2r) | NO |
+| ssz-metric-pure | Strong | 1-exp(-φr_s/r) | YES |
+| ssz-metric-final | Strong | SSZ+GR combined | YES |
+| ssz-full-metric | Full | All regimes | YES |
+| ssz-lensing | Blend | Hermite C² | YES |
+| frequency-curvature | Weak+PPN | r_s/(2r) | YES |
+| Unified-Results | Strong | Ξ_max(1-exp(...)) | YES |
+| segmented-calculation-suite | All | All regimes | YES |
+| ssz-schumann | Weak | Exploratory | NO |
+| g79-cygnus-tests | Weak | Nebula scaling | NO |
+
+**CRITICAL:** Different repos have different scopes. Never compare results across repos without checking which regime and method each uses.
