@@ -1,7 +1,7 @@
 # Test File Index by Chapter
 
 **Status:** CANONICAL
-**Total:** 195+ test files across 10 repositories, 747+ validated tests
+**Total:** 199+ test files across 11 repositories, 801+ validated tests
 
 ---
 
@@ -33,6 +33,7 @@
 | G79 Nebula | test_parsec_conversion.py, test_mass_integration.py | g79-cygnus |
 | Lorentz Limit | test_lorentz_limit.py | segcalc |
 | φ Correction | test_phi_correction.py | segcalc |
+| Lagrange / Kerr / Quantum | test_lagrange_ssz.py | ssz-lagrange |
 
 ---
 
@@ -51,7 +52,8 @@
 | segmented-energy | 19 | 3 | 14 |
 | Unified-Results | 395 | 47 | 1189 |
 | Starmaps | 161 | 46 | 156 |
-| **TOTAL** | **1069** | **198** | **1762** |
+| ssz-lagrange | 1 | 1 | 1 |
+| **TOTAL** | **1070** | **199** | **1763** |
 
 ---
 
@@ -104,6 +106,7 @@
 | Starmaps | https://github.com/error-wtf/Segmented-Spacetime-Starmaps |
 | SEGMENTED_SPACETIME | https://github.com/error-wtf/SEGMENTED_SPACETIME |
 | emergent-spacetime | https://github.com/error-wtf/emergent-spacetime |
+| ssz-lagrange | https://github.com/error-wtf/ssz-lagrange |
 
 ---
 

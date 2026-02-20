@@ -61,10 +61,22 @@ All papers published on ResearchGate under the authors' profiles.
 | 02 (Dual Velocities) | 04_KINEMATICS/dual_velocities.md |
 | 03 (Frequency Framework) | 01_OVERVIEW/ssz_overview.md |
 | 04 (Metric) | 06_STRONG_FIELD/black_hole_metric.md |
+| 05 (Infalling Matter) | 06_STRONG_FIELD/infalling_matter.md |
+| 06 (Euler Derivation) | 02_FOUNDATIONS/euler_derivation.md |
+| 07 (Kinematic Closure) | 04_KINEMATICS/kinematic_closure.md |
+| 08 (Group Velocity) | 05_ELECTROMAGNETISM/group_velocity.md |
 | 09 (Dark Star) | 06_STRONG_FIELD/dark_star.md |
+| 10 (Curvature Detection) | 07_VALIDATION/curvature_detection.md |
+| 11 (Nebulae) | 07_VALIDATION/nebulae_validation.md |
+| 12 (Superradiance) | 06_STRONG_FIELD/superradiance.md |
+| 13 (π and φ) | 02_FOUNDATIONS/structural_constants.md |
+| 14 (Emergent Axes) | 02_FOUNDATIONS/emergent_axes.md |
+| 15 (Fine-Structure) | 02_FOUNDATIONS/fine_structure.md |
 | 16 (Singularities) | 06_STRONG_FIELD/singularities.md |
 | 17 (Cosmic Censorship) | 06_STRONG_FIELD/cosmic_censorship.md |
+| 18 (φ/2 and β Calibration) | 03_FORMULAS/phi_beta_calibration.md |
 | 19 (Lorentz v=0) | 04_KINEMATICS/lorentz_v0.md |
+| 20 (Temporal Growth) | 02_FOUNDATIONS/temporal_growth.md |
 | 21 (Redshift) | 05_ELECTROMAGNETISM/redshift.md |
 | 22 (Maxwell Rotating) | 05_ELECTROMAGNETISM/maxwell_rotating.md |
 | 23 (Light-Travel) | 05_ELECTROMAGNETISM/light_travel_time.md |

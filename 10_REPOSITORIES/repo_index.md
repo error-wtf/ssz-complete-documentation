@@ -1,11 +1,11 @@
 # Complete Repository Index
 
 **GitHub:** [github.com/error-wtf](https://github.com/error-wtf)
-**Total Repositories:** 35 (33 public, 2 private)
+**Total Repositories:** 36 (34 public, 2 private)
 
 ---
 
-## A) SSZ / Physics Repositories (17)
+## A) SSZ / Physics Repositories (18)
 
 | # | Repository | Description | Tests | Branch |
 |---|-----------|-------------|-------|--------|
@@ -25,7 +25,8 @@
 | 14 | [SEGMENTED_SPACETIME](https://github.com/error-wtf/SEGMENTED_SPACETIME) | Theory papers (no code) | — | main |
 | 15 | [emergent-spacetime](https://github.com/error-wtf/emergent-spacetime) | Emergent spatial axes from temporal interference | — | main |
 | 16 | [ssz-complete-documentation](https://github.com/error-wtf/ssz-complete-documentation) | This documentation repository | — | main |
-| 17 | [TRY_TO_CALCULATE_CHIRP_MASS_OUT_OF_LIGO_STRAINS](https://github.com/error-wtf/TRY_TO_CALCULATE_CHIRP_MASS_OUT_OF_LIGO_STRAINS) | LIGO chirp mass calculation | — | main |
+| 17 | [ssz-lagrange](https://github.com/error-wtf/ssz-lagrange) | Lagrange formulation, Kerr analog, quantum corrections — 54/54 PASS | 54 | main |
+| 18 | [TRY_TO_CALCULATE_CHIRP_MASS_OUT_OF_LIGO_STRAINS](https://github.com/error-wtf/TRY_TO_CALCULATE_CHIRP_MASS_OUT_OF_LIGO_STRAINS) | LIGO chirp mass calculation | — | main |
 
 ---
 
@@ -86,7 +87,7 @@
 
 | Metric | Value |
 |--------|-------|
-| SSZ-specific repos | 17 |
+| SSZ-specific repos | 18 |
 | Total Python lines | 1,070+ |
 | Total test files | 200+ |
 | Total test functions | 1,128 |
@@ -109,5 +110,6 @@
 | segmented-calculation-suite | All | All regimes | YES |
 | ssz-schumann | Weak | Exploratory | NO |
 | g79-cygnus-tests | Weak | Nebula scaling | NO |
+| ssz-lagrange | Strong | 1-exp(-φr_s/r) | YES |
 
 **CRITICAL:** Different repos have different scopes. Never compare results across repos without checking which regime and method each uses.
