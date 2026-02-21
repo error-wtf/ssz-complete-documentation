@@ -79,12 +79,14 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 
 ## Books
 
-The complete SSZ monograph is available in two languages:
+The complete SSZ monograph is available in two languages and two formats:
 
-| Edition | Pages | Size | File |
-|---------|-------|------|------|
-| **English** | 445 | 4.8 MB | [SSZ_BOOK_EN.pdf](BOOKS/SSZ_BOOK_EN.pdf) |
-| **German** | 549 | 4.9 MB | [SSZ_BOOK_DE.pdf](BOOKS/SSZ_BOOK_DE.pdf) |
+| Edition | Format | Size | File |
+|---------|--------|------|------|
+| **English** | PDF | 4.8 MB | [SSZ_BOOK_EN.pdf](BOOKS/SSZ_BOOK_EN.pdf) |
+| **English** | Markdown | 970 KB | [SSZ_COMPLETE_BOOK_EN.md](BOOKS/SSZ_COMPLETE_BOOK_EN.md) |
+| **German** | PDF | 4.9 MB | [SSZ_BOOK_DE.pdf](BOOKS/SSZ_BOOK_DE.pdf) |
+| **German** | Markdown | 1.1 MB | [SSZ_COMPLETE_BOOK_DE.md](BOOKS/SSZ_COMPLETE_BOOK_DE.md) |
 
 **Structure (9 Parts, 32 Chapters + 7 Appendices):**
 
