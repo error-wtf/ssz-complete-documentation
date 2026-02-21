@@ -3,7 +3,7 @@
 **Authors:** Carmen N. Wrede, Lino P. Casu
 **AI Assistants:** Bingsi, Akira
 **Status:** Canonical Reference — Single Source of Truth
-**Last Updated:** 2026-02-15
+**Last Updated:** 2026-02-20
 
 ---
 
@@ -48,8 +48,9 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 | Tests | 747+ validated, 200+ test files |
 | Documentation files | 1,803+ across all repos |
 | Consistency checks | 171/171 PASS |
-| Book chapters | 30 (8 parts + appendices A–G) |
-| Manuscript | ~90,000 words, ~300 pages |
+| Book chapters | 32 (9 parts + appendices A–G) |
+| Book (EN) | 445 pages, 4.8 MB ([PDF](BOOKS/SSZ_BOOK_EN.pdf)) |
+| Book (DE) | 549 pages, 4.9 MB ([PDF](BOOKS/SSZ_BOOK_DE.pdf)) |
 
 ---
 
@@ -73,6 +74,33 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 | Timelike (clocks) | Ξ-based | D = 1/(1+Ξ) |
 | Null (light) | PPN (1+γ) | α = 2r_s/b |
 | Orbit (precession) | PPN (β,γ) | Standard PPN |
+
+---
+
+## Books
+
+The complete SSZ monograph is available in two languages:
+
+| Edition | Pages | Size | File |
+|---------|-------|------|------|
+| **English** | 445 | 4.8 MB | [SSZ_BOOK_EN.pdf](BOOKS/SSZ_BOOK_EN.pdf) |
+| **German** | 549 | 4.9 MB | [SSZ_BOOK_DE.pdf](BOOKS/SSZ_BOOK_DE.pdf) |
+
+**Structure (9 Parts, 32 Chapters + 7 Appendices):**
+
+| Part | EN | DE |
+|------|----|----|
+| I | Foundations | Grundlagen |
+| II | Kinematics | Kinematik |
+| III | Electromagnetism and Light Propagation | Elektromagnetismus und Lichtausbreitung |
+| IV | Frequency Framework and Curvature Detection | Frequenz-Rahmenwerk und Krümmungsdetektion |
+| **V** | **Action Principle and Extended Formalism** | **Wirkungsprinzip und erweiterter Formalismus** |
+| VI | Strong-Field Objects | Starke-Feld-Objekte |
+| VII | Astrophysical Applications | Astrophysikalische Anwendungen |
+| VIII | Regime Transitions | Regimeübergänge |
+| IX | Validation and Reproducibility | Validierung und Reproduzierbarkeit |
+
+**New in v2 (2026-02-20):** Part V — Lagrangian/Hamiltonian formulation, rotating metrics, quantum corrections, and numerical relativity (Chapters 31–32).
 
 ---
 
