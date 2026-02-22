@@ -49,8 +49,8 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 | Documentation files | 1,803+ across all repos |
 | Consistency checks | 171/171 PASS |
 | Book chapters | 32 (9 parts + appendices A–G) |
-| Book (EN) | 445 pages, 4.8 MB ([PDF](BOOKS/SSZ_BOOK_EN.pdf)) |
-| Book (DE) | 549 pages, 4.9 MB ([PDF](BOOKS/SSZ_BOOK_DE.pdf)) |
+| Book (EN) | 447 pages, 4.9 MB ([PDF](BOOKS/SSZ_BOOK_EN.pdf)) |
+| Book (DE) | 648 pages, 5.7 MB ([PDF](BOOKS/SSZ_BOOK_DE.pdf)) |
 
 ---
 
