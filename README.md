@@ -108,6 +108,32 @@ The complete SSZ monograph is available in two languages and two formats:
 
 ## License
 
-Anti-Capitalist Software License v1.4
+This project is licensed under the **Anti-Capitalist Software License v1.4**.
+
+See [LICENSE.md](LICENSE.md) for the full license text.
+
+**Core Principle:** Science should serve humanity, not profit.
+
+### You are free to:
+- Use, study, share, and modify this documentation for personal, educational, or non-profit purposes
+- Publish scientific results based on this documentation (with attribution)
+
+### You may not:
+- Use this documentation for commercial purposes or in the service of capitalist enterprises
+- Use this documentation in military, surveillance, or law enforcement contexts
+- Incorporate this documentation into closed-source commercial products
+
+### Citation
+
+If you use this documentation in scientific work, please cite:
+
+```bibtex
+@misc{wrede2026sszdocs,
+  title={Segmented Spacetime (SSZ) -- Complete Documentation},
+  author={Wrede, Carmen N. and Casu, Lino P.},
+  year={2026},
+  note={Available at https://github.com/error-wtf/ssz-complete-documentation}
+}
+```
 
 © 2025–2026 Carmen N. Wrede, Lino P. Casu
