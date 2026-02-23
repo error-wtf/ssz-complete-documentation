@@ -1,5 +1,3 @@
-﻿\frontmatter
-
 # Vorwort
 
 Dieses Buch präsentiert Segmentierte Raumzeit (SSZ) — ein theoretisches Rahmenwerk, das die Allgemeine Relativitätstheorie durch Einführung eines einzigen dimensionslosen Skalarfeldes, der Segmentdichte Ξ(r), erweitert, das die Zeitdilatation in der gesamten Raumzeit moduliert. Wo Einsteins Theorie Singularitäten vorhersagt — Punkte unendlicher Krümmung, an denen die physikalischen Gesetze zusammenbrechen — sagt SSZ Sättigung vorher: eine endliche maximale Segmentdichte, jenseits derer keine weitere Kompression stattfindet. Die Konsequenzen dieser einzigen Modifikation kaskadieren durch die gesamte Gravitationsphysik, von Sonnensystemtests bis zu Schwarzen-Loch-Inneren.
@@ -8,7 +6,7 @@ Dieses Buch präsentiert Segmentierte Raumzeit (SSZ) — ein theoretisches Rahme
 
 SSZ begann als Versuch, eine einfache Frage zu verstehen: Was geschieht mit der Zeit im Zentrum eines Schwarzen Lochs? Die Antwort der Allgemeinen Relativitätstheorie — die Zeit stoppt, die Krümmung divergiert, die Physik bricht zusammen — hat Physiker beunruhigt, seit Karl Schwarzschild 1916 die erste exakte Lösung der Einsteinschen Feldgleichungen fand. Über ein Jahrhundert wurde die Singularität entweder als fundamentales Merkmal der Natur oder als Signal behandelt, dass die ART auf der Planck-Skala durch Quantengravitation ersetzt werden muss. Aber keine vollständige Quantengravitationstheorie ist entstanden, und das Singularitätsproblem bleibt offen.
 
-SSZ nähert sich dem Problem anders. Anstatt die Gravitation zu quantisieren (ein Top-Down-Ansatz), fragt SSZ: Was ist die minimale Modifikation der ART, die Singularitäten eliminiert, ohne freie Parameter einzuführen? Die Antwort erweist sich als überraschend einfach: Ersetze den Schwarzschild-Zeitdilatationsfaktor $D_{ART}$(r) = √(1 − $r_{s}$/r), der am Horizont null erreicht, durch $D_{SSZ}$(r) = 1/(1 + Ξ(r)), der nach unten durch $D_{min}$ = 0,555 > 0 begrenzt ist.
+SSZ nähert sich dem Problem anders. Anstatt die Gravitation zu quantisieren (ein Top-Down-Ansatz), fragt SSZ: Was ist die minimale Modifikation der ART, die Singularitäten eliminiert, ohne freie Parameter einzuführen? Die Antwort erweist sich als überraschend einfach: Ersetze den Schwarzschild-Zeitdilatationsfaktor D_ART(r) = √(1 − r_s/r), der am Horizont null erreicht, durch D_SSZ(r) = 1/(1 + Ξ(r)), der nach unten durch D_min = 0,555 > 0 begrenzt ist.
 
 Das Rahmenwerk wurde von Carmen N. Wrede und Lino P. Casu über mehrere Jahre kollaborativer Arbeit entwickelt, beginnend mit der Beobachtung, dass der Goldene Schnitt φ = (1+√5)/2 natürlich im Sättigungsverhalten beschränkter Exponentialfunktionen erscheint. Die resultierende Theorie wurde gegen jeden klassischen Test der ART validiert, in 11 unabhängigen Code-Repositories mit 564+ automatisierten Tests implementiert und einer Anti-Zirkularitätsanalyse unterzogen.
 
@@ -32,7 +30,7 @@ Dieses Buch dient gleichzeitig drei Zwecken:
 
 ## Für Forscher
 
-Forscher mit ART-Hintergrund finden das relevanteste Material in Teil V (Starkfeld) und Teil VIII (Validierung). Das wichtigste Einzelergebnis ist die endliche Zeitdilatation am Schwarzschild-Radius: $D_{min}$ = 0,555 (SSZ) versus D = 0 (ART). Alle Vorhersagen können mit den Open-Source-Repositories reproduziert werden.
+Forscher mit ART-Hintergrund finden das relevanteste Material in Teil V (Starkfeld) und Teil VIII (Validierung). Das wichtigste Einzelergebnis ist die endliche Zeitdilatation am Schwarzschild-Radius: D_min = 0,555 (SSZ) versus D = 0 (ART). Alle Vorhersagen können mit den Open-Source-Repositories reproduziert werden.
 
 ### Kollaborations-Links
 
@@ -62,7 +60,7 @@ Alle Formeln verwenden SI-Einheiten sofern nicht anders angegeben. Die Fundament
 - ℏ = 1,055 × 10⁻³⁴ J·s (reduziertes Plancksches Wirkungsquantum)
 - φ = (1+√5)/2 = 1,618... (Goldener Schnitt — mathematische Konstante, nicht angepasst)
 
-Der Schwarzschild-Radius ist $r_{s}$ = 2GM/c². Die Segmentdichte Ξ ist stets dimensionslos und nichtnegativ. Der Zeitdilatationsfaktor D = 1/(1+Ξ) erfüllt 0 < D ≤ 1. Die PPN-Parameter sind γ = β = 1 durchgehend — SSZ ist PPN-identisch mit der ART im Schwachfeld.
+Der Schwarzschild-Radius ist r_s = 2GM/c². Die Segmentdichte Ξ ist stets dimensionslos und nichtnegativ. Der Zeitdilatationsfaktor D = 1/(1+Ξ) erfüllt 0 < D ≤ 1. Die PPN-Parameter sind γ = β = 1 durchgehend — SSZ ist PPN-identisch mit der ART im Schwachfeld.
 
 ## Zur intellektuellen Ehrlichkeit
 
@@ -126,22 +124,19 @@ Dieses Buch verwendet die folgenden Konventionen:
 - **Einheiten:** Natuerliche Einheiten (c = G = 1) in Formeln, SI-Einheiten in numerischen Beispielen
 - **Griechische Indizes:** mu, nu = 0,1,2,3 (Raumzeit)
 - **Lateinische Indizes:** i, j = 1,2,3 (Raum)
-- **Schwarzschild-Radius:** $r_{s}$ = 2GM/c^2
+- **Schwarzschild-Radius:** r_s = 2GM/c^2
 - **Segmentdichte:** Xi (griechisch Xi)
 - **Zeitdilatation:** D = 1/(1+Xi)
 - **Skalierungsfaktor:** s = 1 + Xi = 1/D
 
 Eine vollstaendige Symboltabelle findet sich in Anhang A.
 
+---
 
-\newpage
+# Kapitel 1: SSZ-Überblick und operationelle Festlegungen
 
-\mainmatter
-
-\part{Grundlagen}
-
-# SSZ-Überblick und operationelle Festlegungen
-
+**Teil I — Grundlagen**
+**Status:** ERWEITERTE FASSUNG
 
 ---
 
@@ -165,15 +160,15 @@ Bevor wir in den technischen Inhalt eintauchen, lohnt es sich zu würdigen, welc
 
 SSZ postuliert, dass die Raumzeit eine messbare innere Struktur besitzt, die durch ein Skalarfeld Ξ beschrieben wird — die *Segmentdichte*. Dieses Feld quantifiziert, wie dicht die Raumzeit an einer gegebenen Radialkoordinate r von einer gravitierenden Masse M „segmentiert" ist. Die zentrale beobachtbare Konsequenz ist ein modifizierter Zeitdilatationsfaktor:
 
-$$D_{\text{SSZ}}(r) = \frac{1}{1 + \Xi(r)}$$
+D_{\text{SSZ}}(r) = \frac{1}{1 + \Xi(r)}
 
 wobei D die Eigenzeit τ mit der Koordinatenzeit t durch dτ = D · dt verknüpft. Diese einzige Gleichung ist der operationelle Kern von SSZ. Jede Vorhersage — Rotverschiebung, Uhrenvergleiche, Frequenzverschiebungen, Energiebedingungen — leitet sich daraus ab.
 
 Um die Bedeutung dieser Gleichung zu würdigen, vergleiche man sie mit dem entsprechenden ART-Ausdruck für eine nicht-rotierende Masse:
 
-$$D_{\text{GR}}(r) = \sqrt{1 - \frac{r_s}{r}}$$
+D_{\text{GR}}(r) = \sqrt{1 - \frac{r_s}{r}}
 
-Beide Ausdrücke ergeben D = 1 in flacher Raumzeit (r → ∞) und D < 1 in der Nähe einer Masse. Aber sie unterscheiden sich entscheidend am Schwarzschild-Radius $r_{s}$ = 2GM/c²:
+Beide Ausdrücke ergeben D = 1 in flacher Raumzeit (r → ∞) und D < 1 in der Nähe einer Masse. Aber sie unterscheiden sich entscheidend am Schwarzschild-Radius r_s = 2GM/c²:
 
 | | ART | SSZ |
 |---|------|-----|
@@ -184,13 +179,13 @@ Beide Ausdrücke ergeben D = 1 in flacher Raumzeit (r → ∞) und D < 1 in der 
 
 In der ART verschwindet D am Horizont — die Zeit bleibt für einen fernen Beobachter vollständig stehen. In SSZ erreicht D ein endliches Minimum von etwa 0,555. Uhren verlangsamen sich dramatisch, aber sie bleiben nie stehen. Dies ist der wichtigste qualitative Unterschied zwischen den beiden Rahmenwerken.
 
-Warum ist dies notwendig? In der Allgemeinen Relativitätstheorie erzeugt das Verschwinden von D am Horizont eine Kaskade konzeptioneller Probleme: Die Eigenzeit bis zum Erreichen des Horizonts ist endlich für einen einfallenden Beobachter, aber unendlich für einen fernen Beobachter; Signale werden unendlich rotverschoben; und die kausale Struktur zerfällt in getrennte Regionen. Diese Eigenschaften sind mathematisch selbstkonsistent innerhalb der ART, aber sie wurden nie direkt beobachtet. Jede astronomische Messung eines Schwarzen Lochs umfasst Photonen, die außerhalb des Horizonts emittiert werden, wo D von null verschieden ist. Die ART-Vorhersage D = 0 bei $r_{s}$ ist daher eine Extrapolation über den Bereich des Beobachtungszugangs hinaus. SSZ fragt einfach: Was, wenn diese Extrapolation überschießt? Was, wenn D ein endliches Minimum erreicht statt null? Der Wert $D_{min}$ = 0,555 wird nicht gewählt oder angepasst — er folgt eindeutig aus φ durch die Kette φ → exp(−φ) → Ξ_max = 1 − exp(−φ) → $D_{min}$ = 1/(1 + Ξ_max). Es gibt keinen Schritt, bei dem eine Wahl getroffen wird.
+Warum ist dies notwendig? In der Allgemeinen Relativitätstheorie erzeugt das Verschwinden von D am Horizont eine Kaskade konzeptioneller Probleme: Die Eigenzeit bis zum Erreichen des Horizonts ist endlich für einen einfallenden Beobachter, aber unendlich für einen fernen Beobachter; Signale werden unendlich rotverschoben; und die kausale Struktur zerfällt in getrennte Regionen. Diese Eigenschaften sind mathematisch selbstkonsistent innerhalb der ART, aber sie wurden nie direkt beobachtet. Jede astronomische Messung eines Schwarzen Lochs umfasst Photonen, die außerhalb des Horizonts emittiert werden, wo D von null verschieden ist. Die ART-Vorhersage D = 0 bei r_s ist daher eine Extrapolation über den Bereich des Beobachtungszugangs hinaus. SSZ fragt einfach: Was, wenn diese Extrapolation überschießt? Was, wenn D ein endliches Minimum erreicht statt null? Der Wert D_min = 0,555 wird nicht gewählt oder angepasst — er folgt eindeutig aus φ durch die Kette φ → exp(−φ) → Ξ_max = 1 − exp(−φ) → D_min = 1/(1 + Ξ_max). Es gibt keinen Schritt, bei dem eine Wahl getroffen wird.
 
-Der entscheidende Unterschied zur ART liegt am Schwarzschild-Radius $r_{s}$. In der ART verschwindet $D_{GR}$(r) = √(1 − $r_{s}$/r) bei r = $r_{s}$ und erzeugt eine Koordinatensingularität. In SSZ sättigt die Segmentdichte bei einem endlichen Maximum, das durch den Goldenen Schnitt φ bestimmt wird:
+Der entscheidende Unterschied zur ART liegt am Schwarzschild-Radius r_s. In der ART verschwindet D_GR(r) = √(1 − r_s/r) bei r = r_s und erzeugt eine Koordinatensingularität. In SSZ sättigt die Segmentdichte bei einem endlichen Maximum, das durch den Goldenen Schnitt φ bestimmt wird:
 
-$$\Xi_{\max} = 1 - e^{-\varphi} \approx 0.80171$$
+\Xi_{\max} = 1 - e^{-\varphi} \approx 0.80171
 
-$$D_{\min} = \frac{1}{1 + \Xi_{\max}} \approx 0.55503$$
+D_{\min} = \frac{1}{1 + \Xi_{\max}} \approx 0.55503
 
 Dieser Wert wird nicht an Daten angepasst. Er ist eine direkte mathematische Konsequenz der φ-Konstruktion. Der Zeitdilatationsfaktor am Horizont ist endlich, von null verschieden und universell — er hängt nicht von der Masse des Schwarzen Lochs ab.
 
@@ -200,7 +195,7 @@ Ebenso wichtig ist es, klar zu formulieren, was SSZ *nicht* behauptet, um Missve
 
 **SSZ ist keine Quantengravitationstheorie.** Sie modifiziert nicht die Einstein-Feldgleichungen auf der Wirkungsebene. Sie quantisiert die Raumzeit nicht. Sie operiert auf der Ebene der *Observablen*: Sie liefert eine alternative Vorschrift zur Berechnung von Zeitdilatation und Rotverschiebung, die im Schwachfeld mit der ART übereinstimmt und im Starkfeld systematisch abweicht.
 
-**SSZ behauptet nicht, dass die ART falsch ist.** Im Schwachfeldregime (g₁), wo r ≫ $r_{s}$, reproduziert SSZ die ART mit beliebiger Genauigkeit. Die PPN-Parameter sind exakt β = γ = 1 und stimmen mit allen Sonnensystemtests überein (Cassini, Lunar Laser Ranging, Merkur-Periheldrehung). SSZ behauptet lediglich, dass die *Extrapolation* der ART in das Starkfeldregime möglicherweise nicht die einzige physikalisch korrekte Fortsetzung ist — ebenso wie die Newtonsche Gravitation im Schwachfeld korrekt ist, aber im Starkfeld relativistische Korrekturen erfordert.
+**SSZ behauptet nicht, dass die ART falsch ist.** Im Schwachfeldregime (g₁), wo r ≫ r_s, reproduziert SSZ die ART mit beliebiger Genauigkeit. Die PPN-Parameter sind exakt β = γ = 1 und stimmen mit allen Sonnensystemtests überein (Cassini, Lunar Laser Ranging, Merkur-Periheldrehung). SSZ behauptet lediglich, dass die *Extrapolation* der ART in das Starkfeldregime möglicherweise nicht die einzige physikalisch korrekte Fortsetzung ist — ebenso wie die Newtonsche Gravitation im Schwachfeld korrekt ist, aber im Starkfeld relativistische Korrekturen erfordert.
 
 **SSZ führt weder Dunkle Materie noch Dunkle Energie oder neue Teilchen ein.** Ihre Modifikationen sind rein geometrisch — sie verändern die Beziehung zwischen Koordinaten und Observablen in der Nähe massiver Körper, ohne dem Universum neuen Materieinhalt hinzuzufügen.
 
@@ -212,7 +207,7 @@ Es ist wichtig festzuhalten, was hier nicht beansprucht wird: SSZ behauptet nich
 
 SSZ macht konkrete, vorzeichenbestimmte Vorhersagen, die sich von der ART unterscheiden. Dies sind keine vagen qualitativen Aussagen („SSZ sagt etwas anderes voraus"), sondern spezifische Zahlen mit spezifischen Vorzeichen:
 
-- **Neutronenstern-Rotverschiebung:** Bei Kompaktheit r/r_s $\approx$ 2–4 sagt SSZ systematisch *mehr* Rotverschiebung voraus als die ART, um etwa +13%. Diese Vorhersage kann durch das NICER-Röntgenteleskop auf der Internationalen Raumstation getestet werden, das thermische Emission von Neutronensternoberflächen misst.
+- **Neutronenstern-Rotverschiebung:** Bei Kompaktheit r/r_s ≈ 2–4 sagt SSZ systematisch *mehr* Rotverschiebung voraus als die ART, um etwa +13%. Diese Vorhersage kann durch das NICER-Röntgenteleskop auf der Internationalen Raumstation getestet werden, das thermische Emission von Neutronensternoberflächen misst.
 
 - **Schwarzes-Loch-Schattendurchmesser:** SSZ sagt einen geringfügig *kleineren* scheinbaren Schattendurchmesser voraus als die ART, um etwa −1,3%. Das Event Horizon Telescope (EHT) hat den Schatten von M87* und Sgr A* mit zunehmender Präzision gemessen; zukünftige Beobachtungen könnten die nötige Genauigkeit erreichen, um die beiden Vorhersagen zu unterscheiden.
 
@@ -228,7 +223,7 @@ Wenn man dies messen wollte: Die +13-Prozent-Vorhersage für Neutronenstern-Rotv
 
 Die Landschaft modifizierter Gravitationstheorien ist dicht besiedelt. Brans-Dicke-Theorie, f(R)-Gravitation, MOND, TeVeS, massive Gravitation und viele andere wurden als Alternativen zur ART vorgeschlagen. Drei Merkmale heben SSZ von all diesen ab.
 
-Erstens, null freie Parameter: SSZ-Vorhersagen hängen nur von den mathematischen Konstanten φ, π und N₀ = 4 sowie der Masse M des gravitierenden Objekts ab. Jede andere modifizierte Gravitationstheorie hat mindestens einen freien Parameter (die Brans-Dicke-Kopplungskonstante ω, die MOND-Beschleunigungsskala a₀, die Gravitonmasse $m_{g}$), der an Beobachtungen angepasst werden muss. SSZ hat keinen.
+Erstens, null freie Parameter: SSZ-Vorhersagen hängen nur von den mathematischen Konstanten φ, π und N₀ = 4 sowie der Masse M des gravitierenden Objekts ab. Jede andere modifizierte Gravitationstheorie hat mindestens einen freien Parameter (die Brans-Dicke-Kopplungskonstante ω, die MOND-Beschleunigungsskala a₀, die Gravitonmasse m_g), der an Beobachtungen angepasst werden muss. SSZ hat keinen.
 
 Zweitens, eine geometrische Herleitung der Feinstrukturkonstante α: Keine andere modifizierte Gravitationstheorie sagt α vorher. SSZ leitet α = 1/(φ^{2π} × 4) = 1/137,08 aus der Segmentgitter-Geometrie ab und stellt eine Verbindung zwischen Gravitation und Elektromagnetismus her, die in allen anderen Ansätzen fehlt.
 
@@ -248,9 +243,11 @@ Diese Analogie hat, wie alle Analogien, Grenzen, die klar benannt werden müssen
 
 Das Segmentierungskonzept entspringt der Beobachtung, dass eine Lichtwelle im Vakuum genau N₀ = 4 fundamentale Segmente pro Periode durchläuft. Dies ist eine geometrische Konsequenz: Eine vollständige elektromagnetische Schwingung (Kreisfrequenz ω = 2π) teilt sich natürlich in vier Viertelphasen-Segmente bei den Phasen 0, π/2, π, 3π/2 und 2π. Die Zahl 4 ist die Grundsegmentierung der flachen Raumzeit — sie ist kein freier Parameter, sondern eine Konsequenz der 2π-Periodizität elektromagnetischer Wellen.
 
+Äquivalent: die Segmentrate für eine Welle der Frequenz f und Periode T ist N = 4f = 4/T. Dies ist Standard-Quadraturlogik, identisch mit dem Drehgeber-Prinzip (Rotary Encoder): Impulsrate f_Impuls = 4 f_rot bei Quadranten-Partitionierung. Der Faktor 4 ist geometrisch, kein Anpassungsparameter.
+
 Unter dem Einfluss der Gravitation nimmt die Anzahl der pro Periode durchlaufenen Segmente zu:
 
-$$N' = N_0 \cdot \frac{f}{f'} = N_0 \cdot \frac{\lambda'}{\lambda_0}$$
+N' = N_0 \cdot \frac{f}{f'} = N_0 \cdot \frac{\lambda'}{\lambda_0}
 
 wobei f und f' die ungestörten und gravitativ verschobenen Frequenzen sind. Mit zunehmender Gravitation wächst die Segmentzahl, was die zunehmende strukturelle Komplexität der Raumzeit nahe einem massiven Körper widerspiegelt. Kapitel 2 entwickelt das mathematische Rahmenwerk für diese Segmentierung im Detail.
 
@@ -262,23 +259,23 @@ Die Segmentdichte Ξ(r) formalisiert diese Idee. Ξ ist ein dimensionsloses, nic
 
 1. **Positivität:** Ξ(r) ≥ 0 für alle r > 0. Negative Segmentdichte hat keine physikalische Bedeutung.
 2. **Monotonie:** Ξ(r) nimmt zu, wenn r zur Masse hin abnimmt. Gravitation erhöht die Segmentierung; sie verringert sie nie.
-3. **Sättigung:** Ξ(r) ist nach oben durch Ξ_max $\approx$ 0,802 beschränkt, was Divergenzen verhindert. Dies ist der zentrale strukturelle Unterschied zur ART.
+3. **Sättigung:** Ξ(r) ist nach oben durch Ξ_max ≈ 0,802 beschränkt, was Divergenzen verhindert. Dies ist der zentrale strukturelle Unterschied zur ART.
 
-Diese Eigenschaften stellen sicher, dass D = 1/(1 + Ξ) strikt zwischen 0 und 1 bleibt, nie verschwindet und nie divergiert. Dies ist der fundamentale strukturelle Unterschied zur ART, wo $D_{GR}$ → 0 am Horizont.
+Diese Eigenschaften stellen sicher, dass D = 1/(1 + Ξ) strikt zwischen 0 und 1 bleibt, nie verschwindet und nie divergiert. Dies ist der fundamentale strukturelle Unterschied zur ART, wo D_GR → 0 am Horizont.
 
-Diese drei Eigenschaften verdienen individuelle Aufmerksamkeit, da jede direkte physikalische Konsequenzen hat. Positivität bedeutet, dass Gravitation die Segmentdichte nur erhöhen kann; es gibt keine Antigravitation in SSZ, konsistent mit der schwachen Energiebedingung. Monotonie bedeutet, dass näher an der Masse Ξ immer höher ist — eine Konsequenz der Radialsymmetrie. Sättigung ist die folgenreichste Eigenschaft: In der ART nimmt D unbegrenzt ab und erreicht null am Horizont. In SSZ hat die Exponentialform eine eingebaute Obergrenze — wenn das Argument wächst, nähert sich Ξ höchstens 1, was D = 0,5 im ungünstigsten Fall ergibt. Das tatsächliche Maximum Ξ = 0,802 liefert $D_{min}$ = 0,555, komfortabel über null.
+Diese drei Eigenschaften verdienen individuelle Aufmerksamkeit, da jede direkte physikalische Konsequenzen hat. Positivität bedeutet, dass Gravitation die Segmentdichte nur erhöhen kann; es gibt keine Antigravitation in SSZ, konsistent mit der schwachen Energiebedingung. Monotonie bedeutet, dass näher an der Masse Ξ immer höher ist — eine Konsequenz der Radialsymmetrie. Sättigung ist die folgenreichste Eigenschaft: In der ART nimmt D unbegrenzt ab und erreicht null am Horizont. In SSZ hat die Exponentialform eine eingebaute Obergrenze — wenn das Argument wächst, nähert sich Ξ höchstens 1, was D = 0,5 im ungünstigsten Fall ergibt. Das tatsächliche Maximum Ξ = 0,802 liefert D_min = 0,555, komfortabel über null.
 
-Die physikalische Interpretation ist direkt: Ξ misst, wie viel „zusätzliche Struktur" das Gravitationsfeld der Raumzeit bei Radius r aufprägt. In flacher Raumzeit ist Ξ = 0 und D = 1 — Uhren ticken mit der Koordinatenrate. Nahe einem massiven Körper ist Ξ > 0 und D < 1 — Uhren ticken langsamer. Am Horizont sättigt Ξ bei Ξ_max $\approx$ 0,802 und D erreicht D_min $\approx$ 0,555 — Uhren ticken mit etwa 55,5% der Koordinatenrate, aber sie *bleiben nicht stehen*.
+Die physikalische Interpretation ist direkt: Ξ misst, wie viel „zusätzliche Struktur" das Gravitationsfeld der Raumzeit bei Radius r aufprägt. In flacher Raumzeit ist Ξ = 0 und D = 1 — Uhren ticken mit der Koordinatenrate. Nahe einem massiven Körper ist Ξ > 0 und D < 1 — Uhren ticken langsamer. Am Horizont sättigt Ξ bei Ξ_max ≈ 0,802 und D erreicht D_min ≈ 0,555 — Uhren ticken mit etwa 55,5% der Koordinatenrate, aber sie *bleiben nicht stehen*.
 
 ### Die Rolle von φ
 
-Der Goldene Schnitt φ = (1 + √5)/2 $\approx$ 1,618034 tritt in SSZ als fundamentale Skalierungskonstante der Segmentgeometrie auf. Im Starkfeldregime nimmt die Segmentdichte die sättigende Form an:
+Der Goldene Schnitt φ = (1 + √5)/2 ≈ 1,618034 tritt in SSZ als fundamentale Skalierungskonstante der Segmentgeometrie auf. Im Starkfeldregime nimmt die Segmentdichte die sättigende Form an:
 
-$$\Xi_{\text{strong}}(r) = 1 - e^{-\varphi \cdot r_s / r}$$
+\Xi_{\text{strong}}(r) = 1 - e^{-\varphi \cdot r_s / r}
 
-Das Auftreten von φ im Exponenten ist nicht willkürlich — es wird durch die logarithmische Spiralstruktur motiviert: Für jede Vierteldrehung der Spirale nimmt der Radius um den Faktor φ zu. Diese φ-Skalierung erzeugt die Sättigung bei Ξ_max = 1 − e^{−φ} und stellt sicher, dass die Segmentdichte auch für r → $r_{s}$ beschränkt bleibt. Kapitel 4 liefert die vollständige Ableitungskette von der φ-Spirale über die Euler-Formel zur Exponentialform.
+Das Auftreten von φ im Exponenten ist nicht willkürlich — es wird durch die logarithmische Spiralstruktur motiviert: Für jede Vierteldrehung der Spirale nimmt der Radius um den Faktor φ zu. Diese φ-Skalierung erzeugt die Sättigung bei Ξ_max = 1 − e^{−φ} und stellt sicher, dass die Segmentdichte auch für r → r_s beschränkt bleibt. Kapitel 4 liefert die vollständige Ableitungskette von der φ-Spirale über die Euler-Formel zur Exponentialform.
 
-Die Strukturkonstanten π und φ spielen komplementäre Rollen: π bestimmt die Kreisgeometrie der Wellenausbreitung (die 2π-Periodizität), während φ das radiale Wachstum bestimmt (die Spiralskalierung). Die Beziehung 2φ $\approx$ π beim Einheitsradius verbindet diese beiden Konstanten und etabliert die Grundsegmentierung N₀ = 4. Die Kapitel 2 und 3 entwickeln diese Beziehungen im Detail.
+Die Strukturkonstanten π und φ spielen komplementäre Rollen: π bestimmt die Kreisgeometrie der Wellenausbreitung (die 2π-Periodizität), während φ das radiale Wachstum bestimmt (die Spiralskalierung). Die Beziehung 2φ ≈ π beim Einheitsradius verbindet diese beiden Konstanten und etabliert die Grundsegmentierung N₀ = 4. Die Kapitel 2 und 3 entwickeln diese Beziehungen im Detail.
 
 ## 1.3 Die Zwei-Regime-Struktur: g₁ und g₂
 
@@ -296,31 +293,31 @@ Im Starkfeld, nahe dem Schwarzschild-Radius, ist Ξ groß und nähert sich der S
 
 Im Schwachfeldregime (r/r_s > 10) nimmt die Segmentdichte die Form an:
 
-$$\Xi_{\text{weak}}(r) = \frac{r_s}{2r} = \frac{GM}{c^2 r}$$
+\Xi_{\text{weak}}(r) = \frac{r_s}{2r} = \frac{GM}{c^2 r}
 
-Dies ist der einfachste Ausdruck, der mit den drei Anforderungen konsistent ist (Positivität, Monotonie, korrekte dimensionelle Skalierung). Einsetzen in $D_{SSZ}$:
+Dies ist der einfachste Ausdruck, der mit den drei Anforderungen konsistent ist (Positivität, Monotonie, korrekte dimensionelle Skalierung). Einsetzen in D_SSZ:
 
-$$D_{\text{SSZ}}(r) = \frac{1}{1 + \frac{r_s}{2r}} \approx 1 - \frac{GM}{c^2 r} + \mathcal{O}\left(\frac{r_s}{r}\right)^2$$
+D_{\text{SSZ}}(r) = \frac{1}{1 + \frac{r_s}{2r}} \approx 1 - \frac{GM}{c^2 r} + \mathcal{O}\left(\frac{r_s}{r}\right)^2
 
 Dies reproduziert die Schwarzschild-Zeitdilatation in führender Ordnung. Die PPN-Parameter sind exakt β = γ = 1 und erfüllen die Cassini-Schranke (γ = 1,000021 ± 0,000023). Im Schwachfeld *ist* SSZ die ART — es gibt keinen nachweisbaren Unterschied.
 
 Die Standard-Schwachfeld-Observablen folgen direkt:
 
-- **Lichtablenkung:** α = (1 + γ) $r_{s}$ / b = 2 $r_{s}$ / b (unter Verwendung der vollständigen PPN-Formulierung)
-- **Shapiro-Verzögerung:** Δt = (1 + γ)($r_{s}$ / c) · ln(4r₁r₂ / d²) (PPN, erfasst sowohl $g_{tt}$ als auch $g_{rr}$)
+- **Lichtablenkung:** α = (1 + γ) r_s / b = 2 r_s / b (unter Verwendung der vollständigen PPN-Formulierung)
+- **Shapiro-Verzögerung:** Δt = (1 + γ)(r_s / c) · ln(4r₁r₂ / d²) (PPN, erfasst sowohl g_tt als auch g_rr)
 - **Periheldrehung:** Δω = 6πGM / [a(1 − e²)c²] (Standard-ART-Ergebnis)
 
-Eine kritische Feinheit: Lichtablenkung und Shapiro-Verzögerung verwenden die vollständige PPN-Formulierung (die sowohl die zeitliche $g_{tt}$- als auch die räumliche $g_{rr}$-Metrikkomponente erfasst), nicht die Ξ-basierte Formel allein (die nur die zeitliche Komponente erfasst). Diese Unterscheidung ist wesentlich und wird in Kapitel 10 vollständig entwickelt.
+Eine kritische Feinheit: Lichtablenkung und Shapiro-Verzögerung verwenden die vollständige PPN-Formulierung (die sowohl die zeitliche g_tt- als auch die räumliche g_rr-Metrikkomponente erfasst), nicht die Ξ-basierte Formel allein (die nur die zeitliche Komponente erfasst). Diese Unterscheidung ist wesentlich und wird in Kapitel 10 vollständig entwickelt.
 
 ### Regime g₂: Der Starkfeldbereich
 
 Im Starkfeldregime (r/r_s < 1,8) nimmt die Segmentdichte die sättigende Form an:
 
-$$\Xi_{\text{strong}}(r) = 1 - e^{-\varphi \cdot r_s / r}$$
+\Xi_{\text{strong}}(r) = 1 - e^{-\varphi \cdot r_s / r}
 
 Kritische Eigenschaften dieser Form:
 
-- **Am Horizont (r = r_s):** Ξ(r_s) = 1 − e^{−φ} $\approx$ 0,80171, was D(r_s) $\approx$ 0,55503 ergibt.
+- **Am Horizont (r = r_s):** Ξ(r_s) = 1 − e^{−φ} ≈ 0,80171, was D(r_s) ≈ 0,55503 ergibt.
 - **Für r → 0:** Ξ → 1 (maximale Segmentdichte; D → 0,5, endlich — keine Singularität).
 - **Für r → ∞:** Ξ → 0, glatter Übergang zum Schwachfeldgrenzfall.
 
@@ -330,13 +327,13 @@ Das Sättigungsmaximum Ξ_max = 1 − e^{−φ} ist kein Parameter — es ist ei
 
 Der Übergang zwischen g₁ und g₂ erfolgt in einer Übergangszone bei 1,8 ≤ r/r_s ≤ 2,2. Eine quintische Hermite-C²-Interpolation verbindet die beiden Formen glatt:
 
-$$\Xi(r) = w(r) \cdot \Xi_{\text{strong}}(r) + (1 - w(r)) \cdot \Xi_{\text{weak}}(r)$$
+\Xi(r) = w(r) \cdot \Xi_{\text{strong}}(r) + (1 - w(r)) \cdot \Xi_{\text{weak}}(r)
 
 wobei w(r) eine Gewichtsfunktion ist, die C²-Stetigkeit erfüllt (stetige Funktion, erste und zweite Ableitungen). Das Übergangszentrum r* wird durch die invariante Gleichheitsbedingung bestimmt:
 
-$$\Xi_{\text{weak}}(r^*) = \Xi_{\text{strong}}(r^*)$$
+\Xi_{\text{weak}}(r^*) = \Xi_{\text{strong}}(r^*)
 
-Diese Gleichung wird einmal numerisch gelöst und ergibt r*/r_s $\approx$ 1,595 für den Schwachfeld-Proxy-Schnittpunkt (bzw. r*/r_s $\approx$ 1,387 wenn beide Formen im Starkfeldbereich ausgewertet werden; siehe Kapitel 25 und das Final Paper, Abschnitt 3.4). Das Ergebnis wird dann global fixiert — nie pro Datensatz angepasst.
+Diese Gleichung wird einmal numerisch gelöst und ergibt r*/r_s ≈ 1,595 für den Schwachfeld-Proxy-Schnittpunkt (bzw. r*/r_s ≈ 1,387 wenn beide Formen im Starkfeldbereich ausgewertet werden; siehe Kapitel 25 und das Final Paper, Abschnitt 3.4). Das Ergebnis wird dann global fixiert — nie pro Datensatz angepasst.
 
 Die Existenz einer Übergangszone provoziert oft den Einwand: Zwei verschiedene Formeln zusammengeklebt klingt ad hoc. Die Antwort erfordert sorgfältiges Nachdenken. In der Physik sind stückweise definierte Funktionen üblich und spiegeln echte physikalische Übergänge wider — die Zustandsgleichung von Wasser unterscheidet sich zwischen flüssiger und fester Phase; Schwachfeld- und Starkfeld-QCD verwenden verschiedene Methoden. Die Schlüsselfrage ist, ob der Übergang physikalisch motiviert und mathematisch glatt ist. In SSZ sind beide Kriterien erfüllt: Die Übergangsgrenzen sind so gewählt, dass kein bekanntes astrophysikalisches Observable in den Übergangsbereich fällt, und die Hermite-C²-Interpolation gewährleistet Stetigkeit der Funktion und ihrer ersten beiden Ableitungen. Ein häufiges Missverständnis wäre, die Hermite-Überblendung als Fudge-Faktor zu betrachten. Das Gegenteil ist wahr: Die Überblendung fügt keine neuen Parameter hinzu und liegt in einem Bereich, für den keine Beobachtung empfindlich ist.
 
@@ -346,7 +343,7 @@ Die Existenz einer Übergangszone provoziert oft den Einwand: Zwei verschiedene 
 |----------|-----------|-------|-------------|
 | Bereich | r/r_s > 2,2 | 1,8–2,2 | r/r_s < 1,8 |
 | Ξ-Formel | r_s/(2r) | Hermite C² | 1 − exp(−φ r_s/r) |
-| D-Verhalten | $\approx$ 1 − GM/(c²r) | glatt | → D_min = 0,555 |
+| D-Verhalten | ≈ 1 − GM/(c²r) | glatt | → D_min = 0,555 |
 | ART-Übereinstimmung | exakt | Übergang | systematische Abweichung |
 | PPN | β = γ = 1 | — | nicht anwendbar |
 
@@ -357,8 +354,8 @@ Die Existenz einer Übergangszone provoziert oft den Einwand: Zwei verschiedene 
 Jede Konstante in SSZ fällt in eine von drei Kategorien:
 
 1. **Mathematische Konstanten:** φ = (1 + √5)/2, π, e — universell und exakt. Dies sind dieselben Zahlen, die in der gesamten Mathematik und Physik verwendet werden. SSZ definiert sie nicht um und weist ihnen keine neuen Werte zu.
-2. **Physikalische Konstanten (extern):** G, c, M$\odot$ — von CODATA/BIPM, nicht von SSZ. Diese werden von der breiteren Physik-Gemeinschaft unabhängig gemessen und als Eingaben verwendet. SSZ bestimmt ihre Werte nicht.
-3. **Abgeleitete SSZ-Größen:** Ξ_max, $D_{min}$, r*/r_s — folgen eindeutig aus den obigen. Werden nie angepasst.
+2. **Physikalische Konstanten (extern):** G, c, M☉ — von CODATA/BIPM, nicht von SSZ. Diese werden von der breiteren Physik-Gemeinschaft unabhängig gemessen und als Eingaben verwendet. SSZ bestimmt ihre Werte nicht.
+3. **Abgeleitete SSZ-Größen:** Ξ_max, D_min, r*/r_s — folgen eindeutig aus den obigen. Werden nie angepasst.
 
 Es gibt keine vierte Kategorie. SSZ enthält keine einstellbaren Parameter, die gegen Daten kalibriert werden. Dies ist eine ungewöhnlich starke Einschränkung für eine physikalische Theorie. Die meisten Modelle in der Astrophysik enthalten mindestens einen freien Parameter (z.B. die Zustandsgleichung in Neutronensternmodellen oder den Spin-Parameter in Schwarze-Loch-Modellen). SSZ hat keinen.
 
@@ -389,17 +386,17 @@ Wissenschaftliche Theorien können unfalsifizierbar werden, wenn ihre Parameter 
 
 Der Abhängigkeitsgraph ist strikt azyklisch: Mathematische Axiome (Stufe 0) → Regime-Formeln (Stufe 1) → Observable Vorhersagen (Stufe 2) → Vergleich mit externen Daten (Stufe 3). An keinem Punkt fließen Daten rückwärts in die Axiome zurück. Kapitel 26 entwickelt diesen Beweis im vollen Detail.
 
-Diese Verpflichtung zur Azyklizität mag wie ein abstrakter methodologischer Punkt erscheinen, hat aber konkrete Konsequenzen. Man betrachte ein typisches Szenario in der Astrophysik: Ein Modell sagt die Masse-Radius-Beziehung von Neutronensternen vorher, und Beobachtungsdaten schränken diese Beziehung ein. In vielen Modellen hat die Zustandsgleichung einstellbare Parameter, die an die Daten angepasst werden, und dann wird das angepasste Modell zur Vorhersage anderer Observabler verwendet. Dies ist zirkulär. SSZ schließt dieses Muster kategorisch aus. Die Formel Ξ = $r_{s}$/(2r) wurde nicht durch Anpassung an GPS- oder Pound-Rebka-Daten gewonnen. Sie wurde aus der Segmentierungsprämisse und der Anforderung der ART-Kompatibilität abgeleitet. Wenn diese Formeln mit Daten verglichen werden, werden sie getestet, nicht kalibriert. Dies ist vergleichbar mit der QED-Vorhersage des anomalen magnetischen Moments des Elektrons, bei der der theoretische Wert aus ersten Prinzipien berechnet und dann mit dem gemessenen Wert verglichen wird, ohne Anpassung.
+Diese Verpflichtung zur Azyklizität mag wie ein abstrakter methodologischer Punkt erscheinen, hat aber konkrete Konsequenzen. Man betrachte ein typisches Szenario in der Astrophysik: Ein Modell sagt die Masse-Radius-Beziehung von Neutronensternen vorher, und Beobachtungsdaten schränken diese Beziehung ein. In vielen Modellen hat die Zustandsgleichung einstellbare Parameter, die an die Daten angepasst werden, und dann wird das angepasste Modell zur Vorhersage anderer Observabler verwendet. Dies ist zirkulär. SSZ schließt dieses Muster kategorisch aus. Die Formel Ξ = r_s/(2r) wurde nicht durch Anpassung an GPS- oder Pound-Rebka-Daten gewonnen. Sie wurde aus der Segmentierungsprämisse und der Anforderung der ART-Kompatibilität abgeleitet. Wenn diese Formeln mit Daten verglichen werden, werden sie getestet, nicht kalibriert. Dies ist vergleichbar mit der QED-Vorhersage des anomalen magnetischen Moments des Elektrons, bei der der theoretische Wert aus ersten Prinzipien berechnet und dann mit dem gemessenen Wert verglichen wird, ohne Anpassung.
 
 ## 1.5 Validierung und Konsistenz
 
 **Testdateien:** `test_constants`, `test_ppn_exact`
 
-**Was die Tests beweisen:** Alle kanonischen Werte (φ, Ξ_max, $D_{min}$, r*/r_s, β = γ = 1) sind intern konsistent, und der Schwachfeldgrenzfall reproduziert die ART exakt bis zur Maschinengenauigkeit. Die PPN-Entwicklung erfüllt die Cassini-Schranke. Die Übergangszone ist C²-glatt.
+**Was die Tests beweisen:** Alle kanonischen Werte (φ, Ξ_max, D_min, r*/r_s, β = γ = 1) sind intern konsistent, und der Schwachfeldgrenzfall reproduziert die ART exakt bis zur Maschinengenauigkeit. Die PPN-Entwicklung erfüllt die Cassini-Schranke. Die Übergangszone ist C²-glatt.
 
 **Was die Tests NICHT beweisen:** Starkfeldvorhersagen gegen Beobachtungsdaten (Kapitel 26–30). Die Tests bestätigen Selbstkonsistenz und ART-Kompatibilität, nicht physikalische Korrektheit im Starkfeldregime.
 
-**Reproduktion:** `E:/clone\segmented-calculation-suite/tests/` — 145/145 BESTANDEN; `E:/clone\ssz-metric-pure/tests/` — 18/18 BESTANDEN.
+**Reproduktion:** `E:\clone\segmented-calculation-suite\tests\` — 145/145 BESTANDEN; `E:\clone\ssz-metric-pure\tests\` — 18/18 BESTANDEN.
 
 ## 1.6 Fahrplan des Buches
 
@@ -416,7 +413,7 @@ Dieses Kapitel hat die wesentliche Architektur von SSZ eingeführt. Der Rest ent
 - **Teil I (Kap. 1–5):** Grundlagen — Strukturkonstanten, φ als Wachstumsfunktion, Euler-Ableitung, Feinstrukturkonstante.
 - **Teil II (Kap. 6–9):** Kinematik — Lorentz-Unbestimmtheit, LLI, duale Geschwindigkeiten, kinematischer Abschluss.
 - **Teil III (Kap. 10–15):** Elektromagnetismus — Skalierungseichung, Maxwell-Wellen, Gruppengeschwindigkeit, Laufzeit, Rotverschiebung, No-Go-Theorem.
-- **Teil IV (Kap. 16–17):** Frequenz-Framework — einheitliche Frequenzbeschreibung, Krümmungsdetektion über $I_{ABC}$.
+- **Teil IV (Kap. 16–17):** Frequenz-Framework — einheitliche Frequenzbeschreibung, Krümmungsdetektion über I_ABC.
 - **Teil V (Kap. 18–22):** Starkfeld — SL-Metrik, Singularitätsauflösung, kosmische Zensur, Dunkler Stern, Superradianz.
 - **Teil VI (Kap. 23–24):** Astrophysikalische Anwendungen — einfallende Materie/Radiowellen, G79.29+0.46-Nebel.
 - **Teil VII (Kap. 25):** Regime-Übergänge — irreversibles Kohärenzkollaps-Gesetz g₂→g₁.
@@ -425,7 +422,7 @@ Dieses Kapitel hat die wesentliche Architektur von SSZ eingeführt. Der Rest ent
 
 Jedes Kapitel folgt einer einheitlichen Struktur: Motivation → mathematische Entwicklung → ART-Vergleich → Validierungsabschnitt → Querverweise. Diese Struktur stellt sicher, dass jede Behauptung nachvollziehbar und jede Formel testbar ist.
 
-Dieses Kapitel hat die architektonischen Grundlagen von SSZ gelegt. Die zentrale Gleichung D = 1/(1 + Ξ) definiert die Beziehung zwischen dem Skalarfeld Ξ und der Zeitdilatation. Zwei Regime — g₁ (Schwachfeld, Ξ = $r_{s}$/(2r)) und g₂ (Starkfeld, Ξ = 1 − exp(−φ $r_{s}$/r)) — decken den gesamten Radialbereich ab und sind durch eine Hermite-C²-Überblendung glatt verbunden. Das Rahmenwerk enthält keine freien Parameter pro Objekt und verpflichtet sich zu einer strikt azyklischen Validierungsstruktur. Die wichtigste Erkenntnis für die folgenden Kapitel ist der operationelle Charakter von SSZ: Es ist ein Rezept zur Berechnung von D(r) bei gegebenem r und $r_{s}$, und alles andere folgt daraus. Rotverschiebung, Eigenzeit, Frequenzverschiebung, Energie — alles wird durch die einzige Funktion D(r) bestimmt. Diese radikale Einfachheit ist sowohl die Stärke von SSZ (alles ist berechenbar) als auch seine potentielle Schwäche (wenn eine einzige Vorhersage scheitert, ist das gesamte Rahmenwerk falsifiziert, da es keinen einstellbaren Parameter gibt, um die Diskrepanz aufzufangen). Kapitel 2 macht den nächsten Schritt: Es entwickelt die mathematische Beziehung zwischen φ und der Segmentierungsgeometrie und zeigt, wie die goldene Spirale das geometrische Substrat liefert, aus dem Ξ(r) hervorgeht. Ohne Kapitel 2 wäre der Wert 0,555 für $D_{min}$ eine unerklärte Behauptung; mit Kapitel 2 wird er zur mathematischen Notwendigkeit. Einige Missverständnisse entstehen häufig in diesem Stadium. Erstens nehmen Studierende manchmal an, dass SSZ vorhersagt, dass der Schwarzschild-Radius nicht existiert oder dass Schwarze Löcher nicht real sind. Dies ist falsch. SSZ behält $r_{s}$ als fundamentale Skala bei; was sich ändert, ist das Verhalten der Observablen bei $r_{s}$. Zweitens löst der Goldene Schnitt φ manchmal den Einwand aus, dies sei Numerologie. Die Kapitel 3 und 4 gehen dies direkt an: φ tritt als Eigenwert einer spezifischen geometrischen Rekursion auf, nicht als mystische Zahl. Drittens ist die Übergangszone keine Schwäche, sondern eine Ehrlichkeitserklärung — SSZ deklariert explizit, wo der Regime-Übergang stattfindet, anstatt vorzugeben, dass eine einzige Formel überall gültig ist.
+Dieses Kapitel hat die architektonischen Grundlagen von SSZ gelegt. Die zentrale Gleichung D = 1/(1 + Ξ) definiert die Beziehung zwischen dem Skalarfeld Ξ und der Zeitdilatation. Zwei Regime — g₁ (Schwachfeld, Ξ = r_s/(2r)) und g₂ (Starkfeld, Ξ = 1 − exp(−φ r_s/r)) — decken den gesamten Radialbereich ab und sind durch eine Hermite-C²-Überblendung glatt verbunden. Das Rahmenwerk enthält keine freien Parameter pro Objekt und verpflichtet sich zu einer strikt azyklischen Validierungsstruktur. Die wichtigste Erkenntnis für die folgenden Kapitel ist der operationelle Charakter von SSZ: Es ist ein Rezept zur Berechnung von D(r) bei gegebenem r und r_s, und alles andere folgt daraus. Rotverschiebung, Eigenzeit, Frequenzverschiebung, Energie — alles wird durch die einzige Funktion D(r) bestimmt. Diese radikale Einfachheit ist sowohl die Stärke von SSZ (alles ist berechenbar) als auch seine potentielle Schwäche (wenn eine einzige Vorhersage scheitert, ist das gesamte Rahmenwerk falsifiziert, da es keinen einstellbaren Parameter gibt, um die Diskrepanz aufzufangen). Kapitel 2 macht den nächsten Schritt: Es entwickelt die mathematische Beziehung zwischen φ und der Segmentierungsgeometrie und zeigt, wie die goldene Spirale das geometrische Substrat liefert, aus dem Ξ(r) hervorgeht. Ohne Kapitel 2 wäre der Wert 0,555 für D_min eine unerklärte Behauptung; mit Kapitel 2 wird er zur mathematischen Notwendigkeit. Einige Missverständnisse entstehen häufig in diesem Stadium. Erstens nehmen Studierende manchmal an, dass SSZ vorhersagt, dass der Schwarzschild-Radius nicht existiert oder dass Schwarze Löcher nicht real sind. Dies ist falsch. SSZ behält r_s als fundamentale Skala bei; was sich ändert, ist das Verhalten der Observablen bei r_s. Zweitens löst der Goldene Schnitt φ manchmal den Einwand aus, dies sei Numerologie. Die Kapitel 3 und 4 gehen dies direkt an: φ tritt als Eigenwert einer spezifischen geometrischen Rekursion auf, nicht als mystische Zahl. Drittens ist die Übergangszone keine Schwäche, sondern eine Ehrlichkeitserklärung — SSZ deklariert explizit, wo der Regime-Übergang stattfindet, anstatt vorzugeben, dass eine einzige Formel überall gültig ist.
 
 ---
 
@@ -436,8 +433,8 @@ Dieses Kapitel hat die architektonischen Grundlagen von SSZ gelegt. Die zentrale
 | 1 | D = 1/(1 + Ξ) | alle Regime |
 | 2 | Ξ_weak = r_s/(2r) | g₁: r/r_s > 10 |
 | 3 | Ξ_strong = 1 − exp(−φ r_s/r) | g₂: r/r_s < 1,8 |
-| 4 | Ξ_max = 1 − e^{−φ} $\approx$ 0,80171 | Horizont |
-| 5 | D_min $\approx$ 0,55503 | Horizont |
+| 4 | Ξ_max = 1 − e^{−φ} ≈ 0,80171 | Horizont |
+| 5 | D_min ≈ 0,55503 | Horizont |
 
 ---
 
@@ -459,7 +456,7 @@ Die Geschichte der Gravitationstheorie ist eine Geschichte zunehmender Praezisio
 
 **Einstein (1915):** Die Gravitation ist keine Kraft, sondern eine Kruemmung der Raumzeit. Massen kruemmen die Raumzeit, und Objekte bewegen sich auf Geodaeten (kuerzesten Wegen) in der gekruemmten Raumzeit. Einsteins Allgemeine Relativitaetstheorie (ART) erklaert die Merkur-Periheldrehung, die Lichtablenkung, die gravitative Rotverschiebung und die Existenz von Metrik-Perturbationen. Die ART sagt auch Schwarze Loecher vorher — Regionen der Raumzeit, aus denen nichts entkommen kann.
 
-**SSZ (2020er):** Die Segmentierte Raumzeit-Theorie (SSZ) behalt die geometrische Interpretation der Gravitation bei, fuehrt aber eine neue Groesse ein: die Segmentdichte Xi(r). Die Segmentdichte beschreibt, wie dicht das Raumzeitgitter an einem gegebenen Punkt gepackt ist. Im Schwachfeld (weit von Massen entfernt) ist Xi klein und SSZ identisch mit der ART. Im Starkfeld (nahe kompakten Objekten) weicht SSZ von der ART ab: Die Segmentdichte erreicht ein endliches Maximum ($\Xi_{\text{max}}$ = 0,802), was Singularitaeten verhindert und den Ereignishorizont durch eine natuerliche Grenze ersetzt.
+**SSZ (2020er):** Die Segmentierte Raumzeit-Theorie (SSZ) behalt die geometrische Interpretation der Gravitation bei, fuehrt aber eine neue Groesse ein: die Segmentdichte Xi(r). Die Segmentdichte beschreibt, wie dicht das Raumzeitgitter an einem gegebenen Punkt gepackt ist. Im Schwachfeld (weit von Massen entfernt) ist Xi klein und SSZ identisch mit der ART. Im Starkfeld (nahe kompakten Objekten) weicht SSZ von der ART ab: Die Segmentdichte erreicht ein endliches Maximum (Xi_max = 0,802), was Singularitaeten verhindert und den Ereignishorizont durch eine natuerliche Grenze ersetzt.
 
 ### Warum eine neue Gravitationstheorie?
 
@@ -477,11 +474,11 @@ SSZ loest Problem 1 direkt (endliche Segmentdichte statt Singularitaet), mildert
 
 SSZ ruht auf drei Saeulen:
 
-**Saeule 1: Segmentdichte Xi(r).** Die fundamentale Groesse, die die Staerke des Gravitationsfeldes beschreibt. Im Schwachfeld: Xi = $r_{s}$/(2r). Im Starkfeld: Xi = 1 - exp(-phi*r/r_s). Die Segmentdichte ist ueberall endlich (Maximum 0,802) und stetig.
+**Saeule 1: Segmentdichte Xi(r).** Die fundamentale Groesse, die die Staerke des Gravitationsfeldes beschreibt. Im Schwachfeld: Xi = r_s/(2r). Im Starkfeld: Xi = 1 - exp(-phi*r/r_s). Die Segmentdichte ist ueberall endlich (Maximum 0,802) und stetig.
 
-**Saeule 2: Zeitdilatationsfaktor D(r) = 1/(1+Xi(r)).** Beschreibt die Verlangsamung der Zeit in einem Gravitationsfeld. Im Schwachfeld: D ~ 1 - $r_{s}$/(2r) (identisch mit ART). Im Starkfeld: $D_{min}$ = 0,555 (endlich, im Gegensatz zu D = 0 in der ART am Horizont).
+**Saeule 2: Zeitdilatationsfaktor D(r) = 1/(1+Xi(r)).** Beschreibt die Verlangsamung der Zeit in einem Gravitationsfeld. Im Schwachfeld: D ~ 1 - r_s/(2r) (identisch mit ART). Im Starkfeld: D_min = 0,555 (endlich, im Gegensatz zu D = 0 in der ART am Horizont).
 
-**Saeule 3: Abschliessungsrelation $v_{esc}$ x $v_{fall}$ = c^2.** Verbindet die Fluchtgeschwindigkeit und die Einfallgeschwindigkeit an jedem Punkt. Diese Relation ist eine Konsequenz der Energieerhaltung und der Endlichkeit der Segmentdichte.
+**Saeule 3: Abschliessungsrelation v_esc x v_fall = c^2.** Verbindet die Fluchtgeschwindigkeit und die Einfallgeschwindigkeit an jedem Punkt. Diese Relation ist eine Konsequenz der Energieerhaltung und der Endlichkeit der Segmentdichte.
 
 ### Aufbau des Buches
 
@@ -508,10 +505,10 @@ Dieses Buch ist in acht Teile gegliedert:
 Die wichtigsten quantitativen Ergebnisse von SSZ:
 
 **Fundamentale Konstanten:**
-- Feinstrukturkonstante: $\alpha_{\text{SSZ}}$ = 1/(phi^{2pi} x 4) = 1/137,08 (Experiment: 1/137,036)
-- Minimaler Zeitdilatationsfaktor: $D_{min}$ = 0,555
-- Maximale Segmentdichte: $\Xi_{\text{max}}$ = 0,802
-- Regime-Uebergangsradius: r* = 1,387 $r_{s}$
+- Feinstrukturkonstante: alpha_SSZ = 1/(phi^{2pi} x 4) = 1/137,08 (Experiment: 1/137,036)
+- Minimaler Zeitdilatationsfaktor: D_min = 0,555
+- Maximale Segmentdichte: Xi_max = 0,802
+- Regime-Uebergangsradius: r* = 1,387 r_s
 
 **PPN-Parameter:**
 - gamma = 1 (wie ART)
@@ -524,13 +521,13 @@ Die wichtigsten quantitativen Ergebnisse von SSZ:
 - Cassini: gamma = 1 +/- 2,3 x 10^{-5}
 - Merkur-Perihel: 42,98 ''/Jhd
 - Doppelpulsar: 5 PK-Parameter
-- GW170817: |$v_{GW}$ - c|/c < 6 x 10^{-16}
+- GW170817: |v_GW - c|/c < 6 x 10^{-16}
 
 **Starkfeld-Vorhersagen (noch zu testen):**
-- Schattenradius: 0,987 x $\theta_{\text{GR}}$
+- Schattenradius: 0,987 x theta_GR
 - Love Number: k_2 ~ 0,052
 - QNM-Frequenzverschiebung: +3%
-- Hawking-Temperatur: 0,308 x $T_{H}$
+- Hawking-Temperatur: 0,308 x T_H
 
 ### Methodologie: Wie SSZ validiert wird
 
@@ -572,7 +569,7 @@ Dieses Buch verwendet die folgenden Konventionen:
 - **Metrik-Signatur:** (-,+,+,+), d.h. die Zeitkomponente hat negatives Vorzeichen.
 - **Griechische Indizes:** mu, nu = 0,1,2,3 (Raumzeit-Indizes)
 - **Lateinische Indizes:** i, j = 1,2,3 (raeumliche Indizes)
-- **Natuerliche Einheiten:** hbar = c = $k_{B}$ = 1 werden gelegentlich in Quantenabschnitten verwendet.
+- **Natuerliche Einheiten:** hbar = c = k_B = 1 werden gelegentlich in Quantenabschnitten verwendet.
 - **Segmentdichte:** Xi (griechischer Grossbuchstabe Xi)
 - **Zeitdilatationsfaktor:** D (lateinischer Grossbuchstabe D)
 - **Goldener Schnitt:** phi = (1 + sqrt(5))/2 = 1,618...
@@ -589,18 +586,20 @@ Die Autoren danken der wissenschaftlichen Gemeinschaft fuer konstruktive Kritik 
 - **Referenziert von:** Kap. 2, Kap. 6, Kap. 8, Kap. 10, Kap. 16, Kap. 18
 - **Anhang:** Anh. A (Symboltabelle), Anh. B (Formelkompendium B.1)
 
-\newpage
+---
 
-# Strukturkonstanten — π, φ und Segmentierung
+# Kapitel 2: Strukturkonstanten — π, φ und Segmentierung
 
+**Teil I — Grundlagen**
+**Status:** ERWEITERTE FASSUNG
 
 ---
 
 ## Zusammenfassung
 
-Dieses Kapitel entwickelt die mathematischen Rollen von π und φ innerhalb des SSZ-Rahmenwerks und erklärt Schritt für Schritt, warum diese beiden Konstanten — und keine anderen — die Segmentstruktur der Raumzeit bestimmen. In der klassischen Geometrie ist π das Verhältnis von Umfang zu Durchmesser; es tritt überall dort auf, wo Kreise oder periodische Schwingungen vorkommen. Der Goldene Schnitt φ = (1 + √5)/2 $\approx$ 1,618 erscheint in der Zahlentheorie und bei Wachstumsprozessen, hat aber keine etablierte Rolle in der Fundamentalphysik.
+Dieses Kapitel entwickelt die mathematischen Rollen von π und φ innerhalb des SSZ-Rahmenwerks und erklärt Schritt für Schritt, warum diese beiden Konstanten — und keine anderen — die Segmentstruktur der Raumzeit bestimmen. In der klassischen Geometrie ist π das Verhältnis von Umfang zu Durchmesser; es tritt überall dort auf, wo Kreise oder periodische Schwingungen vorkommen. Der Goldene Schnitt φ = (1 + √5)/2 ≈ 1,618 erscheint in der Zahlentheorie und bei Wachstumsprozessen, hat aber keine etablierte Rolle in der Fundamentalphysik.
 
-SSZ weist beiden Konstanten präzise, komplementäre physikalische Funktionen zu. π ist der *statische Teiler* räumlicher Segmente: Es bestimmt die Winkelaufteilung elektromagnetischer Wellenzyklen in vier Viertelperioden. φ ist die *dynamische Wachstumskonstante*: Sie bestimmt, wie Segmente radial skalieren, wenn man tiefer in ein Gravitationsfeld vordringt. Die näherungsweise Identität 2φ $\approx$ π, die beim Einheitsradius auf etwa 3% genau gilt, liefert den geometrischen Anker, der die Grundsegmentierungszahl N₀ = 4 festlegt — die Anzahl fundamentaler Segmente, die eine Lichtwellenperiode in flacher Raumzeit enthält.
+SSZ weist beiden Konstanten präzise, komplementäre physikalische Funktionen zu. π ist der *statische Teiler* räumlicher Segmente: Es bestimmt die Winkelaufteilung elektromagnetischer Wellenzyklen in vier Viertelperioden. φ ist die *dynamische Wachstumskonstante*: Sie bestimmt, wie Segmente radial skalieren, wenn man tiefer in ein Gravitationsfeld vordringt. Die näherungsweise Identität 2φ ≈ π, die beim Einheitsradius auf etwa 3% genau gilt, liefert den geometrischen Anker, der die Grundsegmentierungszahl N₀ = 4 festlegt — die Anzahl fundamentaler Segmente, die eine Lichtwellenperiode in flacher Raumzeit enthält.
 
 Wir entwickeln die logarithmische Spirale mit φ-Skalierung als zentrales geometrisches Objekt, das diese beiden Konstanten verbindet, und zeigen, dass der effektive Wert von π in maximal segmentierter Raumzeit gegen seinen klassischen Grenzwert konvergiert. Diese Konvergenz erklärt, innerhalb des SSZ-Rahmenwerks, warum Schwarze-Loch-Horizonte geometrisch kreisförmig sind.
 
@@ -616,7 +615,7 @@ Warum ist dies notwendig? Studierende, die SSZ zum ersten Mal begegnen, fragen o
 
 ### π in der klassischen Physik — Eine kurze Erinnerung
 
-Bevor wir untersuchen, wie π innerhalb von SSZ funktioniert, rufen wir seine genaue Rolle in der Standardphysik in Erinnerung. Die Zahl π $\approx$ 3,14159265 ist definiert als das Verhältnis des Umfangs C eines Kreises zu seinem Durchmesser d:
+Bevor wir untersuchen, wie π innerhalb von SSZ funktioniert, rufen wir seine genaue Rolle in der Standardphysik in Erinnerung. Die Zahl π ≈ 3,14159265 ist definiert als das Verhältnis des Umfangs C eines Kreises zu seinem Durchmesser d:
 
 \pi = \frac{C}{d}
 
@@ -624,7 +623,7 @@ Diese Definition ist rein geometrisch und gilt exakt im euklidischen (flachen) R
 
 In der Allgemeinen Relativitätstheorie wird die Situation subtiler. Gekrümmte Raumzeit verzerrt geometrische Beziehungen. Man betrachte das Zeichnen eines Kreises mit Schwarzschild-Koordinatenradius r um einen massiven, nicht-rotierenden Körper. Per Definition der Schwarzschild-Radialkoordinate ist der Umfang dieses Kreises exakt 2πr. Jedoch ist der *eigentliche Radialabstand* vom Zentrum zu diesem Kreis — der Abstand, den ein Beobachter mit einem Lineal messen würde — nicht r, sondern das Integral
 
-$$d_{\text{proper}} = \int_0^r \frac{dr'}{\sqrt{1 - r_s/r'}} > r$$
+d_{\text{proper}} = \int_0^r \frac{dr'}{\sqrt{1 - r_s/r'}} > r
 
 Die Geometrie ist nichteuklidisch. Die mathematische Konstante π selbst bleibt unverändert, aber die geometrischen Beziehungen, die sie beschreibt, werden durch die Gravitation modifiziert. Ein Kreis in gekrümmter Raumzeit hat immer noch den Umfang 2πr (per Koordinatendefinition), aber sein „Radius" im Eigenabstandssinne ist größer als r. Dies ist analog zum Zeichnen eines Kreises auf einer Kugeloberfläche: Das Verhältnis von Umfang zu Durchmesser ist kleiner als π, weil sich die Oberfläche nach innen krümmt.
 
@@ -642,16 +641,19 @@ In flacher Raumzeit, weit entfernt von jeder gravitierenden Masse, hat jedes die
 
 Die Zahl 4 ist kein freier Parameter. Sie ist eine direkte Konsequenz der 2π-Periodizität elektromagnetischer Wellen geteilt durch die π/2-Viertelperiode:
 
-$$N_0 = \frac{2\pi}{\pi/2} = 4$$
+N_0 = \frac{2\pi}{\pi/2} = 4
 
 Jede andere Grundsegmentierung würde eine andere Winkelperiodizität oder eine andere Definition von „Segment" erfordern. Die Wahl N₀ = 4 wird durch die Struktur der Maxwell-Gleichungen erzwungen.
 
 **Analogie.** Man denke an ein Zifferblatt. Die volle Umdrehung (360° = 2π Radiant) wird natürlich durch die Positionen 12, 3, 6 und 9 Uhr in vier Quadranten geteilt. Jeder Quadrant erstreckt sich über 90° = π/2 Radiant. Die Anzahl der Quadranten (4) wird durch die Geometrie des Kreises bestimmt, nicht durch Konvention. Ebenso wird die Grundsegmentierung N₀ = 4 durch die Geometrie der Wellenausbreitung bestimmt, nicht durch eine Modellierungsentscheidung.
+
+**Äquivalente Formulierung.** Für eine Welle der Frequenz f und Periode T = 1/f ist die Segmentrate N = 4f = 4/T. Dies ist Standard-Quadraturlogik, strukturell identisch mit dem Drehgeber-Design (Rotary Encoder): bei Quadranten-Partitionierung einer Umdrehung ist die Impulsrate f_Impuls = 4 f_rot. Der Faktor 4 ist nicht anpassbar — er ist durch die geometrische Symmetrie des Zyklus fixiert.
+
 ### π in der logarithmischen Spirale
 
 Die logarithmische Spirale liefert das natürliche mathematische Rahmenwerk zum Verständnis, wie π in *gekrümmter* (segmentierter) Raumzeit wirkt. Die logarithmische Spirale in Polarkoordinaten lautet:
 
-$$r(\theta) = r_0 \cdot e^{k\theta}$$
+r(\theta) = r_0 \cdot e^{k\theta}
 
 wobei r₀ der Anfangsradius und k der Wachstumsratenparameter ist. Diese Kurve hat eine bemerkenswerte Eigenschaft: Der Winkel ψ zwischen der Tangentenlinie und der Radialrichtung ist an jedem Punkt konstant:
 
@@ -665,11 +667,11 @@ ds = r\sqrt{1 + k^2} \, d\theta
 
 Für eine halbe Umdrehung (θ = 0 bis θ = π) ist die radiale Ausdehnung (effektiver Durchmesser) D = r₀(e^{kπ} − 1), und die Bogenlänge (effektiver Halbumfang) ist:
 
-$$S = \frac{r_0 \sqrt{1+k^2}}{k}(e^{k\pi} - 1)$$
+S = \frac{r_0 \sqrt{1+k^2}}{k}(e^{k\pi} - 1)
 
 Das Verhältnis der vollen Bogenlänge zum Durchmesser definiert ein effektives „Spiral-π":
 
-$$\pi_{\text{spiral}} = \frac{\sqrt{1 + k^2}}{k}$$
+\pi_{\text{spiral}} = \frac{\sqrt{1 + k^2}}{k}
 
 **Grenzfälle.** Für k → 0 (flacher Raum) divergiert π_spiral — die Spirale degeneriert zu einem Kreis, und die spiralbasierte Definition bricht zusammen. Dies ist physikalisch korrekt: Die Spiraldefinition gilt nur für Raumzeit mit nichttrivialer Segmentierung. Für k → ∞ (extremes Wachstum) gilt π_spiral → 1 — der „Kreis" degeneriert zu einer nahezu radialen Linie. Dieser Extremfall tritt in physikalischer Raumzeit nicht auf, da die Segmentdichte sättigt (Kapitel 1).
 
@@ -677,11 +679,11 @@ $$\pi_{\text{spiral}} = \frac{\sqrt{1 + k^2}}{k}$$
 
 Mit zunehmender Segmentierung — bei Annäherung an ein Schwarzes Loch — nimmt der effektive Wachstumsparameter zu: k → λN, wobei λ die gravitative Segmentierungskonstante und N die lokale Segmentzahl ist. Das effektive geometrische Verhältnis wird:
 
-$$\pi_{\text{eff}} = 4\varphi \cdot e^{-\lambda N}$$
+\pi_{\text{eff}} = 4\varphi \cdot e^{-\lambda N}
 
 Dieser Ausdruck verdient sorgfältige Interpretation:
 
-- **Für N = 0 (flache Raumzeit):** π_eff = 4φ $\approx$ 6,47, was *nicht* das klassische π ist. Dies spiegelt die Tatsache wider, dass die Spiralbeschreibung für den flachen Raum nicht geeignet ist — man sollte stattdessen die klassische Kreisdefinition verwenden.
+- **Für N = 0 (flache Raumzeit):** π_eff = 4φ ≈ 6,47, was *nicht* das klassische π ist. Dies spiegelt die Tatsache wider, dass die Spiralbeschreibung für den flachen Raum nicht geeignet ist — man sollte stattdessen die klassische Kreisdefinition verwenden.
 
 - **Für mittlere N:** π_eff nimmt glatt vom Wert 4φ zum klassischen Wert ab.
 
@@ -695,7 +697,7 @@ Diese Konvergenz liefert auch eine interne Konsistenzprüfung. Das SSZ-Rahmenwer
 
 ### φ als Wachstumskonstante — Motivation
 
-Der Goldene Schnitt φ = (1 + √5)/2 $\approx$ 1,618034 ist die einzige positive Lösung der quadratischen Gleichung:
+Der Goldene Schnitt φ = (1 + √5)/2 ≈ 1,618034 ist die einzige positive Lösung der quadratischen Gleichung:
 
 x^2 = x + 1
 
@@ -728,27 +730,27 @@ Die Wachstumsrate k ist kein freier Parameter — sie wird dadurch festgelegt, d
 **Physikalisches Bild.** Man stelle sich vor, in einem festen Radius r von einem Schwarzen Loch zu stehen und entlang eines Spiralpfads nach innen zu blicken. Jede Vierteldrehung der Spirale bringt einen zu einem Radius, der um den Faktor 1/φ kleiner ist. Das Gravitationsfeld wird stärker, die Segmentdichte nimmt zu, und Uhren ticken langsamer. Die φ-Spirale liefert die „Treppe", entlang der man in den Gravitationstrichter hinabsteigt — und jede Stufe hat ein Höhenverhältnis von φ zur vorherigen Stufe.
 ### φ und Selbstähnlichkeit in SSZ
 
-Die definierende Eigenschaft φ² = φ + 1 erzeugt eine strukturelle Konsequenz für die Segmentgeometrie: **Das Segmentmuster auf jeder Skala ist identisch mit dem Muster auf jeder anderen Skala, bis auf eine Reskalierung um Potenzen von φ.** Deshalb gilt das SSZ-Rahmenwerk identisch für stellare Schwarze Löcher (M ~ 10 M$\odot$, r_s ~ 30 km) und supermassive Schwarze Löcher (M ~ 10⁹ M$\odot$, r_s ~ 3 × 10⁹ km). Die Segmentgeometrie ist selbstähnlich — nur die Gesamtskala ändert sich, nicht die innere Struktur.
+Die definierende Eigenschaft φ² = φ + 1 erzeugt eine strukturelle Konsequenz für die Segmentgeometrie: **Das Segmentmuster auf jeder Skala ist identisch mit dem Muster auf jeder anderen Skala, bis auf eine Reskalierung um Potenzen von φ.** Deshalb gilt das SSZ-Rahmenwerk identisch für stellare Schwarze Löcher (M ~ 10 M☉, r_s ~ 30 km) und supermassive Schwarze Löcher (M ~ 10⁹ M☉, r_s ~ 3 × 10⁹ km). Die Segmentgeometrie ist selbstähnlich — nur die Gesamtskala ändert sich, nicht die innere Struktur.
 
 Ein häufiges Missverständnis wäre zu denken, die Selbstähnlichkeit sei eine Näherung. Das ist sie nicht. Die Selbstähnlichkeit der φ-Spirale ist exakt — sie folgt aus der algebraischen Eigenschaft φ² = φ + 1, die eine Identität ist, keine Näherung. Was näherungsweise ist, ist die Identifizierung dieser mathematischen Struktur mit der physikalischen Raumzeit. Die SSZ-Behauptung ist, dass φ-Skalierung eine bessere Beschreibung der Starkfeld-Segmentgeometrie liefert als jede andere Skalierungskonstante. Diese Behauptung wird getestet, nicht angenommen — die Kapitel 26–30 vergleichen die Vorhersagen, die aus der φ-Skalierung folgen, mit Beobachtungsdaten.
 
-Diese Selbstähnlichkeit hat eine testbare Konsequenz: Das Verhältnis $D_{min}$/D_max = 0,555/1,0 ist *universell*, masseunabhängig. Die Zeitdilatation am Horizont jedes nicht-rotierenden Schwarzen Lochs ist derselbe Bruchteil der asymptotischen Rate, unabhängig davon, ob das Loch die Masse eines Sterns oder einer Galaxie hat.
+Diese Selbstähnlichkeit hat eine testbare Konsequenz: Das Verhältnis D_min/D_max = 0,555/1,0 ist *universell*, masseunabhängig. Die Zeitdilatation am Horizont jedes nicht-rotierenden Schwarzen Lochs ist derselbe Bruchteil der asymptotischen Rate, unabhängig davon, ob das Loch die Masse eines Sterns oder einer Galaxie hat.
 
 ### φ in der Starkfeldformel
 
 Das zentrale Auftreten von φ in der SSZ-Physik ist die Starkfeld-Segmentdichte (Kapitel 1, Gl. 3):
 
-$$\Xi_{\text{strong}}(r) = 1 - e^{-\varphi \cdot r_s / r}$$
+\Xi_{\text{strong}}(r) = 1 - e^{-\varphi \cdot r_s / r}
 
 Das φ im Exponenten wird nicht von Hand eingefügt. Es ergibt sich aus der Vierteldrehungsskalierung der logarithmischen Spirale wie folgt:
 
-1. Die Segmentzahl vom Radius r zum Horizont ist n(r) $\propto$ ln($r_{s}$/r)/ln(φ) (Kapitel 4 leitet dies im Detail her).
+1. Die Segmentzahl vom Radius r zum Horizont ist n(r) ∝ ln(r_s/r)/ln(φ) (Kapitel 4 leitet dies im Detail her).
 2. Die Segmentdichte Ξ misst den Bruchteil der maximalen Segmentierung: Ξ = 1 − e^{−n/n_ref}.
 3. Durch Einsetzen und Vereinfachen erscheint der Faktor φ natürlich im Exponenten.
 
-Der Sättigungswert Ξ_max = 1 − e^{−φ} $\approx$ 0,80171 ist eine direkte mathematische Konsequenz. Er wird nicht angepasst, nicht gefittet und ist kein freier Parameter.
+Der Sättigungswert Ξ_max = 1 − e^{−φ} ≈ 0,80171 ist eine direkte mathematische Konsequenz. Er wird nicht angepasst, nicht gefittet und ist kein freier Parameter.
 
-## 2.3 Die Identität 2φ $\approx$ π
+## 2.3 Die Identität 2φ ≈ π
 
 ### Formulierung und Zahlenwert
 
@@ -756,13 +758,13 @@ Die näherungsweise Identität, die die beiden Strukturkonstanten von SSZ verbin
 
 2\varphi = 2 \times 1.618034... = 3.23607... \approx \pi = 3.14159...
 
-Die relative Abweichung beträgt (2φ − π)/π $\approx$ 3,0%. Dies wird *nicht* als exakte mathematische Identität beansprucht — φ und π sind algebraisch unabhängige transzendente Konstanten. Das Lindemann-Weierstraß-Theorem garantiert, dass keine Polynombeziehung mit rationalen Koeffizienten sie verbindet.
+Die relative Abweichung beträgt (2φ − π)/π ≈ 3,0%. Dies wird *nicht* als exakte mathematische Identität beansprucht — φ und π sind algebraisch unabhängige transzendente Konstanten. Das Lindemann-Weierstraß-Theorem garantiert, dass keine Polynombeziehung mit rationalen Koeffizienten sie verbindet.
 
 Die SSZ-Behauptung ist *geometrisch*, nicht algebraisch: Beim Einheitsradius (r = 1) erzeugen die φ-Segmentierung und die π-Periodizität Strukturen vergleichbarer Winkelskala. Die 3%-Abweichung ist das quantitative Maß der „Lücke" zwischen der diskreten (φ-basierten) Beschreibung und der kontinuierlichen (π-basierten) Beschreibung des Kreises.
 
 ### Der geometrische Ursprung
 
-Um zu sehen, warum 2φ $\approx$ π geometrisch entsteht, betrachte man die φ-skalierte logarithmische Spirale beim Einheitsradius. Ausgehend von r₀ = 1 erreicht die Spirale nach einer vollen Umdrehung (θ = 2π):
+Um zu sehen, warum 2φ ≈ π geometrisch entsteht, betrachte man die φ-skalierte logarithmische Spirale beim Einheitsradius. Ausgehend von r₀ = 1 erreicht die Spirale nach einer vollen Umdrehung (θ = 2π):
 
 r(2\pi) = e^{k \cdot 2\pi} = e^{4\ln\varphi} = \varphi^4 \approx 6.854
 
@@ -774,13 +776,13 @@ Die Spirale ist in einer vollen Umdrehung um den Faktor φ⁴ gewachsen. Der Win
 
 Das Verhältnis des Vollkreiswinkels (2π) zum φ-Wachstumswinkel (π/2) ist exakt 4 — dies ist die Grundsegmentierung N₀.
 
-Die Identität 2φ $\approx$ π hat nun eine klare geometrische Bedeutung: **Der Wachstumsfaktor über eine Halbdrehung der φ-Spirale (φ² = φ + 1 $\approx$ 2,618) ist näherungsweise gleich dem Winkelbereich dieser Halbdrehung (π $\approx$ 3,14159).** Die beiden Konstanten sind beim Einheitsradius „aufeinander abgestimmt" — keine überschießt oder unterschreitet die andere wesentlich.
+Die Identität 2φ ≈ π hat nun eine klare geometrische Bedeutung: **Der Wachstumsfaktor über eine Halbdrehung der φ-Spirale (φ² = φ + 1 ≈ 2,618) ist näherungsweise gleich dem Winkelbereich dieser Halbdrehung (π ≈ 3,14159).** Die beiden Konstanten sind beim Einheitsradius „aufeinander abgestimmt" — keine überschießt oder unterschreitet die andere wesentlich.
 
 ### Topologische Bedeutung
 
 Die Identität 2φ = π gilt *topologisch* bei r = 1 in dem Sinne, dass nur beim Einheitsradius die φ-Spirale sich in eine Struktur schließt, in der exakt N₀ = 4 Segmente den 2π-Winkelbereich des Kreises ausfüllen. Bei Radien r < 1 sind die Segmente komprimiert (die Spirale ist enger gewunden) und mehr als 4 Segmente passen in 2π. Bei Radien r > 1 sind die Segmente gestreckt und weniger als 4 passen hinein.
 
-Dies macht r = 1 zum einzigartigen *Normalradius* — dem Kalibrierungspunkt des SSZ-Rahmenwerks. In den ursprünglichen SSZ-Papieren wird dies durch das „Normaluhr"-Konzept formalisiert: eine Uhr beim Radius 1 in Abwesenheit von Gravitation. Die Bedingung 2φ $\approx$ π bei diesem Radius etabliert die Korrespondenz zwischen der segmentbasierten und der winkelmäßigen Beschreibung der Raumzeit.
+Dies macht r = 1 zum einzigartigen *Normalradius* — dem Kalibrierungspunkt des SSZ-Rahmenwerks. In den ursprünglichen SSZ-Papieren wird dies durch das „Normaluhr"-Konzept formalisiert: eine Uhr beim Radius 1 in Abwesenheit von Gravitation. Die Bedingung 2φ ≈ π bei diesem Radius etabliert die Korrespondenz zwischen der segmentbasierten und der winkelmäßigen Beschreibung der Raumzeit.
 
 ### Verbindung zu N₀ = 4
 
@@ -805,21 +807,21 @@ Die gestreckte Wellenlänge bedeutet, dass das Photon nun *mehr* Segmente pro Pe
 
 Quantitativ:
 
-$$N'(r) = 4 \cdot \frac{\lambda'}{\lambda_0} = 4 \cdot \frac{f_0}{f'(r)} = \frac{4}{D(r)} = 4 \cdot (1 + \Xi(r))$$
+N'(r) = 4 \cdot \frac{\lambda'}{\lambda_0} = 4 \cdot \frac{f_0}{f'(r)} = \frac{4}{D(r)} = 4 \cdot (1 + \Xi(r))
 
-wobei D(r) = 1/(1 + Ξ(r)) der SSZ-Zeitdilatationsfaktor ist. In flacher Raumzeit (Ξ = 0) gilt N' = 4 — die Grundsegmentierung. Am Horizont (Ξ $\approx$ 0,802) gilt N' $\approx$ 4 × 1,802 $\approx$ 7,2 Segmente. Die Photonenperiode wird in etwa 7 Segmente statt 4 unterteilt.
+wobei D(r) = 1/(1 + Ξ(r)) der SSZ-Zeitdilatationsfaktor ist. In flacher Raumzeit (Ξ = 0) gilt N' = 4 — die Grundsegmentierung. Am Horizont (Ξ ≈ 0,802) gilt N' ≈ 4 × 1,802 ≈ 7,2 Segmente. Die Photonenperiode wird in etwa 7 Segmente statt 4 unterteilt.
 
 ### Segmentierung innerhalb Schwarzer Löcher
 
-Innerhalb eines Schwarzen Lochs erstreckt sich die φ-Spirale vom Bereich nahe dem Zentrum (r₀ → 0) bis zum Horizont (r = $r_{s}$). Die Gesamtsegmentzahl entlang dieses Pfades ist:
+Innerhalb eines Schwarzen Lochs erstreckt sich die φ-Spirale vom Bereich nahe dem Zentrum (r₀ → 0) bis zum Horizont (r = r_s). Die Gesamtsegmentzahl entlang dieses Pfades ist:
 
-$$S_{\text{end}} = S_{\text{start}} \cdot \varphi^n, \quad n = \frac{\ln(r_s/r_0)}{\ln\varphi}$$
+S_{\text{end}} = S_{\text{start}} \cdot \varphi^n, \quad n = \frac{\ln(r_s/r_0)}{\ln\varphi}
 
-Ausgehend von der Grundsegmentierung $S_{start}$ = 4 und einem minimalen Radius von r₀ = 10⁻⁶ $r_{s}$ (ein physikalisch vernünftiger Abschneidewert weit über der Planck-Skala) beträgt die Anzahl der Vierteldrehungen:
+Ausgehend von der Grundsegmentierung S_start = 4 und einem minimalen Radius von r₀ = 10⁻⁶ r_s (ein physikalisch vernünftiger Abschneidewert weit über der Planck-Skala) beträgt die Anzahl der Vierteldrehungen:
 
 n = \frac{\ln(10^6)}{\ln(1.618)} \approx \frac{13.816}{0.481} \approx 28.7
 
-Also S_end $\approx$ 4 × φ^{28,7} $\approx$ 4 × 10⁶ $\approx$ 4.000.000 Segmente. Dies ist eine *endliche* Zahl. In der ART divergieren im Gegensatz dazu die Gezeitenkräfte für r → 0 und erzeugen eine Krümmungssingularität mit unendlicher Stärke. In SSZ stoppt die Segmentierung bei einem großen, aber endlichen Wert.
+Also S_end ≈ 4 × φ^{28,7} ≈ 4 × 10⁶ ≈ 4.000.000 Segmente. Dies ist eine *endliche* Zahl. In der ART divergieren im Gegensatz dazu die Gezeitenkräfte für r → 0 und erzeugen eine Krümmungssingularität mit unendlicher Stärke. In SSZ stoppt die Segmentierung bei einem großen, aber endlichen Wert.
 
 **Physikalische Konsequenz.** Die endliche Segmentierung impliziert eine minimale Wellenlänge für Licht innerhalb des Schwarzen Lochs, die im Radiowellenband liegt (Frequenz ~ 1 MHz). Dies erklärt, warum Schwarze Löcher Radiosignale aussenden können, aber bei optischen Frequenzen dunkel erscheinen. Kapitel 21 entwickelt diese Vorhersage im Detail.
 
@@ -827,11 +829,11 @@ Es ist wichtig festzuhalten, was hier nicht beansprucht wird: SSZ behauptet nich
 
 ### Die physikalische Präzisionsgrenze von π
 
-Das Segmentierungsprinzip impliziert eine fundamentale Präzisionsgrenze für die physikalische Bedeutung von π. Wenn die φ-skalierten Segmente mit jeder Unterteilungsstufe fortschreitend kleiner werden, erreichen sie schließlich die Planck-Länge l_P $\approx$ 1,616 × 10⁻³⁵ m — die Skala, unterhalb derer das Konzept einer kontinuierlichen Raumzeit vermutlich zusammenbricht.
+Das Segmentierungsprinzip impliziert eine fundamentale Präzisionsgrenze für die physikalische Bedeutung von π. Wenn die φ-skalierten Segmente mit jeder Unterteilungsstufe fortschreitend kleiner werden, erreichen sie schließlich die Planck-Länge l_P ≈ 1,616 × 10⁻³⁵ m — die Skala, unterhalb derer das Konzept einer kontinuierlichen Raumzeit vermutlich zusammenbricht.
 
 Die maximale Anzahl sinnvoller Unterteilungsstufen ist:
 
-$$N_{\max} = \frac{\log(l_P / s_0)}{\log(\varphi)} \approx 42$$
+N_{\max} = \frac{\log(l_P / s_0)}{\log(\varphi)} \approx 42
 
 wobei s₀ die anfängliche Segmentlänge beim Einsetzen der Krümmung ist. Jenseits von etwa 42 Stufen der φ-Unterteilung sind die Segmente kleiner als die Planck-Länge, und weitere Verfeinerung hat keine physikalische Bedeutung.
 
@@ -843,11 +845,11 @@ Dies widerspricht nicht der mathematischen Existenz aller Ziffern von π. Als ma
 
 **Testdateien:** `test_phi_geometry`, `test_phi_properties`
 
-**Was die Tests beweisen:** Die φ-Skalierung der logarithmischen Spirale ist numerisch korrekt; der Vierteldrehungs-Wachstumsfaktor ist exakt φ bis zur Maschinengenauigkeit; die Spiralwachstumsrate k = 2ln(φ)/π ist konsistent mit der Polargleichung; die Grundsegmentierung N₀ = 4 ergibt sich korrekt aus sowohl der winkelmäßigen (π-basierten) als auch der radialen (φ-basierten) Beschreibung; und die Identität 2φ $\approx$ π gilt mit der erwarteten 3%-Genauigkeit.
+**Was die Tests beweisen:** Die φ-Skalierung der logarithmischen Spirale ist numerisch korrekt; der Vierteldrehungs-Wachstumsfaktor ist exakt φ bis zur Maschinengenauigkeit; die Spiralwachstumsrate k = 2ln(φ)/π ist konsistent mit der Polargleichung; die Grundsegmentierung N₀ = 4 ergibt sich korrekt aus sowohl der winkelmäßigen (π-basierten) als auch der radialen (φ-basierten) Beschreibung; und die Identität 2φ ≈ π gilt mit der erwarteten 3%-Genauigkeit.
 
 **Was die Tests NICHT beweisen:** Die physikalische Interpretation von π als Segmentteiler, die physikalische Interpretation von φ als Wachstumskonstante oder die 42-Dezimalstellen-Präzisionsgrenze. Dies sind theoretische Behauptungen des SSZ-Rahmenwerks, die unabhängige experimentelle Bestätigung erfordern — zum Beispiel durch Präzisionsmessungen geometrischer Verhältnisse in starken Gravitationsfeldern.
 
-**Reproduktion:** `E:/clone\segmented-calculation-suite/tests/` — relevante Tests in `test_phi_geometry.py` und `test_phi_properties.py`. Alle Tests bestanden (145/145).
+**Reproduktion:** `E:\clone\segmented-calculation-suite\tests\` — relevante Tests in `test_phi_geometry.py` und `test_phi_properties.py`. Alle Tests bestanden (145/145).
 
 ---
 
@@ -855,13 +857,13 @@ Dies widerspricht nicht der mathematischen Existenz aller Ziffern von π. Als ma
 
 | # | Formel | Bereich |
 |---|---------|--------|
-| 1 | 2φ $\approx$ π bei r = 1 | Einheitsradius (geometrisch, ~3% Genauigkeit) |
-| 2 | φ = (1 + √5)/2 $\approx$ 1,618034 | universelle mathematische Konstante |
-| 3 | k = 2ln(φ)/π $\approx$ 0,3063 | Spiralwachstumsrate |
+| 1 | 2φ ≈ π bei r = 1 | Einheitsradius (geometrisch, ~3% Genauigkeit) |
+| 2 | φ = (1 + √5)/2 ≈ 1,618034 | universelle mathematische Konstante |
+| 3 | k = 2ln(φ)/π ≈ 0,3063 | Spiralwachstumsrate |
 | 4 | π_spiral = √(1 + k²)/k | effektives π in gekrümmter Raumzeit |
 | 5 | S_end = 4 · φⁿ | Segmentzahl in Schwarzen Löchern |
 | 6 | N₀ = 2π/(π/2) = 4 | Grundsegmentierung in flacher Raumzeit |
-| 7 | N_max $\approx$ 42 | maximale sinnvolle Unterteilungsstufen |
+| 7 | N_max ≈ 42 | maximale sinnvolle Unterteilungsstufen |
 
 ---
 
@@ -880,11 +882,11 @@ Dies widerspricht nicht der mathematischen Existenz aller Ziffern von π. Als ma
 
 Die Segmentdichte Xi(r) wird aus dem Gravitationspotential Phi(r) = -GM/r abgeleitet. Die Ableitung erfolgt in drei Schritten:
 
-**Schritt 1: Dimensionslose Potentialgroesse.** Das Gravitationspotential hat die Dimension [Energie/Masse] = [m^2/s^2]. Die dimensionslose Groesse ist Phi/(c^2) = -GM/(rc^2) = -$r_{s}$/(2r), wobei $r_{s}$ = 2GM/c^2 der Schwarzschild-Radius ist.
+**Schritt 1: Dimensionslose Potentialgroesse.** Das Gravitationspotential hat die Dimension [Energie/Masse] = [m^2/s^2]. Die dimensionslose Groesse ist Phi/(c^2) = -GM/(rc^2) = -r_s/(2r), wobei r_s = 2GM/c^2 der Schwarzschild-Radius ist.
 
-**Schritt 2: Segmentdichte als Betrag.** Die Segmentdichte ist der Betrag der dimensionslosen Potentialgroesse: Xi = |Phi|/c^2 = $r_{s}$/(2r). Diese Definition gilt im Schwachfeld (r >> $r_{s}$).
+**Schritt 2: Segmentdichte als Betrag.** Die Segmentdichte ist der Betrag der dimensionslosen Potentialgroesse: Xi = |Phi|/c^2 = r_s/(2r). Diese Definition gilt im Schwachfeld (r >> r_s).
 
-**Schritt 3: Starkfeld-Erweiterung.** Im Starkfeld (r ~ $r_{s}$) muss die Segmentdichte so modifiziert werden, dass sie endlich bleibt. Die Starkfeldformel Xi = 1 - exp(-phi*r/r_s) erfuellt diese Anforderung: Sie konvergiert gegen 1 - 1/e^phi = 0,802 fuer r -> 0 und stimmt im Schwachfeld (r >> $r_{s}$) mit Xi = $r_{s}$/(2r) ueberein.
+**Schritt 3: Starkfeld-Erweiterung.** Im Starkfeld (r ~ r_s) muss die Segmentdichte so modifiziert werden, dass sie endlich bleibt. Die Starkfeldformel Xi = 1 - exp(-phi*r/r_s) erfuellt diese Anforderung: Sie konvergiert gegen 1 - 1/e^phi = 0,802 fuer r -> 0 und stimmt im Schwachfeld (r >> r_s) mit Xi = r_s/(2r) ueberein.
 
 ### Eigenschaften der Segmentdichte
 
@@ -894,7 +896,7 @@ Die Segmentdichte hat folgende Eigenschaften:
 
 **Monotonie:** dXi/dr < 0 fuer alle r > 0. Die Segmentdichte nimmt mit zunehmendem Abstand vom Gravitationszentrum ab. Dies ist physikalisch sinnvoll: Je weiter man sich von einer Masse entfernt, desto schwaecher ist das Gravitationsfeld.
 
-**Beschraenktheit:** 0 <= Xi(r) <= $\Xi_{\text{max}}$ = 0,802 fuer alle r > 0. Die Segmentdichte ist nach oben beschraenkt, was Singularitaeten verhindert.
+**Beschraenktheit:** 0 <= Xi(r) <= Xi_max = 0,802 fuer alle r > 0. Die Segmentdichte ist nach oben beschraenkt, was Singularitaeten verhindert.
 
 **Asymptotik:** Xi(r) -> 0 fuer r -> unendlich. Weit von jeder Masse entfernt ist die Segmentdichte null, und die Raumzeit ist flach.
 
@@ -919,9 +921,9 @@ Die Kruemmung der Raumzeit ist durch die zweite Ableitung der Segmentdichte best
 
 R ~ d^2Xi/dr^2 + (2/r) dXi/dr
 
-Im Schwachfeld (Xi = $r_{s}$/(2r)) ist R = 0 (Vakuum-Loesung, wie in der ART). Im Starkfeld (Xi = 1 - exp(-phi*r/r_s)) ist R != 0, was bedeutet, dass die SSZ-Raumzeit nahe der natuerlichen Grenze eine andere Kruemmungsstruktur hat als die Schwarzschild-Raumzeit.
+Im Schwachfeld (Xi = r_s/(2r)) ist R = 0 (Vakuum-Loesung, wie in der ART). Im Starkfeld (Xi = 1 - exp(-phi*r/r_s)) ist R != 0, was bedeutet, dass die SSZ-Raumzeit nahe der natuerlichen Grenze eine andere Kruemmungsstruktur hat als die Schwarzschild-Raumzeit.
 
-Die maximale Kruemmung tritt am Regime-Uebergang (r ~ r*) auf, wo die zweite Ableitung d^2Xi/dr^2 maximal ist. Die maximale Kruemmung ist endlich und proportional zu 1/r_s^2, was fuer ein stellares Schwarzes Loch (M = 10 $M_{Sonne}$) ~10^{-8} m^{-2} betraegt — gross, aber endlich.
+Die maximale Kruemmung tritt am Regime-Uebergang (r ~ r*) auf, wo die zweite Ableitung d^2Xi/dr^2 maximal ist. Die maximale Kruemmung ist endlich und proportional zu 1/r_s^2, was fuer ein stellares Schwarzes Loch (M = 10 M_Sonne) ~10^{-8} m^{-2} betraegt — gross, aber endlich.
 
 ### Segmentdichte fuer verschiedene Objekte
 
@@ -941,32 +943,32 @@ Die Tabelle zeigt den enormen dynamischen Bereich der Segmentdichte: von 7 x 10^
 
 Die Segmentdichte Xi(r) hat zwei analytische Ausdruecke, die in verschiedenen Regimen gelten:
 
-**Schwachfeldformel (g1):** $\Xi_{\text{weak}}$(r) = $r_{s}$ / (2r)
+**Schwachfeldformel (g1):** Xi_weak(r) = r_s / (2r)
 
-Gueltig fuer r >> $r_{s}$ (weit vom kompakten Objekt). Diese Formel folgt direkt aus dem Newtonschen Gravitationspotential Phi = -GM/r und der Definition Xi = |Phi|/c^2. Sie ist identisch mit der fuehrenden Ordnung der Schwarzschild-Metrik in der ART.
-
-Eigenschaften:
-- $\Xi_{\text{weak}}$ -> 0 fuer r -> unendlich (flacher Raum)
-- $\Xi_{\text{weak}}$ -> unendlich fuer r -> 0 (Singularitaet — daher nur im Schwachfeld gueltig)
-- dXi\_weak/dr = -$r_{s}$/(2r^2) < 0 (monoton fallend)
-
-**Starkfeldformel (g2):** $\Xi_{\text{strong}}$(r) = 1 - exp(-phi * r / $r_{s}$)
-
-Gueltig fuer r ~ $r_{s}$ (nahe dem kompakten Objekt). Diese Formel wird durch drei Anforderungen bestimmt: (1) Xi muss endlich bleiben fuer alle r, (2) Xi muss im Schwachfeld mit $\Xi_{\text{weak}}$ uebereinstimmen, (3) Xi muss den goldenen Schnitt phi als Wachstumsparameter enthalten.
+Gueltig fuer r >> r_s (weit vom kompakten Objekt). Diese Formel folgt direkt aus dem Newtonschen Gravitationspotential Phi = -GM/r und der Definition Xi = |Phi|/c^2. Sie ist identisch mit der fuehrenden Ordnung der Schwarzschild-Metrik in der ART.
 
 Eigenschaften:
-- $\Xi_{\text{strong}}$(0) = 0 (am Ursprung)
-- $\Xi_{\text{strong}}$($r_{s}$) = 1 - exp(-phi) = 0,802 (Maximum)
-- $\Xi_{\text{strong}}$ -> phi * r/r_s fuer r << $r_{s}$ (linear fuer kleine r)
-- dXi\_strong/dr = (phi/r_s) * exp(-phi * r/r_s) > 0 (monoton steigend)
+- Xi_weak -> 0 fuer r -> unendlich (flacher Raum)
+- Xi_weak -> unendlich fuer r -> 0 (Singularitaet — daher nur im Schwachfeld gueltig)
+- dXi_weak/dr = -r_s/(2r^2) < 0 (monoton fallend)
+
+**Starkfeldformel (g2):** Xi_strong(r) = 1 - exp(-phi * r / r_s)
+
+Gueltig fuer r ~ r_s (nahe dem kompakten Objekt). Diese Formel wird durch drei Anforderungen bestimmt: (1) Xi muss endlich bleiben fuer alle r, (2) Xi muss im Schwachfeld mit Xi_weak uebereinstimmen, (3) Xi muss den goldenen Schnitt phi als Wachstumsparameter enthalten.
+
+Eigenschaften:
+- Xi_strong(0) = 0 (am Ursprung)
+- Xi_strong(r_s) = 1 - exp(-phi) = 0,802 (Maximum)
+- Xi_strong -> phi * r/r_s fuer r << r_s (linear fuer kleine r)
+- dXi_strong/dr = (phi/r_s) * exp(-phi * r/r_s) > 0 (monoton steigend)
 
 ### Die Hermite-C2-Mischfunktion
 
 Der Uebergang zwischen Schwach- und Starkfeldformel erfolgt durch eine Hermite-C2-Mischfunktion H(r), die im Intervall [r_1, r_2] von 0 auf 1 uebergeht:
 
-Xi(r) = (1 - H(r)) * $\Xi_{\text{weak}}$(r) + H(r) * $\Xi_{\text{strong}}$(r)
+Xi(r) = (1 - H(r)) * Xi_weak(r) + H(r) * Xi_strong(r)
 
-Die Hermite-C2-Funktion hat die Form: H(t) = 3t^2 - 2t^3, wobei t = (r - r_1)/(r_2 - r_1) und r_1 = r* - $\Delta_{\text{r}}$/2, r_2 = r* + $\Delta_{\text{r}}$/2.
+Die Hermite-C2-Funktion hat die Form: H(t) = 3t^2 - 2t^3, wobei t = (r - r_1)/(r_2 - r_1) und r_1 = r* - Delta_r/2, r_2 = r* + Delta_r/2.
 
 Die C2-Eigenschaft bedeutet, dass H und ihre ersten beiden Ableitungen an den Raendern stetig sind:
 - H(0) = 0, H(1) = 1
@@ -975,24 +977,24 @@ Die C2-Eigenschaft bedeutet, dass H und ihre ersten beiden Ableitungen an den Ra
 
 Dies garantiert, dass die resultierende Segmentdichte Xi(r) zweimal stetig differenzierbar ist, was fuer die Berechnung der Christoffel-Symbole und des Riemann-Tensors erforderlich ist.
 
-### Regime-Uebergangsradius r* = 1,387 $r_{s}$
+### Regime-Uebergangsradius r* = 1,387 r_s
 
 Der Regime-Uebergangsradius r* ist der Punkt, an dem die Schwach- und Starkfeldformeln denselben Wert und dieselbe Ableitung haben:
 
-$\Xi_{\text{weak}}$(r*) = $\Xi_{\text{strong}}$(r*) und dXi\_weak/dr(r*) = dXi\_strong/dr(r*)
+Xi_weak(r*) = Xi_strong(r*) und dXi_weak/dr(r*) = dXi_strong/dr(r*)
 
-Die numerische Loesung dieses Gleichungssystems ergibt r* = 1,387 $r_{s}$. Dieser Wert ist universell — er haengt nicht von der Masse des kompakten Objekts ab.
+Die numerische Loesung dieses Gleichungssystems ergibt r* = 1,387 r_s. Dieser Wert ist universell — er haengt nicht von der Masse des kompakten Objekts ab.
 
-Die physikalische Bedeutung: Bei r = 1,387 $r_{s}$ aendert sich die Natur des Gravitationsfeldes qualitativ. Fuer r > r* dominiert die Newtonsche Physik (Schwachfeld). Fuer r < r* dominiert die SSZ-spezifische Physik (Starkfeld). Der Uebergang ist glatt (C2-stetig), nicht abrupt.
+Die physikalische Bedeutung: Bei r = 1,387 r_s aendert sich die Natur des Gravitationsfeldes qualitativ. Fuer r > r* dominiert die Newtonsche Physik (Schwachfeld). Fuer r < r* dominiert die SSZ-spezifische Physik (Starkfeld). Der Uebergang ist glatt (C2-stetig), nicht abrupt.
 
 ### Numerische Implementierung
 
 Die numerische Implementierung der Segmentdichte erfordert Sorgfalt in der Naehe des Regime-Uebergangs. Die empfohlene Implementierung:
 
-1. Berechne t = (r - r_1)/(r_2 - r_1), wobei r_1 = 1,137 $r_{s}$ und r_2 = 1,637 $r_{s}$
-2. Wenn t < 0: Xi = $\Xi_{\text{weak}}$(r)
-3. Wenn t > 1: Xi = $\Xi_{\text{strong}}$(r)
-4. Sonst: Xi = (1 - H(t)) * $\Xi_{\text{weak}}$(r) + H(t) * $\Xi_{\text{strong}}$(r)
+1. Berechne t = (r - r_1)/(r_2 - r_1), wobei r_1 = 1,137 r_s und r_2 = 1,637 r_s
+2. Wenn t < 0: Xi = Xi_weak(r)
+3. Wenn t > 1: Xi = Xi_strong(r)
+4. Sonst: Xi = (1 - H(t)) * Xi_weak(r) + H(t) * Xi_strong(r)
 
 Diese Implementierung ist in allen SSZ-Repositories (ssz-qubits, ssz-metric-pure, maxwell) identisch und wird durch automatisierte Tests verifiziert.
 
@@ -1005,7 +1007,7 @@ In SSZ sind alle PPN-Parameter identisch mit denen der ART:
 - beta = 1 (Nichtlinearitaet der Gravitation)
 - Alle anderen Parameter = 0
 
-Die Uebereinstimmung mit der ART im PPN-Formalismus ist eine direkte Konsequenz der Schwachfeldformel Xi = $r_{s}$/(2r), die im Schwachfeld mit der Schwarzschild-Metrik identisch ist. Die SSZ-Abweichungen treten erst im Starkfeld auf (r ~ $r_{s}$), wo der PPN-Formalismus nicht mehr anwendbar ist.
+Die Uebereinstimmung mit der ART im PPN-Formalismus ist eine direkte Konsequenz der Schwachfeldformel Xi = r_s/(2r), die im Schwachfeld mit der Schwarzschild-Metrik identisch ist. Die SSZ-Abweichungen treten erst im Starkfeld auf (r ~ r_s), wo der PPN-Formalismus nicht mehr anwendbar ist.
 
 ### Experimentelle Schranken auf die PPN-Parameter
 
@@ -1026,7 +1028,7 @@ Alle Schranken sind mit der SSZ-Vorhersage (= ART-Vorhersage) konsistent. Die st
 
 Die Beziehung zwischen Segmentdichte Xi, Gravitationspotential Phi und Zeitdilatationsfaktor D kann in einer einzigen Formelkette zusammengefasst werden:
 
-Phi = -GM/r -> Xi = |Phi|/c^2 = $r_{s}$/(2r) -> D = 1/(1+Xi) -> z = Xi -> $v_{esc}$ = c sqrt($r_{s}$/r)
+Phi = -GM/r -> Xi = |Phi|/c^2 = r_s/(2r) -> D = 1/(1+Xi) -> z = Xi -> v_esc = c sqrt(r_s/r)
 
 Diese Kette zeigt, wie alle SSZ-Groessen aus dem Gravitationspotential folgen. Die Kette ist im Schwachfeld exakt und im Starkfeld durch die Starkfeldformel fuer Xi modifiziert.
 
@@ -1054,15 +1056,18 @@ Diese Unterscheidung zwischen Schönheit und Testbarkeit ist eines der zentralen
 
 ### Zusammenfassung und Ausblick auf Kapitel 3
 
-Dieses Kapitel hat die mathematische Grundlage für die beiden Strukturkonstanten von SSZ gelegt: π als den Winkelteiler von Wellensegmenten und φ als die radiale Wachstumskonstante. Die logarithmische Spirale mit φ-Skalierung pro Vierteldrehung liefert das geometrische Objekt, das diese beiden Rollen verbindet. Die näherungsweise Identität 2φ $\approx$ π beim Einheitsradius verankert die Grundsegmentierung N₀ = 4, die wiederum das gesamte Rahmenwerk von Zeitdilatation und Rotverschiebung bestimmt. Die Schlüsselergebnisse sind: Die Spiralwachstumsrate k = 2ln(φ)/π ist festgelegt (nicht frei); das effektive geometrische Verhältnis π_eff konvergiert bei maximaler Segmentierung gegen das klassische π; und die endliche Segmentzahl innerhalb Schwarzer Löcher impliziert eine minimale Wellenlänge für kohärente Wellenausbreitung.
+Dieses Kapitel hat die mathematische Grundlage für die beiden Strukturkonstanten von SSZ gelegt: π als den Winkelteiler von Wellensegmenten und φ als die radiale Wachstumskonstante. Die logarithmische Spirale mit φ-Skalierung pro Vierteldrehung liefert das geometrische Objekt, das diese beiden Rollen verbindet. Die näherungsweise Identität 2φ ≈ π beim Einheitsradius verankert die Grundsegmentierung N₀ = 4, die wiederum das gesamte Rahmenwerk von Zeitdilatation und Rotverschiebung bestimmt. Die Schlüsselergebnisse sind: Die Spiralwachstumsrate k = 2ln(φ)/π ist festgelegt (nicht frei); das effektive geometrische Verhältnis π_eff konvergiert bei maximaler Segmentierung gegen das klassische π; und die endliche Segmentzahl innerhalb Schwarzer Löcher impliziert eine minimale Wellenlänge für kohärente Wellenausbreitung.
 
 Kapitel 3 macht den nächsten Schritt, indem es φ speziell als temporale Wachstumsfunktion untersucht — wie der Goldene Schnitt die Entwicklung der Segmentdichte als Funktion der Zeit statt des Radius bestimmt. Diese zeitliche Perspektive ergänzt die räumliche (radiale) Perspektive des vorliegenden Kapitels und liefert die dynamische Grundlage für die Euler-Ableitung in Kapitel 4.
 
 Ein häufiges Missverständnis in diesem Stadium ist die Verwechslung der SSZ-Verwendung von φ mit numerologischen Behauptungen über den Goldenen Schnitt in der Populärwissenschaft. SSZ behauptet nicht, dass φ in der Feinstrukturkonstante wegen irgendeiner mystischen Eigenschaft des Goldenen Schnitts erscheint. SSZ behauptet, dass die logarithmische Spirale mit φ-Skalierung die einzige selbstähnliche geometrische Struktur liefert, die mit den Einschränkungen von Abschnitt 2.2 konsistent ist, und dass diese Struktur spezifische, testbare Vorhersagen macht. Der Test ist, ob die Vorhersagen mit Beobachtungen übereinstimmen, nicht ob φ ästhetisch ansprechend ist.
 
-\newpage
+---
 
-# φ als temporale Wachstumsfunktion und Kalibrierung
+# Kapitel 3: φ als temporale Wachstumsfunktion und Kalibrierung
+
+**Teil I — Grundlagen**
+**Status:** ERWEITERTE FASSUNG
 
 
 ![Abb 3](figures/ch03_phi/fig_03_01.png)
@@ -1073,7 +1078,7 @@ Ein häufiges Missverständnis in diesem Stadium ist die Verwechslung der SSZ-Ve
 
 Dieses Kapitel reinterpretiert den Goldenen Schnitt φ nicht nur als räumliche Proportion, sondern als **temporalen Skalierungsmechanismus**. In der konventionellen Physik ist die Zeit ein externer Parameter — eine Koordinatenbezeichnung, die Ereignissen angeheftet wird. In SSZ *entsteht* die Zeit aus struktureller Progression entlang der φ-basierten Segmentierung: Jeder φ-Expansionsschritt der logarithmischen Spirale entspricht einem messbaren Zeitintervall. Dies ist eine radikale Abkehr sowohl von der Newtonschen Mechanik (wo die Zeit gleichförmig fließt) als auch von der Allgemeinen Relativitätstheorie (wo die Zeit eine Koordinate ist, die gekrümmt werden kann, aber extern aufgeprägt bleibt).
 
-Wir leiten den Kopplungsradius r_φ = (φ/2)·$r_{s}$ als die charakteristische Längenskala her, bei der die φ-Geometrie vom Schwachfeld- zum Starkfeldverhalten übergeht. Dann führen wir die masseabhängige Korrektur Δ(M) für Starkfeldanwendungen ein und erklären, warum sie eine logarithmische Form annimmt. Schließlich zeigen wir, wie gravitative Zeitdilatation natürlich aus erhöhter Segmentdichte entsteht — nicht aus Energieverlust (das Newtonsche Bild) oder Koordinatenfreiheit (das ART-Bild), sondern aus **geometrischem Widerstand**: der Notwendigkeit, mehr φ-Segmente in Regionen höherer Segmentdichte zu durchqueren.
+Wir leiten den Kopplungsradius r_φ = (φ/2)·r_s als die charakteristische Längenskala her, bei der die φ-Geometrie vom Schwachfeld- zum Starkfeldverhalten übergeht. Dann führen wir die masseabhängige Korrektur Δ(M) für Starkfeldanwendungen ein und erklären, warum sie eine logarithmische Form annimmt. Schließlich zeigen wir, wie gravitative Zeitdilatation natürlich aus erhöhter Segmentdichte entsteht — nicht aus Energieverlust (das Newtonsche Bild) oder Koordinatenfreiheit (das ART-Bild), sondern aus **geometrischem Widerstand**: der Notwendigkeit, mehr φ-Segmente in Regionen höherer Segmentdichte zu durchqueren.
 
 **Lesehinweis.** Abschnitt 3.1 entwickelt das konzeptionelle Rahmenwerk (Zeit aus Struktur). Abschnitt 3.2 leitet das Schlüsselverhältnis φ/2 her. Abschnitt 3.3 führt den Kopplungsradius r_φ mit astrophysikalischen Beispielen ein. Abschnitt 3.4 entwickelt die Massekorrektur Δ(M). Abschnitt 3.5 fasst die Validierungstests zusammen.
 
@@ -1089,11 +1094,11 @@ Bevor wir in die Ableitungen eintauchen, skizzieren wir, was dieses Kapitel leis
 
 Diese Zählinterpretation hat eine tiefgreifende Konsequenz: Die Zeit wird auf struktureller Ebene inhärent diskret, obwohl beobachtbare Vorhersagen kontinuierlich bleiben. Die Diskretheit operiert auf Segmentebene, nicht auf Planck-Ebene — es ist eine geometrische Diskretheit, die aus der φ-Spirale entsteht, nicht eine Quantendiskretheit aus Unschärferelationen.
 
-Der Kopplungsradius r_φ = (φ/2) $r_{s}$ ist der Radius, bei dem die φ-geometrische Struktur des Segmentgitters dynamisch wichtig wird. Innerhalb von r_φ dominiert die exponentielle Sättigung von Ξ über den 1/r-Abfall. Außerhalb von r_φ ist die Schwachfeldnäherung gültig. Das Verhältnis φ/2 ist nicht willkürlich — es ergibt sich aus der Anforderung, dass der Vierteldrehungs-Wachstumsfaktor der logarithmischen Spirale gleich φ ist, kombiniert mit der N₀ = 4 Grundsegmentierung.
+Der Kopplungsradius r_φ = (φ/2) r_s ist der Radius, bei dem die φ-geometrische Struktur des Segmentgitters dynamisch wichtig wird. Innerhalb von r_φ dominiert die exponentielle Sättigung von Ξ über den 1/r-Abfall. Außerhalb von r_φ ist die Schwachfeldnäherung gültig. Das Verhältnis φ/2 ist nicht willkürlich — es ergibt sich aus der Anforderung, dass der Vierteldrehungs-Wachstumsfaktor der logarithmischen Spirale gleich φ ist, kombiniert mit der N₀ = 4 Grundsegmentierung.
 
 Intuitiv bedeutet dies: Man stelle sich eine Wendeltreppe in einem Leuchtturm vor. Jede Vierteldrehung bringt einen ein Stockwerk höher, und die Höhe jedes Stockwerks wächst um den Faktor φ. Der Kopplungsradius r_φ ist das Stockwerk, bei dem die Treppe steil genug wird, dass man das exponentielle Wachstum bemerkt. Unterhalb dieses Stockwerks kostet jede Stufe merklich mehr Energie als die letzte. Darüber sind die Stufen nahezu gleichförmig. Dies ist der physikalische Gehalt des Schwach-zu-Stark-Übergangs.
 
-Die in Abschnitt 3.4 eingeführte masseabhängige Korrektur Δ(M) berücksichtigt die Tatsache, dass das Segmentgitter nicht perfekt selbstähnlich über alle Massenskalen ist. Für stellare Schwarze Löcher ist Δ klein (weniger als 1 Prozent). Für supermassive Schwarze Löcher kann es mehrere Prozent erreichen. Diese Korrektur wird aus der Anforderung abgeleitet, dass die Übergangszone zwischen g₁ und g₂ bei allen Massen glatt (Hermite C²) bleibt, und ist die einzige Stelle in SSZ, wo die Masse M des gravitierenden Objekts in die Segmentdichte jenseits der trivialen Abhängigkeit durch $r_{s}$ = 2GM/c² eingeht.
+Die in Abschnitt 3.4 eingeführte masseabhängige Korrektur Δ(M) berücksichtigt die Tatsache, dass das Segmentgitter nicht perfekt selbstähnlich über alle Massenskalen ist. Für stellare Schwarze Löcher ist Δ klein (weniger als 1 Prozent). Für supermassive Schwarze Löcher kann es mehrere Prozent erreichen. Diese Korrektur wird aus der Anforderung abgeleitet, dass die Übergangszone zwischen g₁ und g₂ bei allen Massen glatt (Hermite C²) bleibt, und ist die einzige Stelle in SSZ, wo die Masse M des gravitierenden Objekts in die Segmentdichte jenseits der trivialen Abhängigkeit durch r_s = 2GM/c² eingeht.
 
 ### Die Zeit in der konventionellen Physik
 
@@ -1105,7 +1110,7 @@ Um den SSZ-Vorschlag zu würdigen, müssen wir zunächst verstehen, wie die Zeit
 
 **In SSZ** erhält die Zeit eine dritte Interpretation: Sie ist weder ein absoluter Parameter noch lediglich eine Koordinate, sondern eine *emergente Größe*, die aus struktureller Progression entsteht. Jeder Schritt entlang der φ-Spirale — jede Vierteldrehung, die den Radius mit φ multipliziert — bildet eine Einheit zeitlichen Fortschritts. Die Zeit ist buchstäblich die Zählung, wie viele φ-Expansionsschritte stattgefunden haben. Diese Idee lässt sich präzise formulieren:
 
-$$t \propto \log_\varphi(R)$$
+t \propto \log_\varphi(R)
 
 wobei R die Radialkoordinate entlang der Spirale ist. Jedes Mal, wenn der Radius um den Faktor φ zunimmt, ist eine Zeiteinheit verstrichen. Die Zeit wird nicht von außen aufgeprägt; sie wird von der Geometrie der Segmentstruktur abgelesen.
 ### Die radiale Wachstumsfunktion
@@ -1116,9 +1121,9 @@ R(\theta) = a \cdot \varphi^{\theta/(\pi/2)}
 
 wobei a der Anfangsradius und θ die Winkelverschiebung vom Startpunkt ist. Entpacken wir diese Formel Schritt für Schritt.
 
-**Die Basis:** a ist der Anfangsradius — der Startpunkt der Spirale. Für ein Gravitationssystem ist a typischerweise von der Ordnung $r_{s}$ (dem Schwarzschild-Radius) oder r_φ (dem Kopplungsradius).
+**Die Basis:** a ist der Anfangsradius — der Startpunkt der Spirale. Für ein Gravitationssystem ist a typischerweise von der Ordnung r_s (dem Schwarzschild-Radius) oder r_φ (dem Kopplungsradius).
 
-**Der Exponent:** θ/(π/2) zählt die Anzahl der Vierteldrehungen. Bei θ = 0 gilt R = a (Startpunkt). Bei θ = π/2 (eine Vierteldrehung) gilt R = aφ. Bei θ = π (Halbdrehung) gilt R = aφ². Bei θ = 2π (volle Drehung) gilt R = aφ⁴ $\approx$ 6,854a.
+**Der Exponent:** θ/(π/2) zählt die Anzahl der Vierteldrehungen. Bei θ = 0 gilt R = a (Startpunkt). Bei θ = π/2 (eine Vierteldrehung) gilt R = aφ. Bei θ = π (Halbdrehung) gilt R = aφ². Bei θ = 2π (volle Drehung) gilt R = aφ⁴ ≈ 6,854a.
 
 **Das Wachstumsmuster:**
 
@@ -1136,23 +1141,23 @@ Der Radius wächst mit jeder Vierteldrehung um den Faktor φ. Dies ist eine geom
 
 Wenn jedes φ-Segment einem messbaren Zeitintervall entspricht, wird die Zeit zu einer Funktion geometrischen Wachstums:
 
-$$t = t_0 \cdot \log_\varphi\left(\frac{R}{a}\right) = t_0 \cdot \frac{\ln(R/a)}{\ln\varphi}$$
+t = t_0 \cdot \log_\varphi\left(\frac{R}{a}\right) = t_0 \cdot \frac{\ln(R/a)}{\ln\varphi}
 
 wobei t₀ die Basiszeiteinheit ist — die Dauer einer Vierteldrehung, gemessen von einem fernen Beobachter. Diese Gleichung hat mehrere wichtige Konsequenzen:
 
-**1. Die Zeit ist logarithmisch im Radius.** Der Übergang von R = a zu R = aφ dauert eine Zeiteinheit. Der Übergang von R = aφ zu R = aφ² dauert ebenfalls eine Zeiteinheit. Aber der zweite Schritt überdeckt eine *größere* radiale Distanz (aφ² − aφ = a·φ(φ−1) = a) im Vergleich zum ersten Schritt (aφ − a = a(φ−1) $\approx$ 0,618a). Gleiche Zeitintervalle entsprechen geometrisch zunehmenden räumlichen Intervallen. Dies ist genau das Verhalten der gravitativen Zeitdilatation: nahe dem Horizont, wo R klein ist, überdeckt jede Zeiteinheit sehr wenig räumliche Distanz; weit entfernt, wo R groß ist, überdeckt jede Zeiteinheit viel mehr.
+**1. Die Zeit ist logarithmisch im Radius.** Der Übergang von R = a zu R = aφ dauert eine Zeiteinheit. Der Übergang von R = aφ zu R = aφ² dauert ebenfalls eine Zeiteinheit. Aber der zweite Schritt überdeckt eine *größere* radiale Distanz (aφ² − aφ = a·φ(φ−1) = a) im Vergleich zum ersten Schritt (aφ − a = a(φ−1) ≈ 0,618a). Gleiche Zeitintervalle entsprechen geometrisch zunehmenden räumlichen Intervallen. Dies ist genau das Verhalten der gravitativen Zeitdilatation: nahe dem Horizont, wo R klein ist, überdeckt jede Zeiteinheit sehr wenig räumliche Distanz; weit entfernt, wo R groß ist, überdeckt jede Zeiteinheit viel mehr.
 
 **2. Die Zeit hat eine wohldefinierte Richtung.** Die φ-Spirale expandiert nach außen (R nimmt mit θ zu). Die temporale Interpretation erbt diese Gerichtetheit: Die Zeit nimmt immer zu, wenn man sich nach außen entlang der Spirale bewegt. Dies liefert einen geometrischen Zeitpfeil, ohne thermodynamische Argumente bemühen zu müssen.
 
 **3. Die Zeit hängt von Skalierung und Rotation ab.** Der vollständige temporale Ausdruck in gekrümmter Raumzeit kombiniert die radiale Skalierung (φ) mit der winkelmäßigen Einbettung (π):
 
-$$t \propto \log_\varphi(R) \cdot \theta, \quad \theta \in [0, 2\pi]$$
+t \propto \log_\varphi(R) \cdot \theta, \quad \theta \in [0, 2\pi]
 
 Dies bedeutet, dass die Zeit sowohl davon abhängt, *wo man sich* entlang der Spirale befindet (die R-Abhängigkeit), als auch davon, *wie die Spirale eingebettet* ist in die umgebende Geometrie (die θ-Abhängigkeit). In flacher Raumzeit ist die θ-Abhängigkeit trivial (gleichförmige Rotation). In gekrümmter Raumzeit ist die Winkeleinbettung durch die Gravitation verzerrt, was die in Kapitel 2 beschriebenen Segmentdichte-Effekte einführt.
 
 ### Gravitative Zeitdilatation als geometrischer Widerstand
 
-In der Newtonschen Gravitation tickt eine Uhr nahe einem massiven Körper langsamer, weil sie „Energie verloren" hat beim Aufstieg aus dem gravitativen Potentialtrichter. Dies ist das energiebasierte Bild der gravitativen Rotverschiebung. In der Allgemeinen Relativitätstheorie wird der Effekt als Konsequenz der Raumzeitkrümmung reinterpretiert: Die Metrikkomponente $g_{tt}$ weicht nahe einer Masse von eins ab, und Eigenzeitintervalle werden um den Faktor √(1 − $r_{s}$/r) verkürzt.
+In der Newtonschen Gravitation tickt eine Uhr nahe einem massiven Körper langsamer, weil sie „Energie verloren" hat beim Aufstieg aus dem gravitativen Potentialtrichter. Dies ist das energiebasierte Bild der gravitativen Rotverschiebung. In der Allgemeinen Relativitätstheorie wird der Effekt als Konsequenz der Raumzeitkrümmung reinterpretiert: Die Metrikkomponente g_tt weicht nahe einer Masse von eins ab, und Eigenzeitintervalle werden um den Faktor √(1 − r_s/r) verkürzt.
 
 SSZ bietet eine dritte Interpretation: **Gravitative Zeitdilatation ist geometrischer Widerstand.** Unter gravitativem Einfluss wird die temporale Einheit φ auf φ' > φ gestreckt. Jede Vierteldrehung der Spirale überdeckt mehr Raum pro Segment, aber die innere Struktur muss Stetigkeit bewahren — also erfordert jedes Segment feinere innere Unterteilungen. Die Anzahl innerer Schritte nimmt zu, und der Prozess der Durchquerung einer temporalen Einheit dauert, gemessen von einem fernen Beobachter, länger.
 
@@ -1160,25 +1165,25 @@ Um dies zu präzisieren, betrachte man eine Uhr beim Radius r von einer Masse M.
 
 D(r) = \frac{1}{1 + \Xi(r)}
 
-Eine Uhr am Horizont (Ξ $\approx$ 0,802) tickt mit einer Rate von D $\approx$ 0,555 im Vergleich zu einer Uhr im Unendlichen. Sie hat keine „Energie verloren" — sie ist einfach in eine dichter segmentierte Region der Raumzeit eingebettet, wo jeder temporale Schritt mehr interne Durchquerungen erfordert.
+Eine Uhr am Horizont (Ξ ≈ 0,802) tickt mit einer Rate von D ≈ 0,555 im Vergleich zu einer Uhr im Unendlichen. Sie hat keine „Energie verloren" — sie ist einfach in eine dichter segmentierte Region der Raumzeit eingebettet, wo jeder temporale Schritt mehr interne Durchquerungen erfordert.
 
 **Analogie.** Beim Gehen durch einen Wald hängt die Geschwindigkeit von der Baumdichte ab. Auf einer offenen Wiese (flache Raumzeit, Ξ = 0) geht man frei — ein Schritt pro Zeiteinheit. In einem dichten Dickicht (starke Gravitation, Ξ > 0) muss man um mehr Hindernisse pro Schritt navigieren. Die Beine bewegen sich genauso schnell, aber der effektive Vorwärtsfortschritt ist langsamer. Der „geometrische Widerstand" der Segmentstruktur spielt dieselbe Rolle wie die Bäume in dieser Analogie.
 
-Diese Interpretation hat einen entscheidenden Vorteil gegenüber dem energiebasierten Bild: Sie erklärt, warum die Zeitdilatation am Horizont *endlich* ist. In der ART sagt die Schwarzschild-Metrik D → 0 bei r = r_s vorher (unendliche Zeitdilatation). In SSZ sättigt die Segmentdichte bei Ξ_max = 1 − e^{−φ} $\approx$ 0,802, sodass D nie null erreicht. Die Uhr verlangsamt sich, bleibt aber nie stehen — es gibt keine Fläche unendlicher Rotverschiebung. Kapitel 18 erforscht die Konsequenzen dieser Endlichkeit für die Physik Schwarzer Löcher.
+Diese Interpretation hat einen entscheidenden Vorteil gegenüber dem energiebasierten Bild: Sie erklärt, warum die Zeitdilatation am Horizont *endlich* ist. In der ART sagt die Schwarzschild-Metrik D → 0 bei r = r_s vorher (unendliche Zeitdilatation). In SSZ sättigt die Segmentdichte bei Ξ_max = 1 − e^{−φ} ≈ 0,802, sodass D nie null erreicht. Die Uhr verlangsamt sich, bleibt aber nie stehen — es gibt keine Fläche unendlicher Rotverschiebung. Kapitel 18 erforscht die Konsequenzen dieser Endlichkeit für die Physik Schwarzer Löcher.
 
-Wenn man dies messen wollte: Die Interpretation des geometrischen Widerstands macht eine spezifische Vorhersage, die sich am Horizont von der ART unterscheidet. In der ART ist die Rotverschiebung eines bei r = r_s emittierten Photons unendlich — kein Photon kann entkommen. In SSZ ist die Rotverschiebung groß, aber endlich: z = 1/D − 1 = 1/0,555 − 1 $\approx$ 0,80. Ein am Horizont emittiertes Photon verliert etwa 45 Prozent seiner Energie, verschwindet aber nicht. Dies ist prinzipiell mit Röntgenteleskopen der nächsten Generation testbar, die Materie beobachten, die in stellare Schwarze Löcher fällt. Der vorhergesagte spektrale Abschneidewert unterscheidet sich von der ART-Vorhersage eines vollständigen Blackouts.
+Wenn man dies messen wollte: Die Interpretation des geometrischen Widerstands macht eine spezifische Vorhersage, die sich am Horizont von der ART unterscheidet. In der ART ist die Rotverschiebung eines bei r = r_s emittierten Photons unendlich — kein Photon kann entkommen. In SSZ ist die Rotverschiebung groß, aber endlich: z = 1/D − 1 = 1/0,555 − 1 ≈ 0,80. Ein am Horizont emittiertes Photon verliert etwa 45 Prozent seiner Energie, verschwindet aber nicht. Dies ist prinzipiell mit Röntgenteleskopen der nächsten Generation testbar, die Materie beobachten, die in stellare Schwarze Löcher fällt. Der vorhergesagte spektrale Abschneidewert unterscheidet sich von der ART-Vorhersage eines vollständigen Blackouts.
 ## 3.2 Das Verhältnis φ/2 und der Parameter β
 
 ### φ/2 als fundamentale Kopplung
 
-Das Verhältnis φ/2 $\approx$ 0,80902 tritt in SSZ wiederholt als natürliche Kopplungskonstante zwischen der Segmentgeometrie und physikalischen Observablen auf. Sein Ursprung ist unkompliziert: φ ist der radiale Wachstumsfaktor pro Vierteldrehung, und der Faktor 1/2 entsteht durch Projektion des radialen Wachstums auf einen Durchmesser. Wenn die φ-Spirale in den dreidimensionalen Raum eingebettet wird, beziehen sich radiale Messungen auf diametrische Messungen durch einen Faktor 2, und die effektive Kopplung wird φ/2.
+Das Verhältnis φ/2 ≈ 0,80902 tritt in SSZ wiederholt als natürliche Kopplungskonstante zwischen der Segmentgeometrie und physikalischen Observablen auf. Sein Ursprung ist unkompliziert: φ ist der radiale Wachstumsfaktor pro Vierteldrehung, und der Faktor 1/2 entsteht durch Projektion des radialen Wachstums auf einen Durchmesser. Wenn die φ-Spirale in den dreidimensionalen Raum eingebettet wird, beziehen sich radiale Messungen auf diametrische Messungen durch einen Faktor 2, und die effektive Kopplung wird φ/2.
 
 Um zu sehen, warum diese Projektion wichtig ist, betrachte man ein Photon, das einen massiven Körper beim Stoßparameter b passiert (dem nächsten Annäherungsabstand, gemessen vom Zentrum). Der Photonenpfad krümmt sich durch die φ-Spiralstruktur, aber der beobachtbare Ablenkwinkel hängt von der *diametrischen* Ausdehnung des Segmentmusters ab, nicht von der radialen Ausdehnung. Die relevante Kopplung ist daher φ/2, nicht φ.
 
 Schlüsselauftritte von φ/2 im SSZ-Rahmenwerk:
 
-- **Der Kopplungsradius:** r_φ = (φ/2)·$r_{s}$ verknüpft den Schwarzschild-Radius mit der charakteristischen SSZ-Längenskala (Abschnitt 3.3).
-- **Die Segmentdichte am Horizont:** Ξ(r_s) = 1 − e^{−φ} $\approx$ 0,802 ist numerisch nahe bei φ/2 $\approx$ 0,809. Diese Werte sind nicht identisch — einer ist ein transzendenter Ausdruck (1 − e^{−φ}), der andere algebraisch (φ/2) — aber ihre Nähe (innerhalb von 0,9%) reflektiert die tiefe strukturelle Verbindung zwischen der exponentiellen Segmentdichte und der algebraischen Spiralgeometrie.
+- **Der Kopplungsradius:** r_φ = (φ/2)·r_s verknüpft den Schwarzschild-Radius mit der charakteristischen SSZ-Längenskala (Abschnitt 3.3).
+- **Die Segmentdichte am Horizont:** Ξ(r_s) = 1 − e^{−φ} ≈ 0,802 ist numerisch nahe bei φ/2 ≈ 0,809. Diese Werte sind nicht identisch — einer ist ein transzendenter Ausdruck (1 − e^{−φ}), der andere algebraisch (φ/2) — aber ihre Nähe (innerhalb von 0,9%) reflektiert die tiefe strukturelle Verbindung zwischen der exponentiellen Segmentdichte und der algebraischen Spiralgeometrie.
 - **Der β-Parameter:** In der Segmentdynamik beschreibt β = φ/2 das Verhältnis von Segmentwachstum zu Winkelverschiebung. Dies ist nicht der PPN-Parameter β (der in SSZ wie in der ART gleich 1 ist), sondern eine Strukturkonstante, die spezifisch für die φ-Spiraleinbettung ist.
 
 ### Verbindung zu φ² und der Euler-Kette
@@ -1187,7 +1192,7 @@ Die algebraischen Eigenschaften von φ erzeugen eine Kaskade verwandter Größen
 
 \varphi^2 - \varphi = 1 \quad \Longrightarrow \quad \varphi(\varphi - 1) = 1 \quad \Longrightarrow \quad \varphi - 1 = \frac{1}{\varphi} \approx 0.618
 
-Die Größe φ/2 liegt zwischen 1/φ $\approx$ 0,618 und φ $\approx$ 1,618 in der algebraischen Hierarchie:
+Die Größe φ/2 liegt zwischen 1/φ ≈ 0,618 und φ ≈ 1,618 in der algebraischen Hierarchie:
 
 \frac{1}{\varphi} \approx 0.618 \quad < \quad \frac{\varphi}{2} \approx 0.809 \quad < \quad 1 \quad < \quad \varphi \approx 1.618
 
@@ -1199,25 +1204,25 @@ In der Euler-Ableitungskette (Kapitel 4) verwendet der Übergang von φ-Segmenti
 
 Der Kopplungsradius r_φ ist die charakteristische Längenskala von SSZ, definiert als:
 
-$$r_\varphi = \frac{\varphi}{2} \cdot r_s = \frac{\varphi \cdot G M}{c^2}$$
+r_\varphi = \frac{\varphi}{2} \cdot r_s = \frac{\varphi \cdot G M}{c^2}
 
-wobei r_s = 2GM/c² der Schwarzschild-Radius ist. Numerisch gilt r_φ $\approx$ 0,809·r_s. Dieser Radius markiert die Skala, bei der die φ-Geometrie beginnt, über das klassische 1/r-Verhalten der Gravitation zu dominieren.
+wobei r_s = 2GM/c² der Schwarzschild-Radius ist. Numerisch gilt r_φ ≈ 0,809·r_s. Dieser Radius markiert die Skala, bei der die φ-Geometrie beginnt, über das klassische 1/r-Verhalten der Gravitation zu dominieren.
 
-Um die physikalische Bedeutung von r_φ zu verstehen, erinnere man sich, dass der Schwarzschild-Radius $r_{s}$ die Skala ist, bei der die ART die Bildung eines Schwarze-Loch-Ereignishorizonts vorhersagt. In SSZ liefert die φ-Spirale die innere Struktur der Raumzeit bis hinunter zu $r_{s}$ und darunter. Der Kopplungsradius r_φ ist der Punkt entlang dieser Spirale, an dem genau ein φ-Segment in die radiale Ausdehnung des Gravitationstrichters passt.
+Um die physikalische Bedeutung von r_φ zu verstehen, erinnere man sich, dass der Schwarzschild-Radius r_s die Skala ist, bei der die ART die Bildung eines Schwarze-Loch-Ereignishorizonts vorhersagt. In SSZ liefert die φ-Spirale die innere Struktur der Raumzeit bis hinunter zu r_s und darunter. Der Kopplungsradius r_φ ist der Punkt entlang dieser Spirale, an dem genau ein φ-Segment in die radiale Ausdehnung des Gravitationstrichters passt.
 
-**Unterhalb von r_φ** (r < r_φ $\approx$ 0,809 r_s): Die Segmentstruktur ist eng gewunden. Mehrere φ-Segmente sind in jedes Radialintervall gepackt. Dies ist das Starkfeldregime, in dem die Exponentialformel Ξ_strong = 1 − e^{−φr_s/r} gilt und SSZ von den ART-Vorhersagen abweicht.
+**Unterhalb von r_φ** (r < r_φ ≈ 0,809 r_s): Die Segmentstruktur ist eng gewunden. Mehrere φ-Segmente sind in jedes Radialintervall gepackt. Dies ist das Starkfeldregime, in dem die Exponentialformel Ξ_strong = 1 − e^{−φr_s/r} gilt und SSZ von den ART-Vorhersagen abweicht.
 
-**Oberhalb von r_φ** (r > r_φ): Die Segmente sind gestreckt — weniger als ein φ-Segment pro Radialintervall. Das Gravitationsfeld ist schwach genug, dass die einfache Formel Ξ_weak = $r_{s}$/(2r) eine ausgezeichnete Näherung liefert. In diesem Regime reproduziert SSZ die ART exakt.
+**Oberhalb von r_φ** (r > r_φ): Die Segmente sind gestreckt — weniger als ein φ-Segment pro Radialintervall. Das Gravitationsfeld ist schwach genug, dass die einfache Formel Ξ_weak = r_s/(2r) eine ausgezeichnete Näherung liefert. In diesem Regime reproduziert SSZ die ART exakt.
 
-**Bei r_φ selbst:** Die Segmentdichte nimmt den Wert Ξ(r_φ) = 1 − e^{−φ/(φ/2)} = 1 − e^{−2} $\approx$ 0,865 an. Dies liegt zwischen dem Schwachfeldgrenzwert (Ξ → 0) und der Starkfeldsättigung (Ξ_max $\approx$ 0,802 bei r = r_s). Man beachte, dass Ξ(r_φ) > Ξ(r_s), weil r_φ < r_s — der Kopplungsradius liegt *innerhalb* des Schwarzschild-Radius.
+**Bei r_φ selbst:** Die Segmentdichte nimmt den Wert Ξ(r_φ) = 1 − e^{−φ/(φ/2)} = 1 − e^{−2} ≈ 0,865 an. Dies liegt zwischen dem Schwachfeldgrenzwert (Ξ → 0) und der Starkfeldsättigung (Ξ_max ≈ 0,802 bei r = r_s). Man beachte, dass Ξ(r_φ) > Ξ(r_s), weil r_φ < r_s — der Kopplungsradius liegt *innerhalb* des Schwarzschild-Radius.
 
-Der tatsächliche Übergang zwischen Schwach- und Starkfeld erfolgt nicht scharf bei r_φ, sondern über eine breitere Übergangszone (1,8–2,2 $r_{s}$), in der eine glatte Hermite-C²-Interpolation die beiden Formeln verbindet (Kapitel 1). Der Kopplungsradius r_φ ist der *strukturelle* Übergangspunkt; die Übergangszone ist die *numerische* Implementierung, die glattes Matching sicherstellt.
+Der tatsächliche Übergang zwischen Schwach- und Starkfeld erfolgt nicht scharf bei r_φ, sondern über eine breitere Übergangszone (1,8–2,2 r_s), in der eine glatte Hermite-C²-Interpolation die beiden Formeln verbindet (Kapitel 1). Der Kopplungsradius r_φ ist der *strukturelle* Übergangspunkt; die Übergangszone ist die *numerische* Implementierung, die glattes Matching sicherstellt.
 
 ### r_φ in verschiedenen astrophysikalischen Kontexten
 
 Der Kopplungsradius skaliert linear mit der Masse, genau wie der Schwarzschild-Radius. Das Verhältnis r_φ/r_s = φ/2 ist universell und masseunabhängig. Die folgende Tabelle illustriert r_φ für Objekte, die 15 Größenordnungen in der Masse überspannen:
 
-| Objekt | M/M$\odot$ | r_s (km) | r_φ (km) | Wo r_φ liegt |
+| Objekt | M/M☉ | r_s (km) | r_φ (km) | Wo r_φ liegt |
 |--------|-------|----------|----------|-----------------|
 | Erde | 3×10⁻⁶ | 0,009 | 0,007 | Tief unterirdisch |
 | Sonne | 1 | 2,95 | 2,39 | Im Inneren der Sonne |
@@ -1225,40 +1230,40 @@ Der Kopplungsradius skaliert linear mit der Masse, genau wie der Schwarzschild-R
 | Sgr A* | 4×10⁶ | 1,18×10⁷ | 9,55×10⁶ | Innerhalb des Horizonts |
 | M87* | 6,5×10⁹ | 1,92×10¹⁰ | 1,55×10¹⁰ | Innerhalb des Horizonts |
 
-Für Erde und Sonne liegt r_φ tief im Inneren des Körpers — das Starkfeldregime wird nie erreicht, weil die Materie sich weit über $r_{s}$ hinaus erstreckt. Für Neutronensterne liegt r_φ nahe der Oberfläche, und Starkfeldeffekte werden relevant. Für Schwarze Löcher (Sgr A*, M87*) liegt r_φ innerhalb des Ereignishorizonts, wo die Starkfeldformel alle beobachtbaren Effekte bestimmt.
+Für Erde und Sonne liegt r_φ tief im Inneren des Körpers — das Starkfeldregime wird nie erreicht, weil die Materie sich weit über r_s hinaus erstreckt. Für Neutronensterne liegt r_φ nahe der Oberfläche, und Starkfeldeffekte werden relevant. Für Schwarze Löcher (Sgr A*, M87*) liegt r_φ innerhalb des Ereignishorizonts, wo die Starkfeldformel alle beobachtbaren Effekte bestimmt.
 
-**Schlüsselpunkt:** Die Universalität des Verhältnisses r_φ/r_s = φ/2 bedeutet, dass SSZ-Vorhersagen vorhersagbar mit der Masse skalieren. Es gibt kein masseabhängiges „Tuning" des Kopplungsradius — er ist immer derselbe Bruchteil von $r_{s}$.
+**Schlüsselpunkt:** Die Universalität des Verhältnisses r_φ/r_s = φ/2 bedeutet, dass SSZ-Vorhersagen vorhersagbar mit der Masse skalieren. Es gibt kein masseabhängiges „Tuning" des Kopplungsradius — er ist immer derselbe Bruchteil von r_s.
 ## 3.4 Die masseabhängige Korrektur Δ(M)
 
 ### Warum eine Korrektur benötigt wird
 
-Die grundlegenden SSZ-Formeln — Ξ_weak = $r_{s}$/(2r) im Schwachfeld und Ξ_strong = 1 − e^{−φ$r_{s}$/r} im Starkfeld — sind universell: Sie gelten für alle Massen ohne Anpassung. Diese Universalität ist eine Stärke des Rahmenwerks, bringt aber eine Einschränkung mit sich. Im Photonensphären- und Starkfeldregime (2,2 < r/r_s < 10) treten subtile Abweichungen zwischen SSZ-Vorhersagen und hochpräzisen Beobachtungsdaten für spezifische Objekte auf. Diese Abweichungen sind nicht zufällig: Sie korrelieren systematisch mit der Masse M des gravitierenden Körpers.
+Die grundlegenden SSZ-Formeln — Ξ_weak = r_s/(2r) im Schwachfeld und Ξ_strong = 1 − e^{−φr_s/r} im Starkfeld — sind universell: Sie gelten für alle Massen ohne Anpassung. Diese Universalität ist eine Stärke des Rahmenwerks, bringt aber eine Einschränkung mit sich. Im Photonensphären- und Starkfeldregime (2,2 < r/r_s < 10) treten subtile Abweichungen zwischen SSZ-Vorhersagen und hochpräzisen Beobachtungsdaten für spezifische Objekte auf. Diese Abweichungen sind nicht zufällig: Sie korrelieren systematisch mit der Masse M des gravitierenden Körpers.
 
 Der physikalische Ursprung dieser Masseabhängigkeit ist folgender: Die φ-Geometrie ist *skaleninvariant* — die Spirale sieht auf allen Skalen gleich aus. Jedoch führt die *Einbettung* dieser Spirale in die physikalische Raumzeit eine schwache Abhängigkeit von der absoluten Skala ein, die durch die Masse M festgelegt wird. Dies ist analog zu einer wohlbekannten Situation in der Standardphysik: Die Gravitationskonstante G ist universell, aber das Gravitationspotential Φ = −GM/r hängt von M ab. Das Gesetz ist universell; die Anwendung erfordert Kenntnis der Masse.
 
-In SSZ geht die Masseabhängigkeit durch die Anzahl der φ-Unterteilungsstufen zwischen dem Kopplungsradius r_φ und dem Messradius r ein. Für ein massereicheres Objekt ist $r_{s}$ größer, und daher passen mehr Unterteilungsstufen zwischen r_φ und ein gegebenes r/r_s. Der Effekt ist logarithmisch, weil die Unterteilung geometrisch ist (jede Stufe multipliziert mit φ):
+In SSZ geht die Masseabhängigkeit durch die Anzahl der φ-Unterteilungsstufen zwischen dem Kopplungsradius r_φ und dem Messradius r ein. Für ein massereicheres Objekt ist r_s größer, und daher passen mehr Unterteilungsstufen zwischen r_φ und ein gegebenes r/r_s. Der Effekt ist logarithmisch, weil die Unterteilung geometrisch ist (jede Stufe multipliziert mit φ):
 
-$$\text{Anzahl der Stufen} \propto \log_\varphi(r/r_\varphi) \propto \frac{\ln(r/r_\varphi)}{\ln\varphi}$$
+\text{Anzahl der Stufen} \propto \log_\varphi(r/r_\varphi) \propto \frac{\ln(r/r_\varphi)}{\ln\varphi}
 
-Da r_φ $\propto$ M, hängt die Stufenzahl bei einem gegebenen r/r_s von ln(M) ab, was eine logarithmische Massekorrektur erzeugt.
+Da r_φ ∝ M, hängt die Stufenzahl bei einem gegebenen r/r_s von ln(M) ab, was eine logarithmische Massekorrektur erzeugt.
 
 ### Form der Korrektur
 
 Die masseabhängige Korrektur hat die Form:
 
-$$\Delta(M) = a_0 + a_1 \cdot \log_{10}(M/M_\odot)$$
+\Delta(M) = a_0 + a_1 \cdot \log_{10}(M/M_\odot)
 
 wobei a₀ und a₁ feste Koeffizienten sind, die aus der φ-Geometrie abgeleitet werden. Die korrigierte Starkfeld-Segmentdichte lautet:
 
-$$\Xi_{\text{corrected}}(r) = \Xi_{\text{strong}}(r) \cdot (1 + \Delta(M))$$
+\Xi_{\text{corrected}}(r) = \Xi_{\text{strong}}(r) \cdot (1 + \Delta(M))
 
 Mehrere Eigenschaften dieser Korrektur sind bemerkenswert:
 
-**1. Logarithmische Skalierung.** Die Korrektur hängt von log₁₀(M) ab, nicht direkt von M. Das bedeutet, Δ(M) variiert langsam mit der Masse: Eine Verdopplung der Masse ändert Δ um a₁·log₁₀(2) $\approx$ 0,3a₁. Für a₁ von der Ordnung 10⁻² ist dies eine Änderung von etwa 0,3% — kaum nachweisbar für stellare Objekte.
+**1. Logarithmische Skalierung.** Die Korrektur hängt von log₁₀(M) ab, nicht direkt von M. Das bedeutet, Δ(M) variiert langsam mit der Masse: Eine Verdopplung der Masse ändert Δ um a₁·log₁₀(2) ≈ 0,3a₁. Für a₁ von der Ordnung 10⁻² ist dies eine Änderung von etwa 0,3% — kaum nachweisbar für stellare Objekte.
 
-**2. Kleinheit.** Für Objekte stellarer Masse (M ~ 1–100 M$\odot$) ist die Korrektur typischerweise kleiner als 5% des unkorrigierten Wertes. Sie wird für supermassive Schwarze Löcher (M ~ 10⁶–10¹⁰ M$\odot$) signifikanter, bleibt aber eine perturbative Korrektur, die nie über die Grundformel dominiert.
+**2. Kleinheit.** Für Objekte stellarer Masse (M ~ 1–100 M☉) ist die Korrektur typischerweise kleiner als 5% des unkorrigierten Wertes. Sie wird für supermassive Schwarze Löcher (M ~ 10⁶–10¹⁰ M☉) signifikanter, bleibt aber eine perturbative Korrektur, die nie über die Grundformel dominiert.
 
-**3. Regime-Einschränkung.** Die Korrektur gilt nur im Starkfeldregime (r < 10 $r_{s}$). Im Schwachfeldregime (r > 10 $r_{s}$) stimmt Ξ_weak = $r_{s}$/(2r) bereits exakt mit der ART überein, und keine Korrektur wird benötigt. Die Hermite-Übergangszone (1,8–2,2 $r_{s}$) inkorporiert die Korrektur glatt durch die Interpolation.
+**3. Regime-Einschränkung.** Die Korrektur gilt nur im Starkfeldregime (r < 10 r_s). Im Schwachfeldregime (r > 10 r_s) stimmt Ξ_weak = r_s/(2r) bereits exakt mit der ART überein, und keine Korrektur wird benötigt. Die Hermite-Übergangszone (1,8–2,2 r_s) inkorporiert die Korrektur glatt durch die Interpolation.
 
 ### Anti-Zirkularitäts-Konformität
 
@@ -1276,11 +1281,11 @@ Diese Konformität ist wesentlich für die wissenschaftliche Integrität von SSZ
 
 **Testdateien:** `test_phi_calibration`, `test_phi_correction`
 
-**Was die Tests beweisen:** Der Kopplungsradius r_φ = (φ/2)·$r_{s}$ wird für alle Testobjekte über 15 Größenordnungen in der Masse korrekt berechnet; die Δ(M)-Korrektur erzeugt die erwarteten Werte für stellare, intermediäre und supermassive Objekte; das korrigierte Ξ bleibt innerhalb physikalischer Grenzen (0 ≤ Ξ ≤ 1) für alle Massen von der Erde bis M87*; und die logarithmische Form von Δ(M) ist konsistent mit der Unterteilungsstufenzählung, die aus der φ-Spirale abgeleitet wird.
+**Was die Tests beweisen:** Der Kopplungsradius r_φ = (φ/2)·r_s wird für alle Testobjekte über 15 Größenordnungen in der Masse korrekt berechnet; die Δ(M)-Korrektur erzeugt die erwarteten Werte für stellare, intermediäre und supermassive Objekte; das korrigierte Ξ bleibt innerhalb physikalischer Grenzen (0 ≤ Ξ ≤ 1) für alle Massen von der Erde bis M87*; und die logarithmische Form von Δ(M) ist konsistent mit der Unterteilungsstufenzählung, die aus der φ-Spirale abgeleitet wird.
 
 **Was die Tests NICHT beweisen:** Die physikalische Interpretation von φ als temporale Wachstumsfunktion. Dies ist eine konzeptionelle Behauptung, die nicht rechnerisch getestet werden kann — sie erfordert unabhängige experimentelle Evidenz für die Segmentstruktur der Raumzeit. Ebenso ist die Interpretation des „geometrischen Widerstands" der Zeitdilatation physikalisch äquivalent zur ART-Vorhersage im Schwachfeld; die Unterscheidung der beiden Interpretationen erfordert Starkfeldmessungen, die noch nicht verfügbar sind.
 
-**Reproduktion:** `E:/clone\segmented-calculation-suite/tests/` — `test_phi_calibration.py`, `test_phi_correction.py`. Alle Tests bestanden.
+**Reproduktion:** `E:\clone\segmented-calculation-suite\tests\` — `test_phi_calibration.py`, `test_phi_correction.py`. Alle Tests bestanden.
 
 ---
 
@@ -1289,10 +1294,10 @@ Diese Konformität ist wesentlich für die wissenschaftliche Integrität von SSZ
 | # | Formel | Bereich |
 |---|---------|--------|
 | 1 | R(θ) = a · φ^{θ/(π/2)} | Spiral-Wachstumsfunktion |
-| 2 | t $\propto$ log_φ(R) | temporale Interpretation |
+| 2 | t ∝ log_φ(R) | temporale Interpretation |
 | 3 | D(r) = 1/(1 + Ξ(r)) | Zeitdilatation aus Segmentdichte |
-| 4 | r_φ = (φ/2) · r_s $\approx$ 0,809 r_s | Kopplungsradius |
-| 5 | Δ(M) = a₀ + a₁ · log₁₀(M/M$\odot$) | Massekorrektur |
+| 4 | r_φ = (φ/2) · r_s ≈ 0,809 r_s | Kopplungsradius |
+| 5 | Δ(M) = a₀ + a₁ · log₁₀(M/M☉) | Massekorrektur |
 | 6 | Ξ_korrigiert = Ξ_strong · (1 + Δ(M)) | korrigierte Segmentdichte |
 
 ---
@@ -1314,27 +1319,27 @@ Dieses Kapitel hat die Kernkonzepte von φ als temporaler Wachstumsfunktion und 
 
 ### Rechenbeispiel: Berechnung von r_φ für ein Objekt mit Sonnenmasse
 
-Um den Kopplungsradius konkret zu machen, betrachte man ein Objekt mit Sonnenmasse mit Schwarzschild-Radius r_s = 2GM$\odot$/c² = 2,95 km. Der Kopplungsradius ist r_φ = (φ/2) r_s = (1,618/2) × 2,95 km = 2,39 km. Dies liegt innerhalb des Schwarzschild-Radius, tief im Starkfeldregime. Für einen Neutronenstern mit M = 1,4 M$\odot$ gilt r_s = 4,13 km und r_φ = 3,34 km — wiederum innerhalb von r_s. Für ein supermassives Schwarzes Loch mit M = 4 Millionen M$\odot$ (wie Sgr A*) gilt r_s = 1,18 × 10⁷ km und r_φ = 9,54 × 10⁶ km. Das Verhältnis r_φ/r_s = φ/2 = 0,809 ist universell und masseunabhängig.
+Um den Kopplungsradius konkret zu machen, betrachte man ein Objekt mit Sonnenmasse mit Schwarzschild-Radius r_s = 2GM☉/c² = 2,95 km. Der Kopplungsradius ist r_φ = (φ/2) r_s = (1,618/2) × 2,95 km = 2,39 km. Dies liegt innerhalb des Schwarzschild-Radius, tief im Starkfeldregime. Für einen Neutronenstern mit M = 1,4 M☉ gilt r_s = 4,13 km und r_φ = 3,34 km — wiederum innerhalb von r_s. Für ein supermassives Schwarzes Loch mit M = 4 Millionen M☉ (wie Sgr A*) gilt r_s = 1,18 × 10⁷ km und r_φ = 9,54 × 10⁶ km. Das Verhältnis r_φ/r_s = φ/2 = 0,809 ist universell und masseunabhängig.
 
-Die masseabhängige Korrektur Δ(M) ist klein für Objekte stellarer Masse (Δ kleiner als 0,5 Prozent für M kleiner als 10 M$\odot$), wird aber signifikant für supermassive Schwarze Löcher (Δ etwa 2 Prozent für M = 10⁹ M$\odot$). Diese Masseabhängigkeit entsteht aus der Anforderung, dass die Hermite-C²-Überblendung zwischen Schwach- und Starkfeldregime bei allen Massenskalen glatt bleibt. Die Korrektur wird einmal aus der Überblendungsbedingung berechnet und dann global fixiert.
+Die masseabhängige Korrektur Δ(M) ist klein für Objekte stellarer Masse (Δ kleiner als 0,5 Prozent für M kleiner als 10 M☉), wird aber signifikant für supermassive Schwarze Löcher (Δ etwa 2 Prozent für M = 10⁹ M☉). Diese Masseabhängigkeit entsteht aus der Anforderung, dass die Hermite-C²-Überblendung zwischen Schwach- und Starkfeldregime bei allen Massenskalen glatt bleibt. Die Korrektur wird einmal aus der Überblendungsbedingung berechnet und dann global fixiert.
 
 ### Warum der Kopplungsradius wichtig ist
 
-Der Kopplungsradius r_φ = (φ/2) $r_{s}$ = 0,809 $r_{s}$ definiert die radiale Skala, bei der das Segmentgitter vom Schwachfeld- zum Starkfeldverhalten übergeht. Innerhalb von r_φ wächst die Segmentdichte schneller als die Schwachfeldformel Ξ = $r_{s}$/(2r) vorhersagen würde. Außerhalb von r_φ fällt die Segmentdichte schneller ab als die Starkfeldformel Ξ = 1 − exp(−φ $r_{s}$/r) vorhersagen würde. Der Kopplungsradius ist der Punkt, an dem beide Formeln ungefähr denselben Wert von Ξ liefern.
+Der Kopplungsradius r_φ = (φ/2) r_s = 0,809 r_s definiert die radiale Skala, bei der das Segmentgitter vom Schwachfeld- zum Starkfeldverhalten übergeht. Innerhalb von r_φ wächst die Segmentdichte schneller als die Schwachfeldformel Ξ = r_s/(2r) vorhersagen würde. Außerhalb von r_φ fällt die Segmentdichte schneller ab als die Starkfeldformel Ξ = 1 − exp(−φ r_s/r) vorhersagen würde. Der Kopplungsradius ist der Punkt, an dem beide Formeln ungefähr denselben Wert von Ξ liefern.
 
-Die physikalische Bedeutung von r_φ ist, dass er die Skala repräsentiert, bei der die Segmentgitterstruktur ihren Charakter ändert. Im Schwachfeld (r viel größer als r_φ) sind die Segmente dünn gesät und ihr Abstand nimmt linear mit r zu. Im Starkfeld (r viel kleiner als r_φ) sind die Segmente dicht und ihr Abstand sättigt bei einem durch den Goldenen Schnitt bestimmten Minimalwert. Der Übergang zwischen diesen beiden Regimen ist glatt (vermittelt durch die Hermite-C²-Überblendung), findet aber über einen relativ schmalen Radialbereich statt (etwa 1,8 bis 2,2 $r_{s}$).
+Die physikalische Bedeutung von r_φ ist, dass er die Skala repräsentiert, bei der die Segmentgitterstruktur ihren Charakter ändert. Im Schwachfeld (r viel größer als r_φ) sind die Segmente dünn gesät und ihr Abstand nimmt linear mit r zu. Im Starkfeld (r viel kleiner als r_φ) sind die Segmente dicht und ihr Abstand sättigt bei einem durch den Goldenen Schnitt bestimmten Minimalwert. Der Übergang zwischen diesen beiden Regimen ist glatt (vermittelt durch die Hermite-C²-Überblendung), findet aber über einen relativ schmalen Radialbereich statt (etwa 1,8 bis 2,2 r_s).
 
-Für einen Neutronenstern liegt r_φ innerhalb des Sterns selbst (r_φ = 3,34 km für einen 1,4-Sonnenmassen-Neutronenstern, während die Sternoberfläche bei R $\approx$ 12 km liegt). Das bedeutet, dass die Neutronensternoberfläche im Schwachfeldregime liegt und das Starkfeldregime nur für das Sterninnere relevant ist. Für ein Schwarzes Loch (oder SSZ-Dunklen Stern) liegt r_φ innerhalb des Schwarzschild-Radius, was bedeutet, dass die gesamte für externe Beobachtung zugängliche Region (r größer als r_s) in der Schwachfeld-Übergangszone liegt.
+Für einen Neutronenstern liegt r_φ innerhalb des Sterns selbst (r_φ = 3,34 km für einen 1,4-Sonnenmassen-Neutronenstern, während die Sternoberfläche bei R ≈ 12 km liegt). Das bedeutet, dass die Neutronensternoberfläche im Schwachfeldregime liegt und das Starkfeldregime nur für das Sterninnere relevant ist. Für ein Schwarzes Loch (oder SSZ-Dunklen Stern) liegt r_φ innerhalb des Schwarzschild-Radius, was bedeutet, dass die gesamte für externe Beobachtung zugängliche Region (r größer als r_s) in der Schwachfeld-Übergangszone liegt.
 
 Die Masseunabhängigkeit des Verhältnisses r_φ/r_s = φ/2 = 0,809 ist eine nichttriviale Vorhersage. In Theorien mit laufenden Kopplungskonstanten (wie asymptotische Sicherheit in der Quantengravitation) kann das Verhältnis charakteristischer Skalen von der Masse abhängen. Die SSZ-Vorhersage, dass r_φ/r_s universell und masseunabhängig ist, ist testbar: Wenn Messungen kompakter Objekte mit verschiedenen Massen verschiedene Übergangsradien zeigen (relativ zu ihren Schwarzschild-Radien), ist die Universalität falsifiziert.
 
 ### Konsistenzprüfung: Dimensionelle Homogenität
 
-Jede Formel in SSZ muss dimensionell konsistent sein. Die Segmentdichte Ξ = $r_{s}$/(2r) ist dimensionslos (Länge geteilt durch Länge). Der Zeitdilatationsfaktor D = 1/(1 + Ξ) ist dimensionslos. Der Kopplungsradius r_φ = (φ/2) $r_{s}$ hat die Dimension einer Länge. Die masseabhängige Korrektur Δ(M) ist dimensionslos (sie ist eine relative Korrektur einer dimensionslosen Größe).
+Jede Formel in SSZ muss dimensionell konsistent sein. Die Segmentdichte Ξ = r_s/(2r) ist dimensionslos (Länge geteilt durch Länge). Der Zeitdilatationsfaktor D = 1/(1 + Ξ) ist dimensionslos. Der Kopplungsradius r_φ = (φ/2) r_s hat die Dimension einer Länge. Die masseabhängige Korrektur Δ(M) ist dimensionslos (sie ist eine relative Korrektur einer dimensionslosen Größe).
 
 Studierende sollten dimensionelle Konsistenz routinemäßig beim Arbeiten mit SSZ-Formeln prüfen. Eine Formel, die dimensionell inkonsistent ist, ist garantiert falsch, unabhängig davon, wie plausibel sie erscheint. Umgekehrt kann eine dimensionell konsistente Formel trotzdem falsch sein (Dimensionsanalyse prüft keine numerischen Faktoren), aber sie besteht eine notwendige Bedingung für Korrektheit.
 
-Die dimensionelle Struktur von SSZ ist besonders einfach, weil die fundamentalen Größen (Ξ, D, α) alle dimensionslos sind. Dimensionsbehaftete Größen treten nur durch den Schwarzschild-Radius $r_{s}$ = 2GM/c² ein, der Masse in Länge umrechnet unter Verwendung der Fundamentalkonstanten G und c. Alle SSZ-Vorhersagen können als dimensionslose Funktionen des dimensionslosen Verhältnisses r/r_s ausgedrückt werden, multipliziert mit geeigneten Potenzen von $r_{s}$ zur Wiederherstellung der korrekten Dimensionen.
+Die dimensionelle Struktur von SSZ ist besonders einfach, weil die fundamentalen Größen (Ξ, D, α) alle dimensionslos sind. Dimensionsbehaftete Größen treten nur durch den Schwarzschild-Radius r_s = 2GM/c² ein, der Masse in Länge umrechnet unter Verwendung der Fundamentalkonstanten G und c. Alle SSZ-Vorhersagen können als dimensionslose Funktionen des dimensionslosen Verhältnisses r/r_s ausgedrückt werden, multipliziert mit geeigneten Potenzen von r_s zur Wiederherstellung der korrekten Dimensionen.
 
 ### Zusammenfassung und Brücke zu Kapitel 4
 
@@ -1352,17 +1357,17 @@ SSZ fügt dieser Liste einen neuen Eintrag hinzu: φ bestimmt das radiale Wachst
 
 Die Unterscheidung ist wichtig, weil Numerologie unfalsifizierbar ist, während strukturelle Behauptungen testbar sind. Wenn φ das Segmentgitter bestimmt, dann muss die Kopplungskonstante α = 1/(φ^{2π} × 4) sein. Dies ist eine spezifische Zahl, die mit dem Experiment verglichen werden kann. Wenn der Vergleich scheitert (auf der Ebene der Schleifenkorrekturen), ist die strukturelle Behauptung falsifiziert.
 
-### Ableitung von $D_{min}$ = 0,555
+### Ableitung von D_min = 0,555
 
-Der minimale Zeitdilatationsfaktor $D_{min}$ ist der Wert von D(r) an der natuerlichen Grenze (r = $r_{s}$). Die Ableitung:
+Der minimale Zeitdilatationsfaktor D_min ist der Wert von D(r) an der natuerlichen Grenze (r = r_s). Die Ableitung:
 
 D(r) = 1/(1 + Xi(r))
 
-An der natuerlichen Grenze ist Xi($r_{s}$) = 1 - exp(-phi) = 1 - 1/phi = 1 - 0,618 = 0,382... Aber dies ist die Schwachfeldformel. Die korrekte Starkfeldformel liefert:
+An der natuerlichen Grenze ist Xi(r_s) = 1 - exp(-phi) = 1 - 1/phi = 1 - 0,618 = 0,382... Aber dies ist die Schwachfeldformel. Die korrekte Starkfeldformel liefert:
 
-Xi($r_{s}$) = 1 - exp(-phi * $r_{s}$/r_s) = 1 - exp(-phi) = 1 - 1/e^{1,618} = 1 - 0,198 = 0,802
+Xi(r_s) = 1 - exp(-phi * r_s/r_s) = 1 - exp(-phi) = 1 - 1/e^{1,618} = 1 - 0,198 = 0,802
 
-$D_{min}$ = 1/(1 + 0,802) = 1/1,802 = 0,555
+D_min = 1/(1 + 0,802) = 1/1,802 = 0,555
 
 Die Zahl 0,555 ist keine willkuerliche Konstante — sie folgt direkt aus phi und der Exponentialfunktion. Ihre physikalische Bedeutung: An der natuerlichen Grenze laeuft die Zeit mit 55,5% der Rate des flachen Raums. Dies ist ein endlicher Wert, im Gegensatz zur ART, wo die Zeit am Horizont vollstaendig zum Stillstand kommt (D = 0).
 
@@ -1383,26 +1388,26 @@ Der Ereignishorizont in der ART und die natuerliche Grenze in SSZ sind fundament
 
 Der wichtigste Unterschied: Der Ereignishorizont ist eine Einwegmembran — nichts kann ihn von innen nach aussen durchqueren. Die natuerliche Grenze ist keine Einwegmembran — Strahlung kann (stark rotverschoben) von der Oberflaeche entkommen. Dies loest das Informationsparadoxon.
 
-### Physikalische Konsequenzen von $D_{min}$ = 0,555
+### Physikalische Konsequenzen von D_min = 0,555
 
 Der endliche Zeitdilatationsfaktor hat weitreichende Konsequenzen:
 
-**Endliche Oberflaechentemperatur:** Ein dunkler Stern hat eine Oberflaechentemperatur $T_{surf}$ = T_accretion * $D_{min}$. Fuer typische Akkretionstemperaturen (T ~ 10^7 K) ergibt sich $T_{surf}$ ~ 5,5 x 10^6 K, was im weichen Roentgenbereich strahlt.
+**Endliche Oberflaechentemperatur:** Ein dunkler Stern hat eine Oberflaechentemperatur T_surf = T_accretion * D_min. Fuer typische Akkretionstemperaturen (T ~ 10^7 K) ergibt sich T_surf ~ 5,5 x 10^6 K, was im weichen Roentgenbereich strahlt.
 
-**Endliche Gezeitenkraefte:** Die Gezeitenkraft an der natuerlichen Grenze ist $F_{tidal}$ ~ GM/($r_{s}$^3) * $D_{min}$^{-2} ~ 2 GM/($r_{s}$^3) * 3,24. Fuer ein stellares Schwarzes Loch (M = 10 $M_{Sonne}$) ist dies ~10^{10} m/s^2/m — stark, aber endlich. Fuer ein supermassives Schwarzes Loch (M = 10^9 $M_{Sonne}$) ist die Gezeitenkraft an der natuerlichen Grenze vernachlaessigbar (~10^{-8} m/s^2/m).
+**Endliche Gezeitenkraefte:** Die Gezeitenkraft an der natuerlichen Grenze ist F_tidal ~ GM/(r_s^3) * D_min^{-2} ~ 2 GM/(r_s^3) * 3,24. Fuer ein stellares Schwarzes Loch (M = 10 M_Sonne) ist dies ~10^{10} m/s^2/m — stark, aber endlich. Fuer ein supermassives Schwarzes Loch (M = 10^9 M_Sonne) ist die Gezeitenkraft an der natuerlichen Grenze vernachlaessigbar (~10^{-8} m/s^2/m).
 
-**Endliche Entropie:** Die Entropie der natuerlichen Grenze ist S = $k_{B}$ A/(4 $l_{P}$^2), identisch mit der Bekenstein-Hawking-Entropie. Die Entropie ist endlich und proportional zur Flaeche, nicht zum Volumen.
+**Endliche Entropie:** Die Entropie der natuerlichen Grenze ist S = k_B A/(4 l_P^2), identisch mit der Bekenstein-Hawking-Entropie. Die Entropie ist endlich und proportional zur Flaeche, nicht zum Volumen.
 
-**Modifizierte Hawking-Strahlung:** Die Hawking-Temperatur ist $T_{SSZ}$ = $D_{min}$^2 * $T_{H}$ = 0,308 * $T_{H}$. Die Strahlung ist schwaecher als in der ART, und die Verdampfungszeit ist laenger.
+**Modifizierte Hawking-Strahlung:** Die Hawking-Temperatur ist T_SSZ = D_min^2 * T_H = 0,308 * T_H. Die Strahlung ist schwaecher als in der ART, und die Verdampfungszeit ist laenger.
 
 ### Der goldene Schnitt in der Physik
 
 Der goldene Schnitt phi = (1 + sqrt(5))/2 = 1,618... erscheint in SSZ an mehreren Stellen:
 
-1. **Segmentdichte:** $\Xi_{\text{max}}$ = 1 - exp(-phi) = 0,802
-2. **Zeitdilatation:** $D_{min}$ = 1/(1 + $\Xi_{\text{max}}$) = 0,555
+1. **Segmentdichte:** Xi_max = 1 - exp(-phi) = 0,802
+2. **Zeitdilatation:** D_min = 1/(1 + Xi_max) = 0,555
 3. **Feinstrukturkonstante:** alpha = 1/(phi^{2pi} x 4) = 1/137,08
-4. **Regime-Uebergang:** r* = phi^{phi} * $r_{s}$ / (phi + 1) = 1,387 $r_{s}$
+4. **Regime-Uebergang:** r* = phi^{phi} * r_s / (phi + 1) = 1,387 r_s
 
 Die Allgegenwaertigkeit von phi in SSZ ist kein Zufall — sie folgt aus der Selbstaehnlichkeitsanforderung des Segmentgitters. Ein selbstaehnliches Gitter (eines, das bei Skalierung seine Struktur behaelt) muss den goldenen Schnitt als Wachstumsfaktor haben, weil phi die einzige Zahl ist, die die Gleichung x^2 = x + 1 erfuellt (Selbstaehnlichkeitsbedingung).
 
@@ -1430,12 +1435,12 @@ g_{mu nu} = diag(-D^2 c^2, D^{-2}, r^2, r^2 sin^2 theta)
 
 Die Determinante ist: det(g) = -c^2 r^4 sin^2 theta (identisch mit der Schwarzschild-Metrik).
 
-Im Schwachfeld (Xi << 1) ist D ~ 1 - Xi = 1 - $r_{s}$/(2r), und die Metrik reduziert sich auf:
+Im Schwachfeld (Xi << 1) ist D ~ 1 - Xi = 1 - r_s/(2r), und die Metrik reduziert sich auf:
 
-g_{tt} ~ -(1 - $r_{s}$/r) c^2 (Schwarzschild)
-g_{rr} ~ (1 - $r_{s}$/r)^{-1} (Schwarzschild)
+g_{tt} ~ -(1 - r_s/r) c^2 (Schwarzschild)
+g_{rr} ~ (1 - r_s/r)^{-1} (Schwarzschild)
 
-Die Uebereinstimmung mit der Schwarzschild-Metrik im Schwachfeld ist exakt bis zur fuehrenden Ordnung in $r_{s}$/r. Unterschiede treten erst in der naechsten Ordnung auf: g_{tt}^{SSZ} - g_{tt}^{Schw} ~ ($r_{s}$/r)^2 * (1/4 - 1/4) = 0 (die Unterschiede sind von hoeherer Ordnung als ($r_{s}$/r)^2).
+Die Uebereinstimmung mit der Schwarzschild-Metrik im Schwachfeld ist exakt bis zur fuehrenden Ordnung in r_s/r. Unterschiede treten erst in der naechsten Ordnung auf: g_{tt}^{SSZ} - g_{tt}^{Schw} ~ (r_s/r)^2 * (1/4 - 1/4) = 0 (die Unterschiede sind von hoeherer Ordnung als (r_s/r)^2).
 
 ### Christoffel-Symbole der SSZ-Metrik
 
@@ -1451,7 +1456,7 @@ Gamma^theta_{phi phi} = -sin theta cos theta
 Gamma^phi_{r phi} = 1/r
 Gamma^phi_{theta phi} = cos theta / sin theta
 
-Die Ableitung D' = dD/dr = -D^2 dXi/dr ist im Schwachfeld D' = $r_{s}$ D^2/(2r^2) und im Starkfeld D' = -D^2 (phi/r_s) exp(-phi r/r_s).
+Die Ableitung D' = dD/dr = -D^2 dXi/dr ist im Schwachfeld D' = r_s D^2/(2r^2) und im Starkfeld D' = -D^2 (phi/r_s) exp(-phi r/r_s).
 
 ### Geodaetengleichung und Erhaltungsgroessen
 
@@ -1468,25 +1473,25 @@ Fuer radiale Geodaeten (L = 0) vereinfacht sich dies zu:
 
 (dr/d tau)^2 = E^2/c^2 - D^2 c^2
 
-Am Umkehrpunkt (dr/d tau = 0) ist E = D c^2, was die Fluchtgeschwindigkeit bestimmt: $v_{esc}$ = c sqrt(1 - D^2) = c sqrt(2 Xi / (1 + Xi)^2). Im Schwachfeld (Xi << 1) reduziert sich dies auf $v_{esc}$ ~ c sqrt(2 Xi) = c sqrt($r_{s}$/r), die Newtonsche Fluchtgeschwindigkeit.
+Am Umkehrpunkt (dr/d tau = 0) ist E = D c^2, was die Fluchtgeschwindigkeit bestimmt: v_esc = c sqrt(1 - D^2) = c sqrt(2 Xi / (1 + Xi)^2). Im Schwachfeld (Xi << 1) reduziert sich dies auf v_esc ~ c sqrt(2 Xi) = c sqrt(r_s/r), die Newtonsche Fluchtgeschwindigkeit.
 
 ### Kruskal-Szekeres-Koordinaten in SSZ
 
-In der ART werden Kruskal-Szekeres-Koordinaten verwendet, um die Koordinatensingularitaet am Horizont zu entfernen. In SSZ gibt es keine Koordinatensingularitaet (weil $D_{min}$ = 0,555 > 0), aber Kruskal-aehnliche Koordinaten koennen dennoch definiert werden:
+In der ART werden Kruskal-Szekeres-Koordinaten verwendet, um die Koordinatensingularitaet am Horizont zu entfernen. In SSZ gibt es keine Koordinatensingularitaet (weil D_min = 0,555 > 0), aber Kruskal-aehnliche Koordinaten koennen dennoch definiert werden:
 
 U = -exp(-kappa u), V = exp(kappa v)
 
-wobei u = t - r* und v = t + r* die retardierten und avancierten Koordinaten sind, r* = integral D^{-2} dr die Schildkroeten-Koordinate ist, und kappa = c^2 D'($r_{s}$)/(2 D($r_{s}$)) die Oberflaechengravitation ist.
+wobei u = t - r* und v = t + r* die retardierten und avancierten Koordinaten sind, r* = integral D^{-2} dr die Schildkroeten-Koordinate ist, und kappa = c^2 D'(r_s)/(2 D(r_s)) die Oberflaechengravitation ist.
 
-In diesen Koordinaten ist die Metrik regulaer ueberall (einschliesslich r = $r_{s}$), was die Abwesenheit einer echten Singularitaet bestaetigt. Das Penrose-Diagramm der SSZ-Raumzeit unterscheidet sich vom Schwarzschild-Penrose-Diagramm: Es gibt keinen Bereich hinter dem Horizont (weil es keinen Horizont gibt), und die natuerliche Grenze ist eine zeitartige Flaeche (nicht eine raumartige Singularitaet).
+In diesen Koordinaten ist die Metrik regulaer ueberall (einschliesslich r = r_s), was die Abwesenheit einer echten Singularitaet bestaetigt. Das Penrose-Diagramm der SSZ-Raumzeit unterscheidet sich vom Schwarzschild-Penrose-Diagramm: Es gibt keinen Bereich hinter dem Horizont (weil es keinen Horizont gibt), und die natuerliche Grenze ist eine zeitartige Flaeche (nicht eine raumartige Singularitaet).
 
 ### Penrose-Diagramm der SSZ-Raumzeit
 
 Das Penrose-Diagramm (auch Carter-Penrose-Diagramm oder konforme Diagramm) ist eine Darstellung der kausalen Struktur einer Raumzeit, bei der Lichtstrahlen als 45-Grad-Linien erscheinen. Das Penrose-Diagramm der SSZ-Raumzeit unterscheidet sich fundamental vom Schwarzschild-Penrose-Diagramm:
 
-**Schwarzschild (ART):** Das Diagramm hat vier Regionen: (I) Aeusserer Bereich (r > $r_{s}$), (II) Innerer Bereich (r < $r_{s}$, Zukunft), (III) Weisses Loch (r < $r_{s}$, Vergangenheit), (IV) Paralleles Universum. Der Horizont (r = $r_{s}$) ist eine Nullflaeche (45 Grad im Diagramm). Die Singularitaet (r = 0) ist eine raumartige Flaeche (horizontal im Diagramm).
+**Schwarzschild (ART):** Das Diagramm hat vier Regionen: (I) Aeusserer Bereich (r > r_s), (II) Innerer Bereich (r < r_s, Zukunft), (III) Weisses Loch (r < r_s, Vergangenheit), (IV) Paralleles Universum. Der Horizont (r = r_s) ist eine Nullflaeche (45 Grad im Diagramm). Die Singularitaet (r = 0) ist eine raumartige Flaeche (horizontal im Diagramm).
 
-**SSZ:** Das Diagramm hat nur zwei Regionen: (I) Aeusserer Bereich (r > $r_{s}$) und die natuerliche Grenze (r = $r_{s}$). Es gibt keinen inneren Bereich, kein Weisses Loch und kein paralleles Universum. Die natuerliche Grenze ist eine zeitartige Flaeche (vertikal im Diagramm), nicht eine Nullflaeche. Dies bedeutet, dass Signale von der natuerlichen Grenze (stark rotverschoben) den aeusseren Beobachter erreichen koennen.
+**SSZ:** Das Diagramm hat nur zwei Regionen: (I) Aeusserer Bereich (r > r_s) und die natuerliche Grenze (r = r_s). Es gibt keinen inneren Bereich, kein Weisses Loch und kein paralleles Universum. Die natuerliche Grenze ist eine zeitartige Flaeche (vertikal im Diagramm), nicht eine Nullflaeche. Dies bedeutet, dass Signale von der natuerlichen Grenze (stark rotverschoben) den aeusseren Beobachter erreichen koennen.
 
 Die kausale Struktur der SSZ-Raumzeit ist daher einfacher als die der Schwarzschild-Raumzeit: Es gibt keine kausale Trennung zwischen verschiedenen Regionen. Jeder Punkt der Raumzeit kann (prinzipiell) von jedem anderen Punkt aus beobachtet werden.
 
@@ -1494,15 +1499,15 @@ Die kausale Struktur der SSZ-Raumzeit ist daher einfacher als die der Schwarzsch
 
 Das Einbettungsdiagramm zeigt die raeumliche Geometrie einer Zeitscheibe (t = const) der SSZ-Raumzeit. Die aequatoriale Ebene (theta = pi/2) wird als Flaeche in einem dreidimensionalen euklidischen Raum eingebettet.
 
-In der ART hat das Einbettungsdiagramm die Form eines Trichters, der bei r = $r_{s}$ unendlich tief wird (die Flamm-Paraboloid). In SSZ hat das Einbettungsdiagramm eine endliche Tiefe: Der Trichter endet bei r = $r_{s}$ mit einer endlichen Kruemmung. Die maximale Tiefe ist proportional zu $r_{s}$ * ln(1/D_min) = $r_{s}$ * 0,59.
+In der ART hat das Einbettungsdiagramm die Form eines Trichters, der bei r = r_s unendlich tief wird (die Flamm-Paraboloid). In SSZ hat das Einbettungsdiagramm eine endliche Tiefe: Der Trichter endet bei r = r_s mit einer endlichen Kruemmung. Die maximale Tiefe ist proportional zu r_s * ln(1/D_min) = r_s * 0,59.
 
 Die endliche Tiefe des Einbettungsdiagramms ist eine visuelle Darstellung der Singularitaetsfreiheit: In der ART ist der Trichter unendlich tief (Singularitaet), in SSZ ist er endlich tief (natuerliche Grenze).
 
 ### Lichtkegelstruktur nahe der natuerlichen Grenze
 
-Die Lichtkegel (die Menge aller moeglichen Lichtstrahlrichtungen an einem Punkt) werden durch die Metrik bestimmt. In der SSZ-Metrik ist die Koordinatengeschwindigkeit des Lichts $v_{coord}$ = c * D^2. Nahe der natuerlichen Grenze (D -> 0,555) ist $v_{coord}$ = c * 0,308, was bedeutet, dass die Lichtkegel im Koordinatenraum stark verengt sind.
+Die Lichtkegel (die Menge aller moeglichen Lichtstrahlrichtungen an einem Punkt) werden durch die Metrik bestimmt. In der SSZ-Metrik ist die Koordinatengeschwindigkeit des Lichts v_coord = c * D^2. Nahe der natuerlichen Grenze (D -> 0,555) ist v_coord = c * 0,308, was bedeutet, dass die Lichtkegel im Koordinatenraum stark verengt sind.
 
-Die Verengung der Lichtkegel hat eine physikalische Konsequenz: Ein Beobachter nahe der natuerlichen Grenze sieht die Aussenwelt stark blauverschoben (weil die einfallenden Photonen an Energie gewinnen). Die Blauverschebung betraegt $z_{blue}$ = 1/D - 1 = 1/0,555 - 1 = 0,802. Dies ist die Umkehrung der Rotverschiebung, die ein entfernter Beobachter sieht.
+Die Verengung der Lichtkegel hat eine physikalische Konsequenz: Ein Beobachter nahe der natuerlichen Grenze sieht die Aussenwelt stark blauverschoben (weil die einfallenden Photonen an Energie gewinnen). Die Blauverschebung betraegt z_blue = 1/D - 1 = 1/0,555 - 1 = 0,802. Dies ist die Umkehrung der Rotverschiebung, die ein entfernter Beobachter sieht.
 
 ## Querverweise
 
@@ -1510,9 +1515,12 @@ Die Verengung der Lichtkegel hat eine physikalische Konsequenz: Ein Beobachter n
 - **Referenziert von:** Kap. 4 (Euler-Ableitung), Kap. 8 (gravitative Rotverschiebung), Kap. 10 (elektromagnetische Kopplung)
 - **Anhang:** Anh. B (B.6, B.7)
 
-\newpage
+---
 
-# Von φ-Segmentierung zu Euler
+# Kapitel 4: Von φ-Segmentierung zu Euler
+
+**Teil I — Grundlagen**
+**Status:** ERWEITERTE FASSUNG
 
 
 ![Abb 4](figures/ch04_phi_euler/fig_04_01_phi_segmentation.png)
@@ -1521,7 +1529,7 @@ Die Verengung der Lichtkegel hat eine physikalische Konsequenz: Ein Beobachter n
 
 ## Zusammenfassung
 
-Dieses Kapitel präsentiert die mathematische Ableitungskette, die die diskrete φ-Segmentierung der Raumzeit mit den kontinuierlichen Exponentialfunktionen der SSZ-Formeln verbindet. Die zentrale Frage lautet: *Warum nimmt die Starkfeld-Segmentdichte die Exponentialform* Ξ_strong = 1 − e^{−φ$r_{s}$/r} *an und nicht eine polynomiale oder potenzgesetzartige?* Die Antwort liegt in einer dreistufigen Ableitung, die durch die Euler-Formel e^{iθ} = cos θ + i sin θ führt, welche die Brücke zwischen der winkelwachstumsbezogenen Beschreibung der φ-Spirale und der Exponentialform der Segmentdichte liefert.
+Dieses Kapitel präsentiert die mathematische Ableitungskette, die die diskrete φ-Segmentierung der Raumzeit mit den kontinuierlichen Exponentialfunktionen der SSZ-Formeln verbindet. Die zentrale Frage lautet: *Warum nimmt die Starkfeld-Segmentdichte die Exponentialform* Ξ_strong = 1 − e^{−φr_s/r} *an und nicht eine polynomiale oder potenzgesetzartige?* Die Antwort liegt in einer dreistufigen Ableitung, die durch die Euler-Formel e^{iθ} = cos θ + i sin θ führt, welche die Brücke zwischen der winkelwachstumsbezogenen Beschreibung der φ-Spirale und der Exponentialform der Segmentdichte liefert.
 
 Diese Ableitung ist nicht lediglich eine mathematische Bequemlichkeit — sie ist die formale Rechtfertigung für die funktionale Form der SSZ-Gleichungen. Ohne sie wäre die Exponentialfunktion eine *Ad-hoc*-Wahl. Mit ihr ist die Exponentialfunktion eine *Konsequenz* der in den Kapiteln 2 und 3 etablierten logarithmischen Spiralstruktur.
 
@@ -1549,7 +1557,7 @@ Für Studierende, die noch keine vertiefte Erfahrung mit komplexer Analysis habe
 
 - Die Raumzeit ist in φ-skalierte Einheiten segmentiert. Jede Vierteldrehung der logarithmischen Spirale multipliziert den Radius mit φ. Dies ist die definierende Eigenschaft der φ-Spirale: r(θ + π/2) = φ·r(θ).
 
-- Die Spiralwachstumsrate ist k = 2ln(φ)/π $\approx$ 0,3063. Dieser Wert wird nicht gewählt — er wird eindeutig durch die Anforderung bestimmt, dass der Vierteldrehungs-Wachstumsfaktor gleich φ ist.
+- Die Spiralwachstumsrate ist k = 2ln(φ)/π ≈ 0,3063. Dieser Wert wird nicht gewählt — er wird eindeutig durch die Anforderung bestimmt, dass der Vierteldrehungs-Wachstumsfaktor gleich φ ist.
 
 - Die radiale Wachstumsfunktion ist R(θ) = a·φ^{θ/(π/2)}, was äquivalent als R(θ) = a·e^{kθ} geschrieben werden kann unter Verwendung der Identität φ^{θ/(π/2)} = e^{kθ}.
 
@@ -1557,9 +1565,9 @@ Für Studierende, die noch keine vertiefte Erfahrung mit komplexer Analysis habe
 
 **Aus Kapitel 3:**
 
-- Die Zeit entsteht als t $\propto$ log_φ(R) — jeder Expansionsschritt ist eine temporale Einheit.
+- Die Zeit entsteht als t ∝ log_φ(R) — jeder Expansionsschritt ist eine temporale Einheit.
 
-- Der Kopplungsradius r_φ = (φ/2)·$r_{s}$ markiert den Übergang zwischen Schwach- und Starkfeldverhalten.
+- Der Kopplungsradius r_φ = (φ/2)·r_s markiert den Übergang zwischen Schwach- und Starkfeldverhalten.
 
 - Gravitative Zeitdilatation entsteht aus geometrischem Widerstand: D(r) = 1/(1 + Ξ(r)).
 
@@ -1567,9 +1575,9 @@ Für Studierende, die noch keine vertiefte Erfahrung mit komplexer Analysis habe
 
 Alle obigen Ergebnisse beschreiben die *Struktur* der segmentierten Raumzeit. Aber keines von ihnen erklärt, warum die Segmentdichte die spezifische funktionale Form annimmt:
 
-$$\Xi_{\text{strong}}(r) = 1 - e^{-\varphi \cdot r_s / r}$$
+\Xi_{\text{strong}}(r) = 1 - e^{-\varphi \cdot r_s / r}
 
-Warum eine Exponentialfunktion? Warum nicht Ξ $\propto$ ($r_{s}$/r)² (ein Potenzgesetz)? Warum nicht Ξ $\propto$ tanh($r_{s}$/r) (ein hyperbolischer Tangens)? Dieses Kapitel beantwortet diese Frage, indem es zeigt, dass die Exponentialfunktion die *einzige mathematische Konsequenz* der logarithmischen Spiralstruktur ist. Die Ableitung führt durch die Euler-Formel als zentralen Zwischenschritt.
+Warum eine Exponentialfunktion? Warum nicht Ξ ∝ (r_s/r)² (ein Potenzgesetz)? Warum nicht Ξ ∝ tanh(r_s/r) (ein hyperbolischer Tangens)? Dieses Kapitel beantwortet diese Frage, indem es zeigt, dass die Exponentialfunktion die *einzige mathematische Konsequenz* der logarithmischen Spiralstruktur ist. Die Ableitung führt durch die Euler-Formel als zentralen Zwischenschritt.
 
 Verfolgen wir die Ableitung Schritt für Schritt. Wir starten von der φ-Spirale in Polarkoordinaten: r(θ) = r₀ exp(θ ln(φ)/(π/2)). Dies besagt, dass für jeden π/2 Radiant (Vierteldrehung) Winkel der Radius um den Faktor φ wächst. Die Wachstumsrate pro Radiant ist b = ln(φ)/(π/2) = 2ln(φ)/π.
 
@@ -1586,9 +1594,9 @@ Dieses Kapitel ist mathematisch das anspruchsvollste in Teil I. Für Leser, die 
 
 Die φ-skalierte logarithmische Spirale ist das zentrale geometrische Objekt von SSZ. In Polarkoordinaten hat sie die Form:
 
-$$r(\theta) = r_0 \cdot e^{k\theta}, \quad k = \frac{2\ln\varphi}{\pi} \approx 0.3063$$
+r(\theta) = r_0 \cdot e^{k\theta}, \quad k = \frac{2\ln\varphi}{\pi} \approx 0.3063
 
-Diese Gleichung besagt: Mit zunehmendem Winkel θ wächst der Radius r exponentiell. Die Wachstumsrate k ist klein (etwa 0,31), sodass sich die Spirale allmählich ausdehnt — es bedarf einer vollen Vierteldrehung (θ = π/2 $\approx$ 1,57 Radiant), um den Radius um den Faktor φ $\approx$ 1,618 zu vergrößern.
+Diese Gleichung besagt: Mit zunehmendem Winkel θ wächst der Radius r exponentiell. Die Wachstumsrate k ist klein (etwa 0,31), sodass sich die Spirale allmählich ausdehnt — es bedarf einer vollen Vierteldrehung (θ = π/2 ≈ 1,57 Radiant), um den Radius um den Faktor φ ≈ 1,618 zu vergrößern.
 
 Die zentrale geometrische Eigenschaft dieser Spirale ist ihre **Gleichwinkligkeit**: Der Winkel ψ zwischen der Tangentenlinie und der Radialrichtung ist an jedem Punkt entlang der Kurve konstant:
 
@@ -1600,9 +1608,9 @@ Dies bedeutet, die Spirale kreuzt jede Radiallinie unter demselben Winkel. Keine
 
 Die Bogenlänge entlang der Spirale vom Winkel θ₁ zum Winkel θ₂ beträgt:
 
-$$s = \frac{\sqrt{1+k^2}}{k} \cdot r_0 \left(e^{k\theta_2} - e^{k\theta_1}\right)$$
+s = \frac{\sqrt{1+k^2}}{k} \cdot r_0 \left(e^{k\theta_2} - e^{k\theta_1}\right)
 
-Der Vorfaktor √(1+k²)/k $\approx$ 3,41 ist eine Konstante, die den diagonalen Pfad der Spirale berücksichtigt. Für unsere Zwecke ist die wichtige Größe nicht die Bogenlänge selbst, sondern die **Segmentzahl** — die Anzahl der Vierteldrehungen von einem Referenzpunkt zu einem gegebenen Radius.
+Der Vorfaktor √(1+k²)/k ≈ 3,41 ist eine Konstante, die den diagonalen Pfad der Spirale berücksichtigt. Für unsere Zwecke ist die wichtige Größe nicht die Bogenlänge selbst, sondern die **Segmentzahl** — die Anzahl der Vierteldrehungen von einem Referenzpunkt zu einem gegebenen Radius.
 
 Jede Vierteldrehung (Δθ = π/2) fügt ein Segment hinzu. Ausgehend von einem Anfangsradius r₀ nahe dem Zentrum beträgt die Gesamtzahl der Segmente bis zum Radius R:
 
@@ -1610,9 +1618,9 @@ n = \frac{\theta}{\pi/2} = \frac{2\theta}{\pi}
 
 Da θ = ln(R/r₀)/k = ln(R/r₀)·π/(2ln φ), erhalten wir:
 
-$$n = \frac{2}{\pi} \cdot \frac{\ln(R/r_0) \cdot \pi}{2\ln\varphi} = \frac{\ln(R/r_0)}{\ln\varphi} = \log_\varphi(R/r_0)$$
+n = \frac{2}{\pi} \cdot \frac{\ln(R/r_0) \cdot \pi}{2\ln\varphi} = \frac{\ln(R/r_0)}{\ln\varphi} = \log_\varphi(R/r_0)
 
-Dies ist eine *logarithmische* Zählung — die Segmentzahl wächst als Logarithmus des Radiusverhältnisses. Eine Verdopplung des Radius fügt log_φ(2) $\approx$ 1,44 Segmente hinzu, unabhängig von der absoluten Skala. Diese logarithmische Struktur ist der mathematische Schlüssel zur gesamten Ableitung: **Das Inverse eines Logarithmus ist eine Exponentialfunktion.** Wenn die Segmentzahl logarithmisch in r ist, dann wird die Segmentdichte — die eine Funktion der Segmentzahl ist — natürlich eine Exponentialform annehmen.
+Dies ist eine *logarithmische* Zählung — die Segmentzahl wächst als Logarithmus des Radiusverhältnisses. Eine Verdopplung des Radius fügt log_φ(2) ≈ 1,44 Segmente hinzu, unabhängig von der absoluten Skala. Diese logarithmische Struktur ist der mathematische Schlüssel zur gesamten Ableitung: **Das Inverse eines Logarithmus ist eine Exponentialfunktion.** Wenn die Segmentzahl logarithmisch in r ist, dann wird die Segmentdichte — die eine Funktion der Segmentzahl ist — natürlich eine Exponentialform annehmen.
 
 ## 4.3 Die Euler-Einbettung
 
@@ -1626,11 +1634,11 @@ Sie verbindet die Exponentialfunktion (die Wachstum und Zerfall bestimmt) mit de
 
 Um zu sehen, wie dies funktioniert, betrachte man die logarithmische Spirale r(θ) = r₀·e^{kθ} in komplexer (kartesischer) Form geschrieben. Ein Punkt auf der Spirale beim Winkel θ hat die Koordinaten:
 
-$$z(\theta) = r(\theta) \cdot e^{i\theta} = r_0 \cdot e^{k\theta} \cdot e^{i\theta} = r_0 \cdot e^{(k + i)\theta}$$
+z(\theta) = r(\theta) \cdot e^{i\theta} = r_0 \cdot e^{k\theta} \cdot e^{i\theta} = r_0 \cdot e^{(k + i)\theta}
 
 Dies ist ein einzelner Exponentialausdruck mit einem *komplexen* Exponenten (k + i)θ. Der Realteil des Exponenten (kθ) bestimmt das radiale Wachstum — die Spirale dehnt sich nach außen aus. Der Imaginärteil (iθ) bestimmt die Rotation — die Spirale windet sich um den Ursprung. Die Euler-Formel vereinigt beide Verhaltensweisen in einer Exponentialfunktion.
 
-**Physikalische Interpretation.** Die komplexe Spirale z(θ) kodiert die vollständige Raumzeitstruktur beim Winkel θ. Der Realteil |z| = r₀·e^{kθ} gibt die radiale Position (räumliche Struktur). Der Imaginärteil arg(z) = θ gibt die Winkelposition (zeitliche Struktur, über die Beziehung t $\propto$ θ aus Kapitel 3). Die Exponentialfunktion e^{(k+i)θ} ist daher nicht nur eine mathematische Bequemlichkeit — sie ist die natürliche Kodierung der kombinierten räumlich-zeitlichen Segmentstruktur.
+**Physikalische Interpretation.** Die komplexe Spirale z(θ) kodiert die vollständige Raumzeitstruktur beim Winkel θ. Der Realteil |z| = r₀·e^{kθ} gibt die radiale Position (räumliche Struktur). Der Imaginärteil arg(z) = θ gibt die Winkelposition (zeitliche Struktur, über die Beziehung t ∝ θ aus Kapitel 3). Die Exponentialfunktion e^{(k+i)θ} ist daher nicht nur eine mathematische Bequemlichkeit — sie ist die natürliche Kodierung der kombinierten räumlich-zeitlichen Segmentstruktur.
 
 ### Die dreistufige Reduktion
 
@@ -1640,33 +1648,33 @@ Die Ableitung der exponentiellen Segmentdichte verläuft in drei rigorosen Schri
 
 Die Segmentzahl vom Zentrum zum Radius r ist (aus Abschnitt 4.2):
 
-$$n(r) = \log_\varphi(r/r_0) = \frac{\ln(r/r_0)}{\ln\varphi}$$
+n(r) = \log_\varphi(r/r_0) = \frac{\ln(r/r_0)}{\ln\varphi}
 
-Für die gravitationsphysikalische Anwendung ist der Referenzradius r₀ mit dem Schwarzschild-Radius $r_{s}$ verwandt, und wir zählen Segmente nach innen (von großem r zu kleinem r). Mit umgekehrter Richtung:
+Für die gravitationsphysikalische Anwendung ist der Referenzradius r₀ mit dem Schwarzschild-Radius r_s verwandt, und wir zählen Segmente nach innen (von großem r zu kleinem r). Mit umgekehrter Richtung:
 
-$$n_{\text{inward}}(r) = \log_\varphi(r_s/r) = \frac{\ln(r_s/r)}{\ln\varphi}$$
+n_{\text{inward}}(r) = \log_\varphi(r_s/r) = \frac{\ln(r_s/r)}{\ln\varphi}
 
-Dies zählt, wie viele φ-Segmente zwischen den Horizont und den Radius r passen. Bei r = $r_{s}$ gilt n = 0. Für r → 0 gilt n → ∞.
+Dies zählt, wie viele φ-Segmente zwischen den Horizont und den Radius r passen. Bei r = r_s gilt n = 0. Für r → 0 gilt n → ∞.
 
 **Schritt 2: Segmentdichte aus der Segmentzahl.**
 
 Die Segmentdichte Ξ misst den *Bruchteil der maximalen Segmentierung* beim Radius r. Die natürliche Definition lautet:
 
-$$\Xi(r) = 1 - e^{-n(r)/n_{\text{ref}}}$$
+\Xi(r) = 1 - e^{-n(r)/n_{\text{ref}}}
 
-wobei $n_{ref}$ eine Normierungskonstante ist. Diese funktionale Form wird gewählt, weil sie die drei wesentlichen Anforderungen erfüllt: Ξ = 0 wenn n = 0, Ξ → 1 wenn n → ∞, und Ξ nimmt monoton mit n zu.
+wobei n_ref eine Normierungskonstante ist. Diese funktionale Form wird gewählt, weil sie die drei wesentlichen Anforderungen erfüllt: Ξ = 0 wenn n = 0, Ξ → 1 wenn n → ∞, und Ξ nimmt monoton mit n zu.
 
 Die Form 1 − e^{−x} ist die *kumulative Verteilungsfunktion* der Exponentialverteilung — sie beschreibt die Wahrscheinlichkeit, dass nach x Einheiten „Exposition" mindestens ein Ereignis eingetreten ist. Im SSZ-Kontext repräsentiert jedes φ-Segment eine Einheit gravitativer „Exposition", und Ξ misst den kumulativen Effekt aller Segmente zwischen r und dem Horizont.
 
 **Schritt 3: Einsetzen und Vereinfachen.**
 
-Einsetzen von n(r) = ln($r_{s}$/r)/ln(φ) in die Dichteformel:
+Einsetzen von n(r) = ln(r_s/r)/ln(φ) in die Dichteformel:
 
-$$\Xi(r) = 1 - \exp\left(-\frac{\ln(r_s/r)}{n_{\text{ref}} \cdot \ln\varphi}\right)$$
+\Xi(r) = 1 - \exp\left(-\frac{\ln(r_s/r)}{n_{\text{ref}} \cdot \ln\varphi}\right)
 
-Die Normierung $n_{ref}$ wird durch die Vierteldrehungsstruktur der Spirale fixiert. Jede Vierteldrehung trägt ein Segment bei, und der Winkelbereich einer Vierteldrehung ist π/2. Die Normierung, die die Formel konsistent mit der Spiralgeometrie macht, ist $n_{ref}$ = π/(2ln φ) · (1/φ), was den Exponenten vereinfacht zu:
+Die Normierung n_ref wird durch die Vierteldrehungsstruktur der Spirale fixiert. Jede Vierteldrehung trägt ein Segment bei, und der Winkelbereich einer Vierteldrehung ist π/2. Die Normierung, die die Formel konsistent mit der Spiralgeometrie macht, ist n_ref = π/(2ln φ) · (1/φ), was den Exponenten vereinfacht zu:
 
-$$\Xi(r) = 1 - e^{-\varphi \cdot r_s / r}$$
+\Xi(r) = 1 - e^{-\varphi \cdot r_s / r}
 
 Der Faktor φ im Exponenten ergibt sich natürlich aus der Kombination der Spiralwachstumsrate k = 2ln(φ)/π und der Vierteldrehungsnormierung. **Er wird nicht von Hand eingefügt** — er ist eine mathematische Konsequenz der φ-Spiralstruktur.
 
@@ -1683,31 +1691,31 @@ Verifizieren wir, dass die abgeleitete Formel an Schlüsselradien die korrekten 
 | 3 | 0,5393 | 0,417 | Photonensphäre |
 | 1 | 1,618 | 0,802 | Horizont |
 | 0,5 | 3,236 | 0,961 | Innerhalb des Horizonts |
-| 0,1 | 16,18 | $\approx$ 1,000 | Tiefes Inneres |
+| 0,1 | 16,18 | ≈ 1,000 | Tiefes Inneres |
 
-Die Werte entsprechen dem erwarteten Verhalten: Ξ startet bei 0 in flacher Raumzeit, steigt durch die Photonensphäre, erreicht 0,802 am Horizont und nähert sich 1 tief im Inneren. Der Sättigungswert Ξ(r_s) = 1 − e^{−φ} $\approx$ 0,802 ist eine feste Vorhersage, kein einstellbarer Parameter.
+Die Werte entsprechen dem erwarteten Verhalten: Ξ startet bei 0 in flacher Raumzeit, steigt durch die Photonensphäre, erreicht 0,802 am Horizont und nähert sich 1 tief im Inneren. Der Sättigungswert Ξ(r_s) = 1 − e^{−φ} ≈ 0,802 ist eine feste Vorhersage, kein einstellbarer Parameter.
 ## 4.4 Die Exponentialverbindung
 
 ### Warum Exponentiell und nicht Polynomial?
 
 Nachdem die Exponentialform aus der φ-Spiralgeometrie abgeleitet wurde, ist es aufschlussreich zu verstehen, *warum* alternative funktionale Formen versagen würden. Dies ist nicht nur akademisch — es demonstriert, dass die Exponentialfunktion nicht eine Wahl unter vielen ist, sondern die *einzige* Konsequenz der logarithmischen Spiralstruktur.
 
-**Polynomialer Kandidat: Ξ $\propto$ ($r_{s}$/r)².**
-Eine polynomiale Segmentdichte würde für r → 0 unbegrenzt wachsen. Bei r = 0,01 $r_{s}$ würde eine quadratische Form Ξ $\propto$ 10⁴ liefern — weit über dem physikalischen Maximum von 1. Fundamentaler: Ein Polynom divergiert bei r = 0 und erzeugt dasselbe Singularitätsproblem, das SSZ vermeiden soll. Die logarithmische Spirale erzeugt eine *beschränkte* Segmentzahl (weil jedes Segment eine endliche Winkelausdehnung hat), sodass die Dichte sättigen muss. Polynome können nicht sättigen — sie divergieren immer.
+**Polynomialer Kandidat: Ξ ∝ (r_s/r)².**
+Eine polynomiale Segmentdichte würde für r → 0 unbegrenzt wachsen. Bei r = 0,01 r_s würde eine quadratische Form Ξ ∝ 10⁴ liefern — weit über dem physikalischen Maximum von 1. Fundamentaler: Ein Polynom divergiert bei r = 0 und erzeugt dasselbe Singularitätsproblem, das SSZ vermeiden soll. Die logarithmische Spirale erzeugt eine *beschränkte* Segmentzahl (weil jedes Segment eine endliche Winkelausdehnung hat), sodass die Dichte sättigen muss. Polynome können nicht sättigen — sie divergieren immer.
 
-**Potenzgesetz-Kandidat: Ξ $\propto$ ($r_{s}$/r)^α.**
-Ein Potenzgesetz mit α < 1 würde bei großem r zu langsam verschwinden (Überschätzung der Schwachfeld-Segmentdichte). Ein Potenzgesetz mit α > 1 würde zu schnell verschwinden (Unterschätzung der Photonensphärendichte). Nur α = 1 gibt den korrekten Schwachfeldgrenzwert Ξ_weak = $r_{s}$/(2r), aber dieser sättigt nicht — er divergiert bei r = 0. Das Potenzgesetz ist die korrekte *Schwachfeldnäherung*, kann aber nicht als *globale* Formel dienen.
+**Potenzgesetz-Kandidat: Ξ ∝ (r_s/r)^α.**
+Ein Potenzgesetz mit α < 1 würde bei großem r zu langsam verschwinden (Überschätzung der Schwachfeld-Segmentdichte). Ein Potenzgesetz mit α > 1 würde zu schnell verschwinden (Unterschätzung der Photonensphärendichte). Nur α = 1 gibt den korrekten Schwachfeldgrenzwert Ξ_weak = r_s/(2r), aber dieser sättigt nicht — er divergiert bei r = 0. Das Potenzgesetz ist die korrekte *Schwachfeldnäherung*, kann aber nicht als *globale* Formel dienen.
 
-**Hyperbolischer-Tangens-Kandidat: Ξ $\propto$ tanh($r_{s}$/r).**
-Der hyperbolische Tangens sättigt tatsächlich bei 1, und er verschwindet für r → ∞. Jedoch nähert sich tanh(x) für großes x viel langsamer an 1 als 1 − e^{−x}. Bei r = r_s gilt tanh(1) $\approx$ 0,762, während 1 − e^{−φ} $\approx$ 0,802 — der tanh-Wert würde eine andere Skalierung erfordern, um mit der φ-Spiralvorhersage übereinzustimmen. Wichtiger noch: tanh entsteht nicht natürlich aus der logarithmischen Spiral-Segmentzählung; es wäre eine *Ad-hoc*-Wahl ohne geometrische Rechtfertigung.
+**Hyperbolischer-Tangens-Kandidat: Ξ ∝ tanh(r_s/r).**
+Der hyperbolische Tangens sättigt tatsächlich bei 1, und er verschwindet für r → ∞. Jedoch nähert sich tanh(x) für großes x viel langsamer an 1 als 1 − e^{−x}. Bei r = r_s gilt tanh(1) ≈ 0,762, während 1 − e^{−φ} ≈ 0,802 — der tanh-Wert würde eine andere Skalierung erfordern, um mit der φ-Spiralvorhersage übereinzustimmen. Wichtiger noch: tanh entsteht nicht natürlich aus der logarithmischen Spiral-Segmentzählung; es wäre eine *Ad-hoc*-Wahl ohne geometrische Rechtfertigung.
 
 **Die Exponentialfunktion 1 − e^{−x} ist die einzige Funktion, die:**
 
-1. **Bei x = 0 verschwindet** (keine Segmentierung im Unendlichen): Ξ(r → ∞) = 0 Y
-2. **Bei 1 für x → ∞ sättigt** (maximale Segmentierung im Zentrum): Ξ(r → 0) → 1 Y
-3. **Eine einzige charakteristische Skala hat** (hier φ·$r_{s}$) ohne zusätzliche Parameter Y
-4. **Natürlich aus der logarithmischen Segmentzählung entsteht** über die Exponential-Logarithmus-Inversbeziehung Y
-5. **Die kumulative Verteilung eines gedächtnislosen Prozesses ist** — jedes Segment trägt unabhängig zur Gesamtdichte bei Y
+1. **Bei x = 0 verschwindet** (keine Segmentierung im Unendlichen): Ξ(r → ∞) = 0 ✓
+2. **Bei 1 für x → ∞ sättigt** (maximale Segmentierung im Zentrum): Ξ(r → 0) → 1 ✓
+3. **Eine einzige charakteristische Skala hat** (hier φ·r_s) ohne zusätzliche Parameter ✓
+4. **Natürlich aus der logarithmischen Segmentzählung entsteht** über die Exponential-Logarithmus-Inversbeziehung ✓
+5. **Die kumulative Verteilung eines gedächtnislosen Prozesses ist** — jedes Segment trägt unabhängig zur Gesamtdichte bei ✓
 
 Eigenschaft 5 verdient besondere Aufmerksamkeit. Die Exponentialverteilung ist die *einzige* stetige Wahrscheinlichkeitsverteilung mit der „gedächtnislosen" Eigenschaft: Die Wahrscheinlichkeit, ein weiteres Segment zu durchqueren, hängt nicht davon ab, wie viele Segmente bereits durchquert wurden. Im SSZ-Kontext bedeutet dies, dass jedes φ-Segment unabhängig von den anderen zur Segmentdichte beiträgt — es gibt kein „Gedächtnis" oder keine Korrelation zwischen Segmenten. Diese Unabhängigkeit ist eine direkte Konsequenz der Selbstähnlichkeit der φ-Spirale: Jedes Segment ist geometrisch identisch mit jedem anderen Segment (bis auf die Skala), sodass sein Beitrag zur Gesamtdichte unabhängig ist.
 
@@ -1715,7 +1723,7 @@ Eigenschaft 5 verdient besondere Aufmerksamkeit. Die Exponentialverteilung ist d
 
 Der Streckungsfaktor s(r) = 1 + Ξ(r) = 1/D(r) verbindet die Segmentdichte mit dem Zeitdilatationsfaktor. Einsetzen der abgeleiteten Exponentialform:
 
-$$s(r) = 1 + (1 - e^{-\varphi r_s/r}) = 2 - e^{-\varphi r_s/r}$$
+s(r) = 1 + (1 - e^{-\varphi r_s/r}) = 2 - e^{-\varphi r_s/r}
 
 Auswertung an Schlüsselradien:
 
@@ -1726,7 +1734,7 @@ Auswertung an Schlüsselradien:
 | 3 | 1,417 | 0,706 | Moderate Dilatation |
 | 1 | 1,802 | 0,555 | Horizont — endlich! |
 
-Am Horizont (r = r_s) gilt s = 2 − e^{−φ} $\approx$ 1,802, also D = 1/s $\approx$ 0,555. Dies ist die zentrale Vorhersage von SSZ: **Die Zeitdilatation am Horizont ist endlich, nicht unendlich.** Eine Uhr am Schwarzschild-Radius tickt mit 55,5% der Rate einer Uhr im Unendlichen. In der ART gilt dagegen D → 0 bei r = r_s — die Zeit bleibt vollständig stehen. Die SSZ-Vorhersage ist qualitativ verschieden und prinzipiell testbar.
+Am Horizont (r = r_s) gilt s = 2 − e^{−φ} ≈ 1,802, also D = 1/s ≈ 0,555. Dies ist die zentrale Vorhersage von SSZ: **Die Zeitdilatation am Horizont ist endlich, nicht unendlich.** Eine Uhr am Schwarzschild-Radius tickt mit 55,5% der Rate einer Uhr im Unendlichen. In der ART gilt dagegen D → 0 bei r = r_s — die Zeit bleibt vollständig stehen. Die SSZ-Vorhersage ist qualitativ verschieden und prinzipiell testbar.
 
 Damit ist die Ableitungskette vollständig: φ-Spirale → logarithmische Segmentzahl → Euler-Einbettung → exponentielle Dichte → endliche Zeitdilatation. Jeder Schritt folgt aus dem vorherigen ohne freie Parameter oder einstellbare Konstanten. Die gesamte Kette wird durch eine einzige geometrische Eingabe bestimmt: den Goldenen Schnitt φ.
 
@@ -1734,11 +1742,11 @@ Damit ist die Ableitungskette vollständig: φ-Spirale → logarithmische Segmen
 
 **Testdateien:** `test_euler_embedding`, `test_euler_reduction`
 
-**Was die Tests beweisen:** Die Ableitungskette von φ-Spirale → logarithmische Zählung → exponentielle Dichte erzeugt numerisch korrekte Werte an allen Testradien. Speziell: Ξ_strong(r_s) = 1 − e^{−φ} $\approx$ 0,80171 bis zur Maschinengenauigkeit; die dreistufige Reduktion ist invertierbar (exponentiell ↔ logarithmisch); die komplexe Spirale z(θ) = r₀·e^{(k+i)θ} reproduziert die korrekten Real- und Imaginärteile; und die Segmentzahl n = log_φ(R/r₀) stimmt mit der Vierteldrehungszählung für ganzzahlige Vielfache von π/2 überein.
+**Was die Tests beweisen:** Die Ableitungskette von φ-Spirale → logarithmische Zählung → exponentielle Dichte erzeugt numerisch korrekte Werte an allen Testradien. Speziell: Ξ_strong(r_s) = 1 − e^{−φ} ≈ 0,80171 bis zur Maschinengenauigkeit; die dreistufige Reduktion ist invertierbar (exponentiell ↔ logarithmisch); die komplexe Spirale z(θ) = r₀·e^{(k+i)θ} reproduziert die korrekten Real- und Imaginärteile; und die Segmentzahl n = log_φ(R/r₀) stimmt mit der Vierteldrehungszählung für ganzzahlige Vielfache von π/2 überein.
 
 **Was die Tests NICHT beweisen:** Die Eindeutigkeit der Exponentialform im mathematischen Sinne. Die Tests bestätigen die *interne Konsistenz* der Ableitung, nicht die *physikalische Eindeutigkeit* der Exponentialfunktion. Jedoch sind die Anforderungen 4 und 5 (natürliches Entstehen aus der Spirale und gedächtnislose Unabhängigkeit) strukturelle Eigenschaften, die nur die Exponentialfunktion erfüllt.
 
-**Reproduktion:** `E:/clone\segmented-calculation-suite/tests/` — `test_euler_embedding.py`, `test_euler_reduction.py`. Alle Tests bestanden.
+**Reproduktion:** `E:\clone\segmented-calculation-suite\tests\` — `test_euler_embedding.py`, `test_euler_reduction.py`. Alle Tests bestanden.
 
 ---
 
@@ -1751,7 +1759,7 @@ Damit ist die Ableitungskette vollständig: φ-Spirale → logarithmische Segmen
 | 3 | z(θ) = r₀ · e^{(k+i)θ} | Euler-Einbettung (komplexe Spirale) |
 | 4 | Ξ = 1 − e^{−φ·r_s/r} | Starkfelddichte (abgeleitet) |
 | 5 | s = 2 − e^{−φ·r_s/r} | Streckungsfaktor |
-| 6 | D(r_s) = 1/1,802 $\approx$ 0,555 | Zeitdilatation am Horizont |
+| 6 | D(r_s) = 1/1,802 ≈ 0,555 | Zeitdilatation am Horizont |
 
 ---
 
@@ -1787,7 +1795,7 @@ Das Auftreten von i (der imaginären Einheit) in der Wachstumsrate ist kein Zufa
 
 ### Dimensionsanalyse und natürliche Einheiten
 
-SSZ hat keine unabhängige Energieskala. Die Kopplungskonstante α_SSZ = 1/(φ^{2π} × 4) ist dimensionslos, und ihre Ableitung beinhaltet nur die mathematischen Konstanten φ und π sowie die Ganzzahl N₀ = 4. Keine Masse, Länge oder Zeit erscheint in der Ableitung. Die Verbindung zu dimensionsbehafteten Größen tritt durch den Schwarzschild-Radius $r_{s}$ = 2GM/c² ein. Alle SSZ-Vorhersagen werden in dimensionslosen Verhältnissen r/r_s ausgedrückt.
+SSZ hat keine unabhängige Energieskala. Die Kopplungskonstante α_SSZ = 1/(φ^{2π} × 4) ist dimensionslos, und ihre Ableitung beinhaltet nur die mathematischen Konstanten φ und π sowie die Ganzzahl N₀ = 4. Keine Masse, Länge oder Zeit erscheint in der Ableitung. Die Verbindung zu dimensionsbehafteten Größen tritt durch den Schwarzschild-Radius r_s = 2GM/c² ein. Alle SSZ-Vorhersagen werden in dimensionslosen Verhältnissen r/r_s ausgedrückt.
 
 Diese skalenfreie Struktur hat eine wichtige Konsequenz für die Falsifizierbarkeit von SSZ. Da die Vorhersagen nur vom Verhältnis r/r_s abhängen, bestimmt eine einzige Messung bei einem einzigen Radius das gesamte Radialprofil. Es gibt keinen Spielraum für die Anpassung von Parametern an einzelne Datenpunkte.
 
@@ -1795,9 +1803,9 @@ Diese skalenfreie Struktur hat eine wichtige Konsequenz für die Falsifizierbark
 
 SSZ hat keine unabhängige Energieskala. Die Kopplungskonstante α_SSZ = 1/(φ^{2π} × 4) ist dimensionslos, und ihre Ableitung beinhaltet nur die mathematischen Konstanten φ und π und die Ganzzahl N₀ = 4. Keine Masse, Länge oder Zeit erscheint in der Ableitung. Dies ist ungewöhnlich: Die meisten physikalischen Theorien erfordern mindestens einen dimensionsbehafteten Parameter, um Kontakt mit dem Experiment herzustellen.
 
-Die Verbindung zu dimensionsbehafteten Größen erfolgt über den Schwarzschild-Radius $r_{s}$ = 2GM/c², der von der Masse M des gravitierenden Objekts und den fundamentalen Konstanten G und c abhängt. Die Segmentdichte Ξ = $r_{s}$/(2r) ist dimensionslos (ein Verhältnis von Längen), und der Zeitdilatationsfaktor D = 1/(1 + Ξ) ist dimensionslos. Alle SSZ-Vorhersagen werden in diesen dimensionslosen Größen ausgedrückt, was bedeutet, dass sie mit der Masse des gravitierenden Objekts in vorhersagbarer Weise skalieren.
+Die Verbindung zu dimensionsbehafteten Größen erfolgt über den Schwarzschild-Radius r_s = 2GM/c², der von der Masse M des gravitierenden Objekts und den fundamentalen Konstanten G und c abhängt. Die Segmentdichte Ξ = r_s/(2r) ist dimensionslos (ein Verhältnis von Längen), und der Zeitdilatationsfaktor D = 1/(1 + Ξ) ist dimensionslos. Alle SSZ-Vorhersagen werden in diesen dimensionslosen Größen ausgedrückt, was bedeutet, dass sie mit der Masse des gravitierenden Objekts in vorhersagbarer Weise skalieren.
 
-Diese skalenfreie Struktur hat eine wichtige Konsequenz für die Falsifizierbarkeit von SSZ. Da die Vorhersagen nur vom Verhältnis r/r_s abhängen (nicht von r und $r_{s}$ separat), bestimmt eine einzelne Messung bei einem einzelnen Radius das gesamte radiale Profil. Wenn die Messung bei einem Radius mit SSZ übereinstimmt, sind die Vorhersagen bei allen anderen Radien bestimmt; wenn sie nicht übereinstimmt, ist das gesamte Rahmenwerk falsifiziert. Es gibt keinen Spielraum für Parameteranpassung an einzelne Datenpunkte.
+Diese skalenfreie Struktur hat eine wichtige Konsequenz für die Falsifizierbarkeit von SSZ. Da die Vorhersagen nur vom Verhältnis r/r_s abhängen (nicht von r und r_s separat), bestimmt eine einzelne Messung bei einem einzelnen Radius das gesamte radiale Profil. Wenn die Messung bei einem Radius mit SSZ übereinstimmt, sind die Vorhersagen bei allen anderen Radien bestimmt; wenn sie nicht übereinstimmt, ist das gesamte Rahmenwerk falsifiziert. Es gibt keinen Spielraum für Parameteranpassung an einzelne Datenpunkte.
 
 Die Ganzzahl N₀ = 4 verdient Kommentar. Warum 4 und nicht 3 oder 5 oder eine andere Ganzzahl? Die Antwort kommt aus der Vierteldrehungsstruktur des Segmentgitters: In drei räumlichen Dimensionen plus einer Zeitdimension gibt es genau vier unabhängige Vierteldrehungsrotationen (eine für jedes Paar von Koordinatenachsen: xy, xz, yz und xt). Die Zahl N₀ = 4 wird daher durch die Dimensionalität der Raumzeit bestimmt, nicht durch eine willkürliche Wahl. In einer Raumzeit mit n räumlichen Dimensionen plus einer Zeitdimension wäre N₀ = n(n+1)/2, was N₀ = 1 für 1+1 Dimensionen, N₀ = 3 für 2+1 Dimensionen, N₀ = 4 für die physikalischen 3+1 Dimensionen und N₀ = 10 für 4+1 Dimensionen ergibt.
 
@@ -1821,9 +1829,9 @@ Die Euler-Formel e^{i theta} = cos theta + i sin theta verbindet die Exponential
 
 Die komplexe Wachstumsrate ist: dz/d theta = z * (ln(phi)/(2 pi) + i). Der Realteil ln(phi)/(2 pi) = 0,0766 beschreibt das radiale Wachstum pro Radian. Der Imaginaerteil 1 beschreibt die Winkelrotation pro Radian. Das Verhaeltnis von radialem Wachstum zu Winkelrotation ist ln(phi)/(2 pi) = 0,0766, was die Steigung der Spirale bestimmt.
 
-Die Kopplungskonstante $\alpha_{\text{SSZ}}$ entsteht aus dem Quadrat des Betrags der komplexen Wachstumsrate, integriert ueber eine vollstaendige Umdrehung und normiert auf die Basissegmentierung N_0:
+Die Kopplungskonstante alpha_SSZ entsteht aus dem Quadrat des Betrags der komplexen Wachstumsrate, integriert ueber eine vollstaendige Umdrehung und normiert auf die Basissegmentierung N_0:
 
-$\alpha_{\text{SSZ}}$ = 1 / (|phi^{2 pi}| * N_0) = 1 / (phi^{2 pi} * 4) = 1/137,08
+alpha_SSZ = 1 / (|phi^{2 pi}| * N_0) = 1 / (phi^{2 pi} * 4) = 1/137,08
 
 Diese Ableitung ist bemerkenswert, weil sie nur drei Eingaben erfordert: phi (aus der Selbstaehnlichkeitsanforderung), pi (aus der Winkelperiodizitaet) und N_0 = 4 (aus der Dimensionalitaet der Raumzeit). Keine dieser Eingaben ist ein freier Parameter — alle drei sind mathematisch oder physikalisch bestimmt.
 
@@ -1849,7 +1857,7 @@ Die Konsequenz: Wenn die Raumzeit mehr als 3+1 Dimensionen haette (wie in der St
 
 ### Phi-Spirale und Fibonacci-Zahlen
 
-Die phi-Spirale hat eine direkte Verbindung zu den Fibonacci-Zahlen $F_{n}$ = {1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ...}. Das Verhaeltnis aufeinanderfolgender Fibonacci-Zahlen konvergiert gegen phi: F_{n+1}/F_n -> phi fuer n -> unendlich.
+Die phi-Spirale hat eine direkte Verbindung zu den Fibonacci-Zahlen F_n = {1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ...}. Das Verhaeltnis aufeinanderfolgender Fibonacci-Zahlen konvergiert gegen phi: F_{n+1}/F_n -> phi fuer n -> unendlich.
 
 In SSZ hat diese Verbindung eine physikalische Interpretation: Die Segmente des Gitters sind wie Fibonacci-Zahlen angeordnet — jedes Segment ist die Summe der beiden vorherigen. Die resultierende Spirale hat die Eigenschaft der optimalen Packung: Kein anderes Wachstumsmuster fuellt den Raum effizienter.
 
@@ -1863,23 +1871,23 @@ Die Selbstaehnlichkeitsbedingung lautet: Wenn das Gitter um den Faktor phi skali
 
 Xi(phi * r) = f(Xi(r))
 
-wobei f eine Funktion ist, die die Skalierungstransformation beschreibt. Die einfachste Loesung ist f(Xi) = Xi / phi, was zur Schwachfeldformel Xi = $r_{s}$/(2r) fuehrt (denn Xi(phi * r) = $r_{s}$/(2 phi r) = Xi(r)/phi).
+wobei f eine Funktion ist, die die Skalierungstransformation beschreibt. Die einfachste Loesung ist f(Xi) = Xi / phi, was zur Schwachfeldformel Xi = r_s/(2r) fuehrt (denn Xi(phi * r) = r_s/(2 phi r) = Xi(r)/phi).
 
-Die Selbstaehnlichkeit hat eine tiefe Verbindung zur Renormierungsgruppe in der Quantenfeldtheorie: Die Segmentdichte Xi spielt die Rolle einer Kopplungskonstante, und die Skalierungstransformation r -> phi * r spielt die Rolle einer Renormierungsgruppentransformation. Der Fixpunkt der Transformation (Xi* = 0) entspricht dem flachen Raum, und der instabile Fixpunkt (Xi* = $\Xi_{\text{max}}$ = 0,802) entspricht der natuerlichen Grenze.
+Die Selbstaehnlichkeit hat eine tiefe Verbindung zur Renormierungsgruppe in der Quantenfeldtheorie: Die Segmentdichte Xi spielt die Rolle einer Kopplungskonstante, und die Skalierungstransformation r -> phi * r spielt die Rolle einer Renormierungsgruppentransformation. Der Fixpunkt der Transformation (Xi* = 0) entspricht dem flachen Raum, und der instabile Fixpunkt (Xi* = Xi_max = 0,802) entspricht der natuerlichen Grenze.
 
 ### Verbindung zur Informationstheorie
 
 Die Segmentdichte Xi hat eine informationstheoretische Interpretation: Sie misst die Informationsdichte der Raumzeit an einem gegebenen Punkt. Die Shannon-Entropie pro Segment ist:
 
-$S_{seg}$ = -Xi * ln(Xi) - (1-Xi) * ln(1-Xi)
+S_seg = -Xi * ln(Xi) - (1-Xi) * ln(1-Xi)
 
-Diese Entropie ist maximal bei Xi = 0,5 ($S_{max}$ = ln(2)) und verschwindet bei Xi = 0 (flacher Raum) und Xi = 1 (maximale Dichte). An der natuerlichen Grenze (Xi = 0,802) ist $S_{seg}$ = 0,50 — nahe dem Maximum, aber nicht am Maximum. Dies deutet darauf hin, dass die natuerliche Grenze ein Zustand hoher, aber nicht maximaler Informationsdichte ist.
+Diese Entropie ist maximal bei Xi = 0,5 (S_max = ln(2)) und verschwindet bei Xi = 0 (flacher Raum) und Xi = 1 (maximale Dichte). An der natuerlichen Grenze (Xi = 0,802) ist S_seg = 0,50 — nahe dem Maximum, aber nicht am Maximum. Dies deutet darauf hin, dass die natuerliche Grenze ein Zustand hoher, aber nicht maximaler Informationsdichte ist.
 
 Die Gesamtinformation einer sphaerisch-symmetrischen Raumzeit ist:
 
-$I_{total}$ = integral $S_{seg}$ * 4 pi r^2 dr / $l_{P}$^3
+I_total = integral S_seg * 4 pi r^2 dr / l_P^3
 
-wobei $l_{P}$ die Planck-Laenge ist. Fuer ein Schwarzes Loch der Masse M ergibt die Integration $I_{total}$ ~ A / (4 $l_{P}$^2), wobei A = 4 pi $r_{s}$^2 die Flaeche der natuerlichen Grenze ist. Dies reproduziert die Bekenstein-Hawking-Entropie $S_{BH}$ = $k_{B}$ A / (4 $l_{P}$^2) — ein bemerkenswertes Ergebnis, das die Konsistenz von SSZ mit der Schwarze-Loch-Thermodynamik bestaetigt.
+wobei l_P die Planck-Laenge ist. Fuer ein Schwarzes Loch der Masse M ergibt die Integration I_total ~ A / (4 l_P^2), wobei A = 4 pi r_s^2 die Flaeche der natuerlichen Grenze ist. Dies reproduziert die Bekenstein-Hawking-Entropie S_BH = k_B A / (4 l_P^2) — ein bemerkenswertes Ergebnis, das die Konsistenz von SSZ mit der Schwarze-Loch-Thermodynamik bestaetigt.
 
 ## Querverweise
 
@@ -1899,19 +1907,20 @@ Dieses Kapitel hat die Rolle des goldenen Schnitts phi = 1,618... in SSZ dargest
 
 Der goldene Schnitt ist in SSZ keine willkuerliche Wahl, sondern eine Konsequenz der Forderung nach maximaler Informationseffizienz der Segmentstruktur.
 
+---
 
-\newpage
+# Kapitel 5: Geometrischer Ursprung der Feinstrukturkonstante
 
-# Geometrischer Ursprung der Feinstrukturkonstante
-
+**Teil I — Grundlagen**
+**Status:** ERWEITERTE FASSUNG
 
 ---
 
 ## Zusammenfassung
 
-Die Feinstrukturkonstante α $\approx$ 1/137,036 ist eine der am präzisesten gemessenen Größen der gesamten Physik — und eine der am wenigsten verstandenen. Sie bestimmt die Stärke der elektromagnetischen Wechselwirkung: wie stark Elektronen an Photonen koppeln, wie fest Atome gebunden sind und wie wahrscheinlich es ist, dass ein geladenes Teilchen Strahlung emittiert oder absorbiert. Im Standardmodell der Teilchenphysik ist α ein freier Parameter — mit außerordentlicher Präzision gemessen (α⁻¹ = 137,035999084 ± 0,000000021), aber nicht aus einem tieferen Prinzip abgeleitet. Richard Feynman nannte sie „eines der größten verdammten Rätsel der Physik".
+Die Feinstrukturkonstante α ≈ 1/137,036 ist eine der am präzisesten gemessenen Größen der gesamten Physik — und eine der am wenigsten verstandenen. Sie bestimmt die Stärke der elektromagnetischen Wechselwirkung: wie stark Elektronen an Photonen koppeln, wie fest Atome gebunden sind und wie wahrscheinlich es ist, dass ein geladenes Teilchen Strahlung emittiert oder absorbiert. Im Standardmodell der Teilchenphysik ist α ein freier Parameter — mit außerordentlicher Präzision gemessen (α⁻¹ = 137,035999084 ± 0,000000021), aber nicht aus einem tieferen Prinzip abgeleitet. Richard Feynman nannte sie „eines der größten verdammten Rätsel der Physik".
 
-In SSZ ist α kein freier Parameter, sondern entsteht aus der geometrischen Projektion der φ-segmentierten Raumzeit auf den elektromagnetischen Wechselwirkungssektor. Dieses Kapitel leitet α aus der Segmentstruktur unter Verwendung genau zweier Zutaten her: des Goldenen Schnitts φ (bereits durch die Segmentgeometrie festgelegt) und der Grundsegmentierung N₀ = 4 (bereits durch die 2φ $\approx$ π-Identität festgelegt). Das Ergebnis α_SSZ = 1/(φ^{2π}·4) $\approx$ 1/137,08 reproduziert den gemessenen Wert auf 0,03%.
+In SSZ ist α kein freier Parameter, sondern entsteht aus der geometrischen Projektion der φ-segmentierten Raumzeit auf den elektromagnetischen Wechselwirkungssektor. Dieses Kapitel leitet α aus der Segmentstruktur unter Verwendung genau zweier Zutaten her: des Goldenen Schnitts φ (bereits durch die Segmentgeometrie festgelegt) und der Grundsegmentierung N₀ = 4 (bereits durch die 2φ ≈ π-Identität festgelegt). Das Ergebnis α_SSZ = 1/(φ^{2π}·4) ≈ 1/137,08 reproduziert den gemessenen Wert auf 0,03%.
 
 Wir erklären, warum diese Ableitung keine Numerologie ist, wie sie sich mit dem Konzept der gebundenen Energie verbindet, was sie über α in extremen Gravitationsumgebungen vorhersagt und wie sie sich zum QED-Laufen der Kopplungskonstante verhält.
 
@@ -1937,7 +1946,7 @@ Intuitiv bedeutet dies: Die Feinstrukturkonstante misst, wie stark Licht an gela
 
 Die Feinstrukturkonstante α ist die dimensionslose Kopplungskonstante der Quantenelektrodynamik (QED):
 
-$$\alpha = \frac{e^2}{4\pi\varepsilon_0 \hbar c} \approx \frac{1}{137.036}$$
+\alpha = \frac{e^2}{4\pi\varepsilon_0 \hbar c} \approx \frac{1}{137.036}
 
 Jedes Symbol in dieser Definition hat eine präzise physikalische Bedeutung. Die Elementarladung e misst die Stärke der elektrischen Ladung von Elektronen und Protonen. Die Permittivität des freien Raums ε₀ charakterisiert die elektrische Antwort des Vakuums. Die reduzierte Planck-Konstante ℏ = h/(2π) setzt die Skala quantenmechanischer Effekte. Die Lichtgeschwindigkeit c verbindet Raum und Zeit.
 
@@ -1945,21 +1954,21 @@ Das bemerkenswerte Merkmal von α ist, dass sie *dimensionslos* ist — sie hat 
 
 **Was α physikalisch bestimmt:**
 
-- **Atomspektren.** Die Energieniveaus des Wasserstoffs sind $E_{n}$ = −(1/2)α²$m_{ec}$²/n². Der α²-Faktor bestimmt die Gesamtskala atomarer Bindungsenergien. Ohne α gäbe es keine Atome — oder besser, Atome wären unendlich groß (α → 0) oder unendlich klein (α → ∞).
+- **Atomspektren.** Die Energieniveaus des Wasserstoffs sind E_n = −(1/2)α²m_ec²/n². Der α²-Faktor bestimmt die Gesamtskala atomarer Bindungsenergien. Ohne α gäbe es keine Atome — oder besser, Atome wären unendlich groß (α → 0) oder unendlich klein (α → ∞).
 
-- **Feinstruktur.** Die Aufspaltung atomarer Energieniveaus durch relativistische und Spin-Bahn-Effekte skaliert als α⁴m_ec². Diese „Feinstruktur" gibt der Konstante ihren Namen. Die Aufspaltung ist klein (von der Ordnung α² $\approx$ 5×10⁻⁵ relativ zur Grobstruktur), gerade weil α klein ist.
+- **Feinstruktur.** Die Aufspaltung atomarer Energieniveaus durch relativistische und Spin-Bahn-Effekte skaliert als α⁴m_ec². Diese „Feinstruktur" gibt der Konstante ihren Namen. Die Aufspaltung ist klein (von der Ordnung α² ≈ 5×10⁻⁵ relativ zur Grobstruktur), gerade weil α klein ist.
 
 - **Anomales magnetisches Moment.** Das magnetische Moment des Elektrons weicht von der Dirac-Vorhersage um einen Faktor 1 + α/(2π) + O(α²) ab. Diese Korrektur, 1948 erstmals von Schwinger berechnet, war einer der großen Triumphe der QED und wurde seither bis zur zehnten Ordnung in α berechnet.
 
-- **Photonenemissionswahrscheinlichkeit.** Die Wahrscheinlichkeit, dass ein geladenes Teilchen in einer elektromagnetischen Wechselwirkung ein Photon emittiert, ist proportional zu α. Da α $\approx$ 1/137, erzeugt ungefähr 1 von 137 Wechselwirkungen ein Photon.
+- **Photonenemissionswahrscheinlichkeit.** Die Wahrscheinlichkeit, dass ein geladenes Teilchen in einer elektromagnetischen Wechselwirkung ein Photon emittiert, ist proportional zu α. Da α ≈ 1/137, erzeugt ungefähr 1 von 137 Wechselwirkungen ein Photon.
 
 ### Die offene Frage
 
-Das Standardmodell behandelt α als freien Parameter. Kein Prinzip innerhalb des Standardmodells bestimmt, *warum* α $\approx$ 1/137 und nicht etwa 1/100 oder 1/200.
+Das Standardmodell behandelt α als freien Parameter. Kein Prinzip innerhalb des Standardmodells bestimmt, *warum* α ≈ 1/137 und nicht etwa 1/100 oder 1/200.
 
 Verschiedene Versuche, α aus ersten Prinzipien abzuleiten, wurden im Laufe der Physikgeschichte unternommen:
 
-- **Eddington (1929)** schlug α⁻¹ = 136 vor, basierend auf der Anzahl unabhängiger Komponenten eines symmetrischen Tensors in seiner „Fundamentaltheorie". Als das Experiment α⁻¹ $\approx$ 137 ergab, revidierte er sein Argument zu 136 + 1 = 137. Dies wird weithin als Numerologie betrachtet.
+- **Eddington (1929)** schlug α⁻¹ = 136 vor, basierend auf der Anzahl unabhängiger Komponenten eines symmetrischen Tensors in seiner „Fundamentaltheorie". Als das Experiment α⁻¹ ≈ 137 ergab, revidierte er sein Argument zu 136 + 1 = 137. Dies wird weithin als Numerologie betrachtet.
 
 - **Pauli** verbrachte Jahre mit der Suche nach einer Verbindung zwischen α und anderen Fundamentalkonstanten und wurde Berichten zufolge von der Zahl 137 besessen. Er starb im Zimmer 137 des Rotkreuz-Krankenhauses in Zürich.
 
@@ -1996,17 +2005,17 @@ Für die elektromagnetische Projektion ist jedoch die relevante Größe nicht da
 
 \varphi^{2\pi} \approx 34.27
 
-Dies ist φ hoch 2π (nicht 4). Der Unterschied zwischen φ⁴ $\approx$ 6,854 und φ^{2π} $\approx$ 34,27 entsteht, weil 2π $\approx$ 6,283 > 4: Der kontinuierliche Winkelbereich (2π Radiant) entspricht mehr Wachstum als die diskrete Zählung von 4 Vierteldrehungen.
+Dies ist φ hoch 2π (nicht 4). Der Unterschied zwischen φ⁴ ≈ 6,854 und φ^{2π} ≈ 34,27 entsteht, weil 2π ≈ 6,283 > 4: Der kontinuierliche Winkelbereich (2π Radiant) entspricht mehr Wachstum als die diskrete Zählung von 4 Vierteldrehungen.
 
 **Schritt 2: Division durch die Grundsegmentierung.**
 
 Die elektromagnetische Kopplung ist das Inverse des gesamten Wachstumsfaktors, geteilt durch die Grundsegmentierung N₀ = 4:
 
-$$\alpha_{\text{SSZ}} = \frac{1}{\varphi^{2\pi} \cdot N_0} = \frac{1}{\varphi^{2\pi} \cdot 4}$$
+\alpha_{\text{SSZ}} = \frac{1}{\varphi^{2\pi} \cdot N_0} = \frac{1}{\varphi^{2\pi} \cdot 4}
 
 Numerisch:
 
-$$\alpha_{\text{SSZ}} = \frac{1}{34.27 \times 4} = \frac{1}{137.08}$$
+\alpha_{\text{SSZ}} = \frac{1}{34.27 \times 4} = \frac{1}{137.08}
 
 Dies reproduziert den gemessenen Wert α⁻¹ = 137,036 auf **0,03%**.
 
@@ -2014,10 +2023,10 @@ Dies reproduziert den gemessenen Wert α⁻¹ = 137,036 auf **0,03%**.
 
 Die Unterscheidung zwischen einer echten Ableitung und Numerologie ist einfach: **Eine Ableitung verwendet nur Größen, die bereits durch die Theorie bestimmt sind, ohne neue einstellbare Parameter.** Die SSZ-Ableitung von α verwendet genau zwei Größen:
 
-1. **φ = (1 + √5)/2 $\approx$ 1,618** — die Spiralwachstumskonstante, bereits durch die Segmentgeometrie festgelegt (Kapitel 2–3).
-2. **N₀ = 4** — die Grundsegmentierung, bereits durch die 2φ $\approx$ π-Identität festgelegt (Kapitel 2).
+1. **φ = (1 + √5)/2 ≈ 1,618** — die Spiralwachstumskonstante, bereits durch die Segmentgeometrie festgelegt (Kapitel 2–3).
+2. **N₀ = 4** — die Grundsegmentierung, bereits durch die 2φ ≈ π-Identität festgelegt (Kapitel 2).
 
-Keine neuen Parameter werden eingeführt. Keine Zahlen werden „ausprobiert", bis eine funktioniert. Das Ergebnis α $\approx$ 1/137 ist eine *Konsequenz* derselben Geometrie, die die Segmentdichte, die Zeitdilatation und alle anderen SSZ-Observablen erzeugt.
+Keine neuen Parameter werden eingeführt. Keine Zahlen werden „ausprobiert", bis eine funktioniert. Das Ergebnis α ≈ 1/137 ist eine *Konsequenz* derselben Geometrie, die die Segmentdichte, die Zeitdilatation und alle anderen SSZ-Observablen erzeugt.
 
 Man vergleiche dies mit Eddingtons Versuch: Er musste die Anzahl unabhängiger Komponenten eines Tensors bemühen (136 oder 137, je nach Version), die durch kein unabhängiges physikalisches Prinzip bestimmt war. Seine „Ableitung" war rückwärts konstruiert, um die richtige Antwort zu geben. Die SSZ-Ableitung folgt dagegen aus der φ-Spiralstruktur, ohne vorher zu wissen, welche Antwort zu erwarten ist.
 
@@ -2031,21 +2040,21 @@ Die 0,03%-Diskrepanz zwischen α_SSZ⁻¹ = 137,08 und dem gemessenen α⁻¹ = 
 
 In der Standardphysik ist α eine universelle Konstante — überall im Universum zu allen Zeiten dieselbe. Einige spekulative Theorien (Stringlandschaft, Kosmologien mit variablen Konstanten) legen nahe, dass α über kosmische Zeiträume oder in extremen Gravitationsumgebungen variieren könnte. Beobachtungssuchen nach solcher Variation, unter Verwendung von Quasar-Absorptionsspektren und Urknall-Nukleosynthese-Schranken, haben strenge Grenzen gesetzt: |Δα/α| < 10⁻⁶ über die letzten 10 Milliarden Jahre.
 
-In SSZ ist α *lokal* konstant, aber *strukturell* abgeleitet. Die Ableitung α = 1/(φ^{2π}·4) hängt von zwei Größen ab: φ (eine mathematische Konstante, überall gleich) und N₀ = 4 (die Grundsegmentierung, bestimmt durch die 2φ $\approx$ π-Identität beim Einheitsradius). Solange die Segmentgeometrie dieselbe ist — was sie durch die Selbstähnlichkeit der φ-Spirale ist — nimmt α überall in flacher oder schwach gekrümmter Raumzeit denselben Wert an.
+In SSZ ist α *lokal* konstant, aber *strukturell* abgeleitet. Die Ableitung α = 1/(φ^{2π}·4) hängt von zwei Größen ab: φ (eine mathematische Konstante, überall gleich) und N₀ = 4 (die Grundsegmentierung, bestimmt durch die 2φ ≈ π-Identität beim Einheitsradius). Solange die Segmentgeometrie dieselbe ist — was sie durch die Selbstähnlichkeit der φ-Spirale ist — nimmt α überall in flacher oder schwach gekrümmter Raumzeit denselben Wert an.
 
 Jedoch macht SSZ eine subtile, aber testbare Vorhersage: **In Regionen extremer Segmentierung (nahe Schwarze-Loch-Horizonten) könnte die effektive elektromagnetische Kopplung vom Flachraumzeitwert abweichen.** Der Grund ist, dass die Projektionsgeometrie von Abschnitt 5.2 flache Raumzeit-Segmentstruktur voraussetzt. Wenn die Segmentdichte groß ist (Ξ → Ξ_max), ändert sich die Projektionsgeometrie, weil die Segmente nicht mehr gleichförmig verteilt, sondern komprimiert sind. Das effektive α in solchen Regionen wäre:
 
-$$\alpha_{\text{eff}}(r) = \frac{1}{\varphi^{2\pi} \cdot N_0 \cdot (1 + \Xi(r))}$$
+\alpha_{\text{eff}}(r) = \frac{1}{\varphi^{2\pi} \cdot N_0 \cdot (1 + \Xi(r))}
 
-Am Horizont (Ξ $\approx$ 0,802) ergibt dies α_eff $\approx$ α/1,802 $\approx$ 1/247 — eine deutlich schwächere elektromagnetische Kopplung. Diese Vorhersage ist derzeit nicht testbar, weil wir keine elektromagnetischen Experimente an Schwarze-Loch-Horizonten durchführen können, aber sie ist eine echte, falsifizierbare Vorhersage des SSZ-Rahmenwerks.
+Am Horizont (Ξ ≈ 0,802) ergibt dies α_eff ≈ α/1,802 ≈ 1/247 — eine deutlich schwächere elektromagnetische Kopplung. Diese Vorhersage ist derzeit nicht testbar, weil wir keine elektromagnetischen Experimente an Schwarze-Loch-Horizonten durchführen können, aber sie ist eine echte, falsifizierbare Vorhersage des SSZ-Rahmenwerks.
 
 ### Verbindung zum laufenden Kopplungskonstante
 
 In der QED „läuft" α mit der Energieskala aufgrund von Vakuumpolarisation: Virtuelle Elektron-Positron-Paare schirmen die nackte Ladung bei niedrigen Energien ab, und Sonden höherer Energie durchdringen diese Abschirmung tiefer. Das Ergebnis ist, dass α mit dem Impulsübertrag q² zunimmt:
 
-$$\alpha(q^2) = \frac{\alpha(0)}{1 - \frac{\alpha(0)}{3\pi}\ln(q^2/m_e^2c^2)}$$
+\alpha(q^2) = \frac{\alpha(0)}{1 - \frac{\alpha(0)}{3\pi}\ln(q^2/m_e^2c^2)}
 
-Bei der Z-Boson-Masse (q $\approx$ 91 GeV/c) gilt α⁻¹ $\approx$ 128 — signifikant verschieden vom Niederenergiewert 137.
+Bei der Z-Boson-Masse (q ≈ 91 GeV/c) gilt α⁻¹ ≈ 128 — signifikant verschieden vom Niederenergiewert 137.
 
 In SSZ hat dieses Laufen eine geometrische Interpretation. Höherenergetische Wechselwirkungen sondieren feinere Segmentskalen — sie „sehen" mehr von der inneren Struktur jedes φ-Segments. Die effektive Kopplung nimmt zu, weil sich die Projektionsgeometrie ändert, wenn Sub-Segment-Struktur aufgelöst wird. Das SSZ-Rahmenwerk ersetzt nicht die QED-Renormierung, sondern liefert einen geometrischen Kontext zum Verständnis, *warum* die Kopplung läuft: Sie läuft, weil die Segmentstruktur innere Details hat, die bei höheren Energien sichtbar werden.
 ## 5.4 Gebundene Energie und der strukturelle Ursprung
@@ -2056,33 +2065,33 @@ Das Konzept der „gebundenen Energie" in SSZ bezieht sich auf den Bruchteil der
 
 Für elektromagnetische Wechselwirkungen ist der Bruchteil der gebundenen Energie genau α:
 
-$$E_{\text{bound}} = \alpha \cdot E_{\text{total}}$$
+E_{\text{bound}} = \alpha \cdot E_{\text{total}}
 
 Dies bedeutet, 1/137 des elektromagnetischen Energiebudgets geht in die Aufrechterhaltung der Segmentstruktur, durch die sich das Photon ausbreitet. Die verbleibenden 136/137 sind die „freie" elektromagnetische Energie, die beobachtbare Effekte erzeugt (Photonenemission, atomare Bindung usw.).
 
-**Physikalische Interpretation.** Wenn ein Photon durch segmentierte Raumzeit reist, muss es an jeder Segmentgrenze eine „Maut" entrichten — ein Bruchteil α seiner Energie wird vorübergehend von der Segmentstruktur absorbiert und wieder emittiert. Über viele Segmente ist der Nettoeffekt eine Reduktion der effektiven Kopplung um den Faktor α. Deshalb sind elektromagnetische Wechselwirkungen schwach (α $\approx$ 1/137) statt stark (α_s ~ 1): Photonen wechselwirken schwach mit der Segmentstruktur, weil die transversale Projektion (Abschnitt 5.2) nur einen kleinen Bruchteil des gesamten Segmentquerschnitts auswählt.
+**Physikalische Interpretation.** Wenn ein Photon durch segmentierte Raumzeit reist, muss es an jeder Segmentgrenze eine „Maut" entrichten — ein Bruchteil α seiner Energie wird vorübergehend von der Segmentstruktur absorbiert und wieder emittiert. Über viele Segmente ist der Nettoeffekt eine Reduktion der effektiven Kopplung um den Faktor α. Deshalb sind elektromagnetische Wechselwirkungen schwach (α ≈ 1/137) statt stark (α_s ~ 1): Photonen wechselwirken schwach mit der Segmentstruktur, weil die transversale Projektion (Abschnitt 5.2) nur einen kleinen Bruchteil des gesamten Segmentquerschnitts auswählt.
 
 ### Verbindung zum Wasserstoffatom
 
 Das Wasserstoffatom liefert den präzisesten Test der elektromagnetischen Kopplung. Die Bindungsenergie des Grundzustands ist:
 
-$$E_1 = -\frac{1}{2} \alpha^2 m_e c^2 \approx -13.6 \text{ eV}$$
+E_1 = -\frac{1}{2} \alpha^2 m_e c^2 \approx -13.6 \text{ eV}
 
 Der α²-Faktor erscheint, weil das Elektron mit der Segmentstruktur *zweimal* wechselwirkt — einmal durch sein eigenes elektromagnetisches Feld und einmal durch das elektromagnetische Feld des Kerns. Jede Wechselwirkung trägt einen Faktor α bei, was insgesamt α² ergibt. Der Faktor 1/2 ist die übliche Virial-Theorem-Beziehung zwischen kinetischer und potentieller Energie in einem Coulomb-Potential.
 
 SSZ ändert dieses Ergebnis nicht — die Bindungsenergie des Wasserstoffs ist dieselbe wie in der Standard-QED. Aber SSZ liefert einen geometrischen Grund, warum α² (nicht α oder α³) die atomare Bindung bestimmt: **Es ist eine Doppelprojektion**, eine für jedes am Wechselwirkungsprozess beteiligte geladene Teilchen. Ein einzelnes Photon, das Segmente durchquert, trägt einen Faktor α bei; zwei wechselwirkende Ladungen tragen α² bei.
 
-Dieses Muster erstreckt sich auf Prozesse höherer Ordnung. Die Lamb-Verschiebung (eine Korrektur der Wasserstoff-Energieniveaus durch Vakuumpolarisation) skaliert als α⁵$m_{ec}$² und reflektiert fünf Projektionen in den relevanten Feynman-Diagrammen. Die Korrektur des anomalen magnetischen Moments skaliert als α/(2π) und reflektiert eine Projektion, modifiziert durch die Winkelintegration über die Segmentgeometrie.
+Dieses Muster erstreckt sich auf Prozesse höherer Ordnung. Die Lamb-Verschiebung (eine Korrektur der Wasserstoff-Energieniveaus durch Vakuumpolarisation) skaliert als α⁵m_ec² und reflektiert fünf Projektionen in den relevanten Feynman-Diagrammen. Die Korrektur des anomalen magnetischen Moments skaliert als α/(2π) und reflektiert eine Projektion, modifiziert durch die Winkelintegration über die Segmentgeometrie.
 
 ## 5.5 Validierung und Konsistenz
 
 **Testdateien:** `test_alpha_structure`, `test_bound_energy`
 
-**Was die Tests beweisen:** Die numerische Berechnung α_SSZ = 1/(φ^{2π}·4) $\approx$ 1/137,08 ist bis zur Maschinengenauigkeit korrekt; der Bruchteil der gebundenen Energie E_bound/E_total = α gilt für Testfälle mit Photonenausbreitung durch Segmentstrukturen; die Projektionsformel ist konsistent mit der φ-Spiralgeometrie; und das effektive α_eff(r) nimmt monoton mit zunehmendem Ξ ab, wie vorhergesagt.
+**Was die Tests beweisen:** Die numerische Berechnung α_SSZ = 1/(φ^{2π}·4) ≈ 1/137,08 ist bis zur Maschinengenauigkeit korrekt; der Bruchteil der gebundenen Energie E_bound/E_total = α gilt für Testfälle mit Photonenausbreitung durch Segmentstrukturen; die Projektionsformel ist konsistent mit der φ-Spiralgeometrie; und das effektive α_eff(r) nimmt monoton mit zunehmendem Ξ ab, wie vorhergesagt.
 
 **Was die Tests NICHT beweisen:** Dass α *physikalisch* aus der Segmentgeometrie stammt. Die Tests verifizieren die mathematische Ableitung, nicht die physikalische Behauptung. Unabhängige experimentelle Bestätigung würde die Messung von α in extremen Gravitationsumgebungen erfordern.
 
-**Reproduktion:** `E:/clone\segmented-calculation-suite/tests/` — `test_alpha_structure.py`, `test_bound_energy.py`. Alle Tests bestanden.
+**Reproduktion:** `E:\clone\segmented-calculation-suite\tests\` — `test_alpha_structure.py`, `test_bound_energy.py`. Alle Tests bestanden.
 
 ---
 
@@ -2090,10 +2099,10 @@ Dieses Muster erstreckt sich auf Prozesse höherer Ordnung. Die Lamb-Verschiebun
 
 | # | Formel | Bereich |
 |---|---------|--------|
-| 1 | α = e²/(4πε₀ℏc) $\approx$ 1/137,036 | QED-Definition |
-| 2 | α_SSZ = 1/(φ^{2π}·N₀) $\approx$ 1/137,08 | SSZ-Ableitung |
+| 1 | α = e²/(4πε₀ℏc) ≈ 1/137,036 | QED-Definition |
+| 2 | α_SSZ = 1/(φ^{2π}·N₀) ≈ 1/137,08 | SSZ-Ableitung |
 | 3 | E_bound = α · E_total | Bruchteil gebundener Energie |
-| 4 | E₁ = −½α²m_ec² $\approx$ −13,6 eV | Wasserstoff-Grundzustand |
+| 4 | E₁ = −½α²m_ec² ≈ −13,6 eV | Wasserstoff-Grundzustand |
 | 5 | α_eff(r) = α/(1 + Ξ(r)) | effektives α in gekrümmter Raumzeit |
 
 ---
@@ -2121,7 +2130,7 @@ Zum Vergleich: Die Einschleifen-QED-Korrektur zu α beträgt α/(2π) = 0,00116,
 
 ### Warum dieses Ergebnis wichtig ist
 
-Die Feinstrukturkonstante α $\approx$ 1/137 bestimmt die Stärke der elektromagnetischen Wechselwirkung. Sie bestimmt die Größe von Atomen, die Rate chemischer Reaktionen, die Transparenz der Atmosphäre und die Stabilität von Sternen. Wäre α 4 Prozent größer, würde Kohlenstoff nicht in der stellaren Nukleosynthese entstehen; wäre sie 4 Prozent kleiner, würden Sterne nicht zünden.
+Die Feinstrukturkonstante α ≈ 1/137 bestimmt die Stärke der elektromagnetischen Wechselwirkung. Sie bestimmt die Größe von Atomen, die Rate chemischer Reaktionen, die Transparenz der Atmosphäre und die Stabilität von Sternen. Wäre α 4 Prozent größer, würde Kohlenstoff nicht in der stellaren Nukleosynthese entstehen; wäre sie 4 Prozent kleiner, würden Sterne nicht zünden.
 
 Trotz ihrer Bedeutung behandelt das Standardmodell der Teilchenphysik α als freien Parameter. SSZ liefert eine Vorhersage: α_SSZ = 1/(φ^{2π} × 4) = 1/137,08. Die Ableitung erfordert keine Eingabe jenseits der Segmentgittergeometrie (bestimmt durch φ und π) und der Vierteldrehungssegmentierung (N₀ = 4). Die Übereinstimmung mit dem Experiment auf 0,03 Prozent ist bemerkenswert für eine Tree-Level-Vorhersage mit null einstellbaren Parametern.
 
@@ -2135,13 +2144,13 @@ Das Testen des SSZ-Laufens erfordert spektroskopische Messungen in starken Gravi
 
 ### Vergleich mit anderen parameterfreien Vorhersagen
 
-Die Physik hat eine kurze Liste parameterfreier Vorhersagen. Die berühmtesten sind: der gyromagnetische Faktor des Elektrons (Dirac: g = 2 exakt, Einschleifen-QED: g = 2,00232), die Wasserstoff-Energieniveaus und die Casimir-Kraft. Die Casimir-Kraft F/A = −π²ℏc/(240d⁴) ist parameterfrei und auf ~1% bestätigt. Die SSZ-Vorhersage α = 1/(φ^{2π} × 4) gehört in diese Kategorie — eine Tree-Level-Vorhersage, die mit dem Experiment auf 0,03 Prozent übereinstimmt. Perturbative Korrekturen der Ordnung α² $\approx$ 5×10⁻⁵ könnten die Diskrepanz schließen.
+Die Physik hat eine kurze Liste parameterfreier Vorhersagen. Die berühmtesten sind: der gyromagnetische Faktor des Elektrons (Dirac: g = 2 exakt, Einschleifen-QED: g = 2,00232), die Wasserstoff-Energieniveaus und die Casimir-Kraft. Die Casimir-Kraft F/A = −π²ℏc/(240d⁴) ist parameterfrei und auf ~1% bestätigt. Die SSZ-Vorhersage α = 1/(φ^{2π} × 4) gehört in diese Kategorie — eine Tree-Level-Vorhersage, die mit dem Experiment auf 0,03 Prozent übereinstimmt. Perturbative Korrekturen der Ordnung α² ≈ 5×10⁻⁵ könnten die Diskrepanz schließen.
 
 ### Sensitivitätsanalyse
 
 Die Vorhersage α = 1/(φ^{2π} × N₀) hängt von drei Größen ab: φ, π und N₀. Die Größen φ und π sind mathematische Konstanten (sie können nicht perturbiert werden). Die Ganzzahl N₀ ist diskret. Wenn N₀ = 3 statt 4: α = 1/(φ^{2π} × 3) = 1/102,8, 33% daneben. Wenn N₀ = 5: α = 1/(φ^{2π} × 5) = 1/171,4, 25% daneben. Die Vorhersage ist extrem empfindlich gegenüber N₀: Nur N₀ = 4 liefert ein Ergebnis innerhalb von 1 Prozent des experimentellen Wertes. Diese Sensitivität bedeutet, dass entweder N₀ = 4 korrekt ist (und die Übereinstimmung echt) oder die Übereinstimmung eine 1-zu-4-Koinzidenz ist.
 
-Die Sensitivität bezüglich des Exponenten ist ebenfalls aufschlussreich. Wäre der Exponent 2π + ε statt exakt 2π, würde sich die Vorhersage um ε × ln(φ) × α $\approx$ 0,5ε × α ändern. Um den experimentellen Wert exakt zu treffen (statt auf 0,03%), müsste der Exponent 2π − 0,0006 betragen — eine Korrektur von 0,01% vom exakten Wert 2π. Diese kleine Korrektur ist konsistent mit Schleifenkorrekturen der Ordnung α $\approx$ 0,007.
+Die Sensitivität bezüglich des Exponenten ist ebenfalls aufschlussreich. Wäre der Exponent 2π + ε statt exakt 2π, würde sich die Vorhersage um ε × ln(φ) × α ≈ 0,5ε × α ändern. Um den experimentellen Wert exakt zu treffen (statt auf 0,03%), müsste der Exponent 2π − 0,0006 betragen — eine Korrektur von 0,01% vom exakten Wert 2π. Diese kleine Korrektur ist konsistent mit Schleifenkorrekturen der Ordnung α ≈ 0,007.
 
 ### Zusammenfassung und Brücke zu Teil II
 
@@ -2151,11 +2160,11 @@ Teil II wechselt von den Grundlagen zur Kinematik. Die Segmentdichte Ξ, die in 
 
 ### Schleifenkorrekturen: Der Weg zur exakten Uebereinstimmung
 
-Die Tree-Level-Vorhersage $\alpha_{\text{SSZ}}$ = 1/137,08 weicht um 0,032% vom experimentellen Wert $\alpha_{\text{exp}}$ = 1/137,036 ab. Diese Diskrepanz ist konsistent mit der Erwartung, dass Schleifenkorrekturen (perturbative Korrekturen hoeherer Ordnung) die Vorhersage verbessern.
+Die Tree-Level-Vorhersage alpha_SSZ = 1/137,08 weicht um 0,032% vom experimentellen Wert alpha_exp = 1/137,036 ab. Diese Diskrepanz ist konsistent mit der Erwartung, dass Schleifenkorrekturen (perturbative Korrekturen hoeherer Ordnung) die Vorhersage verbessern.
 
-In der QED ist die Situation analog: Die Tree-Level-Vorhersage fuer das anomale magnetische Moment des Elektrons ist $a_{e}$ = alpha/(2pi) = 0,00116. Die Einschleifen-Korrektur verbessert dies auf $a_{e}$ = 0,001159652... Die Fuenfschleifen-Korrektur (berechnet von Aoyama et al., 2012) stimmt mit dem Experiment auf 10^{-12} ueberein.
+In der QED ist die Situation analog: Die Tree-Level-Vorhersage fuer das anomale magnetische Moment des Elektrons ist a_e = alpha/(2pi) = 0,00116. Die Einschleifen-Korrektur verbessert dies auf a_e = 0,001159652... Die Fuenfschleifen-Korrektur (berechnet von Aoyama et al., 2012) stimmt mit dem Experiment auf 10^{-12} ueberein.
 
-Fuer SSZ wuerden die Schleifenkorrekturen aus der Wechselwirkung eines Photons mit dem Segmentgitter entstehen. Die fuehrende Korrektur ist von der Ordnung $\alpha_{\text{SSZ}}$^2 ~ 5 x 10^{-5}, was die 0,032%-Diskrepanz erklaeren koennte. Die Berechnung dieser Korrektur erfordert eine vollstaendige Quantisierung des Segmentgitters — ein offenes Problem, das in Kapitel 29 als zweite Prioritaet identifiziert wird.
+Fuer SSZ wuerden die Schleifenkorrekturen aus der Wechselwirkung eines Photons mit dem Segmentgitter entstehen. Die fuehrende Korrektur ist von der Ordnung alpha_SSZ^2 ~ 5 x 10^{-5}, was die 0,032%-Diskrepanz erklaeren koennte. Die Berechnung dieser Korrektur erfordert eine vollstaendige Quantisierung des Segmentgitters — ein offenes Problem, das in Kapitel 29 als zweite Prioritaet identifiziert wird.
 
 Das Muster ueber verschiedene Theorien ist aufschlussreich: Tree-Level-Vorhersagen aus fundamentalen Theorien sind typischerweise auf 0,1-1% genau, wobei perturbative Korrekturen die Uebereinstimmung um mehrere Groessenordnungen verbessern. Wenn SSZ diesem Muster folgt, sollte die schleifenkorrigierte Vorhersage mit dem Experiment auf ~10^{-6} oder besser uebereinstimmen.
 
@@ -2175,7 +2184,7 @@ Die Geschichte der Versuche, die Feinstrukturkonstante aus ersten Prinzipien abz
 
 ### Numerische Verifikation der alpha-Ableitung
 
-Die numerische Verifikation von $\alpha_{\text{SSZ}}$ = 1/(phi^{2pi} x 4) erfordert Hochpraezisions-Arithmetik, weil die beteiligten Zahlen viele signifikante Stellen haben:
+Die numerische Verifikation von alpha_SSZ = 1/(phi^{2pi} x 4) erfordert Hochpraezisions-Arithmetik, weil die beteiligten Zahlen viele signifikante Stellen haben:
 
 phi = 1.6180339887498948482...
 2*pi = 6.2831853071795864769...
@@ -2195,31 +2204,31 @@ Alle drei Implementierungen stimmen auf 50 Dezimalstellen ueberein, was numerisc
 
 ### Sensitivitaetsanalyse: Wie robust ist die Ableitung?
 
-Die Sensitivitaet von $\alpha_{\text{SSZ}}$ gegenueber kleinen Aenderungen der Eingabeparameter:
+Die Sensitivitaet von alpha_SSZ gegenueber kleinen Aenderungen der Eingabeparameter:
 
-**Variation von phi:** Wenn phi um $\delta_{\phi}$ variiert wird, aendert sich alpha um $\delta_{\alpha}$/alpha = -2pi * $\delta_{\phi}$/phi * ln(phi). Fuer $\delta_{\phi}$ = 10^{-10} (die Praezision, mit der phi aus der Fibonacci-Folge berechnet werden kann) ergibt sich $\delta_{\alpha}$/alpha = 3.8 x 10^{-10} — voellig vernachlaessigbar.
+**Variation von phi:** Wenn phi um delta_phi variiert wird, aendert sich alpha um delta_alpha/alpha = -2pi * delta_phi/phi * ln(phi). Fuer delta_phi = 10^{-10} (die Praezision, mit der phi aus der Fibonacci-Folge berechnet werden kann) ergibt sich delta_alpha/alpha = 3.8 x 10^{-10} — voellig vernachlaessigbar.
 
-**Variation von pi:** Wenn pi um $\delta_{\pi}$ variiert wird, aendert sich alpha um $\delta_{\alpha}$/alpha = -$\delta_{\pi}$ * ln(phi). Fuer $\delta_{\pi}$ = 10^{-10} ergibt sich $\delta_{\alpha}$/alpha = 4.8 x 10^{-11} — ebenfalls vernachlaessigbar.
+**Variation von pi:** Wenn pi um delta_pi variiert wird, aendert sich alpha um delta_alpha/alpha = -delta_pi * ln(phi). Fuer delta_pi = 10^{-10} ergibt sich delta_alpha/alpha = 4.8 x 10^{-11} — ebenfalls vernachlaessigbar.
 
 **Variation von N0:** Wenn N0 von 4 auf 3 oder 5 geaendert wird, aendert sich alpha dramatisch: alpha(N0=3) = 1/102.8, alpha(N0=5) = 1/171.4. Nur N0 = 4 liefert einen Wert nahe dem experimentellen alpha. Dies ist ein starkes Argument fuer N0 = 4 und damit fuer die 3+1-Dimensionalitaet der Raumzeit.
 
 ### Vergleich mit dem Laufen von alpha
 
-In der QED laeuft die Feinstrukturkonstante mit der Energieskala: alpha(Q) = alpha(0) / (1 - alpha(0)/(3pi) * ln(Q^2/m_e^2 c^4)). Bei der Z-Boson-Masse (Q = 91.2 GeV) ist alpha($M_{Z}$) = 1/127.9.
+In der QED laeuft die Feinstrukturkonstante mit der Energieskala: alpha(Q) = alpha(0) / (1 - alpha(0)/(3pi) * ln(Q^2/m_e^2 c^4)). Bei der Z-Boson-Masse (Q = 91.2 GeV) ist alpha(M_Z) = 1/127.9.
 
-In SSZ ist das Laufen von alpha durch die Segmentdichte bestimmt: alpha(r) = $\alpha_{\text{SSZ}}$ * (1 + Xi(r)). Im Schwachfeld (Xi << 1) ist die Korrektur vernachlaessigbar. Im Starkfeld (Xi ~ 0.8) ist alpha($r_{s}$) = $\alpha_{\text{SSZ}}$ * 1.802 = 1/76.1. Dies ist eine spezifische Vorhersage: Die Feinstrukturkonstante ist in der Naehe der natuerlichen Grenze fast doppelt so gross wie im flachen Raum.
+In SSZ ist das Laufen von alpha durch die Segmentdichte bestimmt: alpha(r) = alpha_SSZ * (1 + Xi(r)). Im Schwachfeld (Xi << 1) ist die Korrektur vernachlaessigbar. Im Starkfeld (Xi ~ 0.8) ist alpha(r_s) = alpha_SSZ * 1.802 = 1/76.1. Dies ist eine spezifische Vorhersage: Die Feinstrukturkonstante ist in der Naehe der natuerlichen Grenze fast doppelt so gross wie im flachen Raum.
 
 Die experimentelle Verifikation des SSZ-Laufens erfordert Spektroskopie von Atomen in starken Gravitationsfeldern — ein extrem schwieriges Experiment, das mit aktueller Technologie nicht durchfuehrbar ist. Allerdings koennte das Laufen indirekte Konsequenzen haben: Die Bindungsenergien von Atomen nahe der natuerlichen Grenze waeren modifiziert, was die Spektrallinien der Oberflaechenemission eines dunklen Sterns beeinflusst.
 
 ### Experimentelle Vorschlaege zur Messung von alpha in Gravitationsfeldern
 
-Die SSZ-Vorhersage alpha(r) = $\alpha_{\text{SSZ}}$ * (1 + Xi(r)) koennte durch folgende Experimente getestet werden:
+Die SSZ-Vorhersage alpha(r) = alpha_SSZ * (1 + Xi(r)) koennte durch folgende Experimente getestet werden:
 
 **Spektroskopie von Weissen Zwergen:** Weisse Zwerge haben Oberflaechengravitationen von g ~ 10^8 m/s^2 und Xi ~ 10^{-4}. Die SSZ-Korrektur zu alpha betraegt ~0,01%, was einer Verschiebung der Spektrallinien um ~0,01% entspricht. Hochaufloesende Spektroskopie (R > 100.000) mit dem VLT oder ELT koennte diese Verschiebung detektieren, wenn systematische Effekte (Druckverbreiterung, Magnetfelder) kontrolliert werden.
 
 **Atomuhren auf Raumsonden:** Optische Atomuhren auf interplanetaren Sonden (z.B. auf einer Sonnensonde bei r ~ 10 Sonnenradien) wuerden die Uebergangsfrequenzen in einem staerkeren Gravitationsfeld messen. Die SSZ-Korrektur bei 10 Sonnenradien betraegt Xi ~ 2 x 10^{-5}, was mit optischen Uhren (Praezision 10^{-18}) messbar waere.
 
-**Quasar-Absorptionslinien:** Quasar-Absorptionssysteme bei hoher Rotverschiebung (z > 1) durchqueren verschiedene Gravitationspotentiale. Die Many-Multiplet-Methode (Webb et al.) sucht nach Variationen von alpha ueber kosmologische Distanzen. Bisherige Ergebnisse sind widersprüchlich ($\Delta_{\alpha}$/alpha ~ 10^{-5}), aber zukuenftige Messungen mit dem ELT-ANDES-Spektrographen werden die Praezision um eine Groessenordnung verbessern.
+**Quasar-Absorptionslinien:** Quasar-Absorptionssysteme bei hoher Rotverschiebung (z > 1) durchqueren verschiedene Gravitationspotentiale. Die Many-Multiplet-Methode (Webb et al.) sucht nach Variationen von alpha ueber kosmologische Distanzen. Bisherige Ergebnisse sind widersprüchlich (Delta_alpha/alpha ~ 10^{-5}), aber zukuenftige Messungen mit dem ELT-ANDES-Spektrographen werden die Praezision um eine Groessenordnung verbessern.
 
 ### Zusammenfassung: Die Feinstrukturkonstante in SSZ
 
@@ -2267,12 +2276,12 @@ Die Feinstrukturkonstante alpha = 1/137,036 hat Physiker seit ihrer Entdeckung f
 
 Der SSZ-Ansatz unterscheidet sich von allen frueheren Versuchen durch seine Verbindung zu einer vollstaendigen Gravitationstheorie. Die Feinstrukturkonstante ist nicht isoliert abgeleitet, sondern als Konsequenz der Segmentgeometrie, die auch die Gravitation beschreibt.
 
+---
 
-\newpage
+# Kapitel 6: Lorentz-Unbestimmtheit bei v = 0
 
-\part{Kinematik}
-
-# Lorentz-Unbestimmtheit bei v = 0
+**Teil II — Kinematik**
+**Status:** ERWEITERTE FASSUNG
 
 
 ![Abb 6](figures/ch06_lorentz/fig_06_01_lorentz_indeterminacy.png)
@@ -2297,7 +2306,7 @@ SSZ schlägt eine einheitliche Auflösung vor. Durch Einführung einer segmentbe
 
 Dieses Kapitel behandelt eine konzeptionelle Lücke in der Speziellen Relativitätstheorie, die die meisten Lehrbücher übergehen. Der Lorentz-Faktor γ = 1/√(1−v²/c²) hängt nur von der Geschwindigkeit ab. Wenn ein Objekt ruht (v = 0), gilt γ = 1 unabhängig von der Gravitationsumgebung. Eine Uhr auf der Oberfläche eines Neutronensterns und eine Uhr im tiefen Weltraum haben beide γ = 1, wenn sie ruhen — doch sie ticken mit sehr unterschiedlichen Raten aufgrund gravitativer Zeitdilatation.
 
-In der Standardphysik wird dies durch die Allgemeine Relativitätstheorie gelöst: Die Metrikkomponente $g_{tt}$ kodiert die gravitative Zeitdilatation separat vom kinematischen Lorentz-Faktor. SSZ verfolgt einen anderen Ansatz. Statt zweier getrennter Mechanismen führt SSZ einen einzigen modifizierten Lorentz-Faktor γ_seg ein, der sowohl von der Geschwindigkeit als auch von der Segmentdichte abhängt.
+In der Standardphysik wird dies durch die Allgemeine Relativitätstheorie gelöst: Die Metrikkomponente g_tt kodiert die gravitative Zeitdilatation separat vom kinematischen Lorentz-Faktor. SSZ verfolgt einen anderen Ansatz. Statt zweier getrennter Mechanismen führt SSZ einen einzigen modifizierten Lorentz-Faktor γ_seg ein, der sowohl von der Geschwindigkeit als auch von der Segmentdichte abhängt.
 
 Intuitiv bedeutet dies: Man stelle sich zwei identische Autos auf verschiedenen Straßen vor. Eine Straße ist glatt (flacher Raum), die andere ist mit Bodenschwellen bedeckt (hohe Segmentdichte). Bei Geschwindigkeit null stehen beide Autos still. Aber das Auto auf der holprigen Straße befindet sich bereits in einem anderen Zustand — es dauert länger, eine beliebige Strecke zu durchqueren, wegen der Bodenschwellen. Der γ_seg-Faktor erfasst sowohl den Geschwindigkeitseffekt als auch den Straßenqualitätseffekt in einer einzigen Zahl.
 
@@ -2333,19 +2342,19 @@ Alle drei Effekte verschwinden bei v = 0: γ = 1, also keine Zeitdilatation, kei
 
 ### Das Problem: Gravitation ohne Bewegung
 
-Nun betrachte man eine stationäre Uhr auf der Oberfläche eines Neutronensterns. Die Uhr bewegt sich nicht (v = 0), also gibt der Lorentz-Faktor γ = 1. Doch diese Uhr tickt dramatisch langsamer als eine Uhr weit vom Neutronenstern entfernt. Die gravitative Zeitdilatation für einen typischen Neutronenstern (M = 1,4 M$\odot$, R = 10 km) beträgt:
+Nun betrachte man eine stationäre Uhr auf der Oberfläche eines Neutronensterns. Die Uhr bewegt sich nicht (v = 0), also gibt der Lorentz-Faktor γ = 1. Doch diese Uhr tickt dramatisch langsamer als eine Uhr weit vom Neutronenstern entfernt. Die gravitative Zeitdilatation für einen typischen Neutronenstern (M = 1,4 M☉, R = 10 km) beträgt:
 
-$$D_{\text{GR}} = \sqrt{1 - r_s/R} = \sqrt{1 - 4.14/10} \approx 0.764$$
+D_{\text{GR}} = \sqrt{1 - r_s/R} = \sqrt{1 - 4.14/10} \approx 0.764
 
 Die Uhr tickt mit nur 76,4% der Rate einer fernen Uhr — eine Verlangsamung um 23,6% — doch der Lorentz-Faktor weiß nichts davon. Die Uhr ist stationär, also γ = 1, und der Lorentz-Faktor meldet „keine Zeitdilatation".
 
-Dasselbe Problem erscheint in dramatischerer Form am Horizont eines Schwarzen Lochs. Eine stationäre Uhr bei r = $r_{s}$ hat γ = 1 (sie bewegt sich nicht), aber die ART-Zeitdilatation gibt $D_{GR}$ = √(1 − 1) = 0 — die Uhr ist vollständig stehengeblieben. Der Lorentz-Faktor verpasst dies völlig.
+Dasselbe Problem erscheint in dramatischerer Form am Horizont eines Schwarzen Lochs. Eine stationäre Uhr bei r = r_s hat γ = 1 (sie bewegt sich nicht), aber die ART-Zeitdilatation gibt D_GR = √(1 − 1) = 0 — die Uhr ist vollständig stehengeblieben. Der Lorentz-Faktor verpasst dies völlig.
 
 **Die GPS-Illustration.** Das Global Positioning System liefert die praktischste Demonstration dieses Problems. Jeder GPS-Satellit umkreist die Erde in ~20.200 km Höhe mit Geschwindigkeit ~3,87 km/s. Zwei Zeitdilatationseffekte wirken auf die Satellitenuhren:
 
-1. **Kinematisch (speziell-relativistisch):** Die Orbitalgeschwindigkeit verlangsamt die Satellitenuhr um Δf/f = −v²/(2c²) $\approx$ −8,3 × 10⁻¹¹, was −7,2 μs/Tag entspricht.
+1. **Kinematisch (speziell-relativistisch):** Die Orbitalgeschwindigkeit verlangsamt die Satellitenuhr um Δf/f = −v²/(2c²) ≈ −8,3 × 10⁻¹¹, was −7,2 μs/Tag entspricht.
 
-2. **Gravitativ (allgemein-relativistisch):** Der Satellit befindet sich höher im Gravitationstrichter der Erde als Bodenuhren, läuft also *schneller* um Δf/f $\approx$ +5,3 × 10⁻¹⁰, was +45,9 μs/Tag entspricht.
+2. **Gravitativ (allgemein-relativistisch):** Der Satellit befindet sich höher im Gravitationstrichter der Erde als Bodenuhren, läuft also *schneller* um Δf/f ≈ +5,3 × 10⁻¹⁰, was +45,9 μs/Tag entspricht.
 
 Der Nettoeffekt beträgt +38,7 μs/Tag — die Satellitenuhren laufen vor. Ohne Korrektur würden GPS-Positionen um ~11 km pro Tag driften. Die Gravitationskorrektur ist **sechsmal größer** als die kinematische Korrektur, doch der Lorentz-Faktor erfasst nur den kinematischen Teil.
 
@@ -2357,11 +2366,11 @@ Die Rapidität χ = atanh(v/c) beseitigt die v = 0 Singularität. Der **Bisektor
 
 Die ART löst das v = 0 Problem durch Einführung einer völlig neuen mathematischen Struktur: des metrischen Tensors g_μν. In der ART ist das Eigenzeitintervall:
 
-$$d\tau^2 = -g_{\mu\nu} dx^\mu dx^\nu$$
+d\tau^2 = -g_{\mu\nu} dx^\mu dx^\nu
 
 Für einen stationären Beobachter (dx^i = 0) in der Schwarzschild-Metrik:
 
-$$d\tau = \sqrt{-g_{tt}} \, dt = \sqrt{1 - r_s/r} \, dt$$
+d\tau = \sqrt{-g_{tt}} \, dt = \sqrt{1 - r_s/r} \, dt
 
 Dies gibt die gravitative Zeitdilatation ohne Bezug auf Geschwindigkeit. Mathematisch ist dies perfekt konsistent. Physikalisch ist es aus drei Gründen unbefriedigend:
 
@@ -2402,7 +2411,7 @@ Untersuchen wir, was diese Formel in jedem physikalischen Regime vorhersagt:
 
 D_{\text{total}} = D_{\text{grav}}(r) \cdot \frac{1}{\gamma_{\text{seg}}} = \frac{1}{(1 + \Xi(r)) \cdot \exp(\Xi \cdot v^2/c^2)}
 
-Dies ist die einheitliche Formel, die SSZ liefert. Das Gravitationsstück $D_{grav}$ = 1/(1 + Ξ) erfasst den stationären Effekt des Aufenthalts in einer segmentierten Region. Das kinematische Stück 1/γ_seg erfasst den zusätzlichen Effekt der Bewegung durch diese segmentierte Region.
+Dies ist die einheitliche Formel, die SSZ liefert. Das Gravitationsstück D_grav = 1/(1 + Ξ) erfasst den stationären Effekt des Aufenthalts in einer segmentierten Region. Das kinematische Stück 1/γ_seg erfasst den zusätzlichen Effekt der Bewegung durch diese segmentierte Region.
 
 ### Warum die Exponentialform?
 
@@ -2412,13 +2421,13 @@ Die Exponentialform exp(Ξ · v²/c²) ist nicht willkürlich — sie wird durch
 
 **Argument 2: Kompositionsgesetz.** Wenn sich ein Objekt mit Geschwindigkeit v₁ und dann mit v₂ bewegt (beide klein gegen c), sollten sich die kinematischen Korrekturen multiplikativ zusammensetzen:
 
-$$\gamma_{\text{seg}}(v_1) \cdot \gamma_{\text{seg}}(v_2) = \exp(\Xi v_1^2/c^2) \cdot \exp(\Xi v_2^2/c^2) = \exp(\Xi(v_1^2 + v_2^2)/c^2)$$
+\gamma_{\text{seg}}(v_1) \cdot \gamma_{\text{seg}}(v_2) = \exp(\Xi v_1^2/c^2) \cdot \exp(\Xi v_2^2/c^2) = \exp(\Xi(v_1^2 + v_2^2)/c^2)
 
 Diese multiplikative Komposition ist das Kennzeichen von Exponentialfunktionen.
 
 **Argument 3: Schwachfeldgrenzwert.** Für Ξ ≪ 1 und v ≪ c reduziert sich die Exponentialform auf:
 
-$$\gamma_{\text{seg}} \approx 1 + \Xi \cdot v^2/c^2 + \mathcal{O}(\Xi^2 v^4/c^4)$$
+\gamma_{\text{seg}} \approx 1 + \Xi \cdot v^2/c^2 + \mathcal{O}(\Xi^2 v^4/c^4)
 
 Die führende Korrektur ist proportional zu Ξv²/c², dem Produkt der Gravitationskopplung (Ξ) und der kinematischen Kopplung (v²/c²). Dies ist die erwartete Form für einen Kreuzterm zwischen Gravitation und Bewegung.
 
@@ -2428,9 +2437,9 @@ Alle Beiträge kombinierend, lautet die SSZ-Gesamtzeitdilatation für eine beweg
 
 D_{\text{total}}(r, v) = \frac{1}{1 + \Xi(r)} \cdot \frac{1}{\gamma_{\text{SR}}(v)} \cdot \frac{1}{\gamma_{\text{seg}}(r, v)}
 
-wobei γ_SR = 1/√(1 − v²/c²) der speziell-relativistische Standardfaktor und γ_seg = exp(Ξv²/c²) die Segmentkorrektur ist. Im Schwachfeld (Ξ ≪ 1) gilt γ_seg $\approx$ 1 und die Formel reduziert sich auf:
+wobei γ_SR = 1/√(1 − v²/c²) der speziell-relativistische Standardfaktor und γ_seg = exp(Ξv²/c²) die Segmentkorrektur ist. Im Schwachfeld (Ξ ≪ 1) gilt γ_seg ≈ 1 und die Formel reduziert sich auf:
 
-$$D_{\text{total}} \approx \sqrt{1 - r_s/r} \cdot \sqrt{1 - v^2/c^2}$$
+D_{\text{total}} \approx \sqrt{1 - r_s/r} \cdot \sqrt{1 - v^2/c^2}
 
 was das Standard-ART-Ergebnis ist. Die Segmentkorrektur ist ein Starkfeldphänomen — sie wird nur signifikant, wenn Ξ groß ist (nahe Neutronensternen oder Schwarzen Löchern) *und* v beträchtlich ist.
 
@@ -2438,9 +2447,9 @@ was das Standard-ART-Ergebnis ist. Die Segmentkorrektur ist ein Starkfeldphänom
 
 ### Radiale vs. tangentiale Bewegung
 
-In der ART ist die Bewegungsrichtung entscheidend. Die Schwarzschild-Metrik behandelt die zeitliche Komponente $g_{tt}$ und die radiale Komponente $g_{rr}$ sehr unterschiedlich:
+In der ART ist die Bewegungsrichtung entscheidend. Die Schwarzschild-Metrik behandelt die zeitliche Komponente g_tt und die radiale Komponente g_rr sehr unterschiedlich:
 
-$$ds^2 = -\left(1 - \frac{r_s}{r}\right)c^2 dt^2 + \frac{dr^2}{1 - r_s/r} + r^2 d\Omega^2$$
+ds^2 = -\left(1 - \frac{r_s}{r}\right)c^2 dt^2 + \frac{dr^2}{1 - r_s/r} + r^2 d\Omega^2
 
 In SSZ erhält diese Richtungsabhängigkeit eine physikalische Interpretation durch die Segmentstruktur. Die Segmentgrenzen sind Flächen konstanter Segmentphase, ungefähr konzentrisch um die gravitierende Masse angeordnet. Die Schlüsseleinsicht ist, dass **radiale Bewegung Segmentgrenzen senkrecht kreuzt, während tangentiale Bewegung parallel zu ihnen verläuft.**
 
@@ -2450,9 +2459,9 @@ In SSZ erhält diese Richtungsabhängigkeit eine physikalische Interpretation du
 
 **Zwischenwinkel (0 < θ_v < π/2):** Das Teilchen bewegt sich unter einem Winkel zu den Segmentgrenzen. Die effektive Segmentdichte ist eine gewichtete Kombination:
 
-$$\Xi_{\text{eff}}(r, \theta_v) = \Xi(r) \cdot \cos^2\theta_v + \Xi(r) \cdot \frac{r_s}{2r} \cdot \sin^2\theta_v$$
+\Xi_{\text{eff}}(r, \theta_v) = \Xi(r) \cdot \cos^2\theta_v + \Xi(r) \cdot \frac{r_s}{2r} \cdot \sin^2\theta_v
 
-Der cos²θ_v-Term erfasst die senkrechte (radiale) Geschwindigkeitskomponente, die das volle Ξ erfährt. Der sin²θ_v-Term erfasst die tangentiale Komponente, die eine reduzierte effektive Dichte proportional zu $r_{s}$/(2r) erfährt.
+Der cos²θ_v-Term erfasst die senkrechte (radiale) Geschwindigkeitskomponente, die das volle Ξ erfährt. Der sin²θ_v-Term erfasst die tangentiale Komponente, die eine reduzierte effektive Dichte proportional zu r_s/(2r) erfährt.
 
 **Analogie.** Beim Gehen über ein gepflügtes Feld hängt die Schwierigkeit vom Winkel zwischen dem Pfad und den Furchen ab. Senkrecht zu den Furchen gehen (radiale Bewegung) ist am schwierigsten — man muss über jede Furche steigen. Parallel zu den Furchen gehen (tangentiale Bewegung) ist leicht — man geht entlang der glatten Täler zwischen ihnen.
 
@@ -2471,9 +2480,9 @@ GPS-Satelliten liefern den strengsten alltäglichen Test relativistischer Zeitdi
 
 **Eingabedaten:**
 - Orbitalhöhe: h = 20.200 km über der Erdoberfläche
-- Orbitalradius: $R_{sat}$ = $R_{Erde}$ + h = 6371 + 20200 = 26571 km
-- Orbitalgeschwindigkeit: v = √(GM/R_sat) $\approx$ 3,87 km/s
-- Schwarzschild-Radius der Erde: $r_{s}$ = 2GM/c² = 8,87 mm
+- Orbitalradius: R_sat = R_Erde + h = 6371 + 20200 = 26571 km
+- Orbitalgeschwindigkeit: v = √(GM/R_sat) ≈ 3,87 km/s
+- Schwarzschild-Radius der Erde: r_s = 2GM/c² = 8,87 mm
 
 **Segmentdichte in Satellitenhöhe:**
 $$\Xi_{\text{sat}} = \frac{r_s}{2R_{\text{sat}}} = \frac{8.87 \times 10^{-6}}{2 \times 26571} = 1.67 \times 10^{-10}$$
@@ -2487,38 +2496,38 @@ Dies ist 1 + 2,8 × 10⁻²⁰ — zwanzig Größenordnungen unter jeder denkbar
 
 $$\Delta D = D(R_{\text{sat}}) - D(R_{\text{Erde}}) = \frac{1}{1 + \Xi_{\text{sat}}} - \frac{1}{1 + \Xi_{\text{Erde}}}$$
 
-Mit Ξ_Erde = $r_{s}$/(2$R_{Erde}$) = 6,96 × 10⁻¹⁰ und Ξ_sat = 1,67 × 10⁻¹⁰ ergibt der Gravitationsteil +45,9 μs/Tag. Die kinematische Korrektur aus v²/(2c²) ergibt −7,2 μs/Tag. Netto: +38,7 μs/Tag, in Übereinstimmung mit dem Standardergebnis.
+Mit Ξ_Erde = r_s/(2R_Erde) = 6,96 × 10⁻¹⁰ und Ξ_sat = 1,67 × 10⁻¹⁰ ergibt der Gravitationsteil +45,9 μs/Tag. Die kinematische Korrektur aus v²/(2c²) ergibt −7,2 μs/Tag. Netto: +38,7 μs/Tag, in Übereinstimmung mit dem Standardergebnis.
 
 ### Neutronensternoberflächen: Die Starkfeldgrenze
 
-Für einen Neutronenstern mit M = 1,4 M$\odot$ und R = 10 km ist die Gravitationsumgebung weit extremer:
+Für einen Neutronenstern mit M = 1,4 M☉ und R = 10 km ist die Gravitationsumgebung weit extremer:
 
 **Segmentdichte an der Oberfläche:**
 \Xi_{\text{NS}} = \frac{r_s}{2R} = \frac{4.14}{20} = 0.207
 
 Dies ist 300 Millionen Mal größer als der GPS-Wert. Ein Teilchen, das sich mit v = 0,1c auf der Neutronensternoberfläche bewegt, erfährt:
 
-$$\gamma_{\text{seg}} = \exp(0.207 \times 0.01) = \exp(2.07 \times 10^{-3}) \approx 1.00207$$
+\gamma_{\text{seg}} = \exp(0.207 \times 0.01) = \exp(2.07 \times 10^{-3}) \approx 1.00207
 
 Dies ist eine 0,2%-Korrektur — klein, aber potentiell mit zukünftigen Röntgen-Timing-Instrumenten messbar. NICER auf der ISS misst derzeit Neutronenstern-Pulsprofile mit ~1% Präzision; Instrumente der nächsten Generation (STROBE-X, eXTP) zielen auf 0,1% Präzision, die für diese Korrektur empfindlich wäre.
 
 Die gesamte Zeitdilatation für ein solches Oberflächenteilchen ist:
 
-$$D_{\text{total}} = \frac{1}{1.207} \cdot \frac{1}{1.005} \cdot \frac{1}{1.00207} \approx 0.820$$
+D_{\text{total}} = \frac{1}{1.207} \cdot \frac{1}{1.005} \cdot \frac{1}{1.00207} \approx 0.820
 
-Verglichen mit der ART-Vorhersage D_GR $\approx$ 0,764 × 0,995 $\approx$ 0,760 sagt SSZ eine um 7,9% verschiedene Gesamtzeitdilatation bei diesem Radius und dieser Geschwindigkeit vorher. Dies ist eine echte, testbare Vorhersage.
+Verglichen mit der ART-Vorhersage D_GR ≈ 0,764 × 0,995 ≈ 0,760 sagt SSZ eine um 7,9% verschiedene Gesamtzeitdilatation bei diesem Radius und dieser Geschwindigkeit vorher. Dies ist eine echte, testbare Vorhersage.
 
 ### Schwarze-Loch-Horizonte: Der Extremfall
 
-Am Schwarzschild-Radius (r = $r_{s}$) erreicht die Segmentdichte Ξ = 0,802 (Starkfeldwert). Für einfallende Materie, die sich der Lichtgeschwindigkeit nähert (v → c):
+Am Schwarzschild-Radius (r = r_s) erreicht die Segmentdichte Ξ = 0,802 (Starkfeldwert). Für einfallende Materie, die sich der Lichtgeschwindigkeit nähert (v → c):
 
-$$\gamma_{\text{seg}} = \exp(0.802 \times 1) = e^{0.802} \approx 2.230$$
+\gamma_{\text{seg}} = \exp(0.802 \times 1) = e^{0.802} \approx 2.230
 
 Die gesamte Zeitdilatation ist:
 
-$$D_{\text{total}} = \frac{1}{1.802} \cdot \frac{1}{\gamma_{\text{SR}}} \cdot \frac{1}{2.230}$$
+D_{\text{total}} = \frac{1}{1.802} \cdot \frac{1}{\gamma_{\text{SR}}} \cdot \frac{1}{2.230}
 
-Für v → c gilt γ_SR → ∞, aber das Produkt $D_{grav}$ · γ_seg ergibt ein endliches kombiniertes Ergebnis. Der entscheidende Unterschied zur ART: In der ART gehen sowohl $D_{grav}$ → 0 als auch γ_SR → ∞ am Horizont, was eine unbestimmte 0 × ∞-Form erzeugt. In SSZ ist $D_{grav}$ = 0,555 (endlich), sodass der kombinierte Effekt immer wohldefiniert ist.
+Für v → c gilt γ_SR → ∞, aber das Produkt D_grav · γ_seg ergibt ein endliches kombiniertes Ergebnis. Der entscheidende Unterschied zur ART: In der ART gehen sowohl D_grav → 0 als auch γ_SR → ∞ am Horizont, was eine unbestimmte 0 × ∞-Form erzeugt. In SSZ ist D_grav = 0,555 (endlich), sodass der kombinierte Effekt immer wohldefiniert ist.
 
 Diese Endlichkeit am Horizont ist eine zentrale Vorhersage von SSZ. Sie bedeutet, dass **einfallende Materie den Horizont in endlicher Koordinatenzeit durchquert, gemessen von einem fernen Beobachter** — eine qualitative Abweichung von der ART-Vorhersage, dass der Einfall unendliche Koordinatenzeit benötigt. Kapitel 19 erforscht diesen Unterschied im Detail.
 
@@ -2526,11 +2535,11 @@ Diese Endlichkeit am Horizont ist eine zentrale Vorhersage von SSZ. Sie bedeutet
 
 **Testdateien:** `test_lorentz_limit`, `test_gamma_seg`
 
-**Was die Tests beweisen:** γ_seg reduziert sich auf 1 in flacher Raumzeit (Ξ = 0) für alle Geschwindigkeiten; die Schwachfeld-GPS-Vorhersage stimmt mit der ART bis zur Maschinengenauigkeit überein; die Exponentialform ist konsistent mit der Euler-Ableitungskette; γ_seg setzt sich unter Geschwindigkeitsänderungen multiplikativ zusammen; die Gesamtformel der Zeitdilatation reproduziert das Standard-ART-Ergebnis im Schwachfeld in führender Ordnung in $r_{s}$/r und v²/c².
+**Was die Tests beweisen:** γ_seg reduziert sich auf 1 in flacher Raumzeit (Ξ = 0) für alle Geschwindigkeiten; die Schwachfeld-GPS-Vorhersage stimmt mit der ART bis zur Maschinengenauigkeit überein; die Exponentialform ist konsistent mit der Euler-Ableitungskette; γ_seg setzt sich unter Geschwindigkeitsänderungen multiplikativ zusammen; die Gesamtformel der Zeitdilatation reproduziert das Standard-ART-Ergebnis im Schwachfeld in führender Ordnung in r_s/r und v²/c².
 
 **Was die Tests NICHT beweisen:** Die physikalische Korrektheit von γ_seg in starken Gravitationsfeldern. Die Formel ist eine theoretische Vorhersage von SSZ, die Beobachtungsbestätigung in extremen Umgebungen erfordert (Neutronensterne, Schwarze-Loch-Akkretionsscheiben). Kein aktuelles Experiment sondiert das Regime, in dem Ξ · v²/c² messbar von null verschieden ist.
 
-**Reproduktion:** `E:/clone\segmented-calculation-suite/tests/` — `test_lorentz_limit.py`, `test_gamma_seg.py`. Alle Tests bestanden.
+**Reproduktion:** `E:\clone\segmented-calculation-suite\tests\` — `test_lorentz_limit.py`, `test_gamma_seg.py`. Alle Tests bestanden.
 
 ---
 
@@ -2564,7 +2573,7 @@ Dieses Kapitel zeigte, dass der Standard-Lorentz-Faktor einen blinden Fleck bei 
 
 Der Standard-Lorentz-Faktor γ = 1/√(1 − v²/c²) ist eine der erfolgreichsten Formeln der Physik. Er sagt korrekt die Zeitdilatation in Teilchenbeschleunigern, die Lebensdauer kosmischer Myonen und die relativistische Massenzunahme in Kathodenstrahlexperimenten vorher. Er ist auf Präzisionen von 10⁻⁸ oder besser getestet.
 
-Aber γ hat eine strukturelle Limitation: Es hängt nur von der Geschwindigkeit ab. Bei v = 0 ist γ = 1 unabhängig von der gravitativen Umgebung. Eine Uhr in Ruhe im flachen Raum und eine Uhr in Ruhe auf der Oberfläche eines Neutronensterns haben beide γ = 1, obwohl die Neutronensternuhr 15 Prozent langsamer tickt. Der Standardansatz behandelt dies, indem die gravitative Zeitdilatation als separater Effekt hinzugefügt wird (der Schwarzschild-Faktor √(1 − $r_{s}$/r)), aber dies erzeugt eine konzeptionelle Spaltung zwischen kinematischer und gravitativer Zeitdilatation, die keine fundamentale Rechtfertigung hat.
+Aber γ hat eine strukturelle Limitation: Es hängt nur von der Geschwindigkeit ab. Bei v = 0 ist γ = 1 unabhängig von der gravitativen Umgebung. Eine Uhr in Ruhe im flachen Raum und eine Uhr in Ruhe auf der Oberfläche eines Neutronensterns haben beide γ = 1, obwohl die Neutronensternuhr 15 Prozent langsamer tickt. Der Standardansatz behandelt dies, indem die gravitative Zeitdilatation als separater Effekt hinzugefügt wird (der Schwarzschild-Faktor √(1 − r_s/r)), aber dies erzeugt eine konzeptionelle Spaltung zwischen kinematischer und gravitativer Zeitdilatation, die keine fundamentale Rechtfertigung hat.
 
 γ_seg vereinheitlicht diese beiden Effekte in einem einzigen Ausdruck. Es reduziert sich auf den Standard-Lorentz-Faktor im flachen Raum (wo Ξ = 0) und auf den gravitativen Zeitdilatationsfaktor bei v = 0 (wo der kinematische Teil trivial ist). Die Vereinheitlichung ist nicht bloß ästhetisch — sie stellt sicher, dass der Übergang zwischen kinematischem und gravitativem Regime glatt ist und keine Observable in die Lücke zwischen den beiden Beschreibungen fällt.
 
@@ -2578,7 +2587,7 @@ Das Global Positioning System liefert die präziseste alltägliche Verifikation 
 
 Der Nettoeffekt ist +38,5 Mikrosekunden pro Tag (der gravitative Effekt dominiert). Diese Korrektur wird vor dem Start auf die Satellitenuhren angewandt, indem ihre Frequenz um −4,465 Teile in 10¹⁰ versetzt wird. Ohne diese Korrektur würden GPS-Positionen um ~10 km pro Tag driften.
 
-In der Standardphysik werden die kinematische und gravitative Korrektur separat mit verschiedenen Formeln berechnet. In SSZ ergeben sich beide Korrekturen aus einem einzigen Ausdruck: γ_seg = γ(v) × (1 + Ξ). Der kinematische Teil γ(v) gibt die −7,2 μs/Tag, und der gravitative Teil (1 + Ξ) gibt die +45,7 μs/Tag. Die numerischen Ergebnisse sind identisch zur Standardberechnung, weil Ξ_weak = $r_{s}$/(2r) die Schwachfeld-Schwarzschild-Metrik zur erforderlichen Präzision reproduziert.
+In der Standardphysik werden die kinematische und gravitative Korrektur separat mit verschiedenen Formeln berechnet. In SSZ ergeben sich beide Korrekturen aus einem einzigen Ausdruck: γ_seg = γ(v) × (1 + Ξ). Der kinematische Teil γ(v) gibt die −7,2 μs/Tag, und der gravitative Teil (1 + Ξ) gibt die +45,7 μs/Tag. Die numerischen Ergebnisse sind identisch zur Standardberechnung, weil Ξ_weak = r_s/(2r) die Schwachfeld-Schwarzschild-Metrik zur erforderlichen Präzision reproduziert.
 
 Der Vorteil der vereinheitlichten Behandlung ist nicht numerisch, sondern konzeptionell. Im Standardansatz muss ein Student zwei separate Formalismen lernen (SRT und ART) und sie ad hoc für die GPS-Berechnung kombinieren. In SSZ behandelt eine einzige Formel beide Effekte.
 
@@ -2586,9 +2595,9 @@ Ein häufiger Einwand ist, dass die Vereinheitlichung trivial sei — man multip
 
 ### Rechenbeispiel: γ_seg für eine Neutronensternoberfläche
 
-Man betrachte einen Neutronenstern mit M = 1,4 M$\odot$ und R = 12 km. Der Schwarzschild-Radius ist r_s = 4,13 km, also r/r_s = 12/4,13 = 2,91. Dies liegt im Schwachfeldregime, wo Ξ = r_s/(2r) = 4,13/(2 × 12) = 0,172. Der SSZ-Zeitdilatationsfaktor ist D = 1/(1 + 0,172) = 0,853. Eine Uhr auf der Neutronensternoberfläche tickt mit 85,3 Prozent der Rate einer Uhr im Unendlichen.
+Man betrachte einen Neutronenstern mit M = 1,4 M☉ und R = 12 km. Der Schwarzschild-Radius ist r_s = 4,13 km, also r/r_s = 12/4,13 = 2,91. Dies liegt im Schwachfeldregime, wo Ξ = r_s/(2r) = 4,13/(2 × 12) = 0,172. Der SSZ-Zeitdilatationsfaktor ist D = 1/(1 + 0,172) = 0,853. Eine Uhr auf der Neutronensternoberfläche tickt mit 85,3 Prozent der Rate einer Uhr im Unendlichen.
 
-Zum Vergleich: Die ART-Vorhersage ist $D_{GR}$ = √(1 − $r_{s}$/r) = √(1 − 4,13/12) = √(0,656) = 0,810. Die SSZ-Vorhersage ist 5,3 Prozent höher als die ART — dies ist die +13-Prozent-Korrektur, die in Kapitel 1 erwähnt wurde (angewandt auf die Rotverschiebung z, nicht auf D selbst). Der Unterschied ist $z_{SSZ}$ = 0,172 gegenüber $z_{GR}$ = 0,235, eine relative Differenz von 27 Prozent in der Rotverschiebung.
+Zum Vergleich: Die ART-Vorhersage ist D_GR = √(1 − r_s/r) = √(1 − 4,13/12) = √(0,656) = 0,810. Die SSZ-Vorhersage ist 5,3 Prozent höher als die ART — dies ist die +13-Prozent-Korrektur, die in Kapitel 1 erwähnt wurde (angewandt auf die Rotverschiebung z, nicht auf D selbst). Der Unterschied ist z_SSZ = 0,172 gegenüber z_GR = 0,235, eine relative Differenz von 27 Prozent in der Rotverschiebung.
 
 Dieses Beispiel illustriert, warum Neutronensterne der vielversprechendste Test von SSZ gegen ART sind: Das Gravitationsfeld ist stark genug, damit die Vorhersagen signifikant differieren, aber das Objekt hat eine Oberfläche (anders als ein Schwarzes Loch), von der Spektrallinien beobachtet werden können.
 
@@ -2598,26 +2607,26 @@ Das Einsteinsche Äquivalenzprinzip (EEP) besagt, dass in einer hinreichend klei
 
 Die γ_seg-Formulierung macht das EEP sogar transparenter als die Standard-ART-Formulierung. In der ART wird das EEP durch den metrischen Tensor implementiert, der ein kompliziertes Objekt mit zehn unabhängigen Komponenten ist. In SSZ wird das EEP durch ein einziges Skalarfeld Ξ implementiert, das eine Komponente hat.
 
-### Experimentelle Vorschlaege zum Testen von $\gamma_{\text{seg}}$ im Detail
+### Experimentelle Vorschlaege zum Testen von gamma_seg im Detail
 
-Waehrend aktuelle Experimente $\gamma_{\text{seg}}$ nicht vom Standard-Lorentz-Faktor unterscheiden koennen (der Unterschied ist im Schwachfeld zu klein), koennten mehrere vorgeschlagene Experimente die SSZ-Vorhersagen im Starkfeldregime testen:
+Waehrend aktuelle Experimente gamma_seg nicht vom Standard-Lorentz-Faktor unterscheiden koennen (der Unterschied ist im Schwachfeld zu klein), koennten mehrere vorgeschlagene Experimente die SSZ-Vorhersagen im Starkfeldregime testen:
 
 **Atomuhren auf der Sonnensonde:** Die Parker Solar Probe naehert sich der Sonne bis auf 9,86 Sonnenradien (6,86 Millionen km), wo Xi = 2,95/(2 x 6,86 x 10^6) = 2,15 x 10^{-7}. Die SSZ-Korrektur zur Taktrate bei dieser Entfernung betraegt 2,15 x 10^{-7}, messbar mit einer weltraumqualifizierten optischen Uhr auf dem 10^{-17}-Niveau. Die Mission muesste eine Atomuhr tragen (was sie derzeit nicht tut), aber zukuenftige Sonnensondenmissionen koennten diese Faehigkeit einschliessen.
 
-**Pulsar-Timing nahe Sgr A*:** Ein Pulsar, der das zentrale Schwarze Loch der Milchstrasse in einer Entfernung von wenigen Schwarzschild-Radien umkreist, wuerde Xi der Ordnung 0,1 erfahren, was messbare Abweichungen vom Standard-Timing-Modell erzeugt. Die Entdeckung eines solchen Pulsars ist ein hochprioritaeres Ziel der Radioastronomie (mit dem Square Kilometre Array, SKA), und die Timing-Analyse wuerde eine direkte Messung von $\gamma_{\text{seg}}$ im Starkfeldregime liefern.
+**Pulsar-Timing nahe Sgr A*:** Ein Pulsar, der das zentrale Schwarze Loch der Milchstrasse in einer Entfernung von wenigen Schwarzschild-Radien umkreist, wuerde Xi der Ordnung 0,1 erfahren, was messbare Abweichungen vom Standard-Timing-Modell erzeugt. Die Entdeckung eines solchen Pulsars ist ein hochprioritaeres Ziel der Radioastronomie (mit dem Square Kilometre Array, SKA), und die Timing-Analyse wuerde eine direkte Messung von gamma_seg im Starkfeldregime liefern.
 
 **Binaerpulsar-geodaetische Praezession:** Die geodaetische Praezession der Pulsar-Spinachse in einem kompakten Binaersystem haengt vom gravitativen Zeitdilatationsfaktor am Orbitalradius des Pulsars ab. Fuer den kompaktesten bekannten Binaerpulsar (den Doppelpulsar PSR J0737-3039) betraegt der Orbitalradius ~900.000 km und Xi ~3 x 10^{-6}. Die SSZ-Korrektur zur geodaetischen Praezessionsrate ist von der Ordnung Xi, was mit ~30 Jahren fortgesetzter Timing-Beobachtungen messbar ist.
 
-**LISA und extreme Massenverhaeltnis-Inspirale (EMRIs):** Das Laser Interferometer Space Antenna (LISA, geplant fuer die 2030er Jahre) wird Metrik-Perturbationen von kompakten Objekten detektieren, die in supermassive Schwarze Loecher spiralen. Diese EMRIs kartieren die Raumzeitgeometrie nahe dem Horizont mit beispielloser Praezision. Die SSZ-Vorhersage fuer die EMRI-Wellenform unterscheidet sich von der ART-Vorhersage durch den endlichen Zeitdilatationsfaktor $D_{min}$ = 0,555, was zu messbaren Phasenverschiebungen in der Metrik-Perturbation fuehrt.
+**LISA und extreme Massenverhaeltnis-Inspirale (EMRIs):** Das Laser Interferometer Space Antenna (LISA, geplant fuer die 2030er Jahre) wird Metrik-Perturbationen von kompakten Objekten detektieren, die in supermassive Schwarze Loecher spiralen. Diese EMRIs kartieren die Raumzeitgeometrie nahe dem Horizont mit beispielloser Praezision. Die SSZ-Vorhersage fuer die EMRI-Wellenform unterscheidet sich von der ART-Vorhersage durch den endlichen Zeitdilatationsfaktor D_min = 0,555, was zu messbaren Phasenverschiebungen in der Metrik-Perturbation fuehrt.
 
 
 ### Experimentelle Vorschläge zum Testen von γ_seg
 
-**Sonnensonden:** Parker Solar Probe bei 9,86 R$\odot$, Ξ $\approx$ 2,15×10⁻⁷ — messbar mit optischer Uhr auf 10⁻¹⁷-Niveau.
+**Sonnensonden:** Parker Solar Probe bei 9,86 R☉, Ξ ≈ 2,15×10⁻⁷ — messbar mit optischer Uhr auf 10⁻¹⁷-Niveau.
 
 **Pulsar nahe Sgr A*:** Ξ ~ 0,1, messbare Abweichungen vom Standard-Timing. SKA sucht solche Pulsare.
 
-**Binärpulsar PSR J0737-3039:** Ξ $\approx$ 3×10⁻⁶, messbar mit ~30 Jahren Timing.
+**Binärpulsar PSR J0737-3039:** Ξ ≈ 3×10⁻⁶, messbar mit ~30 Jahren Timing.
 
 ### Zusammenfassung und Brücke zu Kapitel 7
 
@@ -2625,29 +2634,29 @@ Das nächste Kapitel adressiert eine unmittelbare Sorge: Verletzt γ_seg die lok
 
 ### Rechenbeispiel: Neutronenstern PSR J0348+0432
 
-Der Neutronenstern PSR J0348+0432 hat eine Masse von M = 2,01 $M_{Sonne}$ und einen geschaetzten Radius von R = 13 km. Die SSZ-Groessen fuer dieses Objekt:
+Der Neutronenstern PSR J0348+0432 hat eine Masse von M = 2,01 M_Sonne und einen geschaetzten Radius von R = 13 km. Die SSZ-Groessen fuer dieses Objekt:
 
-Schwarzschild-Radius: $r_{s}$ = 2GM/c^2 = 2 x 6,674 x 10^{-11} x 2,01 x 1,989 x 10^{30} / (3 x 10^8)^2 = 5,94 km
+Schwarzschild-Radius: r_s = 2GM/c^2 = 2 x 6,674 x 10^{-11} x 2,01 x 1,989 x 10^{30} / (3 x 10^8)^2 = 5,94 km
 
 Verhaeltnis: R/r_s = 13/5,94 = 2,19
 
-Segmentdichte: Xi = $r_{s}$/(2R) = 5,94/(2 x 13) = 0,229
+Segmentdichte: Xi = r_s/(2R) = 5,94/(2 x 13) = 0,229
 
 Zeitdilatationsfaktor: D = 1/(1 + 0,229) = 0,814
 
 Gravitative Rotverschiebung: z = Xi = 0,229
 
-Fluchtgeschwindigkeit: $v_{esc}$ = c sqrt($r_{s}$/R) = c sqrt(5,94/13) = 0,676c
+Fluchtgeschwindigkeit: v_esc = c sqrt(r_s/R) = c sqrt(5,94/13) = 0,676c
 
-Einfallgeschwindigkeit: $v_{fall}$ = c^2/v_esc = c/0,676 = 1,479c (Koordinatengeschwindigkeit)
+Einfallgeschwindigkeit: v_fall = c^2/v_esc = c/0,676 = 1,479c (Koordinatengeschwindigkeit)
 
-$\gamma_{\text{seg}}$ bei v = 0: $\gamma_{\text{seg}}$(0) = 1/(1 - Xi) = 1/0,771 = 1,297
+gamma_seg bei v = 0: gamma_seg(0) = 1/(1 - Xi) = 1/0,771 = 1,297
 
-Die SSZ-Vorhersage fuer die gravitative Rotverschiebung (z = 0,229) unterscheidet sich von der ART-Vorhersage ($z_{GR}$ = 1/sqrt(1 - $r_{s}$/R) - 1 = 0,235) um 2,6%. Dieser Unterschied ist mit zukuenftigen Roentgenspektrometern (STROBE-X, Athena) messbar.
+Die SSZ-Vorhersage fuer die gravitative Rotverschiebung (z = 0,229) unterscheidet sich von der ART-Vorhersage (z_GR = 1/sqrt(1 - r_s/R) - 1 = 0,235) um 2,6%. Dieser Unterschied ist mit zukuenftigen Roentgenspektrometern (STROBE-X, Athena) messbar.
 
-### Vergleich: $\gamma_{\text{seg}}$ vs. Standard-Lorentz-Faktor
+### Vergleich: gamma_seg vs. Standard-Lorentz-Faktor
 
-Die Unterschiede zwischen $\gamma_{\text{seg}}$ und dem Standard-Lorentz-Faktor $\gamma_{\text{SR}}$ = 1/sqrt(1 - v^2/c^2) werden erst im Starkfeld signifikant:
+Die Unterschiede zwischen gamma_seg und dem Standard-Lorentz-Faktor gamma_SR = 1/sqrt(1 - v^2/c^2) werden erst im Starkfeld signifikant:
 
 | Ort | Xi | gamma_seg(v=0) | gamma_SR(v=0) | Differenz |
 |-----|-----|---------------|---------------|-----------|
@@ -2657,19 +2666,19 @@ Die Unterschiede zwischen $\gamma_{\text{seg}}$ und dem Standard-Lorentz-Faktor 
 | Neutronenstern | 0,172 | 1,208 | 1,000 | 20,8% |
 | Natuerliche Grenze | 0,802 | 5,051 | 1,000 | 405% |
 
-Im Schwachfeld (Erde, Sonne) ist der Unterschied vernachlaessigbar. Im Starkfeld (Neutronenstern, natuerliche Grenze) ist der Unterschied dramatisch: $\gamma_{\text{seg}}$ divergiert nicht (es erreicht 5,051 bei $r_{s}$), waehrend $\gamma_{\text{SR}}$ bei v = 0 immer 1 ist. Der Unterschied entsteht, weil $\gamma_{\text{seg}}$ die gravitativen Beitraege zur Zeitdilatation einschliesst, waehrend $\gamma_{\text{SR}}$ nur die kinematischen Beitraege erfasst.
+Im Schwachfeld (Erde, Sonne) ist der Unterschied vernachlaessigbar. Im Starkfeld (Neutronenstern, natuerliche Grenze) ist der Unterschied dramatisch: gamma_seg divergiert nicht (es erreicht 5,051 bei r_s), waehrend gamma_SR bei v = 0 immer 1 ist. Der Unterschied entsteht, weil gamma_seg die gravitativen Beitraege zur Zeitdilatation einschliesst, waehrend gamma_SR nur die kinematischen Beitraege erfasst.
 
 ### Uhrenvergleiche als Praezisionstest
 
 Moderne optische Uhren erreichen Praezisionen von 10^{-18}, was sie zu den empfindlichsten Instrumenten fuer Tests der Gravitationsphysik macht. Die wichtigsten Uhrenvergleiche fuer SSZ:
 
-**Tokio Skytree (2020):** Zwei optische Strontium-Uhren, getrennt durch 450 m Hoehe im Tokyo Skytree, zeigten eine Frequenzdifferenz von $\Delta_{\text{f}}$/f = 4,9 x 10^{-14}, konsistent mit der SSZ/ART-Vorhersage g*h/c^2 = 4,9 x 10^{-14}. Die Praezision betrug 5%.
+**Tokio Skytree (2020):** Zwei optische Strontium-Uhren, getrennt durch 450 m Hoehe im Tokyo Skytree, zeigten eine Frequenzdifferenz von Delta_f/f = 4,9 x 10^{-14}, konsistent mit der SSZ/ART-Vorhersage g*h/c^2 = 4,9 x 10^{-14}. Die Praezision betrug 5%.
 
 **BACON (Boulder Atomic Clock Optical Network, 2021):** Vergleich von drei optischen Uhren (Al+, Yb, Sr) ueber Glasfaserverbindungen in Boulder, Colorado. Die Frequenzverhaeltnisse wurden mit einer Praezision von 10^{-18} gemessen und sind konsistent mit der SSZ-Vorhersage.
 
 **Zukuenftig: ACES auf der ISS:** Die ESA-Mission Atomic Clock Ensemble in Space wird eine Caesium-Uhr und eine Wasserstoff-Maser-Uhr auf der ISS installieren. Der Vergleich mit Bodenuhren ueber eine Hoehendifferenz von ~400 km wird die gravitative Rotverschiebung auf 2 x 10^{-6} testen — eine Verbesserung um den Faktor 35 gegenueber Gravity Probe A.
 
-**Zukuenftig: Weltraum-Uhren im Sonnensystem:** Optische Uhren auf interplanetaren Sonden (z.B. auf einer Jupiter-Mission) wuerden die gravitative Rotverschiebung ueber einen viel groesseren dynamischen Bereich testen. Die SSZ-Vorhersage fuer die Frequenzdifferenz zwischen einer Uhr auf der Erde und einer Uhr in der Naehe von Jupiter ist $\Delta_{\text{f}}$/f ~ 10^{-8}, leicht messbar mit aktueller Technologie.
+**Zukuenftig: Weltraum-Uhren im Sonnensystem:** Optische Uhren auf interplanetaren Sonden (z.B. auf einer Jupiter-Mission) wuerden die gravitative Rotverschiebung ueber einen viel groesseren dynamischen Bereich testen. Die SSZ-Vorhersage fuer die Frequenzdifferenz zwischen einer Uhr auf der Erde und einer Uhr in der Naehe von Jupiter ist Delta_f/f ~ 10^{-8}, leicht messbar mit aktueller Technologie.
 
 ### Zusammenfassung der experimentellen Evidenz
 
@@ -2706,7 +2715,7 @@ Die Uebereinstimmung bestaetigt die SSZ/ART-Vorhersage auf ~10% Praezision. Die 
 
 Kosmische Myonen (erzeugt durch kosmische Strahlung in ~15 km Hoehe) haben eine Ruhe-Lebensdauer von tau_0 = 2,2 Mikrosekunden. Ohne Zeitdilatation wuerden sie nur ~660 m weit fliegen, bevor sie zerfallen. Tatsaechlich erreichen viele Myonen die Erdoberflaeche, weil ihre Lebensdauer durch die Zeitdilatation verlaengert wird: tau = gamma * tau_0, wobei gamma ~ 10-100 fuer typische kosmische Myonen.
 
-In SSZ ist die Zeitdilatation durch den Faktor $\gamma_{\text{seg}}$ = gamma * D(r) modifiziert. Fuer kosmische Myonen (die sich hauptsaechlich durch die Atmosphaere bewegen, wo Xi ~ 10^{-9}) ist die SSZ-Korrektur vernachlaessigbar. Die Myonen-Lebensdauer bestaetigt die spezielle Relativitaet (und damit SSZ im Schwachfeld) auf ~1% Praezision.
+In SSZ ist die Zeitdilatation durch den Faktor gamma_seg = gamma * D(r) modifiziert. Fuer kosmische Myonen (die sich hauptsaechlich durch die Atmosphaere bewegen, wo Xi ~ 10^{-9}) ist die SSZ-Korrektur vernachlaessigbar. Die Myonen-Lebensdauer bestaetigt die spezielle Relativitaet (und damit SSZ im Schwachfeld) auf ~1% Praezision.
 
 ### Die ACES-Mission (Atomic Clock Ensemble in Space)
 
@@ -2714,19 +2723,19 @@ ACES ist eine ESA-Mission, die 2025 eine hochpraezise Atomuhr (PHARAO, Caesium-K
 
 Die SSZ-Vorhersage fuer die ISS (h = 400 km, Xi = 4,4 x 10^{-10}):
 
-$\Delta_{\text{f}}$/f = $\Xi_{\text{ISS}}$ - $\Xi_{\text{Boden}}$ = GM h / (c^2 $R_{Erde}$^2) = 4,4 x 10^{-11}
+Delta_f/f = Xi_ISS - Xi_Boden = GM h / (c^2 R_Erde^2) = 4,4 x 10^{-11}
 
 Dies ist identisch mit der ART-Vorhersage. Die SSZ-Korrektur (von der Ordnung Xi^2 ~ 10^{-19}) ist weit unterhalb der ACES-Empfindlichkeit.
 
 ### BACON-Experiment (Boulder Atomic Clock Optical Network)
 
-Das BACON-Experiment am NIST in Boulder, Colorado, vergleicht optische Atomuhren in verschiedenen Hoehen (Hoehenunterschied ~1 m) und hat 2022 die gravitative Rotverschiebung auf einer Skala von ~1 cm nachgewiesen. Die Praezision betraegt $\Delta_{\text{f}}$/f ~ 10^{-21}, was einer Hoehendifferenz von ~1 mm entspricht.
+Das BACON-Experiment am NIST in Boulder, Colorado, vergleicht optische Atomuhren in verschiedenen Hoehen (Hoehenunterschied ~1 m) und hat 2022 die gravitative Rotverschiebung auf einer Skala von ~1 cm nachgewiesen. Die Praezision betraegt Delta_f/f ~ 10^{-21}, was einer Hoehendifferenz von ~1 mm entspricht.
 
 Die SSZ-Vorhersage ist identisch mit der ART-Vorhersage fuer diese Hoehendifferenzen (Xi-Korrektur ~ 10^{-25}). BACON demonstriert jedoch die Technologie, die fuer zukuenftige Tests der gravitativen Rotverschiebung in staerkeren Feldern (z.B. auf Raumsonden nahe der Sonne) benoetigt wird.
 
 ### Tokyo Skytree Uhrenvergleich (2020)
 
-Forscher der Universitaet Tokio haben 2020 optische Gitteruhren (Strontium-87) im Tokyo Skytree (Hoehe 450 m) und am Boden verglichen. Der gemessene Frequenzunterschied $\Delta_{\text{f}}$/f = (4,7 +/- 0,4) x 10^{-14} ist konsistent mit der SSZ/ART-Vorhersage $\Delta_{\text{f}}$/f = g h / c^2 = 4,9 x 10^{-14}.
+Forscher der Universitaet Tokio haben 2020 optische Gitteruhren (Strontium-87) im Tokyo Skytree (Hoehe 450 m) und am Boden verglichen. Der gemessene Frequenzunterschied Delta_f/f = (4,7 +/- 0,4) x 10^{-14} ist konsistent mit der SSZ/ART-Vorhersage Delta_f/f = g h / c^2 = 4,9 x 10^{-14}.
 
 
 
@@ -2764,10 +2773,12 @@ Alle Tests sind mit SSZ konsistent. Die SSZ-Starkfeldkorrekturen (von der Ordnun
 
 Alle bisherigen Tests bestaetigen die SSZ/ART-Vorhersage. Die SSZ-Starkfeldkorrekturen (Ordnung Xi^2 ~ 10^{-19} auf der Erdoberflaeche) sind mit keinem aktuellen Experiment messbar. Erst Uhren nahe Neutronensternen oder Schwarzen Loechern (Xi ~ 0,1-0,8) wuerden die SSZ-spezifischen Korrekturen testen.
 
+---
 
-\newpage
+# Kapitel 7: Lokale Lorentz-Invarianz und Frame-Dragging
 
-# Lokale Lorentz-Invarianz und Frame-Dragging
+**Teil II — Kinematik**
+**Status:** ERWEITERTE FASSUNG
 
 
 ![Abb 7](figures/ch07_frame_dragging/fig_07_01_dilation_comparison.png)
@@ -2822,7 +2833,7 @@ Historisch sind viele vorgeschlagene Gravitationsmodifikationen gerade wegen ein
 
 - **Whiteheads Gravitationstheorie (1922):** Führte eine flache Hintergrundmetrik ein. Durch Mondlaser-Entfernungsmessung um ~200 m/Jahr ausgeschlossen.
 - **Rosens bimetrische Theorie (1973):** Führte einen zweiten metrischen Tensor ein. Durch Doppelpulsar-Beobachtungen ausgeschlossen.
-- **Einstein-Äther-Theorie:** Führt ein zeitartiges Einheitsvektorfeld ein. Durch Metrik-Perturbationengeschwindigkeitsmessungen eingeschränkt (GW170817: |$c_{gw}$/c − 1| < 10⁻¹⁵).
+- **Einstein-Äther-Theorie:** Führt ein zeitartiges Einheitsvektorfeld ein. Durch Metrik-Perturbationengeschwindigkeitsmessungen eingeschränkt (GW170817: |c_gw/c − 1| < 10⁻¹⁵).
 
 SSZ führt die Segmentdichte Ξ(r) als zusätzliches Skalarfeld ein. Die kritische Frage ist: Bricht Ξ die LLI? Der nächste Abschnitt beweist, dass dies nicht der Fall ist.
 
@@ -2836,7 +2847,7 @@ Die Segmentdichte Ξ(r) ist ein **Lorentz-Skalar** — sie hängt nur vom invari
 
 Der Wert von Ξ ist für alle Beobachter am selben Raumzeitpunkt gleich, unabhängig von ihrem Bewegungszustand. Dies ist genau dasselbe Transformationsverhalten wie beim Newtonschen Gravitationspotential Φ(r) = −GM/r, das ebenfalls ein Lorentz-Skalar ist.
 
-Der mathematische Grund ist unkompliziert. Ξ ist aus zwei Zutaten konstruiert: dem Schwarzschild-Radius $r_{s}$ = 2GM/c² (einer Lorentz-Invariante, die die Masse charakterisiert) und dem Koordinatenradius r (einem Lorentz-Skalar im Schwarzschild-Koordinatensystem). Beide Zutaten sind Skalare, also ist jede Funktion von ihnen — einschließlich Ξ_weak = $r_{s}$/(2r) und Ξ_strong = 1 − e^{−φ$r_{s}$/r} — automatisch ein Skalar.
+Der mathematische Grund ist unkompliziert. Ξ ist aus zwei Zutaten konstruiert: dem Schwarzschild-Radius r_s = 2GM/c² (einer Lorentz-Invariante, die die Masse charakterisiert) und dem Koordinatenradius r (einem Lorentz-Skalar im Schwarzschild-Koordinatensystem). Beide Zutaten sind Skalare, also ist jede Funktion von ihnen — einschließlich Ξ_weak = r_s/(2r) und Ξ_strong = 1 − e^{−φr_s/r} — automatisch ein Skalar.
 
 ### Das Äquivalenzprinzip-Argument
 
@@ -2871,7 +2882,7 @@ Die zwei wichtigsten PPN-Parameter sind:
 
 ### Schrittweise PPN-Extraktion für SSZ
 
-Um die PPN-Parameter von SSZ zu extrahieren, führen wir eine systematische Schwachfeldentwicklung durch. Ausgehend von D(r) = 1/(1 + Ξ_weak) mit Ξ_weak = $r_{s}$/(2r) und mit der Definition U = $r_{s}$/(2r) = GM/(c²r):
+Um die PPN-Parameter von SSZ zu extrahieren, führen wir eine systematische Schwachfeldentwicklung durch. Ausgehend von D(r) = 1/(1 + Ξ_weak) mit Ξ_weak = r_s/(2r) und mit der Definition U = r_s/(2r) = GM/(c²r):
 
 **Schritt 1: Entwickle D²(r) in Potenzen von U.**
 
@@ -2895,19 +2906,19 @@ $$g_{rr}^{\text{PPN}} = 1 + 2\gamma U + \ldots$$
 
 **Schritt 4: Lese γ ab.**
 
-Vergleich von $g_{rr}$: Der SSZ-Koeffizient von U ist 2 (aus der Entwicklung von (1+U)²), was mit der PPN-Form 2γU übereinstimmt. Daher **γ = 1**.
+Vergleich von g_rr: Der SSZ-Koeffizient von U ist 2 (aus der Entwicklung von (1+U)²), was mit der PPN-Form 2γU übereinstimmt. Daher **γ = 1**.
 
 **Schritt 5: Lese β ab.**
 
-Vergleich von $g_{tt}$: Der SSZ-Koeffizient von U² ist 3, während die PPN-Form 2β hat. Dieser Vergleich muss jedoch in *isotropen* Koordinaten durchgeführt werden, nicht in den oben verwendeten Schwarzschild-artigen Koordinaten. Wenn die vollständige Transformation korrekt durchgeführt wird (siehe Anhang B.3 für Details), ergibt die Zuordnung **β = 1**.
+Vergleich von g_tt: Der SSZ-Koeffizient von U² ist 3, während die PPN-Form 2β hat. Dieser Vergleich muss jedoch in *isotropen* Koordinaten durchgeführt werden, nicht in den oben verwendeten Schwarzschild-artigen Koordinaten. Wenn die vollständige Transformation korrekt durchgeführt wird (siehe Anhang B.3 für Details), ergibt die Zuordnung **β = 1**.
 
 **Schritt 6: Terme höherer Ordnung.**
 
-Die SSZ-Entwicklung unterscheidet sich von der ART bei Ordnung U³ und darüber. Die ART hat den Koeffizienten 0 für U³ in $g_{tt}$ (in Schwarzschild-Koordinaten), während SSZ den Koeffizienten −4 hat. Dies erzeugt einen winzigen Unterschied:
+Die SSZ-Entwicklung unterscheidet sich von der ART bei Ordnung U³ und darüber. Die ART hat den Koeffizienten 0 für U³ in g_tt (in Schwarzschild-Koordinaten), während SSZ den Koeffizienten −4 hat. Dies erzeugt einen winzigen Unterschied:
 
-$$\Delta g_{tt} \sim 4U^3 = 4\left(\frac{GM}{c^2 r}\right)^3$$
+\Delta g_{tt} \sim 4U^3 = 4\left(\frac{GM}{c^2 r}\right)^3
 
-Für die Sonne beim Erdabstand: U = GM/(c²r) $\approx$ 10⁻⁸, also Δg_tt ~ 4 × 10⁻²⁴. Dies ist 19 Größenordnungen unter der Cassini-Präzision. Kein aktuelles oder geplantes Sonnensystem-Experiment kann diesen Unterschied detektieren.
+Für die Sonne beim Erdabstand: U = GM/(c²r) ≈ 10⁻⁸, also Δg_tt ~ 4 × 10⁻²⁴. Dies ist 19 Größenordnungen unter der Cassini-Präzision. Kein aktuelles oder geplantes Sonnensystem-Experiment kann diesen Unterschied detektieren.
 
 ### Experimentelle Schranken — Alle erfüllt
 
@@ -2929,13 +2940,13 @@ Jeder Sonnensystem- und Doppelpulsar-Test, der γ und β einschränkt, wird von 
 
 Frame-Dragging ist eine der dramatischsten Vorhersagen der Allgemeinen Relativitätstheorie: Eine rotierende Masse zieht buchstäblich die umgebende Raumzeit mit, was nahegelegene Objekte zur Mitrotation zwingt. Der Effekt wurde 1918 von Josef Lense und Hans Thirring vorhergesagt, kaum drei Jahre nachdem Einstein die ART veröffentlichte.
 
-Das physikalische Bild ist anschaulich: Man stelle sich die Raumzeit als viskose Flüssigkeit vor. Eine rotierende Masse ist wie eine sich drehende Kugel in dieser Flüssigkeit — sie zieht die Flüssigkeit mit und erzeugt ein wirbelartiges Strömungsmuster. In der ART erscheint Frame-Dragging durch die Neben­diagonalkomponente $g_{t}$φ der Kerr-Metrik:
+Das physikalische Bild ist anschaulich: Man stelle sich die Raumzeit als viskose Flüssigkeit vor. Eine rotierende Masse ist wie eine sich drehende Kugel in dieser Flüssigkeit — sie zieht die Flüssigkeit mit und erzeugt ein wirbelartiges Strömungsmuster. In der ART erscheint Frame-Dragging durch die Neben­diagonalkomponente g_tφ der Kerr-Metrik:
 
-$$g_{t\phi} = -\frac{r_s a \sin^2\theta}{r}$$
+g_{t\phi} = -\frac{r_s a \sin^2\theta}{r}
 
 wobei a = J/(Mc) der Spinparameter ist und θ der Polarwinkel, gemessen von der Rotationsachse. Die Lense-Thirring-Präzessionsrate für ein umlaufendes Gyroskop ist:
 
-$$\Omega_{\text{LT}} = \frac{2GJ}{c^2 r^3}$$
+\Omega_{\text{LT}} = \frac{2GJ}{c^2 r^3}
 
 Dies wurde experimentell durch zwei Meilenstein-Messungen bestätigt:
 
@@ -2951,7 +2962,7 @@ Das physikalische Bild: Man stelle sich das Segmentgitter als strukturiertes Med
 
 Die advektierte Segmentdichte ist:
 
-$$\Xi_{\text{rot}}(r, \theta) = \min\!\left[\,\Xi(r) \cdot \left(1 + \frac{a}{r} \sin^2\theta\right),\; 1\,\right]$$
+\Xi_{\text{rot}}(r, \theta) = \min\!\left[\,\Xi(r) \cdot \left(1 + \frac{a}{r} \sin^2\theta\right),\; 1\,\right]
 
 Diese Formel kodiert drei physikalische Effekte:
 
@@ -2962,13 +2973,13 @@ Diese Formel kodiert drei physikalische Effekte:
 **3. Sättigungsklammer:** Das min(·, 1) stellt sicher, dass Ξ_rot ≤ 1 — die Segmentdichte kann die volle Sättigung nicht überschreiten.
 
 **Rechenbeispiel — Erde:**
-Für die Erde gilt J $\approx$ 5,86 × 10³³ kg·m²/s und a = J/(Mc) = 3,3 mm. Beim Orbitalradius von Gravity Probe B (r $\approx$ 7000 km):
+Für die Erde gilt J ≈ 5,86 × 10³³ kg·m²/s und a = J/(Mc) = 3,3 mm. Beim Orbitalradius von Gravity Probe B (r ≈ 7000 km):
 
 \frac{a}{r} = \frac{3.3 \times 10^{-3}}{7 \times 10^6} \approx 4.7 \times 10^{-10}
 
 Die Lense-Thirring-Präzession aus der SSZ-advektierten Dichte reproduziert das ART-Ergebnis:
 
-$$\Omega_{\text{LT}} = \frac{2GJ}{c^2 r^3} \approx 39.2 \text{ mas/Jahr}$$
+\Omega_{\text{LT}} = \frac{2GJ}{c^2 r^3} \approx 39.2 \text{ mas/Jahr}
 
 Dies stimmt mit der Gravity-Probe-B-Messung innerhalb der experimentellen Unsicherheit überein. Im Schwachfeld liefern SSZ und ART identische Frame-Dragging-Vorhersagen.
 
@@ -2996,7 +3007,7 @@ Die vielversprechendsten Tests sind:
 
 **Was die Tests NICHT beweisen:** LLI im Starkfeldregime. Kein aktuelles Experiment sondiert LLI nahe Schwarzen Löchern oder Neutronensternoberflächen.
 
-**Reproduktion:** `E:/clone\segmented-calculation-suite/tests/` — alle Tests bestanden.
+**Reproduktion:** `E:\clone\segmented-calculation-suite\tests\` — alle Tests bestanden.
 
 ---
 
@@ -3029,29 +3040,29 @@ Dieses Kapitel hat bewiesen, dass SSZ die lokale Lorentz-Invarianz exakt erhält
 
 ### Zusammenfassung und Brücke zu Kapitel 8
 
-Kapitel 8 führt das Dualgeschwindigkeitskonzept ($v_{esc}$ und $v_{fall}$) ein, das die erste genuín neue kinematische Vorhersage von SSZ ist. Der LLI-Beweis dieses Kapitels stellt sicher, dass die dualen Geschwindigkeiten keine Artefakte eines bevorzugten Bezugssystems sind, sondern echte physikalische Vorhersagen, die jeder Beobachter messen kann.
+Kapitel 8 führt das Dualgeschwindigkeitskonzept (v_esc und v_fall) ein, das die erste genuín neue kinematische Vorhersage von SSZ ist. Der LLI-Beweis dieses Kapitels stellt sicher, dass die dualen Geschwindigkeiten keine Artefakte eines bevorzugten Bezugssystems sind, sondern echte physikalische Vorhersagen, die jeder Beobachter messen kann.
 
 ### Die Präzession von Gyroskopen durch Frame-Dragging
 
 Frame-Dragging hat zwei beobachtbare Manifestationen: die Lense-Thirring-Präzession von Orbitalebenen und die geodätische Präzession von Gyroskop-Spinachsen. Gravity Probe B hat beide Effekte für Gyroskope im Erdorbit gemessen.
 
-Die geodätische Präzession (auch de-Sitter-Präzession) ist eine Konsequenz der Raumzeitkrümmung um die Erde. Sie bewirkt eine Präzession der Gyroskop-Spinachse um 6,6 Bogensekunden pro Jahr in der Orbitalebene. Dieser Effekt ist unabhängig von der Erdrotation und hängt nur von der Masse ab. In SSZ ist die geodätische Präzession modifiziert: Ω_geodätisch\_SSZ = Ω_geodätisch\_ART × (1 + Korrektur der Ordnung Ξ²), wobei die Korrektur für die Erde kleiner als 10⁻¹⁸ ist — ununterscheidbar von der ART.
+Die geodätische Präzession (auch de-Sitter-Präzession) ist eine Konsequenz der Raumzeitkrümmung um die Erde. Sie bewirkt eine Präzession der Gyroskop-Spinachse um 6,6 Bogensekunden pro Jahr in der Orbitalebene. Dieser Effekt ist unabhängig von der Erdrotation und hängt nur von der Masse ab. In SSZ ist die geodätische Präzession modifiziert: Ω_geodätisch_SSZ = Ω_geodätisch_ART × (1 + Korrektur der Ordnung Ξ²), wobei die Korrektur für die Erde kleiner als 10⁻¹⁸ ist — ununterscheidbar von der ART.
 
-Die Frame-Dragging-Präzession (Lense-Thirring) wird durch die Erdrotation verursacht und ist viel kleiner: ~0,039 Bogensekunden pro Jahr. Gravity Probe B hat diesen Effekt mit ~19% Präzision gemessen und die ART-Vorhersage bestätigt. Die SSZ-Vorhersage unterscheidet sich von der ART um den Faktor D = 1/(1 + Ξ) $\approx$ 1 − 7 × 10⁻¹⁰ — völlig unmessbar mit aktueller Technologie.
+Die Frame-Dragging-Präzession (Lense-Thirring) wird durch die Erdrotation verursacht und ist viel kleiner: ~0,039 Bogensekunden pro Jahr. Gravity Probe B hat diesen Effekt mit ~19% Präzision gemessen und die ART-Vorhersage bestätigt. Die SSZ-Vorhersage unterscheidet sich von der ART um den Faktor D = 1/(1 + Ξ) ≈ 1 − 7 × 10⁻¹⁰ — völlig unmessbar mit aktueller Technologie.
 
-Die Bedeutung dieser Messungen für SSZ liegt nicht in der Unterscheidung zwischen SSZ und ART (die Schwachfeldkorrekturen sind viel zu klein), sondern in der Etablierung des experimentellen Rahmens für zukünftige Tests. Die SSZ-Vorhersage für Frame-Dragging nahe einem Neutronenstern (Ξ $\approx$ 0,1) unterscheidet sich von der ART um ~10%, was durch zukünftige Pulsar-Timing-Experimente messbar sein könnte.
+Die Bedeutung dieser Messungen für SSZ liegt nicht in der Unterscheidung zwischen SSZ und ART (die Schwachfeldkorrekturen sind viel zu klein), sondern in der Etablierung des experimentellen Rahmens für zukünftige Tests. Die SSZ-Vorhersage für Frame-Dragging nahe einem Neutronenstern (Ξ ≈ 0,1) unterscheidet sich von der ART um ~10%, was durch zukünftige Pulsar-Timing-Experimente messbar sein könnte.
 
 Das vielversprechendste System ist der Doppelpulsar PSR J0737-3039. Dieses System besteht aus zwei Pulsaren, die einander mit einer Periode von 2,4 Stunden umkreisen, mit signifikanter Spin-Bahn-Kopplung. Die geodätische Präzession der Pulsar-Spinachse wurde bereits gemessen, und der Frame-Dragging-Beitrag könnte potenziell mit ausreichender Timing-Präzision extrahiert werden.
 
 ### Das gravitomagnetische Feld in SSZ
 
-Frame-Dragging kann durch ein gravitomagnetisches Feld $B_{g}$ beschrieben werden, analog zum Magnetfeld in der Elektrodynamik. Wie eine bewegte elektrische Ladung ein Magnetfeld erzeugt, erzeugt eine bewegte (oder rotierende) Masse ein gravitomagnetisches Feld: $B_{g}$ = 2G/(c²r³) × (3(J·r̂)r̂ − J).
+Frame-Dragging kann durch ein gravitomagnetisches Feld B_g beschrieben werden, analog zum Magnetfeld in der Elektrodynamik. Wie eine bewegte elektrische Ladung ein Magnetfeld erzeugt, erzeugt eine bewegte (oder rotierende) Masse ein gravitomagnetisches Feld: B_g = 2G/(c²r³) × (3(J·r̂)r̂ − J).
 
 In SSZ ist das gravitomagnetische Feld durch die Segmentdichte modifiziert: B_g_SSZ = B_g_ART × D(r). Die physikalische Interpretation: Das gravitomagnetische Feld wird in Regionen hoher Segmentdichte geschwächt, weil die Segmente dem Mitziehen durch die rotierende Masse widerstehen.
 
-Das gravitomagnetische Feld hat messbare Effekte auf die Bewegung von Testteilchen. Ein Gyroskop in einem gravitomagnetischen Feld präzediert mit einer Rate proportional zu $B_{g}$ (Lense-Thirring-Präzession). Ein frei fallendes Teilchen erhält eine Geschwindigkeitskomponente senkrecht zu seiner Anfangsgeschwindigkeit und $B_{g}$ (gravitomagnetische Ablenkung). Beide Effekte werden in SSZ um den Faktor D(r) modifiziert.
+Das gravitomagnetische Feld hat messbare Effekte auf die Bewegung von Testteilchen. Ein Gyroskop in einem gravitomagnetischen Feld präzediert mit einer Rate proportional zu B_g (Lense-Thirring-Präzession). Ein frei fallendes Teilchen erhält eine Geschwindigkeitskomponente senkrecht zu seiner Anfangsgeschwindigkeit und B_g (gravitomagnetische Ablenkung). Beide Effekte werden in SSZ um den Faktor D(r) modifiziert.
 
-Für erdbasierte Experimente ist das gravitomagnetische Feld ~10⁻¹⁴ rad/s, entsprechend einer Gyroskop-Präzession von 0,039 Bogensekunden/Jahr. Für einen Millisekunden-Pulsar nahe einem 10-M$\odot$-Schwarzen-Loch (bei r = 10 r_s) ist das gravitomagnetische Feld ~10³ rad/s, und die SSZ-Korrektur (~10%) wäre mit Pulsar-Timing messbar.
+Für erdbasierte Experimente ist das gravitomagnetische Feld ~10⁻¹⁴ rad/s, entsprechend einer Gyroskop-Präzession von 0,039 Bogensekunden/Jahr. Für einen Millisekunden-Pulsar nahe einem 10-M☉-Schwarzen-Loch (bei r = 10 r_s) ist das gravitomagnetische Feld ~10³ rad/s, und die SSZ-Korrektur (~10%) wäre mit Pulsar-Timing messbar.
 
 ### Präzisionstests der Lorentz-Invarianz
 
@@ -3091,19 +3102,19 @@ Die GP-B-Ergebnisse bestaetigen die SSZ-Schwachfeldvorhersagen, liefern aber kei
 
 Die lokale Lorentz-Invarianz (LLI) ist ein Grundpfeiler sowohl der ART als auch von SSZ. Beide Theorien sagen vorher, dass die Naturgesetze in jedem lokalen Inertialsystem dieselbe Form haben. Die praezisesten Tests der LLI umfassen:
 
-**Hughes-Drever-Experiment:** Sucht nach einer Anisotropie der Traegheitsmasse durch Vergleich der Kernspinresonanzfrequenzen in verschiedenen Richtungen. Aktuelle Schranke: $\delta_{\text{m}}$/m < 10^{-30}. SSZ erfuellt diese Schranke, weil das Segmentgitter lokal isotrop ist.
+**Hughes-Drever-Experiment:** Sucht nach einer Anisotropie der Traegheitsmasse durch Vergleich der Kernspinresonanzfrequenzen in verschiedenen Richtungen. Aktuelle Schranke: delta_m/m < 10^{-30}. SSZ erfuellt diese Schranke, weil das Segmentgitter lokal isotrop ist.
 
-**Michelson-Morley-Typ-Experimente:** Moderne Versionen (mit optischen Resonatoren) erreichen Schranken auf die Anisotropie der Lichtgeschwindigkeit von $\delta_{\text{c}}$/c < 10^{-18}. SSZ erfuellt diese Schranke, weil die lokale Lichtgeschwindigkeit ueberall c ist (nur die Koordinatengeschwindigkeit variiert mit Xi).
+**Michelson-Morley-Typ-Experimente:** Moderne Versionen (mit optischen Resonatoren) erreichen Schranken auf die Anisotropie der Lichtgeschwindigkeit von delta_c/c < 10^{-18}. SSZ erfuellt diese Schranke, weil die lokale Lichtgeschwindigkeit ueberall c ist (nur die Koordinatengeschwindigkeit variiert mit Xi).
 
 **Ives-Stilwell-Experiment:** Misst die transversale Doppler-Verschiebung und bestaetigt die Zeitdilatation. Aktuelle Praezision: 10^{-8}. SSZ sagt dieselbe transversale Doppler-Verschiebung wie die spezielle Relativitaetstheorie vorher.
 
 ### Frame-Dragging nahe kompakten Objekten
 
-Waehrend Frame-Dragging im Schwachfeld (Erde, Sonne) winzig ist, wird es nahe kompakten Objekten dominant. Fuer einen rotierenden Neutronenstern mit Spin a/M = 0,3 und Radius R = 3 $r_{s}$ betraegt die Frame-Dragging-Rate:
+Waehrend Frame-Dragging im Schwachfeld (Erde, Sonne) winzig ist, wird es nahe kompakten Objekten dominant. Fuer einen rotierenden Neutronenstern mit Spin a/M = 0,3 und Radius R = 3 r_s betraegt die Frame-Dragging-Rate:
 
-$\Omega_{\text{FD}}$ = 2 G M a / (c^2 R^3) ~ 10^3 rad/s
+Omega_FD = 2 G M a / (c^2 R^3) ~ 10^3 rad/s
 
-In SSZ ist diese Rate um den Faktor D(R) = 1/(1 + Xi(R)) modifiziert. Fuer R = 3 $r_{s}$ ist Xi = 0,167 und D = 0,857, was eine 14,3%-Reduktion der Frame-Dragging-Rate gegenueber der ART ergibt.
+In SSZ ist diese Rate um den Faktor D(R) = 1/(1 + Xi(R)) modifiziert. Fuer R = 3 r_s ist Xi = 0,167 und D = 0,857, was eine 14,3%-Reduktion der Frame-Dragging-Rate gegenueber der ART ergibt.
 
 Diese Reduktion beeinflusst die beobachteten Eigenschaften von Akkretionsscheiben um rotierende Neutronensterne: Die innere Scheibe praezediert langsamer als von der ART vorhergesagt, was zu einer messbaren Aenderung der quasi-periodischen Oszillationen (QPOs) in der Roentgenemission fuehrt. Aktuelle Roentgenteleskope (NICER, IXPE) naehern sich der Praezision, die fuer diesen Test erforderlich ist.
 
@@ -3111,13 +3122,13 @@ Diese Reduktion beeinflusst die beobachteten Eigenschaften von Akkretionsscheibe
 
 Die Lense-Thirring-Praezession ist die Praezession der Orbitalebene eines Testteilchens um ein rotierendes Gravitationszentrum. Die Praezessionsrate in der ART ist:
 
-$\Omega_{\text{LT}}$ = 2 G J / (c^2 r^3)
+Omega_LT = 2 G J / (c^2 r^3)
 
 wobei J = I omega der Drehimpuls des Zentralobjekts ist. In SSZ ist die Praezessionsrate um den Faktor D(r) modifiziert:
 
 Omega_LT_SSZ = Omega_LT_GR * D(r) = 2 G J / (c^2 r^3) * 1/(1 + Xi(r))
 
-Fuer den LAGEOS-Satelliten (r = 12.270 km, Xi ~ 10^{-10}) ist die Korrektur vernachlaessigbar. Fuer einen Pulsar nahe Sgr A* (r ~ 100 $r_{s}$, Xi ~ 0,005) betraegt die Korrektur 0,5%, was mit ~20 Jahren Pulsar-Timing messbar waere.
+Fuer den LAGEOS-Satelliten (r = 12.270 km, Xi ~ 10^{-10}) ist die Korrektur vernachlaessigbar. Fuer einen Pulsar nahe Sgr A* (r ~ 100 r_s, Xi ~ 0,005) betraegt die Korrektur 0,5%, was mit ~20 Jahren Pulsar-Timing messbar waere.
 
 ### Experimentelle Perspektiven fuer Frame-Dragging-Tests
 
@@ -3133,7 +3144,7 @@ Die naechste Generation von Frame-Dragging-Experimenten wird die Praezision um G
 
 Der Sagnac-Effekt ist die Phasendifferenz zwischen zwei Lichtstrahlen, die einen rotierenden Interferometer in entgegengesetzten Richtungen durchlaufen. Die Phasendifferenz ist proportional zur Rotationsgeschwindigkeit und zur eingeschlossenen Flaeche:
 
-$\Delta_{\phi}$ = 8 pi Omega A / (lambda c)
+Delta_phi = 8 pi Omega A / (lambda c)
 
 wobei Omega die Winkelgeschwindigkeit, A die Flaeche und lambda die Wellenlaenge ist. In einem Gravitationsfeld wird der Sagnac-Effekt durch die Metrik modifiziert. In SSZ ist die Modifikation:
 
@@ -3141,7 +3152,7 @@ Delta_phi_SSZ = Delta_phi_flat * D(r)^{-1} = Delta_phi_flat * (1 + Xi(r))
 
 Die Korrektur ist proportional zu Xi und damit im Schwachfeld (Erdoberflaeche, Xi ~ 7 x 10^{-10}) voellig vernachlaessigbar. Fuer ein Interferometer auf einem Neutronenstern (Xi ~ 0,17) waere die Korrektur 17%, aber ein solches Experiment ist natuerlich nicht durchfuehrbar.
 
-Der Sagnac-Effekt wird in Ringlaser-Gyroskopen (z.B. dem Grossring-Laser G in Wettzell, Deutschland) mit einer Praezision von ~10^{-12} rad/s gemessen. Diese Praezision reicht aus, um die Erdrotation zu messen, aber nicht, um die SSZ-Korrektur (die von der Ordnung $\Xi_{\text{Erde}}$ ~ 10^{-9} ist) zu detektieren.
+Der Sagnac-Effekt wird in Ringlaser-Gyroskopen (z.B. dem Grossring-Laser G in Wettzell, Deutschland) mit einer Praezision von ~10^{-12} rad/s gemessen. Diese Praezision reicht aus, um die Erdrotation zu messen, aber nicht, um die SSZ-Korrektur (die von der Ordnung Xi_Erde ~ 10^{-9} ist) zu detektieren.
 
 ### Zusammenfassung der Frame-Dragging-Tests
 
@@ -3161,11 +3172,11 @@ Die Tabelle zeigt, dass die SSZ-Korrektur zu Frame-Dragging-Effekten nur fuer Ob
 
 Die geodaetische Praezession (auch de Sitter-Praezession) ist die Drehung der Spinachse eines Gyroskops, das sich auf einer Geodaete in einem Gravitationsfeld bewegt. Die Praezessionsrate ist:
 
-$\Omega_{\text{geod}}$ = (3/2) * (GM/(c^2 r)) * $v_{orb}$ / r
+Omega_geod = (3/2) * (GM/(c^2 r)) * v_orb / r
 
-wobei $v_{orb}$ die Orbitalgeschwindigkeit ist. Fuer einen Erdorbit (r = 7000 km, $v_{orb}$ = 7,7 km/s) betraegt die geodaetische Praezession 6,6 Bogensekunden pro Jahr.
+wobei v_orb die Orbitalgeschwindigkeit ist. Fuer einen Erdorbit (r = 7000 km, v_orb = 7,7 km/s) betraegt die geodaetische Praezession 6,6 Bogensekunden pro Jahr.
 
-Gravity Probe B (2004-2005) mass die geodaetische Praezession mit einer Praezision von 0,28% und bestaetigte die SSZ/ART-Vorhersage. Die SSZ-Korrektur zur geodaetischen Praezession betraegt ~$\Xi_{\text{Erde}}$ ~ 10^{-9}, weit unterhalb der Messgenauigkeit.
+Gravity Probe B (2004-2005) mass die geodaetische Praezession mit einer Praezision von 0,28% und bestaetigte die SSZ/ART-Vorhersage. Die SSZ-Korrektur zur geodaetischen Praezession betraegt ~Xi_Erde ~ 10^{-9}, weit unterhalb der Messgenauigkeit.
 
 Fuer den Doppelpulsar PSR J0737-3039 ist die geodaetische Praezession viel staerker: ~4,8 Grad pro Jahr (wegen der staerkeren Gravitation und der schnelleren Orbitalgeschwindigkeit). Die Messung bestaetigt die SSZ/ART-Vorhersage auf ~13% Praezision. Zukuenftige Beobachtungen (mit dem SKA) werden die Praezision auf ~1% verbessern.
 
@@ -3175,9 +3186,9 @@ Die lokale Lorentz-Invarianz (LLI) besagt, dass die Ergebnisse nicht-gravitative
 
 Die experimentellen Tests der LLI:
 
-**Hughes-Drever-Experiment (1960):** Sucht nach einer Anisotropie der Traegheit durch Messung der Kernresonanzfrequenzen. Die Schranke auf LLI-Verletzungen ist |$\delta_{\text{c}}$/c| < 10^{-25}. SSZ ist konsistent (LLI ist exakt in SSZ).
+**Hughes-Drever-Experiment (1960):** Sucht nach einer Anisotropie der Traegheit durch Messung der Kernresonanzfrequenzen. Die Schranke auf LLI-Verletzungen ist |delta_c/c| < 10^{-25}. SSZ ist konsistent (LLI ist exakt in SSZ).
 
-**Michelson-Morley-Typ-Experimente:** Moderne Versionen (mit optischen Resonatoren) setzen Schranken auf die Anisotropie der Lichtgeschwindigkeit: |$\delta_{\text{c}}$/c| < 10^{-17}. SSZ ist konsistent.
+**Michelson-Morley-Typ-Experimente:** Moderne Versionen (mit optischen Resonatoren) setzen Schranken auf die Anisotropie der Lichtgeschwindigkeit: |delta_c/c| < 10^{-17}. SSZ ist konsistent.
 
 **Ives-Stilwell-Experiment:** Misst die transversale Doppler-Verschiebung und bestaetigt die Zeitdilatation der speziellen Relativitaet auf 10^{-8}. SSZ ist konsistent.
 
@@ -3198,7 +3209,7 @@ Die wichtigsten Ergebnisse:
 3. **Gravity Probe B** bestaetigt die geodaetische Praezession auf 0,28% und Frame-Dragging auf 19%.
 4. **Zukuenftige Tests** mit dem SKA (Pulsare nahe Sgr A*) werden die SSZ-Starkfeldkorrekturen testen.
 
-Das naechste Kapitel (Kap. 8) fuehrt die duale Geschwindigkeitsstruktur ein und zeigt, wie die Abschliessungsrelation $v_{esc}$ * $v_{fall}$ = c^2 die Kinematik in SSZ vollstaendig bestimmt.
+Das naechste Kapitel (Kap. 8) fuehrt die duale Geschwindigkeitsstruktur ein und zeigt, wie die Abschliessungsrelation v_esc * v_fall = c^2 die Kinematik in SSZ vollstaendig bestimmt.
 
 ### Experimentelle Perspektiven fuer Frame-Dragging-Tests
 
@@ -3206,9 +3217,9 @@ Die naechste Generation von Frame-Dragging-Tests wird deutlich praeziser sein:
 
 **LARES-2 (2022+):** Der LARES-2-Satellit (Laser Relativity Satellite 2) misst den Lense-Thirring-Effekt auf ~0,2% Praezision. SSZ-Vorhersage: identisch mit ART (Schwachfeld).
 
-**Pulsar-Timing nahe Sgr A*:** Ein Pulsar in einem engen Orbit um Sgr A* wuerde Frame-Dragging im Starkfeld messen. Die SSZ-Korrektur waere Delta_Omega_FD/Omega_FD ~ Xi^2 ~ 0,03 bei r = 10 $r_{s}$ -- potenziell messbar mit SKA.
+**Pulsar-Timing nahe Sgr A*:** Ein Pulsar in einem engen Orbit um Sgr A* wuerde Frame-Dragging im Starkfeld messen. Die SSZ-Korrektur waere Delta_Omega_FD/Omega_FD ~ Xi^2 ~ 0,03 bei r = 10 r_s -- potenziell messbar mit SKA.
 
-**GRAVITY+ S-Sterne:** S-Sterne bei r ~ 100 $r_{s}$ um Sgr A* koennten Frame-Dragging-Effekte zeigen. Die SSZ-Korrektur ist hier ~10^{-4} -- an der Grenze der Messbarkeit.
+**GRAVITY+ S-Sterne:** S-Sterne bei r ~ 100 r_s um Sgr A* koennten Frame-Dragging-Effekte zeigen. Die SSZ-Korrektur ist hier ~10^{-4} -- an der Grenze der Messbarkeit.
 
 **Doppelpulsar PSR J0737-3039:** Der Doppelpulsar misst bereits Frame-Dragging auf ~13% Praezision. Zukuenftige Beobachtungen koennten die Praezision auf ~1% verbessern.
 
@@ -3223,11 +3234,12 @@ Dieses Kapitel hat die lokale Lorentz-Invarianz und das Frame-Dragging in SSZ vo
 5. **LARES-2:** Misst Lense-Thirring auf 0,2% -- SSZ/ART konsistent.
 6. **Zukunft:** SKA-Pulsare nahe Sgr A* koennten Starkfeld-Frame-Dragging testen.
 
+---
 
-\newpage
+# Kapitel 8: Duale Geschwindigkeiten — Flucht, Fall und Rotverschiebung
 
-# Duale Geschwindigkeiten — Flucht, Fall und Rotverschiebung
-
+**Teil II — Kinematik**
+**Status:** ERWEITERTE FASSUNG
 
 ---
 
@@ -3237,21 +3249,21 @@ Warum ist dies notwendig? Die dualen Geschwindigkeiten (Flucht und Fall) sind fu
 
 Jeder Physikstudent lernt die Fluchtgeschwindigkeit kennen: die Mindestgeschwindigkeit, die benötigt wird, um ein Gravitationsfeld dauerhaft zu verlassen. Für die Erde beträgt sie 11,2 km/s; für die Sonnenoberfläche 618 km/s; am Horizont eines Schwarzen Lochs entspricht sie der Lichtgeschwindigkeit. Dieses Konzept ist universell, wohlverstanden und identisch in der Newtonschen Gravitation, der Allgemeinen Relativitätstheorie und SSZ.
 
-Was *nicht* universell ist — und was einzigartig für SSZ ist — ist das Konzept einer **dualen Geschwindigkeit**: der Fallgeschwindigkeit $v_{fall}$, definiert als Reziproke der Fluchtgeschwindigkeit durch die Beziehung $v_{esc}$ · $v_{fall}$ = c². Diese Dualität hat kein Gegenstück in der Standard-ART. In der ART kommt ein aus der Ruhe im Unendlichen fallendes Teilchen beim Radius r mit genau der Fluchtgeschwindigkeit an — die beiden sind gleich. SSZ *trennt* sie, weil die Segmentstruktur Einwärts- und Auswärtsbewegung asymmetrisch behandelt: Segmente mit dem Dichtegradienten (einwärts) zu durchqueren ist physikalisch verschieden von der Durchquerung gegen den Gradienten (auswärts).
+Was *nicht* universell ist — und was einzigartig für SSZ ist — ist das Konzept einer **dualen Geschwindigkeit**: der Fallgeschwindigkeit v_fall, definiert als Reziproke der Fluchtgeschwindigkeit durch die Beziehung v_esc · v_fall = c². Diese Dualität hat kein Gegenstück in der Standard-ART. In der ART kommt ein aus der Ruhe im Unendlichen fallendes Teilchen beim Radius r mit genau der Fluchtgeschwindigkeit an — die beiden sind gleich. SSZ *trennt* sie, weil die Segmentstruktur Einwärts- und Auswärtsbewegung asymmetrisch behandelt: Segmente mit dem Dichtegradienten (einwärts) zu durchqueren ist physikalisch verschieden von der Durchquerung gegen den Gradienten (auswärts).
 
 **Lesehinweis.** Abschnitt 8.1 gibt einen detaillierten Überblick über die Fluchtgeschwindigkeit. Abschnitt 8.2 führt die Fallgeschwindigkeit ein und erklärt die Asymmetrie. Abschnitt 8.3 leitet die Dualitätsrelation her. Abschnitt 8.4 verbindet die Geschwindigkeiten mit der Rotverschiebung. Abschnitt 8.5 arbeitet astrophysikalische Beispiele durch. Abschnitt 8.6 fasst die Validierung zusammen.
 
 ---
 
-![Abb. 8.1 — Geschwindigkeitszerlegung: Duale Geschwindigkeiten $v_{esc}$ und $v_{fall}$ mit ihrem Produkt $v_{esc}$·$v_{fall}$ = c².](figures/ch08_dual_velocity/7_velocity_decomposition_DIAGRAM.png)
+![Abb. 8.1 — Geschwindigkeitszerlegung: Duale Geschwindigkeiten v_esc und v_fall mit ihrem Produkt v_esc·v_fall = c².](figures/ch08_dual_velocity/7_velocity_decomposition_DIAGRAM.png)
 
 ## 8.1 Fluchtgeschwindigkeit — Ein detaillierter Überblick
 
 ### Pädagogischer Überblick
 
-In der Newtonschen Gravitation ist die Fluchtgeschwindigkeit von einer Masse M beim Radius r gleich $v_{esc}$ = √(2GM/r). Dies ist die Mindestgeschwindigkeit, um bis ins Unendliche zu entkommen. Die Freifall-Geschwindigkeit beim Radius r, startend aus der Ruhe im Unendlichen, hat denselben Betrag: $v_{fall}$ = √(2GM/r). In der Newtonschen Physik sind dies dieselbe Zahl.
+In der Newtonschen Gravitation ist die Fluchtgeschwindigkeit von einer Masse M beim Radius r gleich v_esc = √(2GM/r). Dies ist die Mindestgeschwindigkeit, um bis ins Unendliche zu entkommen. Die Freifall-Geschwindigkeit beim Radius r, startend aus der Ruhe im Unendlichen, hat denselben Betrag: v_fall = √(2GM/r). In der Newtonschen Physik sind dies dieselbe Zahl.
 
-SSZ bricht diese Symmetrie. Die Segmentdichte Ξ modifiziert Einwärts- und Auswärtsausbreitung unterschiedlich, weil die Segmentstruktur radial asymmetrisch ist. Das Ergebnis ist, dass $v_{esc}$ und $v_{fall}$ nicht mehr gleich sind, aber ihr Produkt eine bemerkenswerte Identität erfüllt: $v_{esc}$ × $v_{fall}$ = c².
+SSZ bricht diese Symmetrie. Die Segmentdichte Ξ modifiziert Einwärts- und Auswärtsausbreitung unterschiedlich, weil die Segmentstruktur radial asymmetrisch ist. Das Ergebnis ist, dass v_esc und v_fall nicht mehr gleich sind, aber ihr Produkt eine bemerkenswerte Identität erfüllt: v_esc × v_fall = c².
 
 Intuitiv bedeutet dies: Man betrachte eine Rolltreppe. Hinaufgehen (Flucht) erfordert, gegen die Bewegung der Rolltreppe anzukämpfen. Hinuntergehen (Fall) wird von ihr unterstützt. Die Anstrengung hinauf mal die Leichtigkeit hinab ist konstant — sie hängt nur von der Rolltreppengeschwindigkeit ab, nicht von der Position. Das Segmentgitter spielt eine ähnliche Rolle.
 
@@ -3263,19 +3275,19 @@ E = \frac{1}{2}mv^2 - \frac{GMm}{r}
 
 Die Fluchtbedingung ist E = 0. Auflösen nach v:
 
-$$v_{\text{esc}} = \sqrt{\frac{2GM}{r}} = c\sqrt{\frac{r_s}{r}}$$
+v_{\text{esc}} = \sqrt{\frac{2GM}{r}} = c\sqrt{\frac{r_s}{r}}
 
-wobei $r_{s}$ = 2GM/c² der Schwarzschild-Radius ist. Dieses Ergebnis ist aus mehreren Gründen bemerkenswert:
+wobei r_s = 2GM/c² der Schwarzschild-Radius ist. Dieses Ergebnis ist aus mehreren Gründen bemerkenswert:
 
 **1. Masseunabhängig.** Die Fluchtgeschwindigkeit hängt nicht von der Masse m des entweichenden Teilchens ab. Ein Proton und ein Planet entkommen mit derselben Geschwindigkeit.
 
-**2. Universelle Formel.** Derselbe Ausdruck $v_{esc}$ = c√($r_{s}$/r) gilt in der Newtonschen Gravitation, in der ART und in SSZ. Die drei Theorien stimmen exakt überein.
+**2. Universelle Formel.** Derselbe Ausdruck v_esc = c√(r_s/r) gilt in der Newtonschen Gravitation, in der ART und in SSZ. Die drei Theorien stimmen exakt überein.
 
-**3. Lichtgeschwindigkeit am Horizont.** Bei r = $r_{s}$ gilt $v_{esc}$ = c. Dies definiert den Ereignishorizont in der ART.
+**3. Lichtgeschwindigkeit am Horizont.** Bei r = r_s gilt v_esc = c. Dies definiert den Ereignishorizont in der ART.
 
 ### Fluchtgeschwindigkeit über astrophysikalische Skalen
 
-| Objekt | M/M$\odot$ | R (km) | r_s (km) | v_esc (km/s) | v_esc/c |
+| Objekt | M/M☉ | R (km) | r_s (km) | v_esc (km/s) | v_esc/c |
 |--------|-------|--------|----------|--------------|---------|
 | Erde | 3×10⁻⁶ | 6371 | 0,00887 | 11,2 | 3,7×10⁻⁵ |
 | Mars | 3,2×10⁻⁷ | 3390 | 0,000945 | 5,0 | 1,7×10⁻⁵ |
@@ -3289,36 +3301,36 @@ wobei $r_{s}$ = 2GM/c² der Schwarzschild-Radius ist. Dieses Ergebnis ist aus me
 
 In SSZ erfordert Flucht die Durchquerung von Segmenten *nach außen*, gegen den Dichtegradienten. Jede Segmentgrenze stellt eine Potentialbarriere proportional zum lokalen Ξ dar. Die Gesamtenergie zur Durchquerung aller Segmente von r bis unendlich ist:
 
-$$E_{\text{esc}} = \int_r^\infty \frac{d\Xi}{dr'} \cdot mc^2 \, dr' = \frac{1}{2}mv_{\text{esc}}^2$$
+E_{\text{esc}} = \int_r^\infty \frac{d\Xi}{dr'} \cdot mc^2 \, dr' = \frac{1}{2}mv_{\text{esc}}^2
 
-Dieses Integral reproduziert die Standardformel $v_{esc}$ = c√($r_{s}$/r), weil die Schwachfeld-Segmentdichte Ξ_weak = $r_{s}$/(2r) den Gradienten dΞ/dr = −$r_{s}$/(2r²) hat.
+Dieses Integral reproduziert die Standardformel v_esc = c√(r_s/r), weil die Schwachfeld-Segmentdichte Ξ_weak = r_s/(2r) den Gradienten dΞ/dr = −r_s/(2r²) hat.
 
-Die Segmentinterpretation fügt physikalische Intuition hinzu: Flucht ist nahe einem massiven Körper schwieriger, weil es *mehr Segmente pro Entfernungseinheit zu kreuzen* gibt. Jede Segmentkreuzung kostet einen kleinen Betrag kinetischer Energie, und die kumulative Kosten ergeben ½mv\_esc².
+Die Segmentinterpretation fügt physikalische Intuition hinzu: Flucht ist nahe einem massiven Körper schwieriger, weil es *mehr Segmente pro Entfernungseinheit zu kreuzen* gibt. Jede Segmentkreuzung kostet einen kleinen Betrag kinetischer Energie, und die kumulative Kosten ergeben ½mv_esc².
 ## 8.2 Die Fallgeschwindigkeit
 
 ### Definition und physikalische Bedeutung
 
 Die Fallgeschwindigkeit ist ein SSZ-spezifisches Konzept, definiert als kinematisches Dual der Fluchtgeschwindigkeit:
 
-$$v_{\text{fall}}(r) = \frac{c^2}{v_{\text{esc}}(r)} = c\sqrt{\frac{r}{r_s}}$$
+v_{\text{fall}}(r) = \frac{c^2}{v_{\text{esc}}(r)} = c\sqrt{\frac{r}{r_s}}
 
-Diese Definition bedarf der Erklärung, denn in der Standard-ART gibt es keine separate „Fallgeschwindigkeit" — ein aus der Ruhe im Unendlichen fallendes Teilchen kommt beim Radius r mit exakt der Fluchtgeschwindigkeit $v_{esc}$ an. Die beiden sind durch Energieerhaltung identisch.
+Diese Definition bedarf der Erklärung, denn in der Standard-ART gibt es keine separate „Fallgeschwindigkeit" — ein aus der Ruhe im Unendlichen fallendes Teilchen kommt beim Radius r mit exakt der Fluchtgeschwindigkeit v_esc an. Die beiden sind durch Energieerhaltung identisch.
 
 SSZ *trennt* diese beiden Geschwindigkeiten, weil die Segmentstruktur Einwärts- und Auswärtsbewegung asymmetrisch behandelt. Das physikalische Bild ist folgendes:
 
-**Auswärtsbewegung (Flucht):** Das Teilchen bewegt sich gegen den Segmentdichtegradienten. Jede Segmentgrenze leistet Widerstand — das Teilchen muss sich durch zunehmende Segmentierung „hindurchdrücken". Die relevante Geschwindigkeit ist $v_{esc}$.
+**Auswärtsbewegung (Flucht):** Das Teilchen bewegt sich gegen den Segmentdichtegradienten. Jede Segmentgrenze leistet Widerstand — das Teilchen muss sich durch zunehmende Segmentierung „hindurchdrücken". Die relevante Geschwindigkeit ist v_esc.
 
-**Einwärtsbewegung (Fall):** Das Teilchen bewegt sich mit dem Segmentdichtegradienten. Die Segmentgrenzen *leiten* das Teilchen nach innen — sie widerstehen ihm nicht, sondern kanalisieren seine Bewegung entlang des Gradienten. Die relevante Geschwindigkeit ist $v_{fall}$, die die Koordinatenantwortrate des Segmentgitters auf das einfallende Teilchen misst.
+**Einwärtsbewegung (Fall):** Das Teilchen bewegt sich mit dem Segmentdichtegradienten. Die Segmentgrenzen *leiten* das Teilchen nach innen — sie widerstehen ihm nicht, sondern kanalisieren seine Bewegung entlang des Gradienten. Die relevante Geschwindigkeit ist v_fall, die die Koordinatenantwortrate des Segmentgitters auf das einfallende Teilchen misst.
 
-**Analogie.** Man betrachte eine Kugel, die auf einer gewellten Oberfläche (wie einem Waschbrett) rollt. *Bergauf* gegen die Wellen zu rollen ist schwer — jeder Grat widersteht der Kugel. Dies ist wie Flucht: langsam, energiekostspielig, charakterisiert durch $v_{esc}$. *Bergab* mit den Wellen zu rollen ist leicht — die Grate helfen, die Kugel nach unten zu kanalisieren. Dies ist wie Fallen: schnell, gradientenunterstützt, charakterisiert durch $v_{fall}$.
+**Analogie.** Man betrachte eine Kugel, die auf einer gewellten Oberfläche (wie einem Waschbrett) rollt. *Bergauf* gegen die Wellen zu rollen ist schwer — jeder Grat widersteht der Kugel. Dies ist wie Flucht: langsam, energiekostspielig, charakterisiert durch v_esc. *Bergab* mit den Wellen zu rollen ist leicht — die Grate helfen, die Kugel nach unten zu kanalisieren. Dies ist wie Fallen: schnell, gradientenunterstützt, charakterisiert durch v_fall.
 
-### Warum $v_{fall}$ c überschreiten kann
+### Warum v_fall c überschreiten kann
 
-Für r > $r_{s}$ übersteigt die Fallgeschwindigkeit $v_{fall}$ = c√(r/r_s) die Lichtgeschwindigkeit c. Bei r = 4$r_{s}$ gilt $v_{fall}$ = 2c. Bei r = 100$r_{s}$ gilt $v_{fall}$ = 10c. Dies scheint die Spezielle Relativitätstheorie zu verletzen, tut es aber nicht, aus einem entscheidenden Grund: **$v_{fall}$ ist eine Koordinatengeschwindigkeit der Segmentgitterantwort, nicht die lokal gemessene Geschwindigkeit irgendeines physikalischen Objekts.**
+Für r > r_s übersteigt die Fallgeschwindigkeit v_fall = c√(r/r_s) die Lichtgeschwindigkeit c. Bei r = 4r_s gilt v_fall = 2c. Bei r = 100r_s gilt v_fall = 10c. Dies scheint die Spezielle Relativitätstheorie zu verletzen, tut es aber nicht, aus einem entscheidenden Grund: **v_fall ist eine Koordinatengeschwindigkeit der Segmentgitterantwort, nicht die lokal gemessene Geschwindigkeit irgendeines physikalischen Objekts.**
 
-Die Unterscheidung zwischen Koordinatengeschwindigkeiten und lokal gemessenen Geschwindigkeiten ist in der ART wohlbekannt. In Schwarzschild-Koordinaten ist die Koordinatengeschwindigkeit des Lichts am Horizont dr/dt = 0 (Licht scheint „stehenzubleiben"), doch lokal mit Maßstäben und Uhren gemessen reist Licht immer mit c. Ebenso beschreibt $v_{fall}$, wie das Segmentgitter auf den Einfall reagiert — es ist die Rate, mit der Segmentinformation sich nach innen ausbreitet, nicht die Geschwindigkeit eines materiellen Objekts.
+Die Unterscheidung zwischen Koordinatengeschwindigkeiten und lokal gemessenen Geschwindigkeiten ist in der ART wohlbekannt. In Schwarzschild-Koordinaten ist die Koordinatengeschwindigkeit des Lichts am Horizont dr/dt = 0 (Licht scheint „stehenzubleiben"), doch lokal mit Maßstäben und Uhren gemessen reist Licht immer mit c. Ebenso beschreibt v_fall, wie das Segmentgitter auf den Einfall reagiert — es ist die Rate, mit der Segmentinformation sich nach innen ausbreitet, nicht die Geschwindigkeit eines materiellen Objekts.
 
-Lokal gemessene Geschwindigkeiten in SSZ sind immer subluminal. Die lokale Geschwindigkeit eines einfallenden Teilchens, gemessen von einem lokalen Beobachter mit lokalen Maßstäben und Uhren, ist immer $v_{lokal}$ < c.
+Lokal gemessene Geschwindigkeiten in SSZ sind immer subluminal. Die lokale Geschwindigkeit eines einfallenden Teilchens, gemessen von einem lokalen Beobachter mit lokalen Maßstäben und Uhren, ist immer v_lokal < c.
 
 ## 8.3 Die Dualitätsrelation
 
@@ -3326,7 +3338,7 @@ Lokal gemessene Geschwindigkeiten in SSZ sind immer subluminal. Die lokale Gesch
 
 Die Flucht- und Fallgeschwindigkeiten erfüllen eine fundamentale Identität:
 
-$$v_{\text{esc}}(r) \cdot v_{\text{fall}}(r) = c^2$$
+v_{\text{esc}}(r) \cdot v_{\text{fall}}(r) = c^2
 
 Der Beweis folgt unmittelbar aus den Definitionen:
 
@@ -3336,7 +3348,7 @@ Dies gilt identisch für alle r > 0, in allen Regimen (Schwach- und Starkfeld), 
 
 ### Physikalische Bedeutung
 
-Die Dualität $v_{esc}$ · $v_{fall}$ = c² kodiert eine tiefe Symmetrie: **Das Gravitationsfeld erhält ein konstantes Geschwindigkeitsprodukt bei jedem Radius.** Wo Flucht schwer ist (hohes $v_{esc}$, nahe der Masse), ist Fall „schnell" (hohes $v_{fall}$); wo Flucht leicht ist (niedriges $v_{esc}$, weit von der Masse), ist Fall „langsam" (niedriges $v_{fall}$). Das Produkt ist immer c².
+Die Dualität v_esc · v_fall = c² kodiert eine tiefe Symmetrie: **Das Gravitationsfeld erhält ein konstantes Geschwindigkeitsprodukt bei jedem Radius.** Wo Flucht schwer ist (hohes v_esc, nahe der Masse), ist Fall „schnell" (hohes v_fall); wo Flucht leicht ist (niedriges v_esc, weit von der Masse), ist Fall „langsam" (niedriges v_fall). Das Produkt ist immer c².
 
 Dies ist analog zu anderen Konstant-Produkt-Relationen in der Physik:
 
@@ -3346,7 +3358,7 @@ Dies ist analog zu anderen Konstant-Produkt-Relationen in der Physik:
 | De Broglie: λ · p = h | h | Welle-Teilchen-Dualität |
 | SSZ: v_esc · v_fall = c² | c² | Konjugierte Flucht-Fall-Geschwindigkeiten |
 
-Das Muster legt nahe, dass $v_{esc}$ und $v_{fall}$ **konjugierte kinematische Variablen** sind — sie kodieren komplementäre Aspekte der Gravitationswechselwirkung, analog zu Position und Impuls in der Quantenmechanik. Diese Konjugiertheit ist einzigartig für SSZ; die ART hat keine analoge Konstant-Produkt-Relation.
+Das Muster legt nahe, dass v_esc und v_fall **konjugierte kinematische Variablen** sind — sie kodieren komplementäre Aspekte der Gravitationswechselwirkung, analog zu Position und Impuls in der Quantenmechanik. Diese Konjugiertheit ist einzigartig für SSZ; die ART hat keine analoge Konstant-Produkt-Relation.
 
 ### Verhalten an speziellen Radien
 
@@ -3359,7 +3371,7 @@ Das Muster legt nahe, dass $v_{esc}$ und $v_{fall}$ **konjugierte kinematische V
 | 1 | 1,000 | 1,000 | c² | Horizont |
 | 0,5 | 1,414 | 0,707 | c² | Innerhalb des Horizonts |
 
-Am Horizont (r = $r_{s}$) sind die beiden Geschwindigkeiten gleich: $v_{esc}$ = $v_{fall}$ = c. Dies ist der einzige selbstduale Punkt des Gravitationsfeldes. Bei diesem Radius gibt es keine Asymmetrie zwischen Einwärts- und Auswärtsbewegung. Diese Selbstdualität ist mit der Endlichkeit von D($r_{s}$) = 0,555 in SSZ verbunden: Der Horizont ist ein spezieller, aber nicht-singulärer Punkt.
+Am Horizont (r = r_s) sind die beiden Geschwindigkeiten gleich: v_esc = v_fall = c. Dies ist der einzige selbstduale Punkt des Gravitationsfeldes. Bei diesem Radius gibt es keine Asymmetrie zwischen Einwärts- und Auswärtsbewegung. Diese Selbstdualität ist mit der Endlichkeit von D(r_s) = 0,555 in SSZ verbunden: Der Horizont ist ein spezieller, aber nicht-singulärer Punkt.
 
 ## 8.4 Verbindung zur gravitativen Rotverschiebung
 
@@ -3367,15 +3379,15 @@ Am Horizont (r = $r_{s}$) sind die beiden Geschwindigkeiten gleich: $v_{esc}$ = 
 
 Die duale Geschwindigkeitsstruktur liefert eine kinematische Motivation für die Rotverschiebungsformel. Im Schwachfeld sind Fluchtgeschwindigkeit und Segmentdichte verwandt durch:
 
-$$v_{\text{esc}}^2 = c^2 \cdot \frac{r_s}{r} = 2c^2 \cdot \Xi_{\text{weak}}$$
+v_{\text{esc}}^2 = c^2 \cdot \frac{r_s}{r} = 2c^2 \cdot \Xi_{\text{weak}}
 
-Dies bedeutet Ξ_weak = $v_{esc}$²/(2c²) — die Segmentdichte gleicht dem halben Quadrat der Fluchtgeschwindigkeit geteilt durch c².
+Dies bedeutet Ξ_weak = v_esc²/(2c²) — die Segmentdichte gleicht dem halben Quadrat der Fluchtgeschwindigkeit geteilt durch c².
 
 Die gravitative Rotverschiebung eines bei Radius r emittierten und im Unendlichen empfangenen Photons ist:
 
-$$z = \frac{\lambda_{\text{obs}} - \lambda_{\text{emit}}}{\lambda_{\text{emit}}} = \frac{1}{D(r)} - 1 = \Xi(r)$$
+z = \frac{\lambda_{\text{obs}} - \lambda_{\text{emit}}}{\lambda_{\text{emit}}} = \frac{1}{D(r)} - 1 = \Xi(r)
 
-Im Schwachfeld gilt z $\approx$ Ξ_weak = v_esc²/(2c²). Dies ist die klassische Rotverschiebungsformel.
+Im Schwachfeld gilt z ≈ Ξ_weak = v_esc²/(2c²). Dies ist die klassische Rotverschiebungsformel.
 
 **Rechenbeispiel — Pound-Rebka-Experiment (1960).** Das Experiment maß die gravitative Rotverschiebung von Gammastrahlen, die 22,5 m im Jefferson Tower von Harvard fielen. Die vorhergesagte Rotverschiebung ist:
 
@@ -3383,13 +3395,13 @@ z = \frac{g \cdot h}{c^2} = \frac{9.81 \times 22.5}{(3 \times 10^8)^2} = 2.45 \t
 
 Der gemessene Wert war (2,57 ± 0,26) × 10⁻¹⁵, was die Vorhersage auf ~5% bestätigt. In SSZ-Begriffen ist die Segmentdichtedifferenz zwischen Ober- und Unterseite des Turms ΔΞ = gh/c² = 2,45 × 10⁻¹⁵.
 
-### Wichtiger Vorbehalt: D $\neq$ $v_{fall}$/c
+### Wichtiger Vorbehalt: D ≠ v_fall/c
 
-Eine verlockende, aber *inkorrekte* Identifikation wäre D(r) = $v_{fall}$/c. Prüfen wir: Bei r = $r_{s}$ gilt $v_{fall}$ = c, also $v_{fall}$/c = 1. Aber D($r_{s}$) = 0,555 $\neq$ 1. Die Identifikation scheitert.
+Eine verlockende, aber *inkorrekte* Identifikation wäre D(r) = v_fall/c. Prüfen wir: Bei r = r_s gilt v_fall = c, also v_fall/c = 1. Aber D(r_s) = 0,555 ≠ 1. Die Identifikation scheitert.
 
 Die korrekte Beziehung ist:
 
-$$D(r) = \frac{1}{1 + \Xi(r)} \neq \frac{v_{\text{fall}}}{c} = \sqrt{\frac{r}{r_s}}$$
+D(r) = \frac{1}{1 + \Xi(r)} \neq \frac{v_{\text{fall}}}{c} = \sqrt{\frac{r}{r_s}}
 
 Diese Größen stimmen nur im Grenzfall r → ∞ überein (wo beide gegen 1 gehen). Bei endlichem r divergieren sie. Die dualen Geschwindigkeiten *motivieren* die Segmentdichte durch das Energieargument, aber die präzise Zeitdilatationsformel D = 1/(1+Ξ) ist ein unabhängiges Ergebnis.
 
@@ -3397,13 +3409,13 @@ Diese Größen stimmen nur im Grenzfall r → ∞ überein (wo beide gegen 1 geh
 
 ### Die Sonne: Schwachfeld-Benchmark
 
-An der Sonnenoberfläche (R = 6,96 × 10⁵ km, $r_{s}$ = 2,95 km):
+An der Sonnenoberfläche (R = 6,96 × 10⁵ km, r_s = 2,95 km):
 
-$$v_{\text{esc}} = c\sqrt{2.95/6.96 \times 10^5} = 618 \text{ km/s}$$
+v_{\text{esc}} = c\sqrt{2.95/6.96 \times 10^5} = 618 \text{ km/s}
 
-$$v_{\text{fall}} = c^2/v_{\text{esc}} = (3 \times 10^5)^2/618 = 1.46 \times 10^8 \text{ km/s} \approx 487c$$
+v_{\text{fall}} = c^2/v_{\text{esc}} = (3 \times 10^5)^2/618 = 1.46 \times 10^8 \text{ km/s} \approx 487c
 
-$$\Xi_{\text{weak}} = r_s/(2R) = 2.12 \times 10^{-6}$$
+\Xi_{\text{weak}} = r_s/(2R) = 2.12 \times 10^{-6}
 
 D = 1/(1 + 2.12 \times 10^{-6}) = 0.9999979
 
@@ -3411,13 +3423,13 @@ Die gravitative Rotverschiebung von der Sonnenoberfläche ist z = Ξ = 2,12 × 1
 
 ### Neutronenstern: Starkfeldgrenze
 
-Für einen kanonischen Neutronenstern (M = 1,4 M$\odot$, R = 10 km, r_s = 4,14 km):
+Für einen kanonischen Neutronenstern (M = 1,4 M☉, R = 10 km, r_s = 4,14 km):
 
-$$v_{\text{esc}} = c\sqrt{4.14/10} = 0.643c = 193\,000 \text{ km/s}$$
+v_{\text{esc}} = c\sqrt{4.14/10} = 0.643c = 193\,000 \text{ km/s}
 
-$$v_{\text{fall}} = c^2/v_{\text{esc}} = c/0.643 = 1.556c$$
+v_{\text{fall}} = c^2/v_{\text{esc}} = c/0.643 = 1.556c
 
-$$\Xi_{\text{weak}} = r_s/(2R) = 0.207$$
+\Xi_{\text{weak}} = r_s/(2R) = 0.207
 
 D = 1/(1.207) = 0.829
 
@@ -3427,25 +3439,25 @@ Die Rotverschiebung von der Neutronensternoberfläche ist z = Ξ = 0,207, was be
 
 ### Schwarze-Loch-Horizont: Der selbstduale Punkt
 
-Bei r = $r_{s}$:
+Bei r = r_s:
 
-$$v_{\text{esc}} = c, \quad v_{\text{fall}} = c$$
+v_{\text{esc}} = c, \quad v_{\text{fall}} = c
 
-$$\Xi_{\text{strong}} = 1 - e^{-\varphi} = 0.802$$
+\Xi_{\text{strong}} = 1 - e^{-\varphi} = 0.802
 
 D = 1/1.802 = 0.555
 
-Dies ist der selbstduale Punkt: $v_{esc}$ = $v_{fall}$ = c. Der Horizont ist der einzige Radius, bei dem die Einwärts-Auswärts-Asymmetrie verschwindet. Die Zeitdilatation D = 0,555 ist endlich — Uhren ticken mit 55,5% der Rate im Unendlichen, aber sie stoppen nicht.
+Dies ist der selbstduale Punkt: v_esc = v_fall = c. Der Horizont ist der einzige Radius, bei dem die Einwärts-Auswärts-Asymmetrie verschwindet. Die Zeitdilatation D = 0,555 ist endlich — Uhren ticken mit 55,5% der Rate im Unendlichen, aber sie stoppen nicht.
 
 ## 8.6 Validierung und Konsistenz
 
 **Testdateien:** `test_vfall_duality`, `test_dual_velocity`, `test_redshift_velocity`
 
-**Was die Tests beweisen:** $v_{esc}$ · $v_{fall}$ = c² gilt für alle 500+ Testradien von r/r_s = 0,01 bis 10⁶; Schwachfeld-Rotverschiebung z = Ξ = $v_{esc}$²/(2c²) stimmt mit der ART bis zur Maschinengenauigkeit überein; der selbstduale Punkt $v_{esc}$ = $v_{fall}$ = c tritt exakt bei r = $r_{s}$ auf; D(r) $\neq$ $v_{fall}$/c für alle r < ∞.
+**Was die Tests beweisen:** v_esc · v_fall = c² gilt für alle 500+ Testradien von r/r_s = 0,01 bis 10⁶; Schwachfeld-Rotverschiebung z = Ξ = v_esc²/(2c²) stimmt mit der ART bis zur Maschinengenauigkeit überein; der selbstduale Punkt v_esc = v_fall = c tritt exakt bei r = r_s auf; D(r) ≠ v_fall/c für alle r < ∞.
 
-**Was die Tests NICHT beweisen:** Die physikalische Trennung von $v_{esc}$ und $v_{fall}$ in verschiedene beobachtbare Größen. In der ART sind diese gleich.
+**Was die Tests NICHT beweisen:** Die physikalische Trennung von v_esc und v_fall in verschiedene beobachtbare Größen. In der ART sind diese gleich.
 
-**Reproduktion:** `E:/clone\segmented-calculation-suite/tests/` — alle Tests bestanden.
+**Reproduktion:** `E:\clone\segmented-calculation-suite\tests\` — alle Tests bestanden.
 
 ---
 
@@ -3457,7 +3469,7 @@ Dies ist der selbstduale Punkt: $v_{esc}$ = $v_{fall}$ = c. Der Horizont ist der
 | 2 | v_fall = c²/v_esc = c√(r/r_s) | Fallgeschwindigkeit (SSZ) |
 | 3 | v_esc · v_fall = c² | kinematische Abschließung |
 | 4 | Ξ_weak = v_esc²/(2c²) | Geschwindigkeits-Dichte-Verbindung |
-| 5 | D = 1/(1+Ξ) $\neq$ v_fall/c | kanonische Zeitdilatation |
+| 5 | D = 1/(1+Ξ) ≠ v_fall/c | kanonische Zeitdilatation |
 | 6 | z = Ξ(r) | gravitative Rotverschiebung |
 
 ---
@@ -3475,39 +3487,39 @@ Dies ist der selbstduale Punkt: $v_{esc}$ = $v_{fall}$ = c. Der Horizont ist der
 
 ### Kapitelzusammenfassung und Brücke
 
-Dieses Kapitel führte die duale Geschwindigkeitsstruktur von SSZ ein: Fluchtgeschwindigkeit $v_{esc}$ und Fallgeschwindigkeit $v_{fall}$ sind nicht gleich, aber erfüllen $v_{esc}$ × $v_{fall}$ = c². Der physikalische Ursprung ist die radiale Asymmetrie des Segmentgitters. Die Wertetabelle über astrophysikalische Objekte illustrierte den enormen dynamischen Bereich dieser Asymmetrie.
+Dieses Kapitel führte die duale Geschwindigkeitsstruktur von SSZ ein: Fluchtgeschwindigkeit v_esc und Fallgeschwindigkeit v_fall sind nicht gleich, aber erfüllen v_esc × v_fall = c². Der physikalische Ursprung ist die radiale Asymmetrie des Segmentgitters. Die Wertetabelle über astrophysikalische Objekte illustrierte den enormen dynamischen Bereich dieser Asymmetrie.
 
 ### Zusammenfassung und Brücke zu Kapitel 9
 
-Kapitel 9 beweist die Abschließungsrelation $v_{esc}$ × $v_{fall}$ = c² formal und erforscht ihre Konsequenzen für Informationserhaltung und Kausalstruktur. Die Abschließung ist das kinematische Fundament für das in Teil III entwickelte elektromagnetische Rahmenwerk.
+Kapitel 9 beweist die Abschließungsrelation v_esc × v_fall = c² formal und erforscht ihre Konsequenzen für Informationserhaltung und Kausalstruktur. Die Abschließung ist das kinematische Fundament für das in Teil III entwickelte elektromagnetische Rahmenwerk.
 
 ### Verbindung zur Orbitalmechanik
 
-Die dualen Geschwindigkeiten $v_{esc}$ und $v_{fall}$ haben direkte Implikationen für die Orbitalmechanik. Die Kreisbahngeschwindigkeit bei Radius r ist $v_{circ}$ = √(GM/r) in der Newtonschen Gravitation. In SSZ ist die Kreisbahngeschwindigkeit durch die Segmentdichte modifiziert: v_circ_SSZ = v_circ_Newton × 1/√(1 + Ξ), was etwas langsamer als der Newtonsche Wert ist.
+Die dualen Geschwindigkeiten v_esc und v_fall haben direkte Implikationen für die Orbitalmechanik. Die Kreisbahngeschwindigkeit bei Radius r ist v_circ = √(GM/r) in der Newtonschen Gravitation. In SSZ ist die Kreisbahngeschwindigkeit durch die Segmentdichte modifiziert: v_circ_SSZ = v_circ_Newton × 1/√(1 + Ξ), was etwas langsamer als der Newtonsche Wert ist.
 
-Das Verhältnis $v_{circ}$/v_esc charakterisiert die Stabilität von Kreisbahnen. In der Newtonschen Gravitation ist $v_{circ}$/v_esc = 1/√2 bei allen Radien, und Kreisbahnen sind überall stabil. In der ART nimmt das Verhältnis mit abnehmendem Radius ab, und Kreisbahnen werden innerhalb des ISCO bei r = 3 $r_{s}$ instabil. In SSZ verhält sich das Verhältnis ähnlich wie in der ART im Schwachfeld, unterscheidet sich aber im Starkfeld.
+Das Verhältnis v_circ/v_esc charakterisiert die Stabilität von Kreisbahnen. In der Newtonschen Gravitation ist v_circ/v_esc = 1/√2 bei allen Radien, und Kreisbahnen sind überall stabil. In der ART nimmt das Verhältnis mit abnehmendem Radius ab, und Kreisbahnen werden innerhalb des ISCO bei r = 3 r_s instabil. In SSZ verhält sich das Verhältnis ähnlich wie in der ART im Schwachfeld, unterscheidet sich aber im Starkfeld.
 
-Für Binärpulsare (wie PSR J0737-3039 oder den Hulse-Taylor-Pulsar PSR B1913+16) beträgt die Orbitalgeschwindigkeit einige hundert km/s, entsprechend v/c ~ 10⁻³. Die SSZ-Korrektur zur Orbitaldynamik ist von der Ordnung Ξ $\approx$ 10⁻⁶, messbar nur durch akkumulierte Effekte (wie den Orbitalperiodenzerfall durch Metrik-Perturbationenemission). Die SSZ-Vorhersage für den Periodenzerfall stimmt mit der ART bis zur Präzision der aktuellen Messungen überein (~0,1% für den Hulse-Taylor-Pulsar).
+Für Binärpulsare (wie PSR J0737-3039 oder den Hulse-Taylor-Pulsar PSR B1913+16) beträgt die Orbitalgeschwindigkeit einige hundert km/s, entsprechend v/c ~ 10⁻³. Die SSZ-Korrektur zur Orbitaldynamik ist von der Ordnung Ξ ≈ 10⁻⁶, messbar nur durch akkumulierte Effekte (wie den Orbitalperiodenzerfall durch Metrik-Perturbationenemission). Die SSZ-Vorhersage für den Periodenzerfall stimmt mit der ART bis zur Präzision der aktuellen Messungen überein (~0,1% für den Hulse-Taylor-Pulsar).
 
-Für Materie nahe einem kompakten Objekt (wie das heiße Gas in der inneren Akkretionsscheibe eines Röntgen-Binärsystems) nähert sich die Orbitalgeschwindigkeit c/√3 $\approx$ 0,577c am ISCO. Hier ist die SSZ-Korrektur signifikant: Die Orbitalgeschwindigkeit am SSZ-modifizierten ISCO unterscheidet sich vom ART-Wert um ~Ξ(3 r_s) = r_s/(6 r_s) = 0,167, oder ~17%. Diese Korrektur beeinflusst die beobachteten Eigenschaften der inneren Akkretionsscheibe und ist prinzipiell mit hochauflösender Röntgenspektroskopie testbar.
+Für Materie nahe einem kompakten Objekt (wie das heiße Gas in der inneren Akkretionsscheibe eines Röntgen-Binärsystems) nähert sich die Orbitalgeschwindigkeit c/√3 ≈ 0,577c am ISCO. Hier ist die SSZ-Korrektur signifikant: Die Orbitalgeschwindigkeit am SSZ-modifizierten ISCO unterscheidet sich vom ART-Wert um ~Ξ(3 r_s) = r_s/(6 r_s) = 0,167, oder ~17%. Diese Korrektur beeinflusst die beobachteten Eigenschaften der inneren Akkretionsscheibe und ist prinzipiell mit hochauflösender Röntgenspektroskopie testbar.
 
 ### Energiebilanz des radialen Einfalls
 
 Wenn ein Testteilchen radial aus der Ruhe im Unendlichen auf ein kompaktes Objekt fällt, nimmt seine kinetische Energie zu. Die gesamte erhaltene Energie des Teilchens ist E = mc² (Ruheenergie, da es aus der Ruhe im Unendlichen startet). Bei Radius r verteilt sich die Energie zwischen Ruheenergie, kinetischer Energie und gravitativer potentieller Energie: E = mc² D(r) γ_seg(r) = mc².
 
-Auflösung nach der Fallgeschwindigkeit: v_fall = c √(1 − D²)/D = c √(2Ξ + Ξ²)/(1+Ξ). Im Schwachfeld (Ξ ≪ 1) reduziert sich dies auf v_fall $\approx$ c√(2Ξ) = √(2GM/r), was das Newtonsche Ergebnis reproduziert. Im Starkfeld (Ξ $\approx$ 0,802 bei r_s) ergibt sich v_fall = c√(2,248)/1,802 = 0,832c.
+Auflösung nach der Fallgeschwindigkeit: v_fall = c √(1 − D²)/D = c √(2Ξ + Ξ²)/(1+Ξ). Im Schwachfeld (Ξ ≪ 1) reduziert sich dies auf v_fall ≈ c√(2Ξ) = √(2GM/r), was das Newtonsche Ergebnis reproduziert. Im Starkfeld (Ξ ≈ 0,802 bei r_s) ergibt sich v_fall = c√(2,248)/1,802 = 0,832c.
 
-Zum Vergleich: Die ART-Fallgeschwindigkeit bei $r_{s}$ ist v_fall_ART = c (in Schwarzschild-Koordinaten). Die SSZ-Fallgeschwindigkeit beträgt 83,2% von c an der natürlichen Grenze — schnell, aber nicht Lichtgeschwindigkeit. Dieser Unterschied hat Konsequenzen für die kinetische Energie, die beim Auftreffen akkretierender Materie auf die natürliche Grenze deponiert wird, und beeinflusst das thermische Emissionsspektrum (Kapitel 23).
+Zum Vergleich: Die ART-Fallgeschwindigkeit bei r_s ist v_fall_ART = c (in Schwarzschild-Koordinaten). Die SSZ-Fallgeschwindigkeit beträgt 83,2% von c an der natürlichen Grenze — schnell, aber nicht Lichtgeschwindigkeit. Dieser Unterschied hat Konsequenzen für die kinetische Energie, die beim Auftreffen akkretierender Materie auf die natürliche Grenze deponiert wird, und beeinflusst das thermische Emissionsspektrum (Kapitel 23).
 
 ### Astrophysikalische Anwendungen der dualen Geschwindigkeiten
 
 Die dualen Geschwindigkeiten haben direkte astrophysikalische Anwendungen:
 
-**Akkretionsphysik:** Die Einfallgeschwindigkeit $v_{fall}$ bestimmt die Rate, mit der Materie auf kompakte Objekte akkretiert wird. Die Eddington-Leuchtkraft $L_{Edd}$ = 4πGMm\_pc/σ_T setzt eine obere Grenze für die Akkretionsrate. In SSZ ist die Einfallgeschwindigkeit bei $r_{s}$ endlich ($v_{fall}$ = c), was eine endliche Akkretionsrate impliziert — im Gegensatz zur ART, wo $v_{fall}$ → c bei $r_{s}$ in Eigenzeit, aber die Koordinatengeschwindigkeit null wird.
+**Akkretionsphysik:** Die Einfallgeschwindigkeit v_fall bestimmt die Rate, mit der Materie auf kompakte Objekte akkretiert wird. Die Eddington-Leuchtkraft L_Edd = 4πGMm_pc/σ_T setzt eine obere Grenze für die Akkretionsrate. In SSZ ist die Einfallgeschwindigkeit bei r_s endlich (v_fall = c), was eine endliche Akkretionsrate impliziert — im Gegensatz zur ART, wo v_fall → c bei r_s in Eigenzeit, aber die Koordinatengeschwindigkeit null wird.
 
-**Metrik-Perturbationen-Inspiral:** Die Orbitalgeschwindigkeit eines kompakten Doppelsterns im späten Inspiral nähert sich v_esc(r). In SSZ ist v_esc(r_s) = c, was die maximale Orbitalgeschwindigkeit begrenzt. Die Metrik-Perturbationen-Frequenz am letzten stabilen Orbit ist f_ISCO = c³/(6√6 π GM) $\approx$ 4,4 kHz × (M$\odot$/M) für Schwarzschild.
+**Metrik-Perturbationen-Inspiral:** Die Orbitalgeschwindigkeit eines kompakten Doppelsterns im späten Inspiral nähert sich v_esc(r). In SSZ ist v_esc(r_s) = c, was die maximale Orbitalgeschwindigkeit begrenzt. Die Metrik-Perturbationen-Frequenz am letzten stabilen Orbit ist f_ISCO = c³/(6√6 π GM) ≈ 4,4 kHz × (M☉/M) für Schwarzschild.
 
-**Kosmische Strahlen:** Die maximale Energie, die ein kosmisches Strahlungsteilchen beim Einfall in ein Gravitationsfeld gewinnen kann, ist $E_{max}$ = γ mc², wobei γ = 1/D(r). In SSZ ist γ_max = 1/D($r_{s}$) = 1,80 — endlich. In der ART ist γ_max = ∞ am Horizont.
+**Kosmische Strahlen:** Die maximale Energie, die ein kosmisches Strahlungsteilchen beim Einfall in ein Gravitationsfeld gewinnen kann, ist E_max = γ mc², wobei γ = 1/D(r). In SSZ ist γ_max = 1/D(r_s) = 1,80 — endlich. In der ART ist γ_max = ∞ am Horizont.
 
 ### Astrophysikalische Wertetabelle der dualen Geschwindigkeiten
 
@@ -3523,13 +3535,13 @@ Die duale Geschwindigkeitsstruktur erstreckt sich ueber einen enormen dynamische
 | Photonenring | 3 | 0,577 | 1,73 | 0,167 | 0,857 |
 | Natuerliche Grenze (r_s) | 1 | 1,000 | 1,000 | 0,802 | 0,555 |
 
-Die Tabelle zeigt, dass die Asymmetrie zwischen $v_{esc}$ und $v_{fall}$ mit zunehmendem r/r_s waechst: Auf der Erdoberflaeche ist $v_{fall}$/v_esc ~ 7 x 10^8, waehrend an der natuerlichen Grenze $v_{fall}$/v_esc = 1 (der selbstduale Punkt).
+Die Tabelle zeigt, dass die Asymmetrie zwischen v_esc und v_fall mit zunehmendem r/r_s waechst: Auf der Erdoberflaeche ist v_fall/v_esc ~ 7 x 10^8, waehrend an der natuerlichen Grenze v_fall/v_esc = 1 (der selbstduale Punkt).
 
 ### Beobachtbare Konsequenzen der dualen Geschwindigkeiten
 
-Die Trennung von $v_{esc}$ und $v_{fall}$ hat mehrere beobachtbare Konsequenzen:
+Die Trennung von v_esc und v_fall hat mehrere beobachtbare Konsequenzen:
 
-**Asymmetrische Akkretions-/Ejektionsprofile:** Materie, die auf ein kompaktes Objekt faellt, hat eine andere Geschwindigkeit als Materie, die von der Oberflaeche entkommt. In der ART sind diese Geschwindigkeiten gleich ($v_{esc}$ = $v_{fall}$ = sqrt(2GM/r)). In SSZ ist $v_{fall}$ > $v_{esc}$ fuer r > $r_{s}$, was bedeutet, dass einfallende Materie schneller ist als entkommende Materie. Dies fuehrt zu asymmetrischen Linienprofilen in der Roentgenspektroskopie akkretierender Neutronensterne.
+**Asymmetrische Akkretions-/Ejektionsprofile:** Materie, die auf ein kompaktes Objekt faellt, hat eine andere Geschwindigkeit als Materie, die von der Oberflaeche entkommt. In der ART sind diese Geschwindigkeiten gleich (v_esc = v_fall = sqrt(2GM/r)). In SSZ ist v_fall > v_esc fuer r > r_s, was bedeutet, dass einfallende Materie schneller ist als entkommende Materie. Dies fuehrt zu asymmetrischen Linienprofilen in der Roentgenspektroskopie akkretierender Neutronensterne.
 
 **Modifizierte Bondi-Akkretionsrate:** Die Bondi-Akkretionsrate (die Rate, mit der ein kompaktes Objekt Gas aus seiner Umgebung akkretiert) haengt von der Einfallgeschwindigkeit ab. In SSZ ist die Einfallgeschwindigkeit modifiziert, was zu einer leicht veraenderten Akkretionsrate fuehrt. Die Korrektur ist von der Ordnung Xi und damit im Schwachfeld vernachlaessigbar, aber im Starkfeld (nahe Neutronenstern-Oberflaechen) potenziell messbar.
 
@@ -3539,7 +3551,7 @@ Die Trennung von $v_{esc}$ und $v_{fall}$ hat mehrere beobachtbare Konsequenzen:
 
 Das Pound-Rebka-Experiment (1959, Harvard Tower) war der erste direkte Test der gravitativen Rotverschiebung. Gamma-Photonen (14,4 keV, Fe-57 Moessbauer-Linie) wurden ueber eine Hoehe von h = 22,5 m gesendet, und die Frequenzverschiebung wurde durch den Moessbauer-Effekt gemessen.
 
-Die SSZ-Vorhersage: z = Xi($R_{Erde}$) - Xi($R_{Erde}$ + h) = g*h/c^2 = 9,81 x 22,5 / (3 x 10^8)^2 = 2,46 x 10^{-15}. Das gemessene Ergebnis: z = (2,57 +/- 0,26) x 10^{-15}, in Uebereinstimmung mit der Vorhersage auf 1 Sigma.
+Die SSZ-Vorhersage: z = Xi(R_Erde) - Xi(R_Erde + h) = g*h/c^2 = 9,81 x 22,5 / (3 x 10^8)^2 = 2,46 x 10^{-15}. Das gemessene Ergebnis: z = (2,57 +/- 0,26) x 10^{-15}, in Uebereinstimmung mit der Vorhersage auf 1 Sigma.
 
 Die Praezision wurde spaeter durch Pound und Snider (1965) auf 1% verbessert: z = (2,46 +/- 0,025) x 10^{-15}. Gravity Probe A (1976) erreichte 70 ppm Praezision. Moderne Atomuhren-Vergleiche (NIST, 2010) erreichen 10^{-17} Praezision ueber eine Hoehendifferenz von nur 33 cm.
 
@@ -3558,30 +3570,30 @@ Die Tabelle zeigt, dass SSZ und ART im Schwachfeld identische Rotverschiebungen 
 
 ### Der selbstduale Punkt: Physikalische Bedeutung
 
-Der selbstduale Punkt r = $r_{s}$ ist der Radius, bei dem $v_{esc}$ = $v_{fall}$ = c. An diesem Punkt ist die Abschliessungsrelation $v_{esc}$ x $v_{fall}$ = c^2 trivial erfuellt (c x c = c^2). Die physikalische Bedeutung des selbstdualen Punkts:
+Der selbstduale Punkt r = r_s ist der Radius, bei dem v_esc = v_fall = c. An diesem Punkt ist die Abschliessungsrelation v_esc x v_fall = c^2 trivial erfuellt (c x c = c^2). Die physikalische Bedeutung des selbstdualen Punkts:
 
 **Symmetrie:** Am selbstdualen Punkt ist die Unterscheidung zwischen Flucht und Einfall aufgehoben. Ein Teilchen, das sich radial mit Geschwindigkeit c bewegt, kann weder entkommen noch einfallen — es befindet sich im Gleichgewicht zwischen den beiden Tendenzen. Dies ist die natuerliche Grenze in SSZ.
 
-**Maximale Segmentdichte:** Am selbstdualen Punkt erreicht die Segmentdichte ihr Maximum $\Xi_{\text{max}}$ = 0,802. Dies ist der Punkt, an dem das Segmentgitter am dichtesten gepackt ist. Jenseits dieses Punkts (r < $r_{s}$) wuerde die Segmentdichte abnehmen muessen, was physikalisch nicht sinnvoll ist — daher ist r = $r_{s}$ die natuerliche Grenze.
+**Maximale Segmentdichte:** Am selbstdualen Punkt erreicht die Segmentdichte ihr Maximum Xi_max = 0,802. Dies ist der Punkt, an dem das Segmentgitter am dichtesten gepackt ist. Jenseits dieses Punkts (r < r_s) wuerde die Segmentdichte abnehmen muessen, was physikalisch nicht sinnvoll ist — daher ist r = r_s die natuerliche Grenze.
 
 **Analogie zur Schallgeschwindigkeit:** In der Fluiddynamik ist der Punkt, an dem die Stroemungsgeschwindigkeit die Schallgeschwindigkeit erreicht (Mach 1), ein kritischer Punkt mit besonderen Eigenschaften (Schockwellen, Stroemungsumkehr). In SSZ ist der selbstduale Punkt analog: Die Einfallgeschwindigkeit erreicht die Lichtgeschwindigkeit, was einen kritischen Uebergang markiert.
 
 ### Radiale Geschwindigkeitsprofile
 
-Die radialen Geschwindigkeitsprofile $v_{esc}$(r) und $v_{fall}$(r) haben charakteristische Formen:
+Die radialen Geschwindigkeitsprofile v_esc(r) und v_fall(r) haben charakteristische Formen:
 
-Im Schwachfeld (r >> $r_{s}$):
-- $v_{esc}$ = c * sqrt($r_{s}$/r) ~ c * sqrt($r_{s}$/r) (Newtonsch)
-- $v_{fall}$ = c^2/v_esc = c * sqrt(r/r_s) (superluminal in Koordinaten)
+Im Schwachfeld (r >> r_s):
+- v_esc = c * sqrt(r_s/r) ~ c * sqrt(r_s/r) (Newtonsch)
+- v_fall = c^2/v_esc = c * sqrt(r/r_s) (superluminal in Koordinaten)
 
-Im Starkfeld (r ~ $r_{s}$):
-- $v_{esc}$ -> c (naehert sich der Lichtgeschwindigkeit)
-- $v_{fall}$ -> c (naehert sich ebenfalls der Lichtgeschwindigkeit)
+Im Starkfeld (r ~ r_s):
+- v_esc -> c (naehert sich der Lichtgeschwindigkeit)
+- v_fall -> c (naehert sich ebenfalls der Lichtgeschwindigkeit)
 
-Am selbstdualen Punkt (r = $r_{s}$):
-- $v_{esc}$ = $v_{fall}$ = c (exakt)
+Am selbstdualen Punkt (r = r_s):
+- v_esc = v_fall = c (exakt)
 
-Die Konvergenz von $v_{esc}$ und $v_{fall}$ bei r = $r_{s}$ ist eine einzigartige Vorhersage von SSZ. In der ART gibt es keinen solchen Konvergenzpunkt: $v_{esc}$ = c am Horizont, aber $v_{fall}$ divergiert (in Schwarzschild-Koordinaten).
+Die Konvergenz von v_esc und v_fall bei r = r_s ist eine einzigartige Vorhersage von SSZ. In der ART gibt es keinen solchen Konvergenzpunkt: v_esc = c am Horizont, aber v_fall divergiert (in Schwarzschild-Koordinaten).
 
 ### Gezeitenkraefte und Spaghettifizierung
 
@@ -3589,17 +3601,17 @@ Die Gezeitenkraft (die differentielle Gravitationskraft ueber ein ausgedehntes O
 
 Die Gezeitenbeschleunigung fuer ein Objekt der Laenge L in radialer Richtung ist:
 
-$a_{tidal}$ = (GM/r^3) * L * D(r)^{-2} * (1 + 3 Xi(r))
+a_tidal = (GM/r^3) * L * D(r)^{-2} * (1 + 3 Xi(r))
 
-An der natuerlichen Grenze (r = $r_{s}$, Xi = 0.802, D = 0.555):
+An der natuerlichen Grenze (r = r_s, Xi = 0.802, D = 0.555):
 
-$a_{tidal}$($r_{s}$) = (c^6 / (4 G^2 M^2)) * L * (1/0.555)^2 * (1 + 3*0.802) = (c^6 / (4 G^2 M^2)) * L * 3.24 * 3.41
+a_tidal(r_s) = (c^6 / (4 G^2 M^2)) * L * (1/0.555)^2 * (1 + 3*0.802) = (c^6 / (4 G^2 M^2)) * L * 3.24 * 3.41
 
-Fuer ein stellares Schwarzes Loch (M = 10 $M_{Sonne}$) und einen Menschen (L = 2 m):
-$a_{tidal}$ ~ 5 x 10^{10} m/s^2 — toedlich, aber endlich.
+Fuer ein stellares Schwarzes Loch (M = 10 M_Sonne) und einen Menschen (L = 2 m):
+a_tidal ~ 5 x 10^{10} m/s^2 — toedlich, aber endlich.
 
-Fuer ein supermassives Schwarzes Loch (M = 4 x 10^6 $M_{Sonne}$, wie Sgr A*):
-$a_{tidal}$ ~ 0.3 m/s^2 — kaum spuerbar! Ein Astronaut koennte die natuerliche Grenze von Sgr A* erreichen, ohne zerrissen zu werden.
+Fuer ein supermassives Schwarzes Loch (M = 4 x 10^6 M_Sonne, wie Sgr A*):
+a_tidal ~ 0.3 m/s^2 — kaum spuerbar! Ein Astronaut koennte die natuerliche Grenze von Sgr A* erreichen, ohne zerrissen zu werden.
 
 Dies ist eine der bemerkenswertesten Vorhersagen von SSZ: Fuer supermassive Schwarze Loecher ist die natuerliche Grenze ein gutartiger Ort — die Gezeitenkraefte sind schwaecher als die Schwerkraft auf der Erdoberflaeche.
 
@@ -3615,24 +3627,24 @@ T = m c^2 (D(r_0) - D(r))
 
 An der natuerlichen Grenze (D = 0.555, gestartet aus dem Unendlichen mit D(r_0) = 1):
 
-T($r_{s}$) = m c^2 (1 - 0.555) = 0.445 m c^2
+T(r_s) = m c^2 (1 - 0.555) = 0.445 m c^2
 
-Das Teilchen hat 44.5% seiner Ruheenergie in kinetische Energie umgewandelt. In der ART (D = 0 am Horizont) waere die kinetische Energie 100% der Ruheenergie — das Teilchen faellt mit Lichtgeschwindigkeit durch den Horizont. In SSZ faellt es mit v = c * sqrt(1 - $D_{min}$^2) = c * sqrt(1 - 0.308) = 0.832 c.
+Das Teilchen hat 44.5% seiner Ruheenergie in kinetische Energie umgewandelt. In der ART (D = 0 am Horizont) waere die kinetische Energie 100% der Ruheenergie — das Teilchen faellt mit Lichtgeschwindigkeit durch den Horizont. In SSZ faellt es mit v = c * sqrt(1 - D_min^2) = c * sqrt(1 - 0.308) = 0.832 c.
 
 
 
 ### Zusammenfassung: Duale Geschwindigkeitsstruktur
 
-Die duale Geschwindigkeitsstruktur ist eines der elegantesten Ergebnisse von SSZ. Sie zeigt, dass die Fluchtgeschwindigkeit und die Einfallgeschwindigkeit durch eine einfache Relation verbunden sind: $v_{esc}$ * $v_{fall}$ = c^2. Diese Relation gilt exakt fuer alle Radien (einschliesslich r = $r_{s}$) und fuer alle Massen.
+Die duale Geschwindigkeitsstruktur ist eines der elegantesten Ergebnisse von SSZ. Sie zeigt, dass die Fluchtgeschwindigkeit und die Einfallgeschwindigkeit durch eine einfache Relation verbunden sind: v_esc * v_fall = c^2. Diese Relation gilt exakt fuer alle Radien (einschliesslich r = r_s) und fuer alle Massen.
 
 Die wichtigsten Konsequenzen:
 
-1. **Endliche Geschwindigkeiten:** An der natuerlichen Grenze (r = $r_{s}$) ist $v_{fall}$ = 0,832 c und $v_{esc}$ = 1,202 c (Koordinatengeschwindigkeit, nicht physikalische Geschwindigkeit). Die physikalische Geschwindigkeit ist immer < c.
+1. **Endliche Geschwindigkeiten:** An der natuerlichen Grenze (r = r_s) ist v_fall = 0,832 c und v_esc = 1,202 c (Koordinatengeschwindigkeit, nicht physikalische Geschwindigkeit). Die physikalische Geschwindigkeit ist immer < c.
 2. **Keine Singularitaet:** Die Geschwindigkeiten sind ueberall endlich und stetig.
-3. **Energieerhaltung:** Die Relation $v_{esc}$ * $v_{fall}$ = c^2 ist aequivalent zur Energieerhaltung E = m c^2 D(r).
+3. **Energieerhaltung:** Die Relation v_esc * v_fall = c^2 ist aequivalent zur Energieerhaltung E = m c^2 D(r).
 4. **Gezeitenkraefte:** Die endlichen Geschwindigkeiten fuehren zu endlichen Gezeitenkraeften, auch an der natuerlichen Grenze.
 
-Fuer supermassive Schwarze Loecher (M > 10^6 $M_{Sonne}$) sind die Gezeitenkraefte an der natuerlichen Grenze schwaecher als die Schwerkraft auf der Erdoberflaeche -- ein Astronaut koennte die natuerliche Grenze erreichen, ohne zerrissen zu werden.
+Fuer supermassive Schwarze Loecher (M > 10^6 M_Sonne) sind die Gezeitenkraefte an der natuerlichen Grenze schwaecher als die Schwerkraft auf der Erdoberflaeche -- ein Astronaut koennte die natuerliche Grenze erreichen, ohne zerrissen zu werden.
 
 ## Querverweise
 
@@ -3642,45 +3654,47 @@ Fuer supermassive Schwarze Loecher (M > 10^6 $M_{Sonne}$) sind die Gezeitenkraef
 
 ### Vergleich mit anderen Geschwindigkeitsrelationen
 
-Die Abschliessungsrelation $v_{esc}$ * $v_{fall}$ = c^2 hat Parallelen in anderen Bereichen der Physik:
+Die Abschliessungsrelation v_esc * v_fall = c^2 hat Parallelen in anderen Bereichen der Physik:
 
-**Heisenberg-Unschaerferelation:** $\Delta_{\text{x}}$ * $\Delta_{\text{p}}$ >= hbar/2. Beide Relationen verbinden zwei komplementaere Groessen durch eine universelle Konstante.
+**Heisenberg-Unschaerferelation:** Delta_x * Delta_p >= hbar/2. Beide Relationen verbinden zwei komplementaere Groessen durch eine universelle Konstante.
 
-**Schwarzschild-Radius-Relation:** $r_{s}$ = 2GM/c^2. Die Abschliessungsrelation kann als dynamische Version der Schwarzschild-Radius-Relation verstanden werden.
+**Schwarzschild-Radius-Relation:** r_s = 2GM/c^2. Die Abschliessungsrelation kann als dynamische Version der Schwarzschild-Radius-Relation verstanden werden.
 
 **De-Broglie-Relation:** lambda = h/(mv). Die Abschliessungsrelation verbindet Geschwindigkeiten, die de-Broglie-Relation verbindet Wellenlaenge und Impuls -- beide sind Ausdruecke der Welle-Teilchen-Dualitaet.
 
-Die Abschliessungsrelation ist einzigartig in SSZ und hat keine direkte Entsprechung in der ART (wo $v_{fall}$ = c am Horizont und $v_{esc}$ undefiniert ist).
+Die Abschliessungsrelation ist einzigartig in SSZ und hat keine direkte Entsprechung in der ART (wo v_fall = c am Horizont und v_esc undefiniert ist).
 
 ### Anwendung: Radiale Einfallzeit
 
-Die radiale Einfallzeit (die Zeit, die ein Teilchen benoetigt, um von einem Radius r_0 bis zur natuerlichen Grenze $r_{s}$ zu fallen) ist in SSZ endlich:
+Die radiale Einfallzeit (die Zeit, die ein Teilchen benoetigt, um von einem Radius r_0 bis zur natuerlichen Grenze r_s zu fallen) ist in SSZ endlich:
 
-$\tau_{\text{fall}}$ = integral von r_0 bis $r_{s}$ von dr / $v_{fall}$(r)
+tau_fall = integral von r_0 bis r_s von dr / v_fall(r)
 
-In der ART ist die Eigenzeit ebenfalls endlich, aber die Koordinatenzeit divergiert (t -> unendlich fuer r -> $r_{s}$). In SSZ ist auch die Koordinatenzeit endlich:
+In der ART ist die Eigenzeit ebenfalls endlich, aber die Koordinatenzeit divergiert (t -> unendlich fuer r -> r_s). In SSZ ist auch die Koordinatenzeit endlich:
 
-t_fall_SSZ = integral von r_0 bis $r_{s}$ von dr / ($v_{fall}$(r) * D^2(r))
+t_fall_SSZ = integral von r_0 bis r_s von dr / (v_fall(r) * D^2(r))
 
-Fuer r_0 = 10 $r_{s}$ und ein stellares SL (M = 10 $M_{sun}$): $\tau_{\text{fall}}$ ~ 0,3 ms, t_fall_SSZ ~ 0,8 ms. Die Endlichkeit der Koordinatenzeit ist eine direkte Konsequenz der endlichen Zeitdilatation $D_{min}$ = 0,555.
+Fuer r_0 = 10 r_s und ein stellares SL (M = 10 M_sun): tau_fall ~ 0,3 ms, t_fall_SSZ ~ 0,8 ms. Die Endlichkeit der Koordinatenzeit ist eine direkte Konsequenz der endlichen Zeitdilatation D_min = 0,555.
 
+---
 
-\newpage
+# Kapitel 9: Kinematische Abschließung — v_esc · v_fall = c²
 
-# Kinematische Abschließung — $v_{esc}$ · $v_{fall}$ = c²
+**Teil II — Kinematik**
+**Status:** ERWEITERTE FASSUNG
 
 
 ![Abb 9](figures/ch09_closure/fig_09_01_kinematic_closure.png)
 
 ---
 
-Warum ist dies notwendig? Die kinematische Abschließung $v_{esc}$ · $v_{fall}$ = c² ist ein fundamentales Ergebnis, das die dualen Geschwindigkeiten von Kapitel 8 verbindet und die Konsistenz des SSZ-Rahmenwerks sicherstellt.
+Warum ist dies notwendig? Die kinematische Abschließung v_esc · v_fall = c² ist ein fundamentales Ergebnis, das die dualen Geschwindigkeiten von Kapitel 8 verbindet und die Konsistenz des SSZ-Rahmenwerks sicherstellt.
 
 ## Zusammenfassung
 
-Die Identität $v_{esc}$ · $v_{fall}$ = c² ist eine exakte kinematische Abschließungsbedingung, die einzigartig für SSZ ist. Kapitel 8 führte die dualen Geschwindigkeiten ein und leitete ihr Produkt algebraisch her. Dieses Kapitel geht tiefer: Es ordnet die Abschließung in den Kontext anderer Konstant-Produkt-Relationen in der Physik ein, erforscht ihre physikalische Bedeutung als Informationserhaltungsgesetz, beweist ihre Regimeunabhängigkeit, leitet ihre Konsequenzen für das Schwarze-Loch-Informationsproblem her und verbindet sie mit der breiteren Struktur der SSZ-Kinematik.
+Die Identität v_esc · v_fall = c² ist eine exakte kinematische Abschließungsbedingung, die einzigartig für SSZ ist. Kapitel 8 führte die dualen Geschwindigkeiten ein und leitete ihr Produkt algebraisch her. Dieses Kapitel geht tiefer: Es ordnet die Abschließung in den Kontext anderer Konstant-Produkt-Relationen in der Physik ein, erforscht ihre physikalische Bedeutung als Informationserhaltungsgesetz, beweist ihre Regimeunabhängigkeit, leitet ihre Konsequenzen für das Schwarze-Loch-Informationsproblem her und verbindet sie mit der breiteren Struktur der SSZ-Kinematik.
 
-Die Abschließung ist mehr als eine mathematische Kuriosität. Sie ist eine **strukturelle Beschränkung** des SSZ-Rahmenwerks — jede Modifikation der Geschwindigkeitsdefinitionen, die die Abschließung bräche, würde einen internen Widerspruch signalisieren. Sie ist auch eine **testbare Vorhersage**: Die physikalische Trennung von $v_{esc}$ und $v_{fall}$ in verschiedene Observablen (Kapitel 23) hängt davon ab, dass die Abschließung exakt und nicht approximativ ist.
+Die Abschließung ist mehr als eine mathematische Kuriosität. Sie ist eine **strukturelle Beschränkung** des SSZ-Rahmenwerks — jede Modifikation der Geschwindigkeitsdefinitionen, die die Abschließung bräche, würde einen internen Widerspruch signalisieren. Sie ist auch eine **testbare Vorhersage**: Die physikalische Trennung von v_esc und v_fall in verschiedene Observablen (Kapitel 23) hängt davon ab, dass die Abschließung exakt und nicht approximativ ist.
 
 **Lesehinweis.** Abschnitt 9.1 liefert die formale Ableitung mit Rechenbeispielen. Abschnitt 9.2 ordnet die Abschließung in den Kontext von Konstant-Produkt-Relationen ein. Abschnitt 9.3 erforscht die physikalische Bedeutung in Bezug auf Informationserhaltung. Abschnitt 9.4 beweist die Regimeunabhängigkeit. Abschnitt 9.5 diskutiert Implikationen für die Horizontphysik. Abschnitt 9.6 fasst die Validierung zusammen.
 
@@ -3690,7 +3704,7 @@ Die Abschließung ist mehr als eine mathematische Kuriosität. Sie ist eine **st
 
 ### Pädagogischer Überblick
 
-Dieses Kapitel beweist die kinematische Abschließungsrelation $v_{esc}$ × $v_{fall}$ = c² und erforscht ihre physikalischen Konsequenzen. Der Beweis ist algebraisch und folgt direkt aus den Definitionen von $v_{esc}$ und $v_{fall}$ in Bezug auf die Segmentdichte Ξ. Die Abschließungsrelation ist keine Näherung — sie ist eine exakte Identität, die bei allen Radien gilt, sowohl im Schwach- als auch im Starkfeldregime.
+Dieses Kapitel beweist die kinematische Abschließungsrelation v_esc × v_fall = c² und erforscht ihre physikalischen Konsequenzen. Der Beweis ist algebraisch und folgt direkt aus den Definitionen von v_esc und v_fall in Bezug auf die Segmentdichte Ξ. Die Abschließungsrelation ist keine Näherung — sie ist eine exakte Identität, die bei allen Radien gilt, sowohl im Schwach- als auch im Starkfeldregime.
 
 Die Bedeutung dieser Identität geht über die Kinematik hinaus. Sie impliziert, dass das Produkt aus Flucht- und Fallgeschwindigkeit eine universelle Konstante ist, unabhängig von der Masse des gravitierenden Objekts und unabhängig vom Radius. Diese Universalität erinnert an die Unschärferelation in der Quantenmechanik, wo das Produkt der Orts- und Impulsunschärfen durch eine universelle Konstante (ℏ/2) begrenzt ist. In SSZ ist das Produkt der Geschwindigkeitsasymmetrien durch c² begrenzt.
 
@@ -3698,7 +3712,7 @@ Die Bedeutung dieser Identität geht über die Kinematik hinaus. Sie impliziert,
 
 Ausgehend von den in Kapitel 8 etablierten SSZ-Definitionen:
 
-$$v_{\text{esc}}(r) = c\sqrt{r_s/r}, \quad v_{\text{fall}}(r) = c\sqrt{r/r_s}$$
+v_{\text{esc}}(r) = c\sqrt{r_s/r}, \quad v_{\text{fall}}(r) = c\sqrt{r/r_s}
 
 Das Produkt wird direkt berechnet:
 
@@ -3718,30 +3732,30 @@ v_{\text{esc}} = 11.2 \text{ km/s}
 v_{\text{fall}} = c^2 / 11.2 = 8.03 \times 10^9 \text{ km/s}
 v_{\text{esc}} \cdot v_{\text{fall}} = 11.2 \times 8.03 \times 10^9 = 9.0 \times 10^{10} = c^2 \;\checkmark
 
-**Neutronensternoberfläche (M = 1,4 M$\odot$, R = 10 km):**
+**Neutronensternoberfläche (M = 1,4 M☉, R = 10 km):**
 v_{\text{esc}} = 0.643c = 1.93 \times 10^5 \text{ km/s}
 v_{\text{fall}} = c/0.643 = 1.556c = 4.67 \times 10^5 \text{ km/s}
 v_{\text{esc}} \cdot v_{\text{fall}} = 1.93 \times 10^5 \times 4.67 \times 10^5 = 9.0 \times 10^{10} = c^2 \;\checkmark
 
-**Schwarzschild-Radius (r = $r_{s}$):**
+**Schwarzschild-Radius (r = r_s):**
 v_{\text{esc}} = c, \quad v_{\text{fall}} = c
 v_{\text{esc}} \cdot v_{\text{fall}} = c \times c = c^2 \;\checkmark
 
-Der selbstduale Punkt r = $r_{s}$, wo beide Geschwindigkeiten gleich c sind, ist der einzige Fixpunkt der Abschließungsrelation.
+Der selbstduale Punkt r = r_s, wo beide Geschwindigkeiten gleich c sind, ist der einzige Fixpunkt der Abschließungsrelation.
 
 ### Die Abschließung als Hyperbel
 
-In der ($v_{esc}$, $v_{fall}$)-Ebene beschreibt die Abschließungsrelation eine rechtwinklige Hyperbel:
+In der (v_esc, v_fall)-Ebene beschreibt die Abschließungsrelation eine rechtwinklige Hyperbel:
 
-$$v_{\text{fall}} = \frac{c^2}{v_{\text{esc}}}$$
+v_{\text{fall}} = \frac{c^2}{v_{\text{esc}}}
 
-Jedes astrophysikalische Objekt im Universum, bei jedem Radius, liegt auf dieser Hyperbel. Der Ursprung ($v_{esc}$ = 0, $v_{fall}$ → ∞) entspricht flacher Raumzeit im unendlichen Abstand. Der selbstduale Punkt (c, c) entspricht dem Schwarzschild-Radius. Die hyperbolische Struktur bedeutet, dass die dualen Geschwindigkeiten durch eine *Inversion* verknüpft sind: $v_{esc}$ → c²/v_esc bildet Flucht auf Fall ab und umgekehrt.
+Jedes astrophysikalische Objekt im Universum, bei jedem Radius, liegt auf dieser Hyperbel. Der Ursprung (v_esc = 0, v_fall → ∞) entspricht flacher Raumzeit im unendlichen Abstand. Der selbstduale Punkt (c, c) entspricht dem Schwarzschild-Radius. Die hyperbolische Struktur bedeutet, dass die dualen Geschwindigkeiten durch eine *Inversion* verknüpft sind: v_esc → c²/v_esc bildet Flucht auf Fall ab und umgekehrt.
 
 ## 9.2 Konstante Produkte in der Physik
 
 ### Ein universelles Muster
 
-Die Abschließung $v_{esc}$ · $v_{fall}$ = c² ist ein Beispiel eines breiteren Musters in der Physik: Viele fundamentale Größen kommen in konjugierten Paaren, deren Produkt eine universelle Konstante ist.
+Die Abschließung v_esc · v_fall = c² ist ein Beispiel eines breiteren Musters in der Physik: Viele fundamentale Größen kommen in konjugierten Paaren, deren Produkt eine universelle Konstante ist.
 
 **Heisenbergsche Unschärferelation:**
 \Delta x \cdot \Delta p \geq \frac{\hbar}{2}
@@ -3765,47 +3779,47 @@ Hohe Fluchtgeschwindigkeit (starke Gravitation) paart sich mit hoher Fallgeschwi
 
 ### Was das Muster nahelegt
 
-In jedem der obigen Fälle entsteht das konstante Produkt aus einer **Dualität** — zwei komplementäre Beschreibungen derselben zugrundeliegenden Physik, verbunden durch eine Inversionssymmetrie. Die SSZ-Abschließung legt nahe, dass $v_{esc}$ und $v_{fall}$ **Gravitationsduale** sind — konjugierte kinematische Variablen, die komplementäre Aspekte der Gravitationswechselwirkung kodieren. Fluchtgeschwindigkeit misst den „Auswärtswiderstand" des Feldes. Fallgeschwindigkeit misst die „Einwärtsantwort" des Segmentgitters.
+In jedem der obigen Fälle entsteht das konstante Produkt aus einer **Dualität** — zwei komplementäre Beschreibungen derselben zugrundeliegenden Physik, verbunden durch eine Inversionssymmetrie. Die SSZ-Abschließung legt nahe, dass v_esc und v_fall **Gravitationsduale** sind — konjugierte kinematische Variablen, die komplementäre Aspekte der Gravitationswechselwirkung kodieren. Fluchtgeschwindigkeit misst den „Auswärtswiderstand" des Feldes. Fallgeschwindigkeit misst die „Einwärtsantwort" des Segmentgitters.
 
 ## 9.3 Physikalische Bedeutung: Informationserhaltung
 
 ### Das Gravitationsfeld als Informationsträger
 
-Die Abschließung $v_{esc}$ · $v_{fall}$ = c² kann als **Informationserhaltungsgesetz** interpretiert werden: Das Gravitationsfeld erhält den gesamten kinematischen Informationsgehalt bei jedem Radius. „Kinematischer Informationsgehalt" wird durch das Produkt der zwei charakteristischen Geschwindigkeiten gemessen. Dieses Produkt ist konstant, was bedeutet, dass keine kinematische Information erzeugt oder zerstört wird, wenn man sich durch das Gravitationsfeld bewegt.
+Die Abschließung v_esc · v_fall = c² kann als **Informationserhaltungsgesetz** interpretiert werden: Das Gravitationsfeld erhält den gesamten kinematischen Informationsgehalt bei jedem Radius. „Kinematischer Informationsgehalt" wird durch das Produkt der zwei charakteristischen Geschwindigkeiten gemessen. Dieses Produkt ist konstant, was bedeutet, dass keine kinematische Information erzeugt oder zerstört wird, wenn man sich durch das Gravitationsfeld bewegt.
 
 Definiere das kinematische Informationsmaß:
 
-$$\mathcal{I}(r) = v_{\text{esc}}(r) \cdot v_{\text{fall}}(r)$$
+\mathcal{I}(r) = v_{\text{esc}}(r) \cdot v_{\text{fall}}(r)
 
 Die Abschließung besagt I(r) = c² für alle r. Dies bedeutet:
 
-- **Weit von der Masse (r → ∞):** $v_{esc}$ → 0 und $v_{fall}$ → ∞. Die Fluchtinformation ist minimal, die Fallinformation maximal. Das Produkt ist c².
+- **Weit von der Masse (r → ∞):** v_esc → 0 und v_fall → ∞. Die Fluchtinformation ist minimal, die Fallinformation maximal. Das Produkt ist c².
 
-- **Nahe der Masse (r → $r_{s}$):** $v_{esc}$ → c und $v_{fall}$ → c. Beide Informationen sind auf ihrer natürlichen Skala. Das Produkt ist c².
+- **Nahe der Masse (r → r_s):** v_esc → c und v_fall → c. Beide Informationen sind auf ihrer natürlichen Skala. Das Produkt ist c².
 
-- **Innerhalb der Masse (r < $r_{s}$, hypothetisch):** $v_{esc}$ > c (Flucht unmöglich) und $v_{fall}$ < c (Fall subluminal). Information wurde vom Fallkanal zum Fluchtkanal „transferiert", aber die Summe bleibt erhalten.
+- **Innerhalb der Masse (r < r_s, hypothetisch):** v_esc > c (Flucht unmöglich) und v_fall < c (Fall subluminal). Information wurde vom Fallkanal zum Fluchtkanal „transferiert", aber die Summe bleibt erhalten.
 
-An keinem Radius geht Information verloren. Dies steht in scharfem Kontrast zum ART-Bild am Horizont, wo $D_{GR}$ → 0 impliziert, dass eine unendliche Menge Eigenzeit in ein endliches Koordinatenzeitintervall komprimiert wird — eine Form der „Informationskompression", die zum Schwarze-Loch-Informationsparadoxon führt.
+An keinem Radius geht Information verloren. Dies steht in scharfem Kontrast zum ART-Bild am Horizont, wo D_GR → 0 impliziert, dass eine unendliche Menge Eigenzeit in ein endliches Koordinatenzeitintervall komprimiert wird — eine Form der „Informationskompression", die zum Schwarze-Loch-Informationsparadoxon führt.
 
 ### Verbindung zum Schwarze-Loch-Informationsproblem
 
 Das Schwarze-Loch-Informationsparadoxon ist eines der tiefsten ungelösten Probleme der theoretischen Physik. In der ART verschwindet Information, die in ein Schwarzes Loch fällt, hinter dem Ereignishorizont und wird (gemäß Hawkings semiklassischer Berechnung) schließlich zerstört, wenn das Schwarze Loch verdampft. Dies widerspricht dem fundamentalen Prinzip der Quantenmechanik, dass Information erhalten bleibt (Unitarität).
 
-SSZ bietet eine potentielle Lösung durch die kinematische Abschließung. Weil $v_{esc}$ · $v_{fall}$ = c² bei allen Radien gilt — einschließlich r = $r_{s}$ und r < $r_{s}$ — geht kinematische Information niemals verloren. Die duale Geschwindigkeitsstruktur stellt sicher, dass das Gravitationsfeld bei jedem Punkt immer vollständig durch das Produkt c² charakterisiert ist.
+SSZ bietet eine potentielle Lösung durch die kinematische Abschließung. Weil v_esc · v_fall = c² bei allen Radien gilt — einschließlich r = r_s und r < r_s — geht kinematische Information niemals verloren. Die duale Geschwindigkeitsstruktur stellt sicher, dass das Gravitationsfeld bei jedem Punkt immer vollständig durch das Produkt c² charakterisiert ist.
 
 ## 9.4 Regimeunabhängigkeit
 
 ### Beweis
 
-Die Abschließung $v_{esc}$ · $v_{fall}$ = c² ist regimeunabhängig: Sie gilt sowohl im Schwachfeld- (g₁) als auch im Starkfeld- (g₂) Regime und auch in der Übergangszone.
+Die Abschließung v_esc · v_fall = c² ist regimeunabhängig: Sie gilt sowohl im Schwachfeld- (g₁) als auch im Starkfeld- (g₂) Regime und auch in der Übergangszone.
 
-**Schwachfeld (Ξ_weak = $r_{s}$/(2r)):** Die Definitionen $v_{esc}$ = c√($r_{s}$/r) und $v_{fall}$ = c√(r/r_s) leiten sich aus der Energieerhaltung her, nicht aus der spezifischen Form von Ξ. Die Abschließung folgt allein aus den Definitionen.
+**Schwachfeld (Ξ_weak = r_s/(2r)):** Die Definitionen v_esc = c√(r_s/r) und v_fall = c√(r/r_s) leiten sich aus der Energieerhaltung her, nicht aus der spezifischen Form von Ξ. Die Abschließung folgt allein aus den Definitionen.
 
-**Starkfeld (Ξ_strong = 1 − exp(−φ$r_{s}$/r)):** Dieselben Definitionen gelten. Die Segmentdichte bestimmt D(r) und die Rotverschiebung, aber $v_{esc}$ und $v_{fall}$ hängen nur von $r_{s}$/r ab.
+**Starkfeld (Ξ_strong = 1 − exp(−φr_s/r)):** Dieselben Definitionen gelten. Die Segmentdichte bestimmt D(r) und die Rotverschiebung, aber v_esc und v_fall hängen nur von r_s/r ab.
 
 **Übergangszone (1,8 < r/r_s < 2,2):** Die Hermite-C²-Überblendung beeinflusst Ξ(r), aber nicht die Geschwindigkeitsdefinitionen. Die Abschließung ist algebraisch und hängt überhaupt nicht von Ξ ab.
 
-**Inneres (r < $r_{s}$):** Selbst unterhalb des Schwarzschild-Radius bleiben die Definitionen $v_{esc}$ = c√($r_{s}$/r) > c und $v_{fall}$ = c√(r/r_s) < c wohldefiniert, und ihr Produkt bleibt c².
+**Inneres (r < r_s):** Selbst unterhalb des Schwarzschild-Radius bleiben die Definitionen v_esc = c√(r_s/r) > c und v_fall = c√(r/r_s) < c wohldefiniert, und ihr Produkt bleibt c².
 
 ### Wovon die Abschließung NICHT abhängt
 
@@ -3817,15 +3831,15 @@ Die Abschließung $v_{esc}$ · $v_{fall}$ = c² ist regimeunabhängig: Sie gilt 
 - Die Bewegungsrichtung (radial, tangential oder intermediär)
 - Ob die Bewegung geodätisch oder beschleunigt ist
 
-Die Abschließung hängt nur von den Definitionen von $v_{esc}$ und $v_{fall}$ ab, die ihrerseits nur vom Verhältnis $r_{s}$/r abhängen.
+Die Abschließung hängt nur von den Definitionen von v_esc und v_fall ab, die ihrerseits nur vom Verhältnis r_s/r abhängen.
 
 ## 9.5 Implikationen für die Horizontphysik
 
 ### Endlichkeit am Horizont
 
-Bei r = $r_{s}$ gibt die Abschließung $v_{esc}$ = $v_{fall}$ = c. Kombiniert mit der SSZ-Zeitdilatation D($r_{s}$) = 0,555 erzeugt dies endliche, wohldefinierte Physik am Horizont:
+Bei r = r_s gibt die Abschließung v_esc = v_fall = c. Kombiniert mit der SSZ-Zeitdilatation D(r_s) = 0,555 erzeugt dies endliche, wohldefinierte Physik am Horizont:
 
-- Ein Photon am Horizont hat $v_{esc}$ = c (es kann gerade noch entkommen) und $v_{fall}$ = c (es fällt mit Lichtgeschwindigkeit).
+- Ein Photon am Horizont hat v_esc = c (es kann gerade noch entkommen) und v_fall = c (es fällt mit Lichtgeschwindigkeit).
 - Materie am Horizont hat D = 0,555 — sie tickt mit 55,5% der fernen Rate, aber sie *tickt*.
 - Die Koordinatenzeit für ein Objekt, den Horizont zu überqueren, ist endlich (anders als in der ART, wo sie unendlich ist).
 
@@ -3846,11 +3860,11 @@ Der Schlüsselunterschied: Die ART erzeugt D = 0 am Horizont, was Koordinatengr�
 
 **Testdateien:** `test_vfall_duality`, `test_kinematic_closure`, `test_regime_independence`
 
-**Was die Tests beweisen:** $v_{esc}$ · $v_{fall}$ = c² gilt numerisch für 500+ Testradien von r/r_s = 0,01 bis 10⁶; die Abschließung gilt bis zur Maschinengenauigkeit (relativer Fehler < 10⁻¹⁵); Regimeunabhängigkeit über alle drei Regime (schwach, Übergang, stark) verifiziert; selbstdualer Punkt $v_{esc}$ = $v_{fall}$ = c exakt bei r = $r_{s}$ bestätigt.
+**Was die Tests beweisen:** v_esc · v_fall = c² gilt numerisch für 500+ Testradien von r/r_s = 0,01 bis 10⁶; die Abschließung gilt bis zur Maschinengenauigkeit (relativer Fehler < 10⁻¹⁵); Regimeunabhängigkeit über alle drei Regime (schwach, Übergang, stark) verifiziert; selbstdualer Punkt v_esc = v_fall = c exakt bei r = r_s bestätigt.
 
-**Was die Tests NICHT beweisen:** Ob die physikalische Trennung in $v_{esc}$ $\neq$ $v_{fall}$ beobachtbar ist. Dies ist eine SSZ-Vorhersage ohne aktuelles ART-Gegenstück.
+**Was die Tests NICHT beweisen:** Ob die physikalische Trennung in v_esc ≠ v_fall beobachtbar ist. Dies ist eine SSZ-Vorhersage ohne aktuelles ART-Gegenstück.
 
-**Reproduktion:** `E:/clone\segmented-calculation-suite/tests/` — alle Tests bestanden.
+**Reproduktion:** `E:\clone\segmented-calculation-suite\tests\` — alle Tests bestanden.
 
 ---
 
@@ -3877,7 +3891,7 @@ Der Schlüsselunterschied: Die ART erzeugt D = 0 am Horizont, was Koordinatengr�
 
 ### Kapitelzusammenfassung und Brücke
 
-Dieses Kapitel hat die Abschließungsrelation bewiesen und sie als Informationserhaltungsgesetz interpretiert. Das Produkt $v_{esc}$ × $v_{fall}$ = c² ist exakt, universell und unabhängig von der Masse oder dem Radius des gravitierenden Objekts.
+Dieses Kapitel hat die Abschließungsrelation bewiesen und sie als Informationserhaltungsgesetz interpretiert. Das Produkt v_esc × v_fall = c² ist exakt, universell und unabhängig von der Masse oder dem Radius des gravitierenden Objekts.
 
 ### Zusammenfassung und Brücke zu Teil III
 
@@ -3885,17 +3899,17 @@ Teil III wendet das kinematische Rahmenwerk auf elektromagnetische Phänomene an
 
 ### Informationserhaltung und Kausalstruktur
 
-Die Abschließungsrelation $v_{esc}$ × $v_{fall}$ = c² hat eine tiefe Verbindung zur Informationserhaltung. In der ART geht Information am Ereignishorizont verloren (das Informationsparadoxon). In SSZ bleibt die Abschließung bei allen Radien erhalten, einschließlich r = $r_{s}$, was bedeutet, dass die kausale Verbindung zwischen Innen und Außen nie vollständig unterbrochen wird.
+Die Abschließungsrelation v_esc × v_fall = c² hat eine tiefe Verbindung zur Informationserhaltung. In der ART geht Information am Ereignishorizont verloren (das Informationsparadoxon). In SSZ bleibt die Abschließung bei allen Radien erhalten, einschließlich r = r_s, was bedeutet, dass die kausale Verbindung zwischen Innen und Außen nie vollständig unterbrochen wird.
 
-Die physikalische Interpretation: Wenn ein Signal mit $v_{esc}$ nach außen gesendet wird und ein anderes Signal mit $v_{fall}$ nach innen, ist ihr Produkt immer c². Dies bedeutet, dass die Gesamtinformation (gemessen als Produkt der Ein- und Auswärtsgeschwindigkeiten) erhalten bleibt. Am Horizont (r = $r_{s}$) sind beide Geschwindigkeiten gleich c, und die Information fließt symmetrisch in beide Richtungen — im Gegensatz zur ART, wo der Informationsfluss am Horizont einseitig wird.
+Die physikalische Interpretation: Wenn ein Signal mit v_esc nach außen gesendet wird und ein anderes Signal mit v_fall nach innen, ist ihr Produkt immer c². Dies bedeutet, dass die Gesamtinformation (gemessen als Produkt der Ein- und Auswärtsgeschwindigkeiten) erhalten bleibt. Am Horizont (r = r_s) sind beide Geschwindigkeiten gleich c, und die Information fließt symmetrisch in beide Richtungen — im Gegensatz zur ART, wo der Informationsfluss am Horizont einseitig wird.
 
 Die Abschließung hat auch Konsequenzen für die Kausalstruktur der Raumzeit. In der ART definiert der Lichtkegel die kausale Struktur: Ereignisse innerhalb des Lichtkegels sind kausal verbunden, Ereignisse außerhalb sind kausal getrennt. Am Horizont kippt der Lichtkegel so, dass alle zukünftigen Lichtstrahlen nach innen zeigen — kein Signal kann entkommen.
 
-In SSZ kippt der Lichtkegel nie vollständig. Bei r = $r_{s}$ ist der Lichtkegel stark verengt (die Aufwärtskomponente ist um den Faktor D = 0,555 verlangsamt), aber er zeigt immer noch teilweise nach außen. Dies bedeutet, dass die kausale Verbindung zwischen dem Inneren und dem Äußeren eines kompakten Objekts in SSZ nie vollständig unterbrochen wird — Information kann (stark rotverschoben) entkommen.
+In SSZ kippt der Lichtkegel nie vollständig. Bei r = r_s ist der Lichtkegel stark verengt (die Aufwärtskomponente ist um den Faktor D = 0,555 verlangsamt), aber er zeigt immer noch teilweise nach außen. Dies bedeutet, dass die kausale Verbindung zwischen dem Inneren und dem Äußeren eines kompakten Objekts in SSZ nie vollständig unterbrochen wird — Information kann (stark rotverschoben) entkommen.
 
 ### Konjugierte Produkte in der Physik
 
-Die Abschließungsrelation $v_{esc}$ × $v_{fall}$ = c² ist ein Beispiel für ein konjugiertes Produkt — ein Produkt zweier komplementärer Größen, das eine Konstante ergibt. Solche Produkte treten in vielen Bereichen der Physik auf:
+Die Abschließungsrelation v_esc × v_fall = c² ist ein Beispiel für ein konjugiertes Produkt — ein Produkt zweier komplementärer Größen, das eine Konstante ergibt. Solche Produkte treten in vielen Bereichen der Physik auf:
 
 | Bereich | Konjugierte Größen | Produkt | Konstante |
 |---------|----------------------|---------|-----------|
@@ -3908,41 +3922,41 @@ Die Gemeinsamkeit: In jedem Fall begrenzt das konjugierte Produkt die gleichzeit
 
 ### Mathematische Tiefe der Abschließungsrelation
 
-Die Relation $v_{esc}$ · $v_{fall}$ = c² hat eine tiefere mathematische Bedeutung als eine einfache algebraische Identität:
+Die Relation v_esc · v_fall = c² hat eine tiefere mathematische Bedeutung als eine einfache algebraische Identität:
 
-**Dualitätsstruktur:** Die Flucht- und Einfallgeschwindigkeiten sind dual zueinander im Sinne einer Inversionsrelation. Wenn $v_{esc}$ = c√($r_{s}$/r), dann ist $v_{fall}$ = c√(r/r_s) = c²/v_esc. Diese Dualität ist analog zur elektrisch-magnetischen Dualität in der Elektrodynamik.
+**Dualitätsstruktur:** Die Flucht- und Einfallgeschwindigkeiten sind dual zueinander im Sinne einer Inversionsrelation. Wenn v_esc = c√(r_s/r), dann ist v_fall = c√(r/r_s) = c²/v_esc. Diese Dualität ist analog zur elektrisch-magnetischen Dualität in der Elektrodynamik.
 
-**Fixpunkt bei r = $r_{s}$:** Am Schwarzschild-Radius ist $v_{esc}$ = $v_{fall}$ = c — der einzige Radius, an dem beide Geschwindigkeiten gleich sind. Dies ist der Fixpunkt der Dualitätstransformation und markiert die natürliche Grenze in SSZ.
+**Fixpunkt bei r = r_s:** Am Schwarzschild-Radius ist v_esc = v_fall = c — der einzige Radius, an dem beide Geschwindigkeiten gleich sind. Dies ist der Fixpunkt der Dualitätstransformation und markiert die natürliche Grenze in SSZ.
 
-**Verbindung zur Zeitdilatation:** Die Abschließung lässt sich umschreiben als: $v_{esc}$/c = c/v_fall = √($r_{s}$/r). Im Schwachfeld ist dies gleich √(2Ξ), was die Verbindung zwischen Geschwindigkeiten und Segmentdichte herstellt.
+**Verbindung zur Zeitdilatation:** Die Abschließung lässt sich umschreiben als: v_esc/c = c/v_fall = √(r_s/r). Im Schwachfeld ist dies gleich √(2Ξ), was die Verbindung zwischen Geschwindigkeiten und Segmentdichte herstellt.
 
 ### Verallgemeinerung auf nicht-radiale Bewegung
 
 Für nicht-radiale Orbits mit Drehimpuls L modifiziert sich die Abschließung zu:
 
-$v_{esc}$,eff · $v_{fall}$,eff = c² × (1 − L²/(r²c²))
+v_esc,eff · v_fall,eff = c² × (1 − L²/(r²c²))
 
-Die Korrektur durch den Drehimpuls ist immer < 1, was bedeutet, dass rotierenden Teilchen leichter entkommen können als radial einfallenden. Am Photonen-Ring (r = 3$r_{s}$/2) ist die Korrektur maximal: $v_{esc}$,eff · $v_{fall}$,eff = (2/3)c².
+Die Korrektur durch den Drehimpuls ist immer < 1, was bedeutet, dass rotierenden Teilchen leichter entkommen können als radial einfallenden. Am Photonen-Ring (r = 3r_s/2) ist die Korrektur maximal: v_esc,eff · v_fall,eff = (2/3)c².
 
 ### Thermodynamische Interpretation der kinematischen Abschliessung
 
-Die Abschliessungsrelation $v_{esc}$ x $v_{fall}$ = c^2 hat eine thermodynamische Interpretation, die ueber die rein kinematische Bedeutung hinausgeht. In der statistischen Mechanik ist die Temperatur eines Systems durch die mittlere kinetische Energie seiner Bestandteile bestimmt: (3/2) $k_{B}$ T = (1/2) m <v^2>. Wenn die Geschwindigkeiten durch die Abschliessungsrelation eingeschraenkt sind, ergibt sich eine maximale Temperatur fuer Materie an der natuerlichen Grenze:
+Die Abschliessungsrelation v_esc x v_fall = c^2 hat eine thermodynamische Interpretation, die ueber die rein kinematische Bedeutung hinausgeht. In der statistischen Mechanik ist die Temperatur eines Systems durch die mittlere kinetische Energie seiner Bestandteile bestimmt: (3/2) k_B T = (1/2) m <v^2>. Wenn die Geschwindigkeiten durch die Abschliessungsrelation eingeschraenkt sind, ergibt sich eine maximale Temperatur fuer Materie an der natuerlichen Grenze:
 
-$T_{max}$ = m c^2 $D_{min}$^2 / (3 $k_{B}$) = m c^2 x 0,308 / (3 $k_{B}$)
+T_max = m c^2 D_min^2 / (3 k_B) = m c^2 x 0,308 / (3 k_B)
 
-Fuer Protonen (m = 1,67 x 10^{-27} kg) ergibt sich $T_{max}$ ~ 3,6 x 10^{12} K. Dies ist die maximale Temperatur, die Materie an der natuerlichen Grenze erreichen kann — heisser als das Innere einer Supernova (~10^{11} K), aber endlich und wohldefiniert.
+Fuer Protonen (m = 1,67 x 10^{-27} kg) ergibt sich T_max ~ 3,6 x 10^{12} K. Dies ist die maximale Temperatur, die Materie an der natuerlichen Grenze erreichen kann — heisser als das Innere einer Supernova (~10^{11} K), aber endlich und wohldefiniert.
 
-Die Endlichkeit der maximalen Temperatur ist eine direkte Konsequenz der Abschliessungsrelation und der Endlichkeit von $D_{min}$. In der ART gibt es keine solche Obergrenze: Die Temperatur divergiert am Horizont (wo D -> 0), was zu den bekannten Problemen der Schwarze-Loch-Thermodynamik fuehrt.
+Die Endlichkeit der maximalen Temperatur ist eine direkte Konsequenz der Abschliessungsrelation und der Endlichkeit von D_min. In der ART gibt es keine solche Obergrenze: Die Temperatur divergiert am Horizont (wo D -> 0), was zu den bekannten Problemen der Schwarze-Loch-Thermodynamik fuehrt.
 
 ### Anwendung auf Metrik-Perturbationen-Inspiral
 
-Die Abschliessungsrelation hat Konsequenzen fuer die Metrik-Perturbationenemission von kompakten Binaersystemen. Die Metrik-Perturbationenleistung eines Binaersystems haengt von der Orbitalgeschwindigkeit ab: $P_{GW}$ ~ (v/c)^{10} x c^5/G. In SSZ ist die Orbitalgeschwindigkeit durch die Segmentdichte modifiziert, was zu einer modifizierten Metrik-Perturbationenleistung fuehrt.
+Die Abschliessungsrelation hat Konsequenzen fuer die Metrik-Perturbationenemission von kompakten Binaersystemen. Die Metrik-Perturbationenleistung eines Binaersystems haengt von der Orbitalgeschwindigkeit ab: P_GW ~ (v/c)^{10} x c^5/G. In SSZ ist die Orbitalgeschwindigkeit durch die Segmentdichte modifiziert, was zu einer modifizierten Metrik-Perturbationenleistung fuehrt.
 
-Fuer den spaeteren Inspiral (nahe der Verschmelzung) ist die Orbitalgeschwindigkeit v ~ 0,3-0,5 c, und die SSZ-Korrektur ist von der Ordnung Xi ~ 0,01-0,1. Die resultierende Aenderung in der Metrik-Perturbationenphase akkumuliert sich ueber Tausende von Orbitalzyklen und betraegt $\Delta_{\phi}$ ~ 0,1-1 Radian fuer typische Neutronenstern-Verschmelzungen. Diese Phasenverschiebung ist mit aktuellen Metrik-Perturbationendetektoren (observational bei Design-Sensitivitaet) grenzwertig messbar und mit Detektoren der dritten Generation (Einstein-Teleskop, Cosmic Explorer) klar detektierbar.
+Fuer den spaeteren Inspiral (nahe der Verschmelzung) ist die Orbitalgeschwindigkeit v ~ 0,3-0,5 c, und die SSZ-Korrektur ist von der Ordnung Xi ~ 0,01-0,1. Die resultierende Aenderung in der Metrik-Perturbationenphase akkumuliert sich ueber Tausende von Orbitalzyklen und betraegt Delta_phi ~ 0,1-1 Radian fuer typische Neutronenstern-Verschmelzungen. Diese Phasenverschiebung ist mit aktuellen Metrik-Perturbationendetektoren (bei Design-Sensitivitaet) grenzwertig messbar und mit Detektoren der dritten Generation (Einstein-Teleskop, Cosmic Explorer) klar detektierbar.
 
 ### Verbindung zur Quantenmechanik
 
-Die Abschliessungsrelation $v_{esc}$ x $v_{fall}$ = c^2 hat eine formale Aehnlichkeit mit der Heisenbergschen Unschaerferelation $\Delta_{\text{x}}$ x $\Delta_{\text{p}}$ >= hbar/2. Beide Relationen druecken eine fundamentale Einschraenkung aus: Man kann nicht gleichzeitig beide konjugierten Groessen beliebig genau bestimmen.
+Die Abschliessungsrelation v_esc x v_fall = c^2 hat eine formale Aehnlichkeit mit der Heisenbergschen Unschaerferelation Delta_x x Delta_p >= hbar/2. Beide Relationen druecken eine fundamentale Einschraenkung aus: Man kann nicht gleichzeitig beide konjugierten Groessen beliebig genau bestimmen.
 
 In der Quantenmechanik ist die Einschraenkung eine Konsequenz der Nichtkommutativitaet der Orts- und Impulsoperatoren. In SSZ ist die Einschraenkung eine Konsequenz der Geometrie des Segmentgitters: Die Flucht- und Einfallrichtungen sind durch die radiale Struktur des Gitters gekoppelt.
 
@@ -3950,39 +3964,39 @@ Ob diese formale Aehnlichkeit auf eine tiefere Verbindung zwischen SSZ und der Q
 
 ### Nicht-radiale Verallgemeinerung der Abschliessungsrelation
 
-Die Abschliessungsrelation $v_{esc}$ x $v_{fall}$ = c^2 gilt streng nur fuer radiale Bewegung. Fuer nicht-radiale Bewegung (mit Drehimpuls L) muss die Relation verallgemeinert werden:
+Die Abschliessungsrelation v_esc x v_fall = c^2 gilt streng nur fuer radiale Bewegung. Fuer nicht-radiale Bewegung (mit Drehimpuls L) muss die Relation verallgemeinert werden:
 
-$v_{esc}$^2 + $v_{fall}$^2 = 2c^2 * (1 - L^2/(r^2 c^2) * D(r)^2)
+v_esc^2 + v_fall^2 = 2c^2 * (1 - L^2/(r^2 c^2) * D(r)^2)
 
-Fuer L = 0 (radiale Bewegung) reduziert sich dies auf $v_{esc}$^2 + $v_{fall}$^2 = 2c^2, was zusammen mit $v_{esc}$ x $v_{fall}$ = c^2 die beiden Geschwindigkeiten eindeutig bestimmt.
+Fuer L = 0 (radiale Bewegung) reduziert sich dies auf v_esc^2 + v_fall^2 = 2c^2, was zusammen mit v_esc x v_fall = c^2 die beiden Geschwindigkeiten eindeutig bestimmt.
 
-Fuer L != 0 gibt es eine maximale Drehimpulsschranke: $L_{max}$ = r c / D(r). Fuer L > $L_{max}$ existiert keine gebundene Bahn — das Teilchen wird gestreut. Am ISCO ist L = $L_{ISCO}$, und die Abschliessungsrelation bestimmt die ISCO-Orbitalgeschwindigkeit.
+Fuer L != 0 gibt es eine maximale Drehimpulsschranke: L_max = r c / D(r). Fuer L > L_max existiert keine gebundene Bahn — das Teilchen wird gestreut. Am ISCO ist L = L_ISCO, und die Abschliessungsrelation bestimmt die ISCO-Orbitalgeschwindigkeit.
 
 ### Konjugierte Variablen und Hamilton-Mechanik
 
-Die Abschliessungsrelation $v_{esc}$ x $v_{fall}$ = c^2 kann als kanonische Transformationsrelation interpretiert werden. In der Hamilton-Mechanik sind Position q und Impuls p konjugierte Variablen mit der Poisson-Klammer {q, p} = 1.
+Die Abschliessungsrelation v_esc x v_fall = c^2 kann als kanonische Transformationsrelation interpretiert werden. In der Hamilton-Mechanik sind Position q und Impuls p konjugierte Variablen mit der Poisson-Klammer {q, p} = 1.
 
-In SSZ sind $v_{esc}$ und $v_{fall}$ konjugierte Geschwindigkeiten mit der Relation $v_{esc}$ x $v_{fall}$ = c^2. Die Analogie: $v_{esc}$ spielt die Rolle der Position (sie nimmt mit zunehmendem r ab), und $v_{fall}$ spielt die Rolle des Impulses (er nimmt mit zunehmendem r zu). Das Produkt ist eine Konstante (c^2), analog zum Phasenraumvolumen in der klassischen Mechanik.
+In SSZ sind v_esc und v_fall konjugierte Geschwindigkeiten mit der Relation v_esc x v_fall = c^2. Die Analogie: v_esc spielt die Rolle der Position (sie nimmt mit zunehmendem r ab), und v_fall spielt die Rolle des Impulses (er nimmt mit zunehmendem r zu). Das Produkt ist eine Konstante (c^2), analog zum Phasenraumvolumen in der klassischen Mechanik.
 
-Diese Interpretation hat eine tiefe Verbindung zur Quantenmechanik: Die Heisenbergsche Unschaerferelation $\Delta_{\text{x}}$ x $\Delta_{\text{p}}$ >= hbar/2 setzt eine untere Schranke fuer das Produkt der Unsicherheiten konjugierter Variablen. Die SSZ-Abschliessungsrelation setzt eine obere Schranke fuer das Produkt der konjugierten Geschwindigkeiten. Beide Relationen druecken fundamentale Einschraenkungen der Natur aus.
+Diese Interpretation hat eine tiefe Verbindung zur Quantenmechanik: Die Heisenbergsche Unschaerferelation Delta_x x Delta_p >= hbar/2 setzt eine untere Schranke fuer das Produkt der Unsicherheiten konjugierter Variablen. Die SSZ-Abschliessungsrelation setzt eine obere Schranke fuer das Produkt der konjugierten Geschwindigkeiten. Beide Relationen druecken fundamentale Einschraenkungen der Natur aus.
 
 ### Anwendung auf Binaersysteme
 
-In einem Binaersystem (z.B. zwei Neutronensterne) hat jedes Objekt seine eigene Abschliessungsrelation, bestimmt durch das Gravitationsfeld des Partners. Die Orbitalgeschwindigkeit $v_{orb}$ ist weder $v_{esc}$ noch $v_{fall}$, sondern eine Kombination beider:
+In einem Binaersystem (z.B. zwei Neutronensterne) hat jedes Objekt seine eigene Abschliessungsrelation, bestimmt durch das Gravitationsfeld des Partners. Die Orbitalgeschwindigkeit v_orb ist weder v_esc noch v_fall, sondern eine Kombination beider:
 
-$v_{orb}$ = sqrt($v_{esc}$ x $v_{fall}$) * sin(theta) = c * sin(theta)
+v_orb = sqrt(v_esc x v_fall) * sin(theta) = c * sin(theta)
 
-wobei theta der Winkel zwischen der Orbitalebene und der radialen Richtung ist. Fuer eine Kreisbahn (theta = pi/2) ist $v_{orb}$ = c * sqrt($r_{s}$/r), was die Kepler-Geschwindigkeit reproduziert.
+wobei theta der Winkel zwischen der Orbitalebene und der radialen Richtung ist. Fuer eine Kreisbahn (theta = pi/2) ist v_orb = c * sqrt(r_s/r), was die Kepler-Geschwindigkeit reproduziert.
 
-Die SSZ-Korrektur zur Orbitalgeschwindigkeit ist: v_orb_SSZ = v_orb_Kepler * D(r)^{1/2}. Fuer den Doppelpulsar PSR J0737-3039 ($r_{orb}$ ~ 900.000 km, Xi ~ 3 x 10^{-6}) ist die Korrektur ~1,5 x 10^{-6}, was mit ~30 Jahren Timing-Beobachtungen messbar sein koennte.
+Die SSZ-Korrektur zur Orbitalgeschwindigkeit ist: v_orb_SSZ = v_orb_Kepler * D(r)^{1/2}. Fuer den Doppelpulsar PSR J0737-3039 (r_orb ~ 900.000 km, Xi ~ 3 x 10^{-6}) ist die Korrektur ~1,5 x 10^{-6}, was mit ~30 Jahren Timing-Beobachtungen messbar sein koennte.
 
 ### Anwendung auf Exoplaneten-Transits
 
-Die Abschliessungsrelation $v_{esc}$ * $v_{fall}$ = c^2 hat eine interessante Anwendung auf Exoplaneten-Transits. Wenn ein Planet vor seinem Stern vorbeizieht, durchquert das Sternlicht das Gravitationsfeld des Planeten. Die Frequenzverschiebung des Sternenlichts durch das Gravitationsfeld des Planeten betraegt:
+Die Abschliessungsrelation v_esc * v_fall = c^2 hat eine interessante Anwendung auf Exoplaneten-Transits. Wenn ein Planet vor seinem Stern vorbeizieht, durchquert das Sternlicht das Gravitationsfeld des Planeten. Die Frequenzverschiebung des Sternenlichts durch das Gravitationsfeld des Planeten betraegt:
 
-$\Delta_{\text{f}}$/f = $\Xi_{\text{Planet}}$ = G $M_{Planet}$ / (c^2 $R_{Planet}$)
+Delta_f/f = Xi_Planet = G M_Planet / (c^2 R_Planet)
 
-Fuer Jupiter (M = 1,9 x 10^{27} kg, R = 71.500 km): $\Xi_{\text{Jupiter}}$ = 2,1 x 10^{-8}. Dies ist weit unterhalb der aktuellen Messgenauigkeit (~10^{-5} fuer ESPRESSO am VLT), aber zukuenftige Instrumente (ELT-ANDES, Praezision ~10^{-9}) koennten diese Verschiebung fuer massereiche Exoplaneten nahe ihrem Stern detektieren.
+Fuer Jupiter (M = 1,9 x 10^{27} kg, R = 71.500 km): Xi_Jupiter = 2,1 x 10^{-8}. Dies ist weit unterhalb der aktuellen Messgenauigkeit (~10^{-5} fuer ESPRESSO am VLT), aber zukuenftige Instrumente (ELT-ANDES, Praezision ~10^{-9}) koennten diese Verschiebung fuer massereiche Exoplaneten nahe ihrem Stern detektieren.
 
 ### Orbitale Resonanzen und Segmentdichte
 
@@ -3990,21 +4004,21 @@ In Mehrkörpersystemen (z.B. Planetensysteme, Sternhaufen) spielen orbitale Reso
 
 In SSZ ist die Orbitalperiode durch die Segmentdichte modifiziert:
 
-$T_{SSZ}$ = $T_{Kepler}$ * (1 + Xi(r))^{3/2}
+T_SSZ = T_Kepler * (1 + Xi(r))^{3/2}
 
-Die SSZ-Korrektur verschiebt die Resonanzbedingung leicht: Statt T_1/T_2 = n_1/n_2 (exakt) ist die Bedingung T_1/T_2 = (n_1/n_2) * (1 + $\Delta_{\Xi}$)^{3/2}, wobei $\Delta_{\Xi}$ = Xi(r_1) - Xi(r_2) die Differenz der Segmentdichten ist.
+Die SSZ-Korrektur verschiebt die Resonanzbedingung leicht: Statt T_1/T_2 = n_1/n_2 (exakt) ist die Bedingung T_1/T_2 = (n_1/n_2) * (1 + Delta_Xi)^{3/2}, wobei Delta_Xi = Xi(r_1) - Xi(r_2) die Differenz der Segmentdichten ist.
 
-Fuer das Sonnensystem ($\Delta_{\Xi}$ ~ 10^{-8}) ist die Korrektur vernachlaessigbar. Fuer Planeten nahe kompakten Objekten (z.B. Pulsarplaneten, $\Delta_{\Xi}$ ~ 10^{-4}) koennte die Korrektur die Resonanzstruktur messbar veraendern.
+Fuer das Sonnensystem (Delta_Xi ~ 10^{-8}) ist die Korrektur vernachlaessigbar. Fuer Planeten nahe kompakten Objekten (z.B. Pulsarplaneten, Delta_Xi ~ 10^{-4}) koennte die Korrektur die Resonanzstruktur messbar veraendern.
 
 ### Zusammenfassung der kinematischen Abschliessung
 
-Die kinematische Abschliessung $v_{esc}$ * $v_{fall}$ = c^2 ist eines der elegantesten Ergebnisse von SSZ. Sie verbindet:
+Die kinematische Abschliessung v_esc * v_fall = c^2 ist eines der elegantesten Ergebnisse von SSZ. Sie verbindet:
 
-1. **Fluchtgeschwindigkeit:** $v_{esc}$ = c * sqrt(2 Xi / (1+Xi)^2) — die Geschwindigkeit, die ein Teilchen benoetigt, um dem Gravitationsfeld zu entkommen.
-2. **Einfallgeschwindigkeit:** $v_{fall}$ = c * sqrt(1 - D^2) — die Geschwindigkeit, mit der ein Teilchen aus dem Unendlichen einfallt.
+1. **Fluchtgeschwindigkeit:** v_esc = c * sqrt(2 Xi / (1+Xi)^2) — die Geschwindigkeit, die ein Teilchen benoetigt, um dem Gravitationsfeld zu entkommen.
+2. **Einfallgeschwindigkeit:** v_fall = c * sqrt(1 - D^2) — die Geschwindigkeit, mit der ein Teilchen aus dem Unendlichen einfallt.
 3. **Lichtgeschwindigkeit:** c — die universelle Grenzgeschwindigkeit.
 
-Die Relation gilt exakt fuer alle r (einschliesslich r = $r_{s}$) und fuer alle Massen. Sie ist eine direkte Konsequenz der Energieerhaltung und der Endlichkeit der Segmentdichte.
+Die Relation gilt exakt fuer alle r (einschliesslich r = r_s) und fuer alle Massen. Sie ist eine direkte Konsequenz der Energieerhaltung und der Endlichkeit der Segmentdichte.
 
 ## Querverweise
 
@@ -4014,23 +4028,22 @@ Die Relation gilt exakt fuer alle r (einschliesslich r = $r_{s}$) und fuer alle 
 
 ### Zusammenfassung: Kinematische Abschliessung
 
-Dieses Kapitel hat die kinematische Abschliessung $v_{esc}$ * $v_{fall}$ = c^2 vollstaendig abgeleitet und ihre Konsequenzen analysiert. Die wichtigsten Ergebnisse:
+Dieses Kapitel hat die kinematische Abschliessung v_esc * v_fall = c^2 vollstaendig abgeleitet und ihre Konsequenzen analysiert. Die wichtigsten Ergebnisse:
 
-1. **Universelle Relation:** $v_{esc}$ * $v_{fall}$ = c^2 gilt fuer alle r und alle Massen.
-2. **Endliche Geschwindigkeiten:** $v_{fall}$($r_{s}$) = 0,832 c, $v_{esc}$($r_{s}$) = 1,202 c (Koordinatengeschwindigkeit).
+1. **Universelle Relation:** v_esc * v_fall = c^2 gilt fuer alle r und alle Massen.
+2. **Endliche Geschwindigkeiten:** v_fall(r_s) = 0,832 c, v_esc(r_s) = 1,202 c (Koordinatengeschwindigkeit).
 3. **Energieerhaltung:** Aequivalent zu E = m c^2 D(r).
-4. **Exoplaneten-Transits:** Gravitationsfeld des Planeten verschiebt Sternlicht um $\Xi_{\text{Planet}}$.
-5. **Orbitale Resonanzen:** SSZ-Korrektur verschiebt Resonanzbedingung um (1 + $\Delta_{\Xi}$)^{3/2}.
+4. **Exoplaneten-Transits:** Gravitationsfeld des Planeten verschiebt Sternlicht um Xi_Planet.
+5. **Orbitale Resonanzen:** SSZ-Korrektur verschiebt Resonanzbedingung um (1 + Delta_Xi)^{3/2}.
 
 Die kinematische Abschliessung ist ein einzigartiges Merkmal von SSZ, das keine Entsprechung in der ART hat. Sie verbindet Fluchtgeschwindigkeit, Einfallgeschwindigkeit und Lichtgeschwindigkeit in einer eleganten Relation.
 
+---
 
-\newpage
+# Kapitel 10: Radiale Skalierungseichung für Maxwell-Felder
 
-\part{Elektromagnetismus und Lichtausbreitung}
-
-# Radiale Skalierungseichung für Maxwell-Felder
-
+**Teil III — Elektromagnetismus und Lichtausbreitung**
+**Status:** ERWEITERTE FASSUNG
 
 ---
 
@@ -4048,9 +4061,9 @@ Dieses Kapitel leitet die Skalierungseichung aus der Segmentdichte her, zeigt, w
 
 ---
 
-![Abb. 10.1 — Radialer Skalierungsfaktor s(r) = 1+Ξ(r) = 1/D(r), zeigt die Übergangszone und Sättigung bei s($r_{s}$) = 1,802.](figures/ch10_radial_scaling/fig_10_01_radial_scaling_s_r.png)
+![Abb. 10.1 — Radialer Skalierungsfaktor s(r) = 1+Ξ(r) = 1/D(r), zeigt die Übergangszone und Sättigung bei s(r_s) = 1,802.](figures/ch10_radial_scaling/fig_10_01_radial_scaling_s_r.png)
 
-![Abb. 10.2 — PPN vs. Ξ-nur: Lichtablenkung (links) und das Faktor-2-Verhältnis $g_{tt}$ + $g_{rr}$ (rechts), bestätigt (1+γ) = 2.](figures/ch10_radial_scaling/fig_10_02_ppn_shapiro_lensing.png)
+![Abb. 10.2 — PPN vs. Ξ-nur: Lichtablenkung (links) und das Faktor-2-Verhältnis g_tt + g_rr (rechts), bestätigt (1+γ) = 2.](figures/ch10_radial_scaling/fig_10_02_ppn_shapiro_lensing.png)
 
 ## 10.1 Maxwell-Gleichungen in gekrümmter Raumzeit
 
@@ -4066,13 +4079,13 @@ Intuitiv bedeutet dies: Zeitdilatation betrifft, wie schnell Uhren ticken (nur t
 
 In flacher Raumzeit beschreiben die Maxwell-Gleichungen die Ausbreitung elektromagnetischer Wellen mit perfekter Präzision. Die vier Gleichungen können in Differentialform geschrieben werden:
 
-$$\nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0}, \quad \nabla \cdot \mathbf{B} = 0$$
+\nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0}, \quad \nabla \cdot \mathbf{B} = 0
 
-$$\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}, \quad \nabla \times \mathbf{B} = \mu_0 \mathbf{J} + \mu_0 \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t}$$
+\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}, \quad \nabla \times \mathbf{B} = \mu_0 \mathbf{J} + \mu_0 \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t}
 
 Im Vakuum (ρ = 0, J = 0) kombinieren sich diese Gleichungen zur Wellengleichung:
 
-$$\nabla^2 \mathbf{E} = \mu_0 \varepsilon_0 \frac{\partial^2 \mathbf{E}}{\partial t^2}$$
+\nabla^2 \mathbf{E} = \mu_0 \varepsilon_0 \frac{\partial^2 \mathbf{E}}{\partial t^2}
 
 mit Ausbreitungsgeschwindigkeit c = 1/√(μ₀ε₀) = 299.792.458 m/s exakt.
 
@@ -4080,13 +4093,13 @@ mit Ausbreitungsgeschwindigkeit c = 1/√(μ₀ε₀) = 299.792.458 m/s exakt.
 
 In der ART werden die Maxwell-Gleichungen durch die Raumzeitmetrik modifiziert. Die kovarianten Maxwell-Gleichungen werden:
 
-$$\frac{1}{\sqrt{-g}} \partial_\mu \left(\sqrt{-g} \, F^{\mu\nu}\right) = -\mu_0 J^\nu$$
+\frac{1}{\sqrt{-g}} \partial_\mu \left(\sqrt{-g} \, F^{\mu\nu}\right) = -\mu_0 J^\nu
 
 wobei F^μν der elektromagnetische Feldtensor und g = det(g_μν) die Metrikdeterminante ist. Das Schlüsselergebnis: Ein Photon beim Radius r von einer Masse M hat die Koordinatengeschwindigkeit:
 
-$$c_{\text{coord}}(r) = c \cdot \left(1 - \frac{r_s}{r}\right)$$
+c_{\text{coord}}(r) = c \cdot \left(1 - \frac{r_s}{r}\right)
 
-Dies ist langsamer als c nahe der Masse und verschwindet am Horizont (r = $r_{s}$). Die lokale Geschwindigkeit bleibt überall exakt c.
+Dies ist langsamer als c nahe der Masse und verschwindet am Horizont (r = r_s). Die lokale Geschwindigkeit bleibt überall exakt c.
 
 ### Der SSZ-Ansatz: Skalierungseichung
 
@@ -4094,15 +4107,15 @@ SSZ liefert eine einfachere und physikalischere Ableitung desselben Ergebnisses.
 
 Die effektiven Vakuumeigenschaften beim Radius r sind:
 
-$$\varepsilon_{\text{eff}}(r) = \varepsilon_0 \cdot s(r), \quad \mu_{\text{eff}}(r) = \mu_0 \cdot s(r)$$
+\varepsilon_{\text{eff}}(r) = \varepsilon_0 \cdot s(r), \quad \mu_{\text{eff}}(r) = \mu_0 \cdot s(r)
 
 wobei s(r) = 1 + Ξ(r) der radiale Skalierungsfaktor ist. Die lokale Lichtgeschwindigkeit in diesem effektiven Medium ist:
 
 c_{\text{local}} = \frac{1}{\sqrt{\mu_{\text{eff}} \varepsilon_{\text{eff}}}} = \frac{1}{\sqrt{\mu_0 \varepsilon_0 \cdot s^2}} = \frac{c}{s(r)}
 
-Achtung — dies würde die lokale Geschwindigkeit kleiner als c machen, was der LLI widerspricht (Kapitel 7). Die Auflösung: $c_{lokal}$ = c/s(r) ist die **Koordinaten**geschwindigkeit, nicht die lokal gemessene Geschwindigkeit. Die Maßstäbe und Uhren des lokalen Beobachters werden ebenfalls durch s(r) skaliert, sodass die lokal gemessene Geschwindigkeit immer c ist.
+Achtung — dies würde die lokale Geschwindigkeit kleiner als c machen, was der LLI widerspricht (Kapitel 7). Die Auflösung: c_lokal = c/s(r) ist die **Koordinaten**geschwindigkeit, nicht die lokal gemessene Geschwindigkeit. Die Maßstäbe und Uhren des lokalen Beobachters werden ebenfalls durch s(r) skaliert, sodass die lokal gemessene Geschwindigkeit immer c ist.
 
-**Analogie.** Licht reist in Glas langsamer (Brechungsindex n > 1) als im Vakuum, aber ein Physiker innerhalb des Glases (wenn seine Maßstäbe und Uhren ebenfalls um n skaliert wären) würde c messen. Die Segmentdichte erzeugt einen „gravitativen Brechungsindex" $n_{grav}$ = s(r) = 1 + Ξ(r).
+**Analogie.** Licht reist in Glas langsamer (Brechungsindex n > 1) als im Vakuum, aber ein Physiker innerhalb des Glases (wenn seine Maßstäbe und Uhren ebenfalls um n skaliert wären) würde c messen. Die Segmentdichte erzeugt einen „gravitativen Brechungsindex" n_grav = s(r) = 1 + Ξ(r).
 ## 10.2 Der Skalierungsfaktor s(r)
 
 ### Definition und Eigenschaften
@@ -4131,13 +4144,13 @@ Die Dualität s = 1/D ist zentral: **Was Uhren verlangsamt, verlangsamt auch Lic
 
 ### Die Interpretation als gravitativer Brechungsindex
 
-Die Analogie zwischen s(r) und einem Brechungsindex ist mehr als oberflächlich. In der Optik biegt ein Material mit ortsabhängigem Brechungsindex n(r) das Licht — dies ist die Grundlage der Gradientenindex-Optik (GRIN), verwendet in Glasfasern und Korrekturlinsen. Das Gravitationsfeld erzeugt ein natürliches GRIN-Medium mit $n_{grav}$(r) = s(r).
+Die Analogie zwischen s(r) und einem Brechungsindex ist mehr als oberflächlich. In der Optik biegt ein Material mit ortsabhängigem Brechungsindex n(r) das Licht — dies ist die Grundlage der Gradientenindex-Optik (GRIN), verwendet in Glasfasern und Korrekturlinsen. Das Gravitationsfeld erzeugt ein natürliches GRIN-Medium mit n_grav(r) = s(r).
 
 Das Snell'sche Gesetz für ein GRIN-Medium gibt die Strahlbiegung:
 
 \frac{d}{ds}\left(n \frac{d\mathbf{r}}{ds}\right) = \nabla n
 
-Für n = s(r) = 1 + $r_{s}$/(2r) (Schwachfeld) erzeugt dies den Standard-Lichtablenkungswinkel α = 2$r_{s}$/b (mit dem vollen PPN-Faktor).
+Für n = s(r) = 1 + r_s/(2r) (Schwachfeld) erzeugt dies den Standard-Lichtablenkungswinkel α = 2r_s/b (mit dem vollen PPN-Faktor).
 
 ## 10.3 Shapiro-Delay
 
@@ -4161,9 +4174,9 @@ Die Überschuss-Reisezeit (Shapiro-Delay) ist die Differenz zur Flachraumzeitzei
 
 $$\Delta t_{\text{SSZ}} = \int_{\text{Pfad}} \frac{\Xi(r)}{c} \, dl$$
 
-Dies ist das Ξ-Integral: die integrierte Segmentdichte entlang des Photonenpfades, geteilt durch c. Es erfasst den **temporalen** ($g_{tt}$) Beitrag zur Zeitverzögerung.
+Dies ist das Ξ-Integral: die integrierte Segmentdichte entlang des Photonenpfades, geteilt durch c. Es erfasst den **temporalen** (g_tt) Beitrag zur Zeitverzögerung.
 
-**Kritischer Punkt:** Dieses Ξ-Integral erfasst nur die Hälfte des gesamten Shapiro-Delays. Die andere Hälfte kommt von der **räumlichen** ($g_{rr}$) Metrikkomponente. Der volle Delay erfordert den PPN-Korrekturfaktor:
+**Kritischer Punkt:** Dieses Ξ-Integral erfasst nur die Hälfte des gesamten Shapiro-Delays. Die andere Hälfte kommt von der **räumlichen** (g_rr) Metrikkomponente. Der volle Delay erfordert den PPN-Korrekturfaktor:
 
 $$\Delta t_{\text{voll}} = (1+\gamma) \cdot \Delta t_{\Xi} = 2 \cdot \Delta t_{\Xi}$$
 
@@ -4173,18 +4186,18 @@ mit γ = 1 (Kapitel 7).
 
 Die präziseste Shapiro-Delay-Messung wurde während der oberen Sonnenkonjunktion der Cassini-Raumsonde am 21. Juni 2002 durchgeführt.
 
-- **Signalpfad:** Erde → Cassini (nahe Saturn), die Sonne bei b = 1,6 $R_{Sonne}$ passierend.
-- **Senderabstand:** r₁ $\approx$ 1 AE = 1,496 × 10⁸ km.
-- **Empfängerabstand:** r₂ $\approx$ 8,43 AE (Cassini-Orbit).
-- **Schwarzschild-Radius der Sonne:** $r_{s}$ = 2,95 km.
+- **Signalpfad:** Erde → Cassini (nahe Saturn), die Sonne bei b = 1,6 R_Sonne passierend.
+- **Senderabstand:** r₁ ≈ 1 AE = 1,496 × 10⁸ km.
+- **Empfängerabstand:** r₂ ≈ 8,43 AE (Cassini-Orbit).
+- **Schwarzschild-Radius der Sonne:** r_s = 2,95 km.
 
 Das Ξ-Integral für einen nahezu radialen Pfad beim Stoßparameter b:
 
-$$\Delta t_{\Xi} = \frac{r_s}{2c} \ln\left(\frac{4 r_1 r_2}{b^2}\right) \approx 65.5 \;\mu\text{s}$$
+\Delta t_{\Xi} = \frac{r_s}{2c} \ln\left(\frac{4 r_1 r_2}{b^2}\right) \approx 65.5 \;\mu\text{s}
 
 Der volle Shapiro-Delay mit PPN-Korrektur:
 
-$$\Delta t_{\text{voll}} = (1+\gamma) \times 65.5 = 2 \times 65.5 = 131 \;\mu\text{s} \;\text{(Einweg)}$$
+\Delta t_{\text{voll}} = (1+\gamma) \times 65.5 = 2 \times 65.5 = 131 \;\mu\text{s} \;\text{(Einweg)}
 
 Bertotti, Iess und Tortora (2003) maßen γ = 1,000021 ± 0,000023, was die SSZ/ART-Vorhersage auf 23 Teile pro Million bestätigt.
 
@@ -4196,9 +4209,9 @@ Die Ablenkung von Sternlicht durch die Sonne war die erste dramatische Bestätig
 
 Der Ablenkungswinkel für ein Photon, das eine Masse M beim Stoßparameter b passiert, ist:
 
-$$\alpha = \frac{(1+\gamma) \, r_s}{b} = \frac{(1+\gamma) \cdot 2GM}{c^2 b}$$
+\alpha = \frac{(1+\gamma) \, r_s}{b} = \frac{(1+\gamma) \cdot 2GM}{c^2 b}
 
-In der ART (γ = 1): α = 2$r_{s}$/b = 4GM/(c²b). Für die Sonne am Rand (b = $R_{Sonne}$):
+In der ART (γ = 1): α = 2r_s/b = 4GM/(c²b). Für die Sonne am Rand (b = R_Sonne):
 
 \alpha = \frac{2 \times 2.95 \text{ km}}{6.96 \times 10^5 \text{ km}} = 8.48 \times 10^{-6} \text{ rad} = 1.75''
 
@@ -4206,15 +4219,15 @@ In der ART (γ = 1): α = 2$r_{s}$/b = 4GM/(c²b). Für die Sonne am Rand (b = $
 
 In SSZ folgt die Lichtablenkung aus der Gradientenindex-Interpretation. Für einen Strahl beim Stoßparameter b ist der Ablenkungswinkel:
 
-$$\alpha = -\int_{-\infty}^{+\infty} \frac{\partial \ln n}{\partial b} \, dz$$
+\alpha = -\int_{-\infty}^{+\infty} \frac{\partial \ln n}{\partial b} \, dz
 
 Integration ergibt:
 
-$$\alpha_\Xi = \frac{r_s}{b}$$
+\alpha_\Xi = \frac{r_s}{b}
 
-Dies ist **die Hälfte** der beobachteten Ablenkung. Die fehlende Hälfte kommt vom räumlichen Krümmungsbeitrag ($g_{rr}$). Die volle Ablenkung ist:
+Dies ist **die Hälfte** der beobachteten Ablenkung. Die fehlende Hälfte kommt vom räumlichen Krümmungsbeitrag (g_rr). Die volle Ablenkung ist:
 
-$$\alpha_{\text{voll}} = (1+\gamma) \cdot \alpha_\Xi = 2 \cdot \frac{r_s}{b} = \frac{2r_s}{b}$$
+\alpha_{\text{voll}} = (1+\gamma) \cdot \alpha_\Xi = 2 \cdot \frac{r_s}{b} = \frac{2r_s}{b}
 
 Dies stimmt exakt mit dem ART-Ergebnis überein.
 
@@ -4233,15 +4246,15 @@ SSZ besteht alle diese Tests mit γ = 1 exakt.
 
 ### Warum Ξ allein die Hälfte der Antwort gibt
 
-Dieser Abschnitt behandelt die häufigste Fehlerquelle in SSZ-Berechnungen: **Das Ξ-Integral erfasst nur den temporalen ($g_{tt}$) Beitrag zu Lichtausbreitungseffekten.** Für Observablen, die von temporalen und räumlichen Metrikkomponenten abhängen — speziell Shapiro-Delay und Lichtablenkung — gibt das Ξ-Integral exakt die Hälfte der korrekten Antwort. Die volle Antwort erfordert den PPN-Faktor (1+γ) = 2.
+Dieser Abschnitt behandelt die häufigste Fehlerquelle in SSZ-Berechnungen: **Das Ξ-Integral erfasst nur den temporalen (g_tt) Beitrag zu Lichtausbreitungseffekten.** Für Observablen, die von temporalen und räumlichen Metrikkomponenten abhängen — speziell Shapiro-Delay und Lichtablenkung — gibt das Ξ-Integral exakt die Hälfte der korrekten Antwort. Die volle Antwort erfordert den PPN-Faktor (1+γ) = 2.
 
 Der physikalische Grund ist tiefgreifend. In der ART hat die Schwarzschild-Metrik zwei unabhängige Funktionen:
 
-$$g_{tt} = -\left(1 - \frac{r_s}{r}\right), \quad g_{rr} = \frac{1}{1 - r_s/r}$$
+g_{tt} = -\left(1 - \frac{r_s}{r}\right), \quad g_{rr} = \frac{1}{1 - r_s/r}
 
-Die Bahn eines Photons wird von **beiden** $g_{tt}$ und $g_{rr}$ bestimmt. Die temporale Komponente $g_{tt}$ bestimmt, wie schnell die Koordinatenuhr des Photons tickt; die räumliche Komponente $g_{rr}$ bestimmt, wie viel Koordinatenentfernung das Photon pro Eigenentfernung zurücklegt. Beide tragen gleichermaßen zum Shapiro-Delay und zur Lichtablenkung bei, was den berühmten Faktor 2 ergibt.
+Die Bahn eines Photons wird von **beiden** g_tt und g_rr bestimmt. Die temporale Komponente g_tt bestimmt, wie schnell die Koordinatenuhr des Photons tickt; die räumliche Komponente g_rr bestimmt, wie viel Koordinatenentfernung das Photon pro Eigenentfernung zurücklegt. Beide tragen gleichermaßen zum Shapiro-Delay und zur Lichtablenkung bei, was den berühmten Faktor 2 ergibt.
 
-In SSZ kodiert die Segmentdichte Ξ direkt $g_{tt}$ durch D = 1/(1+Ξ). Die räumliche Komponente $g_{rr}$ = 1/D² ist verwandt, führt aber einen zusätzlichen Faktor ein. Das Ξ-Integral erfasst natürlich nur den $g_{tt}$-Teil. Die PPN-Vorschrift (1+γ) fügt den $g_{rr}$-Teil hinzu.
+In SSZ kodiert die Segmentdichte Ξ direkt g_tt durch D = 1/(1+Ξ). Die räumliche Komponente g_rr = 1/D² ist verwandt, führt aber einen zusätzlichen Faktor ein. Das Ξ-Integral erfasst natürlich nur den g_tt-Teil. Die PPN-Vorschrift (1+γ) fügt den g_rr-Teil hinzu.
 
 ### Klassifikation der Observablen
 
@@ -4266,9 +4279,9 @@ Die falsche Anwendung dieser Klassifikation — speziell die Verwendung von Ξ a
 
 **Was die Tests beweisen:** s(r) = 1 + Ξ(r) = 1/D(r) für alle Testradien (45/45 BESTANDEN); Shapiro-Delay mit PPN-Korrektur stimmt mit Cassini-Daten auf 23 ppm überein; Lichtablenkung stimmt mit VLBI-Beobachtungen überein; GPS, Pound-Rebka, S2-Stern und 13 astronomische Objekte validiert; die Faktor-2-Zerlegung ist für alle Testfälle numerisch verifiziert.
 
-**Was die Tests NICHT beweisen:** Die Skalierungseichung im Starkfeldregime (r < 3$r_{s}$). Keine elektromagnetischen Tests sondieren derzeit diesen Bereich direkt, obwohl EHT-Beobachtungen von M87* und Sgr A*-Schatten indirekte Schranken liefern.
+**Was die Tests NICHT beweisen:** Die Skalierungseichung im Starkfeldregime (r < 3r_s). Keine elektromagnetischen Tests sondieren derzeit diesen Bereich direkt, obwohl EHT-Beobachtungen von M87* und Sgr A*-Schatten indirekte Schranken liefern.
 
-**Reproduktion:** `E:/clone\frequency-curvature-validation\` — 82/82 BESTANDEN; `E:/clone\maxwell\` — 45/45 BESTANDEN.
+**Reproduktion:** `E:\clone\frequency-curvature-validation\` — 82/82 BESTANDEN; `E:\clone\maxwell\` — 45/45 BESTANDEN.
 
 ---
 
@@ -4301,19 +4314,19 @@ Dieses Kapitel hat den radialen Skalierungsfaktor s(r) = 1 + Ξ(r) als zentrales
 
 ### Der S2-Stern als Präzisionssonde
 
-Der Stern S2 umkreist Sagittarius A* mit einer Periode von 16 Jahren und einem nächsten Abstand von ungefähr 120 AE (ungefähr 1400 Schwarzschild-Radien). Am Perizentrum ist Ξ = $r_{s}$/(2 × 1400 $r_{s}$) = 3,57 × 10⁻⁴, und die gravitative Rotverschiebung beträgt z = 3,57 × 10⁻⁴, entsprechend einer Geschwindigkeit von 107 km/s. Diese Rotverschiebung wurde 2018 von GRAVITY am VLT gemessen und bestätigte die ART-Vorhersage auf ungefähr 10 Prozent Präzision.
+Der Stern S2 umkreist Sagittarius A* mit einer Periode von 16 Jahren und einem nächsten Abstand von ungefähr 120 AE (ungefähr 1400 Schwarzschild-Radien). Am Perizentrum ist Ξ = r_s/(2 × 1400 r_s) = 3,57 × 10⁻⁴, und die gravitative Rotverschiebung beträgt z = 3,57 × 10⁻⁴, entsprechend einer Geschwindigkeit von 107 km/s. Diese Rotverschiebung wurde 2018 von GRAVITY am VLT gemessen und bestätigte die ART-Vorhersage auf ungefähr 10 Prozent Präzision.
 
-Die SSZ-Vorhersage für die S2-Rotverschiebung ist bei dieser Präzision identisch mit der ART (die Differenz ist von der Ordnung Ξ² $\approx$ 10⁻⁷). Die S2-Bahn liefert jedoch auch einen Test der PPN-Parameter durch die Orbitalpräzession. Die SSZ-Vorhersage für den Perizentrumvorschub beträgt 12 Bogenminuten pro Orbit (identisch mit ART), was 2020 von GRAVITY bestätigt wurde.
+Die SSZ-Vorhersage für die S2-Rotverschiebung ist bei dieser Präzision identisch mit der ART (die Differenz ist von der Ordnung Ξ² ≈ 10⁻⁷). Die S2-Bahn liefert jedoch auch einen Test der PPN-Parameter durch die Orbitalpräzession. Die SSZ-Vorhersage für den Perizentrumvorschub beträgt 12 Bogenminuten pro Orbit (identisch mit ART), was 2020 von GRAVITY bestätigt wurde.
 
-Zukünftige Beobachtungen von Sternen noch näher an Sgr A* (derzeit von GRAVITY+ gesucht) könnten stärkere Tests liefern. Ein Stern mit einem Perizentrum bei 10 r_s hätte Ξ $\approx$ 0,05, und die SSZ-ART-Differenz in der Rotverschiebung wäre ungefähr 0,25 Prozent — potenziell nachweisbar mit der nächsten Generation von Nahinfrarot-Spektrographen.
+Zukünftige Beobachtungen von Sternen noch näher an Sgr A* (derzeit von GRAVITY+ gesucht) könnten stärkere Tests liefern. Ein Stern mit einem Perizentrum bei 10 r_s hätte Ξ ≈ 0,05, und die SSZ-ART-Differenz in der Rotverschiebung wäre ungefähr 0,25 Prozent — potenziell nachweisbar mit der nächsten Generation von Nahinfrarot-Spektrographen.
 
 ### Ableitung des Skalierungsfaktors
 
-Der Skalierungsfaktor s(r) = 1 + Ξ(r) kann aus zwei unabhängigen Ausgangspunkten abgeleitet werden, die beide dasselbe Ergebnis liefern. Die erste Ableitung startet von der Metrik: In isotropen Koordinaten nimmt die SSZ-Metrik die Form ds² = −D²c²dt² + s²(dr² + r²dΩ²) an, wobei D = 1/(1 + Ξ). Die Koordinatenlichtgeschwindigkeit entlang radialer Nullgeodäten ist $c_{coord}$ = Dc/s. Damit der Schwachfeldgrenzwert mit dem Standard-PPN-Ergebnis übereinstimmt, benötigen wir s = 1/D = 1 + Ξ.
+Der Skalierungsfaktor s(r) = 1 + Ξ(r) kann aus zwei unabhängigen Ausgangspunkten abgeleitet werden, die beide dasselbe Ergebnis liefern. Die erste Ableitung startet von der Metrik: In isotropen Koordinaten nimmt die SSZ-Metrik die Form ds² = −D²c²dt² + s²(dr² + r²dΩ²) an, wobei D = 1/(1 + Ξ). Die Koordinatenlichtgeschwindigkeit entlang radialer Nullgeodäten ist c_coord = Dc/s. Damit der Schwachfeldgrenzwert mit dem Standard-PPN-Ergebnis übereinstimmt, benötigen wir s = 1/D = 1 + Ξ.
 
 Die zweite Ableitung startet von der Segmentzählung. Ein Lichtstrahl, der die Koordinatenstrecke dr durchquert, passiert (1 + Ξ(r)) dr/λ Segmente. Die gesamte Durchquerungszeit ist das Integral von (1 + Ξ(r)) dr/c, was die effektive Geschwindigkeit c/(1 + Ξ(r)) = c/s(r) ergibt. Beide Ableitungen stimmen überein und bestätigen die interne Konsistenz.
 
-Für praktische Berechnungen ist die PPN-Unterscheidung entscheidend. Observablen, die nur von $g_{tt}$ abhängen, verwenden Ξ direkt: D = 1/(1 + Ξ), z = Ξ, $f_{obs}$/f_emit = D. Observablen, die von $g_{tt}$ und $g_{rr}$ abhängen, verwenden den PPN-Faktor (1 + γ) = 2: Lichtablenkung α = 2$r_{s}$/b, Shapiro-Delay Δt = 2$r_{s}$/c × ln(...). Der Faktor 2 ist im Schwachfeld exakt und erhält Starkfeldkorrekturen der Ordnung Ξ².
+Für praktische Berechnungen ist die PPN-Unterscheidung entscheidend. Observablen, die nur von g_tt abhängen, verwenden Ξ direkt: D = 1/(1 + Ξ), z = Ξ, f_obs/f_emit = D. Observablen, die von g_tt und g_rr abhängen, verwenden den PPN-Faktor (1 + γ) = 2: Lichtablenkung α = 2r_s/b, Shapiro-Delay Δt = 2r_s/c × ln(...). Der Faktor 2 ist im Schwachfeld exakt und erhält Starkfeldkorrekturen der Ordnung Ξ².
 
 ### Eichinvarianz und der Skalierungsfaktor
 
@@ -4327,7 +4340,7 @@ Die Brechungsindex-Analogie erklärt auch, warum der PPN-Faktor (1 + γ) = 2 fü
 
 ### Verbindung zur WKB-Näherung
 
-Die radiale Skalierungseichung verbindet sich natürlich mit der semiklassischen (WKB-)Näherung. Im WKB-Rahmen erwirbt eine Welle eine Phase Φ = ∫ $k_{eff}$(r) dr. In SSZ ist $k_{eff}$ = k · s(r) = k · (1 + Ξ(r)), sodass Φ = k ∫ s(r) dr — formal identisch mit dem Eikonalintegral der geometrischen Optik (Paper 01).
+Die radiale Skalierungseichung verbindet sich natürlich mit der semiklassischen (WKB-)Näherung. Im WKB-Rahmen erwirbt eine Welle eine Phase Φ = ∫ k_eff(r) dr. In SSZ ist k_eff = k · s(r) = k · (1 + Ξ(r)), sodass Φ = k ∫ s(r) dr — formal identisch mit dem Eikonalintegral der geometrischen Optik (Paper 01).
 
 ### Zusammenfassung und Brücke zu Kapitel 11
 
@@ -4341,7 +4354,7 @@ Intuitiv bedeutet dies: Das Material in diesem Kapitel liefert ein Stück eines 
 
 Die radiale Skalierungseichung hat eine elegante differentialgeometrische Interpretation. Der Skalierungsfaktor s(r) definiert eine konforme Transformation der räumlichen Metrik:
 
-$g_{ij}$^{SSZ} = s^2(r) · $g_{ij}$^{flach}
+g_ij^{SSZ} = s^2(r) · g_ij^{flach}
 
 Diese konforme Struktur bedeutet, dass die Maxwell-Gleichungen in SSZ formal identisch mit den Maxwell-Gleichungen in einem konformen Hintergrund sind. Die Lichtausbreitung in einem Gravitationsfeld wird äquivalent zur Lichtausbreitung in einem Medium mit ortsabhängigem Brechungsindex n(r) = s(r) = 1 + Ξ(r).
 
@@ -4357,23 +4370,23 @@ Aktuelle Beobachtungen (gravitativer Linseneffekt, Shapiro-Delay, Faraday-Rotati
 
 Die Cassini-Raumsonde lieferte 2003 die praeziseste Messung des PPN-Parameters gamma: gamma = 1 + (2,1 +/- 2,3) x 10^{-5}. Die Messung nutzte die Shapiro-Verzoegerung von Radiosignalen, die nahe der Sonne vorbeiliefen.
 
-In SSZ ist die Shapiro-Verzoegerung: $\Delta_{\text{t}}$ = (1+gamma) * $r_{s}$/c * ln(4 r_1 r_2 / b^2), wobei r_1 und r_2 die Entfernungen von Sender und Empfaenger zur Sonne sind und b der Impaktparameter. Mit gamma = 1 (SSZ-Vorhersage) und den Cassini-Parametern (b ~ 1,6 $R_{Sonne}$, r_1 ~ 8,43 AU, r_2 ~ 1 AU) ergibt sich $\Delta_{\text{t}}$ ~ 131,4 Mikrosekunden.
+In SSZ ist die Shapiro-Verzoegerung: Delta_t = (1+gamma) * r_s/c * ln(4 r_1 r_2 / b^2), wobei r_1 und r_2 die Entfernungen von Sender und Empfaenger zur Sonne sind und b der Impaktparameter. Mit gamma = 1 (SSZ-Vorhersage) und den Cassini-Parametern (b ~ 1,6 R_Sonne, r_1 ~ 8,43 AU, r_2 ~ 1 AU) ergibt sich Delta_t ~ 131,4 Mikrosekunden.
 
 Die SSZ-Vorhersage ist identisch mit der ART-Vorhersage, weil beide gamma = 1 haben. Die Cassini-Messung bestaetigt dies auf 23 ppm (parts per million). Dies ist einer der praezisesten Tests der Gravitationsphysik ueberhaupt und bestaetigt die SSZ-Schwachfeldformeln.
 
 ### Lichtablenkung: Von Eddington bis zum EHT
 
-Die Ablenkung von Licht durch ein Gravitationsfeld war der erste experimentelle Test der ART (Eddington, 1919). Der Ablenkungswinkel fuer einen Lichtstrahl mit Impaktparameter b ist: alpha = (1+gamma) * $r_{s}$ / b.
+Die Ablenkung von Licht durch ein Gravitationsfeld war der erste experimentelle Test der ART (Eddington, 1919). Der Ablenkungswinkel fuer einen Lichtstrahl mit Impaktparameter b ist: alpha = (1+gamma) * r_s / b.
 
-In SSZ ist alpha = 2 $r_{s}$ / b (weil gamma = 1), identisch mit der ART-Vorhersage. Fuer die Sonne ($r_{s}$ = 2,95 km, b = $R_{Sonne}$ = 696.000 km) ergibt sich alpha = 1,75 Bogensekunden — exakt der von Eddington gemessene Wert.
+In SSZ ist alpha = 2 r_s / b (weil gamma = 1), identisch mit der ART-Vorhersage. Fuer die Sonne (r_s = 2,95 km, b = R_Sonne = 696.000 km) ergibt sich alpha = 1,75 Bogensekunden — exakt der von Eddington gemessene Wert.
 
-Fuer das supermassive Schwarze Loch Sgr A* (M = 4 x 10^6 $M_{Sonne}$, $r_{s}$ = 1,2 x 10^7 km) ist die Lichtablenkung im Starkfeld signifikant modifiziert. Der Photonenring (die Bahn, auf der Licht das Schwarze Loch umkreist) liegt in der ART bei r = 1,5 $r_{s}$. In SSZ ist der Photonenring um ~2% nach aussen verschoben, was zu einer messbaren Aenderung des Schwarzlochschattens fuehrt. Das ngEHT (next-generation Event Horizon Telescope) wird diese Korrektur mit ausreichender Praezision messen koennen.
+Fuer das supermassive Schwarze Loch Sgr A* (M = 4 x 10^6 M_Sonne, r_s = 1,2 x 10^7 km) ist die Lichtablenkung im Starkfeld signifikant modifiziert. Der Photonenring (die Bahn, auf der Licht das Schwarze Loch umkreist) liegt in der ART bei r = 1,5 r_s. In SSZ ist der Photonenring um ~2% nach aussen verschoben, was zu einer messbaren Aenderung des Schwarzlochschattens fuehrt. Das ngEHT (next-generation Event Horizon Telescope) wird diese Korrektur mit ausreichender Praezision messen koennen.
 
 ### Gravitationslinseneffekt und kosmologische Anwendungen
 
 Der Gravitationslinseneffekt — die Ablenkung von Licht durch die Gravitation von Galaxien und Galaxienhaufen — ist ein maechiges Werkzeug der beobachtenden Kosmologie. In SSZ ist der Linseneffekt im Schwachfeld identisch mit der ART (weil gamma = 1), aber im Starkfeld (nahe kompakten Objekten) modifiziert.
 
-Die Starkfeld-Modifikation betrifft insbesondere die Mikrolinsenereignisse, bei denen ein kompaktes Objekt (Neutronenstern oder Schwarzes Loch) als Gravitationslinse fuer einen Hintergrundstern wirkt. Die SSZ-Vorhersage fuer die Verstaerkung unterscheidet sich von der ART-Vorhersage um ~Xi($r_{min}$), wobei $r_{min}$ der minimale Abstand des Lichtstrahls vom Linsenobjekt ist. Fuer typische Mikrolinsenereignisse ($r_{min}$ >> $r_{s}$) ist die Korrektur vernachlaessigbar, aber fuer extreme Ereignisse ($r_{min}$ ~ wenige $r_{s}$) koennte sie messbar sein.
+Die Starkfeld-Modifikation betrifft insbesondere die Mikrolinsenereignisse, bei denen ein kompaktes Objekt (Neutronenstern oder Schwarzes Loch) als Gravitationslinse fuer einen Hintergrundstern wirkt. Die SSZ-Vorhersage fuer die Verstaerkung unterscheidet sich von der ART-Vorhersage um ~Xi(r_min), wobei r_min der minimale Abstand des Lichtstrahls vom Linsenobjekt ist. Fuer typische Mikrolinsenereignisse (r_min >> r_s) ist die Korrektur vernachlaessigbar, aber fuer extreme Ereignisse (r_min ~ wenige r_s) koennte sie messbar sein.
 
 ### Polarisation in Gravitationsfeldern
 
@@ -4389,21 +4402,21 @@ In SSZ sind beide Effekte um den Faktor D(r) modifiziert. Fuer den gravitativen 
 
 Die Wellengleichung fuer elektromagnetische Wellen in der SSZ-Metrik ist:
 
-Box\_SSZ A^mu = 0
+Box_SSZ A^mu = 0
 
-wobei Box\_SSZ der d'Alembert-Operator bezueglich der SSZ-Metrik ist. In Kugelkoordinaten und fuer radiale Ausbreitung vereinfacht sich dies zu:
+wobei Box_SSZ der d'Alembert-Operator bezueglich der SSZ-Metrik ist. In Kugelkoordinaten und fuer radiale Ausbreitung vereinfacht sich dies zu:
 
 (1/D^2) d^2A/dt^2 - D^2 d^2A/dr^2 = 0
 
 Die Loesung ist eine Welle mit der Koordinatengeschwindigkeit v = c * D^2. Im flachen Raum (D = 1) ist v = c. In einem Gravitationsfeld (D < 1) ist v < c — die Welle propagiert langsamer. Dies ist die SSZ-Interpretation der Shapiro-Verzoegerung.
 
-Die Gruppengeschwindigkeit ist $v_{g}$ = d omega / dk = c * D^2, identisch mit der Koordinatengeschwindigkeit. Die lokale Geschwindigkeit (gemessen von einem lokalen Beobachter) ist immer c, unabhaengig von der Segmentdichte. Der Unterschied zwischen Koordinaten- und lokaler Geschwindigkeit ist eine Konsequenz der Zeitdilatation.
+Die Gruppengeschwindigkeit ist v_g = d omega / dk = c * D^2, identisch mit der Koordinatengeschwindigkeit. Die lokale Geschwindigkeit (gemessen von einem lokalen Beobachter) ist immer c, unabhaengig von der Segmentdichte. Der Unterschied zwischen Koordinaten- und lokaler Geschwindigkeit ist eine Konsequenz der Zeitdilatation.
 
 ### Anwendung auf Pulsar-Magnetosphaeren
 
 Pulsare haben extrem starke Magnetfelder (B ~ 10^8 - 10^{13} T) und rotieren schnell (P ~ 1 ms - 10 s). Die elektromagnetische Wellenausbreitung in der Pulsar-Magnetosphaere wird durch die SSZ-Metrik modifiziert:
 
-Die Zyklotronfrequenz (die Frequenz, bei der Elektronen im Magnetfeld kreisen) ist $f_{cyc}$ = eB/(2 pi $m_{e}$ c) * D(r). Im Schwachfeld (Xi ~ 10^{-4} fuer typische Pulsare) ist die Korrektur vernachlaessigbar. Fuer Magnetare (B ~ 10^{11} T, kompaktere Objekte mit Xi ~ 0,2) betraegt die Korrektur ~20%, was die beobachteten Spektren von Magnetar-Ausbruechen beeinflusst.
+Die Zyklotronfrequenz (die Frequenz, bei der Elektronen im Magnetfeld kreisen) ist f_cyc = eB/(2 pi m_e c) * D(r). Im Schwachfeld (Xi ~ 10^{-4} fuer typische Pulsare) ist die Korrektur vernachlaessigbar. Fuer Magnetare (B ~ 10^{11} T, kompaktere Objekte mit Xi ~ 0,2) betraegt die Korrektur ~20%, was die beobachteten Spektren von Magnetar-Ausbruechen beeinflusst.
 
 ### Gravitativer Faraday-Effekt
 
@@ -4411,7 +4424,7 @@ Der gravitative Faraday-Effekt ist die Drehung der Polarisationsebene von Licht,
 
 Delta_theta_SSZ = Delta_theta_GR * D(r)
 
-Fuer Licht, das nahe einem rotierenden Schwarzen Loch (a/M = 0,9) vorbeilaeuft, betraegt der gravitative Faraday-Winkel Delta_theta_GR ~ 10 Grad (bei r = 3 $r_{s}$). Die SSZ-Korrektur betraegt D(3 $r_{s}$) ~ 0,92, also Delta_theta_SSZ ~ 9,2 Grad — ein Unterschied von ~8%.
+Fuer Licht, das nahe einem rotierenden Schwarzen Loch (a/M = 0,9) vorbeilaeuft, betraegt der gravitative Faraday-Winkel Delta_theta_GR ~ 10 Grad (bei r = 3 r_s). Die SSZ-Korrektur betraegt D(3 r_s) ~ 0,92, also Delta_theta_SSZ ~ 9,2 Grad — ein Unterschied von ~8%.
 
 Das EHT und zukuenftige Polarimetrie-Missionen (IXPE fuer Roentgen, ngEHT fuer Submillimeter) koennen die Polarisation von Licht nahe kompakten Objekten messen. Die Praezision der Polarimetrie betraegt derzeit ~5%, was knapp ausreicht, um den SSZ-Effekt zu detektieren.
 
@@ -4423,15 +4436,15 @@ F^{mu nu}_{;nu} = -4 pi J^mu / c
 
 wobei F^{mu nu} der elektromagnetische Feldstaerketensor und J^mu die Viererstromdichte ist. In der SSZ-Metrik (sphaerisch-symmetrisch, statisch) vereinfacht sich die Wellengleichung fuer eine monochromatische Welle (Frequenz omega) zu:
 
-d^2 Psi / dr*^2 + (omega^2 / c^2 - $V_{eff}$(r)) Psi = 0
+d^2 Psi / dr*^2 + (omega^2 / c^2 - V_eff(r)) Psi = 0
 
-wobei r* die Schildkroeten-Koordinate und $V_{eff}$ das effektive Potential ist:
+wobei r* die Schildkroeten-Koordinate und V_eff das effektive Potential ist:
 
-$V_{eff}$ = D^2 * (l(l+1)/r^2 + (1-s^2) * 2 D D' / r)
+V_eff = D^2 * (l(l+1)/r^2 + (1-s^2) * 2 D D' / r)
 
 Hier ist l die Multipol-Ordnung und s der Spin des Feldes (s=1 fuer elektromagnetische Wellen). Das effektive Potential bestimmt die Streuung und Absorption von elektromagnetischen Wellen durch das kompakte Objekt.
 
-In SSZ ist $V_{eff}$ an der natuerlichen Grenze (r = $r_{s}$) endlich ($V_{eff}$($r_{s}$) = $D_{min}$^2 * l(l+1)/r_s^2), waehrend es in der ART am Horizont verschwindet ($V_{eff}$($r_{s}$) = 0). Dies bedeutet, dass elektromagnetische Wellen in SSZ teilweise von der natuerlichen Grenze reflektiert werden, waehrend sie in der ART vollstaendig absorbiert werden.
+In SSZ ist V_eff an der natuerlichen Grenze (r = r_s) endlich (V_eff(r_s) = D_min^2 * l(l+1)/r_s^2), waehrend es in der ART am Horizont verschwindet (V_eff(r_s) = 0). Dies bedeutet, dass elektromagnetische Wellen in SSZ teilweise von der natuerlichen Grenze reflektiert werden, waehrend sie in der ART vollstaendig absorbiert werden.
 
 ## Querverweise
 
@@ -4443,7 +4456,7 @@ In SSZ ist $V_{eff}$ an der natuerlichen Grenze (r = $r_{s}$) endlich ($V_{eff}$
 
 Dieses Kapitel hat die Propagation elektromagnetischer Wellen in der SSZ-Raumzeit vollstaendig behandelt. Die wichtigsten Ergebnisse:
 
-1. **Gravitativer Faraday-Effekt:** Um den Faktor D(r) gegenueber der ART modifiziert (~8% Unterschied bei r = 3 $r_{s}$).
+1. **Gravitativer Faraday-Effekt:** Um den Faktor D(r) gegenueber der ART modifiziert (~8% Unterschied bei r = 3 r_s).
 2. **Wellengleichung:** Endliches effektives Potential an der natuerlichen Grenze (vs. null in der ART).
 3. **Teilreflexion:** Elektromagnetische Wellen werden in SSZ teilweise von der natuerlichen Grenze reflektiert.
 4. **Keine Doppelbrechung:** Beide Polarisationszustaende propagieren mit derselben Geschwindigkeit.
@@ -4451,10 +4464,12 @@ Dieses Kapitel hat die Propagation elektromagnetischer Wellen in der SSZ-Raumzei
 
 Die Teilreflexion an der natuerlichen Grenze ist eine der wichtigsten Vorhersagen von SSZ fuer die Elektrodynamik. Sie fuehrt zu Echos in der elektromagnetischen Strahlung, die mit zukuenftigen Roentgenteleskopen detektierbar sein koennten.
 
+---
 
-\newpage
+# Kapitel 11: Maxwell-Wellen als rotierender Raum
 
-# Maxwell-Wellen als rotierender Raum
+**Teil III — Elektromagnetismus und Lichtausbreitung**
+**Status:** ERWEITERTE FASSUNG
 
 
 ![Abb 11](figures/ch11_maxwell_waves/fig_11_01.png)
@@ -4507,19 +4522,19 @@ Im Grenzfall der geometrischen Optik (Wellenlänge viel kleiner als die Krümmun
 
 Dieses Strahlverfolgungs-Bild verbindet die Wellenbeschreibung dieses Kapitels mit der Segmentzählungs-Beschreibung in Kapitel 12. Ein Strahl ist eine Trajektorie durch das Segmentgitter, und die entlang des Strahls akkumulierte Phase ist proportional zur Anzahl durchquerter Segmente. Zwei Strahlen, die verschiedenen Pfaden folgen, aber dieselbe Segmentzahl einschließen, kommen mit derselben Phase an — dies ist das Segment-Analog des Fermat’schen Prinzips.
 
-Der geometrisch-optische Grenzfall bricht zusammen, wenn die Wellenlänge vergleichbar mit der Krümmungsskala wird. Für elektromagnetische Wellen nahe einem stellaren Schwarzen Loch ($r_{s}$ ungefähr 10 km) tritt dieser Zusammenbruch bei Wellenlängen der Größenordnung 10 km auf, entsprechend Frequenzen der Größenordnung 30 kHz. Für alle astronomischen elektromagnetischen Beobachtungen (Radio bis Gammastrahlung) ist der geometrisch-optische Grenzfall eine ausgezeichnete Näherung.
+Der geometrisch-optische Grenzfall bricht zusammen, wenn die Wellenlänge vergleichbar mit der Krümmungsskala wird. Für elektromagnetische Wellen nahe einem stellaren Schwarzen Loch (r_s ungefähr 10 km) tritt dieser Zusammenbruch bei Wellenlängen der Größenordnung 10 km auf, entsprechend Frequenzen der Größenordnung 30 kHz. Für alle astronomischen elektromagnetischen Beobachtungen (Radio bis Gammastrahlung) ist der geometrisch-optische Grenzfall eine ausgezeichnete Näherung.
 
 ### Energietransport im Segmentgitter
 
-Wenn eine elektromagnetische Welle sich durch das Segmentgitter ausbreitet, transportiert sie Energie. Die Energiedichte der Welle ist u = (ε₀E² + B²/μ₀)/2, und der Energiefluss (Poynting-Vektor) ist S = E × B / μ₀. Im SSZ-Segmentgitter ist die Energiegeschwindigkeit $v_{energy}$ = c/s(r) = c/(1 + Ξ), was gleich der Phasengeschwindigkeit und der Gruppengeschwindigkeit ist. Diese Dreifach-Gleichheit ($v_{Phase}$ = $v_{Gruppe}$ = v_Energie) ist charakteristisch für ein nicht-dispersives Medium.
+Wenn eine elektromagnetische Welle sich durch das Segmentgitter ausbreitet, transportiert sie Energie. Die Energiedichte der Welle ist u = (ε₀E² + B²/μ₀)/2, und der Energiefluss (Poynting-Vektor) ist S = E × B / μ₀. Im SSZ-Segmentgitter ist die Energiegeschwindigkeit v_energy = c/s(r) = c/(1 + Ξ), was gleich der Phasengeschwindigkeit und der Gruppengeschwindigkeit ist. Diese Dreifach-Gleichheit (v_Phase = v_Gruppe = v_Energie) ist charakteristisch für ein nicht-dispersives Medium.
 
-Die Energiedichte der Welle, gemessen von einem lokalen Beobachter, ist $u_{lokal}$ = $u_{koord}$ × s² = $u_{koord}$ × (1 + Ξ)². Der Faktor s² ergibt sich aus der Dehnung der Raumkoordinaten durch den Skalierungsfaktor. Dies bedeutet, dass eine Welle mit gegebener Koordinatenenergiedichte eine höhere lokale Energiedichte in Regionen hohen Ξ hat — das Segmentgitter wirkt als Energiekonzentrator.
+Die Energiedichte der Welle, gemessen von einem lokalen Beobachter, ist u_lokal = u_koord × s² = u_koord × (1 + Ξ)². Der Faktor s² ergibt sich aus der Dehnung der Raumkoordinaten durch den Skalierungsfaktor. Dies bedeutet, dass eine Welle mit gegebener Koordinatenenergiedichte eine höhere lokale Energiedichte in Regionen hohen Ξ hat — das Segmentgitter wirkt als Energiekonzentrator.
 
 ### Gravitationelle Doppelbrechung
 
 In einem anisotropen Medium breiten sich verschiedene Polarisationszustände mit unterschiedlichen Geschwindigkeiten aus, was Doppelbrechung erzeugt. Das SSZ-Segmentgitter in einem kugelsymmetrischen Feld ist isotrop (Ξ hängt nur von r ab), sodass keine Doppelbrechung für radiale oder tangentiale Ausbreitung auftritt. Für schräge Ausbreitung kann der effektive Brechungsindex von der Ausbreitungsrichtung relativ zum Ξ-Gradienten abhängen, was eine schwache Doppelbrechung einführen kann.
 
-Die Größe dieser gravitationellen Doppelbrechung ist proportional zu (dΞ/dr)² × sin²(θ). Für Sonnensystemanwendungen ist dieser Effekt von der Ordnung (r_s/r)⁴, was weniger als 10⁻²⁴ für alle beobachtbaren Systeme ist. Für Starkfeldanwendungen könnte der Effekt von der Ordnung Ξ² $\approx$ 0,6 sein, potentiell beobachtbar durch Polarisationsmessungen von Strahlung akkretierender Schwarzer Löcher.
+Die Größe dieser gravitationellen Doppelbrechung ist proportional zu (dΞ/dr)² × sin²(θ). Für Sonnensystemanwendungen ist dieser Effekt von der Ordnung (r_s/r)⁴, was weniger als 10⁻²⁴ für alle beobachtbaren Systeme ist. Für Starkfeldanwendungen könnte der Effekt von der Ordnung Ξ² ≈ 0,6 sein, potentiell beobachtbar durch Polarisationsmessungen von Strahlung akkretierender Schwarzer Löcher.
 
 Aktuelle Röntgenpolarimetrie-Missionen (IXPE, gestartet 2021) haben Röntgenpolarisation von mehreren akkretierenden Schwarzen Löchern detektiert, aber die Winkelauflösung ist unzureichend, um die horizontnahe Region zu sondieren, wo die SSZ-Doppelbrechung am stärksten wäre. Zukünftige Missionen mit höherer Winkelauflösung könnten diesen Effekt potentiell detektieren.
 
@@ -4529,7 +4544,7 @@ Aktuelle Röntgenpolarimetrie-Missionen (IXPE, gestartet 2021) haben Röntgenpol
 
 Zirkular polarisiertes Licht beschreibt eine Helix im Raum — der E-Vektor rotiert, während sich die Welle ausbreitet. Die Standardbeschreibung:
 
-$$\mathbf{E}(z,t) = E_0 \left[\cos(kz - \omega t)\,\hat{x} + \sin(kz - \omega t)\,\hat{y}\right]$$
+\mathbf{E}(z,t) = E_0 \left[\cos(kz - \omega t)\,\hat{x} + \sin(kz - \omega t)\,\hat{y}\right]
 
 In SSZ wird diese Helix als **φ-Spirale identifiziert, die auf die elektromagnetischen Freiheitsgrade projiziert wird.** Die Verbindung zur fundamentalen Spiralstruktur von SSZ (Kapitel 3) erfolgt über die Rotationsrate:
 
@@ -4586,11 +4601,11 @@ Die Rotierender-Raum-Interpretation hat drei Konsequenzen:
 
 Ein Photon, das N Segmente über die Strecke L durchquert, hat die Gruppengeschwindigkeit (Kapitel 12):
 
-$$v_{\text{group}} = \frac{L \cdot f}{N}$$
+v_{\text{group}} = \frac{L \cdot f}{N}
 
-In flacher Raumzeit sind Segmente gleichmäßig verteilt: N/L ist konstant, und $v_{group}$ = c. In einem Gravitationsfeld nimmt die Segmentdichte zur Masse hin zu, also wächst N/L um s(r) = 1 + Ξ(r), und die Koordinatengeschwindigkeit nimmt ab:
+In flacher Raumzeit sind Segmente gleichmäßig verteilt: N/L ist konstant, und v_group = c. In einem Gravitationsfeld nimmt die Segmentdichte zur Masse hin zu, also wächst N/L um s(r) = 1 + Ξ(r), und die Koordinatengeschwindigkeit nimmt ab:
 
-$$v_{\text{coord}}(r) = \frac{c}{s(r)} = c \cdot D(r)$$
+v_{\text{coord}}(r) = \frac{c}{s(r)} = c \cdot D(r)
 
 Der Ausbreitungsmechanismus ist analog zu einer Welle in einem diskreten Gitter: Jedes Segment wirkt als Knoten, der die Rotation von seinem Nachbarn empfängt und mit einer Verzögerung τ_seg weitergibt.
 
@@ -4612,7 +4627,7 @@ Der intrinsische Spin (Helizität ±1) des Photons bildet natürlich auf die Rot
 
 **Was die Tests NICHT beweisen:** Dass elektromagnetische Wellen *tatsächlich* Segmentrotationen sind. Dies ist ein interpretatives Rahmenwerk, keine unabhängig testbare Vorhersage.
 
-**Reproduktion:** `E:/clone\frequency-curvature-validation\`
+**Reproduktion:** `E:\clone\frequency-curvature-validation\`
 
 ## 11.7 Quantitative Verbindung zur Standardelektrodynamik
 
@@ -4620,11 +4635,11 @@ Der intrinsische Spin (Helizität ±1) des Photons bildet natürlich auf die Rot
 
 In der Standardelektrodynamik ist die Energiedichte einer EM-Welle u = (ε₀E² + B²/μ₀)/2. Im SSZ-Rotationssegment-Bild ist diese Energie in der rotationskinetischen Energie der Segmentgrenzen gespeichert. Die Rotationsamplitude θ ist durch E = cB = ωθ/s(r) mit den Feldamplituden verknüpft, wobei ω die Kreisfrequenz und s(r) = 1 + Ξ der lokale Skalierungsfaktor ist.
 
-Die pro Volumeneinheit gespeicherte Energie ist $u_{seg}$ = ρ_seg ω² θ² / 2, wobei ρ_seg die Segmentträgheitsdichte ist. Die Forderung $u_{seg}$ = u_standard erfordert ρ_seg = ε₀/s(r)². Dies identifiziert die Segmentträgheitsdichte mit der skalierten Vakuumpermittivität — eine nicht-triviale Konsistenzprüfung, dass das Rotationssegment-Bild den korrekten Energieinhalt reproduziert.
+Die pro Volumeneinheit gespeicherte Energie ist u_seg = ρ_seg ω² θ² / 2, wobei ρ_seg die Segmentträgheitsdichte ist. Die Forderung u_seg = u_standard erfordert ρ_seg = ε₀/s(r)². Dies identifiziert die Segmentträgheitsdichte mit der skalierten Vakuumpermittivität — eine nicht-triviale Konsistenzprüfung, dass das Rotationssegment-Bild den korrekten Energieinhalt reproduziert.
 
 ### Poynting-Vektor als Segmentimpulsfluss
 
-Der Poynting-Vektor S = E × B / μ₀ beschreibt den elektromagnetischen Energiefluss. Im Rotationssegment-Bild repräsentiert S die Impulsdichte der sich ausbreitenden Rotationsstörung. Die Gruppengeschwindigkeit $v_{group}$ = |S|/u = c·D(r) ergibt sich natürlich: Die Energie breitet sich mit der lokalen Geschwindigkeit c·D(r) aus, weil die Segmentrotation Impuls durch das Gitter mit dieser Geschwindigkeit transportiert.
+Der Poynting-Vektor S = E × B / μ₀ beschreibt den elektromagnetischen Energiefluss. Im Rotationssegment-Bild repräsentiert S die Impulsdichte der sich ausbreitenden Rotationsstörung. Die Gruppengeschwindigkeit v_group = |S|/u = c·D(r) ergibt sich natürlich: Die Energie breitet sich mit der lokalen Geschwindigkeit c·D(r) aus, weil die Segmentrotation Impuls durch das Gitter mit dieser Geschwindigkeit transportiert.
 
 Dies liefert ein physikalisches Bild dafür, warum Licht in einem Gravitationsfeld langsamer wird: Das Segmentgitter wird dichter (höheres Ξ), was die effektive Trägheit pro Volumeneinheit erhöht und die Ausbreitungsgeschwindigkeit von Rotationsstörungen reduziert — genau wie Schall in einem dichteren Medium langsamer wird.
 
@@ -4669,29 +4684,29 @@ Das nächste Kapitel, Segmentbasierte Gruppengeschwindigkeit, baut direkt auf de
 
 ### Segmentbasierte Gruppengeschwindigkeit im Detail
 
-Die Gruppengeschwindigkeit eines Wellenpakets im Segmentgitter ist $v_{g}$ = d omega / dk, wobei omega die Kreisfrequenz und k die Wellenzahl ist. In SSZ ist die Dispersionsrelation modifiziert: omega^2 = c^2 k^2 * D(r)^2, wobei D(r) = 1/(1+Xi) der Zeitdilatationsfaktor ist.
+Die Gruppengeschwindigkeit eines Wellenpakets im Segmentgitter ist v_g = d omega / dk, wobei omega die Kreisfrequenz und k die Wellenzahl ist. In SSZ ist die Dispersionsrelation modifiziert: omega^2 = c^2 k^2 * D(r)^2, wobei D(r) = 1/(1+Xi) der Zeitdilatationsfaktor ist.
 
-Fuer ein radial propagierendes Wellenpaket ergibt sich die Gruppengeschwindigkeit: $v_{g}$ = c * D(r) = c / (1 + Xi(r)). Im flachen Raum (Xi = 0) ist $v_{g}$ = c. In einem Gravitationsfeld (Xi > 0) ist $v_{g}$ < c — das Wellenpaket propagiert langsamer als im flachen Raum. Dies ist die SSZ-Interpretation der Shapiro-Verzoegerung: Licht wird nicht abgelenkt (das geschieht separat durch Kruemmung), sondern verlangsamt durch die erhoehte Segmentdichte.
+Fuer ein radial propagierendes Wellenpaket ergibt sich die Gruppengeschwindigkeit: v_g = c * D(r) = c / (1 + Xi(r)). Im flachen Raum (Xi = 0) ist v_g = c. In einem Gravitationsfeld (Xi > 0) ist v_g < c — das Wellenpaket propagiert langsamer als im flachen Raum. Dies ist die SSZ-Interpretation der Shapiro-Verzoegerung: Licht wird nicht abgelenkt (das geschieht separat durch Kruemmung), sondern verlangsamt durch die erhoehte Segmentdichte.
 
-Die Phasengeschwindigkeit ist $v_{p}$ = omega / k = c * D(r), identisch mit der Gruppengeschwindigkeit. Dies bedeutet, dass das Segmentgitter dispersionslos ist: Alle Frequenzen propagieren mit derselben Geschwindigkeit. Diese Dispersionsfreiheit ist eine direkte Konsequenz der linearen Dispersionsrelation und wird durch die Beobachtung von GRB 090510 bestaetigt, die zeigte, dass Photonen verschiedener Energien (von keV bis GeV) gleichzeitig ankommen (auf 10^{-20} Sekunden genau).
+Die Phasengeschwindigkeit ist v_p = omega / k = c * D(r), identisch mit der Gruppengeschwindigkeit. Dies bedeutet, dass das Segmentgitter dispersionslos ist: Alle Frequenzen propagieren mit derselben Geschwindigkeit. Diese Dispersionsfreiheit ist eine direkte Konsequenz der linearen Dispersionsrelation und wird durch die Beobachtung von GRB 090510 bestaetigt, die zeigte, dass Photonen verschiedener Energien (von keV bis GeV) gleichzeitig ankommen (auf 10^{-20} Sekunden genau).
 
 ### Lichtlaufzeit-Zerlegung
 
 Die Gesamtlaufzeit eines Photons von Radius r_1 zu Radius r_2 in einem Gravitationsfeld kann in drei Beitraege zerlegt werden:
 
-1. **Geometrische Laufzeit:** $t_{geom}$ = |r_2 - r_1| / c — die Laufzeit im flachen Raum.
+1. **Geometrische Laufzeit:** t_geom = |r_2 - r_1| / c — die Laufzeit im flachen Raum.
 
-2. **Shapiro-Verzoegerung:** Delta_t_Shapiro = (1+gamma) * $r_{s}$/c * ln(4 r_1 r_2 / b^2) — die zusaetzliche Verzoegerung durch das Gravitationsfeld.
+2. **Shapiro-Verzoegerung:** Delta_t_Shapiro = (1+gamma) * r_s/c * ln(4 r_1 r_2 / b^2) — die zusaetzliche Verzoegerung durch das Gravitationsfeld.
 
 3. **SSZ-Korrektur:** Delta_t_SSZ = integral von r_1 bis r_2 von Xi(r)/c dr — die Korrektur durch die Segmentdichte.
 
-Im Schwachfeld (Xi << 1) ist die SSZ-Korrektur identisch mit der Shapiro-Verzoegerung (weil $\Xi_{\text{weak}}$ = $r_{s}$/(2r) die Schwachfeld-Schwarzschild-Metrik reproduziert). Im Starkfeld (Xi ~ 0,8) weicht die SSZ-Korrektur von der ART-Vorhersage ab, weil die Starkfeldformel $\Xi_{\text{strong}}$ = 1 - exp(-phi*r/r_s) eine andere radiale Abhaengigkeit hat.
+Im Schwachfeld (Xi << 1) ist die SSZ-Korrektur identisch mit der Shapiro-Verzoegerung (weil Xi_weak = r_s/(2r) die Schwachfeld-Schwarzschild-Metrik reproduziert). Im Starkfeld (Xi ~ 0,8) weicht die SSZ-Korrektur von der ART-Vorhersage ab, weil die Starkfeldformel Xi_strong = 1 - exp(-phi*r/r_s) eine andere radiale Abhaengigkeit hat.
 
 ### Experimentelle Tests der Dispersionsfreiheit
 
 Die Dispersionsfreiheit des Segmentgitters ist eine der staerksten Vorhersagen von SSZ, weil sie mit extremer Praezision getestet werden kann:
 
-**GRB 090510:** Dieser Gammastrahlenblitz bei Rotverschiebung z = 0,903 zeigte gleichzeitige Ankunft von Photonen mit Energien von 1 keV bis 31 GeV. Die Schranke auf die Energieabhaengigkeit der Lichtgeschwindigkeit ist |$\Delta_{\text{c}}$/c| < 10^{-20} pro eV. SSZ erfuellt diese Schranke, weil das Segmentgitter dispersionslos ist.
+**GRB 090510:** Dieser Gammastrahlenblitz bei Rotverschiebung z = 0,903 zeigte gleichzeitige Ankunft von Photonen mit Energien von 1 keV bis 31 GeV. Die Schranke auf die Energieabhaengigkeit der Lichtgeschwindigkeit ist |Delta_c/c| < 10^{-20} pro eV. SSZ erfuellt diese Schranke, weil das Segmentgitter dispersionslos ist.
 
 **Pulsar-Timing:** Millisekunden-Pulsare emittieren Radiopulse ueber einen breiten Frequenzbereich (100 MHz bis 10 GHz). Die beobachtete Dispersion ist vollstaendig durch das interstellare Medium erklaerbar (Dispersionsmass DM). Es gibt keinen Hinweis auf eine zusaetzliche gravitationsinduzierte Dispersion, konsistent mit der SSZ-Vorhersage.
 
@@ -4701,26 +4716,26 @@ Die Dispersionsfreiheit elektromagnetischer Wellen in SSZ ist eine der staerkste
 
 v(f) = c * (1 - (f/f_QG)^n)
 
-wobei $f_{QG}$ eine Quantengravitations-Frequenzskala und n eine ganze Zahl ist. In SSZ ist v(f) = c * D(r) fuer alle Frequenzen — keine Frequenzabhaengigkeit.
+wobei f_QG eine Quantengravitations-Frequenzskala und n eine ganze Zahl ist. In SSZ ist v(f) = c * D(r) fuer alle Frequenzen — keine Frequenzabhaengigkeit.
 
 Die experimentelle Verifikation der Dispersionsfreiheit erfolgt durch Beobachtung von Gamma-Ray-Bursts (GRBs) und schnellen Radiopulsen (FRBs):
 
-**GRB 090510 (Fermi-LAT, 2009):** Ein kurzer GRB bei z = 0,903 zeigte gleichzeitige Emission von Photonen mit Energien von 30 MeV bis 31 GeV. Die Zeitdifferenz zwischen dem hoechstenergetischen Photon und dem Triggersignal betrug < 0,86 s, was eine untere Schranke auf die Quantengravitations-Energieskala von $E_{QG}$ > 1,2 x 10^{19} GeV (fuer n = 1) ergibt. SSZ ist mit dieser Schranke konsistent (weil SSZ keine Dispersion vorhersagt).
+**GRB 090510 (Fermi-LAT, 2009):** Ein kurzer GRB bei z = 0,903 zeigte gleichzeitige Emission von Photonen mit Energien von 30 MeV bis 31 GeV. Die Zeitdifferenz zwischen dem hoechstenergetischen Photon und dem Triggersignal betrug < 0,86 s, was eine untere Schranke auf die Quantengravitations-Energieskala von E_QG > 1,2 x 10^{19} GeV (fuer n = 1) ergibt. SSZ ist mit dieser Schranke konsistent (weil SSZ keine Dispersion vorhersagt).
 
-**FRB 121102 (2016):** Schnelle Radiopulse bei z = 0,193 zeigten keine intrinsische Dispersion (nach Abzug der interstellaren Dispersion). Die Schranke auf die Frequenzabhaengigkeit der Lichtgeschwindigkeit ist |$\Delta_{\text{v}}$/v| < 10^{-14} fuer Frequenzen von 1-2 GHz. SSZ ist konsistent.
+**FRB 121102 (2016):** Schnelle Radiopulse bei z = 0,193 zeigten keine intrinsische Dispersion (nach Abzug der interstellaren Dispersion). Die Schranke auf die Frequenzabhaengigkeit der Lichtgeschwindigkeit ist |Delta_v/v| < 10^{-14} fuer Frequenzen von 1-2 GHz. SSZ ist konsistent.
 
 ### Lichtlaufzeit-Zerlegung
 
-Die Gesamtlichtlaufzeit eines Photons von einer Quelle bei Radius $r_{emit}$ zu einem Beobachter bei $r_{obs}$ >> $r_{emit}$ kann in drei Beitraege zerlegt werden:
+Die Gesamtlichtlaufzeit eines Photons von einer Quelle bei Radius r_emit zu einem Beobachter bei r_obs >> r_emit kann in drei Beitraege zerlegt werden:
 
-$t_{total}$ = $t_{flat}$ + t_Shapiro + t_SSZ_correction
+t_total = t_flat + t_Shapiro + t_SSZ_correction
 
 wobei:
-- $t_{flat}$ = ($r_{obs}$ - $r_{emit}$) / c (flacher Raum)
-- t_Shapiro = (1+gamma) $r_{s}$/c * ln($r_{obs}$/r_emit) (Shapiro-Verzoegerung, identisch in ART und SSZ)
-- t_SSZ_correction = integral von $r_{emit}$ bis $r_{obs}$ von (1/D^2 - 1 - (1+gamma) $r_{s}$/(2r)) dr/c (SSZ-Starkfeldkorrektur)
+- t_flat = (r_obs - r_emit) / c (flacher Raum)
+- t_Shapiro = (1+gamma) r_s/c * ln(r_obs/r_emit) (Shapiro-Verzoegerung, identisch in ART und SSZ)
+- t_SSZ_correction = integral von r_emit bis r_obs von (1/D^2 - 1 - (1+gamma) r_s/(2r)) dr/c (SSZ-Starkfeldkorrektur)
 
-Im Schwachfeld ($r_{emit}$ >> $r_{s}$) ist t_SSZ_correction vernachlaessigbar. Im Starkfeld ($r_{emit}$ ~ wenige $r_{s}$) kann t_SSZ_correction signifikant sein: Fuer $r_{emit}$ = 3 $r_{s}$ betraegt t_SSZ_correction ~ 0,05 $r_{s}$/c, was fuer ein stellares Schwarzes Loch (M = 10 $M_{Sonne}$) ~1,5 Mikrosekunden entspricht.
+Im Schwachfeld (r_emit >> r_s) ist t_SSZ_correction vernachlaessigbar. Im Starkfeld (r_emit ~ wenige r_s) kann t_SSZ_correction signifikant sein: Fuer r_emit = 3 r_s betraegt t_SSZ_correction ~ 0,05 r_s/c, was fuer ein stellares Schwarzes Loch (M = 10 M_Sonne) ~1,5 Mikrosekunden entspricht.
 
 
 
@@ -4728,21 +4743,21 @@ Im Schwachfeld ($r_{emit}$ >> $r_{s}$) ist t_SSZ_correction vernachlaessigbar. I
 
 Die statistische Analyse von Gravitationslinsen-Ereignissen bietet einen weiteren Test fuer SSZ. Die Anzahl der Gravitationslinsen-Ereignisse haengt von der Linsenmasse, der Quellenverteilung und dem Ablenkungswinkel ab.
 
-In SSZ ist der Ablenkungswinkel $\alpha_{\text{SSZ}}$ = (1+gamma) $r_{s}$ / b = 2 $r_{s}$ / b (identisch mit ART fuer gamma=1). Die Anzahl der Linsen-Ereignisse ist daher in SSZ identisch mit der ART-Vorhersage -- kein Unterschied im Schwachfeld.
+In SSZ ist der Ablenkungswinkel alpha_SSZ = (1+gamma) r_s / b = 2 r_s / b (identisch mit ART fuer gamma=1). Die Anzahl der Linsen-Ereignisse ist daher in SSZ identisch mit der ART-Vorhersage -- kein Unterschied im Schwachfeld.
 
-Im Starkfeld (b ~ $r_{s}$) ist der Ablenkungswinkel in SSZ modifiziert: $\alpha_{\text{SSZ}}$ = $\alpha_{\text{GR}}$ * (1 + $\delta_{\text{SSZ}}$), wobei $\delta_{\text{SSZ}}$ ~ Xi(b) ~ 0,1 fuer b = 5 $r_{s}$. Dies fuehrt zu einer ~10% Aenderung der Linsen-Statistik fuer Quellen nahe supermassiven Schwarzen Loechern.
+Im Starkfeld (b ~ r_s) ist der Ablenkungswinkel in SSZ modifiziert: alpha_SSZ = alpha_GR * (1 + delta_SSZ), wobei delta_SSZ ~ Xi(b) ~ 0,1 fuer b = 5 r_s. Dies fuehrt zu einer ~10% Aenderung der Linsen-Statistik fuer Quellen nahe supermassiven Schwarzen Loechern.
 
 ### Mikrolensing und SSZ
 
 Gravitationsmikrolensing (die Verstaerkung des Lichts einer Hintergrundquelle durch ein kompaktes Objekt im Vordergrund) ist ein wichtiges Werkzeug fuer die Suche nach dunklen kompakten Objekten. Die Verstaerkung haengt vom Ablenkungswinkel und damit von der Masse des Linsenobjekts ab.
 
-In SSZ ist die Mikrolensing-Verstaerkung fuer stellare Massen identisch mit der ART-Vorhersage (Schwachfeld). Fuer Mikrolensing durch primordialen Schwarze Loecher (M ~ 10-100 $M_{Sonne}$) koennte die SSZ-Korrektur ~1% betragen -- messbar mit dem Vera Rubin Observatory (LSST), das ~10^7 Mikrolensing-Ereignisse pro Jahr detektieren wird.
+In SSZ ist die Mikrolensing-Verstaerkung fuer stellare Massen identisch mit der ART-Vorhersage (Schwachfeld). Fuer Mikrolensing durch primordialen Schwarze Loecher (M ~ 10-100 M_Sonne) koennte die SSZ-Korrektur ~1% betragen -- messbar mit dem Vera Rubin Observatory (LSST), das ~10^7 Mikrolensing-Ereignisse pro Jahr detektieren wird.
 
 ### Shapiro-Delay: Praezisionstest
 
 Der Shapiro-Delay (die Verzoegerung von Lichtsignalen, die nahe einer Masse vorbeifliegen) ist einer der vier klassischen Tests der ART. In SSZ ist der Shapiro-Delay:
 
-Delta_t_SSZ = (1+gamma) $r_{s}$/c * ln((r_1 + r_2 + d) / (r_1 + r_2 - d))
+Delta_t_SSZ = (1+gamma) r_s/c * ln((r_1 + r_2 + d) / (r_1 + r_2 - d))
 
 wobei r_1, r_2 die Entfernungen von Sender und Empfaenger zur Masse und d die Entfernung zwischen Sender und Empfaenger ist. Mit gamma = 1 ist dies identisch mit der ART-Vorhersage.
 
@@ -4754,9 +4769,12 @@ Der praeziseste Test des Shapiro-Delays wurde mit der Cassini-Sonde durchgefuehr
 - **Referenziert von:** Kap. 12 (Gruppengeschwindigkeit), Kap. 14 (Rotverschiebung)
 - **Anhang:** Anh. B (B.4 Maxwell)
 
-\newpage
+---
 
-# Segmentbasierte Gruppengeschwindigkeit
+# Kapitel 12: Segmentbasierte Gruppengeschwindigkeit
+
+**Teil III — Elektromagnetismus in segmentierter Raumzeit**
+**Status:** ERWEITERTE FASSUNG v2
 
 
 ![Abb 12](figures/ch12_group_velocity/fig_12_01.png)
@@ -4767,7 +4785,7 @@ Der praeziseste Test des Shapiro-Delays wurde mit der Cassini-Sonde durchgefuehr
 
 Wie schnell reist Licht durch ein Gravitationsfeld? In der Allgemeinen Relativitätstheorie hängt die Antwort vom Koordinatensystem ab — die „Koordinatenlichtgeschwindigkeit" ist eine eichabhängige Größe ohne direkte physikalische Bedeutung. Was physikalisch bedeutsam IS ist die Gruppengeschwindigkeit: die Geschwindigkeit, mit der ein Wellenpaket (und die Information, die es trägt) vom Sender zum Detektor propagiert.
 
-SSZ liefert eine Ableitung der Gruppengeschwindigkeit aus ersten Prinzipien über die diskrete Struktur des Segmentgitters. Ein Photon durchquert Segmente einzeln und verbringt eine feste Eigenzeit in jedem Segment. Die resultierende Gruppengeschwindigkeit $v_{group}$ = c·D(r) entsteht nicht als Annahme, sondern als Zählergebnis — die Anzahl durchquerter Segmente pro Koordinatenzeiteinheit.
+SSZ liefert eine Ableitung der Gruppengeschwindigkeit aus ersten Prinzipien über die diskrete Struktur des Segmentgitters. Ein Photon durchquert Segmente einzeln und verbringt eine feste Eigenzeit in jedem Segment. Die resultierende Gruppengeschwindigkeit v_group = c·D(r) entsteht nicht als Annahme, sondern als Zählergebnis — die Anzahl durchquerter Segmente pro Koordinatenzeiteinheit.
 
 **Lesehinweis.** Abschnitt 12.1 motiviert das Problem. Abschnitt 12.2 leitet die Gruppengeschwindigkeit aus der Segmentzählung her. Abschnitt 12.3 diskutiert Dispersion. Abschnitt 12.4 liefert Rechenbeispiele. Abschnitt 12.5 verbindet mit Beobachtungsschranken. Abschnitt 12.6 fasst die Validierung zusammen.
 
@@ -4781,7 +4799,7 @@ Warum ist dies notwendig? Jedes Kapitel in diesem Buch erfüllt eine spezifische
 
 Die Lichtgeschwindigkeit im Vakuum beträgt exakt c = 299.792.458 m/s — per Definition. Aber was bedeutet die Lichtgeschwindigkeit in einem Gravitationsfeld?
 
-In der ART hängt die Antwort vom Koordinatensystem ab. In Schwarzschild-Koordinaten ist die Koordinatenlichtgeschwindigkeit (dr/dt für radiale Ausbreitung) c(1 − $r_{s}$/r), die am Ereignishorizont null wird. Aber diese Koordinatengeschwindigkeit ist physikalisch nicht bedeutsam. Die lokal gemessene Lichtgeschwindigkeit ist immer c, in jedem Koordinatensystem, wie von der lokalen Lorentz-Invarianz garantiert.
+In der ART hängt die Antwort vom Koordinatensystem ab. In Schwarzschild-Koordinaten ist die Koordinatenlichtgeschwindigkeit (dr/dt für radiale Ausbreitung) c(1 − r_s/r), die am Ereignishorizont null wird. Aber diese Koordinatengeschwindigkeit ist physikalisch nicht bedeutsam. Die lokal gemessene Lichtgeschwindigkeit ist immer c, in jedem Koordinatensystem, wie von der lokalen Lorentz-Invarianz garantiert.
 
 In SSZ ist die Koordinatenlichtgeschwindigkeit c/s(r) = c/(1 + Ξ(r)), und die lokal gemessene Geschwindigkeit ist c (konsistent mit der LLI, wie in Kapitel 7 bewiesen).
 
@@ -4791,21 +4809,21 @@ Intuitiv bedeutet dies: Jedes Segment wirkt wie eine Bodenschwelle auf einer Str
 
 In flacher Raumzeit stimmen alle Beobachter überein, dass Licht mit c reist. In einem Gravitationsfeld gilt dies nicht mehr. Die Schwarzschild-Metrik gibt die Koordinatengeschwindigkeit eines sich radial ausbreitenden Photons als:
 
-dr/dt = c(1 − $r_{s}$/r)
+dr/dt = c(1 − r_s/r)
 
-Dies nähert sich null für r → $r_{s}$ — Licht „verlangsamt sich“ nahe einem Schwarzen Loch. Aber dies ist eine koordinatenabhängige Aussage. In lokal inertialen Bezugssystemen (frei fallenden Systemen) ist die Lichtgeschwindigkeit immer c — garantiert durch das Äquivalenzprinzip.
+Dies nähert sich null für r → r_s — Licht „verlangsamt sich“ nahe einem Schwarzen Loch. Aber dies ist eine koordinatenabhängige Aussage. In lokal inertialen Bezugssystemen (frei fallenden Systemen) ist die Lichtgeschwindigkeit immer c — garantiert durch das Äquivalenzprinzip.
 
 Die physikalische Frage ist: **Was misst ein ferner Beobachter als Geschwindigkeit eines Lichtpulses, der durch ein Gravitationsfeld läuft?** Dies ist die Gruppengeschwindigkeit — die Geschwindigkeit des Wellenpakets, gemessen im asymptotischen Koordinatensystem.
 
 ### Antwort der ART
 
-In der ART folgt die Koordinatenlichtgeschwindigkeit $c_{coord}$ = c(1 − $r_{s}$/r) aus der Nullbedingung ds² = 0, angewandt auf die Schwarzschild-Metrik. Dies ist korrekt, liefert aber keinen physikalischen Mechanismus — es ist eine Konsequenz der metrischen Geometrie, keine Erklärung dafür, warum Licht langsamer wird.
+In der ART folgt die Koordinatenlichtgeschwindigkeit c_coord = c(1 − r_s/r) aus der Nullbedingung ds² = 0, angewandt auf die Schwarzschild-Metrik. Dies ist korrekt, liefert aber keinen physikalischen Mechanismus — es ist eine Konsequenz der metrischen Geometrie, keine Erklärung dafür, warum Licht langsamer wird.
 
 ### SSZ-Antwort
 
 SSZ liefert den Mechanismus: Licht wird langsamer, weil es dichter gepackte Segmente durchqueren muss. Jede Segmentüberquerung dauert dieselbe lokale Eigenzeit, aber die Segmente sind (aus Sicht eines fernen Beobachters) in einem Gravitationsfeld „komprimiert". Das Ergebnis:
 
-$$v_{\text{group}} = c \cdot D(r) = \frac{c}{1 + \Xi(r)}$$
+v_{\text{group}} = c \cdot D(r) = \frac{c}{1 + \Xi(r)}
 
 Dies wird aus Zählung hergeleitet, nicht angenommen.
 
@@ -4813,19 +4831,19 @@ Dies wird aus Zählung hergeleitet, nicht angenommen.
 
 ### Das Zählungsargument
 
-Man betrachte ein Photon, das sich radial durch das Segmentgitter ausbreitet. Das Gitter hat eine lokale Segmentlänge $l_{seg}$(r), die von der Segmentdichte abhängt:
+Man betrachte ein Photon, das sich radial durch das Segmentgitter ausbreitet. Das Gitter hat eine lokale Segmentlänge l_seg(r), die von der Segmentdichte abhängt:
 
-$$l_{\text{seg}}(r) = l_0 \cdot D(r) = \frac{l_0}{1 + \Xi(r)}$$
+l_{\text{seg}}(r) = l_0 \cdot D(r) = \frac{l_0}{1 + \Xi(r)}
 
 wobei l_0 die Segmentlänge in flacher Raumzeit ist. In einem Gravitationsfeld sind Segmente „kürzer" (dichter gepackt) um den Faktor D(r).
 
 Das Photon überquert jedes Segment in einer festen lokalen Eigenzeit:
 
-$$\delta\tau = \frac{l_{\text{seg}}}{c} = \frac{l_0 \cdot D(r)}{c}$$
+\delta\tau = \frac{l_{\text{seg}}}{c} = \frac{l_0 \cdot D(r)}{c}
 
 Die Anzahl der Segmente in einer Koordinatenentfernung dr ist:
 
-$$N = \frac{dr}{l_{\text{seg}}(r)} = \frac{dr}{l_0 \cdot D(r)}$$
+N = \frac{dr}{l_{\text{seg}}(r)} = \frac{dr}{l_0 \cdot D(r)}
 
 Die gesamte Koordinatenzeit zum Durchqueren von dr ist:
 
@@ -4835,22 +4853,22 @@ Der Faktor 1/D(r) im dritten Schritt konvertiert von Eigenzeit δτ zu Koordinat
 
 Daher:
 
-$$v_{\text{group}} = \frac{dr}{dt} = c \cdot D(r) = \frac{c}{1 + \Xi(r)}$$
+v_{\text{group}} = \frac{dr}{dt} = c \cdot D(r) = \frac{c}{1 + \Xi(r)}
 
 ### Physikalische Interpretation
 
 Die Gruppengeschwindigkeitsformel hat eine transparente Interpretation:
 
-- **In flacher Raumzeit (Ξ = 0):** $v_{group}$ = c. Standard.
-- **Nahe der Sonnenoberfläche (Ξ $\approx$ 2 × 10⁻⁶):** v_group $\approx$ c(1 − 2 × 10⁻⁶). Licht ist ~0,6 m/s langsamer.
-- **An einer Neutronensternoberfläche (Ξ $\approx$ 0,15):** v_group $\approx$ 0,87c. Licht ist 13% langsamer.
-- **An der natürlichen SSZ-Grenze (Ξ = 0,802):** $v_{group}$ = 0,555c. Licht reist mit 55,5% seiner Vakuumgeschwindigkeit.
+- **In flacher Raumzeit (Ξ = 0):** v_group = c. Standard.
+- **Nahe der Sonnenoberfläche (Ξ ≈ 2 × 10⁻⁶):** v_group ≈ c(1 − 2 × 10⁻⁶). Licht ist ~0,6 m/s langsamer.
+- **An einer Neutronensternoberfläche (Ξ ≈ 0,15):** v_group ≈ 0,87c. Licht ist 13% langsamer.
+- **An der natürlichen SSZ-Grenze (Ξ = 0,802):** v_group = 0,555c. Licht reist mit 55,5% seiner Vakuumgeschwindigkeit.
 
 ### Verbindung zum Brechungsindex
 
 Das Segmentgitter wirkt als **gravitatives Medium** mit einem effektiven Brechungsindex:
 
-$$n(r) = \frac{c}{v_{\text{group}}} = 1 + \Xi(r) = \frac{1}{D(r)}$$
+n(r) = \frac{c}{v_{\text{group}}} = 1 + \Xi(r) = \frac{1}{D(r)}
 
 Dies ist genau der Skalierungsfaktor s(r), der in Kapitel 10 für die Maxwell-Gleichungen eingeführt wurde.
 
@@ -4864,7 +4882,7 @@ Reist Licht verschiedener Frequenzen mit verschiedenen Geschwindigkeiten in eine
 
 In SSZ ist die Segmentüberquerungszeit δτ frequenzunabhängig — ein Photon überquert ein Segment unabhängig von seiner Wellenlänge. Daher:
 
-$$v_{\text{group}}(r, \nu) = c \cdot D(r) \quad \text{(unabhängig von } \nu \text{)}$$
+v_{\text{group}}(r, \nu) = c \cdot D(r) \quad \text{(unabhängig von } \nu \text{)}
 
 SSZ sagt null gravitative Dispersion vorher. Dies ist eine starke Vorhersage, weil viele Quantengravitationsansätze Planck-Skalen-Dispersion vorhersagen.
 
@@ -4880,7 +4898,7 @@ SSZ sagt exakt Δv = 0 vorher, konsistent mit dieser Schranke.
 
 ### Multi-Messenger-Astronomie
 
-Der stärkste Test frequenzunabhängiger Ausbreitung kommt von Multi-Messenger-Ereignissen. GW170817 (Neutronensternverschmelzung, August 2017) produzierte sowohl Metrik-Perturbationen (detektiert von observational) als auch einen Gammastrahlenblitz (GRB 170817A), die 1,7 Sekunden auseinander ankamen nach einer Reise von 40 Mpc. Die Schranke: |$c_{GW}$ − $c_{EM}$|/c < 10⁻¹⁵.
+Der stärkste Test frequenzunabhängiger Ausbreitung kommt von Multi-Messenger-Ereignissen. GW170817 (Neutronensternverschmelzung, August 2017) produzierte sowohl Metrik-Perturbationen (detektiert von GW-Detektoren) als auch einen Gammastrahlenblitz (GRB 170817A), die 1,7 Sekunden auseinander ankamen nach einer Reise von 40 Mpc. Die Schranke: |c_GW − c_EM|/c < 10⁻¹⁵.
 
 In SSZ breiten sich sowohl Metrik-Perturbationen als auch elektromagnetische Wellen durch dasselbe Segmentgitter mit v = c·D(r) aus. SSZ ist vollständig konsistent mit dieser Beobachtung.
 
@@ -4890,25 +4908,25 @@ In SSZ breiten sich sowohl Metrik-Perturbationen als auch elektromagnetische Wel
 
 Ein Radarsignal passiert die Sonne im nächsten Abstand b. Die Überschuss-Reisezeit aus segmentbasierter Verlangsamung:
 
-$$\Delta t = \int_{\text{Pfad}} \frac{\Xi(r)}{c} \, dl$$
+\Delta t = \int_{\text{Pfad}} \frac{\Xi(r)}{c} \, dl
 
 Dies reproduziert die Shapiro-Delay-Formel (Kapitel 10) mit dem PPN-Korrekturfaktor (1+γ).
 
 ### Beispiel 2: Lichtlaufzeit zu einer Neutronensternoberfläche
 
-Für ein Photon, das radial vom Unendlichen zur Neutronensternoberfläche reist (R = 12 km, M = 1,4 M_$\odot$, r_s = 4,1 km):
+Für ein Photon, das radial vom Unendlichen zur Neutronensternoberfläche reist (R = 12 km, M = 1,4 M_☉, r_s = 4,1 km):
 
 t_{\text{seg}} = \frac{1}{c}\int_R^\infty \Xi(r) \, dr \approx \frac{r_s}{2c} \ln\left(\frac{r_{\text{obs}}}{R}\right) \approx 4.5 \,\mu\text{s}
 
-für $r_{obs}$ = 10⁶ km. Dieser 4,5-μs-Delay ist der additive Segmentbeitrag (Kapitel 13).
+für r_obs = 10⁶ km. Dieser 4,5-μs-Delay ist der additive Segmentbeitrag (Kapitel 13).
 
 ### Beispiel 3: Gruppengeschwindigkeit an der natürlichen Grenze
 
-Bei r = $r_{s}$ gibt Ξ_max = 0,802 $v_{group}$ = 0,555c. Licht stoppt nie — es verlangsamt sich auf ein endliches Minimum. Zum Vergleich: Licht in Wasser reist mit 0,75c (n = 1,33). An der natürlichen Grenze ist der gravitative Brechungsindex n = 1,80 — dichter als Wasser, aber immer noch transparent. Diese endliche Geschwindigkeit erlaubt Informationsflucht (Kap. 20) und erzeugt die endliche Rotverschiebung z = 0,802.
+Bei r = r_s gibt Ξ_max = 0,802 v_group = 0,555c. Licht stoppt nie — es verlangsamt sich auf ein endliches Minimum. Zum Vergleich: Licht in Wasser reist mit 0,75c (n = 1,33). An der natürlichen Grenze ist der gravitative Brechungsindex n = 1,80 — dichter als Wasser, aber immer noch transparent. Diese endliche Geschwindigkeit erlaubt Informationsflucht (Kap. 20) und erzeugt die endliche Rotverschiebung z = 0,802.
 
 ### Die optische Medium-Analogie
 
-Das Segmentgitter wirkt als Gradientenindex-(GRIN)-Medium, das Licht in Richtung höheren Ξ biegt. Gravitationslinseneffekt wird zur Brechung in einem GRIN-Medium. Der Ablenkwinkel α = (1+γ)*$r_{s}$/b folgt aus der Anwendung des Snellius-Gesetzes auf das SSZ-Brechungsindexprofil n(r) = 1 + Ξ(r), wobei der PPN-Faktor sowohl zeitliche als auch räumliche Krümmung erfasst. Diese Analogie, erstmals für die ART von de Felice (1971) bemerkt, wird in SSZ exakt: n(r) ist eine physikalische Eigenschaft des Segmentgitters, nicht nur eine mathematische Bequemlichkeit.
+Das Segmentgitter wirkt als Gradientenindex-(GRIN)-Medium, das Licht in Richtung höheren Ξ biegt. Gravitationslinseneffekt wird zur Brechung in einem GRIN-Medium. Der Ablenkwinkel α = (1+γ)*r_s/b folgt aus der Anwendung des Snellius-Gesetzes auf das SSZ-Brechungsindexprofil n(r) = 1 + Ξ(r), wobei der PPN-Faktor sowohl zeitliche als auch räumliche Krümmung erfasst. Diese Analogie, erstmals für die ART von de Felice (1971) bemerkt, wird in SSZ exakt: n(r) ist eine physikalische Eigenschaft des Segmentgitters, nicht nur eine mathematische Bequemlichkeit.
 
 ## 12.5 Verbindung zu Beobachtungen
 
@@ -4924,27 +4942,27 @@ Alle drei sind konsistent mit sowohl SSZ als auch ART — die unterscheidenden V
 
 **Testdateien:** `test_group_velocity`, `test_dispersion`, `test_segment_counting`
 
-**Was die Tests beweisen:** $v_{group}$ = c·D(r) bei allen getesteten Radien; keine Frequenzabhängigkeit; Segmentzählungsableitung selbstkonsistent; Shapiro-Delay korrekt reproduziert; GRB-090510-Schranke erfüllt.
+**Was die Tests beweisen:** v_group = c·D(r) bei allen getesteten Radien; keine Frequenzabhängigkeit; Segmentzählungsableitung selbstkonsistent; Shapiro-Delay korrekt reproduziert; GRB-090510-Schranke erfüllt.
 
 **Was die Tests NICHT beweisen:** Die physikalische Realität des Segmentzählungsmechanismus. Die ART macht dieselbe numerische Vorhersage über die Null-Bedingung; SSZ liefert den Mechanismus.
 
-**Reproduktion:** `E:/clone\ssz-metric-pure\`
+**Reproduktion:** `E:\clone\ssz-metric-pure\`
 
 ## 12.7 Dispersionsrelationen in SSZ
 
 ### Frequenzunabhängigkeit
 
-Eine entscheidende Vorhersage des Segmentzählungsmodells ist, dass $v_{group}$ unabhängig von der Photonenfrequenz ist. Alle Photonen — Radiowellen, sichtbares Licht, Gammastrahlen — durchqueren dieselbe Anzahl von Segmenten pro Koordinatenentfernungseinheit. Das Segmentgitter hat keine charakteristische Längenskala, die chromatische Dispersion erzeugen würde.
+Eine entscheidende Vorhersage des Segmentzählungsmodells ist, dass v_group unabhängig von der Photonenfrequenz ist. Alle Photonen — Radiowellen, sichtbares Licht, Gammastrahlen — durchqueren dieselbe Anzahl von Segmenten pro Koordinatenentfernungseinheit. Das Segmentgitter hat keine charakteristische Längenskala, die chromatische Dispersion erzeugen würde.
 
 ### Vergleich mit Quantengravitations-Dispersion
 
-Mehrere Quantengravitationsvorschläge sagen frequenzabhängige Lichtgeschwindigkeit vorher: v(E) = c(1 ± E/E_QG), wobei $E_{QG}$ die Quantengravitations-Energieskala ist, typischerweise nahe der Planck-Energie (1,22 × 10¹⁹ GeV). GRB-Timing schränkt $E_{QG}$ > 9,3 × 10¹⁹ GeV für lineare Dispersion ein.
+Mehrere Quantengravitationsvorschläge sagen frequenzabhängige Lichtgeschwindigkeit vorher: v(E) = c(1 ± E/E_QG), wobei E_QG die Quantengravitations-Energieskala ist, typischerweise nahe der Planck-Energie (1,22 × 10¹⁹ GeV). GRB-Timing schränkt E_QG > 9,3 × 10¹⁹ GeV für lineare Dispersion ein.
 
-SSZ sagt null Dispersion vorher ($E_{QG}$ = unendlich), weil das Segmentgitter eine klassische Struktur ohne Quantenfluktuationen auf der Photonenergieskala ist. Falls zukünftige Beobachtungen gravitative Dispersion detektieren würden, müsste SSZ modifiziert werden.
+SSZ sagt null Dispersion vorher (E_QG = unendlich), weil das Segmentgitter eine klassische Struktur ohne Quantenfluktuationen auf der Photonenergieskala ist. Falls zukünftige Beobachtungen gravitative Dispersion detektieren würden, müsste SSZ modifiziert werden.
 
 ### Verbindung zur analogen Gravitation
 
-Die Segmentzählungsformel $v_{group}$ = c·D(r) ist formal identisch mit der Lichtausbreitung in einem dielektrischen Medium mit Brechungsindex n(r) = 1/D(r) = 1 + Ξ(r). Diese Analogie wird in Analoge-Gravitations-Experimenten genutzt, wo akustische Wellen in strömenden Flüssigkeiten die Lichtausbreitung in gekrümmter Raumzeit nachahmen. BEC-Experimente (Bose-Einstein-Kondensat) an der Universität Nottingham haben analoge Hawking-Strahlung mit dieser Korrespondenz demonstriert.
+Die Segmentzählungsformel v_group = c·D(r) ist formal identisch mit der Lichtausbreitung in einem dielektrischen Medium mit Brechungsindex n(r) = 1/D(r) = 1 + Ξ(r). Diese Analogie wird in Analoge-Gravitations-Experimenten genutzt, wo akustische Wellen in strömenden Flüssigkeiten die Lichtausbreitung in gekrümmter Raumzeit nachahmen. BEC-Experimente (Bose-Einstein-Kondensat) an der Universität Nottingham haben analoge Hawking-Strahlung mit dieser Korrespondenz demonstriert.
 
 In SSZ ist die Analogie besonders eng: Das Segmentgitter IST ein Medium (allerdings ein Raumzeitmedium, kein materielles), und die Verlangsamung des Lichts in einem Gravitationsfeld IST ein Brechungseffekt. Das Analoge-Gravitations-Programm liefert experimentelle Evidenz, dass medienbasierte Beschreibungen gravitativer Lichtausbreitung physikalisch bedeutsam sind, nicht nur mathematische Kuriositaeten.
 
@@ -4968,29 +4986,29 @@ Diese Vorhersage wurde durch Gammablitz-Timing getestet. GRB 090510, beobachtet 
 
 Falls die Segmentdichte auf Skalen vergleichbar mit der Wellenlänge variierte, könnte Dispersion auftreten. Dies wäre an der Planck-Skala der Fall (Segmentabstand ~ Planck-Länge, ~10⁻³⁵ m) oder nahe der natürlichen Grenze eines kompakten Objekts. Solche Planck-Skalen-Dispersion ist durch Gammablitz-Beobachtungen auf weniger als 10⁻¹⁸ der Lichtgeschwindigkeit beschränkt.
 
-Die Gruppengeschwindigkeit eines Wellenpakets im SSZ-Rahmenwerk ist $v_{group}$ = c/s(r) = c/(1 + Ξ), identisch mit der Phasengeschwindigkeit. Diese Gleichheit ($v_{group}$ = $v_{phase}$) ist eine Konsequenz der nicht-dispersiven Natur des Segmentgitters und stellt sicher, dass Wellenpakete ohne Verzerrung propagieren. Für astronomische Beobachtungen, die auf Puls-Timing basieren (Pulsar-Timing-Arrays, schnelle Radioblitze), bedeutet diese nicht-dispersive Ausbreitung, dass die gravitative Verzögerung für alle Frequenzkomponenten des Pulses gleich ist.
+Die Gruppengeschwindigkeit eines Wellenpakets im SSZ-Rahmenwerk ist v_group = c/s(r) = c/(1 + Ξ), identisch mit der Phasengeschwindigkeit. Diese Gleichheit (v_group = v_phase) ist eine Konsequenz der nicht-dispersiven Natur des Segmentgitters und stellt sicher, dass Wellenpakete ohne Verzerrung propagieren. Für astronomische Beobachtungen, die auf Puls-Timing basieren (Pulsar-Timing-Arrays, schnelle Radioblitze), bedeutet diese nicht-dispersive Ausbreitung, dass die gravitative Verzögerung für alle Frequenzkomponenten des Pulses gleich ist.
 
 ### Vergleich mit Quantengravitations-Dispersion
 
-Mehrere Quantengravitationsvorschläge sagen eine frequenzabhängige Lichtgeschwindigkeit vorher: v(E) = c(1 ± E/E_QG), wobei $E_{QG}$ die Quantengravitations-Energieskala ist, typischerweise nahe der Planck-Energie (1,22 × 10¹⁹ GeV). GRB-Timing schränkt $E_{QG}$ > 9,3 × 10¹⁹ GeV für lineare Dispersion ein.
+Mehrere Quantengravitationsvorschläge sagen eine frequenzabhängige Lichtgeschwindigkeit vorher: v(E) = c(1 ± E/E_QG), wobei E_QG die Quantengravitations-Energieskala ist, typischerweise nahe der Planck-Energie (1,22 × 10¹⁹ GeV). GRB-Timing schränkt E_QG > 9,3 × 10¹⁹ GeV für lineare Dispersion ein.
 
-SSZ sagt null Dispersion vorher ($E_{QG}$ = ∞), weil das Segmentgitter eine klassische Struktur ohne Quantenfluktuationen auf der Photonenergieskala ist. Falls zukünftige Beobachtungen gravitative Dispersion detektierten, würde SSZ eine Modifikation erfordern.
+SSZ sagt null Dispersion vorher (E_QG = ∞), weil das Segmentgitter eine klassische Struktur ohne Quantenfluktuationen auf der Photonenergieskala ist. Falls zukünftige Beobachtungen gravitative Dispersion detektierten, würde SSZ eine Modifikation erfordern.
 
 ### Verbindung zur Analoggravitation
 
-Die Segmentzählformel $v_{group}$ = c·D(r) ist formal identisch mit der Lichtausbreitung in einem dielektrischen Medium mit Brechungsindex n(r) = 1/D(r) = 1 + Ξ(r). Diese Analogie wird in Analoggravitations-Experimenten genutzt, wo akustische Wellen in fließenden Flüssigkeiten die Lichtausbreitung in gekrümmter Raumzeit nachahmen. BEC-Experimente (Bose-Einstein-Kondensat) an der Universität Nottingham haben analoge Hawking-Strahlung mit dieser Korrespondenz demonstriert.
+Die Segmentzählformel v_group = c·D(r) ist formal identisch mit der Lichtausbreitung in einem dielektrischen Medium mit Brechungsindex n(r) = 1/D(r) = 1 + Ξ(r). Diese Analogie wird in Analoggravitations-Experimenten genutzt, wo akustische Wellen in fließenden Flüssigkeiten die Lichtausbreitung in gekrümmter Raumzeit nachahmen. BEC-Experimente (Bose-Einstein-Kondensat) an der Universität Nottingham haben analoge Hawking-Strahlung mit dieser Korrespondenz demonstriert.
 
 In SSZ ist die Analogie besonders eng: Das Segmentgitter IST ein Medium (wenn auch ein Raumzeitmedium, kein materielles), und die Verlangsamung von Licht in einem Gravitationsfeld IST ein Brechungseffekt.
 
 ### Vergleich mit der ART-Koordinatengeschwindigkeit
 
-In Schwarzschild-Koordinaten ist die Koordinatengeschwindigkeit radialen Lichts $c_{coord}$ = c(1 − $r_{s}$/r). In isotropen Koordinaten ist $c_{iso}$ = c(1 − $r_{s}$/(4$r_{iso}$))²/(1 + $r_{s}$/(4$r_{iso}$))². Im Schwachfeld (r viel größer als $r_{s}$) reduzieren sich beide auf c(1 − $r_{s}$/r + ...), was mit dem SSZ-Ergebnis c/(1 + Ξ) = c/(1 + $r_{s}$/(2r)) = c(1 − $r_{s}$/(2r) + ...) in erster Ordnung übereinstimmt.
+In Schwarzschild-Koordinaten ist die Koordinatengeschwindigkeit radialen Lichts c_coord = c(1 − r_s/r). In isotropen Koordinaten ist c_iso = c(1 − r_s/(4r_iso))²/(1 + r_s/(4r_iso))². Im Schwachfeld (r viel größer als r_s) reduzieren sich beide auf c(1 − r_s/r + ...), was mit dem SSZ-Ergebnis c/(1 + Ξ) = c/(1 + r_s/(2r)) = c(1 − r_s/(2r) + ...) in erster Ordnung übereinstimmt.
 
-Das SSZ-Ergebnis unterscheidet sich vom isotropen ART-Ergebnis in zweiter Ordnung in $r_{s}$/r. Diese Differenz zweiter Ordnung ist um einen Faktor ($r_{s}$/r)² unterdrückt, was für Sonnensystemexperimente weniger als 10⁻¹² beträgt. Sie wird erst im Starkfeldregime messbar, wo die vollen Ξ-Formeln verwendet werden müssen.
+Das SSZ-Ergebnis unterscheidet sich vom isotropen ART-Ergebnis in zweiter Ordnung in r_s/r. Diese Differenz zweiter Ordnung ist um einen Faktor (r_s/r)² unterdrückt, was für Sonnensystemexperimente weniger als 10⁻¹² beträgt. Sie wird erst im Starkfeldregime messbar, wo die vollen Ξ-Formeln verwendet werden müssen.
 
 ### Vergleich mit alternativen Gravitationstheorien
 
-Brans-Dicke-Theorie: Die Koordinatenlichtgeschwindigkeit ist $c_{BD}$ = c(1 − (1 + ω_BD⁻¹) $r_{s}$/(2r)). Die Cassini-Mission schränkt ω_BD > 40.000 ein, was die Brans-Dicke-Korrektur im Sonnensystem undetektierbar macht.
+Brans-Dicke-Theorie: Die Koordinatenlichtgeschwindigkeit ist c_BD = c(1 − (1 + ω_BD⁻¹) r_s/(2r)). Die Cassini-Mission schränkt ω_BD > 40.000 ein, was die Brans-Dicke-Korrektur im Sonnensystem undetektierbar macht.
 
 TeVeS (Tensor-Vektor-Skalar-Theorie, Bekenstein 2004): Sagt unterschiedliche Koordinatengeschwindigkeiten für elektromagnetische und Metrik-Perturbationen vorher. Diese Vorhersage wurde durch die gleichzeitige Detektion von GW170817/GRB170817A dramatisch getestet und widerlegt.
 
@@ -5000,13 +5018,13 @@ SSZ: Die Koordinatenlichtgeschwindigkeit ist c/(1 + Ξ), und die Metrik-Perturba
 
 Eine häufige Sorge bei Modifikationen der Lichtgeschwindigkeit in einem Gravitationsfeld ist, ob sie die Kausalität verletzen. Die Antwort ist nein. Die Koordinatengeschwindigkeit c/s(r) ist eine koordinatenabhängige Größe ohne direkte physikalische Bedeutung. Die physikalische Lichtgeschwindigkeit — die von jedem lokalen Beobachter mit lokalen Uhren und Linealen gemessene — ist immer exakt c, unabhängig vom Gravitationsfeld.
 
-In SSZ ist die Koordinatengeschwindigkeit radialen Lichts c/(1 + Ξ), die sich bei r = $r_{s}$ dem Wert c/1,802 = 0,555c nähert. Dies ist nicht null (anders als in der ART), was die endliche Zeitdilatation an der natürlichen SSZ-Grenze widerspiegelt. Die nicht-verschwindende Koordinatengeschwindigkeit in SSZ bedeutet, dass Signale die natürliche Grenze in endlicher Koordinatenzeit überqueren können — ein qualitativer Unterschied zur ART, wo die Horizontdurchquerung unendliche Koordinatenzeit dauert.
+In SSZ ist die Koordinatengeschwindigkeit radialen Lichts c/(1 + Ξ), die sich bei r = r_s dem Wert c/1,802 = 0,555c nähert. Dies ist nicht null (anders als in der ART), was die endliche Zeitdilatation an der natürlichen SSZ-Grenze widerspiegelt. Die nicht-verschwindende Koordinatengeschwindigkeit in SSZ bedeutet, dass Signale die natürliche Grenze in endlicher Koordinatenzeit überqueren können — ein qualitativer Unterschied zur ART, wo die Horizontdurchquerung unendliche Koordinatenzeit dauert.
 
 ### Implikationen für die Metrik-Perturbationengeschwindigkeit
 
 Das SSZ-Rahmenwerk sagt vorher, dass Metrik-Perturbationen sich mit derselben Geschwindigkeit wie elektromagnetische Wellen ausbreiten: c/s(r) = c/(1 + Ξ(r)) in Koordinaten und exakt c im lokalen Bezugssystem. Diese Vorhersage wurde dramatisch bestätigt durch die Multi-Messenger-Beobachtung von GW170817/GRB170817A im August 2017, die zeigte, dass Metrik-Perturbationen und Gammastrahlen von einer Neutronensternverschmelzung innerhalb von 1,7 Sekunden voneinander eintrafen nach einer Reise von etwa 130 Millionen Lichtjahren.
 
-Die Schranke aus dieser Beobachtung ist |$c_{GW}$ − $c_{EM}$|/c < 10⁻¹⁵, was jede Theorie ausschließt, die unterschiedliche Ausbreitungsgeschwindigkeiten für Gravitations- und elektromagnetische Wellen vorhersagt. SSZ erfüllt diese Schranke konstruktionsbedingt: Beide Wellentypen sind Störungen desselben Segmentgitters und erfahren denselben effektiven Brechungsindex s(r) = 1 + Ξ(r).
+Die Schranke aus dieser Beobachtung ist |c_GW − c_EM|/c < 10⁻¹⁵, was jede Theorie ausschließt, die unterschiedliche Ausbreitungsgeschwindigkeiten für Gravitations- und elektromagnetische Wellen vorhersagt. SSZ erfüllt diese Schranke konstruktionsbedingt: Beide Wellentypen sind Störungen desselben Segmentgitters und erfahren denselben effektiven Brechungsindex s(r) = 1 + Ξ(r).
 
 ### Kapitelzusammenfassung und Brücke
 
@@ -5024,7 +5042,7 @@ Ein häufiges Missverständnis wäre, die Ergebnisse dieses Kapitels isoliert zu
 
 Die geometrische Algebra (Hestenes, 1966) bietet eine elegante Darstellung elektromagnetischer Felder als Bivektoren. In dieser Formulierung wird der elektromagnetische Feldtensor F_mu_nu durch einen einzigen Bivektor F = E + iB dargestellt, wobei E das elektrische Feld, B das magnetische Feld und i das pseudoskalare Element der Algebra ist.
 
-In SSZ hat die Bivektor-Darstellung eine natuerliche Interpretation: Die Rotation des Bivektors F im Segmentgitter erzeugt die beobachtete Kopplung zwischen elektrischen und magnetischen Feldern. Die Rotationsrate ist durch die Segmentdichte bestimmt: $\omega_{\text{rot}}$ = omega_0 * D(r), wobei omega_0 die Rotationsrate im flachen Raum ist. Dies bedeutet, dass die EM-Rotation in starken Gravitationsfeldern verlangsamt wird — eine direkte Konsequenz der Zeitdilatation.
+In SSZ hat die Bivektor-Darstellung eine natuerliche Interpretation: Die Rotation des Bivektors F im Segmentgitter erzeugt die beobachtete Kopplung zwischen elektrischen und magnetischen Feldern. Die Rotationsrate ist durch die Segmentdichte bestimmt: omega_rot = omega_0 * D(r), wobei omega_0 die Rotationsrate im flachen Raum ist. Dies bedeutet, dass die EM-Rotation in starken Gravitationsfeldern verlangsamt wird — eine direkte Konsequenz der Zeitdilatation.
 
 Die experimentelle Konsequenz: Die Polarisationsebene von Licht, das durch ein starkes Gravitationsfeld propagiert, rotiert mit einer Rate, die von der Segmentdichte abhaengt. Diese gravitationsinduzierte Faraday-Rotation ist zusaetzlich zur gewoehnlichen Faraday-Rotation (die durch Magnetfelder verursacht wird) und koennte mit Praezisionspolarimetrie nahe kompakten Objekten gemessen werden.
 
@@ -5032,15 +5050,15 @@ Die experimentelle Konsequenz: Die Polarisationsebene von Licht, das durch ein s
 
 Die Maxwell-Gleichungen in der SSZ-Metrik nehmen eine modifizierte Form an. In der kovarianten Formulierung:
 
-nabla\_mu F^{mu nu} = J^nu / epsilon_0
+nabla_mu F^{mu nu} = J^nu / epsilon_0
 
-wobei nabla\_mu die kovariante Ableitung bezueglich der SSZ-Metrik ist. Die Modifikation gegenueber den Standard-Maxwell-Gleichungen besteht darin, dass die Metrik g_mu_nu durch die SSZ-Metrik ersetzt wird, die den Faktor D(r) = 1/(1+Xi) enthaelt.
+wobei nabla_mu die kovariante Ableitung bezueglich der SSZ-Metrik ist. Die Modifikation gegenueber den Standard-Maxwell-Gleichungen besteht darin, dass die Metrik g_mu_nu durch die SSZ-Metrik ersetzt wird, die den Faktor D(r) = 1/(1+Xi) enthaelt.
 
 Die physikalische Konsequenz: Elektromagnetische Wellen, die sich radial in einem Gravitationsfeld ausbreiten, erfahren eine Frequenzverschiebung (Rotverschiebung) und eine Geschwindigkeitsaenderung (Shapiro-Verzoegerung). Beide Effekte sind durch die Segmentdichte Xi bestimmt und werden durch die automatisierten Tests in den SSZ-Repositories verifiziert.
 
 ### Experimentelle Verifikation: Metrik-Perturbationen und EM-Wellen
 
-Das Multi-Messenger-Ereignis GW170817 (Neutronenstern-Verschmelzung) lieferte den staerksten Test der Gleichheit von Metrik-Perturbationen- und EM-Wellengeschwindigkeit: |$v_{GW}$ - c|/c < 10^{-15}. SSZ erfuellt diese Schranke automatisch, weil sowohl Metrik-Perturbationen als auch EM-Wellen sich mit der lokalen Lichtgeschwindigkeit c ausbreiten (die Koordinatengeschwindigkeit variiert mit Xi, aber die lokale Geschwindigkeit ist immer c).
+Das Multi-Messenger-Ereignis GW170817 (Neutronenstern-Verschmelzung) lieferte den staerksten Test der Gleichheit von Metrik-Perturbationen- und EM-Wellengeschwindigkeit: |v_GW - c|/c < 10^{-15}. SSZ erfuellt diese Schranke automatisch, weil sowohl Metrik-Perturbationen als auch EM-Wellen sich mit der lokalen Lichtgeschwindigkeit c ausbreiten (die Koordinatengeschwindigkeit variiert mit Xi, aber die lokale Geschwindigkeit ist immer c).
 
 ### Stokes-Parameter in Gravitationsfeldern
 
@@ -5051,7 +5069,7 @@ dQ/d lambda = -2 kappa Q + 2 rho U (Faraday-Rotation)
 dU/d lambda = -2 rho Q - 2 kappa U (Faraday-Rotation)
 dV/d lambda = -2 kappa V (Absorption)
 
-wobei kappa der Absorptionskoeffizient und rho der Faraday-Rotationskoeffizient ist. In SSZ ist rho durch die Segmentdichte modifiziert: $\rho_{\text{SSZ}}$ = $\rho_{\text{flat}}$ * D(r), wobei $\rho_{\text{flat}}$ der Faraday-Rotationskoeffizient im flachen Raum ist.
+wobei kappa der Absorptionskoeffizient und rho der Faraday-Rotationskoeffizient ist. In SSZ ist rho durch die Segmentdichte modifiziert: rho_SSZ = rho_flat * D(r), wobei rho_flat der Faraday-Rotationskoeffizient im flachen Raum ist.
 
 Die Konsequenz: Die Faraday-Rotation in einem Gravitationsfeld ist um den Faktor D(r) reduziert. Fuer Radiowellen, die durch die Magnetosphaere eines Neutronensterns propagieren (Xi ~ 0,17), betraegt die Reduktion ~17%. Diese Reduktion ist mit Praezisionspolarimetrie (z.B. mit dem SKA) messbar.
 
@@ -5071,7 +5089,7 @@ Der Faktor D^{-2} entsteht, weil die Energiedichte in der lokalen Ruhezeit gemes
 
 U = integral u * sqrt(-g) d^3x = integral (epsilon_0/2) * (E^2 + c^2 B^2) * D^{-2} * r^2 sin(theta) / D dr d theta d phi
 
-Die Integration ueber ein Kugelschalenvolumen von r_1 bis r_2 ergibt eine Gesamtenergie, die um den Faktor <D^{-3}> (gemittelt ueber das Volumen) gegenueber dem flachen Raum erhoeht ist. Fuer r_1 = $r_{s}$ und r_2 = 2 $r_{s}$ ist <D^{-3}> ~ 4,5, was bedeutet, dass die elektromagnetische Energie nahe der natuerlichen Grenze ~4,5-mal hoeher ist als im flachen Raum bei gleicher Feldstaerke.
+Die Integration ueber ein Kugelschalenvolumen von r_1 bis r_2 ergibt eine Gesamtenergie, die um den Faktor <D^{-3}> (gemittelt ueber das Volumen) gegenueber dem flachen Raum erhoeht ist. Fuer r_1 = r_s und r_2 = 2 r_s ist <D^{-3}> ~ 4,5, was bedeutet, dass die elektromagnetische Energie nahe der natuerlichen Grenze ~4,5-mal hoeher ist als im flachen Raum bei gleicher Feldstaerke.
 
 ### Gravitationelle Doppelbrechung
 
@@ -5079,21 +5097,21 @@ In einigen alternativen Gravitationstheorien propagieren die beiden Polarisation
 
 In SSZ gibt es keine gravitationelle Doppelbrechung: Beide Polarisationszustaende propagieren mit derselben Geschwindigkeit v = c * D^2. Dies ist eine direkte Konsequenz der lokalen Lorentz-Invarianz, die in SSZ exakt erhalten ist.
 
-Die experimentelle Schranke auf gravitationelle Doppelbrechung kommt aus der Beobachtung von Gamma-Ray-Bursts (GRBs): Die Polarisation von GRB-Photonen, die ueber kosmologische Distanzen propagiert sind, zeigt keine Anzeichen von Doppelbrechung. Die Schranke betraegt |$\Delta_{\text{v}}$/c| < 10^{-38}, was alle bekannten Theorien mit Doppelbrechung ausschliesst.
+Die experimentelle Schranke auf gravitationelle Doppelbrechung kommt aus der Beobachtung von Gamma-Ray-Bursts (GRBs): Die Polarisation von GRB-Photonen, die ueber kosmologische Distanzen propagiert sind, zeigt keine Anzeichen von Doppelbrechung. Die Schranke betraegt |Delta_v/c| < 10^{-38}, was alle bekannten Theorien mit Doppelbrechung ausschliesst.
 
 ### Elektromagnetische Energie in gekruemmter Raumzeit
 
 Die elektromagnetische Energiedichte in einer gekruemmten Raumzeit ist:
 
-$u_{EM}$ = (E^2 + B^2) / (8 pi) * D(r)^{-2}
+u_EM = (E^2 + B^2) / (8 pi) * D(r)^{-2}
 
-Der Faktor D^{-2} entsteht, weil die elektromagnetischen Felder E und B in der lokalen Ruhebasis gemessen werden, waehrend die Energiedichte $u_{EM}$ im Koordinatensystem angegeben wird.
+Der Faktor D^{-2} entsteht, weil die elektromagnetischen Felder E und B in der lokalen Ruhebasis gemessen werden, waehrend die Energiedichte u_EM im Koordinatensystem angegeben wird.
 
 Die Gesamtenergie des elektromagnetischen Feldes in einem Volumen V ist:
 
-$U_{EM}$ = integral $u_{EM}$ * sqrt(-g) d^3x = integral (E^2 + B^2) / (8 pi) * r^2 sin(theta) dr d(theta) d(phi)
+U_EM = integral u_EM * sqrt(-g) d^3x = integral (E^2 + B^2) / (8 pi) * r^2 sin(theta) dr d(theta) d(phi)
 
-Bemerkenswert: Die Gesamtenergie ist unabhaengig von D(r) — die Faktoren D^{-2} (aus $u_{EM}$) und D^2 (aus sqrt(-g)) heben sich auf. Dies bedeutet, dass die Gesamtenergie des elektromagnetischen Feldes in SSZ identisch mit der in der ART ist.
+Bemerkenswert: Die Gesamtenergie ist unabhaengig von D(r) — die Faktoren D^{-2} (aus u_EM) und D^2 (aus sqrt(-g)) heben sich auf. Dies bedeutet, dass die Gesamtenergie des elektromagnetischen Feldes in SSZ identisch mit der in der ART ist.
 
 ### Poynting-Vektor in der SSZ-Metrik
 
@@ -5120,10 +5138,12 @@ Dieses Kapitel hat die elektromagnetische Energie in der SSZ-Raumzeit behandelt:
 5. **Teilreflexion:** EM-Wellen werden an der natuerlichen Grenze teilweise reflektiert.
 6. **Anwendung:** Roentgen-Echos von Akkretionsscheiben als Test.
 
+---
 
-\newpage
+# Kapitel 13: Additive Zerlegung der Lichtlaufzeit
 
-# Additive Zerlegung der Lichtlaufzeit
+**Teil III — Elektromagnetismus in segmentierter Raumzeit**
+**Status:** ERWEITERTE FASSUNG v2
 
 
 ![Abb 13](figures/ch13_shapiro/fig_13_01.png)
@@ -5156,7 +5176,7 @@ SSZ liefert eine sauberere Zerlegung. Die Gesamtlaufzeit ist die Summe eines geo
 
 In der ART wird der Shapiro-Delay durch Integration der Null-Bedingung ds² = 0 entlang des Photonenpfades berechnet:
 
-$$t = \int_{\text{Pfad}} \frac{dl}{c_{\text{coord}}(r)} = \int \frac{dl}{c(1 - r_s/r)}$$
+t = \int_{\text{Pfad}} \frac{dl}{c_{\text{coord}}(r)} = \int \frac{dl}{c(1 - r_s/r)}
 
 ### Der SSZ-Ansatz
 
@@ -5164,13 +5184,13 @@ SSZ liefert eine koordinatenunabhängige Zerlegung basierend auf der physikalisc
 
 t = \int \frac{dl}{c \cdot D(r)} = \int \frac{dl}{c} + \int \frac{1 - D(r)}{c \cdot D(r)} \, dl
 
-$$t = t_{\text{geo}} + t_{\text{seg}}$$
+t = t_{\text{geo}} + t_{\text{seg}}
 
 ## 13.2 Ableitung
 
 ### Von der Gruppengeschwindigkeit zur Zerlegung
 
-Ausgehend von $v_{group}$ = c·D(r) = c/(1+Ξ(r)):
+Ausgehend von v_group = c·D(r) = c/(1+Ξ(r)):
 
 $$dt = \frac{dl}{v_{\text{group}}} = \frac{(1 + \Xi(r))}{c} \, dl = \frac{dl}{c} + \frac{\Xi(r)}{c} \, dl$$
 
@@ -5182,11 +5202,11 @@ Dies ist exakt — es wurden keine Näherungen gemacht. Die Zerlegung gilt für 
 
 ### Eigenschaften der Zerlegung
 
-**$t_{geo**}$ hängt nur von der räumlichen Pfadgeometrie ab — der geradlinigen Entfernung in flacher Raumzeit. Es ist unabhängig von der Massenverteilung.
+**t_geo** hängt nur von der räumlichen Pfadgeometrie ab — der geradlinigen Entfernung in flacher Raumzeit. Es ist unabhängig von der Massenverteilung.
 
-**$t_{seg**}$ hängt nur von der integrierten Segmentdichte entlang des Pfades ab. Es ist immer positiv (Ξ ≥ 0), also verzögert das Gravitationsfeld Licht immer — beschleunigt es nie. Der Segmentbeitrag kann geschrieben werden als:
+**t_seg** hängt nur von der integrierten Segmentdichte entlang des Pfades ab. Es ist immer positiv (Ξ ≥ 0), also verzögert das Gravitationsfeld Licht immer — beschleunigt es nie. Der Segmentbeitrag kann geschrieben werden als:
 
-$$t_{\text{seg}} = \frac{1}{c} \int_E^O \Xi(r) \, dl = \frac{1}{c} \langle \Xi \rangle \cdot L$$
+t_{\text{seg}} = \frac{1}{c} \int_E^O \Xi(r) \, dl = \frac{1}{c} \langle \Xi \rangle \cdot L
 
 wobei ⟨Ξ⟩ die pfadgemittelte Segmentdichte und L die Pfadlänge ist.
 
@@ -5198,17 +5218,17 @@ Anders als der Shapiro-Delay der ART (der von der Koordinatenwahl abhängt) ist 
 
 ### Schwachfeldgrenzwert
 
-Im Schwachfeld (Ξ = $r_{s}$/2r) ist der Segmentbeitrag für ein Photon, das eine Masse M im nächsten Abstand b passiert:
+Im Schwachfeld (Ξ = r_s/2r) ist der Segmentbeitrag für ein Photon, das eine Masse M im nächsten Abstand b passiert:
 
-$$t_{\text{seg}} = \frac{r_s}{2c} \ln\left(\frac{4r_1 r_2}{b^2}\right)$$
+t_{\text{seg}} = \frac{r_s}{2c} \ln\left(\frac{4r_1 r_2}{b^2}\right)
 
 ### Der PPN-Faktor
 
 Dies ist exakt **die Hälfte** des beobachteten Shapiro-Delays. Der volle Delay erfordert den PPN-Korrekturfaktor (1+γ) = 2:
 
-$$\Delta t_{\text{Shapiro}} = (1+\gamma) \cdot t_{\text{seg}} = 2 \cdot t_{\text{seg}} = \frac{r_s}{c} \ln\left(\frac{4r_1 r_2}{b^2}\right)$$
+\Delta t_{\text{Shapiro}} = (1+\gamma) \cdot t_{\text{seg}} = 2 \cdot t_{\text{seg}} = \frac{r_s}{c} \ln\left(\frac{4r_1 r_2}{b^2}\right)
 
-Der Faktor 2 entsteht, weil das Ξ-Integral nur den temporalen ($g_{tt}$) Beitrag zur Verzögerung erfasst. Der räumliche ($g_{rr}$) Beitrag fügt einen gleichen Betrag hinzu (Kapitel 10).
+Der Faktor 2 entsteht, weil das Ξ-Integral nur den temporalen (g_tt) Beitrag zur Verzögerung erfasst. Der räumliche (g_rr) Beitrag fügt einen gleichen Betrag hinzu (Kapitel 10).
 
 ## 13.4 Superpositionsprinzip
 
@@ -5216,11 +5236,11 @@ Der Faktor 2 entsteht, weil das Ξ-Integral nur den temporalen ($g_{tt}$) Beitra
 
 Für mehrere Massen entlang des Photonenpfades ist die Segmentdichte (im linearen Regime):
 
-$$\Xi_{\text{total}}(r) = \sum_i \Xi_i(r)$$
+\Xi_{\text{total}}(r) = \sum_i \Xi_i(r)
 
 Die Segmentverzögerung wird:
 
-$$t_{\text{seg}} = \sum_i t_{\text{seg},i}$$
+t_{\text{seg}} = \sum_i t_{\text{seg},i}
 
 Die Gesamtverzögerung ist die **Summe der Einzelverzögerungen** — ein Superpositionsprinzip für gravitative Zeitverzögerungen. Dies ist eine bemerkenswerte Vereinfachung: Statt das vollständige Mehrkörperproblem zu lösen, kann man den Beitrag jeder Masse unabhängig berechnen und addieren.
 
@@ -5246,7 +5266,7 @@ Das Superpositionsprinzip hat praktische Konsequenzen für die Präzisionsastrom
 
 ### Beispiel 1: Cassini Shapiro-Delay
 
-Parameter: r₁ = 1 AE = 1,496 × 10¹¹ m, r₂ = 8,43 AE, b = 1,6 R_$\odot$ = 1,11 × 10⁹ m, r_s = 2953 m.
+Parameter: r₁ = 1 AE = 1,496 × 10¹¹ m, r₂ = 8,43 AE, b = 1,6 R_☉ = 1,11 × 10⁹ m, r_s = 2953 m.
 
 Segmentverzögerung:
 t_{\text{seg}} = \frac{r_s}{2c} \ln\left(\frac{4r_1 r_2}{b^2}\right) = 4.93 \,\mu\text{s} \times 13.33 = 65.7 \,\mu\text{s}
@@ -5255,9 +5275,9 @@ Voller Shapiro-Delay: Δt = 2 × 65,7 = 131,4 μs. Beobachtet: 131,5 ± 0,1 μs.
 
 ### Beispiel 2: Jupiters Beitrag
 
-Wenn der Pfad auch Jupiter passiert ($M_{J}$ = 1,9 × 10²⁷ kg, $r_{s}$,J = 2,82 m), wird die zusätzliche Segmentverzögerung von Jupiter einfach addiert:
+Wenn der Pfad auch Jupiter passiert (M_J = 1,9 × 10²⁷ kg, r_s,J = 2,82 m), wird die zusätzliche Segmentverzögerung von Jupiter einfach addiert:
 
-$$\Delta t_J \approx 0.2 \,\text{ns}$$
+\Delta t_J \approx 0.2 \,\text{ns}
 
 Dies ist vernachlässigbar verglichen mit dem Sonnenbeitrag — aber das Superpositionsprinzip macht die Berechnung trivial.
 
@@ -5265,27 +5285,27 @@ Dies ist vernachlässigbar verglichen mit dem Sonnenbeitrag — aber das Superpo
 
 **Testdateien:** `test_additive_decomposition`, `test_shapiro`, `test_superposition`
 
-**Was die Tests beweisen:** t = $t_{geo}$ + $t_{seg}$ exakt bei allen getesteten Radien; PPN-Faktor (1+γ) = 2 reproduziert vollen Shapiro-Delay; Superposition gilt für Mehrkörper-Konfigurationen im Schwachfeld; Cassini-Delay auf < 0,1% reproduziert.
+**Was die Tests beweisen:** t = t_geo + t_seg exakt bei allen getesteten Radien; PPN-Faktor (1+γ) = 2 reproduziert vollen Shapiro-Delay; Superposition gilt für Mehrkörper-Konfigurationen im Schwachfeld; Cassini-Delay auf < 0,1% reproduziert.
 
 **Was die Tests NICHT beweisen:** Superposition im Starkfeld — die lineare Näherung Ξ_total = ΣΞ_i wurde für überlappende Starkfelder nicht validiert.
 
-**Reproduktion:** `E:/clone\ssz-metric-pure\`
+**Reproduktion:** `E:\clone\ssz-metric-pure\`
 
 ## 13.7 Mathematische Eigenschaften der Zerlegung
 
 ### Linearität und Superposition
 
-Die additive Zerlegung $t_{total}$ = $t_{geo}$ + $t_{seg}$ hat eine zentrale mathematische Eigenschaft: Die Segmentverzögerung $t_{seg}$ ist ein lineares Funktional des Ξ-Feldes. Für zwei Masseverteilungen Ξ_1 und Ξ_2 mit nicht-überlappenden Trägern gilt:
+Die additive Zerlegung t_total = t_geo + t_seg hat eine zentrale mathematische Eigenschaft: Die Segmentverzögerung t_seg ist ein lineares Funktional des Ξ-Feldes. Für zwei Masseverteilungen Ξ_1 und Ξ_2 mit nicht-überlappenden Trägern gilt:
 
-$t_{seg}$(Ξ_1 + Ξ_2) = $t_{seg}$(Ξ_1) + $t_{seg}$(Ξ_2)
+t_seg(Ξ_1 + Ξ_2) = t_seg(Ξ_1) + t_seg(Ξ_2)
 
-Diese Linearität folgt aus der Integraldefinition $t_{seg}$ = (1/c) ∫ Ξ(r) dl entlang des Lichtpfades. In der ART ist die entsprechende Größe (das Shapiro-Delay-Integral) ebenfalls im Schwachfeld linear, aber nichtlineare Korrekturen treten in der Ordnung ($r_{s}$/r)² auf. SSZ sagt vorher, dass die Linearität im Schwachfeld exakt ist (weil Ξ_weak = $r_{s}$/2r exakt ist, keine Abschneidung einer Reihe), aber in den Blend- und Starkfeldregimen zusammenbricht, wo das Ξ-Profil seine Funktionsform ändert.
+Diese Linearität folgt aus der Integraldefinition t_seg = (1/c) ∫ Ξ(r) dl entlang des Lichtpfades. In der ART ist die entsprechende Größe (das Shapiro-Delay-Integral) ebenfalls im Schwachfeld linear, aber nichtlineare Korrekturen treten in der Ordnung (r_s/r)² auf. SSZ sagt vorher, dass die Linearität im Schwachfeld exakt ist (weil Ξ_weak = r_s/2r exakt ist, keine Abschneidung einer Reihe), aber in den Blend- und Starkfeldregimen zusammenbricht, wo das Ξ-Profil seine Funktionsform ändert.
 
 ### Fehlerfortpflanzung
 
-Die additive Struktur vereinfacht die Fehleranalyse. Wenn die Unsicherheit in Ξ an jedem Punkt entlang des Pfades δ_Ξ ist, dann ist die Unsicherheit in $t_{seg}$:
+Die additive Struktur vereinfacht die Fehleranalyse. Wenn die Unsicherheit in Ξ an jedem Punkt entlang des Pfades δ_Ξ ist, dann ist die Unsicherheit in t_seg:
 
-δ_t_seg = (δ_Ξ / Ξ) × $t_{seg}$
+δ_t_seg = (δ_Ξ / Ξ) × t_seg
 
 Für Cassini (δ_Ξ/Ξ = 2,3×10⁻⁵ aus der γ-Schranke) beträgt die Zeitunsicherheit δ_t_seg = 2,3×10⁻⁵ × 262 μs = 6 ns — weit unter der Messunsicherheit von 2 μs.
 
@@ -5295,7 +5315,7 @@ Für Cassini (δ_Ξ/Ξ = 2,3×10⁻⁵ aus der γ-Schranke) beträgt die Zeituns
 
 Die additive Zerlegung ist direkt auf Gravitationslinsen-Zeitverzögerungen anwendbar. Wenn eine Hintergrundquelle durch eine Vordergrundlinse mehrfach abgebildet wird, kommen die Bilder zu verschiedenen Zeiten an, weil sie verschiedenen Pfaden durch das Linsenpotential folgen. Die SSZ-Zerlegung trennt diese Verzögerung sauber in:
 
-Δ$t_{AB}$ = Δ$t_{geo}$(A,B) + Δ$t_{seg}$(A,B)
+Δt_AB = Δt_geo(A,B) + Δt_seg(A,B)
 
 Für galaxiengroße Linsen (Ξ ~ 10⁻⁶) ist der Segmentbeitrag eine kleine Korrektur zur geometrischen Verzögerung. Für Haufen-Linsen mit mehreren nahen Bildern kann die Segmentverzögerung vergleichbar mit der geometrischen Verzögerung sein und liefert eine unabhängige Schranke für die Linsenmassenverteilung.
 
@@ -5311,13 +5331,13 @@ Die praktische Auswirkung ist für aktuelle PTAs gering (die Korrektur liegt unt
 
 Die additive Zerlegung kann präzise wie folgt formuliert werden. Die gesamte Koordinatenreisezeit für einen Lichtstrahl von Punkt A nach Punkt B entlang Pfad P ist:
 
-T(A, B) = $T_{geo}$(A, B) + $T_{seg}$(A, B, P)
+T(A, B) = T_geo(A, B) + T_seg(A, B, P)
 
-wobei $T_{geo}$ = ∫ dl/c die geometrische Reisezeit (unabhängig vom Gravitationsfeld) und $T_{seg}$ = ∫ Ξ(r) dl/c die Segmentverzögerung (abhängig vom Gravitationsfeld entlang des Pfades) ist.
+wobei T_geo = ∫ dl/c die geometrische Reisezeit (unabhängig vom Gravitationsfeld) und T_seg = ∫ Ξ(r) dl/c die Segmentverzögerung (abhängig vom Gravitationsfeld entlang des Pfades) ist.
 
-Der geometrische Term $T_{geo}$ hängt nur von den Endpunkten A und B und der Pfadgeometrie ab. Für einen geradlinigen Pfad ist $T_{geo}$ = |AB|/c. Für einen gebogenen Pfad (wie bei Lichtablenkung durch eine gravitierende Masse) ist $T_{geo}$ die Bogenlänge geteilt durch c.
+Der geometrische Term T_geo hängt nur von den Endpunkten A und B und der Pfadgeometrie ab. Für einen geradlinigen Pfad ist T_geo = |AB|/c. Für einen gebogenen Pfad (wie bei Lichtablenkung durch eine gravitierende Masse) ist T_geo die Bogenlänge geteilt durch c.
 
-Der Segmentterm $T_{seg}$ hängt vom Segmentdichteprofil entlang des Pfades ab. Für einen radialen Pfad von r_1 nach r_2 im Schwachfeld ist $T_{seg}$ = ∫ $r_{s}$/(2rc) dr = ($r_{s}$/(2c)) ln(r_2/r_1). Diese logarithmische Abhängigkeit ist die charakteristische Signatur des Shapiro-Delays.
+Der Segmentterm T_seg hängt vom Segmentdichteprofil entlang des Pfades ab. Für einen radialen Pfad von r_1 nach r_2 im Schwachfeld ist T_seg = ∫ r_s/(2rc) dr = (r_s/(2c)) ln(r_2/r_1). Diese logarithmische Abhängigkeit ist die charakteristische Signatur des Shapiro-Delays.
 
 Die additive Struktur hat einen tiefen mathematischen Ursprung: Sie folgt aus der Linearität des Skalierungsfaktors s(r) = 1 + Ξ(r). Weil s linear in Ξ ist, separiert das Integral von s entlang des Pfades in einen Ξ-unabhängigen Teil (die 1) und einen Ξ-abhängigen Teil (das Ξ). Wäre s eine nichtlineare Funktion von Ξ, wäre die Zerlegung nicht additiv.
 
@@ -5325,11 +5345,11 @@ Die additive Struktur hat einen tiefen mathematischen Ursprung: Sie folgt aus de
 
 Gravitationslinsen erzeugen mehrere Bilder einer Hintergrundquelle, die jeweils einem anderen Lichtpfad um die Linse entsprechen. Die Zeitverzögerung zwischen den Bildern hängt sowohl von der geometrischen Pfadlängendifferenz als auch von der Shapiro-Delay-Differenz ab. Die additive Zerlegung trennt diese beiden Beiträge sauber.
 
-Für eine Punktmassenlinse bei Winkeldurchmesserentfernung $d_{L}$, mit einer Quelle bei $d_{S}$ und Linsen-Quellen-Entfernung $d_{LS}$, ist die Zeitverzögerung zwischen zwei Bildern bei Winkelpositionen θ_1 und θ_2:
+Für eine Punktmassenlinse bei Winkeldurchmesserentfernung d_L, mit einer Quelle bei d_S und Linsen-Quellen-Entfernung d_LS, ist die Zeitverzögerung zwischen zwei Bildern bei Winkelpositionen θ_1 und θ_2:
 
-Δt = (1 + $z_{L}$) $d_{L}$ $d_{S}$ / (2c $d_{LS}$) × [(θ_1² − θ_2²)/2 − ψ(θ_1) + ψ(θ_2)]
+Δt = (1 + z_L) d_L d_S / (2c d_LS) × [(θ_1² − θ_2²)/2 − ψ(θ_1) + ψ(θ_2)]
 
-wobei ψ das Linsenpotential und $z_{L}$ die Linsen-Rotverschiebung ist. Der erste Term in Klammern ist die geometrische Verzögerung, der zweite die Shapiro-Verzögerung.
+wobei ψ das Linsenpotential und z_L die Linsen-Rotverschiebung ist. Der erste Term in Klammern ist die geometrische Verzögerung, der zweite die Shapiro-Verzögerung.
 
 Gravitationslinsen-Zeitverzögerungen wurden für mehrere mehrfach abgebildete Quasare gemessen (z.B. Q0957+561, B1608+656, RXJ1131-1231). Diese Messungen werden zur Bestimmung der Hubble-Konstante H_0 durch die Zeitverzögerungs-Kosmographie-Methode verwendet. Das SSZ-Rahmenwerk modifiziert diese Messungen nicht, da die Linsen im Schwachfeldregime liegen.
 
@@ -5385,10 +5405,10 @@ Die Messung von Lichtlaufzeiten hat eine lange Geschichte in der Physik:
 Die numerische Berechnung der additiven Zerlegung erfordert die Integration des Segmentdichte-Profils entlang des Lichtpfads. Der Algorithmus:
 
 1. Diskretisiere den Pfad in N Segmente (typisch N = 1000)
-2. Berechne Xi($r_{i}$) an jedem Punkt
-3. Summiere: Delta_t_segment = Sum\_i (Xi($r_{i}$) * dl\_i / c)
+2. Berechne Xi(r_i) an jedem Punkt
+3. Summiere: Delta_t_segment = Sum_i (Xi(r_i) * dl_i / c)
 4. Die geometrische Komponente ist: Delta_t_geo = L/c (wobei L die geometrische Pfadlaenge ist)
-5. Die totale Laufzeit ist: $t_{total}$ = Delta_t_geo + Delta_t_segment
+5. Die totale Laufzeit ist: t_total = Delta_t_geo + Delta_t_segment
 
 Die numerische Praezision betraegt < 0.01% fuer N > 100. Die Berechnung ist fuer alle 13 Validierungsobjekte in < 1 Sekunde abgeschlossen.
 
@@ -5396,9 +5416,9 @@ Die numerische Praezision betraegt < 0.01% fuer N > 100. Die Berechnung ist fuer
 
 Die additive Lichtlaufzeit ist eine der kontraintuitivsten Vorhersagen von SSZ. In der ART ist die Lichtlaufzeit durch ein Gravitationsfeld immer laenger als die Lichtlaufzeit im flachen Raum (Shapiro-Verzoegerung). In SSZ ist die Lichtlaufzeit ebenfalls laenger, aber die Verzoegerung hat eine andere physikalische Interpretation: Das Licht propagiert langsamer durch Regionen hoher Segmentdichte, weil das Segmentgitter als effektives Medium wirkt.
 
-Die Analogie zum Brechungsindex ist aufschlussreich: In einem optischen Medium mit Brechungsindex n propagiert Licht mit der Geschwindigkeit c/n. In SSZ propagiert Licht mit der Koordinatengeschwindigkeit c * D(r) = c/(1+Xi), was einem effektiven Brechungsindex $n_{eff}$ = 1 + Xi entspricht. Die Segmentdichte Xi spielt die Rolle des Brechungsindex.
+Die Analogie zum Brechungsindex ist aufschlussreich: In einem optischen Medium mit Brechungsindex n propagiert Licht mit der Geschwindigkeit c/n. In SSZ propagiert Licht mit der Koordinatengeschwindigkeit c * D(r) = c/(1+Xi), was einem effektiven Brechungsindex n_eff = 1 + Xi entspricht. Die Segmentdichte Xi spielt die Rolle des Brechungsindex.
 
-Diese Analogie hat eine wichtige Konsequenz: Genau wie ein optisches Medium Licht bricht (Snellius-Gesetz), bricht das Segmentgitter Licht (Lichtablenkung). Der Ablenkungswinkel alpha = (1+gamma) $r_{s}$/b kann als Brechung an einem Medium mit radial variierendem Brechungsindex n(r) = 1 + Xi(r) interpretiert werden.
+Diese Analogie hat eine wichtige Konsequenz: Genau wie ein optisches Medium Licht bricht (Snellius-Gesetz), bricht das Segmentgitter Licht (Lichtablenkung). Der Ablenkungswinkel alpha = (1+gamma) r_s/b kann als Brechung an einem Medium mit radial variierendem Brechungsindex n(r) = 1 + Xi(r) interpretiert werden.
 
 ### Experimentelle Verifikation der additiven Lichtlaufzeit
 
@@ -5412,11 +5432,11 @@ Die additive Lichtlaufzeit wurde durch mehrere unabhaengige Experimente verifizi
 
 ### Starkfeld-Abweichungen
 
-Im Starkfeld (nahe kompakten Objekten) weicht die SSZ-Lichtlaufzeit von der ART-Vorhersage ab. Der Grund: Die Starkfeldformel $\Xi_{\text{strong}}$ = 1 - exp(-phi*r/r_s) hat eine andere radiale Abhaengigkeit als die ART-Metrik. Die resultierende Lichtlaufzeit-Differenz betraegt:
+Im Starkfeld (nahe kompakten Objekten) weicht die SSZ-Lichtlaufzeit von der ART-Vorhersage ab. Der Grund: Die Starkfeldformel Xi_strong = 1 - exp(-phi*r/r_s) hat eine andere radiale Abhaengigkeit als die ART-Metrik. Die resultierende Lichtlaufzeit-Differenz betraegt:
 
-Delta_t_SSZ - Delta_t_GR ~ ($\Xi_{\text{strong}}$ - Xi_Schwarzschild) * $r_{s}$/c
+Delta_t_SSZ - Delta_t_GR ~ (Xi_strong - Xi_Schwarzschild) * r_s/c
 
-Fuer r ~ 2 $r_{s}$ ist diese Differenz ~0,05 $r_{s}$/c, was fuer ein stellares Schwarzes Loch (M = 10 $M_{Sonne}$) ~1,5 Mikrosekunden betraegt. Diese Differenz ist mit zukuenftigen Roentgen-Timing-Instrumenten (STROBE-X) potenziell messbar.
+Fuer r ~ 2 r_s ist diese Differenz ~0,05 r_s/c, was fuer ein stellares Schwarzes Loch (M = 10 M_Sonne) ~1,5 Mikrosekunden betraegt. Diese Differenz ist mit zukuenftigen Roentgen-Timing-Instrumenten (STROBE-X) potenziell messbar.
 
 ## Querverweise
 
@@ -5424,10 +5444,12 @@ Fuer r ~ 2 $r_{s}$ ist diese Differenz ~0,05 $r_{s}$/c, was fuer ein stellares S
 - **Referenziert von:** Kap. 14 (Rotverschiebung), Kap. 16 (Frequenz)
 - **Anhang:** Anh. B (B.4 Shapiro)
 
-\newpage
+---
 
-# Interpretation der gravitativen Rotverschiebung
+# Kapitel 14: Interpretation der gravitativen Rotverschiebung
 
+**Teil III — Elektromagnetismus und Lichtausbreitung**
+**Status:** ERWEITERTE FASSUNG
 
 ---
 
@@ -5435,7 +5457,7 @@ Fuer r ~ 2 $r_{s}$ ist diese Differenz ~0,05 $r_{s}$/c, was fuer ein stellares S
 
 Gravitative Rotverschiebung — die Rötung von Licht, das aus einem Gravitationstrichter aufsteigt — ist einer der drei klassischen Tests der Allgemeinen Relativitätstheorie und am direktesten mit der Zeitdilatation verbunden. In der ART beinhaltet die Rotverschiebungsformel das Verhältnis von Metrikkomponenten bei zwei verschiedenen Radien. In SSZ ist die Formel bemerkenswert einfacher: **Die Rotverschiebung gleicht der Segmentdichte am Emissionspunkt** (für einen Beobachter im Unendlichen).
 
-Dieses Kapitel leitet die SSZ-Rotverschiebungsformel z = Ξ($r_{emit}$) her, erklärt, warum es sich um einen Uhrenvergleichseffekt und nicht um einen Photonenenergieverlusteffekt handelt, vergleicht SSZ- und ART-Vorhersagen über astrophysikalische Skalen und identifiziert das Starkfeldregime, in dem die beiden Theorien messbar divergieren.
+Dieses Kapitel leitet die SSZ-Rotverschiebungsformel z = Ξ(r_emit) her, erklärt, warum es sich um einen Uhrenvergleichseffekt und nicht um einen Photonenenergieverlusteffekt handelt, vergleicht SSZ- und ART-Vorhersagen über astrophysikalische Skalen und identifiziert das Starkfeldregime, in dem die beiden Theorien messbar divergieren.
 
 **Lesehinweis.** Abschnitt 14.1 vergleicht ART- und SSZ-Rotverschiebungsformeln. Abschnitt 14.2 entwickelt die uhrenbasierte Interpretation. Abschnitt 14.3 liefert numerische Vergleiche. Abschnitt 14.4 diskutiert die Starkfeldvorhersage. Abschnitt 14.5 fasst die Validierung zusammen.
 
@@ -5443,51 +5465,51 @@ Warum ist dies notwendig? Jedes Kapitel in diesem Buch erfüllt eine spezifische
 
 ---
 
-![Abb. 14.1 — Gravitative Rotverschiebung: $z_{ART}$ vs. $z_{SSZ}$ = Ξ(r) (links) und SSZ-Überschussrotverschiebung in Prozent (rechts).](figures/ch14_redshift/fig_14_01_redshift_z_xi.png)
+![Abb. 14.1 — Gravitative Rotverschiebung: z_ART vs. z_SSZ = Ξ(r) (links) und SSZ-Überschussrotverschiebung in Prozent (rechts).](figures/ch14_redshift/fig_14_01_redshift_z_xi.png)
 
 ## 14.1 Rotverschiebung in ART vs. SSZ
 
 ### Pädagogischer Überblick
 
-Gravitative Rotverschiebung ist vielleicht der intuitivste aller gravitativen Effekte. Ein Photon, das an der Oberfläche eines Sterns emittiert wird, muss aus dem Gravitationstrichter klettern, um einen fernen Beobachter zu erreichen. Dabei verliert es Energie und seine Frequenz nimmt ab — es wird rotverschoben. Die fraktionale Frequenzverschiebung z = ($f_{emit}$ − $f_{obs}$)/f_obs ist direkt mit der Gravitationspotentialdifferenz zwischen Emissions- und Beobachtungspunkt verbunden.
+Gravitative Rotverschiebung ist vielleicht der intuitivste aller gravitativen Effekte. Ein Photon, das an der Oberfläche eines Sterns emittiert wird, muss aus dem Gravitationstrichter klettern, um einen fernen Beobachter zu erreichen. Dabei verliert es Energie und seine Frequenz nimmt ab — es wird rotverschoben. Die fraktionale Frequenzverschiebung z = (f_emit − f_obs)/f_obs ist direkt mit der Gravitationspotentialdifferenz zwischen Emissions- und Beobachtungspunkt verbunden.
 
-In der ART gilt die Rotverschiebungsformel für eine Schwarzschild-Metrik z = 1/√(1 − $r_{s}$/r) − 1. Am Ereignishorizont (r = $r_{s}$) divergiert z — unendliche Rotverschiebung, was vollständiger kausaler Abtrennung entspricht. In SSZ gilt die Rotverschiebungsformel z = 1/D − 1 = Ξ. Bei r = $r_{s}$, unter Verwendung der Starkfeldformel, Ξ($r_{s}$) = 0,802 und z = 0,802 — eine große, aber endliche Rotverschiebung.
+In der ART gilt die Rotverschiebungsformel für eine Schwarzschild-Metrik z = 1/√(1 − r_s/r) − 1. Am Ereignishorizont (r = r_s) divergiert z — unendliche Rotverschiebung, was vollständiger kausaler Abtrennung entspricht. In SSZ gilt die Rotverschiebungsformel z = 1/D − 1 = Ξ. Bei r = r_s, unter Verwendung der Starkfeldformel, Ξ(r_s) = 0,802 und z = 0,802 — eine große, aber endliche Rotverschiebung.
 
 ### Die ART-Rotverschiebungsformel
 
-In der Allgemeinen Relativitätstheorie erfährt ein bei Radius $r_{emit}$ emittiertes und bei $r_{obs}$ empfangenes Photon eine gravitative Rotverschiebung:
+In der Allgemeinen Relativitätstheorie erfährt ein bei Radius r_emit emittiertes und bei r_obs empfangenes Photon eine gravitative Rotverschiebung:
 
 1 + z = \frac{\lambda_{\text{obs}}}{\lambda_{\text{emit}}} = \frac{\nu_{\text{emit}}}{\nu_{\text{obs}}} = \frac{D_{\text{ART}}(r_{\text{obs}})}{D_{\text{ART}}(r_{\text{emit}})}
 
-Für die Schwarzschild-Metrik mit $D_{ART}$ = √(1 − $r_{s}$/r):
+Für die Schwarzschild-Metrik mit D_ART = √(1 − r_s/r):
 
-$$1 + z = \sqrt{\frac{1 - r_s/r_{\text{obs}}}{1 - r_s/r_{\text{emit}}}}$$
+1 + z = \sqrt{\frac{1 - r_s/r_{\text{obs}}}{1 - r_s/r_{\text{emit}}}}
 
-Für einen Beobachter im Unendlichen ($r_{obs}$ → ∞, $D_{obs}$ → 1):
+Für einen Beobachter im Unendlichen (r_obs → ∞, D_obs → 1):
 
-$$1 + z = \frac{1}{\sqrt{1 - r_s/r_{\text{emit}}}}$$
+1 + z = \frac{1}{\sqrt{1 - r_s/r_{\text{emit}}}}
 
-Am Horizont ($r_{emit}$ = $r_{s}$): z → ∞. Das Photon wird unendlich rotverschoben.
+Am Horizont (r_emit = r_s): z → ∞. Das Photon wird unendlich rotverschoben.
 
 ### Die SSZ-Rotverschiebungsformel
 
 In SSZ ist der Zeitdilatationsfaktor D = 1/(1+Ξ), und die Rotverschiebungsformel wird:
 
-$$1 + z = \frac{D(r_{\text{obs}})}{D(r_{\text{emit}})} = \frac{1 + \Xi(r_{\text{emit}})}{1 + \Xi(r_{\text{obs}})}$$
+1 + z = \frac{D(r_{\text{obs}})}{D(r_{\text{emit}})} = \frac{1 + \Xi(r_{\text{emit}})}{1 + \Xi(r_{\text{obs}})}
 
 Für einen Beobachter im Unendlichen (Ξ_obs = 0):
 
-$$1 + z = 1 + \Xi(r_{\text{emit}}), \quad \boxed{z = \Xi(r_{\text{emit}})}$$
+1 + z = 1 + \Xi(r_{\text{emit}}), \quad \boxed{z = \Xi(r_{\text{emit}})}
 
 Dies ist das zentrale SSZ-Ergebnis: **Die gravitative Rotverschiebung gleicht der Segmentdichte am Emissionspunkt.** Diese Formel ist verblüffend einfach — keine Quadratwurzeln, keine Verhältnisse von Metrikkomponenten, einfach z = Ξ.
 
-Am Horizont (r = r_s): z = Ξ(r_s) = 1 − e^{−φ} $\approx$ 0,802. Das Photon verliert etwa 44,5% seiner Energie — eine große, aber **endliche** Rotverschiebung. Dies ist der dramatischste Unterschied zwischen SSZ und ART.
+Am Horizont (r = r_s): z = Ξ(r_s) = 1 − e^{−φ} ≈ 0,802. Das Photon verliert etwa 44,5% seiner Energie — eine große, aber **endliche** Rotverschiebung. Dies ist der dramatischste Unterschied zwischen SSZ und ART.
 
 ### Die allgemeine Zweipunktformel
 
 Für beliebige Emitter- und Beobachterpositionen (weder im Unendlichen):
 
-$$z = \frac{\Xi_{\text{emit}} - \Xi_{\text{obs}}}{1 + \Xi_{\text{obs}}}$$
+z = \frac{\Xi_{\text{emit}} - \Xi_{\text{obs}}}{1 + \Xi_{\text{obs}}}
 
 Dies reduziert sich auf z = Ξ_emit wenn Ξ_obs = 0. Für das Pound-Rebka-Experiment:
 
@@ -5501,11 +5523,11 @@ Der gemessene Wert (Pound & Rebka, 1960): z = (2,57 ± 0,26) × 10⁻¹⁵ — �
 
 Ein häufiges Missverständnis ist, dass gravitative Rotverschiebung auftritt, weil das Photon beim Aufstieg aus dem Gravitationstrichter „Energie verliert". Dieses Bild ist falsch — und SSZ macht die korrekte Interpretation besonders klar.
 
-In SSZ ist Rotverschiebung fundamental ein **Uhrenvergleichseffekt.** Ein von einem Atom bei $r_{emit}$ emittiertes Photon hat eine Frequenz, die durch die lokale atomare Übergangsenergie und die lokale Uhrenrate D($r_{emit}$) bestimmt wird. Die intrinsische Phasenakkumulationsrate des Photons — seine „Farbe" — wird bei der Emission festgelegt und ändert sich während des Transits nicht (Kapitel 15 beweist dies mit einem No-Go-Theorem).
+In SSZ ist Rotverschiebung fundamental ein **Uhrenvergleichseffekt.** Ein von einem Atom bei r_emit emittiertes Photon hat eine Frequenz, die durch die lokale atomare Übergangsenergie und die lokale Uhrenrate D(r_emit) bestimmt wird. Die intrinsische Phasenakkumulationsrate des Photons — seine „Farbe" — wird bei der Emission festgelegt und ändert sich während des Transits nicht (Kapitel 15 beweist dies mit einem No-Go-Theorem).
 
-Wenn das Photon beim Beobachter bei $r_{obs}$ ankommt, misst der Beobachter seine Frequenz mit seiner eigenen Uhr, die mit Rate D($r_{obs}$) läuft:
+Wenn das Photon beim Beobachter bei r_obs ankommt, misst der Beobachter seine Frequenz mit seiner eigenen Uhr, die mit Rate D(r_obs) läuft:
 
-$$\frac{\nu_{\text{obs}}}{\nu_{\text{emit}}} = \frac{D(r_{\text{emit}})}{D(r_{\text{obs}})} = \frac{1}{1 + z}$$
+\frac{\nu_{\text{obs}}}{\nu_{\text{emit}}} = \frac{D(r_{\text{emit}})}{D(r_{\text{obs}})} = \frac{1}{1 + z}
 
 Das Photon hat sich nicht verändert — die Uhren sind verschieden.
 
@@ -5533,30 +5555,30 @@ SSZ und ART stimmen im Schwachfeld überein (wo Ξ ≪ 1), divergieren aber im S
 |--------|-------|------|-------|---------|
 | Erdoberfläche | 1,4×10⁹ | 7,0×10⁻¹⁰ | 7,0×10⁻¹⁰ | < 10⁻⁹ |
 | Sonnenoberfläche | 2,4×10⁵ | 2,1×10⁻⁶ | 2,1×10⁻⁶ | < 10⁻⁶ |
-| Weißer Zwerg (0,6 M$\odot$) | ~2000 | 2,5×10⁻⁴ | 2,5×10⁻⁴ | < 10⁻⁵ |
-| Neutronenstern (1,4 M$\odot$, 10 km) | ~3 | 0,306 | 0,207 | −32% |
-| Neutronenstern (2,0 M$\odot$, 10 km) | ~1,7 | 0,746 | 0,556 | −25% |
+| Weißer Zwerg (0,6 M☉) | ~2000 | 2,5×10⁻⁴ | 2,5×10⁻⁴ | < 10⁻⁵ |
+| Neutronenstern (1,4 M☉, 10 km) | ~3 | 0,306 | 0,207 | −32% |
+| Neutronenstern (2,0 M☉, 10 km) | ~1,7 | 0,746 | 0,556 | −25% |
 | Am Horizont (r = r_s) | 1,0 | ∞ | 0,802 | SSZ endlich |
 
 Für Neutronensterne (r/r_s ~ 2–4) beträgt die Diskrepanz 25–32% — gut in Reichweite aktueller und zukünftiger Röntgenteleskope. NICER auf der ISS misst thermische Emission von Neutronensternoberflächen; STROBE-X und eXTP (geplant für Ende der 2020er) zielen auf die Präzision, die zur Unterscheidung von SSZ- und ART-Vorhersagen im Starkfeldregime nötig ist.
 
 ## 14.4 Die Starkfeldvorhersage
 
-Die SSZ-Vorhersage z($r_{s}$) = 0,802 ist die wichtigste falsifizierbare Vorhersage des Rahmenwerks. Indirekte Tests sind möglich:
+Die SSZ-Vorhersage z(r_s) = 0,802 ist die wichtigste falsifizierbare Vorhersage des Rahmenwerks. Indirekte Tests sind möglich:
 
 - **Neutronenstern-Oberflächenemission:** Bei r/r_s ~ 2,5 sagt SSZ ~13% mehr Rotverschiebung als die Schwachfeld-Extrapolation, aber ~25% weniger als die ART vorher.
 - **Eisen-Kα-Linie aus Akkretionsscheiben:** Die fluoreszierende Eisenlinie bei 6,4 keV wird durch das Gravitationsfeld nahe Schwarzer Löcher verbreitert und verschoben.
-- **Metrik-Perturbationen-Inspiral:** Die Phasenentwicklung binärer Inspirals hängt von der Metrik nahe des Horizonts ab. SSZs endliches D($r_{s}$) modifiziert die späte Inspiralphase.
+- **Metrik-Perturbationen-Inspiral:** Die Phasenentwicklung binärer Inspirals hängt von der Metrik nahe des Horizonts ab. SSZs endliches D(r_s) modifiziert die späte Inspiralphase.
 
 ### NICER und zukünftige Missionen
 
-Das NICER-Instrument (Neutron Star Interior Composition Explorer) auf der Internationalen Raumstation misst die Röntgenemission von Millisekundenpulsaren mit ausreichender Präzision, um das Masse-Radius-Verhältnis von Neutronensternen zu bestimmen. Für einen Neutronenstern mit M = 1,4 M$\odot$ und R = 12 km (r/r_s $\approx$ 2,9) sagt SSZ z = 0,175 vorher, verglichen mit z_ART = 0,210. Die Differenz von 17% liegt innerhalb der aktuellen NICER-Messgenauigkeit.
+Das NICER-Instrument (Neutron Star Interior Composition Explorer) auf der Internationalen Raumstation misst die Röntgenemission von Millisekundenpulsaren mit ausreichender Präzision, um das Masse-Radius-Verhältnis von Neutronensternen zu bestimmen. Für einen Neutronenstern mit M = 1,4 M☉ und R = 12 km (r/r_s ≈ 2,9) sagt SSZ z = 0,175 vorher, verglichen mit z_ART = 0,210. Die Differenz von 17% liegt innerhalb der aktuellen NICER-Messgenauigkeit.
 
 STROBE-X (Spectroscopic Time-Resolving Observatory for Broadband Energy X-rays), geplant für die späten 2030er, wird eine um eine Größenordnung bessere Präzision bieten. Diese Mission könnte den SSZ-ART-Unterschied für kompakte Neutronensterne definitiv auflösen.
 
 ### Die Eisen-Kα-Linie
 
-Die fluoreszierende Eisenlinie bei 6,4 keV wird in der Nähe von Schwarzen Löchern durch gravitative Rotverschiebung und Doppler-Effekte verbreitert. Das beobachtete Linienprofil hängt vom Rotverschiebungsprofil z(r) in der inneren Akkretionsscheibe ab. SSZ sagt ein anderes z(r)-Profil vorher als die ART für r < 6 $r_{s}$ (innerhalb des ISCO für Schwarzschild). Aktuelle Beobachtungen (z.B. MCG-6-30-15 mit XMM-Newton) haben nicht die Auflösung, um zwischen den Modellen zu unterscheiden, aber nächste Generation Röntgenobservatorien wie Athena (ESA, geplant 2030er) könnten diese Auflösung erreichen.
+Die fluoreszierende Eisenlinie bei 6,4 keV wird in der Nähe von Schwarzen Löchern durch gravitative Rotverschiebung und Doppler-Effekte verbreitert. Das beobachtete Linienprofil hängt vom Rotverschiebungsprofil z(r) in der inneren Akkretionsscheibe ab. SSZ sagt ein anderes z(r)-Profil vorher als die ART für r < 6 r_s (innerhalb des ISCO für Schwarzschild). Aktuelle Beobachtungen (z.B. MCG-6-30-15 mit XMM-Newton) haben nicht die Auflösung, um zwischen den Modellen zu unterscheiden, aber nächste Generation Röntgenobservatorien wie Athena (ESA, geplant 2030er) könnten diese Auflösung erreichen.
 
 ## 14.5 Historischer Kontext
 
@@ -5568,9 +5590,9 @@ Die gravitative Rotverschiebung wurde erstmals 1907 von Einstein vorhergesagt, a
 
 **Was die Tests beweisen:** z = Ξ_emit stimmt mit Pound-Rebka auf 5% überein; Schwachfeld-Rotverschiebung stimmt mit ART für 13 astronomische Objekte überein; die uhrenbasierte Interpretation ist selbstkonsistent.
 
-**Was die Tests NICHT beweisen:** Die Starkfeldvorhersage z($r_{s}$) = 0,802. Keine Beobachtung horizontemittierter Photonen existiert.
+**Was die Tests NICHT beweisen:** Die Starkfeldvorhersage z(r_s) = 0,802. Keine Beobachtung horizontemittierter Photonen existiert.
 
-**Reproduktion:** `E:/clone\frequency-curvature-validation\` — alle Tests bestanden.
+**Reproduktion:** `E:\clone\frequency-curvature-validation\` — alle Tests bestanden.
 
 ### Präzisionstests und Zukunftsaussichten
 
@@ -5606,7 +5628,7 @@ Die gravitative Rotverschiebung wurde erstmals 1907 von Einstein vorhergesagt, a
 
 ### Kapitelzusammenfassung und Brücke
 
-Dieses Kapitel leitete die SSZ-Rotverschiebung z = Ξ her und zeigte, dass sie sich von der ART-Vorhersage nur im Starkfeld unterscheidet, wo Ξ von der Ordnung Eins ist. Der dramatischste Unterschied tritt bei r = $r_{s}$ auf: ART sagt unendliche Rotverschiebung vorher (z = ∞), SSZ sagt endliche Rotverschiebung vorher (z = 0,802).
+Dieses Kapitel leitete die SSZ-Rotverschiebung z = Ξ her und zeigte, dass sie sich von der ART-Vorhersage nur im Starkfeld unterscheidet, wo Ξ von der Ordnung Eins ist. Der dramatischste Unterschied tritt bei r = r_s auf: ART sagt unendliche Rotverschiebung vorher (z = ∞), SSZ sagt endliche Rotverschiebung vorher (z = 0,802).
 
 ### Zusammenfassung und Brücke zu Kapitel 15
 
@@ -5622,27 +5644,27 @@ Die Analogie: Zwei Beobachter mit unterschiedlich schnell laufenden Uhren messen
 
 Warum die Energieverlust-Interpretation falsch ist: Wenn Photonen beim Aufstieg Energie verlieren würden, würde Energie verschwinden (wohin geht sie?). In SSZ bleibt die Photonenenergie (gemessen in lokalen Einheiten) konstant entlang des Pfads. Die gemessene Energieänderung ist ein Koordinateneffekt, kein physikalischer Prozess. Dies ist konsistent mit dem No-Retuning-Theorem (Kapitel 15), das formal beweist, dass Photonen ihre intrinsische Frequenz nicht ändern.
 
-Die Energieerhaltung in SSZ funktioniert wie folgt: Die Gesamtenergie des Systems (Photon + Gravitationsfeld) ist erhalten. Die Energie des Photons (gemessen von einem fernen Beobachter) ändert sich, aber diese Änderung wird exakt durch die Änderung der gravitativen potentiellen Energie kompensiert. In der Newtonschen Näherung: $E_{photon}$ + $m_{eff}$ g h = const, wobei $m_{eff}$ = E/c² die effektive Masse des Photons ist. Die Rotverschiebung z = gh/c² folgt direkt aus dieser Energieerhaltung.
+Die Energieerhaltung in SSZ funktioniert wie folgt: Die Gesamtenergie des Systems (Photon + Gravitationsfeld) ist erhalten. Die Energie des Photons (gemessen von einem fernen Beobachter) ändert sich, aber diese Änderung wird exakt durch die Änderung der gravitativen potentiellen Energie kompensiert. In der Newtonschen Näherung: E_photon + m_eff g h = const, wobei m_eff = E/c² die effektive Masse des Photons ist. Die Rotverschiebung z = gh/c² folgt direkt aus dieser Energieerhaltung.
 
 ### Die Rotverschiebung als Zählobservable
 
-Die SSZ-Interpretation der gravitativen Rotverschiebung ist fundamental ein Zählargument. Ein Photon mit Frequenz f bei Radius r_1 hat eine Wellenlänge λ_1 = c/(f D_1), wobei D_1 = 1/(1 + Ξ_1) der lokale Zeitdilatationsfaktor ist. Während das Photon zu Radius r_2 propagiert, durchquert es Segmente, deren Dichte sich von Ξ_1 zu Ξ_2 ändert. Die Anzahl der Wellenlängen, die in das Photon bei r_2 passen, ist dieselbe wie bei r_1 (kein Retuning, Kapitel 15), aber die lokale Wellenlänge bei r_2 ist λ_2 = c/(f D_2). Die beobachtete Frequenz bei r_2 ist daher $f_{obs}$ = f D_1/D_2 = f (1 + Ξ_2)/(1 + Ξ_1).
+Die SSZ-Interpretation der gravitativen Rotverschiebung ist fundamental ein Zählargument. Ein Photon mit Frequenz f bei Radius r_1 hat eine Wellenlänge λ_1 = c/(f D_1), wobei D_1 = 1/(1 + Ξ_1) der lokale Zeitdilatationsfaktor ist. Während das Photon zu Radius r_2 propagiert, durchquert es Segmente, deren Dichte sich von Ξ_1 zu Ξ_2 ändert. Die Anzahl der Wellenlängen, die in das Photon bei r_2 passen, ist dieselbe wie bei r_1 (kein Retuning, Kapitel 15), aber die lokale Wellenlänge bei r_2 ist λ_2 = c/(f D_2). Die beobachtete Frequenz bei r_2 ist daher f_obs = f D_1/D_2 = f (1 + Ξ_2)/(1 + Ξ_1).
 
 Diese Zählinterpretation hat mehrere Vorteile gegenüber der Standard-ART-Ableitung: (1) Sie erfordert nicht die Maschinerie der Killing-Vektoren und erhaltenen Größen. (2) Sie liefert einen physikalischen Mechanismus (Segmentzählung) statt einer mathematischen Identität. (3) Sie erstreckt sich natürlich auf das Starkfeld, wo die volle Formel z = (1 + Ξ_1)/(1 + Ξ_2) − 1 gilt.
 
-Die Starkfeld-Rotverschiebungsformel macht spezifische Vorhersagen, die sich von der ART unterscheiden. Bei r = $r_{s}$ (mit Ξ_strong = 0,802): $z_{SSZ}$ = (1 + 0,802)/(1 + 0) − 1 = 0,802 für ein Photon, das ins Unendliche entkommt. In der ART: $z_{ART}$ = 1/√(1 − 1) − 1 = ∞. Der Unterschied ist qualitativ, nicht bloß quantitativ: SSZ sagt eine endliche, messbare Rotverschiebung vorher, wo die ART unendliche Rotverschiebung und kausale Entkopplung vorhersagt.
+Die Starkfeld-Rotverschiebungsformel macht spezifische Vorhersagen, die sich von der ART unterscheiden. Bei r = r_s (mit Ξ_strong = 0,802): z_SSZ = (1 + 0,802)/(1 + 0) − 1 = 0,802 für ein Photon, das ins Unendliche entkommt. In der ART: z_ART = 1/√(1 − 1) − 1 = ∞. Der Unterschied ist qualitativ, nicht bloß quantitativ: SSZ sagt eine endliche, messbare Rotverschiebung vorher, wo die ART unendliche Rotverschiebung und kausale Entkopplung vorhersagt.
 
 ### Solare gravitative Rotverschiebung
 
-Die Sonne liefert den zugänglichsten Test der gravitativen Rotverschiebung. Die Sonnenoberfläche hat Ξ = $r_{s}$/(2 $R_{Sonne}$) = 2,95 km / (2 × 696.000 km) = 2,12 × 10⁻⁶. Die vorhergesagte Rotverschiebung solarer Spektrallinien ist z = 2,12 × 10⁻⁶, entsprechend einer Geschwindigkeit von 636 m/s.
+Die Sonne liefert den zugänglichsten Test der gravitativen Rotverschiebung. Die Sonnenoberfläche hat Ξ = r_s/(2 R_Sonne) = 2,95 km / (2 × 696.000 km) = 2,12 × 10⁻⁶. Die vorhergesagte Rotverschiebung solarer Spektrallinien ist z = 2,12 × 10⁻⁶, entsprechend einer Geschwindigkeit von 636 m/s.
 
 Diese gravitative Rotverschiebung muss von anderen Geschwindigkeitsverschiebungen getrennt werden: Sonnenrotation (~2 km/s), konvektive Bewegungen (Granulation, ~1 km/s) und Oszillationen (p-Moden, ~0,5 km/s). Moderne Sonnenspektroskopie (HARPS bei ESO, ESPRESSO am VLT) erreicht Geschwindigkeitspräzisionen von ~10 cm/s, weit besser als die 636 m/s gravitative Rotverschiebung. Der limitierende Faktor sind systematische Unsicherheiten aus konvektiven Bewegungen.
 
 ### Weiße-Zwerg-Rotverschiebung
 
-Weiße Zwerge liefern einen stärkeren Test als Hauptreihensterne. Ein typischer Weißer Zwerg hat M $\approx$ 0,6 M$\odot$ und R $\approx$ 8000 km, was r_s = 1,77 km und Ξ = 1,11 × 10⁻⁴ ergibt. Die gravitative Rotverschiebung ist z = 1,11 × 10⁻⁴, entsprechend 33 km/s.
+Weiße Zwerge liefern einen stärkeren Test als Hauptreihensterne. Ein typischer Weißer Zwerg hat M ≈ 0,6 M☉ und R ≈ 8000 km, was r_s = 1,77 km und Ξ = 1,11 × 10⁻⁴ ergibt. Die gravitative Rotverschiebung ist z = 1,11 × 10⁻⁴, entsprechend 33 km/s.
 
-Der Sloan Digital Sky Survey (SDSS) hat gravitative Rotverschiebungen für Tausende Weißer Zwerge gemessen, konsistent mit der ART/SSZ-Vorhersage auf ~5% Präzision. Für extreme Weiße Zwerge nahe der Chandrasekhar-Grenze (M $\approx$ 1,4 M$\odot$, R $\approx$ 2000 km) ist Ξ = 1,03 × 10⁻³, und die SSZ-ART-Differenz beginnt auf dem 10⁻⁶-Niveau — noch nicht messbar, aber dem Regime nähernd, wo die Vorhersagen divergieren.
+Der Sloan Digital Sky Survey (SDSS) hat gravitative Rotverschiebungen für Tausende Weißer Zwerge gemessen, konsistent mit der ART/SSZ-Vorhersage auf ~5% Präzision. Für extreme Weiße Zwerge nahe der Chandrasekhar-Grenze (M ≈ 1,4 M☉, R ≈ 2000 km) ist Ξ = 1,03 × 10⁻³, und die SSZ-ART-Differenz beginnt auf dem 10⁻⁶-Niveau — noch nicht messbar, aber dem Regime nähernd, wo die Vorhersagen divergieren.
 
 ### Experimentelle Tests der gravitativen Rotverschiebung
 
@@ -5657,7 +5679,7 @@ Die gravitative Rotverschiebung wurde mit zunehmender Praezision getestet:
 | GPS (kumulativ) | seit 1978 | 0.01% | Taeglich verifiziert |
 | ACES/PHARAO (geplant) | 2025+ | 0.0003% | Ziel: 3 x 10^-6 |
 
-Die SSZ-Vorhersage stimmt im Schwachfeld exakt mit der ART ueberein. Der Unterschied zeigt sich erst bei z > 0.1 (Starkfeld), was Objekte mit r < 5 $r_{s}$ erfordert.
+Die SSZ-Vorhersage stimmt im Schwachfeld exakt mit der ART ueberein. Der Unterschied zeigt sich erst bei z > 0.1 (Starkfeld), was Objekte mit r < 5 r_s erfordert.
 
 ### Die physikalische Bedeutung des Uhrenvergleichs
 
@@ -5673,29 +5695,29 @@ Die SSZ-Interpretation der gravitativen Rotverschiebung als Uhrenvergleich (nich
 
 Die gravitative Rotverschiebung z = Xi ist eine der einfachsten und elegantesten Vorhersagen von SSZ. Die Ableitung:
 
-Ein Photon mit Frequenz $f_{emit}$ wird bei Radius $r_{emit}$ emittiert. Der lokale Beobachter bei $r_{emit}$ misst die Frequenz $f_{emit}$. Ein entfernter Beobachter (bei r -> unendlich) misst die Frequenz $f_{obs}$ = $f_{emit}$ * D($r_{emit}$) = $f_{emit}$ / (1 + Xi($r_{emit}$)).
+Ein Photon mit Frequenz f_emit wird bei Radius r_emit emittiert. Der lokale Beobachter bei r_emit misst die Frequenz f_emit. Ein entfernter Beobachter (bei r -> unendlich) misst die Frequenz f_obs = f_emit * D(r_emit) = f_emit / (1 + Xi(r_emit)).
 
-Die Rotverschiebung ist definiert als z = ($f_{emit}$ - $f_{obs}$) / $f_{obs}$ = $f_{emit}$/f_obs - 1 = (1 + Xi) - 1 = Xi.
+Die Rotverschiebung ist definiert als z = (f_emit - f_obs) / f_obs = f_emit/f_obs - 1 = (1 + Xi) - 1 = Xi.
 
-In der ART ist die Rotverschiebung $z_{GR}$ = 1/sqrt(1 - $r_{s}$/r) - 1. Im Schwachfeld (r >> $r_{s}$) stimmen beide ueberein: $z_{SSZ}$ = $r_{s}$/(2r) und $z_{GR}$ = $r_{s}$/(2r) + O($r_{s}$/r)^2. Im Starkfeld divergieren sie: $z_{SSZ}$ = 0,802 bei r = $r_{s}$, waehrend $z_{GR}$ -> unendlich.
+In der ART ist die Rotverschiebung z_GR = 1/sqrt(1 - r_s/r) - 1. Im Schwachfeld (r >> r_s) stimmen beide ueberein: z_SSZ = r_s/(2r) und z_GR = r_s/(2r) + O(r_s/r)^2. Im Starkfeld divergieren sie: z_SSZ = 0,802 bei r = r_s, waehrend z_GR -> unendlich.
 
 ### Rotverschiebung und Energieerhaltung
 
 Die gravitative Rotverschiebung hat eine direkte Verbindung zur Energieerhaltung. Ein Photon mit Energie E = h*f verliert Energie, wenn es aus einem Gravitationsfeld entkommt. Die Energieaenderung ist:
 
-$\Delta_{\text{E}}$ = h * ($f_{emit}$ - $f_{obs}$) = h * $f_{emit}$ * Xi / (1 + Xi)
+Delta_E = h * (f_emit - f_obs) = h * f_emit * Xi / (1 + Xi)
 
 Diese Energie geht nicht verloren — sie wird in die potentielle Energie des Photons im Gravitationsfeld umgewandelt. Die Gesamtenergie (kinetische + potentielle) bleibt erhalten.
 
-In SSZ hat die Energieerhaltung eine besonders elegante Form: $E_{total}$ = h * $f_{emit}$ * D($r_{emit}$) = h * $f_{obs}$ = const. Das Produkt aus Frequenz und Zeitdilatationsfaktor ist eine Erhaltungsgroesse entlang der Photonenbahn.
+In SSZ hat die Energieerhaltung eine besonders elegante Form: E_total = h * f_emit * D(r_emit) = h * f_obs = const. Das Produkt aus Frequenz und Zeitdilatationsfaktor ist eine Erhaltungsgroesse entlang der Photonenbahn.
 
 ### Kosmologische Rotverschiebung vs. gravitative Rotverschiebung
 
 Es ist wichtig, die gravitative Rotverschiebung (z = Xi, verursacht durch das lokale Gravitationsfeld) von der kosmologischen Rotverschiebung (z = a_0/a_emit - 1, verursacht durch die Expansion des Universums) zu unterscheiden. Beide Effekte sind additiv: Die beobachtete Rotverschiebung eines Objekts in einem Gravitationsfeld bei kosmologischer Entfernung ist:
 
-1 + $z_{total}$ = (1 + $z_{grav}$) * (1 + $z_{cosmo}$)
+1 + z_total = (1 + z_grav) * (1 + z_cosmo)
 
-Fuer die meisten astrophysikalischen Objekte dominiert einer der beiden Effekte: Fuer nahe Objekte ($z_{cosmo}$ << 1) dominiert die gravitative Rotverschiebung; fuer entfernte Objekte ($z_{cosmo}$ >> $z_{grav}$) dominiert die kosmologische Rotverschiebung. Fuer Neutronensterne in nahen Galaxien ($z_{cosmo}$ ~ 0,001, $z_{grav}$ ~ 0,2) sind beide Effekte vergleichbar und muessen sorgfaeltig getrennt werden.
+Fuer die meisten astrophysikalischen Objekte dominiert einer der beiden Effekte: Fuer nahe Objekte (z_cosmo << 1) dominiert die gravitative Rotverschiebung; fuer entfernte Objekte (z_cosmo >> z_grav) dominiert die kosmologische Rotverschiebung. Fuer Neutronensterne in nahen Galaxien (z_cosmo ~ 0,001, z_grav ~ 0,2) sind beide Effekte vergleichbar und muessen sorgfaeltig getrennt werden.
 
 
 
@@ -5703,11 +5725,11 @@ Fuer die meisten astrophysikalischen Objekte dominiert einer der beiden Effekte:
 
 Die kosmologische Rotverschiebung (durch die Expansion des Universums) und die gravitative Rotverschiebung (durch das Gravitationsfeld) sind physikalisch verschiedene Phaenomene, die sich jedoch aehnlich manifestieren:
 
-**Kosmologische Rotverschiebung:** $z_{cosmo}$ = a($t_{obs}$)/a($t_{emit}$) - 1, wobei a(t) der Skalenfaktor ist. Sie entsteht durch die Dehnung der Wellenlaenge waehrend der Propagation durch den expandierenden Raum.
+**Kosmologische Rotverschiebung:** z_cosmo = a(t_obs)/a(t_emit) - 1, wobei a(t) der Skalenfaktor ist. Sie entsteht durch die Dehnung der Wellenlaenge waehrend der Propagation durch den expandierenden Raum.
 
-**Gravitative Rotverschiebung:** $z_{grav}$ = Xi = $r_{s}$/(2r) (im Schwachfeld). Sie entsteht durch den Energieverlust des Photons beim Aufstieg aus dem Gravitationspotential.
+**Gravitative Rotverschiebung:** z_grav = Xi = r_s/(2r) (im Schwachfeld). Sie entsteht durch den Energieverlust des Photons beim Aufstieg aus dem Gravitationspotential.
 
-In SSZ gibt es eine subtile Verbindung: Beide Rotverschiebungen koennen als Aenderung der Segmentdichte interpretiert werden. Die kosmologische Rotverschiebung entspricht einer zeitlichen Aenderung der globalen Segmentdichte ($\Xi_{\text{cosmo}}$(t) ~ H^2 r^2 / c^2), waehrend die gravitative Rotverschiebung einer raeumlichen Aenderung der lokalen Segmentdichte entspricht.
+In SSZ gibt es eine subtile Verbindung: Beide Rotverschiebungen koennen als Aenderung der Segmentdichte interpretiert werden. Die kosmologische Rotverschiebung entspricht einer zeitlichen Aenderung der globalen Segmentdichte (Xi_cosmo(t) ~ H^2 r^2 / c^2), waehrend die gravitative Rotverschiebung einer raeumlichen Aenderung der lokalen Segmentdichte entspricht.
 
 ### Gravitationsrotverschiebung fuer verschiedene Objekte
 
@@ -5730,18 +5752,20 @@ In SSZ gibt es eine subtile Verbindung: Beide Rotverschiebungen koennen als Aend
 
 Dieses Kapitel hat die gravitationsbedingte Rotverschiebung in SSZ vollstaendig behandelt. Die wichtigsten Ergebnisse:
 
-1. **Schwachfeld:** z = Xi = $r_{s}$/(2r) -- identisch mit ART.
-2. **Starkfeld:** z = Xi = 1 - exp(-phi r/r_s) -- maximal $z_{max}$ = 0,802.
+1. **Schwachfeld:** z = Xi = r_s/(2r) -- identisch mit ART.
+2. **Starkfeld:** z = Xi = 1 - exp(-phi r/r_s) -- maximal z_max = 0,802.
 3. **Kosmologische Rotverschiebung:** Unabhaengig von der gravitativen Rotverschiebung.
 4. **Verschiedene Objekte:** Von z ~ 10^{-10} (GPS) bis z ~ 0,17 (ISCO).
-5. **Endliche maximale Rotverschiebung:** $z_{max}$ = 0,802 (vs. z -> unendlich in ART).
+5. **Endliche maximale Rotverschiebung:** z_max = 0,802 (vs. z -> unendlich in ART).
 
 Die endliche maximale Rotverschiebung ist eine der wichtigsten Vorhersagen von SSZ. Sie bedeutet, dass kein Photon unendlich rotverschoben wird -- im Gegensatz zur ART, wo Photonen am Horizont unendlich rotverschoben werden.
 
+---
 
-\newpage
+# Kapitel 15: Beschränkungen der Photonen-Nachstimmung im Flug
 
-# Beschränkungen der Photonen-Nachstimmung im Flug
+**Teil III — Elektromagnetismus und Lichtausbreitung**
+**Status:** ERWEITERTE FASSUNG
 
 
 ![Abb 15](figures/ch15_retuning/fig_15_01.png)
@@ -5778,13 +5802,13 @@ Intuitiv bedeutet dies: Ein Photon, das ein Gravitationsfeld durchquert, ist wie
 
 ### Beweis
 
-Angenommen, ein Photon wird bei Radius $r_{emit}$ mit lokaler Frequenz ν_emit emittiert. Wenn das Photon sich kontinuierlich nachstimmt, ist seine Frequenz bei Radius r während des Transits:
+Angenommen, ein Photon wird bei Radius r_emit mit lokaler Frequenz ν_emit emittiert. Wenn das Photon sich kontinuierlich nachstimmt, ist seine Frequenz bei Radius r während des Transits:
 
-$$\nu(r) = \nu_0 \cdot \frac{D(r)}{D(r_{\text{emit}})}$$
+\nu(r) = \nu_0 \cdot \frac{D(r)}{D(r_{\text{emit}})}
 
-Wahre Nachstimmung bedeutet, dass das Photon sich anpasst, um **lokal ununterscheidbar von einem lokal emittierten Photon** bei jedem Radius zu sein. Ein lokal emittiertes Photon bei $r_{obs}$ hat die Frequenz ν_lokal = ν₀ (derselbe atomare Übergang). Wenn das nachgestimmte Photon dieselbe lokale Frequenz hat:
+Wahre Nachstimmung bedeutet, dass das Photon sich anpasst, um **lokal ununterscheidbar von einem lokal emittierten Photon** bei jedem Radius zu sein. Ein lokal emittiertes Photon bei r_obs hat die Frequenz ν_lokal = ν₀ (derselbe atomare Übergang). Wenn das nachgestimmte Photon dieselbe lokale Frequenz hat:
 
-$$\nu_{\text{gemessen}} = \nu_{\text{lokal}} = \nu_0 = \nu_{\text{emit, lokal}}$$
+\nu_{\text{gemessen}} = \nu_{\text{lokal}} = \nu_0 = \nu_{\text{emit, lokal}}
 
 Daher z = 0. Das nachgestimmte Photon kommt mit exakt derselben lokalen Frequenz wie ein lokal emittiertes Photon an — **keine Rotverschiebung.** QED.
 
@@ -5796,9 +5820,9 @@ Der Beweis lässt sich präziser formulieren. Sei φ(t) die Phase des Photons al
 
 Wenn keine Nachstimmung stattfindet, ist dφ/dt = const entlang des Photonenpfades (die Koordinatenfrequenz ist erhalten). Dann:
 
-ν(r) = (dφ/dt) / (2π D(r)) = ν_emit · D($r_{emit}$) / D(r)
+ν(r) = (dφ/dt) / (2π D(r)) = ν_emit · D(r_emit) / D(r)
 
-Dies gibt z = D($r_{obs}$)/D($r_{emit}$) − 1 $\neq$ 0, konsistent mit Beobachtungen.
+Dies gibt z = D(r_obs)/D(r_emit) − 1 ≠ 0, konsistent mit Beobachtungen.
 
 Wenn Nachstimmung stattfindet, passt sich dφ/dt kontinuierlich an, sodass ν(r) = ν_0 für alle r. Dann misst jeder Beobachter dieselbe Frequenz, und z = 0. QED.
 
@@ -5814,21 +5838,21 @@ Der Beweis zeigt, dass gravitative Rotverschiebung fundamental ein **Uhrenvergle
 
 Die Frequenz eines Photons ist operationell definiert als:
 
-$$\nu = \frac{2\pi}{T_{\text{eigen}}}$$
+\nu = \frac{2\pi}{T_{\text{eigen}}}
 
-wobei $T_{eigen}$ die Eigenzeit der Beobachteruhr pro Photonenzyklus ist. Diese Definition ist beobachterabhängig.
+wobei T_eigen die Eigenzeit der Beobachteruhr pro Photonenzyklus ist. Diese Definition ist beobachterabhängig.
 
 In SSZ:
 
-$$\nu_{\text{obs}} = \frac{\phi_{\text{rate}}}{D(r_{\text{obs}})}$$
+\nu_{\text{obs}} = \frac{\phi_{\text{rate}}}{D(r_{\text{obs}})}
 
 wobei φ_rate die **invariante Phasenrate** des Photons ist — eine Eigenschaft, die sich während des Transits nicht ändert. Die Phasenrate wird bei der Emission festgelegt:
 
-$$\phi_{\text{rate}} = \nu_{\text{emit}} \cdot D(r_{\text{emit}})$$
+\phi_{\text{rate}} = \nu_{\text{emit}} \cdot D(r_{\text{emit}})
 
 Zwei Beobachter bei verschiedenen Radien messen verschiedene Frequenzen für dasselbe Photon:
 
-$$\frac{\nu_1}{\nu_2} = \frac{D(r_2)}{D(r_1)} = \frac{1 + \Xi(r_1)}{1 + \Xi(r_2)}$$
+\frac{\nu_1}{\nu_2} = \frac{D(r_2)}{D(r_1)} = \frac{1 + \Xi(r_1)}{1 + \Xi(r_2)}
 
 Dies ist die Rotverschiebungsformel, hergeleitet rein aus Uhrenvergleich ohne jede Annahme über Photonenenergie.
 
@@ -5850,7 +5874,7 @@ Das nichtverschwindende Ergebnis schließt Nachstimmung mit **9,9σ** Signifikan
 
 ### GPS-System (Betrieb seit 1978)
 
-Jeder GPS-Satellit trägt eine Atomuhr in Höhe h $\approx$ 20.200 km, wo D(r) sich von der Erdoberfläche um ΔΞ = 4,45 × 10⁻¹⁰ unterscheidet. Die resultierende Uhrendrift:
+Jeder GPS-Satellit trägt eine Atomuhr in Höhe h ≈ 20.200 km, wo D(r) sich von der Erdoberfläche um ΔΞ = 4,45 × 10⁻¹⁰ unterscheidet. Die resultierende Uhrendrift:
 
 - **Gravitativer Beitrag:** +45,9 μs/Tag (Uhren ticken schneller in der Höhe)
 - **Kinematischer Beitrag:** −7,1 μs/Tag (Zeitdilatation durch Orbitalgeschwindigkeit)
@@ -5866,7 +5890,7 @@ Ein Wasserstoff-Maser-Uhr wurde auf einer suborbitalen Flugbahn auf 10.000 km H�
 - **Gemessen:** z = (4,36 ± 0,03) × 10⁻¹⁰
 - **Präzision:** 70 Teile pro Million
 
-Die Übereinstimmung bestätigt z $\neq$ 0 mit **>10⁴ σ** Signifikanz.
+Die Übereinstimmung bestätigt z ≠ 0 mit **>10⁴ σ** Signifikanz.
 
 ### ACES und zukünftige Tests
 
@@ -5892,9 +5916,9 @@ Das No-Go-Theorem hat drei wichtige Konsequenzen:
 
 Um zu verstehen, warum das No-Retuning-Theorem notwendig ist, betrachte drei Beobachter: Alice bei Radius r_1 (hohes Ξ), Bob bei Radius r_2 (mittleres Ξ) und Carol bei Radius r_3 (niedriges Ξ, weit von der Masse). Alice emittiert ein Photon zu Carol. Das Photon passiert Bobs Position auf dem Weg.
 
-Szenario 1 (Kein Retuning): Das Photon kommt bei Carol mit Frequenz $f_{Carol}$ = $f_{Alice}$ × D_1/D_3 an. Das Ergebnis hängt nur von den Ξ-Werten bei Alice und Carol ab, nicht von Bobs Position.
+Szenario 1 (Kein Retuning): Das Photon kommt bei Carol mit Frequenz f_Carol = f_Alice × D_1/D_3 an. Das Ergebnis hängt nur von den Ξ-Werten bei Alice und Carol ab, nicht von Bobs Position.
 
-Szenario 2 (Retuning): Das Photon stimmt sich bei Bobs Position auf $f_{Bob}$ = $f_{Alice}$ × D_1/D_2 nach, und dann erneut auf $f_{Carol}$ = $f_{Bob}$ × D_2/D_3 = $f_{Alice}$ × D_1/D_3. Dasselbe Ergebnis — aber nur wenn Bob auf dem direkten Pfad von Alice zu Carol liegt.
+Szenario 2 (Retuning): Das Photon stimmt sich bei Bobs Position auf f_Bob = f_Alice × D_1/D_2 nach, und dann erneut auf f_Carol = f_Bob × D_2/D_3 = f_Alice × D_1/D_3. Dasselbe Ergebnis — aber nur wenn Bob auf dem direkten Pfad von Alice zu Carol liegt.
 
 Wenn Bob leicht neben dem direkten Pfad ist: In Szenario 1 ändert sich das Ergebnis nicht. In Szenario 2 hängt das Ergebnis davon ab, ob das Photon durch Bobs Position läuft — eine Pfadabhängigkeit, die die Endpunkt-Eigenschaft der Rotverschiebung verletzt.
 
@@ -5975,9 +5999,9 @@ Teil IV reformuliert diese elektromagnetischen Ergebnisse in einer frequenzbasie
 
 Um zu verstehen, warum das No-Retuning-Theorem notwendig ist, betrachte drei Beobachter: Alice bei Radius r_1 (hohes Ξ), Bob bei Radius r_2 (mittleres Ξ) und Carol bei Radius r_3 (niedriges Ξ, weit von der Masse). Alice emittiert ein Photon zu Carol. Das Photon passiert Bobs Position auf dem Weg.
 
-Szenario 1 (Kein Retuning): Das Photon kommt bei Carol mit Frequenz $f_{Carol}$ = $f_{Alice}$ × D_1/D_3 an. Das Ergebnis hängt nur von den Ξ-Werten bei Alice und Carol ab, nicht von Bobs Position.
+Szenario 1 (Kein Retuning): Das Photon kommt bei Carol mit Frequenz f_Carol = f_Alice × D_1/D_3 an. Das Ergebnis hängt nur von den Ξ-Werten bei Alice und Carol ab, nicht von Bobs Position.
 
-Szenario 2 (Retuning): Das Photon stimmt sich bei Bobs Position auf $f_{Bob}$ = $f_{Alice}$ × D_1/D_2 nach, und dann erneut auf $f_{Carol}$ = $f_{Bob}$ × D_2/D_3 = $f_{Alice}$ × D_1/D_3. Dasselbe Ergebnis — aber nur wenn Bob auf dem direkten Pfad von Alice zu Carol liegt.
+Szenario 2 (Retuning): Das Photon stimmt sich bei Bobs Position auf f_Bob = f_Alice × D_1/D_2 nach, und dann erneut auf f_Carol = f_Bob × D_2/D_3 = f_Alice × D_1/D_3. Dasselbe Ergebnis — aber nur wenn Bob auf dem direkten Pfad von Alice zu Carol liegt.
 
 Wenn Bob leicht neben dem direkten Pfad ist: In Szenario 1 ändert sich das Ergebnis nicht. In Szenario 2 hängt das Ergebnis davon ab, ob das Photon durch Bobs Position läuft — eine Pfadabhängigkeit, die die Endpunkt-Eigenschaft der Rotverschiebung verletzt.
 
@@ -6009,13 +6033,13 @@ Das No-Retuning-Theorem impliziert auch die Erhaltung der Photonenzahl in einem 
 
 Das No-Retuning-Theorem hat eine natuerliche Verbindung zur Quantenoptik. In der Quantenoptik wird ein Photon durch seinen Fock-Zustand |n> beschrieben, wobei n die Photonenzahl ist. Die Frequenz ist durch den Zustand des Feldes bestimmt, nicht durch aeussere Kraefte.
 
-In SSZ propagiert ein Photon durch das Segmentgitter, ohne seine Modenfrequenz zu aendern — analog zur Propagation eines Photons durch ein dispersionsfreies Medium in der Quantenoptik. Die lokale Phasengeschwindigkeit aendert sich ($v_{phase}$ = c/n(r) = c/(1+Xi)), aber die Modenfrequenz bleibt erhalten.
+In SSZ propagiert ein Photon durch das Segmentgitter, ohne seine Modenfrequenz zu aendern — analog zur Propagation eines Photons durch ein dispersionsfreies Medium in der Quantenoptik. Die lokale Phasengeschwindigkeit aendert sich (v_phase = c/n(r) = c/(1+Xi)), aber die Modenfrequenz bleibt erhalten.
 
 Diese Analogie kann formalisiert werden: Der Hamiltonian des elektromagnetischen Feldes in SSZ ist
 
-H = Sum\_k hbar*$\omega_{\text{k}}$ * ($a_{k}$^dagger * $a_{k}$ + 1/2)
+H = Sum_k hbar*omega_k * (a_k^dagger * a_k + 1/2)
 
-wobei $\omega_{\text{k}}$ die Modenfrequenz ist. Da H zeitunabhaengig ist (fuer statische Gravitationsfelder), sind die $\omega_{\text{k}}$ Konstanten der Bewegung — das No-Retuning-Theorem folgt direkt aus der Zeitunabhaengigkeit des Hamiltonians.
+wobei omega_k die Modenfrequenz ist. Da H zeitunabhaengig ist (fuer statische Gravitationsfelder), sind die omega_k Konstanten der Bewegung — das No-Retuning-Theorem folgt direkt aus der Zeitunabhaengigkeit des Hamiltonians.
 
 ### Gedankenexperiment: Gravitatives Mach-Zehnder-Interferometer
 
@@ -6024,7 +6048,7 @@ Ein Mach-Zehnder-Interferometer mit einem Arm in einem Gravitationsfeld und eine
 Arm 1: Photon propagiert horizontal (kein Gravitationseffekt)
 Arm 2: Photon propagiert vertikal nach oben, horizontal, und vertikal nach unten
 
-In der ART und SSZ akkumuliert Arm 2 eine zusaetzliche Phase $\Delta_{\phi}$ = omega * Delta_t_grav, wobei Delta_t_grav die gravitationale Zeitverzoegerung ist. Das Interferenzmuster am Ausgang kodiert die Phasendifferenz.
+In der ART und SSZ akkumuliert Arm 2 eine zusaetzliche Phase Delta_phi = omega * Delta_t_grav, wobei Delta_t_grav die gravitationale Zeitverzoegerung ist. Das Interferenzmuster am Ausgang kodiert die Phasendifferenz.
 
 Entscheidend: Die Frequenz des Photons ist in beiden Armen identisch (No-Retuning). Die Phasendifferenz entsteht durch die unterschiedliche Pfadlaenge in der Raumzeit, nicht durch eine Frequenzaenderung.
 
@@ -6036,7 +6060,7 @@ Die Kruemmung der Raumzeit kann durch elektromagnetische Sonden gemessen werden.
 
 Die praktische Konsequenz: Die Kruemmung kann durch Messung der zweiten Ableitung der Rotverschiebung bestimmt werden. Wenn die Rotverschiebung z(r) = Xi(r) als Funktion des Radius gemessen wird (z.B. durch Spektroskopie von Materie in verschiedenen Entfernungen von einem kompakten Objekt), kann die Kruemmung durch numerische Differentiation bestimmt werden.
 
-Fuer das Schwachfeld (Xi = $r_{s}$/(2r)) ist die Kruemmung: R = 0 (Vakuum-Loesung, wie in der ART). Fuer das Starkfeld (Xi = 1 - exp(-phi*r/r_s)) ist die Kruemmung: R != 0 (weil die Starkfeldformel eine andere Struktur hat als die Schwarzschild-Loesung). Dieser Unterschied ist eine der Schluesselvorhersagen von SSZ: Die Raumzeit nahe der natuerlichen Grenze hat eine andere Kruemmungsstruktur als in der ART.
+Fuer das Schwachfeld (Xi = r_s/(2r)) ist die Kruemmung: R = 0 (Vakuum-Loesung, wie in der ART). Fuer das Starkfeld (Xi = 1 - exp(-phi*r/r_s)) ist die Kruemmung: R != 0 (weil die Starkfeldformel eine andere Struktur hat als die Schwarzschild-Loesung). Dieser Unterschied ist eine der Schluesselvorhersagen von SSZ: Die Raumzeit nahe der natuerlichen Grenze hat eine andere Kruemmungsstruktur als in der ART.
 
 ### Dreifach-Uhren-Holonomie
 
@@ -6044,13 +6068,13 @@ Die Dreifach-Uhren-Holonomie ist ein Gedankenexperiment, das die Kruemmung der R
 
 In flacher Raumzeit (keine Kruemmung) ist die Holonomie null: Die Uhren zeigen konsistente Zeiten an, unabhaengig von der Reihenfolge des Vergleichs. In gekruemmter Raumzeit ist die Holonomie nicht-null: Die Uhren zeigen inkonsistente Zeiten an, und die Inkonsistenz ist proportional zur Kruemmung.
 
-In SSZ ist die Holonomie: $\Delta_{\tau}$ = tau * (Xi(r_1) - 2*Xi(r_2) + Xi(r_3)) * (r_2 - r_1)^2 / (2 r_2^2). Dies ist die diskrete zweite Ableitung von Xi, multipliziert mit der Eigenzeit und dem Quadrat des Abstands. Die Messung der Holonomie liefert eine direkte Bestimmung der Kruemmung, ohne Annahmen ueber die Metrik.
+In SSZ ist die Holonomie: Delta_tau = tau * (Xi(r_1) - 2*Xi(r_2) + Xi(r_3)) * (r_2 - r_1)^2 / (2 r_2^2). Dies ist die diskrete zweite Ableitung von Xi, multipliziert mit der Eigenzeit und dem Quadrat des Abstands. Die Messung der Holonomie liefert eine direkte Bestimmung der Kruemmung, ohne Annahmen ueber die Metrik.
 
 ### Anwendung auf das Event Horizon Telescope
 
-Das Event Horizon Telescope (EHT) hat 2019 das erste Bild des Schattens des supermassiven Schwarzen Lochs M87* veroeffentlicht. Der Schatten entsteht durch die Lichtablenkung nahe dem Photonenring (r = 1,5 $r_{s}$ in der ART).
+Das Event Horizon Telescope (EHT) hat 2019 das erste Bild des Schattens des supermassiven Schwarzen Lochs M87* veroeffentlicht. Der Schatten entsteht durch die Lichtablenkung nahe dem Photonenring (r = 1,5 r_s in der ART).
 
-In SSZ ist der Photonenring leicht verschoben: r_photon_SSZ = 1,5 $r_{s}$ * (1 + Xi(1,5 $r_{s}$)/3) = 1,5 $r_{s}$ * (1 + 0,111) = 1,667 $r_{s}$. Die resultierende Aenderung des Schattenradius betraegt ~1,3%, was mit dem ngEHT (next-generation EHT, geplant fuer die 2030er Jahre) messbar sein sollte.
+In SSZ ist der Photonenring leicht verschoben: r_photon_SSZ = 1,5 r_s * (1 + Xi(1,5 r_s)/3) = 1,5 r_s * (1 + 0,111) = 1,667 r_s. Die resultierende Aenderung des Schattenradius betraegt ~1,3%, was mit dem ngEHT (next-generation EHT, geplant fuer die 2030er Jahre) messbar sein sollte.
 
 Die EHT-Messung des Schattenradius von M87* (theta = 42 +/- 3 Mikrobogensekunden) ist derzeit mit beiden Theorien (ART und SSZ) konsistent, weil die Messunsicherheit (~7%) groesser ist als die SSZ-Korrektur (~1,3%). Das ngEHT wird die Unsicherheit auf ~0,5% reduzieren, was eine Unterscheidung ermoeglicht.
 
@@ -6066,28 +6090,28 @@ In der ART haben Metrik-Perturbationen zwei Polarisationszustaende: Plus (+) und
 
 In SSZ gibt es genau zwei Polarisationszustaende -- identisch mit der ART. Dies ist eine direkte Konsequenz der Tatsache, dass SSZ im Schwachfeld mit der ART uebereinstimmt und keine zusaetzlichen Felder (Skalar, Vektor) einfuehrt.
 
-Die experimentelle Suche nach zusaetzlichen Polarisationen wird mit dem observational campaigns-complementary observatories-additional detector networks-Netzwerk durchgefuehrt. Bisherige Ergebnisse (GW170814, GW170817) sind konsistent mit nur zwei Polarisationen -- und damit mit SSZ/ART.
+Die experimentelle Suche nach zusaetzlichen Polarisationen wird mit GW-Detektor-Netzwerken durchgefuehrt. Bisherige Ergebnisse (GW170814, GW170817) sind konsistent mit nur zwei Polarisationen -- und damit mit SSZ/ART.
 
 ### Metrik-Perturbationen-Geschwindigkeit
 
-Die Geschwindigkeit von Metrik-Perturbationen in SSZ ist $c_{gw}$ = c (exakt). Dies wurde durch die gleichzeitige Beobachtung von GW170817 (Metrik-Perturbationen) und GRB 170817A (Gamma-Strahlung) bestaetigt: |$c_{gw}$/c - 1| < 5 x 10^{-16}.
+Die Geschwindigkeit von Metrik-Perturbationen in SSZ ist c_gw = c (exakt). Dies wurde durch die gleichzeitige Beobachtung von GW170817 (Metrik-Perturbationen) und GRB 170817A (Gamma-Strahlung) bestaetigt: |c_gw/c - 1| < 5 x 10^{-16}.
 
-In SSZ ist $c_{gw}$ = c eine exakte Konsequenz der Metrikstruktur: Die Metrik-Perturbationen propagieren auf Null-Geodaeten der Hintergrundmetrik, und die Hintergrundmetrik hat die Lichtgeschwindigkeit c als Grenzgeschwindigkeit.
+In SSZ ist c_gw = c eine exakte Konsequenz der Metrikstruktur: Die Metrik-Perturbationen propagieren auf Null-Geodaeten der Hintergrundmetrik, und die Hintergrundmetrik hat die Lichtgeschwindigkeit c als Grenzgeschwindigkeit.
 
 ### Metrik-Perturbationen-Daempfung
 
 Die Metrik-Perturbationen-Daempfung (der Energieverlust eines Doppelsternsystems durch Metrik-Perturbationenemission) ist in SSZ identisch mit der ART-Vorhersage im Schwachfeld:
 
-$P_{gw}$ = -(32/5) * G^4/(c^5) * m_1^2 m_2^2 (m_1+m_2) / r^5
+P_gw = -(32/5) * G^4/(c^5) * m_1^2 m_2^2 (m_1+m_2) / r^5
 
 Der Hulse-Taylor-Pulsar (PSR B1913+16) bestaetigt diese Formel auf 0,2% -- einer der praezisesten Tests der Gravitationsphysik ueberhaupt. SSZ ist vollstaendig konsistent mit dieser Messung.
 
+---
 
-\newpage
+# Kapitel 16: Frequenzbasiertes Rahmenwerk fuer Gravitation, Licht und Schwarze Loecher
 
-\part{Frequenz-Framework und Krümmungsdetektion}
-
-# Frequenzbasiertes Rahmenwerk fuer Gravitation, Licht und Schwarze Loecher
+**Teil IV -- Frequenzrahmenwerk und Kruemmungsdetektion**
+**Status:** ERWEITERTE FASSUNG
 
 
 ![Abb 16](figures/ch16_frequency/fig_16_01_frequency_framework.png)
@@ -6100,7 +6124,7 @@ Warum ist dies notwendig? Teil IV reformuliert die SSZ-Ergebnisse in einer frequ
 
 Frequenzen sind die am praezisesten messbaren Groessen der gesamten Physik. Moderne optische Gitteruhren erreichen eine fraktionale Frequenzstabilitaet von 10^-18 -- sie koennen eine Aenderung von einem Tick in einer Trillion detektieren. Keine andere physikalische Messung kommt dieser Praezision nahe.
 
-SSZ zeigt: Die Segmentdichte Xi(r) bestimmt den Zeitdilatationsfaktor D(r) = 1/(1+Xi), der das Verhaeltnis der lokalen Uhrfrequenz zur Uhrfrequenz im Unendlichen darstellt: $f_{lokal}$/f_inf = D(r). Jede gravitationsphysikalische Observable -- Rotverschiebung, Shapiro-Verzoegerung, Bahnpraezession, Lichtablenkung, sogar die Grenze eines Schwarzen Lochs -- laesst sich als aus D(r) abgeleitetes Frequenzverhaeltnis ausdruecken. Diese Umformulierung verbindet SSZ-Vorhersagen direkt mit hoechstpraezisen Experimenten und enthuellt Gravitation als **Frequenzgradienten** statt als Kraft.
+SSZ zeigt: Die Segmentdichte Xi(r) bestimmt den Zeitdilatationsfaktor D(r) = 1/(1+Xi), der das Verhaeltnis der lokalen Uhrfrequenz zur Uhrfrequenz im Unendlichen darstellt: f_lokal/f_inf = D(r). Jede gravitationsphysikalische Observable -- Rotverschiebung, Shapiro-Verzoegerung, Bahnpraezession, Lichtablenkung, sogar die Grenze eines Schwarzen Lochs -- laesst sich als aus D(r) abgeleitetes Frequenzverhaeltnis ausdruecken. Diese Umformulierung verbindet SSZ-Vorhersagen direkt mit hoechstpraezisen Experimenten und enthuellt Gravitation als **Frequenzgradienten** statt als Kraft.
 
 Dieses Kapitel entwickelt das Frequenzrahmenwerk, erklaert die Segmentquantisierung N_0 = 4, leitet die Newtonsche Gravitation aus dem Xi-Gradienten ab und zeigt, wie Lichtausbreitung und Schwarze-Loch-Struktur in das vereinheitlichte Frequenzbild passen.
 
@@ -6116,7 +6140,7 @@ Astronomen messen keine Segmentdichten direkt. Sie messen Frequenzen -- die Freq
 
 Das frequenzbasierte Rahmenwerk ist keine neue Theorie -- es ist eine Umformulierung derselben SSZ-Physik in einer anderen Sprache. Jedes Ergebnis dieses Kapitels laesst sich aus dem Segmentdichte-Formalismus der Teile I bis III ableiten. Der Vorteil: Die Frequenzsprache macht bestimmte Zusammenhaenge transparenter und bestimmte Berechnungen direkter.
 
-Fuer Studierende der Quantenmechanik: Die Beziehung zwischen geometrischem und Frequenzbild ist analog zur Beziehung zwischen Orts- und Impulsdarstellung in der Quantenmechanik. Die Segmentdichte Xi entspricht der Ortswellenfunktion; die Frequenzverhaeltnisse entsprechen der Impulswellenfunktion. Die verbindende Transformation ist die Zeitdilatationsrelation $f_{obs}$ = $f_{emit}$ mal D.
+Fuer Studierende der Quantenmechanik: Die Beziehung zwischen geometrischem und Frequenzbild ist analog zur Beziehung zwischen Orts- und Impulsdarstellung in der Quantenmechanik. Die Segmentdichte Xi entspricht der Ortswellenfunktion; die Frequenzverhaeltnisse entsprechen der Impulswellenfunktion. Die verbindende Transformation ist die Zeitdilatationsrelation f_obs = f_emit mal D.
 
 ## 16.1 Das Frequenzrahmenwerk
 
@@ -6124,17 +6148,17 @@ Fuer Studierende der Quantenmechanik: Die Beziehung zwischen geometrischem und F
 
 In SSZ lautet die fundamentale Beziehung zwischen Gravitation und Frequenzen:
 
-$f_{lokal}$ / $f_{inf}$ = D(r) = 1 / (1 + Xi(r))
+f_lokal / f_inf = D(r) = 1 / (1 + Xi(r))
 
 Diese einzige Gleichung kodiert eine enorme Menge an Physik:
 
-**Gravitationsrotverschiebung** (Kapitel 14): Ein bei $r_{emit}$ emittiertes Photon mit lokaler Frequenz $f_{emit}$ erreicht das Unendliche mit beobachteter Frequenz $f_{obs}$ = $f_{emit}$ mal D($r_{emit}$). Die Rotverschiebung z = $f_{emit}$/f_obs - 1 = Xi($r_{emit}$).
+**Gravitationsrotverschiebung** (Kapitel 14): Ein bei r_emit emittiertes Photon mit lokaler Frequenz f_emit erreicht das Unendliche mit beobachteter Frequenz f_obs = f_emit mal D(r_emit). Die Rotverschiebung z = f_emit/f_obs - 1 = Xi(r_emit).
 
 **Shapiro-Verzoegerung** (Kapitel 10): Die akkumulierte Phasendifferenz zwischen einem Photonenpfad durch ein Gravitationsfeld und einem Flachraum-Pfad betraegt $\Delta_\phi$ = (2πf/c) × Integral(Ξ dl). Diese Phasendifferenz, geteilt durch 2πf, ergibt die Zeitverzoegerung.
 
 **Bahnpraezession**: Die radiale Bahnfrequenz $f_r$ und die Winkelbahnfrequenz $f_\phi$ unterscheiden sich geringfuegig in einem Gravitationsfeld. Ihre Fehlanpassung erzeugt Periheldrehung: $\Delta_\omega$ = 2π(1 - $f_r$/$f_\phi$) pro Umlauf. Fuer Merkur: $\Delta_\omega$ = 42,98 Bogensekunden/Jahrhundert -- exakte Uebereinstimmung mit der ART im Schwachfeld.
 
-**Schwarzes-Loch-Grenze**: Der Radius, bei dem D(r) sein endliches Minimum D($r_{s}$) = 0,555 erreicht. Im Frequenzbild ist dies der Radius, an dem lokale Uhren mit 55,5% der Rate im Unendlichen laufen -- langsam, aber nicht gestoppt.
+**Schwarzes-Loch-Grenze**: Der Radius, bei dem D(r) sein endliches Minimum D(r_s) = 0,555 erreicht. Im Frequenzbild ist dies der Radius, an dem lokale Uhren mit 55,5% der Rate im Unendlichen laufen -- langsam, aber nicht gestoppt.
 
 ### Warum Frequenzen?
 
@@ -6167,13 +6191,13 @@ Die Tabelle umspannt neun Groessenordnungen der Gravitationsstaerke, vom GPS (wo
 
 SSZ legt eine fundamentale Quantisierung fest: Ein vollstaendiger Oszillationszyklus (eine Wellenlaenge) muss mindestens N_0 = 4 Segmentgrenzen durchqueren. Dies ergibt sich aus der Wellengeometrie: Eine sinusfoermige Oszillation hat vier Viertelphasen (0 -> pi/2 -> pi -> 3pi/2 -> 2pi), und jede Viertelphase erfordert mindestens eine Segmentdurchquerung. Die Quantisierungsbedingung lautet:
 
-$\lambda_{\text{min}}$ = N_0 * $l_{seg}$ = 4 * $l_{seg}$
+lambda_min = N_0 * l_seg = 4 * l_seg
 
 Dies setzt eine **Maximalfrequenz** fuer elektromagnetische Strahlung bei jedem Radius:
 
-$f_{max}$(r) = c / (4 * $l_{seg}$(r))
+f_max(r) = c / (4 * l_seg(r))
 
-Die lokale Segmentlaenge $l_{seg}$(r) nimmt mit zunehmendem Xi ab (Segmente werden in der Naehe massiver Koerper komprimiert), sodass $f_{max}$ nahe einer Masse zunimmt -- der UV-Cutoff ist in staerkeren Gravitationsfeldern hoeher.
+Die lokale Segmentlaenge l_seg(r) nimmt mit zunehmendem Xi ab (Segmente werden in der Naehe massiver Koerper komprimiert), sodass f_max nahe einer Masse zunimmt -- der UV-Cutoff ist in staerkeren Gravitationsfeldern hoeher.
 
 ### Verbindung zu pi und dem Winkelquantum
 
@@ -6187,21 +6211,21 @@ Deshalb ist N_0 = 4 und keine andere Zahl: Es ist die minimale ganze Zahl, die e
 
 Die Quantisierung N_0 = 4 hat zwei testbare Implikationen:
 
-**1. Natuerlicher UV-Cutoff.** Bei extrem hohen Frequenzen naehert sich die Photonenlaenge der Segmentlaenge. Unterhalb von lambda = 4*$l_{seg}$ wird die Ausbreitung durch das Segmentgitter unterdrueckt -- ein natuerlicher UV-Cutoff ohne die Divergenzen der Quantenfeldtheorie.
+**1. Natuerlicher UV-Cutoff.** Bei extrem hohen Frequenzen naehert sich die Photonenlaenge der Segmentlaenge. Unterhalb von lambda = 4*l_seg wird die Ausbreitung durch das Segmentgitter unterdrueckt -- ein natuerlicher UV-Cutoff ohne die Divergenzen der Quantenfeldtheorie.
 
-**2. Diskrete Dispersion bei extremen Energien.** In der Naehe des UV-Cutoffs fuehrt das Segmentgitter Dispersion ein: Photonen mit Wellenlaengen vergleichbar mit $l_{seg}$ wuerden sich anders ausbreiten als laengerwellige Photonen. Der Effekt ist derzeit nicht beobachtbar, aber prinzipiell testbar.
+**2. Diskrete Dispersion bei extremen Energien.** In der Naehe des UV-Cutoffs fuehrt das Segmentgitter Dispersion ein: Photonen mit Wellenlaengen vergleichbar mit l_seg wuerden sich anders ausbreiten als laengerwellige Photonen. Der Effekt ist derzeit nicht beobachtbar, aber prinzipiell testbar.
 
 ## 16.3 Gravitation als Frequenzgradient
 
 ### Ableitung des Newtonschen Gesetzes
 
-Das tiefgreifendste Ergebnis des Frequenzrahmenwerks: **Die Newtonsche Gravitation ist der Gradient der Segmentdichte.** Ausgehend von $\Xi_{\text{weak}}$ = $r_{s}$/(2r) = GM/(c^2 r):
+Das tiefgreifendste Ergebnis des Frequenzrahmenwerks: **Die Newtonsche Gravitation ist der Gradient der Segmentdichte.** Ausgehend von Xi_weak = r_s/(2r) = GM/(c^2 r):
 
 g(r) = -c^2 * dXi/dr
 
 Berechnung der Ableitung:
 
-dXi\_weak/dr = d/dr($r_{s}$/(2r)) = -$r_{s}$/(2r^2) = -GM/(c^2 r^2)
+dXi_weak/dr = d/dr(r_s/(2r)) = -r_s/(2r^2) = -GM/(c^2 r^2)
 
 Daher:
 
@@ -6217,7 +6241,7 @@ Dies ist die SSZ-Version des Aequivalenzprinzips: **Es gibt keine Gravitationskr
 
 **Rechenbeispiel -- Erdoberflaeche:**
 
-$\Xi_{\text{Erde}}$ = GM/(c^2 R) = (6,674e-11 x 5,97e24) / ((3e8)^2 x 6,371e6) = 6,96 x 10^-10
+Xi_Erde = GM/(c^2 R) = (6,674e-11 x 5,97e24) / ((3e8)^2 x 6,371e6) = 6,96 x 10^-10
 
 dXi/dr|_R = -GM/(c^2 R^2) = -1,09 x 10^-16 m^-1
 
@@ -6227,9 +6251,9 @@ g = c^2 x 1,09 x 10^-16 = 9,81 m/s^2  (Bestaetigung)
 
 ### Lichtausbreitung
 
-Licht bei Radius r hat die Koordinatengeschwindigkeit $v_{coord}$ = c*D(r). Im Frequenzbild bedeutet dies: Die scheinbare Frequenz des Photons (gemessen von einem fernen Beobachter) ist um D(r) reduziert, und seine scheinbare Wellenlaenge bleibt unveraendert, sodass die scheinbare Geschwindigkeit c*D(r) betraegt.
+Licht bei Radius r hat die Koordinatengeschwindigkeit v_coord = c*D(r). Im Frequenzbild bedeutet dies: Die scheinbare Frequenz des Photons (gemessen von einem fernen Beobachter) ist um D(r) reduziert, und seine scheinbare Wellenlaenge bleibt unveraendert, sodass die scheinbare Geschwindigkeit c*D(r) betraegt.
 
-Die Photonsphaere -- der Radius, bei dem kreisfoermige Photonenbahnen existieren -- tritt dort auf, wo das effektive Potential fuer Nullgeodaeten ein Maximum hat. In der ART (Schwarzschild) liegt dies bei r = 3*$r_{s}$/2 = 1,5*$r_{s}$. In SSZ ist das effektive Potential durch D(r) != sqrt(1 - $r_{s}$/r) modifiziert, wodurch die Photonsphaere geringfuegig nach innen verschoben wird auf $r_{ph}$ ~ 1,48*$r_{s}$ -- eine Sub-Prozent-Korrektur, die derzeit unterhalb der Beobachtungsaufloesung liegt.
+Die Photonsphaere -- der Radius, bei dem kreisfoermige Photonenbahnen existieren -- tritt dort auf, wo das effektive Potential fuer Nullgeodaeten ein Maximum hat. In der ART (Schwarzschild) liegt dies bei r = 3*r_s/2 = 1,5*r_s. In SSZ ist das effektive Potential durch D(r) != sqrt(1 - r_s/r) modifiziert, wodurch die Photonsphaere geringfuegig nach innen verschoben wird auf r_ph ~ 1,48*r_s -- eine Sub-Prozent-Korrektur, die derzeit unterhalb der Beobachtungsaufloesung liegt.
 
 ### Schwarzes-Loch-Grenze
 
@@ -6237,19 +6261,19 @@ Im Frequenzbild ist die Schwarze-Loch-Grenze der Radius, bei dem das Frequenzver
 
 $$D_{\min} = D(r_s) = \frac{1}{1 + \Xi(r_s)} = \frac{1}{1 + (1 - e^{-\varphi})} = \frac{1}{1{,}802} = 0{,}555$$
 
-Eine Uhr am Horizont laeuft mit 55,5% der Rate im Unendlichen. In der ART strebt D gegen 0 -- Uhren stoppen. Die SSZ-Vorhersage eines endlichen $D_{min}$ ist der zentrale Unterschied zwischen den beiden Theorien und die wichtigste falsifizierbare Vorhersage des Frequenzrahmenwerks.
+Eine Uhr am Horizont laeuft mit 55,5% der Rate im Unendlichen. In der ART strebt D gegen 0 -- Uhren stoppen. Die SSZ-Vorhersage eines endlichen D_min ist der zentrale Unterschied zwischen den beiden Theorien und die wichtigste falsifizierbare Vorhersage des Frequenzrahmenwerks.
 
-Die Horizontrotverschiebung z = Xi($r_{s}$) = 0,802 bedeutet, dass Photonen vom Horizont etwa 44,5% ihrer Energie verlieren -- eine grosse, aber endliche Rotverschiebung. Photonen KOENNEN dem SSZ-Horizont entkommen (mit stark reduzierter Energie), waehrend in der ART kein Photon von r = $r_{s}$ entkommen kann.
+Die Horizontrotverschiebung z = Xi(r_s) = 0,802 bedeutet, dass Photonen vom Horizont etwa 44,5% ihrer Energie verlieren -- eine grosse, aber endliche Rotverschiebung. Photonen KOENNEN dem SSZ-Horizont entkommen (mit stark reduzierter Energie), waehrend in der ART kein Photon von r = r_s entkommen kann.
 
 ## 16.5 Validierung und Konsistenz
 
-**Testdateien:** freq\_tests, test\_n0_quantization, test_gravity_gradient
+**Testdateien:** freq_tests, test_n0_quantization, test_gravity_gradient
 
 **Was die Tests beweisen:** Das Frequenzrahmenwerk reproduziert die Schwachfeld-ART fuer alle Testobjekte; N_0 = 4 ist konsistent mit der EM-Quantisierung; g(r) = GM/r^2 wird aus dXi/dr mit Maschinengenauigkeit wiedergewonnen; das D(r)-Profil stimmt mit allen 13 validierten astronomischen Objekten ueberein.
 
-**Was die Tests NICHT beweisen:** N_0 = 4 aus ersten Prinzipien (derzeit ein empirischer Input); die Starkfeld-Frequenzvorhersagen nahe Schwarzer Loecher; den UV-Cutoff ($l_{seg}$ ist unbekannt).
+**Was die Tests NICHT beweisen:** N_0 = 4 aus ersten Prinzipien (derzeit ein empirischer Input); die Starkfeld-Frequenzvorhersagen nahe Schwarzer Loecher; den UV-Cutoff (l_seg ist unbekannt).
 
-**Reproduktion:** `E:/clone\frequency-curvature-validation\`
+**Reproduktion:** `E:\clone\frequency-curvature-validation\`
 
 ## 16.6 Die N_0 = 4-Quantisierung
 
@@ -6259,7 +6283,7 @@ Die Segmentquantisierungszahl N_0 = 4 setzt die minimale Anzahl von Segmenten fe
 
 Warum N_0 = 4? In der geometrischen SSZ-Konstruktion erfordert ein vollstaendiger Rotationszyklus vier Vierteldrehungen (analog zu den vier Quadranten eines Kreises). Jede Vierteldrehung entspricht einer Segmentgrenzueberschreitung. Dies ist die minimale Anzahl diskreter Schritte, die noetig sind, um eine geschlossene Schleife im Segmentgitter zu vollenden.
 
-Der Wert N_0 = 4 ist nicht an Daten angepasst -- er folgt aus der geometrischen Konstruktion. Eine Aenderung von N_0 auf 3 oder 5 wuerde $\alpha_{\text{SSZ}}$ um 33 bzw. 20 Prozent aendern, was voellig inkorrekte Atomphysik erzeugen wuerde. Die Tatsache, dass N_0 = 4 den Wert $\alpha_{\text{SSZ}}$ = 1/137,036 liefert, der mit dem Messwert auf 0,003 Prozent uebereinstimmt, ist eine nicht-triviale Konsistenzpruefung.
+Der Wert N_0 = 4 ist nicht an Daten angepasst -- er folgt aus der geometrischen Konstruktion. Eine Aenderung von N_0 auf 3 oder 5 wuerde alpha_SSZ um 33 bzw. 20 Prozent aendern, was voellig inkorrekte Atomphysik erzeugen wuerde. Die Tatsache, dass N_0 = 4 den Wert alpha_SSZ = 1/137,036 liefert, der mit dem Messwert auf 0,003 Prozent uebereinstimmt, ist eine nicht-triviale Konsistenzpruefung.
 
 ### Implikationen fuer die Quantenmechanik
 
@@ -6269,13 +6293,13 @@ Falls N_0 eine tiefere physikalische Bedeutung hat, verbindet es sich mit der vi
 
 ### Parametrische Oszillator-Analogien
 
-Das Frequenzrahmenwerk hat formale Aehnlichkeiten mit parametrischen Oszillatormodellen in der Quantenoptik. Ein parametrischer Oszillator wandelt Pumpphotonen bei Frequenz $\omega_{\text{p}}$ in Signal- und Idler-Photonen bei $\omega_{\text{s}}$ und $\omega_{\text{i}}$ um, mit $\omega_{\text{p}}$ = $\omega_{\text{s}}$ + $\omega_{\text{i}}$. Das Erhaltungsgesetz ist analog zur SSZ-Schliessung: zwei Frequenzen, deren Produkt einer Konstante entspricht.
+Das Frequenzrahmenwerk hat formale Aehnlichkeiten mit parametrischen Oszillatormodellen in der Quantenoptik. Ein parametrischer Oszillator wandelt Pumpphotonen bei Frequenz omega_p in Signal- und Idler-Photonen bei omega_s und omega_i um, mit omega_p = omega_s + omega_i. Das Erhaltungsgesetz ist analog zur SSZ-Schliessung: zwei Frequenzen, deren Produkt einer Konstante entspricht.
 
 ### Atomuhrnetzwerke
 
-Das Frequenzrahmenwerk verbindet sich direkt mit dem aufkommenden Gebiet der relativistischen Geodaesie, in der Netzwerke optischer Uhren das Gravitationspotential kartieren. Die RIKEN-Gruppe in Tokio hat die Gravitationspotentialkartierung auf dem 10^-18-Niveau mit transportablen optischen Gitteruhren demonstriert und misst damit direkt die Frequenzrahmenwerk-Variablen D($r_{A}$)/D($r_{B}$) zwischen Standorten.
+Das Frequenzrahmenwerk verbindet sich direkt mit dem aufkommenden Gebiet der relativistischen Geodaesie, in der Netzwerke optischer Uhren das Gravitationspotential kartieren. Die RIKEN-Gruppe in Tokio hat die Gravitationspotentialkartierung auf dem 10^-18-Niveau mit transportablen optischen Gitteruhren demonstriert und misst damit direkt die Frequenzrahmenwerk-Variablen D(r_A)/D(r_B) zwischen Standorten.
 
-SSZ sagt voraus, dass solche Netzwerke Kruemmung (ueber $I_{ABC}$) messen werden, wenn sich Uhrnetzwerke von Paaren zu Dreiecken und groesseren Konfigurationen erweitern.
+SSZ sagt voraus, dass solche Netzwerke Kruemmung (ueber I_ABC) messen werden, wenn sich Uhrnetzwerke von Paaren zu Dreiecken und groesseren Konfigurationen erweitern.
 
 ---
 
@@ -6328,19 +6352,19 @@ Dieses Kapitel fuehrt eine fundamental andere Denkweise ueber Gravitation ein: A
 
 ### Beispiel: Frequenzverhaeltnis fuer GPS-Satelliten
 
-Ein GPS-Satellit in Hoehe h = 20.200 km hat $\Xi_{\text{GPS}}$ = $r_{s}$/(2*($R_{E}$ + h)) = 1,67 x 10^-10. Die Bodenstation hat $\Xi_{\text{Boden}}$ = r_s_Erde/(2*$R_{E}$) = 0,00887/(2 x 6.371.000) = 6,96 x 10^-10. Das Frequenzverhaeltnis betraegt $f_{GPS}$/f_Boden = (1 + $\Xi_{\text{Boden}}$)/(1 + $\Xi_{\text{GPS}}$) ~ 1 + 5,29 x 10^-10. Dies entspricht einem schnelleren Lauf der GPS-Uhren um 45,7 Mikrosekunden pro Tag -- in Uebereinstimmung mit der bekannten GPS-Korrektur.
+Ein GPS-Satellit in Hoehe h = 20.200 km hat Xi_GPS = r_s/(2*(R_E + h)) = 1,67 x 10^-10. Die Bodenstation hat Xi_Boden = r_s_Erde/(2*R_E) = 0,00887/(2 x 6.371.000) = 6,96 x 10^-10. Das Frequenzverhaeltnis betraegt f_GPS/f_Boden = (1 + Xi_Boden)/(1 + Xi_GPS) ~ 1 + 5,29 x 10^-10. Dies entspricht einem schnelleren Lauf der GPS-Uhren um 45,7 Mikrosekunden pro Tag -- in Uebereinstimmung mit der bekannten GPS-Korrektur.
 
 ### Frequenzverhaeltnisse als primaere Observablen
 
 In der Beobachtungsastronomie sind Frequenzverhaeltnisse oft die am praezisesten messbaren Groessen. Ein Spektrograph misst das Verhaeltnis einer beobachteten Spektrallinienfrequenz zu einer Laboreferenzfrequenz. Ein Pulsar-Timing-Array misst das Verhaeltnis beobachteter Pulsfrequenzen zu einer lokalen Uhrfrequenz.
 
-In jedem Fall ist die rohe Observable ein dimensionsloses Verhaeltnis, keine absolute Frequenz. Das SSZ-Frequenzrahmenwerk drueckt alle Vorhersagen in solchen Verhaeltnissen aus, wodurch die Umrechnung zwischen Koordinatensystemen oder Bezugssystemen entfaellt. Das Verhaeltnis $f_{obs}$/f_emit = D($r_{emit}$)/D($r_{obs}$) haengt nur von den Segmentdichten an den Emissions- und Beobachtungspunkten ab.
+In jedem Fall ist die rohe Observable ein dimensionsloses Verhaeltnis, keine absolute Frequenz. Das SSZ-Frequenzrahmenwerk drueckt alle Vorhersagen in solchen Verhaeltnissen aus, wodurch die Umrechnung zwischen Koordinatensystemen oder Bezugssystemen entfaellt. Das Verhaeltnis f_obs/f_emit = D(r_emit)/D(r_obs) haengt nur von den Segmentdichten an den Emissions- und Beobachtungspunkten ab.
 
 ### Anwendung auf Schwarze-Loch-Spektroskopie
 
 Das Frequenzrahmenwerk ist besonders maechtig fuer die Schwarze-Loch-Spektroskopie -- die Untersuchung quasi-normaler Modenfrequenzen gestoerter Schwarzer Loecher. Wenn ein Schwarzes Loch gestoert wird (z.B. durch eine Binaerverschmelzung), oszilliert es bei charakteristischen Frequenzen (quasi-normale Moden, QNM), die von Masse und Spin abhaengen.
 
-In der ART betraegt die fundamentale QNM-Frequenz eines Schwarzschild-Schwarzen-Lochs $f_{\text{QNM}} \approx 1{,}2 \times 10^4 / (M/M_\odot)$ Hz. In SSZ sind die QNM-Frequenzen durch das endliche $D_{\min}$ am Horizont modifiziert. Die SSZ-Vorhersage lautet $f_{\text{QNM,SSZ}} = f_{\text{QNM,ART}} \times (1 + \epsilon)$, wobei $\epsilon \approx D_{\min}^2 \approx 0{,}31$ betraegt -- eine etwa 3-prozentige Verschiebung. Diese liegt derzeit unter der Messgenauigkeit von observational (ca. 10%), koennte aber mit Detektoren der naechsten Generation (Einstein-Teleskop, Cosmic Explorer) detektierbar werden.
+In der ART betraegt die fundamentale QNM-Frequenz eines Schwarzschild-Schwarzen-Lochs $f_{\text{QNM}} \approx 1{,}2 \times 10^4 / (M/M_\odot)$ Hz. In SSZ sind die QNM-Frequenzen durch das endliche $D_{\min}$ am Horizont modifiziert. Die SSZ-Vorhersage lautet $f_{\text{QNM,SSZ}} = f_{\text{QNM,ART}} \times (1 + \epsilon)$, wobei $\epsilon \approx D_{\min}^2 \approx 0{,}31$ betraegt -- eine etwa 3-prozentige Verschiebung. Diese liegt derzeit unter der Messgenauigkeit aktueller GW-Detektoren (ca. 10%), koennte aber mit Detektoren der naechsten Generation (Einstein-Teleskop, Cosmic Explorer) detektierbar werden.
 
 - **Voraussetzungen:** Kap. 1-5 (Grundlagen), Kap. 10 (Skalierungseiche), Kap. 14 (Rotverschiebung)
 - **Referenziert von:** Kap. 17 (Kruemmungsdetektion), Kap. 18 (SL-Metrik)
@@ -6348,7 +6372,7 @@ In der ART betraegt die fundamentale QNM-Frequenz eines Schwarzschild-Schwarzen-
 
 ### Schumann-Resonanzen und Segmentgeometrie
 
-Die Schumann-Resonanzen sind elektromagnetische Eigenschwingungen des Hohlraums zwischen Erdoberflaeche und Ionosphaere. Die Grundfrequenz betraegt f_1 = 7,83 Hz. In SSZ ist die Schumann-Grundfrequenz durch die Segmentdichte der Erde modifiziert: f_1_SSZ = f_1_flat * D($R_{Erde}$). Die SSZ-Korrektur betraegt ~7 x 10^{-10} -- weit unterhalb der Messgenauigkeit. Fuer einen hypothetischen Neutronenstern mit Atmosphaere waere die Korrektur ~17%.
+Die Schumann-Resonanzen sind elektromagnetische Eigenschwingungen des Hohlraums zwischen Erdoberflaeche und Ionosphaere. Die Grundfrequenz betraegt f_1 = 7,83 Hz. In SSZ ist die Schumann-Grundfrequenz durch die Segmentdichte der Erde modifiziert: f_1_SSZ = f_1_flat * D(R_Erde). Die SSZ-Korrektur betraegt ~7 x 10^{-10} -- weit unterhalb der Messgenauigkeit. Fuer einen hypothetischen Neutronenstern mit Atmosphaere waere die Korrektur ~17%.
 
 ### N0-Quantisierung und Dimensionalitaet
 
@@ -6363,11 +6387,11 @@ Die Basissegmentierung N0 = 4 hat eine tiefe Verbindung zur Dimensionalitaet der
 
 ### Frequenzquantisierung in Gravitationsfeldern
 
-Die Quantisierungsbedingung f = n * f_0 wird durch das Gravitationsfeld modifiziert: $f_{lokal}$ = n * f_0 * (1 + Xi). Die Quantisierungsstufen liegen in einem Gravitationsfeld dichter als im flachen Raum. Die Dichte ist proportional zu (1 + Xi), maximal an der natuerlichen Grenze (1,802-fache Dichte).
+Die Quantisierungsbedingung f = n * f_0 wird durch das Gravitationsfeld modifiziert: f_lokal = n * f_0 * (1 + Xi). Die Quantisierungsstufen liegen in einem Gravitationsfeld dichter als im flachen Raum. Die Dichte ist proportional zu (1 + Xi), maximal an der natuerlichen Grenze (1,802-fache Dichte).
 
 ### Masse-Frequenz-Skalierung
 
-Die fundamentale Frequenz eines kompakten Objekts skaliert invers mit seiner Masse: f_0 = c^3 / (2 pi G M) * $\kappa_{\text{SSZ}}$. Fuer die Grundmode (l=2, n=0) ist $\kappa_{\text{SSZ}}$ = 0,0912 (vs. $\kappa_{\text{GR}}$ = 0,0886). Die 3%-Differenz ist die SSZ-Signatur.
+Die fundamentale Frequenz eines kompakten Objekts skaliert invers mit seiner Masse: f_0 = c^3 / (2 pi G M) * kappa_SSZ. Fuer die Grundmode (l=2, n=0) ist kappa_SSZ = 0,0912 (vs. kappa_GR = 0,0886). Die 3%-Differenz ist die SSZ-Signatur.
 
 | Objekt | Masse | f_0_GR (Hz) | f_0_SSZ (Hz) | Differenz |
 |--------|-------|------------|-------------|-----------|
@@ -6377,15 +6401,15 @@ Die fundamentale Frequenz eines kompakten Objekts skaliert invers mit seiner Mas
 
 ### Frequenz-Kruemmungs-Kopplung
 
-Die Kopplung zwischen Frequenz und Kruemmung: omega^2 = omega_0^2 * (1 + $\alpha_{\text{curv}}$ * R(r) * $r_{s}$^2), wobei $\alpha_{\text{curv}}$ = phi/(4 pi) = 0,129. Elektromagnetische Wellen in Regionen hoher Kruemmung erfahren eine zusaetzliche Frequenzverschiebung ueber die gravitative Rotverschiebung hinaus.
+Die Kopplung zwischen Frequenz und Kruemmung: omega^2 = omega_0^2 * (1 + alpha_curv * R(r) * r_s^2), wobei alpha_curv = phi/(4 pi) = 0,129. Elektromagnetische Wellen in Regionen hoher Kruemmung erfahren eine zusaetzliche Frequenzverschiebung ueber die gravitative Rotverschiebung hinaus.
 
 ### Rechenbeispiel: QNM-Frequenz eines stellaren Schwarzen Lochs
 
-Fuer M = 30 $M_{Sonne}$: f_QNM_GR = 250 Hz. In SSZ: f_QNM_SSZ = f_QNM_GR * 1,03 = 257,5 Hz. Die 3%-Verschiebung ist mit dem Einstein-Teleskop (Frequenzaufloesung ~0,1 Hz bei 250 Hz) messbar.
+Fuer M = 30 M_Sonne: f_QNM_GR = 250 Hz. In SSZ: f_QNM_SSZ = f_QNM_GR * 1,03 = 257,5 Hz. Die 3%-Verschiebung ist mit dem Einstein-Teleskop (Frequenzaufloesung ~0,1 Hz bei 250 Hz) messbar.
 
 ### Frequenz-Energie-Relation
 
-Die Planck-Einstein-Relation E = h f in einem Gravitationsfeld: $E_{lokal}$ = h $f_{lokal}$ = $E_{inf}$ * (1 + Xi). Die Gesamtenergie ist erhalten: $E_{total}$ = $E_{lokal}$ * D(r) = h $f_{inf}$ = const. Dies gilt exakt in SSZ fuer alle r.
+Die Planck-Einstein-Relation E = h f in einem Gravitationsfeld: E_lokal = h f_lokal = E_inf * (1 + Xi). Die Gesamtenergie ist erhalten: E_total = E_lokal * D(r) = h f_inf = const. Dies gilt exakt in SSZ fuer alle r.
 
 ### Experimentelle Perspektiven
 
@@ -6401,7 +6425,7 @@ Das naechste Kapitel (Kap. 17) erweitert das Frequenz-Rahmenwerk auf gebundene Z
 
 ### Verbindung zum Frequenz-Rahmenwerk der Quantengravitation
 
-Das SSZ-Frequenz-Rahmenwerk hat Parallelen zu anderen Ansaetzen der Quantengravitation. In der Loop-Quantengravitation (LQG) ist die Flaechenquantisierung A = 8 pi gamma $l_{P}$^2 sqrt(j(j+1)) eine Frequenzquantisierung im verkleideten Gewand (weil A ~ 1/f^2 fuer Metrik-Perturbationen). In der Stringtheorie sind die Schwingungsmoden der Strings ebenfalls quantisiert, mit $f_{n}$ = n/(2 pi $l_{s}$), wobei $l_{s}$ die Stringlaenge ist.
+Das SSZ-Frequenz-Rahmenwerk hat Parallelen zu anderen Ansaetzen der Quantengravitation. In der Loop-Quantengravitation (LQG) ist die Flaechenquantisierung A = 8 pi gamma l_P^2 sqrt(j(j+1)) eine Frequenzquantisierung im verkleideten Gewand (weil A ~ 1/f^2 fuer Metrik-Perturbationen). In der Stringtheorie sind die Schwingungsmoden der Strings ebenfalls quantisiert, mit f_n = n/(2 pi l_s), wobei l_s die Stringlaenge ist.
 
 Der entscheidende Unterschied: In SSZ ist die Frequenzquantisierung eine Konsequenz der Segmentgeometrie (N0 = 4, phi), nicht einer fundamentalen Stringlaenge oder eines Schleifen-Parameters. Die SSZ-Quantisierung ist daher parameterarm (nur phi und N0) und macht spezifischere Vorhersagen als LQG oder Stringtheorie.
 
@@ -6411,28 +6435,30 @@ Die Konvergenz verschiedener Ansaetze auf aehnliche Frequenzstrukturen deutet da
 
 Die Frequenz-Masse-Aequivalenz E = h f = m c^2 verbindet die Frequenz eines Teilchens mit seiner Masse. In SSZ wird diese Relation durch die Segmentdichte modifiziert:
 
-$E_{lokal}$ = h $f_{lokal}$ = m c^2 D(r)
+E_lokal = h f_lokal = m c^2 D(r)
 
 Dies bedeutet, dass die lokale Frequenz eines Teilchens von der Position im Gravitationsfeld abhaengt. Ein Teilchen mit Ruhemasse m hat an der natuerlichen Grenze eine lokale Frequenz von:
 
-$f_{lokal}$($r_{s}$) = m c^2 $D_{min}$ / h = 0,555 * m c^2 / h
+f_lokal(r_s) = m c^2 D_min / h = 0,555 * m c^2 / h
 
-Die Frequenz-Masse-Aequivalenz hat Konsequenzen fuer die Teilchenphysik in starken Gravitationsfeldern: Die effektive Masse eines Teilchens ist positionsabhaengig, $m_{eff}$ = m * D(r). Dies koennte Auswirkungen auf Zerfallsraten und Wechselwirkungsquerschnitte haben.
+Die Frequenz-Masse-Aequivalenz hat Konsequenzen fuer die Teilchenphysik in starken Gravitationsfeldern: Die effektive Masse eines Teilchens ist positionsabhaengig, m_eff = m * D(r). Dies koennte Auswirkungen auf Zerfallsraten und Wechselwirkungsquerschnitte haben.
 
 ### Ausblick: Frequenz-Rahmenwerk und Quantengravitation
 
 Das SSZ-Frequenz-Rahmenwerk oeffnet mehrere Forschungsrichtungen:
 
-1. **Frequenz-Raum-Dualitaet:** Die Beziehung $f_{lokal}$ = $f_{inf}$ * D(r) suggeriert eine Dualitaet zwischen Frequenzraum und Positionsraum, aehnlich der Fourier-Dualitaet in der Quantenmechanik.
+1. **Frequenz-Raum-Dualitaet:** Die Beziehung f_lokal = f_inf * D(r) suggeriert eine Dualitaet zwischen Frequenzraum und Positionsraum, aehnlich der Fourier-Dualitaet in der Quantenmechanik.
 
-2. **Diskretes Spektrum:** Wenn die Raumzeit segmentiert ist (N0 = 4), koennte das Frequenzspektrum nahe der natuerlichen Grenze diskret werden, mit einem minimalen Frequenzabstand $\Delta_{\text{f}}$ ~ c/($r_{s}$ * N0).
+2. **Diskretes Spektrum:** Wenn die Raumzeit segmentiert ist (N0 = 4), koennte das Frequenzspektrum nahe der natuerlichen Grenze diskret werden, mit einem minimalen Frequenzabstand Delta_f ~ c/(r_s * N0).
 
-3. **Gravitonen-Frequenz:** In einer quantisierten Version von SSZ haetten Gravitonen eine charakteristische Frequenz $f_{g}$ = c/(2 pi $r_{s}$) * D(r), die an der natuerlichen Grenze endlich bleibt.
+3. **Gravitonen-Frequenz:** In einer quantisierten Version von SSZ haetten Gravitonen eine charakteristische Frequenz f_g = c/(2 pi r_s) * D(r), die an der natuerlichen Grenze endlich bleibt.
 
+---
 
-\newpage
+# Kapitel 17: Frequenzbasierte Kruemmungsdetektion
 
-# Frequenzbasierte Kruemmungsdetektion
+**Teil IV -- Frequenzrahmenwerk und Kruemmungsdetektion**
+**Status:** ERWEITERTE FASSUNG
 
 
 ![Abb 17](figures/ch17_curvature/fig_17_01_curvature_detection.png)
@@ -6445,11 +6471,11 @@ Warum ist dies notwendig? Dieses Kapitel zeigt, wie Raumzeitkrümmung direkt aus
 
 Wie detektiert man Raumzeitkruemmung ohne Lineal? In der Allgemeinen Relativitaetstheorie ist Kruemmung im Riemann-Tensor kodiert -- einem mathematischen Objekt mit 20 unabhaengigen Komponenten, das beschreibt, wie parallele Linien konvergieren, wie Volumina schrumpfen und wie Uhren bei Transport entlang geschlossener Schleifen desynchronisieren. Die direkte Messung des Riemann-Tensors erfordert die Verfolgung der relativen Beschleunigung benachbarter frei fallender Teilchen (geodaetische Abweichung), was in der Praxis ausserordentlich schwierig ist.
 
-SSZ bietet eine Alternative: **frequenzbasierte Kruemmungsdetektion.** Durch den Vergleich der Frequenzen dreier oder mehr Atomuhren an verschiedenen Positionen laesst sich eine Invariante $I_{ABC}$ konstruieren -- eine Drei-Uhren-Holonomie --, die die eingeschlossene Raumzeitkruemmung misst, ohne Kenntnis der Hintergrundmetrik zu erfordern. Diese Invariante ist proportional zur Riemann-Tensorkomponente $R_{trtr}$ und zur Flaeche des von den drei Uhren gebildeten Dreiecks.
+SSZ bietet eine Alternative: **frequenzbasierte Kruemmungsdetektion.** Durch den Vergleich der Frequenzen dreier oder mehr Atomuhren an verschiedenen Positionen laesst sich eine Invariante I_ABC konstruieren -- eine Drei-Uhren-Holonomie --, die die eingeschlossene Raumzeitkruemmung misst, ohne Kenntnis der Hintergrundmetrik zu erfordern. Diese Invariante ist proportional zur Riemann-Tensorkomponente R_trtr und zur Flaeche des von den drei Uhren gebildeten Dreiecks.
 
 Die praktische Bedeutung ist enorm: Moderne optische Uhren erreichen 10^-18 fraktionale Stabilitaet, was frequenzbasierte Kruemmungsdetektion mit heutiger Technologie ueber Basislinien von ca. 10 km auf der Erdoberflaeche realisierbar macht.
 
-**Lesehinweis.** Abschnitt 17.1 erklaert dynamische Frequenzvergleiche. Abschnitt 17.2 leitet die $I_{ABC}$-Invariante ab. Abschnitt 17.3 entwickelt die Holonomie-Interpretation. Abschnitt 17.4 behandelt messbare Signaturen. Abschnitt 17.5 vergleicht mit anderen Methoden. Abschnitt 17.6 fasst die Validierung zusammen.
+**Lesehinweis.** Abschnitt 17.1 erklaert dynamische Frequenzvergleiche. Abschnitt 17.2 leitet die I_ABC-Invariante ab. Abschnitt 17.3 entwickelt die Holonomie-Interpretation. Abschnitt 17.4 behandelt messbare Signaturen. Abschnitt 17.5 vergleicht mit anderen Methoden. Abschnitt 17.6 fasst die Validierung zusammen.
 
 ---
 
@@ -6457,7 +6483,7 @@ Die praktische Bedeutung ist enorm: Moderne optische Uhren erreichen 10^-18 frak
 
 Kann man Gravitationskruemmung allein durch Frequenzmessungen detektieren, ohne geometrische oder metrische Information? Dieses Kapitel beantwortet diese Frage bejahend: Durch den Vergleich von Frequenzen dreier oder mehr Quellen bei verschiedenen Gravitationspotentialen kann ein Beobachter die lokale Kruemmung der Raumzeit rekonstruieren.
 
-Die Schluesselgroesse ist die Frequenz-Holonomie $I_{ABC}$, die das kumulative Frequenzverhaeltnis entlang eines geschlossenen Pfades misst, der drei Punkte A, B, C verbindet. Im flachen Raum ist $I_{ABC}$ = 1 exakt. Im gekruemmten Raum weicht $I_{ABC}$ von 1 um einen Betrag ab, der proportional zur eingeschlossenen Kruemmung ist.
+Die Schluesselgroesse ist die Frequenz-Holonomie I_ABC, die das kumulative Frequenzverhaeltnis entlang eines geschlossenen Pfades misst, der drei Punkte A, B, C verbindet. Im flachen Raum ist I_ABC = 1 exakt. Im gekruemmten Raum weicht I_ABC von 1 um einen Betrag ab, der proportional zur eingeschlossenen Kruemmung ist.
 
 Anschaulich: Man stelle sich drei Uhren in verschiedenen Hoehen eines Gravitationsfeldes vor. Jedes Uhrenpaar kann seine Tickraten durch Austausch elektromagnetischer Signale vergleichen. Vergleicht man A mit B, B mit C und C zurueck mit A, erwartet man, dass das kumulative Verhaeltnis exakt 1 ergibt (da man zum Ausgangspunkt zurueckkehrt). In gekruemmter Raumzeit ist es das nicht -- das Defizit misst die vom Dreieck ABC eingeschlossene Kruemmung. Dies ist das Frequenzanalogon des Winkeldefizits beim Paralleltransport entlang geschlossener Schleifen in der Differentialgeometrie.
 
@@ -6473,53 +6499,53 @@ SSZ macht dies konkret. Die Segmentdichte Xi(r) definiert ein Skalarfeld, dessen
 
 ### Zwei-Uhren-Vergleich
 
-Ein Zwei-Uhren-Vergleich misst das Frequenzverhaeltnis D($r_{A}$)/D($r_{B}$). Dieses Verhaeltnis haengt nur von den Segmentdichten an den beiden Uhrpositionen ab -- es ist pfadunabhaengig (weil Xi ein Skalarfeld ist und Skalardifferenzen pfadunabhaengig sind). Zwei Uhren allein koennen keine Kruemmung detektieren; sie koennen nur die Gravitationspotentialdifferenz messen.
+Ein Zwei-Uhren-Vergleich misst das Frequenzverhaeltnis D(r_A)/D(r_B). Dieses Verhaeltnis haengt nur von den Segmentdichten an den beiden Uhrpositionen ab -- es ist pfadunabhaengig (weil Xi ein Skalarfeld ist und Skalardifferenzen pfadunabhaengig sind). Zwei Uhren allein koennen keine Kruemmung detektieren; sie koennen nur die Gravitationspotentialdifferenz messen.
 
 ### Drei-Uhren-Vergleich: Kruemmungsdetektion
 
-Kruemmungsdetektion erfordert mindestens **drei Uhren** an Positionen $r_{A}$, $r_{B}$, $r_{C}$, die ein Dreieck bilden. Die korrekte Formulierung beinhaltet den Transport einer Uhr von A nach B nach C und zurueck nach A, wobei ihre akkumulierte Phase mit einer stationaeren Uhr bei A verglichen wird. Das Phasendefizit ist die Holonomie, und es misst die eingeschlossene Kruemmung.
+Kruemmungsdetektion erfordert mindestens **drei Uhren** an Positionen r_A, r_B, r_C, die ein Dreieck bilden. Die korrekte Formulierung beinhaltet den Transport einer Uhr von A nach B nach C und zurueck nach A, wobei ihre akkumulierte Phase mit einer stationaeren Uhr bei A verglichen wird. Das Phasendefizit ist die Holonomie, und es misst die eingeschlossene Kruemmung.
 
-## 17.2 Die $I_{ABC}$-Invariante
+## 17.2 Die I_ABC-Invariante
 
 ### Definition
 
-Die $I_{ABC}$-Invariante ist definiert als das Linienintegral des Xi-Gradienten entlang eines geschlossenen Dreiecks:
+Die I_ABC-Invariante ist definiert als das Linienintegral des Xi-Gradienten entlang eines geschlossenen Dreiecks:
 
-$I_{ABC}$ = Kreisintegral(grad(Xi) * dl) von A nach B nach C nach A
+I_ABC = Kreisintegral(grad(Xi) * dl) von A nach B nach C nach A
 
-Fuer ein Skalarfeld im flachen Raum ergibt der Satz von Stokes $I_{ABC}$ = 0 (die Rotation eines Gradienten verschwindet). Aber in gekruemmter Raumzeit ist die Konnexion nicht-trivial: Die kovariante Ableitung von grad(Xi) enthaelt Christoffel-Symbole, die Pfadabhaengigkeit einfuehren. Das Ergebnis:
+Fuer ein Skalarfeld im flachen Raum ergibt der Satz von Stokes I_ABC = 0 (die Rotation eines Gradienten verschwindet). Aber in gekruemmter Raumzeit ist die Konnexion nicht-trivial: Die kovariante Ableitung von grad(Xi) enthaelt Christoffel-Symbole, die Pfadabhaengigkeit einfuehren. Das Ergebnis:
 
-$I_{ABC}$ = Flaechenintegral($R_{trtr}$ dA) ueber Dreieck ABC
+I_ABC = Flaechenintegral(R_trtr dA) ueber Dreieck ABC
 
-wobei $R_{trtr}$ die relevante Riemann-Tensorkomponente ist und dA das Flaechenelement des Dreiecks. In fuehrender Ordnung:
+wobei R_trtr die relevante Riemann-Tensorkomponente ist und dA das Flaechenelement des Dreiecks. In fuehrender Ordnung:
 
-$I_{ABC}$ ~ $R_{trtr}$($r_{mittel}$) * A_Dreieck
+I_ABC ~ R_trtr(r_mittel) * A_Dreieck
 
 ### Verbindung zur Riemann-Kruemmung
 
 Im Schwachfeld lautet die relevante Riemann-Komponente:
 
-$R_{trtr}$ = -d^2(Phi)/dr^2 = -c^2 * d^2(Xi)/dr^2
+R_trtr = -d^2(Phi)/dr^2 = -c^2 * d^2(Xi)/dr^2
 
-Fuer $\Xi_{\text{weak}}$ = $r_{s}$/(2r):
+Fuer Xi_weak = r_s/(2r):
 
-d^2(Xi)/dr^2 = $r_{s}$/r^3 = 2GM/(c^2 r^3)
+d^2(Xi)/dr^2 = r_s/r^3 = 2GM/(c^2 r^3)
 
 Daher:
 
-$R_{trtr}$ = -2GM/r^3
+R_trtr = -2GM/r^3
 
-Dies ist der Newtonsche Gezeitentensor -- die Groesse, die Gezeitenkraefte erzeugt (das Strecken und Stauchen, das ausgedehnte Objekte in einem Gravitationsfeld erfahren). Die $I_{ABC}$-Invariante misst diesen Gezeitentensor integriert ueber die Dreiecksflaeche.
+Dies ist der Newtonsche Gezeitentensor -- die Groesse, die Gezeitenkraefte erzeugt (das Strecken und Stauchen, das ausgedehnte Objekte in einem Gravitationsfeld erfahren). Die I_ABC-Invariante misst diesen Gezeitentensor integriert ueber die Dreiecksflaeche.
 
 ### Rechenbeispiel: Erdoberflaeche
 
-Drei optische Uhren bilden ein vertikales Dreieck mit Basis 10 km und Hoehe 100 m auf der Erdoberflaeche. Der Schwerpunkt liegt bei r ~ $R_{Erde}$. Die Gezeitenkomponente:
+Drei optische Uhren bilden ein vertikales Dreieck mit Basis 10 km und Hoehe 100 m auf der Erdoberflaeche. Der Schwerpunkt liegt bei r ~ R_Erde. Die Gezeitenkomponente:
 
-$R_{trtr}$ = -2GM/R^3 = -2 x 6,674e-11 x 5,97e24 / (6,371e6)^3 = -3,08 x 10^-6 s^-2
+R_trtr = -2GM/R^3 = -2 x 6,674e-11 x 5,97e24 / (6,371e6)^3 = -3,08 x 10^-6 s^-2
 
-Die Dreiecksflaeche betraegt A ~ 1/2 x 10^4 x 100 = 5 x 10^5 m^2. Die $I_{ABC}$-Invariante:
+Die Dreiecksflaeche betraegt A ~ 1/2 x 10^4 x 100 = 5 x 10^5 m^2. Die I_ABC-Invariante:
 
-$I_{ABC}$ ~ 3,08 x 10^-6 x 5 x 10^5 / c^2 ~ 1,7 x 10^-17
+I_ABC ~ 3,08 x 10^-6 x 5 x 10^5 / c^2 ~ 1,7 x 10^-17
 
 Dies ist eine fraktionale Frequenzverschiebung von ca. 10^-17 -- in Reichweite heutiger optischer Uhren (10^-18 Stabilitaet). Die Messung ist mit heutiger Technologie realisierbar.
 
@@ -6533,9 +6559,9 @@ Im flachen Raum ist D konstant entlang des Pfades (oder variiert konsistent), un
 
 ### Segmentzaehl-Interpretation
 
-In SSZ wird die Holonomie zu einem **Segmentzaehl-Defizit.** Eine entlang des Dreiecks transportierte Uhr durchquert $N_{AB}$ + $N_{BC}$ + $N_{CA}$ Segmente. Im flachen Raum entspricht dies der Segmentzahl einer direkten (flachen) Triangulation. In gekruemmter Raumzeit gibt es einen Ueberschuss oder ein Defizit:
+In SSZ wird die Holonomie zu einem **Segmentzaehl-Defizit.** Eine entlang des Dreiecks transportierte Uhr durchquert N_AB + N_BC + N_CA Segmente. Im flachen Raum entspricht dies der Segmentzahl einer direkten (flachen) Triangulation. In gekruemmter Raumzeit gibt es einen Ueberschuss oder ein Defizit:
 
-$\Delta_{\text{N}}$ = N_Schleife - $N_{flach}$ ~ $R_{trtr}$ * A_Dreieck
+Delta_N = N_Schleife - N_flach ~ R_trtr * A_Dreieck
 
 Das Defizit entsteht, weil das Segmentgitter durch Kruemmung verzerrt ist: Die Segmente nahe der Masse sind dichter, und das Dreiecksinnere hat mehr Segmente als ein flaches Dreieck gleicher Koordinatengroesse. Die transportierte Uhr "zaehlt" diesen Ueberschuss und erzeugt einen Phasenexzess proportional zur Kruemmung.
 
@@ -6545,9 +6571,9 @@ Das Defizit entsteht, weil das Segmentgitter durch Kruemmung verzerrt ist: Die S
 
 **Konfiguration:** Drei optische Gitteruhren (Strontium oder Ytterbium), verbunden durch phasenstabilisierte optische Glasfaserverbindungen. Eine Uhr auf einem Berggipfel, eine im Tal, eine auf mittlerer Hoehe. Basislinie ca. 10 km, Hoehendifferenz ca. 100 m.
 
-**Erwartetes Signal:** $I_{ABC}$ ~ 10^-17 (siehe Rechenbeispiel oben).
+**Erwartetes Signal:** I_ABC ~ 10^-17 (siehe Rechenbeispiel oben).
 
-**Heutige Technologie:** Optische Uhren erreichen 10^-18 Stabilitaet ueber Mittelungszeiten von ca. 10^4 Sekunden. Das Signal-Rausch-Verhaeltnis fuer $I_{ABC}$ betraegt ca. 10 nach einem Tag Integration. **Diese Messung ist mit heutiger Technologie realisierbar.**
+**Heutige Technologie:** Optische Uhren erreichen 10^-18 Stabilitaet ueber Mittelungszeiten von ca. 10^4 Sekunden. Das Signal-Rausch-Verhaeltnis fuer I_ABC betraegt ca. 10 nach einem Tag Integration. **Diese Messung ist mit heutiger Technologie realisierbar.**
 
 **Systematische Fehler:** Der dominante systematische Fehler ist die Unsicherheit der Uhrenhoehendifferenzen (Geoid-Kenntnis). Aktuelle Geoidmodelle sind auf ca. 1 cm genau, was einen systematischen Fehler von ca. 10^-18 einfuehrt. Verbesserte Geoidmodelle von GRACE-FO werden dies reduzieren.
 
@@ -6555,19 +6581,19 @@ Das Defizit entsteht, weil das Segmentgitter durch Kruemmung verzerrt ist: Die S
 
 **Konfiguration:** Drei Satelliten (z.B. ACES auf ISS + zwei Bodenstationen oder drei dedizierte Satelliten in verschiedenen Orbits) mit optischen Uhrverbindungen.
 
-**Erwartetes Signal:** Haengt von der Orbitalgeometrie ab. Fuer ein Dreieck mit einem Eckpunkt in LEO (400 km), einem in GPS-Hoehe (20.200 km) und einem am Boden: $I_{ABC}$ ~ 10^-14 -- weit oberhalb der Detektionsschwelle.
+**Erwartetes Signal:** Haengt von der Orbitalgeometrie ab. Fuer ein Dreieck mit einem Eckpunkt in LEO (400 km), einem in GPS-Hoehe (20.200 km) und einem am Boden: I_ABC ~ 10^-14 -- weit oberhalb der Detektionsschwelle.
 
 **Zukuenftige Missionen:** STE-QUEST (ESA), MAGIS (NASA) und AION (UK) beinhalten alle Mehruhren-Frequenzvergleichsfaehigkeiten.
 
 ### Starkfeld-Detektion
 
-Nahe Neutronensternen ist die Kruemmung enorm: $R_{trtr}$ ~ 10^10 s^-2 an der Oberflaeche. Wenn zukuenftige Roentgen-Timing-Beobachtungen (NICER, STROBE-X, eXTP) drei Emissionsregionen bei verschiedenen Radien auf einer Neutronenstern-Oberflaeche identifizieren koennen, liesse sich die $I_{ABC}$-Invariante aus den relativen Frequenzverschiebungen extrahieren. Dies wuerde Kruemmung in einem Regime sondieren, wo SSZ und ART verschiedene Vorhersagen machen.
+Nahe Neutronensternen ist die Kruemmung enorm: R_trtr ~ 10^10 s^-2 an der Oberflaeche. Wenn zukuenftige Roentgen-Timing-Beobachtungen (NICER, STROBE-X, eXTP) drei Emissionsregionen bei verschiedenen Radien auf einer Neutronenstern-Oberflaeche identifizieren koennen, liesse sich die I_ABC-Invariante aus den relativen Frequenzverschiebungen extrahieren. Dies wuerde Kruemmung in einem Regime sondieren, wo SSZ und ART verschiedene Vorhersagen machen.
 
 ## 17.5 Vergleich mit anderen Methoden
 
 ### Geodaetische Abweichung
 
-Traditionelle Kruemmungsdetektion nutzt geodaetische Abweichung: relative Beschleunigung frei fallender Teilchen proportional zu $R_{trtr}$ mal Abstand. LISA Pathfinder erreichte 10^-15 m/s^2, erfordert aber widerstandsfreie Raumfahrzeuge. Die $I_{ABC}$-Methode verwendet stattdessen stationaere Uhren.
+Traditionelle Kruemmungsdetektion nutzt geodaetische Abweichung: relative Beschleunigung frei fallender Teilchen proportional zu R_trtr mal Abstand. LISA Pathfinder erreichte 10^-15 m/s^2, erfordert aber widerstandsfreie Raumfahrzeuge. Die I_ABC-Methode verwendet stattdessen stationaere Uhren.
 
 ### Schweregradiometrie
 
@@ -6581,19 +6607,19 @@ MAGIS-100 und AION nutzen Atominterferometrie ueber 100-m-Basislinien. SSZ-Vorhe
 
 **Testdateien:** test_curvature_detection, test_holonomy
 
-**Was die Tests beweisen:** $I_{ABC}$ reproduziert $R_{trtr}$ im Schwachfeld fuer alle Testkonfigurationen; das Segmentdefizit stimmt mit der Holonomie fuer Testdreiecke ueberein; das Schwachfeld-Ergebnis ist konsistent mit ART-Gezeitenkraeften.
+**Was die Tests beweisen:** I_ABC reproduziert R_trtr im Schwachfeld fuer alle Testkonfigurationen; das Segmentdefizit stimmt mit der Holonomie fuer Testdreiecke ueberein; das Schwachfeld-Ergebnis ist konsistent mit ART-Gezeitenkraeften.
 
-**Was die Tests NICHT beweisen:** Experimentelle Detektion -- keine Drei-Uhren-Kruemmungsmessung wurde bisher durchgefuehrt. Die $I_{ABC}$-Invariante ist eine **Vorhersage** des Frequenzrahmenwerks, noch keine Beobachtung.
+**Was die Tests NICHT beweisen:** Experimentelle Detektion -- keine Drei-Uhren-Kruemmungsmessung wurde bisher durchgefuehrt. Die I_ABC-Invariante ist eine **Vorhersage** des Frequenzrahmenwerks, noch keine Beobachtung.
 
-**Reproduktion:** `E:/clone\frequency-curvature-validation\`
+**Reproduktion:** `E:\clone\frequency-curvature-validation\`
 
 ## 17.7 Verbindung zur Metrik-Perturbationendetektion
 
 ### Kruemmung als Wellendetektion
 
-Metrik-Perturbationendetektoren sind fundamental Kruemmungsdetektoren: Sie messen den zeitveraenderlichen Riemann-Tensor ueber seinen Effekt auf den Abstand von Testmassen. observational campaigns misst $R_{txtx}$ (die Gezeitenkomponente entlang des Arms) via Laserinterferometrie. Die $I_{ABC}$-Methode misst dieselbe Tensorkomponente via Uhrenvergleiche.
+Metrik-Perturbationendetektoren sind fundamental Kruemmungsdetektoren: Sie messen den zeitveraenderlichen Riemann-Tensor ueber seinen Effekt auf den Abstand von Testmassen. Ein GW-Detektor misst R_txtx (die Gezeitenkomponente entlang des Arms) via Laserinterferometrie. Die I_ABC-Methode misst dieselbe Tensorkomponente via Uhrenvergleiche.
 
-Der Schluesselunterschied: observational campaigns misst dynamische Kruemmung (von vorbeiziehenden Metrik-Perturbationen) mit Empfindlichkeit ca. 10^-23/sqrt(Hz). Die $I_{ABC}$-Methode misst statische Kruemmung (von nahen Massen) mit Empfindlichkeit ca. 10^-17 nach 10^4 Sekunden Mittelung. Die beiden Methoden sind komplementaer.
+Der Schluesselunterschied: Ein GW-Detektor misst dynamische Kruemmung (von vorbeiziehenden Metrik-Perturbationen) mit Empfindlichkeit ca. 10^-23/sqrt(Hz). Die I_ABC-Methode misst statische Kruemmung (von nahen Massen) mit Empfindlichkeit ca. 10^-17 nach 10^4 Sekunden Mittelung. Die beiden Methoden sind komplementaer.
 
 ### Zukunft: Kombination von Uhr- und Interferometer-Netzwerken
 
@@ -6603,7 +6629,7 @@ Ein Hybrid-Detektor, der optische Uhrnetzwerke mit Laserinterferometern kombinie
 
 ### Anforderungen an die Uhrstabilitaet
 
-Die $I_{ABC}$-Invariante fuer ein erdbasiertes Dreieck (Basis 10 km, Hoehe 100 m) betraegt ca. 10^-17. Die Detektion erfordert Uhren mit fraktionaler Stabilitaet besser als 10^-18 nach Mittelung.
+Die I_ABC-Invariante fuer ein erdbasiertes Dreieck (Basis 10 km, Hoehe 100 m) betraegt ca. 10^-17. Die Detektion erfordert Uhren mit fraktionaler Stabilitaet besser als 10^-18 nach Mittelung.
 
 | Uhrentyp | Stabilitaet (1 s) | Stabilitaet (10^4 s) | Status |
 |----------|-------------------|----------------------|--------|
@@ -6649,9 +6675,9 @@ Strontium- und Ytterbium-Gitteruhren erfuellen bereits die Stabilitaetsanforderu
 
 ### Theoretische Grundlagen der Holonomie
 
-Die Frequenz-Holonomie $I_{ABC}$ ist definiert als das Produkt der Frequenzverhältnisse entlang einer geschlossenen Schleife: $I_{ABC}$ = ($f_{AB}$/f_BA) × ($f_{BC}$/f_CB) × ($f_{CA}$/f_AC), wobei $f_{XY}$ die Frequenz eines Standardsignals ist, das bei X emittiert und bei Y empfangen wird. Im flachen Raum ist jedes Verhältnis exakt 1, also $I_{ABC}$ = 1. Im gekrümmten Raum weichen die Verhältnisse um Beträge proportional zur Ξ-Differenz ab.
+Die Frequenz-Holonomie I_ABC ist definiert als das Produkt der Frequenzverhältnisse entlang einer geschlossenen Schleife: I_ABC = (f_AB/f_BA) × (f_BC/f_CB) × (f_CA/f_AC), wobei f_XY die Frequenz eines Standardsignals ist, das bei X emittiert und bei Y empfangen wird. Im flachen Raum ist jedes Verhältnis exakt 1, also I_ABC = 1. Im gekrümmten Raum weichen die Verhältnisse um Beträge proportional zur Ξ-Differenz ab.
 
-Die Holonomie $I_{ABC}$ ist eng mit dem Riemann-Krümmungstensor verwandt. Im Grenzfall, wo das Dreieck ABC klein gegen die Krümmungsskala ist: $I_{ABC}$ = 1 + A × R_0101 + O(A²), wobei A die Fläche des Dreiecks und R_0101 die Zeit-Zeit-Komponente des Riemann-Tensors ist. Diese Relation verbindet die messbare Frequenz-Holonomie mit der geometrischen Krümmung.
+Die Holonomie I_ABC ist eng mit dem Riemann-Krümmungstensor verwandt. Im Grenzfall, wo das Dreieck ABC klein gegen die Krümmungsskala ist: I_ABC = 1 + A × R_0101 + O(A²), wobei A die Fläche des Dreiecks und R_0101 die Zeit-Zeit-Komponente des Riemann-Tensors ist. Diese Relation verbindet die messbare Frequenz-Holonomie mit der geometrischen Krümmung.
 
 Die SSZ-Vorhersage für R_0101 unterscheidet sich von der ART-Vorhersage um Terme der Ordnung Ξ² (im Schwachfeld) und um Korrekturen der Ordnung Eins im Starkfeld. Die Frequenz-Holonomie liefert daher eine Sonde der Metrikstruktur, die komplementär zu den Standardtests (Rotverschiebung, Lichtablenkung, Shapiro-Delay) ist.
 
@@ -6677,7 +6703,7 @@ Die SSZ-Vorhersage fuer die Frequenz-Holonomie unterscheidet sich von der ART-Vo
 
 ### Kapitelzusammenfassung und Bruecke zu Teil V
 
-Dieses Kapitel hat gezeigt, dass Raumzeitkruemmung allein durch Frequenzmessungen detektiert werden kann, mittels der Holonomie $I_{ABC}$. Dieses Ergebnis hat praktische Implikationen fuer zukuenftige weltraumbasierte Gravitationsexperimente und liefert einen sauberen, koordinatenunabhaengigen Test des SSZ-Rahmenwerks.
+Dieses Kapitel hat gezeigt, dass Raumzeitkruemmung allein durch Frequenzmessungen detektiert werden kann, mittels der Holonomie I_ABC. Dieses Ergebnis hat praktische Implikationen fuer zukuenftige weltraumbasierte Gravitationsexperimente und liefert einen sauberen, koordinatenunabhaengigen Test des SSZ-Rahmenwerks.
 
 Teil V wendet den vollstaendigen SSZ-Formalismus auf das Starkfeld-Regime an: Schwarze Loecher, Singularitaeten, natuerliche Grenzen und Dunkle Sterne. Die in den Teilen III und IV entwickelten elektromagnetischen Werkzeuge sind essenziell fuer die Interpretation der Beobachtungssignaturen dieser Objekte. Der Uebergang von Schwachfeld-Uebereinstimmung mit der ART (Teile II-IV) zu Starkfeld-Abweichung von der ART (Teil V) ist die zentrale wissenschaftliche Geschichte dieses Buches.
 
@@ -6685,12 +6711,12 @@ Teil V wendet den vollstaendigen SSZ-Formalismus auf das Starkfeld-Regime an: Sc
 - **Referenziert von:** Kap. 30 (falsifizierbare Vorhersagen)
 - **Anhang:** Anh. B (B.1 Holonomie)
 
+---
 
-\newpage
+# Kapitel 18: Die vollständige SSZ-Schwarze-Loch-Metrik
 
-\part{Starkes Feld}
-
-# Die vollständige SSZ-Schwarze-Loch-Metrik
+**Teil V — Starkfeldobjekte**
+**Status:** ERWEITERTE FASSUNG v2
 
 
 ![Abb](figures/ch18_bh_metric/ssz_stability_map.png)
@@ -6707,7 +6733,7 @@ Teil V wendet den vollstaendigen SSZ-Formalismus auf das Starkfeld-Regime an: Sc
 
 Die Teile I–IV konstruierten das SSZ-Rahmenwerk von Axiomen über Kinematik, Elektromagnetismus und das Frequenzbild. Jedes bisherige Ergebnis lag im Schwach- bis Mittelfeld-Regime (r/r_s > 3), wo SSZ und ART nahezu ununterscheidbar sind. Teil V betritt das Starkfeldregime — die Domäne Schwarzer Löcher, Neutronensterne und des gravitativen Kollapses — wo SSZ seine kühnsten und am besten testbaren Vorhersagen macht.
 
-Die zentrale Behauptung von Teil V: **SSZ-Schwarze-Löcher haben keine Singularitäten, keine Ereignishorizonte und kein Informationsparadoxon.** Dies sind keine Ad-hoc-Modifikationen, sondern strukturelle Konsequenzen des einzigen Axioms, dass die Segmentdichte bei einem endlichen Maximum sättigt. Das gesamte Starkfeldbild folgt aus D($r_{s}$) = 0,555 > 0.
+Die zentrale Behauptung von Teil V: **SSZ-Schwarze-Löcher haben keine Singularitäten, keine Ereignishorizonte und kein Informationsparadoxon.** Dies sind keine Ad-hoc-Modifikationen, sondern strukturelle Konsequenzen des einzigen Axioms, dass die Segmentdichte bei einem endlichen Maximum sättigt. Das gesamte Starkfeldbild folgt aus D(r_s) = 0,555 > 0.
 
 ## Zusammenfassung
 
@@ -6723,9 +6749,9 @@ Warum ist dies notwendig? Teil V ist der Kern des SSZ-Rahmenwerks — hier werde
 
 ### Pädagogischer Überblick
 
-Die Schwarzschild-Metrik ist die exakte Lösung für ein nicht-rotierendes, ungeladenes Schwarzes Loch in der ART. Die Metrik hat eine Koordinatensingularität bei r = $r_{s}$ (dem Ereignishorizont), wo $g_{tt}$ = 0 und $g_{rr}$ divergiert, und eine physikalische Singularität bei r = 0, wo die Krümmungsinvarianten divergieren.
+Die Schwarzschild-Metrik ist die exakte Lösung für ein nicht-rotierendes, ungeladenes Schwarzes Loch in der ART. Die Metrik hat eine Koordinatensingularität bei r = r_s (dem Ereignishorizont), wo g_tt = 0 und g_rr divergiert, und eine physikalische Singularität bei r = 0, wo die Krümmungsinvarianten divergieren.
 
-SSZ ersetzt die Schwarzschild-Metrik durch eine modifizierte Metrik, die die Segmentdichte Ξ einbezieht. Die Schlüsselunterschiede: (1) D = 1/(1 + Ξ) erreicht nie null — bei r = $r_{s}$ ist $D_{min}$ = 0,555, was endlich ist; (2) es gibt keinen Ereignishorizont im ART-Sinne; (3) die Krümmungsinvarianten bleiben überall endlich.
+SSZ ersetzt die Schwarzschild-Metrik durch eine modifizierte Metrik, die die Segmentdichte Ξ einbezieht. Die Schlüsselunterschiede: (1) D = 1/(1 + Ξ) erreicht nie null — bei r = r_s ist D_min = 0,555, was endlich ist; (2) es gibt keinen Ereignishorizont im ART-Sinne; (3) die Krümmungsinvarianten bleiben überall endlich.
 
 ### Linienelement
 
@@ -6747,14 +6773,14 @@ wobei D(r) = 1/(1 + Ξ(r)) der Zeitdilatationsfaktor und dΩ² = dθ² + sin²θ
 | Singularität | r = 0 | Keine |
 | Horizont | r = r_s | Keiner (natürliche Grenze) |
 
-Bei großem r (Schwachfeld): D_SSZ $\approx$ 1 − r_s/(2r) + O(r_s/r)², was D_GR = √(1 − r_s/r) $\approx$ 1 − r_s/(2r) in führender Ordnung entspricht.
+Bei großem r (Schwachfeld): D_SSZ ≈ 1 − r_s/(2r) + O(r_s/r)², was D_GR = √(1 − r_s/r) ≈ 1 − r_s/(2r) in führender Ordnung entspricht.
 
 ### Warum diese Form?
 
 Die Metrikform ds² = −D²c²dt² + dr²/D² + r²dΩ² ist nicht willkürlich. Sie ist die einzige statische, kugelsymmetrische Metrik, die erfüllt:
 
 1. **Asymptotische Flachheit:** ds² → η_μν für r → ∞
-2. **Isotroper Raumanteil:** $g_{rr}$ = 1/g_tt (radiale und temporale Metrikkomponenten sind reziprok)
+2. **Isotroper Raumanteil:** g_rr = 1/g_tt (radiale und temporale Metrikkomponenten sind reziprok)
 3. **Segmentdichte-Interpretation:** D wird durch ein einziges Skalarfeld Ξ(r) bestimmt
 
 ### Christoffel-Symbole der SSZ-Metrik
@@ -6763,13 +6789,13 @@ Die nicht-verschwindenden Christoffel-Symbole der SSZ-Metrik sind:
 
 Γ^t_{tr} = D'/D, Γ^r_{tt} = D³ D' c², Γ^r_{rr} = -D'/D, Γ^r_{θθ} = -rD², Γ^r_{φφ} = -rD² sin²θ
 
-wobei D' = dD/dr. Für die Schwachfeld-Näherung D $\approx$ 1 − r_s/(2r) reduzieren sich diese auf die Standard-Schwarzschild-Christoffel-Symbole in erster Ordnung.
+wobei D' = dD/dr. Für die Schwachfeld-Näherung D ≈ 1 − r_s/(2r) reduzieren sich diese auf die Standard-Schwarzschild-Christoffel-Symbole in erster Ordnung.
 
 Der Ricci-Skalar der SSZ-Metrik ist:
 
 R = -2(D'' + 2D'/r + D''/D − D'²/D²)
 
-Dieser bleibt für alle r > 0 endlich, weil D und seine Ableitungen überall endlich sind. Bei r = r_s: R(r_s) $\approx$ −2,3/r_s². Im Vergleich: Der Kretschner-Skalar der Schwarzschild-Lösung divergiert als 48(GM)²/(c⁴r⁶) bei r → 0.
+Dieser bleibt für alle r > 0 endlich, weil D und seine Ableitungen überall endlich sind. Bei r = r_s: R(r_s) ≈ −2,3/r_s². Im Vergleich: Der Kretschner-Skalar der Schwarzschild-Lösung divergiert als 48(GM)²/(c⁴r⁶) bei r → 0.
 
 ### Isotrope Koordinaten
 
@@ -6785,29 +6811,29 @@ wobei r̄ die isotrope Radialkoordinate und s(r̄) = 1 + Ξ(r̄) ist. Diese Form
 
 Bei jedem Radius r definiert SSZ zwei charakteristische Geschwindigkeiten (Kapitel 8):
 
-$$v_{\text{esc}}(r) = c\sqrt{\frac{r_s}{r}}, \qquad v_{\text{fall}}(r) = c\sqrt{\frac{r}{r_s}}$$
+v_{\text{esc}}(r) = c\sqrt{\frac{r_s}{r}}, \qquad v_{\text{fall}}(r) = c\sqrt{\frac{r}{r_s}}
 
-mit der kinematischen Abschließung $v_{esc}$ · $v_{fall}$ = c² (Kapitel 9). Bei r = $r_{s}$:
+mit der kinematischen Abschließung v_esc · v_fall = c² (Kapitel 9). Bei r = r_s:
 
-$$v_{\text{esc}}(r_s) = c, \qquad v_{\text{fall}}(r_s) = c$$
+v_{\text{esc}}(r_s) = c, \qquad v_{\text{fall}}(r_s) = c
 
-Beide Geschwindigkeiten gleichen c an der natürlichen Grenze. In SSZ hat $v_{esc}$ = c bei $r_{s}$ eine andere Interpretation als in der ART: Licht KANN entkommen (weil D > 0), ist aber maximal rotverschoben.
+Beide Geschwindigkeiten gleichen c an der natürlichen Grenze. In SSZ hat v_esc = c bei r_s eine andere Interpretation als in der ART: Licht KANN entkommen (weil D > 0), ist aber maximal rotverschoben.
 
-### Das Geschwindigkeitsfeld nahe $r_{s}$
+### Das Geschwindigkeitsfeld nahe r_s
 
-Die Koordinatengeschwindigkeit eines frei fallenden Teilchens (Start aus der Ruhe im Unendlichen) bei r = $r_{s}$ beträgt $v_{coord}$ = c · D²($r_{s}$) = c · 0,308 = 0,308c — das einfallende Teilchen erreicht die Grenze mit endlicher Koordinatengeschwindigkeit.
+Die Koordinatengeschwindigkeit eines frei fallenden Teilchens (Start aus der Ruhe im Unendlichen) bei r = r_s beträgt v_coord = c · D²(r_s) = c · 0,308 = 0,308c — das einfallende Teilchen erreicht die Grenze mit endlicher Koordinatengeschwindigkeit.
 
-In der ART dagegen: $v_{coord}$ → 0 für r → $r_{s}$. Das Teilchen erreicht den Horizont nie in Koordinatenzeit; in SSZ kommt es in endlicher Zeit an.
+In der ART dagegen: v_coord → 0 für r → r_s. Das Teilchen erreicht den Horizont nie in Koordinatenzeit; in SSZ kommt es in endlicher Zeit an.
 
 ## 18.3 Zeitachsenerhaltung
 
 ### Kein Metriksignaturwechsel
 
-In der Schwarzschild-Metrik wechselt $g_{tt}$ = −(1 − $r_{s}$/r) sein Vorzeichen bei r = $r_{s}$: Für r > $r_{s}$ ist $g_{tt}$ < 0 (t ist zeitartig); für r < $r_{s}$ ist $g_{tt}$ > 0 (t wird raumartig). Dieser Signaturwechsel (−+++) → (+−++) ist der mathematische Ursprung der „Kein-Entkommen"-Eigenschaft.
+In der Schwarzschild-Metrik wechselt g_tt = −(1 − r_s/r) sein Vorzeichen bei r = r_s: Für r > r_s ist g_tt < 0 (t ist zeitartig); für r < r_s ist g_tt > 0 (t wird raumartig). Dieser Signaturwechsel (−+++) → (+−++) ist der mathematische Ursprung der „Kein-Entkommen"-Eigenschaft.
 
-In SSZ ist $g_{tt}$ = −D²(r) < 0 für alle r, weil D(r) > 0 überall. Die Zeitkoordinate t bleibt zeitartig bei jedem Radius. Die Metriksignatur ist immer (−+++).
+In SSZ ist g_tt = −D²(r) < 0 für alle r, weil D(r) > 0 überall. Die Zeitkoordinate t bleibt zeitartig bei jedem Radius. Die Metriksignatur ist immer (−+++).
 
-**Physikalische Konsequenz:** Es gibt kein „Inneres" eines Schwarzen Lochs im ART-Sinne — keine Region, in der räumliche Bewegung durch zeitliche Unvermeidlichkeit ersetzt wird. Ein Beobachter bei r < $r_{s}$ in SSZ kann wählen, sich nach innen, nach außen zu bewegen oder stationär zu bleiben.
+**Physikalische Konsequenz:** Es gibt kein „Inneres" eines Schwarzen Lochs im ART-Sinne — keine Region, in der räumliche Bewegung durch zeitliche Unvermeidlichkeit ersetzt wird. Ein Beobachter bei r < r_s in SSZ kann wählen, sich nach innen, nach außen zu bewegen oder stationär zu bleiben.
 
 ## 18.4 Energiebedingungen
 
@@ -6815,39 +6841,39 @@ In SSZ ist $g_{tt}$ = −D²(r) < 0 für alle r, weil D(r) > 0 überall. Die Zei
 
 Die WEC besagt, dass T_μν u^μ u^ν ≥ 0 für alle zeitartigen Vektoren u^μ — die von jedem Beobachter gemessene Energiedichte ist nicht-negativ. Die ART-Vakuum-Schwarzschild-Lösung hat T_μν = 0 überall.
 
-Die SSZ-Metrik ist keine Vakuumlösung — die Segmentdichte wirkt als effektive Energie-Impuls-Quelle. Die WEC ist für r > $r_{s}$ erfüllt, aber **marginal verletzt** nahe der natürlichen Grenze.
+Die SSZ-Metrik ist keine Vakuumlösung — die Segmentdichte wirkt als effektive Energie-Impuls-Quelle. Die WEC ist für r > r_s erfüllt, aber **marginal verletzt** nahe der natürlichen Grenze.
 
-Am WEC-Parameter bei r = r_s: w $\approx$ −0,03 — eine 3%-Verletzung. Dies ist die kleinste WEC-Verletzung aller singularitätsfreien Schwarze-Loch-Modelle in der Literatur (Bardeen: ~10%, Hayward: ~15%, Schleifen-Quantengravitation: ~5%).
+Am WEC-Parameter bei r = r_s: w ≈ −0,03 — eine 3%-Verletzung. Dies ist die kleinste WEC-Verletzung aller singularitätsfreien Schwarze-Loch-Modelle in der Literatur (Bardeen: ~10%, Hayward: ~15%, Schleifen-Quantengravitation: ~5%).
 
 ### Physikalische Interpretation
 
-Die WEC-Verletzung nahe $r_{s}$ bedeutet, dass das Segmentgitter als effektive „abstoßende" Quelle nahe der natürlichen Grenze wirkt — es widersteht weiterer Kompression jenseits der maximalen Segmentdichte. Dies ist analog zum Neutronenentartungsdruck in Neutronensternen.
+Die WEC-Verletzung nahe r_s bedeutet, dass das Segmentgitter als effektive „abstoßende" Quelle nahe der natürlichen Grenze wirkt — es widersteht weiterer Kompression jenseits der maximalen Segmentdichte. Dies ist analog zum Neutronenentartungsdruck in Neutronensternen.
 
 ### Vergleich mit anderen singularitätsfreien Modellen
 
 Mehrere singularitätsfreie Schwarze-Loch-Modelle existieren in der Literatur:
 
-**Bardeen (1968):** Das älteste reguläre Schwarze-Loch-Modell. Die Metrik hat einen de-Sitter-Kern bei r = 0 und keine Singularität. WEC-Verletzung: ~10% bei $r_{h}$.
+**Bardeen (1968):** Das älteste reguläre Schwarze-Loch-Modell. Die Metrik hat einen de-Sitter-Kern bei r = 0 und keine Singularität. WEC-Verletzung: ~10% bei r_h.
 
-**Hayward (2006):** Ähnlich wie Bardeen, aber mit einer einfacheren algebraischen Form. WEC-Verletzung: ~15% bei $r_{h}$.
+**Hayward (2006):** Ähnlich wie Bardeen, aber mit einer einfacheren algebraischen Form. WEC-Verletzung: ~15% bei r_h.
 
-**Schleifen-Quantengravitation (Modesto 2010):** Die Metrik wird durch Quantenkorrekturen modifiziert, die r = 0 durch eine Minimalfläche ersetzen. WEC-Verletzung: ~5% bei $r_{bounce}$.
+**Schleifen-Quantengravitation (Modesto 2010):** Die Metrik wird durch Quantenkorrekturen modifiziert, die r = 0 durch eine Minimalfläche ersetzen. WEC-Verletzung: ~5% bei r_bounce.
 
-**SSZ:** Die Metrik wird durch die Segmentdichtesättigung bestimmt, ohne freie Parameter. WEC-Verletzung: ~3% bei $r_{s}$ — die kleinste aller Modelle. Der entscheidende Unterschied: SSZ hat keinen freien Parameter (kein $l_{Planck}$, kein a_0), während alle anderen Modelle mindestens einen freien Parameter enthalten.
+**SSZ:** Die Metrik wird durch die Segmentdichtesättigung bestimmt, ohne freie Parameter. WEC-Verletzung: ~3% bei r_s — die kleinste aller Modelle. Der entscheidende Unterschied: SSZ hat keinen freien Parameter (kein l_Planck, kein a_0), während alle anderen Modelle mindestens einen freien Parameter enthalten.
 
 ### Die Starke Energiebedingung (SEC)
 
-Die SEC besagt, dass (T_μν − T g_μν/2) u^μ u^ν ≥ 0 für alle zeitartigen u^μ. Sie ist äquivalent zur Forderung, dass die Gravitation immer anziehend ist. Die SSZ-Metrik verletzt die SEC nahe $r_{s}$ — was physikalisch bedeutet, dass die Segmentdichtesättigung als effektive abstoßende Kraft wirkt. Diese SEC-Verletzung ist notwendig für jedes singularitätsfreie Modell (Penrose-Singularitätstheorem).
+Die SEC besagt, dass (T_μν − T g_μν/2) u^μ u^ν ≥ 0 für alle zeitartigen u^μ. Sie ist äquivalent zur Forderung, dass die Gravitation immer anziehend ist. Die SSZ-Metrik verletzt die SEC nahe r_s — was physikalisch bedeutet, dass die Segmentdichtesättigung als effektive abstoßende Kraft wirkt. Diese SEC-Verletzung ist notwendig für jedes singularitätsfreie Modell (Penrose-Singularitätstheorem).
 
 ## 18.5 Schwachfeldgrenzwert und PPN-Parameter
 
 ### Wiederherstellung von Schwarzschild
 
-Für r ≫ $r_{s}$ reduziert sich die SSZ-Metrik auf Schwarzschild:
+Für r ≫ r_s reduziert sich die SSZ-Metrik auf Schwarzschild:
 
 D_{\text{SSZ}} \approx 1 - \frac{r_s}{2r} + O(r_s^2/r^2), \quad D_{\text{ART}} \approx 1 - \frac{r_s}{2r} + O(r_s^2/r^2)
 
-Die führenden Terme stimmen exakt überein. Der erste Unterschied erscheint bei Ordnung ($r_{s}$/r)². Für die Sonnenoberfläche (r/r_s ~ 2,4 × 10⁵): die Differenz beträgt ~10⁻¹¹.
+Die führenden Terme stimmen exakt überein. Der erste Unterschied erscheint bei Ordnung (r_s/r)². Für die Sonnenoberfläche (r/r_s ~ 2,4 × 10⁵): die Differenz beträgt ~10⁻¹¹.
 
 ### PPN-Parameter
 
@@ -6865,37 +6891,37 @@ Die Bewegungsgleichung für ein massives Teilchen auf einer radialen Geodäte in
 
 (dr/dτ)² = c²(1 − D²(r))
 
-wobei τ die Eigenzeit ist. In der ART wäre dies (dr/dτ)² = c² $r_{s}$/r. Im Schwachfeld stimmen beide überein; im Starkfeld unterscheiden sie sich signifikant.
+wobei τ die Eigenzeit ist. In der ART wäre dies (dr/dτ)² = c² r_s/r. Im Schwachfeld stimmen beide überein; im Starkfeld unterscheiden sie sich signifikant.
 
-Die Eigenzeit zum Einfall von r = 10 $r_{s}$ bis r = $r_{s}$ beträgt:
+Die Eigenzeit zum Einfall von r = 10 r_s bis r = r_s beträgt:
 
-τ_{10→1} = ∫_{r_s}^{10$r_{s}$} dr / [c√(1 − D²(r))]
+τ_{10→1} = ∫_{r_s}^{10r_s} dr / [c√(1 − D²(r))]
 
-In der ART: τ_ART $\approx$ 28,3 r_s/c. In SSZ: τ_SSZ $\approx$ 31,7 r_s/c — etwa 12% länger. Dieser Unterschied entsteht, weil D(r) in SSZ bei r_s nicht null wird, was die Einfallgeschwindigkeit reduziert.
+In der ART: τ_ART ≈ 28,3 r_s/c. In SSZ: τ_SSZ ≈ 31,7 r_s/c — etwa 12% länger. Dieser Unterschied entsteht, weil D(r) in SSZ bei r_s nicht null wird, was die Einfallgeschwindigkeit reduziert.
 
 ### Kreisbahnen
 
-Für Kreisbahnen in der SSZ-Metrik gilt die Bedingung dV\_eff/dr = 0, wobei $V_{eff}$ das effektive Potential ist. Die innerste stabile Kreisbahn (ISCO) liegt in der ART bei $r_{ISCO}$ = 6 $r_{s}$ = 3 $r_{s}$ (in Schwarzschild-Koordinaten). In SSZ verschiebt sich der ISCO leicht nach innen, weil die Metrik bei $r_{s}$ weniger extrem ist.
+Für Kreisbahnen in der SSZ-Metrik gilt die Bedingung dV_eff/dr = 0, wobei V_eff das effektive Potential ist. Die innerste stabile Kreisbahn (ISCO) liegt in der ART bei r_ISCO = 6 r_s = 3 r_s (in Schwarzschild-Koordinaten). In SSZ verschiebt sich der ISCO leicht nach innen, weil die Metrik bei r_s weniger extrem ist.
 
-Die SSZ-ISCO-Position ist r_ISCO,SSZ $\approx$ 5,7 r_s — eine Verschiebung von ~5% gegenüber der ART. Diese Verschiebung beeinflusst die maximal erreichbare Akkretionseffizienz und die Temperatur der inneren Akkretionsscheibe.
+Die SSZ-ISCO-Position ist r_ISCO,SSZ ≈ 5,7 r_s — eine Verschiebung von ~5% gegenüber der ART. Diese Verschiebung beeinflusst die maximal erreichbare Akkretionseffizienz und die Temperatur der inneren Akkretionsscheibe.
 
 ### Lichtkegel-Struktur
 
-Die Lichtkegel in der SSZ-Metrik schließen sich nie vollständig (weil D > 0). In der ART kippen die Lichtkegel bei r = $r_{s}$ so, dass alle zukünftigen Lichtstrahlen nach innen zeigen. In SSZ bleibt bei r = $r_{s}$ ein endlicher Öffnungswinkel:
+Die Lichtkegel in der SSZ-Metrik schließen sich nie vollständig (weil D > 0). In der ART kippen die Lichtkegel bei r = r_s so, dass alle zukünftigen Lichtstrahlen nach innen zeigen. In SSZ bleibt bei r = r_s ein endlicher Öffnungswinkel:
 
-θ_max = arctan(D(r_s)) = arctan(0,555) $\approx$ 29°
+θ_max = arctan(D(r_s)) = arctan(0,555) ≈ 29°
 
-Dies bedeutet, dass ein Beobachter bei r = $r_{s}$ nach außen kommunizieren kann — stark rotverschoben, aber nicht kausal abgetrennt.
+Dies bedeutet, dass ein Beobachter bei r = r_s nach außen kommunizieren kann — stark rotverschoben, aber nicht kausal abgetrennt.
 
 ## 18.7 Validierung und Konsistenz
 
 **Testdateien:** `test_metric`, `test_energy_conditions`, `test_ppn`, `test_weak_field_limit`
 
-**Was die Tests beweisen:** D(r_s) = 0,555 bis Maschinengenauigkeit; Metriksignatur (−+++) bei allen Radien; WEC-Verletzung w $\approx$ −0,03 bei r_s; PPN-Parameter γ = β = 1; Schwachfeldentwicklung stimmt mit Schwarzschild bis O(r_s/r) überein; alle Christoffel-Symbole und Krümmungstensoren endlich.
+**Was die Tests beweisen:** D(r_s) = 0,555 bis Maschinengenauigkeit; Metriksignatur (−+++) bei allen Radien; WEC-Verletzung w ≈ −0,03 bei r_s; PPN-Parameter γ = β = 1; Schwachfeldentwicklung stimmt mit Schwarzschild bis O(r_s/r) überein; alle Christoffel-Symbole und Krümmungstensoren endlich.
 
-**Was die Tests NICHT beweisen:** Einzigartigkeit der SSZ-Metrik — andere Metriken mit D($r_{s}$) > 0 existieren (Bardeen, Hayward). SSZs Anspruch auf Einzigartigkeit beruht auf der parameterfreien Konstruktion.
+**Was die Tests NICHT beweisen:** Einzigartigkeit der SSZ-Metrik — andere Metriken mit D(r_s) > 0 existieren (Bardeen, Hayward). SSZs Anspruch auf Einzigartigkeit beruht auf der parameterfreien Konstruktion.
 
-**Reproduktion:** `E:/clone\ssz-metric-pure\`
+**Reproduktion:** `E:\clone\ssz-metric-pure\`
 
 ---
 
@@ -6907,15 +6933,15 @@ Dies bedeutet, dass ein Beobachter bei r = $r_{s}$ nach außen kommunizieren kan
 | 2 | D(r) = 1/(1+Ξ(r)) | Zeitdilatation |
 | 3 | D(r_s) = 0,555 | Horizontwert |
 | 4 | γ = β = 1 (PPN) | Schwachfeldübereinstimmung |
-| 5 | WEC-Verletzung: w $\approx$ −0,03 bei r_s | Energiebedingung |
+| 5 | WEC-Verletzung: w ≈ −0,03 bei r_s | Energiebedingung |
 
 ---
 
 ### Die Innenlösung
 
-In der ART ist das Schwarzschild-Innere (r < $r_{s}$) qualitativ verschieden vom Äußeren. Die Rollen von r und t tauschen: r wird zeitartig und t raumartig. Dies bedeutet, dass das Hineinfallen keine räumliche Bewegung ist, sondern eine zeitliche Evolution — der einfallende Beobachter kann die Singularität nicht vermeiden, genau wie wir morgen nicht vermeiden können.
+In der ART ist das Schwarzschild-Innere (r < r_s) qualitativ verschieden vom Äußeren. Die Rollen von r und t tauschen: r wird zeitartig und t raumartig. Dies bedeutet, dass das Hineinfallen keine räumliche Bewegung ist, sondern eine zeitliche Evolution — der einfallende Beobachter kann die Singularität nicht vermeiden, genau wie wir morgen nicht vermeiden können.
 
-In SSZ tritt dieser Rollentausch nicht auf. Weil D > 0 überall, bleibt die Metriksignatur (−,+,+,+) bei allen Radien. Die Koordinate r bleibt raumartig und t zeitartig in der gesamten Raumzeit. Ein Beobachter bei r < $r_{s}$ kann prinzipiell Signale nach außen senden (wenn auch mit extremer Rotverschiebung) und kann prinzipiell entkommen. Die Kausalstruktur ist fundamental verschieden von der ART: Es gibt keine gefangene Region, aus der Entkommen unmöglich ist.
+In SSZ tritt dieser Rollentausch nicht auf. Weil D > 0 überall, bleibt die Metriksignatur (−,+,+,+) bei allen Radien. Die Koordinate r bleibt raumartig und t zeitartig in der gesamten Raumzeit. Ein Beobachter bei r < r_s kann prinzipiell Signale nach außen senden (wenn auch mit extremer Rotverschiebung) und kann prinzipiell entkommen. Die Kausalstruktur ist fundamental verschieden von der ART: Es gibt keine gefangene Region, aus der Entkommen unmöglich ist.
 
 Dieser Unterschied hat Beobachtungskonsequenzen für Metrik-Perturbationensignale von Binärverschmelzungen. Das Ringdown-Signal nach der Verschmelzung hängt von den quasi-normalen Modenfrequenzen des Remnants ab, die wiederum von der Horizont-nahen Geometrie abhängen. Die SSZ-quasi-normalen Moden unterscheiden sich von den ART-Moden, weil die Innenstruktur verschieden ist.
 
@@ -6923,23 +6949,23 @@ Dieser Unterschied hat Beobachtungskonsequenzen für Metrik-Perturbationensignal
 
 Die Schwarze-Loch-Thermodynamik ist eine der bemerkenswertesten Entwicklungen der theoretischen Physik. Bekenstein (1972) und Hawking (1974) zeigten, dass Schwarze Löcher Entropie proportional zu ihrer Horizontfläche und Temperatur proportional zu ihrer Oberflächengravitation haben.
 
-In SSZ sind die thermodynamischen Eigenschaften durch das endliche $D_{min}$ modifiziert. Die Entropie ist weiterhin proportional zur Fläche der natürlichen Grenze (S = A/(4 $l_{P}$²)), aber die Temperatur ist durch die Oberflächengravitationskorrektur modifiziert. Die SSZ-Oberflächengravitation ist κ_SSZ = κ_ART × $D_{min}$² = κ_ART × 0,308.
+In SSZ sind die thermodynamischen Eigenschaften durch das endliche D_min modifiziert. Die Entropie ist weiterhin proportional zur Fläche der natürlichen Grenze (S = A/(4 l_P²)), aber die Temperatur ist durch die Oberflächengravitationskorrektur modifiziert. Die SSZ-Oberflächengravitation ist κ_SSZ = κ_ART × D_min² = κ_ART × 0,308.
 
-Die Hawking-Temperatur ist $T_{SSZ}$ = $T_{ART}$ × $D_{min}$² = $T_{ART}$ × 0,308. Für ein Sonnenmasse-Schwarzes-Loch: $T_{ART}$ = 6,17 × 10⁻⁸ K und $T_{SSZ}$ = 1,90 × 10⁻⁸ K. Beide Werte liegen weit unter jeder absehbaren Messfähigkeit. Für primordiale Schwarze Löcher mit Massen ~10¹² kg wäre die Hawking-Temperatur ~10¹¹ K (ART) bzw. ~3 × 10¹⁰ K (SSZ) — potenziell im Bereich von Gammastrahlen-Beobachtungen.
+Die Hawking-Temperatur ist T_SSZ = T_ART × D_min² = T_ART × 0,308. Für ein Sonnenmasse-Schwarzes-Loch: T_ART = 6,17 × 10⁻⁸ K und T_SSZ = 1,90 × 10⁻⁸ K. Beide Werte liegen weit unter jeder absehbaren Messfähigkeit. Für primordiale Schwarze Löcher mit Massen ~10¹² kg wäre die Hawking-Temperatur ~10¹¹ K (ART) bzw. ~3 × 10¹⁰ K (SSZ) — potenziell im Bereich von Gammastrahlen-Beobachtungen.
 
-Die Entropie-Flächen-Relation bleibt in SSZ erhalten, weil die natürliche Grenze eine wohldefinierte Fläche (4π$r_{s}$²) hat. Das erste Gesetz der Schwarze-Loch-Thermodynamik nimmt die Form dM = (κ_SSZ/(8π))dA + ΩdJ + ΦdQ an.
+Die Entropie-Flächen-Relation bleibt in SSZ erhalten, weil die natürliche Grenze eine wohldefinierte Fläche (4πr_s²) hat. Das erste Gesetz der Schwarze-Loch-Thermodynamik nimmt die Form dM = (κ_SSZ/(8π))dA + ΩdJ + ΦdQ an.
 
 ### Einbettungsdiagramme und räumliche Geometrie
 
-Einbettungsdiagramme liefern eine visuelle Darstellung der räumlichen Geometrie um ein kompaktes Objekt. Für die Schwarzschild-Metrik in der ART ist die Einbettungsfunktion z(r) = 2√($r_{s}$(r − $r_{s}$)), die die berühmte trichterförmige Fläche erzeugt. Der Trichter hat einen Hals bei r = $r_{s}$, wo die Steigung divergiert.
+Einbettungsdiagramme liefern eine visuelle Darstellung der räumlichen Geometrie um ein kompaktes Objekt. Für die Schwarzschild-Metrik in der ART ist die Einbettungsfunktion z(r) = 2√(r_s(r − r_s)), die die berühmte trichterförmige Fläche erzeugt. Der Trichter hat einen Hals bei r = r_s, wo die Steigung divergiert.
 
-Für die SSZ-Metrik hat die Einbettungsfunktion eine endliche Steigung bei r = $r_{s}$ (weil s endlich ist), was einen tieferen aber glatteren Trichter erzeugt. Die Steigung am Hals ist proportional zu 1/√($D_{min}$) = 1/√(0,555) = 1,34, verglichen mit Unendlich in der ART.
+Für die SSZ-Metrik hat die Einbettungsfunktion eine endliche Steigung bei r = r_s (weil s endlich ist), was einen tieferen aber glatteren Trichter erzeugt. Die Steigung am Hals ist proportional zu 1/√(D_min) = 1/√(0,555) = 1,34, verglichen mit Unendlich in der ART.
 
 Der Unterschied ist visuell auffällig: Der ART-Trichter hat eine scharfe Einschnürung am Hals (den Horizont darstellend), während der SSZ-Trichter einen glatten, abgerundeten Hals hat (die natürliche Grenze darstellend). Die Photonsphäre erscheint als Kreis auf der eingebetteten Fläche, wo die Krümmung genau richtig für Photonenumlaufbahnen ist.
 
 ### Numerische Implementierungshinweise
 
-Die Berechnung der SSZ-Metrik erfordert die Auswertung von Ξ(r) und seinen Ableitungen bei jedem Radius. Im Schwachfeld: Ξ = $r_{s}$/(2r), dΞ/dr = −$r_{s}$/(2r²). Im Starkfeld: Ξ = 1 − exp(−φ$r_{s}$/r), dΞ/dr = −φ$r_{s}$/r² × exp(−φ$r_{s}$/r). In der Übergangszone (1,8 < r/r_s < 2,2) erfordert die Hermite-Interpolation die Auswertung beider Formeln.
+Die Berechnung der SSZ-Metrik erfordert die Auswertung von Ξ(r) und seinen Ableitungen bei jedem Radius. Im Schwachfeld: Ξ = r_s/(2r), dΞ/dr = −r_s/(2r²). Im Starkfeld: Ξ = 1 − exp(−φr_s/r), dΞ/dr = −φr_s/r² × exp(−φr_s/r). In der Übergangszone (1,8 < r/r_s < 2,2) erfordert die Hermite-Interpolation die Auswertung beider Formeln.
 
 Das ssz-metric-pure-Repository liefert Referenzimplementierungen in Python und JavaScript. Beide Implementierungen sind gegen analytische Ergebnisse validiert mit numerischer Präzision besser als 10⁻¹².
 
@@ -6947,28 +6973,28 @@ Das ssz-metric-pure-Repository liefert Referenzimplementierungen in Python und J
 
 Die SSZ-Metrik gehoert zur Familie der regulaeren (singularitaetsfreien) Schwarze-Loch-Metriken. Was sie einzigartig macht:
 
-**Keine freien Parameter:** Bardeen, Hayward und LQG-Metriken haben jeweils mindestens einen freien Parameter (den Regularisierungsradius l). In SSZ gibt es keinen solchen Parameter — D($r_{s}$) = 0.555 folgt ausschliesslich aus den Axiomen.
+**Keine freien Parameter:** Bardeen, Hayward und LQG-Metriken haben jeweils mindestens einen freien Parameter (den Regularisierungsradius l). In SSZ gibt es keinen solchen Parameter — D(r_s) = 0.555 folgt ausschliesslich aus den Axiomen.
 
 **Konsistenz mit Schwachfeldtests:** Die SSZ-Metrik reproduziert alle PPN-Parameter exakt (gamma = beta = 1). Nicht alle regulaeren Metriken koennen dies beanspruchen — einige fuehren zu leichten Abweichungen in gamma oder beta.
 
-**Minimale WEC-Verletzung:** Die 3%-Verletzung der schwachen Energiebedingung bei $r_{s}$ ist die kleinste aller bekannten regulaeren Metriken. Dies ist physikalisch plausibel — die Segmentdichtesaettigung erfordert nur eine minimale effektive negative Energiedichte.
+**Minimale WEC-Verletzung:** Die 3%-Verletzung der schwachen Energiebedingung bei r_s ist die kleinste aller bekannten regulaeren Metriken. Dies ist physikalisch plausibel — die Segmentdichtesaettigung erfordert nur eine minimale effektive negative Energiedichte.
 
 ### Penrose-Diagramm der SSZ-Raumzeit
 
 Das Penrose-Diagramm (konforme Kompaktifizierung) der SSZ-Raumzeit unterscheidet sich fundamental vom Schwarzschild-Diagramm:
 
-- **Schwarzschild:** Das Diagramm hat eine raumartige Singularitaet (r=0) am oberen Rand und einen Ereignishorizont als diagonale Linie. Die Region r < $r_{s}$ ist das Innere des Schwarzen Lochs.
-- **SSZ:** Es gibt keine Singularitaet und keinen Horizont. Das Diagramm aehnelt dem einer massiven Kugel — es gibt eine Zeitlinie bei r = 0 (regulaer) und keine kausal abgetrennte Region. Die natuerliche Grenze bei $r_{s}$ ist eine regulaere Flaeche mit endlicher Rotverschiebung.
+- **Schwarzschild:** Das Diagramm hat eine raumartige Singularitaet (r=0) am oberen Rand und einen Ereignishorizont als diagonale Linie. Die Region r < r_s ist das Innere des Schwarzen Lochs.
+- **SSZ:** Es gibt keine Singularitaet und keinen Horizont. Das Diagramm aehnelt dem einer massiven Kugel — es gibt eine Zeitlinie bei r = 0 (regulaer) und keine kausal abgetrennte Region. Die natuerliche Grenze bei r_s ist eine regulaere Flaeche mit endlicher Rotverschiebung.
 
 Die topologische Struktur ist R^4 (trivial), im Gegensatz zur Schwarzschild-Raumzeit, die die Topologie R^2 x S^2 mit entferntem Punkt hat.
 
 ### Kapitelzusammenfassung und Brücke
 
-Dieses Kapitel leitete die vollständige SSZ-Schwarze-Loch-Metrik her und zeigte, dass sie die Schwarzschild-Metrik im Schwachfeld reproduziert, während sie überall im Starkfeld endliche Krümmung liefert. Die Schlüsselgröße ist $D_{min}$ = 0,555, der minimale Zeitdilatationsfaktor beim Schwarzschild-Radius.
+Dieses Kapitel leitete die vollständige SSZ-Schwarze-Loch-Metrik her und zeigte, dass sie die Schwarzschild-Metrik im Schwachfeld reproduziert, während sie überall im Starkfeld endliche Krümmung liefert. Die Schlüsselgröße ist D_min = 0,555, der minimale Zeitdilatationsfaktor beim Schwarzschild-Radius.
 
 ### Zusammenfassung und Brücke zu Kapitel 19
 
-Kapitel 19 adressiert die physikalische Singularität — die r = 0 Divergenz der ART. Während dieses Kapitel zeigte, dass die Koordinatensingularität bei $r_{s}$ durch die Segmentsättigung aufgelöst wird, beweist Kapitel 19, dass auch die physikalische Singularität bei r = 0 aufgelöst wird, weil die Krümmungsinvarianten (Kretschner-Skalar, Ricci-Skalar) bei allen Radien endlich bleiben.
+Kapitel 19 adressiert die physikalische Singularität — die r = 0 Divergenz der ART. Während dieses Kapitel zeigte, dass die Koordinatensingularität bei r_s durch die Segmentsättigung aufgelöst wird, beweist Kapitel 19, dass auch die physikalische Singularität bei r = 0 aufgelöst wird, weil die Krümmungsinvarianten (Kretschner-Skalar, Ricci-Skalar) bei allen Radien endlich bleiben.
 
 Das nächste Kapitel, Singularitätsauflösung, baut direkt auf der hier hergeleiteten Metrik auf. Die logische Abhängigkeit ist strikt.
 
@@ -6976,17 +7002,17 @@ Ein häufiges Missverständnis wäre, die SSZ-Metrik als „ad hoc“ zu betrach
 
 ## Historische Anmerkung: Sigalotti–Mejías und die Nukleardetonations-Analogie
 
-Sigalotti und Mejías bemerkten, dass die radiale Abhängigkeit gravitativer Effekte nahe kompakter Objekte mathematische Gemeinsamkeiten mit dem Energiedichteprofil einer nuklearen Detonation aufweist. In SSZ hat Ξ(r) = 1 − exp(−φ·$r_{s}$/r) genau diese Form: exponentielle Sättigung bei kleinen Radien, Potenzgesetz-Abfall bei großen (Paper 04).
+Sigalotti und Mejías bemerkten, dass die radiale Abhängigkeit gravitativer Effekte nahe kompakter Objekte mathematische Gemeinsamkeiten mit dem Energiedichteprofil einer nuklearen Detonation aufweist. In SSZ hat Ξ(r) = 1 − exp(−φ·r_s/r) genau diese Form: exponentielle Sättigung bei kleinen Radien, Potenzgesetz-Abfall bei großen (Paper 04).
 
 ### ISCO-Analyse in der SSZ-Metrik
 
 Der innerste stabile Kreisbahnradius (ISCO) ist eine der wichtigsten Groessen in der Schwarze-Loch-Astrophysik. Er bestimmt den inneren Rand der Akkretionsscheibe und damit die maximale Strahlungseffizienz.
 
-In der ART (Schwarzschild) liegt der ISCO bei $r_{ISCO}$ = 6 GM/c^2 = 3 $r_{s}$. Die Strahlungseffizienz betraegt eta = 1 - sqrt(8/9) = 0,057, d.h. 5,7% der Ruhemassenenergie der akkretierenden Materie wird in Strahlung umgewandelt.
+In der ART (Schwarzschild) liegt der ISCO bei r_ISCO = 6 GM/c^2 = 3 r_s. Die Strahlungseffizienz betraegt eta = 1 - sqrt(8/9) = 0,057, d.h. 5,7% der Ruhemassenenergie der akkretierenden Materie wird in Strahlung umgewandelt.
 
-In SSZ ist der ISCO durch die modifizierte Metrik verschoben. Die effektive potentielle Energie fuer Kreisbahnen in der SSZ-Metrik ist $V_{eff}$ = -GM/r * D(r) + L^2/(2r^2) * D(r)^2, wobei D(r) = 1/(1+Xi(r)) der SSZ-Zeitdilatationsfaktor ist. Die ISCO-Bedingung (dV\_eff/dr = 0 und d^2$V_{eff}$/dr^2 = 0 gleichzeitig) ergibt einen leicht verschobenen ISCO-Radius.
+In SSZ ist der ISCO durch die modifizierte Metrik verschoben. Die effektive potentielle Energie fuer Kreisbahnen in der SSZ-Metrik ist V_eff = -GM/r * D(r) + L^2/(2r^2) * D(r)^2, wobei D(r) = 1/(1+Xi(r)) der SSZ-Zeitdilatationsfaktor ist. Die ISCO-Bedingung (dV_eff/dr = 0 und d^2V_eff/dr^2 = 0 gleichzeitig) ergibt einen leicht verschobenen ISCO-Radius.
 
-Fuer die Schwachfeld-Naeherung (Xi = $r_{s}$/(2r)) ist die Verschiebung klein: r_ISCO_SSZ = 3 $r_{s}$ * (1 + epsilon), wobei epsilon ~ Xi(3 $r_{s}$) = 1/6 ~ 0,167. Die resultierende Strahlungseffizienz ist eta\_SSZ = 0,063, etwa 10% hoeher als in der ART. Diese Erhoehung ist eine spezifische, falsifizierbare Vorhersage von SSZ.
+Fuer die Schwachfeld-Naeherung (Xi = r_s/(2r)) ist die Verschiebung klein: r_ISCO_SSZ = 3 r_s * (1 + epsilon), wobei epsilon ~ Xi(3 r_s) = 1/6 ~ 0,167. Die resultierende Strahlungseffizienz ist eta_SSZ = 0,063, etwa 10% hoeher als in der ART. Diese Erhoehung ist eine spezifische, falsifizierbare Vorhersage von SSZ.
 
 ### Energiebedingungen in der SSZ-Metrik
 
@@ -7006,9 +7032,9 @@ Die Erfuellung der Energiebedingungen ist ein wichtiger Konsistenztest fuer SSZ:
 
 Die SSZ-Metrik kann aus einem Wirkungsprinzip abgeleitet werden. Die Einstein-Hilbert-Wirkung mit der SSZ-Metrik ist:
 
-S = (c^4 / (16 pi G)) * integral $R_{SSZ}$ sqrt(-$g_{SSZ}$) d^4x
+S = (c^4 / (16 pi G)) * integral R_SSZ sqrt(-g_SSZ) d^4x
 
-wobei $R_{SSZ}$ der Ricci-Skalar der SSZ-Metrik und $g_{SSZ}$ die Determinante des metrischen Tensors ist. Die Variation der Wirkung nach der Metrik liefert die modifizierten Einstein-Gleichungen:
+wobei R_SSZ der Ricci-Skalar der SSZ-Metrik und g_SSZ die Determinante des metrischen Tensors ist. Die Variation der Wirkung nach der Metrik liefert die modifizierten Einstein-Gleichungen:
 
 G_mu_nu_SSZ = (8 pi G / c^4) T_mu_nu
 
@@ -7050,10 +7076,10 @@ In der ART verletzt die Singularitaet alle Energiebedingungen (unendliche Energi
 
 ### Eindeutigkeit der Starkfeldformel
 
-Die Starkfeldformel Xi = 1 - exp(-phi * r/r_s) ist nicht die einzige moegliche Wahl fuer eine endliche Segmentdichte. Andere Moeglichkeiten waeren z.B. Xi = tanh(phi * $r_{s}$/(2r)) oder Xi = 1/(1 + (r/r_s)^phi). Warum wird die Exponentialformel bevorzugt?
+Die Starkfeldformel Xi = 1 - exp(-phi * r/r_s) ist nicht die einzige moegliche Wahl fuer eine endliche Segmentdichte. Andere Moeglichkeiten waeren z.B. Xi = tanh(phi * r_s/(2r)) oder Xi = 1/(1 + (r/r_s)^phi). Warum wird die Exponentialformel bevorzugt?
 
 1. **Analytische Einfachheit:** Die Exponentialfunktion hat die einfachsten Ableitungen.
-2. **Schwachfeld-Uebereinstimmung:** Die Exponentialformel stimmt im Schwachfeld (r >> $r_{s}$) automatisch mit Xi = $r_{s}$/(2r) ueberein.
+2. **Schwachfeld-Uebereinstimmung:** Die Exponentialformel stimmt im Schwachfeld (r >> r_s) automatisch mit Xi = r_s/(2r) ueberein.
 3. **Physikalische Motivation:** Die Exponentialformel entsteht natuerlich aus der Loesung der Diffusionsgleichung fuer die Segmentdichte.
 4. **Numerische Stabilitaet:** Die Exponentialfunktion hat keine Pole oder Verzweigungspunkte.
 
@@ -7097,10 +7123,12 @@ Die SSZ-Metrik wirft mehrere offene Fragen auf:
 3. **Quantenkorrekturen:** Die Einschleifen-Korrekturen zur SSZ-Metrik sind unberechnet.
 4. **Stabilitaet:** Die lineare Stabilitaet der SSZ-Metrik unter allgemeinen Stoerungen ist nicht vollstaendig bewiesen.
 
+---
 
-\newpage
+# Kapitel 19: Paradoxon der Singularitäten und SSZ-Auflösung
 
-# Paradoxon der Singularitäten und SSZ-Auflösung
+**Teil V — Starkfeldobjekte**
+**Status:** ERWEITERTE FASSUNG v2
 
 
 ![Abb](figures/ch19_singularity/1_core_radius_vs_mass_NO_SINGULARITY.png)
@@ -7115,7 +7143,7 @@ Die SSZ-Metrik wirft mehrere offene Fragen auf:
 
 Die Singularitätstheoreme von Penrose (1965) und Hawking & Penrose (1970) gehören zu den gefeiertsten Ergebnissen der mathematischen Physik. Sie beweisen, dass unter vernünftigen Energiebedingungen gravitativer Kollaps unvermeidlich Raumzeitsingularitäten erzeugt — Punkte, an denen die Krümmung divergiert, Geodäten enden und die Naturgesetze zusammenbrechen.
 
-SSZ nimmt eine andere Position ein: **Singularitäten sind Artefakte einer unbeschränkten Metrikfunktion, keine Merkmale der physikalischen Raumzeit.** Durch Ersetzen des Schwarzschild-D(r) = √(1 − $r_{s}$/r) — das bei r = $r_{s}$ null wird — durch $D_{SSZ}$(r) = 1/(1 + Ξ(r)), das nach unten durch D($r_{s}$) = 0,555 > 0 beschränkt ist, eliminiert SSZ Singularitäten ohne neue Physik, freie Parameter oder Ad-hoc-Regularisierung.
+SSZ nimmt eine andere Position ein: **Singularitäten sind Artefakte einer unbeschränkten Metrikfunktion, keine Merkmale der physikalischen Raumzeit.** Durch Ersetzen des Schwarzschild-D(r) = √(1 − r_s/r) — das bei r = r_s null wird — durch D_SSZ(r) = 1/(1 + Ξ(r)), das nach unten durch D(r_s) = 0,555 > 0 beschränkt ist, eliminiert SSZ Singularitäten ohne neue Physik, freie Parameter oder Ad-hoc-Regularisierung.
 
 **Lesehinweis.** Abschnitt 19.1 gibt einen Überblick über die Singularitätstheoreme. Abschnitt 19.2 präsentiert die SSZ-Auflösung. Abschnitt 19.3 beweist die Endlichkeit der Krümmung. Abschnitt 19.4 adressiert die Penrose-Hawking-Theoreme. Abschnitt 19.5 diskutiert das physikalische Bild. Abschnitt 19.6 fasst die Validierung zusammen.
 
@@ -7129,7 +7157,7 @@ Warum ist dies notwendig? Singularitäten sind das größte konzeptionelle Probl
 
 Singularitäten sind vielleicht das kontroverseste Merkmal der Allgemeinen Relativitätstheorie. Im Zentrum eines Schwarzschild-Schwarzen-Lochs divergiert der Krümmungstensor, die Gezeitenkräfte werden unendlich und die klassische Theorie bricht zusammen. Die meisten Physiker betrachten dies als Zeichen, dass die ART unvollständig ist.
 
-SSZ bietet eine klassische Auflösung. Die Segmentdichte Ξ sättigt bei einem endlichen Wert (Ξ_max = 0,802 bei r = $r_{s}$), was bedeutet, dass D nach unten durch $D_{min}$ = 0,555 beschränkt ist. Da die Krümmungsinvarianten algebraische Funktionen von D und seinen Ableitungen sind und D überall endlich und glatt ist, bleiben die Krümmungsinvarianten überall endlich. Es gibt keine Singularität.
+SSZ bietet eine klassische Auflösung. Die Segmentdichte Ξ sättigt bei einem endlichen Wert (Ξ_max = 0,802 bei r = r_s), was bedeutet, dass D nach unten durch D_min = 0,555 beschränkt ist. Da die Krümmungsinvarianten algebraische Funktionen von D und seinen Ableitungen sind und D überall endlich und glatt ist, bleiben die Krümmungsinvarianten überall endlich. Es gibt keine Singularität.
 
 Intuitiv bedeutet dies: Das Segmentgitter wirkt als natürlicher Regulator. Genau wie ein Kristallgitter beliebig kurze Wellenlängen verhindert, verhindert das Segmentgitter beliebig hohe Krümmung.
 
@@ -7161,33 +7189,33 @@ Die Penrose-Hawking-Theoreme erfordern drei Voraussetzungen:
 
 Wenn alle drei erfüllt sind, muss die Raumzeit eine Singularität enthalten — eine Geodäte, die in endlicher Eigenzeit endet. In der ART sind alle drei Voraussetzungen für realistischen gravitativen Kollaps erfüllt, was Singularitäten unvermeidlich macht.
 
-SSZ umgeht die Theoreme, indem es die erste Voraussetzung verletzt: Die Segmentdichtesättigung erzeugt eine effektive Energiebedingungsverletzung nahe r_s (Kapitel 18: WEC-Verletzung w $\approx$ −0,03). Diese minimale Verletzung reicht aus, um Singularitäten zu vermeiden, ohne unrealistisch große negative Energiedichten zu erfordern.
+SSZ umgeht die Theoreme, indem es die erste Voraussetzung verletzt: Die Segmentdichtesättigung erzeugt eine effektive Energiebedingungsverletzung nahe r_s (Kapitel 18: WEC-Verletzung w ≈ −0,03). Diese minimale Verletzung reicht aus, um Singularitäten zu vermeiden, ohne unrealistisch große negative Energiedichten zu erfordern.
 
 ### Quantengravitations-Kontext
 
 Mehrere Ansätze zur Quantengravitation sagen singularitätsfreie Schwarze Löcher vorher:
 
-- **Schleifen-Quantengravitation (LQG):** Die Singularität wird durch einen „Bounce“ ersetzt — die Raumzeit geht durch ein Minimum und expandiert in eine neue Region. Der Bounce findet bei Planck-Dichte statt (ρ_Planck $\approx$ 5 × 10⁹³ kg/m³).
+- **Schleifen-Quantengravitation (LQG):** Die Singularität wird durch einen „Bounce“ ersetzt — die Raumzeit geht durch ein Minimum und expandiert in eine neue Region. Der Bounce findet bei Planck-Dichte statt (ρ_Planck ≈ 5 × 10⁹³ kg/m³).
 - **Stringtheorie:** Fuzzballs ersetzen den klassischen Horizont durch eine stringtheoretische Konfiguration ohne Inneres.
 - **Asymptotische Sicherheit:** Die effektive Gravitationskonstante G(k) läuft mit der Energieskala k, was die Singularität bei Planck-Skala auflöst.
 
-SSZ unterscheidet sich von all diesen Ansätzen: Die Singularitätsauflösung geschieht nicht bei Planck-Skala, sondern bereits beim Schwarzschild-Radius r_s, der für stellare Schwarze Löcher makroskopisch groß ist (r_s $\approx$ 3 km für M = M_$\odot$). Dies macht die SSZ-Vorhersage prinzipiell testbar mit existierender Technologie.
+SSZ unterscheidet sich von all diesen Ansätzen: Die Singularitätsauflösung geschieht nicht bei Planck-Skala, sondern bereits beim Schwarzschild-Radius r_s, der für stellare Schwarze Löcher makroskopisch groß ist (r_s ≈ 3 km für M = M_☉). Dies macht die SSZ-Vorhersage prinzipiell testbar mit existierender Technologie.
 
 ## 19.2 SSZ-Auflösung
 
 ### Die Grundursache
 
-In der Schwarzschild-Lösung erreicht $D_{ART}$ = √(1 − $r_{s}$/r) null bei r = $r_{s}$ und wird imaginär für r < $r_{s}$. Die Singularität bei r = 0 entsteht, weil $D_{ART}$ → −i∞ für r → 0.
+In der Schwarzschild-Lösung erreicht D_ART = √(1 − r_s/r) null bei r = r_s und wird imaginär für r < r_s. Die Singularität bei r = 0 entsteht, weil D_ART → −i∞ für r → 0.
 
-SSZs Einsicht: Die Singularität wird durch die **funktionale Form** von D(r) verursacht, nicht durch die Physik des gravitativen Kollapses. Ersetze $D_{ART}$ durch eine beschränkte Funktion, die nie null wird, und die Singularität verschwindet.
+SSZs Einsicht: Die Singularität wird durch die **funktionale Form** von D(r) verursacht, nicht durch die Physik des gravitativen Kollapses. Ersetze D_ART durch eine beschränkte Funktion, die nie null wird, und die Singularität verschwindet.
 
 ### Der SSZ-Zeitdilatationsfaktor
 
-$$D_{\text{SSZ}}(r) = \frac{1}{1 + \Xi(r)}$$
+D_{\text{SSZ}}(r) = \frac{1}{1 + \Xi(r)}
 
-wobei Ξ(r) die Segmentdichte ist, nach oben durch Ξ_max = 1 − e^{−φ} $\approx$ 0,802 beschränkt. Daher:
+wobei Ξ(r) die Segmentdichte ist, nach oben durch Ξ_max = 1 − e^{−φ} ≈ 0,802 beschränkt. Daher:
 
-$$D_{\text{SSZ}}(r) \geq D_{\text{min}} = \frac{1}{1.802} = 0.555$$
+D_{\text{SSZ}}(r) \geq D_{\text{min}} = \frac{1}{1.802} = 0.555
 
 D erreicht nie null. Die Metriksignatur wechselt nie. Geodäten enden nicht. Die Physik geht normal weiter — nur 55,5% langsamer als im Unendlichen.
 
@@ -7196,8 +7224,8 @@ D erreicht nie null. Die Metriksignatur wechselt nie. Geodäten enden nicht. Die
 Die Auflösung erfordert keine zusätzlichen Parameter. Der Wert Ξ_max = 1 − e^{−φ} folgt aus den SSZ-Axiomen (Kapitel 3).
 
 Vergleich alternativer Ansätze:
-- **Schleifen-Quantengravitation:** Führt eine Mindestfläche $a_{min}$ ~ $l_{P}$² als freien Parameter ein
-- **Stringtheorie:** Führt die Stringlänge $l_{s}$ als freien Parameter ein
+- **Schleifen-Quantengravitation:** Führt eine Mindestfläche a_min ~ l_P² als freien Parameter ein
+- **Stringtheorie:** Führt die Stringlänge l_s als freien Parameter ein
 - **Reguläre Schwarze Löcher (Bardeen, Hayward):** Führen eine Regularisierungslänge l als freien Parameter ein
 
 SSZ ist die einzige Singularitätsauflösung, die null freie Parameter jenseits fundamentaler Konstanten verwendet.
@@ -7208,9 +7236,9 @@ SSZ ist die einzige Singularitätsauflösung, die null freie Parameter jenseits 
 
 Der Kretschner-Skalar K = R_αβγδ R^αβγδ ist das Standardmaß für Krümmungsstärke. Für die Schwarzschild-Metrik:
 
-$$K_{\text{ART}} = \frac{48 G^2 M^2}{c^4 r^6} \rightarrow \infty \quad \text{für } r \rightarrow 0$$
+K_{\text{ART}} = \frac{48 G^2 M^2}{c^4 r^6} \rightarrow \infty \quad \text{für } r \rightarrow 0
 
-Für die SSZ-Metrik mit D(r) = 1/(1+Ξ): $K_{SSZ}$ ist beschränkt. Der Maximalwert tritt nahe der natürlichen Grenze auf. Die Krümmung ist groß, aber endlich.
+Für die SSZ-Metrik mit D(r) = 1/(1+Ξ): K_SSZ ist beschränkt. Der Maximalwert tritt nahe der natürlichen Grenze auf. Die Krümmung ist groß, aber endlich.
 
 ### Ricci-Skalar und Einstein-Tensor
 
@@ -7228,13 +7256,13 @@ In der ART enden Geodäten an der Singularität in endlicher Eigenzeit. In SSZ e
 | Ricci R | ∞ | −2,3/r_s² | endlich |
 | Weyl C² | ∞ | 1,8/r_s⁴ | endlich |
 
-Alle Krümmungsinvarianten bleiben in SSZ endlich. Die maximale Krümmung tritt bei r $\approx$ r_s auf, nicht bei r = 0 (wo die ART ihre Singularität hat).
+Alle Krümmungsinvarianten bleiben in SSZ endlich. Die maximale Krümmung tritt bei r ≈ r_s auf, nicht bei r = 0 (wo die ART ihre Singularität hat).
 
 ### Geodätische Vollständigkeit: Der Schlüsseltest
 
 Eine Raumzeit ist singularitätsfrei genau dann, wenn alle Geodäten (zeitartige und lichtartige) sich auf unendliche Eigenzeit (bzw. affinen Parameter) erstrecken. In der ART enden radiale Geodäten bei r = 0 in endlicher Eigenzeit — die Raumzeit ist geodätisch unvollständig.
 
-In SSZ ist D(r) > 0 für alle r, was bedeutet, dass kein zeitartiger oder lichtartiger Beobachter in endlicher Eigenzeit eine Singularität erreichen kann. Die Eigenzeit zum Erreichen von r = $r_{s}$ ist endlich (anders als in ART-Koordinatenzeit), aber die Eigenzeit zum Erreichen von r = 0 ist unendlich (weil das Segmentgitter immer dichter wird, ohne eine Grenze zu erreichen). Die SSZ-Raumzeit ist daher geodätisch vollständig.
+In SSZ ist D(r) > 0 für alle r, was bedeutet, dass kein zeitartiger oder lichtartiger Beobachter in endlicher Eigenzeit eine Singularität erreichen kann. Die Eigenzeit zum Erreichen von r = r_s ist endlich (anders als in ART-Koordinatenzeit), aber die Eigenzeit zum Erreichen von r = 0 ist unendlich (weil das Segmentgitter immer dichter wird, ohne eine Grenze zu erreichen). Die SSZ-Raumzeit ist daher geodätisch vollständig.
 
 ## 19.4 Die Penrose-Hawking-Theoreme in SSZ
 
@@ -7242,7 +7270,7 @@ Das Penrose-Theorem erfordert eine eingeschlossene Fläche. Hat SSZ eingeschloss
 
 In SSZ ist D > 0 überall, weshalb auslaufende Lichtstrahlen von jeder Fläche schließlich divergieren. Es gibt keine eingeschlossene Fläche in der SSZ-Geometrie, und das Penrose-Theorem findet keine Anwendung.
 
-Zusätzlich ist die Null-Energiebedingung marginal nahe $r_{s}$ verletzt (Kapitel 18) — die WEC-Verletzung an der Grenze bricht die Voraussetzungen des Theorems.
+Zusätzlich ist die Null-Energiebedingung marginal nahe r_s verletzt (Kapitel 18) — die WEC-Verletzung an der Grenze bricht die Voraussetzungen des Theorems.
 
 Beide Modifikationen sind strukturelle Konsequenzen von D > 0. Die Annahmen der Theoreme scheitern, und ihre Schlussfolgerungen (Singularitäten) folgen nicht.
 
@@ -7250,21 +7278,19 @@ Beide Modifikationen sind strukturelle Konsequenzen von D > 0. Die Annahmen der 
 
 ### Metrik-Perturbationen-Signatur
 
-Die Singularitätsfreiheit modifiziert die späte Inspiral-Phase von kompakten Doppelsternen. In der ART endet der Inspiral am ISCO, gefolgt von Plunge und Ringdown. In SSZ gibt es keinen Plunge in eine Singularität — das einfallende Objekt erreicht die natürliche Grenze bei $r_{s}$ mit endlicher Geschwindigkeit und kann dort reflektiert werden oder in eine stabile Konfiguration übergehen.
+Die Singularitätsfreiheit modifiziert die späte Inspiral-Phase von kompakten Doppelsternen. In der ART endet der Inspiral am ISCO, gefolgt von Plunge und Ringdown. In SSZ gibt es keinen Plunge in eine Singularität — das einfallende Objekt erreicht die natürliche Grenze bei r_s mit endlicher Geschwindigkeit und kann dort reflektiert werden oder in eine stabile Konfiguration übergehen.
 
-Die Metrik-Perturbationen-Signatur unterscheidet sich im Post-Merger: ART sagt einen exponentiell gedämpften Ringdown vorher (Quasinormal-Moden); SSZ sagt zusätzliche Echos vorher — wiederholte Reflexionen zwischen der natürlichen Grenze und dem Lichtring. Diese Echos haben eine charakteristische Zeitskala:
+Die Metrik-Perturbationen-Signatur unterscheidet sich im Post-Merger: ART sagt einen exponentiell gedämpften Ringdown vorher (Quasinormal-Moden mit Kerr-Frequenzen); SSZ sagt modifizierte QNM-Frequenzen vorher — verschoben um ~3% aufgrund der endlichen Grenzflächenbedingung D(r_s) = 0,555 statt D = 0. Zusätzlich ist die Gezeitendeformierbarkeit endlich (k₂ ~ 0,052 vs. k₂ = 0 in der ART), was die späte Inspiral-Phase messbar beeinflusst.
 
-Δt_echo $\approx$ r_s/c × ln(1/D(r_s)) $\approx$ 0,6 r_s/c
-
-Für ein 10 M$\odot$ Schwarzes Loch: Δt_echo $\approx$ 0,03 ms. Dies liegt am Rand der observational campaigns-Empfindlichkeit, aber nächste Generation Detektoren (Einstein-Teleskop, Cosmic Explorer) könnten diese Echos detektieren.
+Detektoren der dritten Generation (Einstein-Teleskop, Cosmic Explorer) werden die Empfindlichkeit haben, um die QNM-Frequenzverschiebung und die endliche Gezeitendeformierbarkeit zu messen.
 
 ### Röntgenemission aus der Nähe der natürlichen Grenze
 
 Materie, die die natürliche Grenze erreicht, wird nicht in eine Singularität absorbiert, sondern trifft auf eine physikalische Oberfläche. Der Aufprall erzeugt thermische Röntgenemission mit einer charakteristischen Temperatur:
 
-T_surface $\approx$ (L_acc / (4π r_s² σ_SB D²(r_s)))^{1/4}
+T_surface ≈ (L_acc / (4π r_s² σ_SB D²(r_s)))^{1/4}
 
-wobei L_acc die Akkretionsleuchtkraft und σ_SB die Stefan-Boltzmann-Konstante ist. Für eine typische Akkretionsrate auf ein stellares Schwarzes Loch (L_acc $\approx$ 10³⁸ erg/s): T_surface $\approx$ 10⁷ K. Diese Emission wäre im harten Röntgenbereich (E $\approx$ 1 keV) und stark rotverschoben (z = 0,802) zum Beobachter.
+wobei L_acc die Akkretionsleuchtkraft und σ_SB die Stefan-Boltzmann-Konstante ist. Für eine typische Akkretionsrate auf ein stellares Schwarzes Loch (L_acc ≈ 10³⁸ erg/s): T_surface ≈ 10⁷ K. Diese Emission wäre im harten Röntgenbereich (E ≈ 1 keV) und stark rotverschoben (z = 0,802) zum Beobachter.
 
 ## 19.6 Physikalisches Bild: Endliche Maximaldichte
 
@@ -7274,9 +7300,9 @@ In der ART konzentriert ein Schwarzes Loch der Masse M seine gesamte Masse in ei
 
 In SSZ ist die Masse über das Innere verteilt, mit maximaler Dichte an der natürlichen Grenze:
 
-$$\rho_{\text{max}} \sim \frac{c^6}{G^3 M^2}$$
+\rho_{\text{max}} \sim \frac{c^6}{G^3 M^2}
 
-Für ein Objekt mit Sonnenmasse: ρ_max ~ 10¹⁸ kg/m³ — vergleichbar mit Kerndichte. Für ein supermassereiches Schwarzes Loch (10⁹ M_$\odot$): ρ_max ~ 1 kg/m³ — vergleichbar mit Wasser. Die Maximaldichte **nimmt ab** mit zunehmender Masse.
+Für ein Objekt mit Sonnenmasse: ρ_max ~ 10¹⁸ kg/m³ — vergleichbar mit Kerndichte. Für ein supermassereiches Schwarzes Loch (10⁹ M_☉): ρ_max ~ 1 kg/m³ — vergleichbar mit Wasser. Die Maximaldichte **nimmt ab** mit zunehmender Masse.
 
 ### Das gravitative Atom
 
@@ -7291,11 +7317,11 @@ Das SSZ-Bild eines kompakten Objekts ähnelt eher einem Riesenatom als einem kla
 
 **Testdateien:** `test_singularity`, `test_kretschner`, `test_geodesic_completeness`
 
-**Was die Tests beweisen:** $K_{SSZ}$ beschränkt bei allen Radien; alle Geodäten erstrecken sich zu unendlichem affinen Parameter; D > 0 überall; Ricci-Skalar endlich; Energiebedingungen dokumentiert.
+**Was die Tests beweisen:** K_SSZ beschränkt bei allen Radien; alle Geodäten erstrecken sich zu unendlichem affinen Parameter; D > 0 überall; Ricci-Skalar endlich; Energiebedingungen dokumentiert.
 
 **Was die Tests NICHT beweisen:** Dass SSZ die korrekte Auflösung von Singularitäten ist — andere beschränkte Metriken (Bardeen, Hayward) lösen ebenfalls Singularitäten auf. Was an SSZ einzigartig ist, ist die parameterfreie Konstruktion.
 
-**Reproduktion:** `E:/clone\ssz-metric-pure\`
+**Reproduktion:** `E:\clone\ssz-metric-pure\`
 
 ---
 
@@ -7324,9 +7350,9 @@ Diese Auflösung hat Implikationen für das Informationsparadoxon. In der ART f�
 
 Geodätische Vollständigkeit ist die technische Bedingung, die die informelle Aussage „es gibt keine Singularitäten“ ersetzt. Eine Raumzeit ist geodätisch vollständig, wenn jede Geodäte (zeitartig, lichtartig oder raumartig) zu beliebigen Werten ihres affinen Parameters fortgesetzt werden kann.
 
-In SSZ kann die geodätische Vollständigkeit durch Untersuchung des Verhaltens der Geodäten bei Annäherung an r = 0 verifiziert werden. Die Geodätengleichung in der SSZ-Metrik beinhaltet den D-Faktor und seine Ableitungen. Weil D(r) überall positiv, glatt und von null weg beschränkt ist ($D_{min}$ = 0,555 bei r = $r_{s}$), hat die Geodätengleichung keine singulären Punkte. Jede Lösung kann zu beliebigem affinen Parameter fortgesetzt werden.
+In SSZ kann die geodätische Vollständigkeit durch Untersuchung des Verhaltens der Geodäten bei Annäherung an r = 0 verifiziert werden. Die Geodätengleichung in der SSZ-Metrik beinhaltet den D-Faktor und seine Ableitungen. Weil D(r) überall positiv, glatt und von null weg beschränkt ist (D_min = 0,555 bei r = r_s), hat die Geodätengleichung keine singulären Punkte. Jede Lösung kann zu beliebigem affinen Parameter fortgesetzt werden.
 
-Die physikalische Interpretation: Ein frei fallender Beobachter in SSZ erreicht nie einen Punkt unendlicher Krümmung. Die Gezeitenkräfte (proportional zum Riemann-Tensor) nehmen zu, bleiben aber endlich. Für ein supermassives kompaktes Objekt (M = 10⁹ M$\odot$) sind die Gezeitenkräfte bei r_s proportional zu 1/M², und ein Astronaut könnte die natürliche Grenze überqueren, ohne tödliche Gezeitenkräfte zu erfahren — mit dem entscheidenden Unterschied, dass der SSZ-Astronaut keinen Ereignishorizont überquert und prinzipiell zurückkehren kann.
+Die physikalische Interpretation: Ein frei fallender Beobachter in SSZ erreicht nie einen Punkt unendlicher Krümmung. Die Gezeitenkräfte (proportional zum Riemann-Tensor) nehmen zu, bleiben aber endlich. Für ein supermassives kompaktes Objekt (M = 10⁹ M☉) sind die Gezeitenkräfte bei r_s proportional zu 1/M², und ein Astronaut könnte die natürliche Grenze überqueren, ohne tödliche Gezeitenkräfte zu erfahren — mit dem entscheidenden Unterschied, dass der SSZ-Astronaut keinen Ereignishorizont überquert und prinzipiell zurückkehren kann.
 
 ### Die kosmische Zensur-Vermutung revisited
 
@@ -7338,13 +7364,13 @@ Diese Auflösung hat einen philosophischen Vorteil: In der ART ist kosmische Zen
 
 ### Numerische Verifikation der Singularitaetsfreiheit
 
-Die Singularitaetsfreiheit wurde numerisch verifiziert durch Berechnung aller Kruemmungsinvarianten auf einem radialen Gitter von r = 0.01 $r_{s}$ bis r = 1000 $r_{s}$:
+Die Singularitaetsfreiheit wurde numerisch verifiziert durch Berechnung aller Kruemmungsinvarianten auf einem radialen Gitter von r = 0.01 r_s bis r = 1000 r_s:
 
-**Kretschner-Skalar K:** Maximum bei r ~ 1.1 $r_{s}$, $K_{max}$ ~ 48/($r_{s}$^4). Zum Vergleich: Schwarzschild bei r = $r_{s}$ hat K = 48/($r_{s}$^4) (gleich), aber bei r -> 0 divergiert K_Schwarzschild, waehrend $K_{SSZ}$ endlich bleibt.
+**Kretschner-Skalar K:** Maximum bei r ~ 1.1 r_s, K_max ~ 48/(r_s^4). Zum Vergleich: Schwarzschild bei r = r_s hat K = 48/(r_s^4) (gleich), aber bei r -> 0 divergiert K_Schwarzschild, waehrend K_SSZ endlich bleibt.
 
-**Ricci-Skalar R:** Maximum bei r ~ $r_{s}$, $R_{max}$ ~ -2.3/r_s^2. Der Ricci-Skalar ist negativ (effektive negative Kruemmung durch die Segmentdichte).
+**Ricci-Skalar R:** Maximum bei r ~ r_s, R_max ~ -2.3/r_s^2. Der Ricci-Skalar ist negativ (effektive negative Kruemmung durch die Segmentdichte).
 
-**Weyl-Skalar C^2:** Maximum bei r ~ 1.2 $r_{s}$, C^2_max ~ 1.8/r_s^4. Der Weyl-Tensor beschreibt die Gezeitenkraefte — ein einfallender Beobachter erfaehrt bei $r_{s}$ endliche Gezeitenkraefte.
+**Weyl-Skalar C^2:** Maximum bei r ~ 1.2 r_s, C^2_max ~ 1.8/r_s^4. Der Weyl-Tensor beschreibt die Gezeitenkraefte — ein einfallender Beobachter erfaehrt bei r_s endliche Gezeitenkraefte.
 
 Die numerische Praezision betraegt 10^-12 (Maschinengenauigkeit in doppelter Praezision). Alle Invarianten sind fuer r > 0 endlich und glatt.
 
@@ -7352,7 +7378,7 @@ Die numerische Praezision betraegt 10^-12 (Maschinengenauigkeit in doppelter Pra
 
 Die SSZ-Singularitaetsfreiheit hat Implikationen fuer die Quantengravitation:
 
-1. **Planck-Skala nicht erforderlich:** In SSZ wird die Singularitaet bei $r_{s}$ aufgeloest — einem makroskopischen Radius ($r_{s}$ ~ 3 km fuer M = $M_{sun}$). Keine Planck-Skala-Physik ist erforderlich.
+1. **Planck-Skala nicht erforderlich:** In SSZ wird die Singularitaet bei r_s aufgeloest — einem makroskopischen Radius (r_s ~ 3 km fuer M = M_sun). Keine Planck-Skala-Physik ist erforderlich.
 
 2. **Keine trans-Plancksche Physik:** In der ART sind die Kruemmungen bei r -> 0 trans-Plancksch (R >> 1/l_P^2). In SSZ bleiben alle Kruemmungen sub-Plancksch — die klassische Beschreibung ist ueberall gueltig.
 
@@ -7366,7 +7392,7 @@ Dieses Kapitel bewies, dass SSZ das Singularitätsproblem auflöst: Die Krümmun
 
 Kapitel 20 entwickelt die Implikationen für die innere Struktur kompakter Objekte. Wenn es keine Singularität gibt, was ersetzt sie? Die Antwort ist die natürliche Grenze — eine Fläche maximaler Segmentdichte, die als effektiver Rand des kompakten Objekts dient. Die Eigenschaften dieser Grenze und ihre Verbindung zur kosmischen Zensur-Vermutung sind Gegenstand des nächsten Kapitels.
 
-Das nächste Kapitel, Natürliche Grenze Schwarzer Löcher, baut direkt auf der hier bewiesenen Singularitätsfreiheit auf. Da D($r_{s}$) > 0, existiert eine physikalische Oberfläche bei r = $r_{s}$ mit messbaren Eigenschaften.
+Das nächste Kapitel, Natürliche Grenze Schwarzer Löcher, baut direkt auf der hier bewiesenen Singularitätsfreiheit auf. Da D(r_s) > 0, existiert eine physikalische Oberfläche bei r = r_s mit messbaren Eigenschaften.
 
 Ein häufiges Missverständnis wäre zu denken, dass SSZ „nur eine weitere“ singularitätsfreie Theorie ist. Der entscheidende Unterschied: SSZ hat keine freien Parameter. Die Singularitätsauflösung folgt aus denselben Axiomen, die auch Schwachfeldvorhersagen (GPS, Shapiro, Pound-Rebka) reproduzieren.
 
@@ -7374,7 +7400,7 @@ Ein häufiges Missverständnis wäre zu denken, dass SSZ „nur eine weitere“ 
 
 Penroses kosmische Zensur-Vermutung (1969) besagt, dass Singularitaeten, die durch Gravitationskollaps entstehen, immer hinter einem Ereignishorizont verborgen sind und daher fuer entfernte Beobachter unsichtbar bleiben. Diese Vermutung ist in der ART unbewiesen und bleibt eines der wichtigsten offenen Probleme der klassischen Gravitationstheorie.
 
-In SSZ wird die kosmische Zensur-Vermutung trivial erfuellt, weil es keine Singularitaeten gibt. Der Zeitdilatationsfaktor D = 1/(1 + Xi) erreicht sein Minimum $D_{min}$ = 0,555 bei r = $r_{s}$, bleibt aber ueberall strikt positiv. Es gibt keine Divergenz in der Kruemmung, keine unendliche Dichte und keinen Punkt, an dem die Raumzeitbeschreibung zusammenbricht. Die natuerliche Grenze bei $r_{s}$ ist eine Flaeche endlicher Kruemmung, endlicher Dichte und endlicher Zeitdilatation.
+In SSZ wird die kosmische Zensur-Vermutung trivial erfuellt, weil es keine Singularitaeten gibt. Der Zeitdilatationsfaktor D = 1/(1 + Xi) erreicht sein Minimum D_min = 0,555 bei r = r_s, bleibt aber ueberall strikt positiv. Es gibt keine Divergenz in der Kruemmung, keine unendliche Dichte und keinen Punkt, an dem die Raumzeitbeschreibung zusammenbricht. Die natuerliche Grenze bei r_s ist eine Flaeche endlicher Kruemmung, endlicher Dichte und endlicher Zeitdilatation.
 
 Diese Aufloesung hat einen philosophischen Vorteil gegenueber der ART-Situation. In der ART ist die kosmische Zensur eine Vermutung ueber das Verhalten von Loesungen der Einstein-Gleichungen -- eine Vermutung, die trotz jahrzehntelanger Bemuehungen weder bewiesen noch widerlegt wurde. In SSZ ist die Abwesenheit von Singularitaeten eine Konsequenz der Grunddefinition D = 1/(1 + Xi) > 0. Es gibt nichts zu verbergen, weil es nichts gibt, das verborgen werden muesste.
 
@@ -7398,11 +7424,11 @@ SSZ unterscheidet sich von allen diesen Ansaetzen durch seine Parameterfreiheit 
 
 Der Penrose-Prozess (1969) ist ein Mechanismus zur Extraktion von Rotationsenergie aus einem rotierenden Schwarzen Loch. Ein Teilchen faellt in die Ergosphaere (die Region, in der Frame-Dragging so stark ist, dass kein statischer Beobachter existieren kann), zerfaellt in zwei Fragmente, wobei eines mit negativer Energie in das Schwarze Loch faellt und das andere mit erhoehter Energie entkommt.
 
-In der ART ist die maximale Effizienz des Penrose-Prozesses eta\_Penrose = 1 - 1/sqrt(2) = 29,3% fuer ein maximal rotierendes Schwarzes Loch (a/M = 1). In SSZ ist die Effizienz durch den endlichen Zeitdilatationsfaktor $D_{min}$ modifiziert:
+In der ART ist die maximale Effizienz des Penrose-Prozesses eta_Penrose = 1 - 1/sqrt(2) = 29,3% fuer ein maximal rotierendes Schwarzes Loch (a/M = 1). In SSZ ist die Effizienz durch den endlichen Zeitdilatationsfaktor D_min modifiziert:
 
-eta_Penrose_SSZ = eta_Penrose_GR * $D_{min}$ = 0,293 * 0,555 = 0,163 = 16,3%
+eta_Penrose_SSZ = eta_Penrose_GR * D_min = 0,293 * 0,555 = 0,163 = 16,3%
 
-Die Reduktion entsteht, weil die Ergosphaere in SSZ kleiner ist als in der ART (weil die natuerliche Grenze bei $r_{s}$ liegt, nicht bei r = 0). Die reduzierte Effizienz hat Konsequenzen fuer die Jet-Leistung von aktiven Galaxienkernen (AGN), die teilweise durch den Penrose-Prozess (oder seinen magnetischen Analog, den Blandford-Znajek-Mechanismus) angetrieben werden.
+Die Reduktion entsteht, weil die Ergosphaere in SSZ kleiner ist als in der ART (weil die natuerliche Grenze bei r_s liegt, nicht bei r = 0). Die reduzierte Effizienz hat Konsequenzen fuer die Jet-Leistung von aktiven Galaxienkernen (AGN), die teilweise durch den Penrose-Prozess (oder seinen magnetischen Analog, den Blandford-Znajek-Mechanismus) angetrieben werden.
 
 ### Informationsparadoxon und SSZ
 
@@ -7410,7 +7436,7 @@ Das Schwarze-Loch-Informationsparadoxon (Hawking, 1976) ist eines der tiefsten u
 
 In SSZ existiert das Informationsparadoxon in seiner klassischen Form nicht, weil es keinen Ereignishorizont gibt. Information, die auf die natuerliche Grenze faellt, wird nicht hinter einem Horizont verborgen, sondern in den Oberflaechenfreiheitsgraden der natuerlichen Grenze gespeichert. Die Information kann prinzipiell durch Beobachtung der Oberflaechenemission (stark rotverschoben, aber endlich) wiedergewonnen werden.
 
-Allerdings stellt sich in SSZ ein modifiziertes Informationsproblem: Die Information ist zwar nicht verloren, aber extrem schwer zugaenglich (weil die Oberflaechenemission um den Faktor $D_{min}$^4 = 0,095 gegenueber der Einfallsenergie reduziert ist). Die praktische Unzugaenglichkeit der Information ist analog zur thermodynamischen Irreversibilitaet: Die Information ist theoretisch vorhanden, aber praktisch nicht wiederherstellbar.
+Allerdings stellt sich in SSZ ein modifiziertes Informationsproblem: Die Information ist zwar nicht verloren, aber extrem schwer zugaenglich (weil die Oberflaechenemission um den Faktor D_min^4 = 0,095 gegenueber der Einfallsenergie reduziert ist). Die praktische Unzugaenglichkeit der Information ist analog zur thermodynamischen Irreversibilitaet: Die Information ist theoretisch vorhanden, aber praktisch nicht wiederherstellbar.
 
 ### Gravitationskollaps in SSZ
 
@@ -7418,9 +7444,9 @@ Der Gravitationskollaps eines massiven Sterns verlaeuft in SSZ anders als in der
 
 **ART:** Der Stern kollabiert durch den Schwarzschild-Radius, bildet einen Ereignishorizont und kollabiert weiter zu einer Singularitaet bei r = 0. Der gesamte Prozess dauert (aus Sicht eines mitfallenden Beobachters) eine endliche Eigenzeit.
 
-**SSZ:** Der Stern kollabiert und naehert sich asymptotisch der natuerlichen Grenze bei r = $r_{s}$. Die Materie erreicht die natuerliche Grenze in endlicher Eigenzeit, aber die Zeitdilatation verlangsamt den Kollaps aus Sicht eines entfernten Beobachters dramatisch. Das Endprodukt ist ein dunkler Stern mit einer Oberflaeche bei r = $r_{s}$ und D = 0,555.
+**SSZ:** Der Stern kollabiert und naehert sich asymptotisch der natuerlichen Grenze bei r = r_s. Die Materie erreicht die natuerliche Grenze in endlicher Eigenzeit, aber die Zeitdilatation verlangsamt den Kollaps aus Sicht eines entfernten Beobachters dramatisch. Das Endprodukt ist ein dunkler Stern mit einer Oberflaeche bei r = r_s und D = 0,555.
 
-Der Unterschied hat beobachtbare Konsequenzen: In der ART verschwindet die Oberflaechenemission exponentiell schnell (mit einer Zeitskala von ~$r_{s}$/c ~ 10^{-5} s fuer stellare Schwarze Loecher). In SSZ klingt die Oberflaechenemission langsamer ab (mit einer Zeitskala von ~$r_{s}$/(c * $D_{min}$) ~ 2 x 10^{-5} s). Der Unterschied ist mit aktuellen Instrumenten nicht messbar, koennte aber mit zukuenftigen schnellen Roentgendetektoren (Zeitaufloesung < 10^{-6} s) detektierbar sein.
+Der Unterschied hat beobachtbare Konsequenzen: In der ART verschwindet die Oberflaechenemission exponentiell schnell (mit einer Zeitskala von ~r_s/c ~ 10^{-5} s fuer stellare Schwarze Loecher). In SSZ klingt die Oberflaechenemission langsamer ab (mit einer Zeitskala von ~r_s/(c * D_min) ~ 2 x 10^{-5} s). Der Unterschied ist mit aktuellen Instrumenten nicht messbar, koennte aber mit zukuenftigen schnellen Roentgendetektoren (Zeitaufloesung < 10^{-6} s) detektierbar sein.
 
 ### Kerr-Analog in SSZ: Rotierende kompakte Objekte
 
@@ -7446,7 +7472,7 @@ EMRIs sind Systeme, in denen ein stellares kompaktes Objekt (Neutronenstern oder
 
 In SSZ unterscheidet sich die EMRI-Wellenform von der ART-Wellenform in zwei Aspekten:
 
-1. **Phasenverschiebung:** Die kumulative Phasenverschiebung ueber ~10^5 Orbitalzyklen betraegt $\Delta_{\phi}$ ~ Xi($r_{ISCO}$) * $N_{cycles}$ ~ 0,1 * 10^5 = 10^4 Radian. Dies ist eine enorme Phasenverschiebung, die mit LISA leicht messbar waere.
+1. **Phasenverschiebung:** Die kumulative Phasenverschiebung ueber ~10^5 Orbitalzyklen betraegt Delta_phi ~ Xi(r_ISCO) * N_cycles ~ 0,1 * 10^5 = 10^4 Radian. Dies ist eine enorme Phasenverschiebung, die mit LISA leicht messbar waere.
 
 2. **Amplitude:** Die Metrik-Perturbationen-Amplitude ist in SSZ um den Faktor D(r) modifiziert, was eine ~5% Aenderung der Amplitude nahe dem ISCO bedeutet.
 
@@ -7481,10 +7507,12 @@ Die rotierende SSZ-Metrik kann durch mehrere Beobachtungen getestet werden:
 
 **EMRI-Wellenformen:** EMRIs (Extreme Mass Ratio Inspirals) sind besonders sensitiv auf die Metrik nahe dem kompakten Objekt. LISA wird ~10^5 Orbits eines stellaren Objekts um ein supermassives SL beobachten, mit einer kumulativen Phasenverschiebung von ~10^4 Radian gegenueber der Kerr-Metrik.
 
+---
 
-\newpage
+# Kapitel 20: Natürliche Grenze Schwarzer Löcher und Kosmische Zensur
 
-# Natürliche Grenze Schwarzer Löcher und Kosmische Zensur
+**Teil V — Starkfeldobjekte**
+**Status:** ERWEITERTE FASSUNG v2
 
 
 ![Abb 20](figures/ch20_boundary/fig_20_01.png)
@@ -7495,7 +7523,7 @@ Die rotierende SSZ-Metrik kann durch mehrere Beobachtungen getestet werden:
 
 Penroses kosmische Zensur-Vermutung (1969) postuliert, dass Singularitäten immer hinter Ereignishorizonten verborgen sind — die Natur verschwört sich, ihre am schlechtesten definierten Punkte unsichtbar zu halten. Nach über 50 Jahren bleibt die Vermutung unbewiesen. Bekannte Gegenbeispiele existieren in höheren Dimensionen, feinabgestimmten Kollapsszenarien und bestimmten geladenen/rotierenden Konfigurationen.
 
-SSZ macht kosmische Zensur **überflüssig**: Es gibt keine Singularitäten zu verbergen. Die Segmentdichte sättigt bei einem endlichen Maximum, D(r) > 0 überall, und die Metriksignatur wechselt nie. Statt eines Ereignishorizonts — einer Einweg-Kausalmembran, von der nichts entkommt — sagt SSZ eine „natürliche Grenze" bei ungefähr r = $r_{s}$ vorher. Diese Grenze ist eine Fläche maximaler zugänglicher Segmentdichte, wo Uhren noch mit 55,5% der Rate im Unendlichen ticken, Licht mit endlicher Rotverschiebung z = 0,802 entkommt und Information nie dauerhaft eingeschlossen ist.
+SSZ macht kosmische Zensur **überflüssig**: Es gibt keine Singularitäten zu verbergen. Die Segmentdichte sättigt bei einem endlichen Maximum, D(r) > 0 überall, und die Metriksignatur wechselt nie. Statt eines Ereignishorizonts — einer Einweg-Kausalmembran, von der nichts entkommt — sagt SSZ eine „natürliche Grenze" bei ungefähr r = r_s vorher. Diese Grenze ist eine Fläche maximaler zugänglicher Segmentdichte, wo Uhren noch mit 55,5% der Rate im Unendlichen ticken, Licht mit endlicher Rotverschiebung z = 0,802 entkommt und Information nie dauerhaft eingeschlossen ist.
 
 **Lesehinweis.** Abschnitt 20.1 gibt einen Überblick über kosmische Zensur. Abschnitt 20.2 leitet die natürliche Grenze her. Abschnitt 20.3 präsentiert das Normale-Uhr-Argument. Abschnitt 20.4 diskutiert beobachtbare Implikationen. Abschnitt 20.5 fasst die Validierung zusammen.
 
@@ -7544,13 +7572,13 @@ In SSZ sind beide Versionen trivial erfüllt — weil es keine Singularitäten g
 
 Das Informationsparadoxon der Schwarzen Löcher (Hawking 1976) entsteht, weil der Ereignishorizont der ART Information vor dem externen Universum verbirgt. Wenn das Schwarze Loch durch Hawking-Strahlung verdampft, scheint die Information verloren zu gehen — ein Widerspruch zur Unitärität der Quantenmechanik.
 
-In SSZ existiert kein Ereignishorizont. Die natürliche Grenze bei $r_{s}$ ist eine physikalische Oberfläche mit endlicher Rotverschiebung (z = 0,802). Information kann diese Oberfläche in endlicher Koordinatenzeit verlassen. Das Informationsparadoxon entsteht nicht.
+In SSZ existiert kein Ereignishorizont. Die natürliche Grenze bei r_s ist eine physikalische Oberfläche mit endlicher Rotverschiebung (z = 0,802). Information kann diese Oberfläche in endlicher Koordinatenzeit verlassen. Das Informationsparadoxon entsteht nicht.
 
 ## 20.2 Natürliche Grenze in SSZ
 
 ### Definition und Eigenschaften
 
-SSZ ersetzt den Ereignishorizont durch eine **natürliche Grenze** bei ungefähr r = $r_{s}$, wo Ξ den Wert Ξ($r_{s}$) = 0,802 und D = 0,555 erreicht:
+SSZ ersetzt den Ereignishorizont durch eine **natürliche Grenze** bei ungefähr r = r_s, wo Ξ den Wert Ξ(r_s) = 0,802 und D = 0,555 erreicht:
 
 | Eigenschaft | ART-Ereignishorizont | SSZ-Natürliche Grenze |
 |----------|-----------------|---------------------|
@@ -7573,9 +7601,9 @@ Die natürliche Grenze ist prinzipiell über drei Kanäle beobachtbar:
 
 ### Vergleich mit dem Event Horizon Telescope (EHT)
 
-Das EHT hat 2019 das erste Bild eines Schwarzen-Loch-Schattens veröffentlicht (M87*). Der Schatten entsteht durch Licht, das nahe dem Photonen-Ring (r = 3$r_{s}$/2 in ART) kreist. In SSZ ist der Photonen-Ring leicht verschoben, weil die Metrik bei $r_{s}$ anders ist.
+Das EHT hat 2019 das erste Bild eines Schwarzen-Loch-Schattens veröffentlicht (M87*). Der Schatten entsteht durch Licht, das nahe dem Photonen-Ring (r = 3r_s/2 in ART) kreist. In SSZ ist der Photonen-Ring leicht verschoben, weil die Metrik bei r_s anders ist.
 
-Die SSZ-Vorhersage für den Schattenradius: $r_{shadow}$,SSZ = 3√3 $r_{s}$/2 × (1 + δ), wobei δ eine kleine Korrektur von ~2% ist. Die aktuelle EHT-Auflösung (~20 μas) reicht nicht aus, um diese 2%-Korrektur aufzulösen. Das nächste-Generation EHT (ngEHT), geplant für die 2030er, wird die Auflösung um einen Faktor 5 verbessern und könnte den SSZ-ART-Unterschied detektieren.
+Die SSZ-Vorhersage für den Schattenradius: r_shadow,SSZ = 3√3 r_s/2 × (1 + δ), wobei δ eine kleine Korrektur von ~2% ist. Die aktuelle EHT-Auflösung (~20 μas) reicht nicht aus, um diese 2%-Korrektur aufzulösen. Das nächste-Generation EHT (ngEHT), geplant für die 2030er, wird die Auflösung um einen Faktor 5 verbessern und könnte den SSZ-ART-Unterschied detektieren.
 
 ### Die SSZ-Oberfläche vs. der ART-Horizont
 
@@ -7587,10 +7615,10 @@ Der fundamentale Unterschied zwischen der SSZ-natürlichen-Grenze und dem ART-Er
 | Rotverschiebung | z = ∞ | z = 0,802 |
 | Signaldurchgang | Unendliche Koordinatenzeit | Endliche Koordinatenzeit |
 | Informationsfluss | Nur einwärts | Bidirektional (stark rotverschoben) |
-| Thermische Emission | Hawking-Strahlung (T $\propto$ 1/M) | Oberflächenemission (T $\propto$ L_acc) |
-| Entropie | S = A/(4l_P²) | S $\propto$ N_segments |
+| Thermische Emission | Hawking-Strahlung (T ∝ 1/M) | Oberflächenemission (T ∝ L_acc) |
+| Entropie | S = A/(4l_P²) | S ∝ N_segments |
 
-Der experimentell testbare Unterschied: Die SSZ-Oberfläche emittiert thermische Strahlung proportional zur Akkretionsleuchtkraft. Der ART-Horizont emittiert nur Hawking-Strahlung, die für stellare und supermassive Schwarze Löcher unmessbar klein ist (T_H ~ 10⁻⁸ K für 10 M$\odot$).
+Der experimentell testbare Unterschied: Die SSZ-Oberfläche emittiert thermische Strahlung proportional zur Akkretionsleuchtkraft. Der ART-Horizont emittiert nur Hawking-Strahlung, die für stellare und supermassive Schwarze Löcher unmessbar klein ist (T_H ~ 10⁻⁸ K für 10 M☉).
 
 ## 20.3 Das Normale-Uhr-Argument
 
@@ -7632,21 +7660,21 @@ Die SSZ-natürliche Grenze emittiert thermische Strahlung, anders als der ART-Ho
 
 ### Quantitative Vorhersagen für zukünftige Beobachtungen
 
-**EHT/ngEHT:** Schattenradius-Korrektur δ $\approx$ 2% für M87* und Sgr A*. Auflösbar mit ngEHT (2030er).
+**EHT/ngEHT:** Schattenradius-Korrektur δ ≈ 2% für M87* und Sgr A*. Auflösbar mit ngEHT (2030er).
 
-**Röntgenteleskope (Athena, eXTP):** Oberflächenemission der natürlichen Grenze bei E_obs $\approx$ E_surface/(1 + z) = E_surface/1,802. Für Akkretionsraten > 10⁻⁸ M$\odot$/Jahr detektierbar.
+**Röntgenteleskope (Athena, eXTP):** Oberflächenemission der natürlichen Grenze bei E_obs ≈ E_surface/(1 + z) = E_surface/1,802. Für Akkretionsraten > 10⁻⁸ M☉/Jahr detektierbar.
 
-**LISA:** Extreme-Mass-Ratio-Inspirals (EMRIs) kartieren die Metrik nahe $r_{s}$ mit hoher Präzision. LISA kann D($r_{s}$) auf ~1% bestimmen, ausreichend für den SSZ-ART-Test.
+**LISA:** Extreme-Mass-Ratio-Inspirals (EMRIs) kartieren die Metrik nahe r_s mit hoher Präzision. LISA kann D(r_s) auf ~1% bestimmen, ausreichend für den SSZ-ART-Test.
 
 ## 20.5 Validierung und Konsistenz
 
 **Testdateien:** `test_horizon`, `test_boundary`, `test_reflection`
 
-**Was die Tests beweisen:** D($r_{s}$) > 0; Grenze ist C²-glatt; kein kausales Einfangen in der Metrikstruktur; normale Uhrenraten an der Grenze; Reflexionskoeffizient konsistent mit D($r_{s}$).
+**Was die Tests beweisen:** D(r_s) > 0; Grenze ist C²-glatt; kein kausales Einfangen in der Metrikstruktur; normale Uhrenraten an der Grenze; Reflexionskoeffizient konsistent mit D(r_s).
 
 **Was die Tests NICHT beweisen:** Thermisches Emissionsspektrum — erfordert QFT auf SSZ-Hintergrund (zukünftige Arbeit).
 
-**Reproduktion:** `E:/clone\ssz-metric-pure\`
+**Reproduktion:** `E:\clone\ssz-metric-pure\`
 
 ---
 
@@ -7656,7 +7684,7 @@ Die SSZ-natürliche Grenze emittiert thermische Strahlung, anders als der ART-Ho
 |---|---------|--------|
 | 1 | D(r_s) = 0,555 | normale Uhr an der Grenze |
 | 2 | z(r_s) = 0,802 | endliche Flucht-Rotverschiebung |
-| 3 | R = (1−D²)/(1+D²) $\approx$ 0,44 | GW-Reflexionskoeffizient |
+| 3 | R = (1−D²)/(1+D²) ≈ 0,44 | GW-Reflexionskoeffizient |
 | 4 | Keine Singularität → keine Zensur | strukturelles Ergebnis |
 
 ---
@@ -7679,11 +7707,11 @@ In der ART entsteht das Schwarze-Loch-Informationsparadoxon, weil der Ereignisho
 
 In SSZ erzeugt die natürliche Grenze keine kausale Trennung. Signale, die von der natürlichen Grenze emittiert werden, können (prinzipiell) externe Beobachter erreichen, wenn auch mit extremer Rotverschiebung (z = 0,802). Dies bedeutet, dass Information über den internen Zustand des kompakten Objekts kontinuierlich durch stark rotverschobene Strahlung nach außen leckt. Die Information geht nicht verloren — sie wird lediglich durch den Rotverschiebungsfaktor verdünnt.
 
-Die Rate des Informationslecks wird durch die Emissionsrate an der natürlichen Grenze und den Rotverschiebungsfaktor bestimmt. Für einen Sonnenmasse-Dunklen-Stern beträgt die Informationsleckrate ungefähr $k_{B}$ $T_{SSZ}$/ħ = 2,5 × 10⁴ Bits pro Sekunde. Dies ist eine extrem langsame Rate (es würde ungefähr 10⁶⁷ Jahre dauern, alle Information eines Sonnenmasse-Objekts abzustrahlen), aber sie ist nicht null — im Gegensatz zur ART-Vorhersage von null Informationsleckage durch den Ereignishorizont.
+Die Rate des Informationslecks wird durch die Emissionsrate an der natürlichen Grenze und den Rotverschiebungsfaktor bestimmt. Für einen Sonnenmasse-Dunklen-Stern beträgt die Informationsleckrate ungefähr k_B T_SSZ/ħ = 2,5 × 10⁴ Bits pro Sekunde. Dies ist eine extrem langsame Rate (es würde ungefähr 10⁶⁷ Jahre dauern, alle Information eines Sonnenmasse-Objekts abzustrahlen), aber sie ist nicht null — im Gegensatz zur ART-Vorhersage von null Informationsleckage durch den Ereignishorizont.
 
 ### Stabilitätsanalyse der natürlichen Grenze
 
-Die SSZ-Stabilitätsanalyse (numerisch durchgeführt im ssz-metric-pure-Repository) zeigt, dass alle quasi-normalen Moden für kugelsymmetrische Störungen gedämpft sind. Die Fundamentalmode hat einen Gütefaktor Q $\approx$ 2 (die Oszillation ist innerhalb von etwa 2 Zyklen gedämpft), konsistent mit dem schnellen Ringdown, der in Metrik-Perturbationen-Verschmelzungsereignissen beobachtet wird. Die Stabilität erstreckt sich auf nicht-kugelförmige Störungen (l = 2, 3, 4 Moden).
+Die SSZ-Stabilitätsanalyse (numerisch durchgeführt im ssz-metric-pure-Repository) zeigt, dass alle quasi-normalen Moden für kugelsymmetrische Störungen gedämpft sind. Die Fundamentalmode hat einen Gütefaktor Q ≈ 2 (die Oszillation ist innerhalb von etwa 2 Zyklen gedämpft), konsistent mit dem schnellen Ringdown, der in Metrik-Perturbationen-Verschmelzungsereignissen beobachtet wird. Die Stabilität erstreckt sich auf nicht-kugelförmige Störungen (l = 2, 3, 4 Moden).
 
 Die Stabilität der natürlichen Grenze ist ein nicht-triviales Ergebnis. In der ART ist der Ereignishorizont stabil gegen Störungen (das Flächentheorem garantiert, dass die Horizontfläche nur zunehmen kann), aber die Singularität im Inneren hat keine sinnvolle Störungstheorie. In SSZ ist die natürliche Grenze eine echte stabile Fläche mit wohldefinierter Störungstheorie und charakteristischen Oszillationsfrequenzen.
 
@@ -7691,21 +7719,21 @@ Die Stabilität der natürlichen Grenze ist ein nicht-triviales Ergebnis. In der
 
 Die natürliche Grenze erzeugt spezifische Beobachtungssignaturen, die sie von einem Ereignishorizont unterscheiden:
 
-**Röntgenemission:** Die Oberflächenemission der natürlichen Grenze bei E_obs $\approx$ E_surface/1,802. Für Akkretionsraten > 10⁻⁸ M$\odot$/Jahr mit Athena oder eXTP detektierbar.
+**Röntgenemission:** Die Oberflächenemission der natürlichen Grenze bei E_obs ≈ E_surface/1,802. Für Akkretionsraten > 10⁻⁸ M☉/Jahr mit Athena oder eXTP detektierbar.
 
-**LISA EMRIs:** Extreme-Mass-Ratio-Inspirals kartieren die Metrik nahe $r_{s}$ mit hoher Präzision. LISA kann D($r_{s}$) auf ~1% bestimmen.
+**LISA EMRIs:** Extreme-Mass-Ratio-Inspirals kartieren die Metrik nahe r_s mit hoher Präzision. LISA kann D(r_s) auf ~1% bestimmen.
 
 ### Die natuerliche Grenze als physikalische Oberflaeche
 
-Die natuerliche Grenze bei $r_{s}$ hat physikalische Eigenschaften, die sie von einem mathematischen Artefakt unterscheiden:
+Die natuerliche Grenze bei r_s hat physikalische Eigenschaften, die sie von einem mathematischen Artefakt unterscheiden:
 
-**Temperatur:** Die Oberflaeche hat eine effektive Temperatur, die von der Akkretionsrate abhaengt. Fuer eine typische Akkretionsrate (L = 0.1 $L_{Edd}$): $T_{eff}$ ~ 10^7 K fuer stellare Schwarze Loecher und $T_{eff}$ ~ 10^5 K fuer supermassive Schwarze Loecher.
+**Temperatur:** Die Oberflaeche hat eine effektive Temperatur, die von der Akkretionsrate abhaengt. Fuer eine typische Akkretionsrate (L = 0.1 L_Edd): T_eff ~ 10^7 K fuer stellare Schwarze Loecher und T_eff ~ 10^5 K fuer supermassive Schwarze Loecher.
 
-**Rotverschiebung:** Strahlung von der Oberflaeche wird um z = 0.802 rotverschoben. Ein Photon mit E = 10 keV an der Oberflaeche wird als $E_{obs}$ = 10/1.802 = 5.55 keV beobachtet.
+**Rotverschiebung:** Strahlung von der Oberflaeche wird um z = 0.802 rotverschoben. Ein Photon mit E = 10 keV an der Oberflaeche wird als E_obs = 10/1.802 = 5.55 keV beobachtet.
 
-**Reflexionsvermoegen:** Die Oberflaeche hat ein endliches Reflexionsvermoegen (Albedo), das von der Segmentdichte abhaengt. Die SSZ-Vorhersage: Albedo ~ D^2($r_{s}$) ~ 0.31. Dies bedeutet, dass ~31% der einfallenden Strahlung reflektiert wird und ~69% absorbiert und thermisch re-emittiert wird.
+**Reflexionsvermoegen:** Die Oberflaeche hat ein endliches Reflexionsvermoegen (Albedo), das von der Segmentdichte abhaengt. Die SSZ-Vorhersage: Albedo ~ D^2(r_s) ~ 0.31. Dies bedeutet, dass ~31% der einfallenden Strahlung reflektiert wird und ~69% absorbiert und thermisch re-emittiert wird.
 
-**Viskositaet:** Die effektive Viskositaet der Oberflaeche bestimmt, wie schnell einfallende Materie thermalisi ert wird. Die Thermalisierungszeit ist $\tau_{\text{th}}$ ~ $r_{s}$/(c*D($r_{s}$)) ~ 1.8 $r_{s}$/c — etwa doppelt so lang wie die Lichtlaufzeit ueber den Schwarzschild-Radius.
+**Viskositaet:** Die effektive Viskositaet der Oberflaeche bestimmt, wie schnell einfallende Materie thermalisi ert wird. Die Thermalisierungszeit ist tau_th ~ r_s/(c*D(r_s)) ~ 1.8 r_s/c — etwa doppelt so lang wie die Lichtlaufzeit ueber den Schwarzschild-Radius.
 
 ### Informationsfluss durch die natuerliche Grenze
 
@@ -7714,25 +7742,25 @@ In der ART ist der Ereignishorizont eine Einwegmembran: Information kann nur hin
 - **Einwaerts:** Materie und Strahlung koennen die Grenze ueberqueren und ins Innere gelangen.
 - **Auswaerts:** Materie und Strahlung koennen die Grenze verlassen, aber stark rotverschoben (z = 0.802).
 
-Die Informationsflussrate nach aussen ist: dI/dt ~ c*D($r_{s}$)*S_surface, wobei S_surface die Entropie der Oberflaeche ist. Fuer ein stellares Schwarzes Loch (M = 10 $M_{sun}$): dI/dt ~ 10^43 Bit/s. Dies ist enorm — aber die Information ist stark rotverschoben und praktisch nicht detektierbar mit aktueller Technologie.
+Die Informationsflussrate nach aussen ist: dI/dt ~ c*D(r_s)*S_surface, wobei S_surface die Entropie der Oberflaeche ist. Fuer ein stellares Schwarzes Loch (M = 10 M_sun): dI/dt ~ 10^43 Bit/s. Dies ist enorm — aber die Information ist stark rotverschoben und praktisch nicht detektierbar mit aktueller Technologie.
 
 ### Das Penrose-Diagramm der SSZ-Raumzeit
 
 Das Penrose-Diagramm (auch Carter-Penrose-Diagramm oder konforme Kompaktifizierung) ist ein Werkzeug zur Visualisierung der kausalen Struktur der Raumzeit. In der ART zeigt das Penrose-Diagramm eines Schwarzschild-Schwarzen-Lochs den Ereignishorizont als eine 45-Grad-Linie, die die Raumzeit in zwei kausal getrennte Regionen teilt: das Aeussere (aus dem Signale entkommen koennen) und das Innere (aus dem keine Signale entkommen koennen).
 
-In SSZ ist das Penrose-Diagramm qualitativ anders. Die natuerliche Grenze bei r = $r_{s}$ ist keine 45-Grad-Linie, sondern eine zeitartige Flaeche mit endlicher Kruemmung. Lichtstrahlen, die von der natuerlichen Grenze nach aussen gesendet werden, erreichen den entfernten Beobachter mit einer endlichen (aber extremen) Rotverschiebung z = 0,802. Die kausale Struktur bleibt intakt: Es gibt keine Region, aus der Signale nicht entkommen koennen.
+In SSZ ist das Penrose-Diagramm qualitativ anders. Die natuerliche Grenze bei r = r_s ist keine 45-Grad-Linie, sondern eine zeitartige Flaeche mit endlicher Kruemmung. Lichtstrahlen, die von der natuerlichen Grenze nach aussen gesendet werden, erreichen den entfernten Beobachter mit einer endlichen (aber extremen) Rotverschiebung z = 0,802. Die kausale Struktur bleibt intakt: Es gibt keine Region, aus der Signale nicht entkommen koennen.
 
 Die Konsequenz fuer das Informationsparadoxon ist tiefgreifend. In der ART geht Information, die hinter den Horizont faellt, fuer den aeusseren Beobachter verloren (es sei denn, Hawking-Strahlung traegt die Information zurueck, was das Informationsparadoxon aufwirft). In SSZ gibt es keinen Horizont im ART-Sinne: Die natuerliche Grenze ist durchlaessig fuer Signale (wenn auch stark rotverschoben). Information geht nie verloren, weil sie immer (wenn auch langsam) nach aussen diffundieren kann.
 
 ### Hawking-Strahlung in SSZ
 
-Die Hawking-Strahlung ist eine Vorhersage der Quantenfeldtheorie in gekruemmter Raumzeit: Ein Schwarzes Loch emittiert thermische Strahlung mit einer Temperatur $T_{H}$ = hbar c^3 / (8 pi G M $k_{B}$). In SSZ ist die Hawking-Temperatur modifiziert durch den endlichen Zeitdilatationsfaktor an der natuerlichen Grenze:
+Die Hawking-Strahlung ist eine Vorhersage der Quantenfeldtheorie in gekruemmter Raumzeit: Ein Schwarzes Loch emittiert thermische Strahlung mit einer Temperatur T_H = hbar c^3 / (8 pi G M k_B). In SSZ ist die Hawking-Temperatur modifiziert durch den endlichen Zeitdilatationsfaktor an der natuerlichen Grenze:
 
-$T_{SSZ}$ = $D_{min}$^2 * $T_{H}$ = 0,555^2 * $T_{H}$ = 0,308 * $T_{H}$
+T_SSZ = D_min^2 * T_H = 0,555^2 * T_H = 0,308 * T_H
 
-Die SSZ-Hawking-Temperatur ist um einen Faktor 3,25 niedriger als die ART-Vorhersage. Dies hat Konsequenzen fuer die Lebensdauer Schwarzer Loecher durch Hawking-Verdampfung: Die Verdampfungszeit skaliert mit T^{-3}, sodass die SSZ-Verdampfungszeit um einen Faktor (1/0,308)^3 $\approx$ 34 laenger ist als in der ART.
+Die SSZ-Hawking-Temperatur ist um einen Faktor 3,25 niedriger als die ART-Vorhersage. Dies hat Konsequenzen fuer die Lebensdauer Schwarzer Loecher durch Hawking-Verdampfung: Die Verdampfungszeit skaliert mit T^{-3}, sodass die SSZ-Verdampfungszeit um einen Faktor (1/0,308)^3 ≈ 34 laenger ist als in der ART.
 
-Fuer stellare Schwarze Loecher (M ~ 10 $M_{Sonne}$) ist die Hawking-Temperatur ~10^{-8} K in der ART und ~3 × 10^{-9} K in SSZ — in beiden Faellen voellig unmessbar. Fuer primordialen Schwarze Loecher mit M ~ 10^{12} kg (die gerade jetzt verdampfen sollten) waere die SSZ-Korrektur potenziell beobachtbar als Aenderung im Gamma-Strahlungsspektrum der Verdampfung.
+Fuer stellare Schwarze Loecher (M ~ 10 M_Sonne) ist die Hawking-Temperatur ~10^{-8} K in der ART und ~3 × 10^{-9} K in SSZ — in beiden Faellen voellig unmessbar. Fuer primordialen Schwarze Loecher mit M ~ 10^{12} kg (die gerade jetzt verdampfen sollten) waere die SSZ-Korrektur potenziell beobachtbar als Aenderung im Gamma-Strahlungsspektrum der Verdampfung.
 
 ### Thermodynamik Schwarzer Loecher
 
@@ -7740,7 +7768,7 @@ Die vier Gesetze der Schwarze-Loch-Thermodynamik (Bardeen, Carter, Hawking 1973)
 
 **Nulltes Gesetz:** Die Oberflaechengravitation kappa ist konstant auf dem Horizont. In SSZ: Die Segmentdichte Xi ist konstant auf der natuerlichen Grenze (Xi = 0,802).
 
-**Erstes Gesetz:** dM = (kappa/8pi) dA + Omega dJ + Phi dQ. In SSZ: Die gleiche Relation gilt, wobei kappa durch die SSZ-Oberflaechengravitation $\kappa_{\text{SSZ}}$ = $\kappa_{\text{GR}}$ * $D_{min}$ ersetzt wird.
+**Erstes Gesetz:** dM = (kappa/8pi) dA + Omega dJ + Phi dQ. In SSZ: Die gleiche Relation gilt, wobei kappa durch die SSZ-Oberflaechengravitation kappa_SSZ = kappa_GR * D_min ersetzt wird.
 
 **Zweites Gesetz:** Die Flaechenentropie A nimmt nie ab. In SSZ: Die Flaechenentropie der natuerlichen Grenze nimmt nie ab (weil die natuerliche Grenze nie schrumpfen kann, ohne Energie abzustrahlen).
 
@@ -7748,9 +7776,9 @@ Die vier Gesetze der Schwarze-Loch-Thermodynamik (Bardeen, Carter, Hawking 1973)
 
 ### Bekenstein-Hawking-Entropie in SSZ
 
-Die Bekenstein-Hawking-Entropie eines Schwarzen Lochs in der ART ist S = $k_{B}$ A / (4 $l_{P}$^2), wobei A = 4 pi $r_{s}$^2 die Horizontflaeche und $l_{P}$ = sqrt(hbar G / c^3) = 1,616 x 10^{-35} m die Planck-Laenge ist. Fuer ein stellares Schwarzes Loch (M = 10 $M_{Sonne}$) ergibt sich S ~ 10^{78} $k_{B}$ — eine enorme Entropie.
+Die Bekenstein-Hawking-Entropie eines Schwarzen Lochs in der ART ist S = k_B A / (4 l_P^2), wobei A = 4 pi r_s^2 die Horizontflaeche und l_P = sqrt(hbar G / c^3) = 1,616 x 10^{-35} m die Planck-Laenge ist. Fuer ein stellares Schwarzes Loch (M = 10 M_Sonne) ergibt sich S ~ 10^{78} k_B — eine enorme Entropie.
 
-In SSZ ist die natuerliche Grenze bei r = $r_{s}$, und ihre Flaeche ist $A_{SSZ}$ = 4 pi $r_{s}$^2 — identisch mit der Horizontflaeche in der ART. Die SSZ-Entropie ist daher $S_{SSZ}$ = $S_{BH}$ = $k_{B}$ A / (4 $l_{P}$^2). Die Entropie ist in beiden Theorien gleich, obwohl die physikalische Interpretation verschieden ist:
+In SSZ ist die natuerliche Grenze bei r = r_s, und ihre Flaeche ist A_SSZ = 4 pi r_s^2 — identisch mit der Horizontflaeche in der ART. Die SSZ-Entropie ist daher S_SSZ = S_BH = k_B A / (4 l_P^2). Die Entropie ist in beiden Theorien gleich, obwohl die physikalische Interpretation verschieden ist:
 
 - **ART:** Die Entropie ist mit dem Horizont assoziiert und zaehlt die Mikrozustaende, die von aussen nicht unterscheidbar sind.
 - **SSZ:** Die Entropie ist mit der natuerlichen Grenze assoziiert und zaehlt die Oberflaechenfreiheitsgrade bei D = 0,555.
@@ -7759,21 +7787,21 @@ In SSZ ist die natuerliche Grenze bei r = $r_{s}$, und ihre Flaeche ist $A_{SSZ}
 
 Die vier Gesetze der Schwarze-Loch-Mechanik (Bardeen, Carter, Hawking, 1973) haben SSZ-Analoga:
 
-**Nulltes Gesetz:** Die Oberflaechengravitation kappa ist auf dem Horizont konstant. In SSZ: Der Zeitdilatationsfaktor D ist auf der natuerlichen Grenze konstant (D = 0,555). Die Oberflaechengravitation ist $\kappa_{\text{SSZ}}$ = c^4 / (4 G M) * $D_{min}$ = 0,555 * $\kappa_{\text{GR}}$.
+**Nulltes Gesetz:** Die Oberflaechengravitation kappa ist auf dem Horizont konstant. In SSZ: Der Zeitdilatationsfaktor D ist auf der natuerlichen Grenze konstant (D = 0,555). Die Oberflaechengravitation ist kappa_SSZ = c^4 / (4 G M) * D_min = 0,555 * kappa_GR.
 
-**Erstes Gesetz:** dM = kappa dA / (8 pi G) + Omega dJ + Phi dQ. In SSZ identisch, mit $\kappa_{\text{SSZ}}$ statt $\kappa_{\text{GR}}$. Die Konsequenz: Die Energieaenderung bei Flaechenaenderung ist um den Faktor $D_{min}$ = 0,555 reduziert.
+**Erstes Gesetz:** dM = kappa dA / (8 pi G) + Omega dJ + Phi dQ. In SSZ identisch, mit kappa_SSZ statt kappa_GR. Die Konsequenz: Die Energieaenderung bei Flaechenaenderung ist um den Faktor D_min = 0,555 reduziert.
 
-**Zweites Gesetz:** Die Flaeche der natuerlichen Grenze kann nie abnehmen (dA >= 0). In SSZ folgt dies aus der Monotonie der Segmentdichte: Wenn Materie auf die natuerliche Grenze faellt, nimmt die Masse M zu, und damit auch $r_{s}$ = 2GM/c^2 und A = 4 pi $r_{s}$^2.
+**Zweites Gesetz:** Die Flaeche der natuerlichen Grenze kann nie abnehmen (dA >= 0). In SSZ folgt dies aus der Monotonie der Segmentdichte: Wenn Materie auf die natuerliche Grenze faellt, nimmt die Masse M zu, und damit auch r_s = 2GM/c^2 und A = 4 pi r_s^2.
 
-**Drittes Gesetz:** Die Oberflaechengravitation kann nicht auf null reduziert werden (kappa > 0). In SSZ: $D_{min}$ = 0,555 > 0, was $\kappa_{\text{SSZ}}$ > 0 garantiert. Im Gegensatz zur ART, wo extremale Schwarze Loecher (a = M) kappa = 0 haben, hat SSZ immer kappa > 0.
+**Drittes Gesetz:** Die Oberflaechengravitation kann nicht auf null reduziert werden (kappa > 0). In SSZ: D_min = 0,555 > 0, was kappa_SSZ > 0 garantiert. Im Gegensatz zur ART, wo extremale Schwarze Loecher (a = M) kappa = 0 haben, hat SSZ immer kappa > 0.
 
 ### Hawking-Strahlung: Modifizierte Temperatur
 
-Die Hawking-Temperatur in der ART ist $T_{H}$ = hbar c^3 / (8 pi G M $k_{B}$). Fuer ein stellares Schwarzes Loch (M = 10 $M_{Sonne}$) ist $T_{H}$ ~ 6 x 10^{-9} K — weit unterhalb jeder messbaren Temperatur.
+Die Hawking-Temperatur in der ART ist T_H = hbar c^3 / (8 pi G M k_B). Fuer ein stellares Schwarzes Loch (M = 10 M_Sonne) ist T_H ~ 6 x 10^{-9} K — weit unterhalb jeder messbaren Temperatur.
 
-In SSZ ist die Hawking-Temperatur modifiziert: $T_{SSZ}$ = $D_{min}$^2 * $T_{H}$ = 0,555^2 * $T_{H}$ = 0,308 * $T_{H}$. Die Reduktion um den Faktor 0,308 entsteht, weil die natuerliche Grenze bei D = 0,555 liegt (nicht bei D = 0 wie der Horizont in der ART). Die Strahlung muss die Potentialbarriere bei D = 0,555 ueberwinden, was die effektive Temperatur reduziert.
+In SSZ ist die Hawking-Temperatur modifiziert: T_SSZ = D_min^2 * T_H = 0,555^2 * T_H = 0,308 * T_H. Die Reduktion um den Faktor 0,308 entsteht, weil die natuerliche Grenze bei D = 0,555 liegt (nicht bei D = 0 wie der Horizont in der ART). Die Strahlung muss die Potentialbarriere bei D = 0,555 ueberwinden, was die effektive Temperatur reduziert.
 
-Die Konsequenz fuer die Verdampfungszeit: t_evap_SSZ = t_evap_GR / $D_{min}$^8 ~ t_evap_GR / 0,0046 ~ 217 * t_evap_GR. Ein SSZ-dunkler-Stern verdampft ~217-mal langsamer als ein ART-Schwarzes-Loch gleicher Masse. Fuer ein stellares Schwarzes Loch (t_evap_GR ~ 10^{67} Jahre) ist t_evap_SSZ ~ 2 x 10^{69} Jahre — in beiden Faellen weit jenseits des Alters des Universums.
+Die Konsequenz fuer die Verdampfungszeit: t_evap_SSZ = t_evap_GR / D_min^8 ~ t_evap_GR / 0,0046 ~ 217 * t_evap_GR. Ein SSZ-dunkler-Stern verdampft ~217-mal langsamer als ein ART-Schwarzes-Loch gleicher Masse. Fuer ein stellares Schwarzes Loch (t_evap_GR ~ 10^{67} Jahre) ist t_evap_SSZ ~ 2 x 10^{69} Jahre — in beiden Faellen weit jenseits des Alters des Universums.
 
 
 
@@ -7783,11 +7811,11 @@ In der ART geht Information hinter dem Ereignishorizont verloren (Informationspa
 
 Der Informationsgehalt der natuerlichen Grenze kann durch die Bekenstein-Schranke abgeschaetzt werden:
 
-$I_{max}$ = 2 pi R E / (hbar c ln 2)
+I_max = 2 pi R E / (hbar c ln 2)
 
-wobei R = $r_{s}$ der Radius und E = M c^2 die Energie ist. Fuer ein stellares Schwarzes Loch (M = 10 $M_{Sonne}$):
+wobei R = r_s der Radius und E = M c^2 die Energie ist. Fuer ein stellares Schwarzes Loch (M = 10 M_Sonne):
 
-$I_{max}$ ~ 10^{77} Bits
+I_max ~ 10^{77} Bits
 
 Dies ist eine enorme Informationsmenge -- vergleichbar mit der Entropie des beobachtbaren Universums. In SSZ ist diese Information nicht verloren, sondern an der natuerlichen Grenze gespeichert und (prinzipiell) durch stark rotverschobene Strahlung zugaenglich.
 
@@ -7795,15 +7823,15 @@ Dies ist eine enorme Informationsmenge -- vergleichbar mit der Entropie des beob
 
 Die thermodynamische Stabilitaet eines dunklen Sterns in SSZ wird durch die spezifische Waerme bestimmt:
 
-C = dE/dT = -dM c^2 / dT\_H
+C = dE/dT = -dM c^2 / dT_H
 
-In der ART ist die spezifische Waerme von Schwarzen Loechern negativ (C < 0), was bedeutet, dass sie thermodynamisch instabil sind (sie werden heisser, wenn sie Energie verlieren). In SSZ ist die spezifische Waerme ebenfalls negativ, aber der Betrag ist um den Faktor $D_{min}$^2 = 0,308 reduziert:
+In der ART ist die spezifische Waerme von Schwarzen Loechern negativ (C < 0), was bedeutet, dass sie thermodynamisch instabil sind (sie werden heisser, wenn sie Energie verlieren). In SSZ ist die spezifische Waerme ebenfalls negativ, aber der Betrag ist um den Faktor D_min^2 = 0,308 reduziert:
 
-$C_{SSZ}$ = $C_{GR}$ * $D_{min}$^2
+C_SSZ = C_GR * D_min^2
 
 Die reduzierte spezifische Waerme bedeutet, dass dunkle Sterne in SSZ langsamer verdampfen als Schwarze Loecher in der ART. Die Verdampfungszeit ist:
 
-t_evap_SSZ = t_evap_GR / $D_{min}$^6 ~ 10 * t_evap_GR
+t_evap_SSZ = t_evap_GR / D_min^6 ~ 10 * t_evap_GR
 
 ## Querverweise
 
@@ -7815,17 +7843,19 @@ t_evap_SSZ = t_evap_GR / $D_{min}$^6 ~ 10 * t_evap_GR
 
 Dieses Kapitel hat die natuerliche Grenze und ihren Informationsgehalt in SSZ analysiert:
 
-1. **Endliche Entropie:** S = $k_{B}$ A/(4 $l_{P}$^2) -- identisch mit Bekenstein-Hawking.
+1. **Endliche Entropie:** S = k_B A/(4 l_P^2) -- identisch mit Bekenstein-Hawking.
 2. **Kein Informationsparadoxon:** Keine Horizonte, keine Informationsverlust-Problematik.
-3. **Thermodynamische Stabilitaet:** Dunkle Sterne sind thermodynamisch stabil (positive Waermekapazitaet fuer M > $M_{krit}$).
-4. **Hawking-Strahlung:** Modifiziert um Faktor $D_{min}$ = 0,555.
+3. **Thermodynamische Stabilitaet:** Dunkle Sterne sind thermodynamisch stabil (positive Waermekapazitaet fuer M > M_krit).
+4. **Hawking-Strahlung:** Modifiziert um Faktor D_min = 0,555.
 5. **Verdampfungszeit:** ~10x laenger als in ART.
 6. **Page-Kurve:** Unitaer (keine Informationsverlust).
 
+---
 
-\newpage
+# Kapitel 21: Das Dunkle-Stern-Problem — Flucht in starker Gravitation
 
-# Das Dunkle-Stern-Problem — Flucht in starker Gravitation
+**Teil V — Starkfeldobjekte**
+**Status:** ERWEITERTE FASSUNG v2
 
 
 ![Abb 21](figures/ch21_dark_star/fig_21_01.png)
@@ -7836,7 +7866,7 @@ Dieses Kapitel hat die natuerliche Grenze und ihren Informationsgehalt in SSZ an
 
 Das Konzept eines „dunklen Sterns" — eines Objekts, das so massiv ist, dass Licht seiner Gravitationsanziehung nicht entkommen kann — geht der Allgemeinen Relativitätstheorie um über ein Jahrhundert voraus. John Michell (1783) und Pierre-Simon Laplace (1796) berechneten unabhängig voneinander, dass ein Körper mit einer Fluchtgeschwindigkeit über der Lichtgeschwindigkeit unsichtbar wäre. Als Einsteins ART die Newtonsche Gravitation ersetzte, wurde das Dunkle-Stern-Konzept durch den Ereignishorizont abgelöst — eine mathematisch präzise Kausalgrenze, von der nichts entkommt.
 
-SSZ überprüft das Dunkle-Stern-Problem mit modernen Werkzeugen und kommt zu einem bemerkenswerten Schluss: **Das ursprüngliche Michell-Laplace-Bild ist näher an der Realität als der ART-Ereignishorizont.** In SSZ ist Licht nahe der natürlichen Grenze stark rotverschoben (z = 0,802), aber NICHT eingesperrt. Photonen entkommen von jedem Radius, einschließlich r = $r_{s}$. Das Objekt ist „dunkel" in dem Sinne, dass seine Oberflächenemission extrem schwach und rotverschoben ist — aber es ist nicht „schwarz" im ART-Sinne absoluter kausaler Trennung.
+SSZ überprüft das Dunkle-Stern-Problem mit modernen Werkzeugen und kommt zu einem bemerkenswerten Schluss: **Das ursprüngliche Michell-Laplace-Bild ist näher an der Realität als der ART-Ereignishorizont.** In SSZ ist Licht nahe der natürlichen Grenze stark rotverschoben (z = 0,802), aber NICHT eingesperrt. Photonen entkommen von jedem Radius, einschließlich r = r_s. Das Objekt ist „dunkel" in dem Sinne, dass seine Oberflächenemission extrem schwach und rotverschoben ist — aber es ist nicht „schwarz" im ART-Sinne absoluter kausaler Trennung.
 
 **Lesehinweis.** Abschnitt 21.1 gibt einen Überblick über das historische Dunkle-Stern-Konzept. Abschnitt 21.2 präsentiert den ART-Ereignishorizont. Abschnitt 21.3 leitet SSZs Neubewertung her. Abschnitt 21.4 katalogisiert aufgelöste Paradoxa. Abschnitt 21.5 listet beobachtbare Unterschiede auf. Abschnitt 21.6 fasst die Validierung zusammen.
 
@@ -7858,17 +7888,17 @@ SSZ belebt das Dunkle-Stern-Konzept in moderner Form wieder. Weil D > 0 überall
 
 Michell berechnete die Fluchtgeschwindigkeit von der Oberfläche eines Sterns:
 
-$$v_{\text{esc}} = \sqrt{\frac{2GM}{R}}$$
+v_{\text{esc}} = \sqrt{\frac{2GM}{R}}
 
-Wenn $v_{esc}$ ≥ c, können Lichtteilchen nicht entkommen. Setzt man $v_{esc}$ = c, erhält man den kritischen Radius:
+Wenn v_esc ≥ c, können Lichtteilchen nicht entkommen. Setzt man v_esc = c, erhält man den kritischen Radius:
 
-$$R_{\text{kritisch}} = \frac{2GM}{c^2} = r_s$$
+R_{\text{kritisch}} = \frac{2GM}{c^2} = r_s
 
 Dies ist numerisch identisch mit dem Schwarzschild-Radius.
 
 ### Die Schlüsseleinsicht
 
-Sowohl Michell als auch Laplace nahmen an, dass Licht durch Gravitation **verlangsamt** werden kann — es würde emittiert, nach oben reisen, verlangsamt und schließlich zurückfallen (bei $v_{esc}$ > c) oder mit reduzierter Geschwindigkeit entkommen (bei $v_{esc}$ < c). Dies ist bemerkenswert nahe am SSZ-Bild.
+Sowohl Michell als auch Laplace nahmen an, dass Licht durch Gravitation **verlangsamt** werden kann — es würde emittiert, nach oben reisen, verlangsamt und schließlich zurückfallen (bei v_esc > c) oder mit reduzierter Geschwindigkeit entkommen (bei v_esc < c). Dies ist bemerkenswert nahe am SSZ-Bild.
 
 ### Laplaces Beitrag (1796)
 
@@ -7880,21 +7910,21 @@ Die historische Ironie: Michell und Laplace hatten qualitativ recht — es gibt 
 
 ### Die Schwarzschild-Lösung (1916)
 
-Karl Schwarzschild fand die erste exakte Lösung der Einsteinschen Feldgleichungen. Bei r = $r_{s}$ wird $g_{tt}$ = 0 und $g_{rr}$ divergiert. Es dauerte Jahrzehnte, um zu verstehen, dass r = $r_{s}$ eine Koordinatensingularität ist.
+Karl Schwarzschild fand die erste exakte Lösung der Einsteinschen Feldgleichungen. Bei r = r_s wird g_tt = 0 und g_rr divergiert. Es dauerte Jahrzehnte, um zu verstehen, dass r = r_s eine Koordinatensingularität ist.
 
 ### Der Oppenheimer–Snyder-Kollaps (1939)
 
-Der Übergang vom Dunkelstern zum Schwarzen Loch wurde durch Oppenheimer und Snyders Paper von 1939 besiegelt, das zeigte, dass ein hinreichend massereicher Stern in endlicher Eigenzeit durch seinen Schwarzschild-Radius kollabieren würde. In SSZ verläuft der Kollaps anders: er durchläuft r = $r_{s}$ in endlicher Koordinatenzeit (D = 0,555 $\neq$ 0), und die Materie trifft auf die natürliche Grenze statt auf eine Singularität.
+Der Übergang vom Dunkelstern zum Schwarzen Loch wurde durch Oppenheimer und Snyders Paper von 1939 besiegelt, das zeigte, dass ein hinreichend massereicher Stern in endlicher Eigenzeit durch seinen Schwarzschild-Radius kollabieren würde. In SSZ verläuft der Kollaps anders: er durchläuft r = r_s in endlicher Koordinatenzeit (D = 0,555 ≠ 0), und die Materie trifft auf die natürliche Grenze statt auf eine Singularität.
 
 ### Der Ereignishorizont
 
-Die moderne Deutung (Finkelstein 1958, Kruskal 1960) interpretiert r = $r_{s}$ als **Ereignishorizont** — eine Einweg-Kausalmembran:
+Die moderne Deutung (Finkelstein 1958, Kruskal 1960) interpretiert r = r_s als **Ereignishorizont** — eine Einweg-Kausalmembran:
 
-**Kausale Trennung.** Kein Signal, das bei r ≤ $r_{s}$ emittiert wird, kann einen Beobachter bei r > $r_{s}$ erreichen.
+**Kausale Trennung.** Kein Signal, das bei r ≤ r_s emittiert wird, kann einen Beobachter bei r > r_s erreichen.
 
-**D = 0 exakt.** Der Zeitdilatationsfaktor verschwindet: Eine Uhr bei r = $r_{s}$ ist vollständig gestoppt.
+**D = 0 exakt.** Der Zeitdilatationsfaktor verschwindet: Eine Uhr bei r = r_s ist vollständig gestoppt.
 
-**Metriksignaturwechsel.** Für r < $r_{s}$ tauschen die Rollen von Zeit und Raum.
+**Metriksignaturwechsel.** Für r < r_s tauschen die Rollen von Zeit und Raum.
 
 ### ART-Paradoxa
 
@@ -7912,11 +7942,11 @@ Der Ereignishorizont erzeugt mehrere tiefgreifende Paradoxa:
 
 ### Zurück zu Michell — Mit moderner Physik
 
-SSZs Auflösung ist konzeptuell einfach: **Ersetze $D_{ART}$ = 0 durch $D_{SSZ}$ = 0,555.** Die Konsequenzen kaskadieren durch alle Paradoxa der ART:
+SSZs Auflösung ist konzeptuell einfach: **Ersetze D_ART = 0 durch D_SSZ = 0,555.** Die Konsequenzen kaskadieren durch alle Paradoxa der ART:
 
-An der natürlichen Grenze (r $\approx$ r_s), D = 0,555:
+An der natürlichen Grenze (r ≈ r_s), D = 0,555:
 
-**Licht entkommt.** Photonen, die bei r_s emittiert werden, erreichen das Unendliche mit Rotverschiebung z = 0,802. Die beobachtete Intensität beträgt I_obs/I_emit = D⁴ $\approx$ 0,095 — extrem schwach, aber **prinzipiell sichtbar**.
+**Licht entkommt.** Photonen, die bei r_s emittiert werden, erreichen das Unendliche mit Rotverschiebung z = 0,802. Die beobachtete Intensität beträgt I_obs/I_emit = D⁴ ≈ 0,095 — extrem schwach, aber **prinzipiell sichtbar**.
 
 **Uhren ticken.** Bei D = 0,555 läuft eine Uhr mit 55,5% ihrer Rate im Unendlichen. Alle physikalischen Prozesse laufen weiter.
 
@@ -7938,9 +7968,9 @@ An der natürlichen Grenze (r $\approx$ r_s), D = 0,555:
 
 Der SSZ-Dunkle-Stern hat thermodynamische Eigenschaften, die sich vom ART-Schwarzen-Loch unterscheiden:
 
-**Temperatur:** Die Hawking-Temperatur $T_{H}$ = ħc³/(8πGMk\_B) gilt für den ART-Horizont. In SSZ gibt es keinen Horizont, also keine Hawking-Strahlung im üblichen Sinne. Die natürliche Grenze hat jedoch eine thermische Emission aufgrund ihrer endlichen Temperatur (D > 0 bedeutet, dass die Oberfläche physikalisch existiert und strahlen kann).
+**Temperatur:** Die Hawking-Temperatur T_H = ħc³/(8πGMk_B) gilt für den ART-Horizont. In SSZ gibt es keinen Horizont, also keine Hawking-Strahlung im üblichen Sinne. Die natürliche Grenze hat jedoch eine thermische Emission aufgrund ihrer endlichen Temperatur (D > 0 bedeutet, dass die Oberfläche physikalisch existiert und strahlen kann).
 
-**Entropie:** Die Bekenstein-Hawking-Entropie S = A/(4$l_{P}$²) = $k_{B}$ c³ A/(4Għ) ist proportional zur Fläche. In SSZ ist die natürliche Grenze bei $r_{s}$ ebenfalls eine Fläche mit A = 4π$r_{s}$², sodass die Flächenentropie erhalten bleibt. Der physikalische Ursprung der Entropie ist jedoch anders: In der ART ist sie eine Information-Hide-Eigenschaft des Horizonts; in SSZ ist sie die Anzahl der Segmente auf der Grenzfläche.
+**Entropie:** Die Bekenstein-Hawking-Entropie S = A/(4l_P²) = k_B c³ A/(4Għ) ist proportional zur Fläche. In SSZ ist die natürliche Grenze bei r_s ebenfalls eine Fläche mit A = 4πr_s², sodass die Flächenentropie erhalten bleibt. Der physikalische Ursprung der Entropie ist jedoch anders: In der ART ist sie eine Information-Hide-Eigenschaft des Horizonts; in SSZ ist sie die Anzahl der Segmente auf der Grenzfläche.
 
 **Informationsparadoxon:** In der ART verschwindet Information hinter dem Horizont und scheint bei der Verdampfung verloren zu gehen. In SSZ gibt es keinen Informationsverlust, weil die natürliche Grenze durchlässig ist (D > 0). Information kann die Grenze verlassen, stark rotverschoben (z = 0,802), aber nicht unendlich rotverschoben.
 
@@ -7960,7 +7990,7 @@ SSZ löst alle vier ART-Schwarze-Loch-Paradoxa auf:
 
 Die Firewall-Hypothese (Almheiri, Marolf, Polchinski, Sully 2012 — AMPS) argumentiert, dass das Äquivalenzprinzip am Horizont eines alten Schwarzen Lochs zusammenbricht. Ein Beobachter, der den Horizont überquert, würde auf eine Wand hochenergetischer Teilchen treffen (die „Firewall“), statt durch den Horizont zu fallen.
 
-In SSZ gibt es keine Firewall-Debatte, weil es keinen Horizont gibt. Die natürliche Grenze bei $r_{s}$ ist eine physikalische Oberfläche mit endlicher Temperatur und endlicher Segmentdichte. Ein Beobachter, der sich $r_{s}$ nähert, erfährt zunehmende, aber endliche Gezeitenkräfte und trifft auf eine Oberfläche, nicht auf eine Firewall.
+In SSZ gibt es keine Firewall-Debatte, weil es keinen Horizont gibt. Die natürliche Grenze bei r_s ist eine physikalische Oberfläche mit endlicher Temperatur und endlicher Segmentdichte. Ein Beobachter, der sich r_s nähert, erfährt zunehmende, aber endliche Gezeitenkräfte und trifft auf eine Oberfläche, nicht auf eine Firewall.
 
 Die AMPS-Paradoxie entsteht aus dem Spannungsfeld zwischen drei Prinzipien: (1) Unitärität der Quantenmechanik, (2) Äquivalenzprinzip am Horizont, (3) Kein Drama für den einfallenden Beobachter. In der ART kann höchstens eines aufgegeben werden. In SSZ sind alle drei erfüllt, weil der Horizont durch eine physikalische Oberfläche ersetzt wird.
 
@@ -8004,19 +8034,19 @@ Die Neutronenstern-Oberflächenrotverschiebung (+13% vs. ART) ist der vielverspr
 
 Michell argumentierte wie folgt: Wenn ein Körper so massiv und kompakt ist, dass seine Fluchtgeschwindigkeit die Lichtgeschwindigkeit übersteigt, dann kann kein Lichtteilchen (Korpuskel in der Newtonschen Theorie) dem Körper entkommen. Die kritische Bedingung:
 
-$v_{esc}$ = √(2GM/R) ≥ c ⇒ R ≤ 2GM/c² = $r_{s}$
+v_esc = √(2GM/R) ≥ c ⇒ R ≤ 2GM/c² = r_s
 
-Michell berechnete, dass ein Körper mit 500-fachem Sonnenradius bei Sonnendichte ein Dunkler Stern wäre. Bemerkenswert: Michells Formel R ≤ $r_{s}$ stimmt exakt mit dem Schwarzschild-Radius überein, obwohl die zugrunde liegende Physik völlig verschieden ist (Newtonsche Korpuskeltheorie vs. Raumzeitkrümmung).
+Michell berechnete, dass ein Körper mit 500-fachem Sonnenradius bei Sonnendichte ein Dunkler Stern wäre. Bemerkenswert: Michells Formel R ≤ r_s stimmt exakt mit dem Schwarzschild-Radius überein, obwohl die zugrunde liegende Physik völlig verschieden ist (Newtonsche Korpuskeltheorie vs. Raumzeitkrümmung).
 
 In SSZ ist die Situation näher an Michells Bild als an Einsteins: Licht wird nicht kausal gefangen (wie in der ART), sondern maximal verlangsamt und rotverschoben. Der SSZ-Dunkle-Stern ist ein Objekt, aus dem Licht entkommen KANN, aber so stark rotverschoben ist (z = 0,802), dass es praktisch unsichtbar wird — ein „fast-dunkler Stern“.
 
 ### Der Unterschied zwischen „gefangen“ und „rotverschoben“
 
-Der fundamentale Unterschied zwischen ART und SSZ bei r = $r_{s}$:
+Der fundamentale Unterschied zwischen ART und SSZ bei r = r_s:
 
 **ART:** Licht ist kausal gefangen. Kein Signal kann den Horizont nach außen überqueren. Die Rotverschiebung ist unendlich. Ein externer Beobachter sieht nie das Einfallen eines Objekts (es dauert unendliche Koordinatenzeit).
 
-**SSZ:** Licht ist extrem rotverschoben, aber nicht gefangen. Ein Signal bei r = $r_{s}$ braucht endliche Koordinatenzeit, um einen externen Beobachter zu erreichen. Die Rotverschiebung ist z = 0,802 — groß, aber endlich. Ein externer Beobachter sieht das Einfallen in endlicher Zeit (stark verlangsamt und rotverschoben).
+**SSZ:** Licht ist extrem rotverschoben, aber nicht gefangen. Ein Signal bei r = r_s braucht endliche Koordinatenzeit, um einen externen Beobachter zu erreichen. Die Rotverschiebung ist z = 0,802 — groß, aber endlich. Ein externer Beobachter sieht das Einfallen in endlicher Zeit (stark verlangsamt und rotverschoben).
 
 Praktisch bedeutet dies: Für astronomische Beobachtungen sind beide Theorien fast ununterscheidbar (weil z = 0,802 bereits eine extreme Rotverschiebung ist), aber konzeptionell sind sie fundamental verschieden (Information kann in SSZ entkommen, in der ART nicht).
 
@@ -8024,9 +8054,9 @@ Praktisch bedeutet dies: Für astronomische Beobachtungen sind beide Theorien fa
 
 Drei Beobachtungsstrategien könnten SSZ-Dunkle-Sterne von ART-Schwarzen-Löchern unterscheiden:
 
-**Strategie 1 — Radioemission von der natürlichen Grenze:** Die natürliche Grenze emittiert thermische Strahlung, die um z = 0,802 rotverschoben wird. Für ein stellares Schwarzes Loch mit Akkretionsrate ~10⁻⁸ M$\odot$/Jahr liegt die beobachtete Emission im Radiobereich (~GHz). Das ngEHT (next-generation Event Horizon Telescope) könnte diese Emission für Sgr A* und M87* detektieren, falls sie existiert. Die vorhergesagte Flussdichte ist ~μJy — an der Grenze der ngEHT-Empfindlichkeit.
+**Strategie 1 — Radioemission von der natürlichen Grenze:** Die natürliche Grenze emittiert thermische Strahlung, die um z = 0,802 rotverschoben wird. Für ein stellares Schwarzes Loch mit Akkretionsrate ~10⁻⁸ M☉/Jahr liegt die beobachtete Emission im Radiobereich (~GHz). Das ngEHT (next-generation Event Horizon Telescope) könnte diese Emission für Sgr A* und M87* detektieren, falls sie existiert. Die vorhergesagte Flussdichte ist ~μJy — an der Grenze der ngEHT-Empfindlichkeit.
 
-**Strategie 2 — Metrik-Perturbationen-Echos:** Nach einer Binärverschmelzung können Metrik-Perturbationen an der natürlichen Grenze reflektiert werden und als Echos mit Zeitverzögerung Δt $\approx$ 0,6 r_s/c nach dem Hauptsignal erscheinen. Für ein 30-M$\odot$-Schwarzes-Loch ist Δt $\approx$ 0,3 ms. observational haben nach solchen Echos gesucht (Abedi et al. 2017), mit nicht-schlüssigen Ergebnissen. Das Einstein-Teleskop (geplant für die 2030er Jahre) wird die Empfindlichkeit haben, Echos für M < 50 M$\odot$ definitiv zu detektieren oder auszuschließen.
+**Strategie 2 — Metrik-Perturbationen-Echos:** Nach einer Binärverschmelzung können Metrik-Perturbationen an der natürlichen Grenze reflektiert werden und als Echos mit Zeitverzögerung Δt ≈ 0,6 r_s/c nach dem Hauptsignal erscheinen. Für ein 30-M☉-Schwarzes-Loch ist Δt ≈ 0,3 ms. GW-Detektoren haben nach solchen Echos gesucht (Abedi et al. 2017), mit nicht-schlüssigen Ergebnissen. Das Einstein-Teleskop (geplant für die 2030er Jahre) wird die Empfindlichkeit haben, Echos für M < 50 M☉ definitiv zu detektieren oder auszuschließen.
 
 **Strategie 3 — Gezeitendeformierbarkeit bei Verschmelzungen:** Die Gezeitendeformierbarkeit beschreibt, wie leicht ein kompaktes Objekt sich im Gezeitenfeld eines Begleiters verformt. In der ART haben Schwarze Löcher null Gezeitendeformierbarkeit. In SSZ kann die natürliche Grenze sich leicht unter Gezeitenkräften verformen, was eine nicht-verschwindende Gezeitendeformierbarkeit ergibt. Dies beeinflusst die Inspiral-Wellenform und ist mit aktuellen Detektoren für Neutronenstern-Schwarzes-Loch-Verschmelzungen messbar.
 
@@ -8046,11 +8076,11 @@ Der SSZ-Dunkle-Stern zeichnet sich durch seine Konstruktionsökonomie aus: Er er
 
 **Testdateien:** `test_dark_star`, `test_escape`, `test_visibility`
 
-**Was die Tests beweisen:** Licht entkommt von r_s mit z = 0,802; Intensitätsverhältnis D⁴ $\approx$ 0,095; keine eingeschlossenen Flächen in der SSZ-Metrik; alle vier Paradoxa erfordern D = 0 (was SSZ nicht hat).
+**Was die Tests beweisen:** Licht entkommt von r_s mit z = 0,802; Intensitätsverhältnis D⁴ ≈ 0,095; keine eingeschlossenen Flächen in der SSZ-Metrik; alle vier Paradoxa erfordern D = 0 (was SSZ nicht hat).
 
-**Was die Tests NICHT beweisen:** Dass SSZs spezifischer Wert D($r_{s}$) = 0,555 korrekt ist — dies hängt vom Axiom Ξ_max = 1 − e^{−φ} ab.
+**Was die Tests NICHT beweisen:** Dass SSZs spezifischer Wert D(r_s) = 0,555 korrekt ist — dies hängt vom Axiom Ξ_max = 1 − e^{−φ} ab.
 
-**Reproduktion:** `E:/clone\ssz-metric-pure\`
+**Reproduktion:** `E:\clone\ssz-metric-pure\`
 
 ---
 
@@ -8059,7 +8089,7 @@ Der SSZ-Dunkle-Stern zeichnet sich durch seine Konstruktionsökonomie aus: Er er
 | # | Formel | Bereich |
 |---|---------|--------|
 | 1 | z(r_s) = 0,802 | Flucht-Rotverschiebung |
-| 2 | I_obs/I_emit = D⁴ $\approx$ 0,095 | Sichtbarkeit |
+| 2 | I_obs/I_emit = D⁴ ≈ 0,095 | Sichtbarkeit |
 | 3 | D(r_s) = 0,555 > 0 | kein kausales Einfangen |
 
 ---
@@ -8078,9 +8108,9 @@ Das nächste Kapitel behandelt superradiante Instabilitäten und zeigt, wie SSZ 
 
 Die Gezeitendeformierbarkeit eines kompakten Objekts wird durch die dimensionslose Tidal Love Number k_2 quantifiziert. In der ART ist k_2 = 0 fuer Schwarze Loecher (ein Schwarzes Loch laesst sich nicht deformieren) und k_2 ~ 0,05-0,15 fuer Neutronensterne (abhaengig von der Zustandsgleichung).
 
-In SSZ haben dunkle Sterne eine endliche Gezeitendeformierbarkeit, weil die natuerliche Grenze eine endliche Steifigkeit besitzt. Die SSZ-Vorhersage ist k_2_SSZ ~ $D_{min}$^5 ~ 0,555^5 ~ 0,052 fuer ein Objekt an der natuerlichen Grenze. Dieser Wert ist vergleichbar mit dem eines Neutronensterns, was bedeutet, dass ein SSZ-dunkler-Stern in Metrik-Perturbationensignalen einem Neutronenstern aehnlich sehen wuerde.
+In SSZ haben dunkle Sterne eine endliche Gezeitendeformierbarkeit, weil die natuerliche Grenze eine endliche Steifigkeit besitzt. Die SSZ-Vorhersage ist k_2_SSZ ~ D_min^5 ~ 0,555^5 ~ 0,052 fuer ein Objekt an der natuerlichen Grenze. Dieser Wert ist vergleichbar mit dem eines Neutronensterns, was bedeutet, dass ein SSZ-dunkler-Stern in Metrik-Perturbationensignalen einem Neutronenstern aehnlich sehen wuerde.
 
-Die Konsequenz fuer Metrik-Perturbationenbeobachtungen: Wenn observational eine Verschmelzung zweier kompakter Objekte mit Massen im Schwarze-Loch-Bereich (> 3 $M_{Sonne}$) detektiert, aber mit einer endlichen Gezeitendeformierbarkeit (k_2 > 0), waere dies ein starker Hinweis auf SSZ-dunkle-Sterne. Die aktuelle Sensitivitaet von observational reicht aus, um k_2 > 0,1 bei Massen von 5-10 $M_{Sonne}$ zu detektieren. Zukuenftige Detektoren (Einstein-Teleskop) werden k_2 > 0,01 messen koennen.
+Die Konsequenz fuer Metrik-Perturbationenbeobachtungen: Wenn GW-Detektoren eine Verschmelzung zweier kompakter Objekte mit Massen im Schwarze-Loch-Bereich (> 3 M_Sonne) detektiert, aber mit einer endlichen Gezeitendeformierbarkeit (k_2 > 0), waere dies ein starker Hinweis auf SSZ-dunkle-Sterne. Die aktuelle Sensitivitaet von GW-Detektoren reicht aus, um k_2 > 0,1 bei Massen von 5-10 M_Sonne zu detektieren. Zukuenftige Detektoren (Einstein-Teleskop) werden k_2 > 0,01 messen koennen.
 
 ### Historische Entwicklung: Von Michell zu SSZ
 
@@ -8090,7 +8120,7 @@ Die Idee eines Objekts, dessen Gravitation so stark ist, dass Licht nicht entkom
 
 **Pierre-Simon Laplace (1796):** Unabhaengig von Michell kam Laplace zum gleichen Ergebnis in seiner Exposition du Systeme du Monde. Er zog die Passage spaeter zurueck, als die Wellentheorie des Lichts die Korpuskulartheorie ersetzte.
 
-**Karl Schwarzschild (1916):** Fand die erste exakte Loesung der Einstein-Gleichungen fuer ein kugelsymmetrisches Gravitationsfeld. Die Loesung hat eine Singularitaet bei r = $r_{s}$, die spaeter als Koordinatensingularitaet erkannt wurde.
+**Karl Schwarzschild (1916):** Fand die erste exakte Loesung der Einstein-Gleichungen fuer ein kugelsymmetrisches Gravitationsfeld. Die Loesung hat eine Singularitaet bei r = r_s, die spaeter als Koordinatensingularitaet erkannt wurde.
 
 **Robert Oppenheimer und Hartland Snyder (1939):** Zeigten, dass ein hinreichend massiver Stern unter seiner eigenen Gravitation kollabiert und einen Ereignishorizont bildet. Dies war die erste moderne Beschreibung eines Schwarzen Lochs.
 
@@ -8102,31 +8132,23 @@ Die Idee eines Objekts, dessen Gravitation so stark ist, dass Licht nicht entkom
 
 Die Unterscheidung zwischen einem SSZ-dunklen-Stern und einem ART-Schwarzen-Loch erfordert Beobachtungen im Starkfeldregime. Die vielversprechendsten Strategien:
 
-**Oberflaechemission:** Ein dunkler Stern hat eine Oberflaeche (die natuerliche Grenze), die thermisch strahlen kann. Die Temperatur der Oberflaeche ist $T_{surf}$ = T_accretion * $D_{min}$ = T_accretion * 0,555, wobei T_accretion die Temperatur der akkretierenden Materie ist. Fuer ein stellares Schwarzes Loch (M = 10 $M_{Sonne}$) mit typischer Akkretionstemperatur T_accretion ~ 10^7 K ergibt sich $T_{surf}$ ~ 5,5 x 10^6 K, was im weichen Roentgenbereich (~0,5 keV) strahlt.
+**Oberflaechemission:** Ein dunkler Stern hat eine Oberflaeche (die natuerliche Grenze), die thermisch strahlen kann. Die Temperatur der Oberflaeche ist T_surf = T_accretion * D_min = T_accretion * 0,555, wobei T_accretion die Temperatur der akkretierenden Materie ist. Fuer ein stellares Schwarzes Loch (M = 10 M_Sonne) mit typischer Akkretionstemperatur T_accretion ~ 10^7 K ergibt sich T_surf ~ 5,5 x 10^6 K, was im weichen Roentgenbereich (~0,5 keV) strahlt.
 
 In der ART hat ein Schwarzes Loch keine Oberflaeche und daher keine thermische Oberflaechenemission. Die Detektion einer thermischen Komponente in der Roentgenemission eines Schwarze-Loch-Kandidaten, die nicht durch die Akkretionsscheibe erklaert werden kann, waere ein starker Hinweis auf einen dunklen Stern.
 
-**Typ-I-Roentgenbursts:** Neutronensterne zeigen Typ-I-Roentgenbursts (thermonukleare Explosionen auf der Oberflaeche). Schwarze Loecher zeigen keine solchen Bursts (weil sie keine Oberflaeche haben). Wenn ein kompaktes Objekt mit einer Masse im Schwarze-Loch-Bereich (> 3 $M_{Sonne}$) Typ-I-Bursts zeigt, waere dies ein starker Hinweis auf einen dunklen Stern.
+**Typ-I-Roentgenbursts:** Neutronensterne zeigen Typ-I-Roentgenbursts (thermonukleare Explosionen auf der Oberflaeche). Schwarze Loecher zeigen keine solchen Bursts (weil sie keine Oberflaeche haben). Wenn ein kompaktes Objekt mit einer Masse im Schwarze-Loch-Bereich (> 3 M_Sonne) Typ-I-Bursts zeigt, waere dies ein starker Hinweis auf einen dunklen Stern.
 
-Allerdings ist die Burst-Physik auf der natuerlichen Grenze (D = 0,555) anders als auf einer Neutronenstern-Oberflaeche (D ~ 0,85): Die Zeitskalen sind um den Faktor $D_{min}$/D_NS ~ 0,65 gestreckt, und die Burst-Energien sind um den Faktor ($D_{min}$/D_NS)^4 ~ 0,18 reduziert. Diese Unterschiede koennten die Bursts schwer detektierbar machen.
+Allerdings ist die Burst-Physik auf der natuerlichen Grenze (D = 0,555) anders als auf einer Neutronenstern-Oberflaeche (D ~ 0,85): Die Zeitskalen sind um den Faktor D_min/D_NS ~ 0,65 gestreckt, und die Burst-Energien sind um den Faktor (D_min/D_NS)^4 ~ 0,18 reduziert. Diese Unterschiede koennten die Bursts schwer detektierbar machen.
 
 **Metrik-Perturbationen-Ringdown:** Nach einer Verschmelzung zweier kompakter Objekte schwingt das resultierende Objekt mit Quasinormal-Moden (QNMs). In der ART sind die QNMs durch die Kerr-Metrik bestimmt. In SSZ sind die QNMs durch die SSZ-Metrik bestimmt, was zu einer Frequenzverschiebung von ~3% und einer Daempfungszeitaenderung von ~5% fuehrt. Diese Unterschiede sind mit Metrik-Perturbationendetektoren der dritten Generation messbar.
 
 ### Massenluecke und Klassifikation kompakter Objekte
 
-In der ART gibt es eine scharfe Grenze zwischen Neutronensternen (M < ~3 $M_{Sonne}$) und Schwarzen Loechern (M > ~3 $M_{Sonne}$). Die Massenluecke (der Bereich 3-5 $M_{Sonne}$, in dem wenige kompakte Objekte beobachtet werden) wird als Konsequenz des Gravitationskollapses interpretiert.
+In der ART gibt es eine scharfe Grenze zwischen Neutronensternen (M < ~3 M_Sonne) und Schwarzen Loechern (M > ~3 M_Sonne). Die Massenluecke (der Bereich 3-5 M_Sonne, in dem wenige kompakte Objekte beobachtet werden) wird als Konsequenz des Gravitationskollapses interpretiert.
 
-In SSZ ist die Grenze weniger scharf: Ein kompaktes Objekt mit M > 3 $M_{Sonne}$ ist ein dunkler Stern (nicht ein Schwarzes Loch), der eine Oberflaeche bei r = $r_{s}$ hat. Die Massenluecke koennte in SSZ eine andere Erklaerung haben: Sie koennte durch die Physik der Supernova-Explosion bestimmt sein (welche Massen der kompakte Ueberrest haben kann), nicht durch die Gravitationstheorie.
+In SSZ ist die Grenze weniger scharf: Ein kompaktes Objekt mit M > 3 M_Sonne ist ein dunkler Stern (nicht ein Schwarzes Loch), der eine Oberflaeche bei r = r_s hat. Die Massenluecke koennte in SSZ eine andere Erklaerung haben: Sie koennte durch die Physik der Supernova-Explosion bestimmt sein (welche Massen der kompakte Ueberrest haben kann), nicht durch die Gravitationstheorie.
 
-Die observational-Beobachtungen haben begonnen, die Massenluecke zu fuellen: GW190814 enthielt ein kompaktes Objekt mit M = 2,6 $M_{Sonne}$ (zu schwer fuer die meisten Neutronenstern-Zustandsgleichungen, zu leicht fuer die klassische Massenluecke). In SSZ ist dieses Objekt ein dunkler Stern mit $\Xi_{\text{surface}}$ ~ 0,25 und D_surface ~ 0,80.
-
-### Echosignaturen in Metrik-Perturbationen
-
-Eine der aufregendsten Vorhersagen von SSZ ist die Existenz von Metrik-Perturbationen-Echos. In der ART absorbiert der Ereignishorizont alle einfallenden Metrik-Perturbationen vollstaendig. In SSZ reflektiert die natuerliche Grenze einen Teil der einfallenden Wellen, was zu Echos fuehrt.
-
-Die Echo-Zeitskala ist: $t_{echo}$ ~ $r_{s}$/c * |ln($D_{min}$)| ~ $r_{s}$/c * 0,59. Fuer ein stellares Schwarzes Loch (M = 10 $M_{Sonne}$) ist $t_{echo}$ ~ 0,035 ms. Die Echos sind stark gedaempft (Amplitude ~ $D_{min}$^2 ~ 0,31 pro Echo) und klingen exponentiell ab.
-
-Die Suche nach Echos in observational campaigns-Daten ist ein aktives Forschungsgebiet. Bisherige Analysen (Abedi et al., 2017; Westerweck et al., 2018) haben widersprüchliche Ergebnisse geliefert. Die naechste Generation von Detektoren (observational campaigns A+, Einstein-Teleskop) wird die Empfindlichkeit haben, um Echos mit der von SSZ vorhergesagten Amplitude zu detektieren oder auszuschliessen.
+Die Beobachtungen haben begonnen, die Massenluecke zu fuellen: GW190814 enthielt ein kompaktes Objekt mit M = 2,6 M_Sonne (zu schwer fuer die meisten Neutronenstern-Zustandsgleichungen, zu leicht fuer die klassische Massenluecke). In SSZ ist dieses Objekt ein dunkler Stern mit Xi_surface ~ 0,25 und D_surface ~ 0,80.
 
 ### Gezeitendeformierbarkeit in SSZ
 
@@ -8134,23 +8156,23 @@ Die Gezeitendeformierbarkeit Lambda beschreibt, wie stark ein kompaktes Objekt d
 
 Lambda = (2/3) k_2 (R/M)^5
 
-wobei k_2 die Love-Zahl und R der Radius des Objekts ist. In der ART ist k_2 = 0 fuer Schwarze Loecher (sie haben keine Oberflaeche und koennen nicht deformiert werden). In SSZ ist k_2 ~ 0,052 fuer dunkle Sterne (sie haben eine Oberflaeche bei r = $r_{s}$ und koennen deformiert werden).
+wobei k_2 die Love-Zahl und R der Radius des Objekts ist. In der ART ist k_2 = 0 fuer Schwarze Loecher (sie haben keine Oberflaeche und koennen nicht deformiert werden). In SSZ ist k_2 ~ 0,052 fuer dunkle Sterne (sie haben eine Oberflaeche bei r = r_s und koennen deformiert werden).
 
 Die Konsequenz fuer Metrik-Perturbationen: Bei der Verschmelzung zweier kompakter Objekte beeinflusst die Gezeitendeformierbarkeit die Metrik-Perturbationen-Phase in den letzten ~100 Orbitalzyklen vor der Verschmelzung. Die Phasenverschiebung betraegt:
 
-Delta_Phi_tidal ~ Lambda * ($M_{total}$ / $r_{sep}$)^5
+Delta_Phi_tidal ~ Lambda * (M_total / r_sep)^5
 
-Fuer ein System wie GW170817 (zwei Neutronensterne, $M_{total}$ ~ 2,7 $M_{Sonne}$) war $\Lambda_{\text{obs}}$ = 300 +/- 200. Fuer ein System mit einem dunklen Stern (M ~ 10 $M_{Sonne}$) waere $\Lambda_{\text{SSZ}}$ ~ 0,1 — sehr klein, aber mit dem Einstein-Teleskop messbar.
+Fuer ein System wie GW170817 (zwei Neutronensterne, M_total ~ 2,7 M_Sonne) war Lambda_obs = 300 +/- 200. Fuer ein System mit einem dunklen Stern (M ~ 10 M_Sonne) waere Lambda_SSZ ~ 0,1 — sehr klein, aber mit dem Einstein-Teleskop messbar.
 
 ### Thermische Emission von dunklen Sternen
 
-Dunkle Sterne in SSZ haben eine Oberflaeche bei r = $r_{s}$ mit einer endlichen Temperatur. Die Oberflaechentemperatur haengt von der Akkretionsrate ab:
+Dunkle Sterne in SSZ haben eine Oberflaeche bei r = r_s mit einer endlichen Temperatur. Die Oberflaechentemperatur haengt von der Akkretionsrate ab:
 
-$T_{surf}$ = ($L_{acc}$ / (4 pi $r_{s}$^2 $\sigma_{\text{SB}}$))^{1/4} * $D_{min}$
+T_surf = (L_acc / (4 pi r_s^2 sigma_SB))^{1/4} * D_min
 
-wobei $L_{acc}$ die Akkretionsleuchtkraft, $\sigma_{\text{SB}}$ die Stefan-Boltzmann-Konstante und $D_{min}$ = 0,555 der Zeitdilatationsfaktor ist. Fuer typische Akkretionsraten ($L_{acc}$ ~ 10^{37} erg/s) und ein stellares Schwarzes Loch (M = 10 $M_{Sonne}$, $r_{s}$ = 30 km):
+wobei L_acc die Akkretionsleuchtkraft, sigma_SB die Stefan-Boltzmann-Konstante und D_min = 0,555 der Zeitdilatationsfaktor ist. Fuer typische Akkretionsraten (L_acc ~ 10^{37} erg/s) und ein stellares Schwarzes Loch (M = 10 M_Sonne, r_s = 30 km):
 
-$T_{surf}$ ~ 2 x 10^6 K * 0,555 ~ 1,1 x 10^6 K
+T_surf ~ 2 x 10^6 K * 0,555 ~ 1,1 x 10^6 K
 
 Diese Temperatur liegt im weichen Roentgenbereich (~0,1 keV). Die thermische Emission waere als schwaches, breitbandiges Signal im Roentgenspektrum sichtbar — ueberlagert von der viel helleren Akkretionsscheiben-Emission.
 
@@ -8166,18 +8188,20 @@ Die Suche nach dieser thermischen Emission ist eine der vielversprechendsten Str
 
 Dieses Kapitel hat die SSZ-Vorhersagen fuer kompakte Sterne und dunkle Sterne dargestellt. Die wichtigsten Ergebnisse:
 
-1. **Masse-Luecke:** SSZ sagt eine Masse-Luecke zwischen Neutronensternen (~2,5 $M_{sun}$) und dunklen Sternen (~5 $M_{sun}$) vorher.
+1. **Masse-Luecke:** SSZ sagt eine Masse-Luecke zwischen Neutronensternen (~2,5 M_sun) und dunklen Sternen (~5 M_sun) vorher.
 2. **Gezeitendeformierbarkeit:** k_2 ~ 0,052 fuer dunkle Sterne (vs. k_2 = 0 fuer ART-Schwarze-Loecher).
 3. **Thermische Emission:** Oberflaechentemperatur ~10^6 K im weichen Roentgenbereich.
-4. **Metrik-Perturbationen-Echos:** Echos mit Verzoegerung $\Delta_{\text{t}}$ ~ $r_{s}$/c * ln(1/D_min) ~ 0,6 $r_{s}$/c.
-5. **observational:** Aktuelle Daten sind mit SSZ konsistent; Einstein-Teleskop wird diskriminieren.
+4. **Quasinormal-Moden:** +3% Frequenzverschiebung gegenueber ART, messbar mit Einstein-Teleskop.
+5. **Beobachtungsstatus:** Aktuelle Daten sind mit SSZ konsistent; Einstein-Teleskop und Athena werden diskriminieren.
 
 Dunkle Sterne sind die dramatischste Vorhersage von SSZ -- Objekte, die wie Schwarze Loecher aussehen, aber eine Oberflaeche haben. Ihre Detektion waere ein entscheidender Test fuer SSZ.
 
+---
 
-\newpage
+# Kapitel 22: SSZ als Regulator superradianter Instabilitäten
 
-# SSZ als Regulator superradianter Instabilitäten
+**Teil V — Starkfeldobjekte**
+**Status:** ERWEITERTE FASSUNG v2
 
 
 ![Abb 22](figures/ch22_superradiance/fig_22s_01.png)
@@ -8191,9 +8215,9 @@ Dunkle Sterne sind die dramatischste Vorhersage von SSZ -- Objekte, die wie Schw
 
 Superradianz — die Verstärkung von Wellen, die an rotierenden Schwarzen Löchern streuen — ist eines der faszinierendsten Phänomene der Schwarze-Loch-Physik. Erstmals von Zel'dowitsch (1971) für rotierende absorbierende Körper identifiziert und von Starobinsky (1973) auf Kerr-Schwarze-Löcher erweitert, erlaubt Superradianz Wellen, Rotationsenergie zu extrahieren, wenn ihre Frequenz die Bedingung ω < mΩ_H erfüllt. Kombiniert mit einem Einschlussmechanismus — entweder einem massiven bosonischen Feld als gravitativem „Spiegel" oder den Wänden einer hypothetischen Box — erzeugt Superradianz eine Rückkopplungsschleife, die Wellen exponentiell verstärkt. Dies ist die „Schwarze-Loch-Bombe" von Press und Teukolsky (1972).
 
-SSZ modifiziert das Superradianzbild fundamental. Der endliche Zeitdilatationsfaktor D($r_{s}$) = 0,555 an der natürlichen Grenze ändert die Ergoregionstruktur, reduziert das superradiante Frequenzfenster und führt einen Dissipationskanal durch das Segmentgitter ein. Der Nettoeffekt: SSZ-Schwarze-Löcher sind signifikant stabiler gegen superradiante Instabilitäten als ihre ART-Gegenstücke.
+SSZ modifiziert das Superradianzbild fundamental. Der endliche Zeitdilatationsfaktor D(r_s) = 0,555 an der natürlichen Grenze ändert die Ergoregionstruktur, reduziert das superradiante Frequenzfenster und führt einen Dissipationskanal durch das Segmentgitter ein. Der Nettoeffekt: SSZ-Schwarze-Löcher sind signifikant stabiler gegen superradiante Instabilitäten als ihre ART-Gegenstücke.
 
-**Lesehinweis.** Abschnitt 22.1 gibt einen Überblick über das Schwarze-Loch-Bombe-Problem. Abschnitt 22.2 präsentiert den SSZ-Stabilisierungsmechanismus. Abschnitt 22.3 leitet den $G_{SSZ}$-Regulator her. Abschnitt 22.4 definiert den S-Index. Abschnitt 22.5 diskutiert astrophysikalische Implikationen. Abschnitt 22.6 fasst die Validierung zusammen.
+**Lesehinweis.** Abschnitt 22.1 gibt einen Überblick über das Schwarze-Loch-Bombe-Problem. Abschnitt 22.2 präsentiert den SSZ-Stabilisierungsmechanismus. Abschnitt 22.3 leitet den G_SSZ-Regulator her. Abschnitt 22.4 definiert den S-Index. Abschnitt 22.5 diskutiert astrophysikalische Implikationen. Abschnitt 22.6 fasst die Validierung zusammen.
 
 Warum ist dies notwendig? Superradianz ist ein wichtiger Stabilitaetstest fuer jede Schwarze-Loch-Theorie. Dieses Kapitel zeigt, dass SSZ superradiante Instabilitaeten natuerlich reguliert, ohne zusaetzliche Mechanismen.
 
@@ -8211,7 +8235,7 @@ Intuitiv bedeutet dies: Das Segmentgitter wirkt als reibungsartiger Mechanismus 
 
 Superradianz ist ein klassisches Wellenverstärkungsphänomen. Wenn eine Welle mit Frequenz ω und azimutaler Quantenzahl m an einem rotierenden absorbierenden Körper mit Winkelgeschwindigkeit Ω_H streut, trägt die reflektierte Welle mehr Energie, wenn:
 
-$$\omega < m\Omega_H \quad \text{(Zel'dowitsch-Bedingung)}$$
+\omega < m\Omega_H \quad \text{(Zel'dowitsch-Bedingung)}
 
 ### Die Rückkopplungsschleife
 
@@ -8220,13 +8244,13 @@ Press und Teukolsky (1972) erkannten, dass ein Einschlussmechanismus eine verhee
 1. Eine einfallende Welle streut am rotierenden Schwarzen Loch und wird verstärkt
 2. Die verstärkte Welle prallt am „Spiegel" zurück zum Schwarzen Loch
 3. Die Welle streut erneut, wird erneut verstärkt
-4. Die Amplitude wächst exponentiell: A(t) $\propto$ e^{Γt}
+4. Die Amplitude wächst exponentiell: A(t) ∝ e^{Γt}
 
 Die Natur liefert einen natürlichen Spiegel: **massive bosonische Felder** mit Masse μ. Das System bildet ein „gravitatives Atom" mit dem Schwarzen Loch als Kern und der Bosonenwolke als Elektron.
 
 ### Das Beobachtungspuzzle
 
-Wenn ultraleichte Bosonen mit Masse μ ~ 10⁻¹² eV existierten, wäre die superradiante Wachstumszeitskala für stellare Schwarze Löcher ~10⁴ Jahre — viel kürzer als das Alter stellarer Schwarzer Löcher (~10⁹ Jahre). Solche Schwarzen Löcher sollten vollständig abgebremst sein. Doch observational-Beobachtungen zeigen Schwarze Löcher mit signifikantem Spin (χ > 0,3) im Massenbereich, wo Superradianz aktiv sein sollte.
+Wenn ultraleichte Bosonen mit Masse μ ~ 10⁻¹² eV existierten, wäre die superradiante Wachstumszeitskala für stellare Schwarze Löcher ~10⁴ Jahre — viel kürzer als das Alter stellarer Schwarzer Löcher (~10⁹ Jahre). Solche Schwarzen Löcher sollten vollständig abgebremst sein. Doch GW-Beobachtungen zeigen Schwarze Löcher mit signifikantem Spin (χ > 0,3) im Massenbereich, wo Superradianz aktiv sein sollte.
 
 SSZ liefert die Erklärung: Ein Stabilisierungsmechanismus unterdrückt Superradianz stärker als die ART vorhersagt.
 
@@ -8244,19 +8268,19 @@ Wenn ein reflektierender Spiegel die superradiante Welle zurueck zum Schwarzen L
 
 ### Beobachtete Stabilitaet
 
-Trotz der theoretischen Moeglichkeit superradianter Instabilitaeten zeigen alle beobachteten Schwarzen Loecher bemerkenswerte Stabilitaet. GRS 1915+105 hat einen Spin von a/M $\approx$ 0,98 und ist seit Jahrzehnten stabil. Cygnus X-1 (a/M $\approx$ 0,99) ebenso. Dies erfordert entweder einen Dissipationsmechanismus oder die Abwesenheit reflektierender Raender.
+Trotz der theoretischen Moeglichkeit superradianter Instabilitaeten zeigen alle beobachteten Schwarzen Loecher bemerkenswerte Stabilitaet. GRS 1915+105 hat einen Spin von a/M ≈ 0,98 und ist seit Jahrzehnten stabil. Cygnus X-1 (a/M ≈ 0,99) ebenso. Dies erfordert entweder einen Dissipationsmechanismus oder die Abwesenheit reflektierender Raender.
 
 ## 22.2 SSZ-Stabilisierungsmechanismus
 
 ### Modifizierte Ergoregion
 
-In der ART erstreckt sich die Ergoregion vom äußeren Horizont r_+ bis zur Ergosphäre $r_{ergo}$. In SSZ hat D($r_{s}$) = 0,555 $\neq$ 0 drei Effekte:
+In der ART erstreckt sich die Ergoregion vom äußeren Horizont r_+ bis zur Ergosphäre r_ergo. In SSZ hat D(r_s) = 0,555 ≠ 0 drei Effekte:
 
-**1. Reduziertes Frequenzfenster.** Die modifizierte Zel'dowitsch-Bedingung wird: ω < mΩ_H · $D_{SSZ}$(r_+).
+**1. Reduziertes Frequenzfenster.** Die modifizierte Zel'dowitsch-Bedingung wird: ω < mΩ_H · D_SSZ(r_+).
 
-**2. Geschrumpfte Ergoregion.** Das Ergoregionvolumen hängt davon ab, wie weit $g_{tt}$ sich über den Horizont hinaus erstreckt.
+**2. Geschrumpfte Ergoregion.** Das Ergoregionvolumen hängt davon ab, wie weit g_tt sich über den Horizont hinaus erstreckt.
 
-**3. Endliche Absorptionseffizienz.** In der ART ist der Horizont ein perfekter Absorber (100% Absorption). In SSZ hat die natürliche Grenze einen Reflexionskoeffizienten R $\approx$ 0,44 (Kapitel 20), was die Nettoverstärkung pro Zyklus reduziert.
+**3. Endliche Absorptionseffizienz.** In der ART ist der Horizont ein perfekter Absorber (100% Absorption). In SSZ hat die natürliche Grenze einen Reflexionskoeffizienten R ≈ 0,44 (Kapitel 20), was die Nettoverstärkung pro Zyklus reduziert.
 
 ### Segmentdissipation
 
@@ -8266,9 +8290,9 @@ Die diskrete Segmentstruktur liefert einen natürlichen **Dissipationskanal**. W
 
 Die SSZ-Dämpfungsrate für superradiante Moden kann quantitativ berechnet werden. Für eine skalare Mode mit Frequenz ω und azimutaler Quantenzahl m:
 
-Γ_SSZ = Γ_ART × (1 − D²($r_{s}$))/(1 − D²_ART($r_{s}$))
+Γ_SSZ = Γ_ART × (1 − D²(r_s))/(1 − D²_ART(r_s))
 
-Da $D_{ART}$($r_{s}$) = 0 und $D_{SSZ}$($r_{s}$) = 0,555:
+Da D_ART(r_s) = 0 und D_SSZ(r_s) = 0,555:
 
 Γ_SSZ = Γ_ART × (1 − 0,308) = 0,692 × Γ_ART
 
@@ -8278,15 +8302,15 @@ Die Dämpfungsrate ist um ~31% reduziert gegenüber der ART. Dies klingt paradox
 
 Für ein rotierendes Schwarzes Loch mit Kerr-Parameter a sagt SSZ eine modifizierte Spin-Down-Rate vorher:
 
-da/dt = −(32/5) × (a/M) × (M/r_s)⁴ × D²($r_{s}$) × G/c⁵
+da/dt = −(32/5) × (a/M) × (M/r_s)⁴ × D²(r_s) × G/c⁵
 
-Die Spin-Down-Rate ist um D²($r_{s}$) = 0,308 gegenüber der ART-Vorhersage reduziert. Dies bedeutet, dass SSZ-Schwarze-Löcher langsamer Drehimpuls verlieren als ART-Schwarze-Löcher. Die beobachtete Verteilung von Schwarzloch-Spins (a/M = 0,6–0,99 für Röntgen-Binärsysteme) ist mit beiden Theorien konsistent, aber zukünftige Spin-Messungen mit höherer Präzision könnten zwischen SSZ und ART unterscheiden.
+Die Spin-Down-Rate ist um D²(r_s) = 0,308 gegenüber der ART-Vorhersage reduziert. Dies bedeutet, dass SSZ-Schwarze-Löcher langsamer Drehimpuls verlieren als ART-Schwarze-Löcher. Die beobachtete Verteilung von Schwarzloch-Spins (a/M = 0,6–0,99 für Röntgen-Binärsysteme) ist mit beiden Theorien konsistent, aber zukünftige Spin-Messungen mit höherer Präzision könnten zwischen SSZ und ART unterscheiden.
 
-## 22.3 Der $G_{SSZ}$-Regulator
+## 22.3 Der G_SSZ-Regulator
 
-Der $G_{SSZ}$-Regulator quantifiziert die Unterdrückung superradianter Wachstumsraten:
+Der G_SSZ-Regulator quantifiziert die Unterdrückung superradianter Wachstumsraten:
 
-$$G_{\text{SSZ}} = D(r_s)^{2l+1}$$
+G_{\text{SSZ}} = D(r_s)^{2l+1}
 
 Die Potenz (2l+1) entsteht aus der Drehimpulsbarriere: Höhere l-Moden müssen eine stärkere Zentrifugalbarriere nahe der Grenze durchdringen.
 
@@ -8300,25 +8324,25 @@ Die Potenz (2l+1) entsteht aus der Drehimpulsbarriere: Höhere l-Moden müssen e
 
 Die modifizierte Wachstumsrate:
 
-$$\Gamma_{\text{SSZ}} = G_{\text{SSZ}} \cdot \Gamma_{\text{ART}} = D(r_s)^{2l+1} \cdot \Gamma_{\text{ART}}$$
+\Gamma_{\text{SSZ}} = G_{\text{SSZ}} \cdot \Gamma_{\text{ART}} = D(r_s)^{2l+1} \cdot \Gamma_{\text{ART}}
 
-Für l = 1: τ_SSZ $\approx$ 5,8 × τ_ART.
+Für l = 1: τ_SSZ ≈ 5,8 × τ_ART.
 
 ### Numerische Simulationen der Superradianz
 
 Numerische Simulationen der Wellengleichung in der SSZ-Metrik bestaetigen die analytischen Ergebnisse:
 
-**Setup:** Skalare Welle mit omega = 0.8 * m * $\Omega_{\text{H}}$, l = m = 1, auf einem Hintergrund mit a/M = 0.9 und D($r_{s}$) = 0.555.
+**Setup:** Skalare Welle mit omega = 0.8 * m * Omega_H, l = m = 1, auf einem Hintergrund mit a/M = 0.9 und D(r_s) = 0.555.
 
-**Ergebnis ART:** Die Amplitude waechst exponentiell mit Zeitskala $\tau_{\text{grow}}$ = 3.2 $r_{s}$/c. Nach 100 $r_{s}$/c ist die Amplitude um Faktor 10^14 gewachsen — explosives Wachstum.
+**Ergebnis ART:** Die Amplitude waechst exponentiell mit Zeitskala tau_grow = 3.2 r_s/c. Nach 100 r_s/c ist die Amplitude um Faktor 10^14 gewachsen — explosives Wachstum.
 
-**Ergebnis SSZ:** Die Amplitude oszilliert und zerfaellt mit Zeitskala $\tau_{\text{decay}}$ = 8.7 $r_{s}$/c. Die Segmentdissipation ueberwiegt die Superradianzverstarkung. Nach 100 $r_{s}$/c ist die Amplitude auf 10^-5 des Anfangswerts gefallen — stabil.
+**Ergebnis SSZ:** Die Amplitude oszilliert und zerfaellt mit Zeitskala tau_decay = 8.7 r_s/c. Die Segmentdissipation ueberwiegt die Superradianzverstarkung. Nach 100 r_s/c ist die Amplitude auf 10^-5 des Anfangswerts gefallen — stabil.
 
-Der Uebergangspunkt (Instabilitaet -> Stabilitaet) liegt bei $D_{crit}$ ~ 0.3. Da D($r_{s}$) = 0.555 > $D_{crit}$, ist die SSZ-Metrik stabil gegenueber allen superradianten Moden.
+Der Uebergangspunkt (Instabilitaet -> Stabilitaet) liegt bei D_crit ~ 0.3. Da D(r_s) = 0.555 > D_crit, ist die SSZ-Metrik stabil gegenueber allen superradianten Moden.
 
 ### Verbindung zu ultraleichten Bosonen
 
-Ultraleichte Bosonen (wie Axionen mit $m_{a}$ ~ 10^-12 eV) wuerden in der ART superradiante Instabilitaeten um rotierende Schwarze Loecher ausloesen und beobachtbare Signaturen erzeugen (Bosenova, Spin-Down). Die Nichtbeobachtung solcher Signaturen koennte entweder bedeuten, dass ultraleichte Bosonen nicht existieren, oder dass ein Stabilisierungsmechanismus (wie SSZ) die Instabilitaet unterdrueckt.
+Ultraleichte Bosonen (wie Axionen mit m_a ~ 10^-12 eV) wuerden in der ART superradiante Instabilitaeten um rotierende Schwarze Loecher ausloesen und beobachtbare Signaturen erzeugen (Bosenova, Spin-Down). Die Nichtbeobachtung solcher Signaturen koennte entweder bedeuten, dass ultraleichte Bosonen nicht existieren, oder dass ein Stabilisierungsmechanismus (wie SSZ) die Instabilitaet unterdrueckt.
 
 Die SSZ-Vorhersage: Selbst wenn ultraleichte Bosonen existieren, wuerde die Segmentdissipation die superradiante Instabilitaet unterdruecken. Die Beobachtung ODER Nichtbeobachtung von Bosenova-Signaturen ist daher kein Test fuer die Existenz ultraleichter Bosonen, sondern ein Test fuer die Natur des Horizonts (ART vs. SSZ).
 
@@ -8328,9 +8352,9 @@ Die superradiante Instabilität in der ART kann durch die Klein-Gordon-Gleichung
 
 In SSZ ist die Wellengleichung durch die Segmentdichte modifiziert: (□_SSZ − μ²)Φ = 0. Die Schlüsselmodifikation: Das effektive Potential für die Radialgleichung erhält einen zusätzlichen Term proportional zu Ξ(r) × μ², der als Barriere wirkt und die einlaufende Welle teilweise reflektiert, bevor sie die natürliche Grenze erreicht.
 
-Der Reflexionskoeffizient R dieser Barriere bestimmt den superradianten Verstärkungsfaktor: A = |$Z_{out}$|²/|$Z_{in}$|² − 1. In der ART absorbiert der Horizont alle einlaufende Strahlung (R = 0). In SSZ reflektiert die natürliche Grenze die Welle teilweise (R > 0), was die effektive Absorption und damit die Verstärkung reduziert.
+Der Reflexionskoeffizient R dieser Barriere bestimmt den superradianten Verstärkungsfaktor: A = |Z_out|²/|Z_in|² − 1. In der ART absorbiert der Horizont alle einlaufende Strahlung (R = 0). In SSZ reflektiert die natürliche Grenze die Welle teilweise (R > 0), was die effektive Absorption und damit die Verstärkung reduziert.
 
-Die Regulatoreffizienz wird durch das Verhältnis η = A_SSZ/A_ART quantifiziert, das für alle Konfigurationen kleiner als 1 ist. Für die instabilsten Moden (μr_s $\approx$ 0,42, m = 1) ist η $\approx$ 0,05 — die SSZ-Verstärkung beträgt nur 5% des ART-Werts. Die Zeitskala für das Wachstum der Instabilität um den Faktor e ist τ = 1/ω_I. In SSZ wird τ um den Faktor 1/η verlängert, was für die instabilsten Moden τ_SSZ $\approx$ 20τ_ART ergibt.
+Die Regulatoreffizienz wird durch das Verhältnis η = A_SSZ/A_ART quantifiziert, das für alle Konfigurationen kleiner als 1 ist. Für die instabilsten Moden (μr_s ≈ 0,42, m = 1) ist η ≈ 0,05 — die SSZ-Verstärkung beträgt nur 5% des ART-Werts. Die Zeitskala für das Wachstum der Instabilität um den Faktor e ist τ = 1/ω_I. In SSZ wird τ um den Faktor 1/η verlängert, was für die instabilsten Moden τ_SSZ ≈ 20τ_ART ergibt.
 
 ### Astrophysikalische Konsequenzen der Stabilisierung
 
@@ -8338,7 +8362,7 @@ Die Stabilisierung superradianter Instabilitäten hat mehrere astrophysikalische
 
 **Maximaler Spin:** In der ART begrenzt die superradiante Instabilität den Spin Schwarzer Löcher in bestimmten Masse-Bosonenmasse-Kombinationen und erzeugt Ausschlusszonen in der Regge-Ebene. In SSZ sind diese Ausschlusszonen kleiner, was höhere Spins erlaubt. Diese Vorhersage kann durch Messung der Spinverteilung aus Metrik-Perturbationenbeobachtungen und Röntgenspektroskopie getestet werden.
 
-**Metrik-Perturbationenhintergrund:** In der ART erzeugt das superradiante Wachstum von Bosonenwolken kontinuierliche Metrik-Perturbationen bei der doppelten Bosonen-Compton-Frequenz. In SSZ bedeutet die reduzierte Wachstumsrate, dass weniger Bosonenwolken detektierbare Amplituden erreichen. Aktuelle observational-Suchen haben diesen Hintergrund nicht detektiert — konsistent mit beiden Theorien.
+**Metrik-Perturbationenhintergrund:** In der ART erzeugt das superradiante Wachstum von Bosonenwolken kontinuierliche Metrik-Perturbationen bei der doppelten Bosonen-Compton-Frequenz. In SSZ bedeutet die reduzierte Wachstumsrate, dass weniger Bosonenwolken detektierbare Amplituden erreichen. Aktuelle GW-Suchen haben diesen Hintergrund nicht detektiert — konsistent mit beiden Theorien.
 
 **Akkretionsmorphologie:** Die superradiante Instabilität extrahiert Drehimpuls vom Schwarzen Loch und deponiert ihn in der Bosonenwolke, die dann mit der Akkretionsscheibe wechselwirken kann. In SSZ erzeugt die schwächere Instabilität schwächere Modulationen, was möglicherweise erklärt, warum solche Modulationen nicht beobachtet wurden.
 
@@ -8346,17 +8370,17 @@ Die Stabilisierung superradianter Instabilitäten hat mehrere astrophysikalische
 
 Der S-Index misst die Gesamtstabilität eines Schwarzen Lochs gegen superradiante Extraktion:
 
-$$S = 1 - G_{\text{SSZ}} \cdot \frac{\omega_{\text{max}}}{\Omega_H}$$
+S = 1 - G_{\text{SSZ}} \cdot \frac{\omega_{\text{max}}}{\Omega_H}
 
 S reicht von 0 (vollständig instabil, ART-Grenzwert) bis 1 (vollständig stabil).
 
 | Objektklasse | Masse | S-Index | Stabilität |
 |-------------|------|---------|-----------|
-| Stellares SL | ~10 M_$\odot$ | > 0,83 | Stabil |
-| Intermediäres SL | ~10³ M_$\odot$ | > 0,90 | Sehr stabil |
-| Supermassereiches SL | ~10⁶ M_$\odot$ | > 0,95 | Extrem stabil |
+| Stellares SL | ~10 M_☉ | > 0,83 | Stabil |
+| Intermediäres SL | ~10³ M_☉ | > 0,90 | Sehr stabil |
+| Supermassereiches SL | ~10⁶ M_☉ | > 0,95 | Extrem stabil |
 
-Alle SSZ-Schwarzen-Löcher sind robust stabil (S > 0,8), konsistent mit der observational-Beobachtung, dass stellare Schwarze Löcher signifikanten Spin behalten.
+Alle SSZ-Schwarzen-Löcher sind robust stabil (S > 0,8), konsistent mit der Beobachtung, dass stellare Schwarze Löcher signifikanten Spin behalten.
 
 ## 22.5 Vergleich mit anderen Stabilisierungsvorschlägen
 
@@ -8382,25 +8406,25 @@ SSZ löst das Problem der superradianten Instabilität ohne zusätzliche Annahme
 
 ### Regge-Ebene
 
-In der Masse-Spin-Ebene (Regge-Ebene) sagt die ART mit ultraleichten Bosonen „Ausschlusszonen" vorher. SSZ reduziert die Größe dieser Ausschlusszonen um den Faktor $G_{SSZ}$ und eliminiert sie möglicherweise vollständig.
+In der Masse-Spin-Ebene (Regge-Ebene) sagt die ART mit ultraleichten Bosonen „Ausschlusszonen" vorher. SSZ reduziert die Größe dieser Ausschlusszonen um den Faktor G_SSZ und eliminiert sie möglicherweise vollständig.
 
-**SSZ ist kompatibel mit der Existenz ultraleichter Bosonen, obwohl observational keine Spin-Down-Signatur sieht.** In der ART wird die Abwesenheit von Ausschlusszonen als Beweis gegen ultraleichte Bosonen genommen. In SSZ ist die Abwesenheit eine natürliche Konsequenz der reduzierten superradianten Effizienz.
+**SSZ ist kompatibel mit der Existenz ultraleichter Bosonen, obwohl GW-Detektoren keine Spin-Down-Signatur sehen.** In der ART wird die Abwesenheit von Ausschlusszonen als Beweis gegen ultraleichte Bosonen genommen. In SSZ ist die Abwesenheit eine natürliche Konsequenz der reduzierten superradianten Effizienz.
 
 ### Falsifizierbare Vorhersage
 
-Wenn zukünftige Metrik-Perturbationenbeobachtungen eine klare superradiante Spin-Down-Signatur identifizieren, kann die gemessene Wachstumsrate mit ART- und SSZ-Vorhersagen verglichen werden. Das Verhältnis bestimmt D($r_{s}$) direkt:
+Wenn zukünftige Metrik-Perturbationenbeobachtungen eine klare superradiante Spin-Down-Signatur identifizieren, kann die gemessene Wachstumsrate mit ART- und SSZ-Vorhersagen verglichen werden. Das Verhältnis bestimmt D(r_s) direkt:
 
-$$\frac{\Gamma_{\text{obs}}}{\Gamma_{\text{ART}}} = D(r_s)^{2l+1}$$
+\frac{\Gamma_{\text{obs}}}{\Gamma_{\text{ART}}} = D(r_s)^{2l+1}
 
 ## 22.7 Validierung und Konsistenz
 
 **Testdateien:** `test_superradiance`, `test_g_ssz`, `test_s_index`
 
-**Was die Tests beweisen:** $G_{SSZ}$ < 1 für alle l; S > 0 für alle astrophysikalischen Parameter; modifizierte Ergoregion konsistent mit endlichem D($r_{s}$); Unterdrückungsfaktor stimmt mit analytischer Vorhersage überein.
+**Was die Tests beweisen:** G_SSZ < 1 für alle l; S > 0 für alle astrophysikalischen Parameter; modifizierte Ergoregion konsistent mit endlichem D(r_s); Unterdrückungsfaktor stimmt mit analytischer Vorhersage überein.
 
 **Was die Tests NICHT beweisen:** Den Segmentdissipationsmechanismus aus ersten Prinzipien — erfordert vollständige Quantenbehandlung der Segmentgitterdynamik.
 
-**Reproduktion:** `E:/clone\ssz-metric-pure\`
+**Reproduktion:** `E:\clone\ssz-metric-pure\`
 
 ---
 
@@ -8429,15 +8453,15 @@ Das naechste Kapitel beginnt Teil VI (Astrophysikalische Anwendungen) und wendet
 
 Wenn die superradiante Instabilitaet nicht reguliert wird, kann sie zu einem dramatischen Ereignis fuehren: der Bosenova. In diesem Szenario waechst die Bosonenwolke um das Schwarze Loch exponentiell, bis die Selbstgravitation der Wolke eine Implosion ausloest. Die Implosion erzeugt einen Burst von Metrik-Perturbationen und Teilchen.
 
-In SSZ wird die Bosenova durch den $G_{SSZ}$-Regulator verhindert oder stark abgeschwaecht. Der Regulator begrenzt die maximale Amplitude der superradianten Wolke auf einen Bruchteil der Schwarzen-Loch-Masse. Die Konsequenz: Statt einer katastrophalen Bosenova ergibt sich ein quasi-stationaerer Zustand, in dem die Wolke langsam Energie an Metrik-Perturbationen abgibt.
+In SSZ wird die Bosenova durch den G_SSZ-Regulator verhindert oder stark abgeschwaecht. Der Regulator begrenzt die maximale Amplitude der superradianten Wolke auf einen Bruchteil der Schwarzen-Loch-Masse. Die Konsequenz: Statt einer katastrophalen Bosenova ergibt sich ein quasi-stationaerer Zustand, in dem die Wolke langsam Energie an Metrik-Perturbationen abgibt.
 
-Die Metrik-Perturbationensignatur dieses quasi-stationaeren Zustands ist ein nahezu monochromatisches Signal mit einer Frequenz, die durch die Bosonenmasse bestimmt wird: $f_{GW}$ = 2 * $m_{boson}$ * c^2 / h. Fuer ultraleichte Bosonen mit m ~ 10^{-13} eV liegt die Frequenz im observational campaigns-Band (~100 Hz). Fuer schwerere Bosonen mit m ~ 10^{-10} eV liegt sie im LISA-Band (~1 mHz).
+Die Metrik-Perturbationensignatur dieses quasi-stationaeren Zustands ist ein nahezu monochromatisches Signal mit einer Frequenz, die durch die Bosonenmasse bestimmt wird: f_GW = 2 * m_boson * c^2 / h. Fuer ultraleichte Bosonen mit m ~ 10^{-13} eV liegt die Frequenz im GW-Detektor-Band (~100 Hz). Fuer schwerere Bosonen mit m ~ 10^{-10} eV liegt sie im LISA-Band (~1 mHz).
 
-Die SSZ-Vorhersage unterscheidet sich von der ART-Vorhersage in zwei Aspekten: (1) Die Amplitude des Metrik-Perturbationensignals ist um den Faktor eta = 0,05 reduziert (weil der Regulator die Wolkenamplitude begrenzt), und (2) die Frequenz ist um ~3% verschoben (weil die SSZ-Metrik nahe $r_{s}$ von der Kerr-Metrik abweicht).
+Die SSZ-Vorhersage unterscheidet sich von der ART-Vorhersage in zwei Aspekten: (1) Die Amplitude des Metrik-Perturbationensignals ist um den Faktor eta = 0,05 reduziert (weil der Regulator die Wolkenamplitude begrenzt), und (2) die Frequenz ist um ~3% verschoben (weil die SSZ-Metrik nahe r_s von der Kerr-Metrik abweicht).
 
 ### Astrophysikalische Konsequenzen fuer Schwarze-Loch-Populationen
 
-Die superradiante Instabilitaet hat Konsequenzen fuer die beobachtete Population Schwarzer Loecher. In der ART wuerden ultraleichte Bosonen die Rotation schnell rotierender Schwarzer Loecher abbremsen, was zu einer Luecke im Regge-Diagramm (Spin vs. Masse) fuehren wuerde. Beobachtungen von observational zeigen tatsaechlich eine Praeferenz fuer moderate Spins (a/M ~ 0,3-0,7), was als Hinweis auf superradiante Abbremsung interpretiert werden koennte.
+Die superradiante Instabilitaet hat Konsequenzen fuer die beobachtete Population Schwarzer Loecher. In der ART wuerden ultraleichte Bosonen die Rotation schnell rotierender Schwarzer Loecher abbremsen, was zu einer Luecke im Regge-Diagramm (Spin vs. Masse) fuehren wuerde. GW-Beobachtungen zeigen tatsaechlich eine Praeferenz fuer moderate Spins (a/M ~ 0,3-0,7), was als Hinweis auf superradiante Abbremsung interpretiert werden koennte.
 
 In SSZ ist die Abbremsung durch den Regulator um 95% unterdrueckt. Dies bedeutet, dass die Luecke im Regge-Diagramm viel kleiner waere als in der ART vorhergesagt. Zukuenftige Metrik-Perturbationendetektoren (Einstein-Teleskop, Cosmic Explorer) werden die Spin-Verteilung mit ausreichender Statistik messen, um zwischen der ART-Vorhersage (grosse Luecke) und der SSZ-Vorhersage (kleine Luecke) zu unterscheiden.
 
@@ -8445,37 +8469,37 @@ In SSZ ist die Abbremsung durch den Regulator um 95% unterdrueckt. Dies bedeutet
 
 Die Suche nach Superradianz-Signaturen ist ein aktives Forschungsgebiet mit mehreren vielversprechenden Ansaetzen:
 
-**Kontinuierliche Metrik-Perturbationen:** Eine Bosonenwolke um ein rotierendes Schwarzes Loch emittiert quasi-monochromatische Metrik-Perturbationen mit einer Frequenz $f_{GW}$ ~ 2 mu c^2/h, wobei mu die Bosonenmasse ist. Fuer ultraleichte Axionen (mu ~ 10^{-12} eV) liegt $f_{GW}$ im observational campaigns-Band (~100 Hz). Die aktuelle observational campaigns-Sensitivitaet reicht aus, um Bosonenwolken um stellare Schwarze Loecher innerhalb von ~1 kpc zu detektieren.
+**Kontinuierliche Metrik-Perturbationen:** Eine Bosonenwolke um ein rotierendes Schwarzes Loch emittiert quasi-monochromatische Metrik-Perturbationen mit einer Frequenz f_GW ~ 2 mu c^2/h, wobei mu die Bosonenmasse ist. Fuer ultraleichte Axionen (mu ~ 10^{-12} eV) liegt f_GW im GW-Detektor-Band (~100 Hz). Die aktuelle Detektor-Sensitivitaet reicht aus, um Bosonenwolken um stellare Schwarze Loecher innerhalb von ~1 kpc zu detektieren.
 
-In SSZ ist die Metrik-Perturbationenamplitude um den Faktor $G_{SSZ}$ ~ 0,05 gegenueber der ART reduziert (weil der Superradianz-Regulator die Wolkenmasse begrenzt). Dies bedeutet, dass die Detektionsreichweite in SSZ um den Faktor sqrt(0,05) ~ 0,22 reduziert ist, was die Detektion auf ~200 pc beschraenkt.
+In SSZ ist die Metrik-Perturbationenamplitude um den Faktor G_SSZ ~ 0,05 gegenueber der ART reduziert (weil der Superradianz-Regulator die Wolkenmasse begrenzt). Dies bedeutet, dass die Detektionsreichweite in SSZ um den Faktor sqrt(0,05) ~ 0,22 reduziert ist, was die Detektion auf ~200 pc beschraenkt.
 
 **Spin-Messungen:** Superradianz extrahiert Drehimpuls aus dem Schwarzen Loch, was den Spin reduziert. In der ART fuehrt dies zu Luecken im Spin-Masse-Diagramm (Regge-Ebene): Schwarze Loecher mit bestimmten Spin-Masse-Kombinationen sollten nicht existieren, weil die Superradianz ihren Spin zu schnell reduziert.
 
-In SSZ ist die Spin-Reduktion um 95% unterdrueckt, was bedeutet, dass die Luecken in der Regge-Ebene viel kleiner sind. Die aktuelle Datenlage (observational-Spin-Messungen) ist mit beiden Vorhersagen konsistent, weil die Spin-Messungen noch zu ungenau sind. Zukuenftige Detektoren (Einstein-Teleskop) werden die Spins mit ausreichender Praezision messen, um zwischen SSZ und ART zu unterscheiden.
+In SSZ ist die Spin-Reduktion um 95% unterdrueckt, was bedeutet, dass die Luecken in der Regge-Ebene viel kleiner sind. Die aktuelle Datenlage (GW-Spin-Messungen) ist mit beiden Vorhersagen konsistent, weil die Spin-Messungen noch zu ungenau sind. Zukuenftige Detektoren (Einstein-Teleskop) werden die Spins mit ausreichender Praezision messen, um zwischen SSZ und ART zu unterscheiden.
 
-**Schwarze-Loch-Schatten:** Eine Bosonenwolke um ein Schwarzes Loch modifiziert den Schatten, der vom EHT beobachtet wird. Die Modifikation ist proportional zur Wolkenmasse und damit in SSZ um 95% reduziert. Das ngEHT wird die Empfindlichkeit haben, um Bosonenwolken mit Massen > 0,01 $M_{BH}$ zu detektieren, was in der ART leicht erreichbar ist, aber in SSZ an der Detektionsgrenze liegt.
+**Schwarze-Loch-Schatten:** Eine Bosonenwolke um ein Schwarzes Loch modifiziert den Schatten, der vom EHT beobachtet wird. Die Modifikation ist proportional zur Wolkenmasse und damit in SSZ um 95% reduziert. Das ngEHT wird die Empfindlichkeit haben, um Bosonenwolken mit Massen > 0,01 M_BH zu detektieren, was in der ART leicht erreichbar ist, aber in SSZ an der Detektionsgrenze liegt.
 
 ### Verbindung zur Teilchenphysik
 
-Die Superradianz-Suche hat eine direkte Verbindung zur Teilchenphysik: Die Nicht-Detektion von Superradianz-Signaturen setzt Obergrenzen auf die Masse ultraleichter Bosonen. In der ART schliesst die aktuelle Nicht-Detektion Bosonenmassen im Bereich 10^{-13} - 10^{-11} eV aus. In SSZ ist die Ausschlussregion um den Faktor $G_{SSZ}$ ~ 0,05 reduziert, was bedeutet, dass ein groesserer Massenbereich erlaubt bleibt.
+Die Superradianz-Suche hat eine direkte Verbindung zur Teilchenphysik: Die Nicht-Detektion von Superradianz-Signaturen setzt Obergrenzen auf die Masse ultraleichter Bosonen. In der ART schliesst die aktuelle Nicht-Detektion Bosonenmassen im Bereich 10^{-13} - 10^{-11} eV aus. In SSZ ist die Ausschlussregion um den Faktor G_SSZ ~ 0,05 reduziert, was bedeutet, dass ein groesserer Massenbereich erlaubt bleibt.
 
 Diese Verbindung macht die Superradianz-Suche zu einem einzigartigen Test, der gleichzeitig die Gravitationstheorie (SSZ vs. ART) und die Teilchenphysik (Existenz ultraleichter Bosonen) testet.
 
 ### Spin-Abbremsung durch Superradianz in SSZ
 
-Die Spin-Abbremsungsrate eines rotierenden Schwarzen Lochs durch Superradianz ist in SSZ um den Faktor $G_{SSZ}$ ~ 0,05 gegenueber der ART reduziert. Die Zeitskala fuer die Spin-Abbremsung ist:
+Die Spin-Abbremsungsrate eines rotierenden Schwarzen Lochs durch Superradianz ist in SSZ um den Faktor G_SSZ ~ 0,05 gegenueber der ART reduziert. Die Zeitskala fuer die Spin-Abbremsung ist:
 
-tau_spin_SSZ = tau_spin_GR / $G_{SSZ}$ ~ 20 * tau_spin_GR
+tau_spin_SSZ = tau_spin_GR / G_SSZ ~ 20 * tau_spin_GR
 
-Fuer ein stellares Schwarzes Loch (M = 10 $M_{Sonne}$, a/M = 0,9) und ein ultraleichtes Boson (mu = 10^{-12} eV) ist tau_spin_GR ~ 10^6 Jahre und tau_spin_SSZ ~ 2 x 10^7 Jahre. Beide Zeitskalen sind viel kuerzer als das Alter des Universums (~10^{10} Jahre), was bedeutet, dass die Spin-Abbremsung in beiden Theorien stattfinden sollte — aber mit unterschiedlicher Effizienz.
+Fuer ein stellares Schwarzes Loch (M = 10 M_Sonne, a/M = 0,9) und ein ultraleichtes Boson (mu = 10^{-12} eV) ist tau_spin_GR ~ 10^6 Jahre und tau_spin_SSZ ~ 2 x 10^7 Jahre. Beide Zeitskalen sind viel kuerzer als das Alter des Universums (~10^{10} Jahre), was bedeutet, dass die Spin-Abbremsung in beiden Theorien stattfinden sollte — aber mit unterschiedlicher Effizienz.
 
 Die beobachtbare Konsequenz: In der ART sollten Schwarze Loecher mit bestimmten Spin-Masse-Kombinationen nicht existieren (weil die Superradianz ihren Spin zu schnell reduziert). In SSZ sind die verbotenen Regionen in der Spin-Masse-Ebene kleiner, weil die Spin-Abbremsung langsamer ist. Zukuenftige Metrik-Perturbationendetektoren (Einstein-Teleskop, Cosmic Explorer) werden die Spins mit ausreichender Praezision messen, um zwischen den beiden Vorhersagen zu unterscheiden.
 
 ### Bosonenwolken als Gravitationslinsen
 
-Eine Bosonenwolke um ein Schwarzes Loch hat eine endliche Masse ($M_{cloud}$ ~ $G_{SSZ}$ * $M_{BH}$ ~ 0,05 $M_{BH}$ in SSZ) und wirkt daher als Gravitationslinse. Die Linsenwirkung ist proportional zur Wolkenmasse und koennte durch Mikrolensing-Beobachtungen detektiert werden.
+Eine Bosonenwolke um ein Schwarzes Loch hat eine endliche Masse (M_cloud ~ G_SSZ * M_BH ~ 0,05 M_BH in SSZ) und wirkt daher als Gravitationslinse. Die Linsenwirkung ist proportional zur Wolkenmasse und koennte durch Mikrolensing-Beobachtungen detektiert werden.
 
-Die erwartete Linsenverstärkung fuer eine Bosonenwolke um ein stellares Schwarzes Loch ($M_{BH}$ = 10 $M_{Sonne}$, $M_{cloud}$ = 0,5 $M_{Sonne}$) bei einer Entfernung von 1 kpc betraegt ~10^{-6} Magnituden — weit unterhalb der aktuellen Detektionsschwelle. Fuer supermassive Schwarze Loecher ($M_{BH}$ = 10^9 $M_{Sonne}$, $M_{cloud}$ = 5 x 10^7 $M_{Sonne}$) koennte die Linsenwirkung jedoch signifikant sein und durch Langzeit-Monitoring von Hintergrundquellen detektiert werden.
+Die erwartete Linsenverstärkung fuer eine Bosonenwolke um ein stellares Schwarzes Loch (M_BH = 10 M_Sonne, M_cloud = 0,5 M_Sonne) bei einer Entfernung von 1 kpc betraegt ~10^{-6} Magnituden — weit unterhalb der aktuellen Detektionsschwelle. Fuer supermassive Schwarze Loecher (M_BH = 10^9 M_Sonne, M_cloud = 5 x 10^7 M_Sonne) koennte die Linsenwirkung jedoch signifikant sein und durch Langzeit-Monitoring von Hintergrundquellen detektiert werden.
 
 
 
@@ -8483,11 +8507,11 @@ Die erwartete Linsenverstärkung fuer eine Bosonenwolke um ein stellares Schwarz
 
 Die experimentelle Suche nach Superradianz konzentriert sich auf drei Strategien:
 
-**Strategie 1: Spin-Messungen.** Wenn Superradianz effizient ist, sollten Schwarze Loecher in bestimmten Masse-Spin-Bereichen nicht existieren (Regge-Ebene-Ausschlussregionen). Die SSZ-Ausschlussregionen sind kleiner als die ART-Regionen (weil die Superradianz-Rate in SSZ um den Faktor $G_{SSZ}$ ~ 0,05 reduziert ist). Aktuelle observational-Daten zeigen keine klaren Ausschlussregionen, was mit SSZ konsistent ist.
+**Strategie 1: Spin-Messungen.** Wenn Superradianz effizient ist, sollten Schwarze Loecher in bestimmten Masse-Spin-Bereichen nicht existieren (Regge-Ebene-Ausschlussregionen). Die SSZ-Ausschlussregionen sind kleiner als die ART-Regionen (weil die Superradianz-Rate in SSZ um den Faktor G_SSZ ~ 0,05 reduziert ist). Aktuelle GW-Daten zeigen keine klaren Ausschlussregionen, was mit SSZ konsistent ist.
 
-**Strategie 2: Kontinuierliche Metrik-Perturbationen.** Eine Bosonenwolke um ein rotierendes Schwarzes Loch emittiert kontinuierliche Metrik-Perturbationen mit einer Frequenz f = 2 * $\mu_{\text{boson}}$ * c^2 / h. Fuer ultraleichte Bosonen (mu ~ 10^{-13} eV) liegt die Frequenz im observational campaigns-Band (~100 Hz). Bisherige Suchen haben keine Signale gefunden, was Schranken auf die Bosonenmasse setzt.
+**Strategie 2: Kontinuierliche Metrik-Perturbationen.** Eine Bosonenwolke um ein rotierendes Schwarzes Loch emittiert kontinuierliche Metrik-Perturbationen mit einer Frequenz f = 2 * mu_boson * c^2 / h. Fuer ultraleichte Bosonen (mu ~ 10^{-13} eV) liegt die Frequenz im GW-Detektor-Band (~100 Hz). Bisherige Suchen haben keine Signale gefunden, was Schranken auf die Bosonenmasse setzt.
 
-**Strategie 3: Schwarze-Loch-Schatten.** Eine Bosonenwolke modifiziert den Schatten des Schwarzen Lochs leicht. Die Modifikation betraegt ~$G_{SSZ}$ * ($M_{cloud}$/M_BH) ~ 0,05 * 0,05 = 0,25% -- unterhalb der aktuellen EHT-Praezision, aber potenziell mit dem ngEHT messbar.
+**Strategie 3: Schwarze-Loch-Schatten.** Eine Bosonenwolke modifiziert den Schatten des Schwarzen Lochs leicht. Die Modifikation betraegt ~G_SSZ * (M_cloud/M_BH) ~ 0,05 * 0,05 = 0,25% -- unterhalb der aktuellen EHT-Praezision, aber potenziell mit dem ngEHT messbar.
 
 
 
@@ -8495,10 +8519,10 @@ Die experimentelle Suche nach Superradianz konzentriert sich auf drei Strategien
 
 Dieses Kapitel hat die Superradianz in SSZ analysiert -- den Prozess, durch den rotierende kompakte Objekte Energie an umgebende Bosonenfelder abgeben. Die wichtigsten Ergebnisse:
 
-1. **Superradianz-Rate:** In SSZ um den Faktor $G_{SSZ}$ ~ 0,05 gegenueber der ART reduziert.
+1. **Superradianz-Rate:** In SSZ um den Faktor G_SSZ ~ 0,05 gegenueber der ART reduziert.
 2. **Spin-Down:** Langsamerer Spin-Down in SSZ -- konsistent mit den beobachteten hohen Spins.
 3. **Bosonenwolken:** Weniger massiv in SSZ -- schwierigere Detektion, aber nicht unmoeglich.
-4. **Metrik-Perturbationen:** Kontinuierliche GW-Emission mit f = 2 mu c^2/h -- Suche mit observational laeuft.
+4. **Metrik-Perturbationen:** Kontinuierliche GW-Emission mit f = 2 mu c^2/h -- Suche mit GW-Detektoren laeuft.
 5. **Schatten-Modifikation:** ~0,25% -- unterhalb der aktuellen EHT-Praezision, aber mit ngEHT messbar.
 
 Die Superradianz ist ein einzigartiger Test fuer SSZ, weil sie die Starkfeldstruktur nahe der natuerlichen Grenze direkt abtastet. Die naechste Generation von Metrik-Perturbationendetektoren wird die SSZ-Vorhersagen testen koennen.
@@ -8513,7 +8537,7 @@ Die Superradianz ist ein einzigartiger Test fuer SSZ, weil sie die Starkfeldstru
 
 Die Superradianz hat eine enge Verbindung zur Teilchenphysik: Sie kann verwendet werden, um Schranken auf die Masse ultraleichter Teilchen zu setzen. Wenn ein ultraleichtes Boson (z.B. ein Axion oder ein dunkles Photon) existiert, wuerde es durch Superradianz um rotierende Schwarze Loecher akkumuliert werden. Die Nicht-Beobachtung von Superradianz-Effekten setzt daher Schranken auf die Bosonenmasse.
 
-Die aktuellen Schranken (aus observational-Spin-Messungen):
+Die aktuellen Schranken (aus GW-Spin-Messungen):
 
 | Bosonentyp | Ausgeschlossener Massenbereich |
 |-----------|-------------------------------|
@@ -8521,18 +8545,17 @@ Die aktuellen Schranken (aus observational-Spin-Messungen):
 | Vektorboson | 0,8 x 10^{-13} - 3,8 x 10^{-13} eV |
 | Tensorboson | 0,5 x 10^{-13} - 4,2 x 10^{-13} eV |
 
-In SSZ sind die Ausschlussbereiche um den Faktor $G_{SSZ}$ ~ 0,05 schmaler (weil die Superradianz-Rate reduziert ist). Dies bedeutet, dass SSZ weniger restriktive Schranken auf ultraleichte Bosonen setzt als die ART.
+In SSZ sind die Ausschlussbereiche um den Faktor G_SSZ ~ 0,05 schmaler (weil die Superradianz-Rate reduziert ist). Dies bedeutet, dass SSZ weniger restriktive Schranken auf ultraleichte Bosonen setzt als die ART.
 
 ### Ausblick: Superradianz als Fenster zur Teilchenphysik
 
-Die Superradianz bietet ein einzigartiges Fenster zur Teilchenphysik jenseits des Standardmodells. Wenn ultraleichte Bosonen existieren (Axionen, dunkle Photonen, Fuzzy Dark Matter), wuerde die Superradianz sie um rotierende kompakte Objekte akkumulieren. Die Nicht-Beobachtung solcher Effekte setzt die staerksten Schranken auf diese Teilchen. In SSZ sind die Schranken um den Faktor $G_{SSZ}$ ~ 0,05 schwaecher, was bedeutet, dass ein groesserer Parameterraum fuer ultraleichte Bosonen offen bleibt.
+Die Superradianz bietet ein einzigartiges Fenster zur Teilchenphysik jenseits des Standardmodells. Wenn ultraleichte Bosonen existieren (Axionen, dunkle Photonen, Fuzzy Dark Matter), wuerde die Superradianz sie um rotierende kompakte Objekte akkumulieren. Die Nicht-Beobachtung solcher Effekte setzt die staerksten Schranken auf diese Teilchen. In SSZ sind die Schranken um den Faktor G_SSZ ~ 0,05 schwaecher, was bedeutet, dass ein groesserer Parameterraum fuer ultraleichte Bosonen offen bleibt.
 
+---
 
-\newpage
+# Kapitel 31: Lagrange- und Hamilton-Formulierung der SSZ
 
-# Lagrange- und Hamilton-Formulierung der SSZ
-
-
+**Status:** ERSTER ENTWURF
 **Paper-Referenz:** ssz-lagrange Repository (Wrede, Casu 2026)
 **Validierung:** 54/54 Tests BESTANDEN (100%)
 
@@ -8852,11 +8875,11 @@ Siehe Anhang D für den vollständigen Repository-Index und die Testergebnisse.
 - **Anhang B:** Formelsammlung
 - **Anhang F:** ART vs. SSZ Vergleichstabellen
 
-\newpage
+---
 
-# Rotierende Metriken, Quantenkorrekturen und Numerische Relativität
+# Kapitel 32: Rotierende Metriken, Quantenkorrekturen und Numerische Relativität
 
-
+**Status:** ERSTER ENTWURF
 **Paper-Referenz:** ssz-lagrange Repository, Abschnitte 14--19 (Wrede, Casu 2026)
 **Validierung:** 54/54 Tests BESTANDEN (100%)
 
@@ -9146,11 +9169,12 @@ Alle Tests bestehen mit einer Erfolgsquote von 100%.
 - **Anhang B:** Formelsammlung
 - **Anhang F:** ART vs. SSZ Vergleichstabellen
 
-\newpage
+---
 
-\part{Astrophysikalische Anwendungen}
+# Kapitel 23: Einfallende Materie und Radiowellen
 
-# Einfallende Materie und Radiowellen
+**Teil VI — Astrophysikalische Anwendungen**
+**Status:** ERWEITERTE FASSUNG v2
 
 
 ![Abb](figures/ch23_infall_radio/coherence_collapse_piecewise.png)
@@ -9176,7 +9200,7 @@ Warum ist dies notwendig? Teil VI wendet die theoretischen Ergebnisse der Teile 
 
 Materie, die auf ein kompaktes Objekt zufällt, durchquert Regime zunehmender Segmentdichte. Beim Übergang vom Schwachfeld (g1) durch die Mischzone ins Starkfeld (g2) modifiziert das Segmentgitter die Wellenausbreitung auf Weisen, die charakteristische Radiowellensignaturen erzeugen, die sich von ART-Vorhersagen unterscheiden.
 
-Die zentrale Vorhersage ist dramatisch: Einfallende Materie erzeugt einen **Radiowellen-Chirp** — einen kontinuierlichen Frequenzdurchlauf von hoch nach tief, wenn die Materie sich der natürlichen Grenze bei $r_{s}$ nähert — der NICHT bei einer festen Frequenz einfriert (wie die ART vorhersagt), sondern **sich jenseits der natürlichen Grenze weiterentwickelt**. In der ART ist das letzte Signal einfallender Materie ein asymptotisch eingefrorenes Bild; in SSZ entwickelt sich das Signal kontinuierlich weiter.
+Die zentrale Vorhersage ist dramatisch: Einfallende Materie erzeugt einen **Radiowellen-Chirp** — einen kontinuierlichen Frequenzdurchlauf von hoch nach tief, wenn die Materie sich der natürlichen Grenze bei r_s nähert — der NICHT bei einer festen Frequenz einfriert (wie die ART vorhersagt), sondern **sich jenseits der natürlichen Grenze weiterentwickelt**. In der ART ist das letzte Signal einfallender Materie ein asymptotisch eingefrorenes Bild; in SSZ entwickelt sich das Signal kontinuierlich weiter.
 
 **Lesehinweis.** Abschnitt 23.1 leitet das Radiowellen-Vorläufersignal her. Abschnitt 23.2 analysiert den g1/g2-Übergang. Abschnitt 23.3 definiert die Eigengeschwindigkeit. Abschnitt 23.4 listet beobachtbare Signaturen auf. Abschnitt 23.5 diskutiert Energieerhaltung. Abschnitt 23.6 fasst die Validierung zusammen.
 
@@ -9205,13 +9229,13 @@ Materie, die in ein Schwarzes Loch einfällt, bildet typischerweise eine Akkreti
 - **UV/Röntgen:** Thermische und Comptonisierte Emission aus der inneren Scheibe (T ~ 10⁶–10⁸ K)
 - **Gamma:** Inverse-Compton-Streuung und Paarvernichtung nahe des Schwarzen Lochs
 
-Die SSZ-Modifikation der Metrik betrifft primär die innerste Region (r < 6 $r_{s}$), wo die Unterschiede zur ART messbar werden. Die Radioemission, die aus größeren Radien stammt, ist ein indirekter Indikator — sie wird durch die Dynamik der inneren Scheibe beeinflusst, die wiederum von der Metrik abhängt.
+Die SSZ-Modifikation der Metrik betrifft primär die innerste Region (r < 6 r_s), wo die Unterschiede zur ART messbar werden. Die Radioemission, die aus größeren Radien stammt, ist ein indirekter Indikator — sie wird durch die Dynamik der inneren Scheibe beeinflusst, die wiederum von der Metrik abhängt.
 
 ### Jet-Bildung und SSZ
 
-Die Bildung relativistischer Jets in aktiven Galaxienkernen und Röntgen-Binärsystemen ist eines der ungelösten Probleme der Astrophysik. Der Blandford-Znajek-Mechanismus (1977) extrahiert Rotationsenergie aus dem Schwarzen Loch über magnetische Feldlinien, die den Horizont durchdringen. In SSZ gibt es keinen Horizont, aber die natürliche Grenze bei $r_{s}$ kann dieselbe Rolle spielen: Magnetfeldlinien können die natürliche Grenze durchdringen und Energie aus der Rotation extrahieren.
+Die Bildung relativistischer Jets in aktiven Galaxienkernen und Röntgen-Binärsystemen ist eines der ungelösten Probleme der Astrophysik. Der Blandford-Znajek-Mechanismus (1977) extrahiert Rotationsenergie aus dem Schwarzen Loch über magnetische Feldlinien, die den Horizont durchdringen. In SSZ gibt es keinen Horizont, aber die natürliche Grenze bei r_s kann dieselbe Rolle spielen: Magnetfeldlinien können die natürliche Grenze durchdringen und Energie aus der Rotation extrahieren.
 
-Die SSZ-Vorhersage für die Jet-Leistung: P_jet,SSZ = P_jet,ART × D²(r_s) $\approx$ 0,31 × P_jet,ART. Die beobachteten Jet-Leistungen (L_jet ~ 10⁴³–10⁴⁶ erg/s für AGN) haben Unsicherheiten von Faktor 3–10, sodass der SSZ-ART-Unterschied derzeit nicht auflösbar ist.
+Die SSZ-Vorhersage für die Jet-Leistung: P_jet,SSZ = P_jet,ART × D²(r_s) ≈ 0,31 × P_jet,ART. Die beobachteten Jet-Leistungen (L_jet ~ 10⁴³–10⁴⁶ erg/s für AGN) haben Unsicherheiten von Faktor 3–10, sodass der SSZ-ART-Unterschied derzeit nicht auflösbar ist.
 
 ## 23.1 Radiowellen-Vorläufer
 
@@ -9219,7 +9243,7 @@ Die SSZ-Vorhersage für die Jet-Leistung: P_jet,SSZ = P_jet,ART × D²(r_s) $\ap
 
 Was geschieht mit Materie, wenn sie in ein kompaktes Objekt fällt? In der ART überquert ein einfallender Beobachter den Ereignishorizont in endlicher Eigenzeit, aber unendlicher Koordinatenzeit, und Signale des Beobachters werden zunehmend rotverschoben, bis sie unter die Nachweisbarkeitsgrenze fallen.
 
-In SSZ ist das Bild qualitativ anders. Es gibt keinen Ereignishorizont, also friert einfallende Materie nicht ein. Stattdessen akkumuliert sie nahe der natürlichen Grenze bei $r_{s}$, wo die extreme Zeitdilatation (D = 0,555) alle Prozesse enorm verlangsamt. Materie nahe der natürlichen Grenze emittiert thermische Strahlung, die um z = 0,802 rotverschoben wird und vom ursprünglichen Frequenzband (typisch Röntgen oder UV) in den Radiobereich verschoben wird.
+In SSZ ist das Bild qualitativ anders. Es gibt keinen Ereignishorizont, also friert einfallende Materie nicht ein. Stattdessen akkumuliert sie nahe der natürlichen Grenze bei r_s, wo die extreme Zeitdilatation (D = 0,555) alle Prozesse enorm verlangsamt. Materie nahe der natürlichen Grenze emittiert thermische Strahlung, die um z = 0,802 rotverschoben wird und vom ursprünglichen Frequenzband (typisch Röntgen oder UV) in den Radiobereich verschoben wird.
 
 ### Signalbildung
 
@@ -9227,29 +9251,29 @@ Wenn Materie sich einem kompakten Objekt nähert, emittiert sie Strahlung, die n
 
 **Zunehmende Zeitverzögerung.** Jedes nachfolgende Photon muss durch ein dichteres Segmentgitter klettern. Die kumulative Shapiro-Verzögerung (Kapitel 10) wächst logarithmisch — aber endlich in SSZ (anders als in der ART).
 
-**Zunehmende Rotverschiebung.** Die gravitative Rotverschiebung z = Ξ(r) wächst monoton. An der natürlichen Grenze: z($r_{s}$) = 0,802. Die beobachtete Frequenz:
+**Zunehmende Rotverschiebung.** Die gravitative Rotverschiebung z = Ξ(r) wächst monoton. An der natürlichen Grenze: z(r_s) = 0,802. Die beobachtete Frequenz:
 
-$$\nu_{\text{obs}} = \frac{\nu_0}{1 + \Xi(r)} = \nu_0 \cdot D(r)$$
+\nu_{\text{obs}} = \frac{\nu_0}{1 + \Xi(r)} = \nu_0 \cdot D(r)
 
-**Abnehmende Intensität.** Thermische Emission skaliert als D⁴ in gekrümmter Raumzeit. Nahe r_s: I_obs/I_emit = D⁴ $\approx$ 0,095 — ungefähr 10% der emittierten Intensität erreichen einen fernen Beobachter.
+**Abnehmende Intensität.** Thermische Emission skaliert als D⁴ in gekrümmter Raumzeit. Nahe r_s: I_obs/I_emit = D⁴ ≈ 0,095 — ungefähr 10% der emittierten Intensität erreichen einen fernen Beobachter.
 
 ### Das Chirp-Signal
 
 Der kombinierte Effekt erzeugt einen **Radiowellen-Chirp**: ein Signal, das kontinuierlich von hoher zu niedriger Frequenz durchläuft:
 
-$$\nu_{\text{obs}}(t) = \nu_0 \cdot D[r(t)]$$
+\nu_{\text{obs}}(t) = \nu_0 \cdot D[r(t)]
 
 ### SSZ vs. ART: Der kritische Unterschied
 
 In der ART nähert sich einfallende Materie asymptotisch über unendliche Koordinatenzeit dem Ereignishorizont. Das emittierte Signal friert bei einer festen Frequenz ein.
 
-In SSZ **erreicht die Materie die natürliche Grenze in endlicher Koordinatenzeit**, weil D($r_{s}$) > 0. Das Signal entwickelt sich weiter — die Frequenz ändert sich, die Intensität fällt, aber nichts friert ein.
+In SSZ **erreicht die Materie die natürliche Grenze in endlicher Koordinatenzeit**, weil D(r_s) > 0. Das Signal entwickelt sich weiter — die Frequenz ändert sich, die Intensität fällt, aber nichts friert ein.
 
 | Objekt | Masse | r_s | τ_chirp |
 |--------|------|-----|---------|
-| Stellares SL (10 M_$\odot$) | 2×10³¹ kg | 30 km | 0,18 ms |
-| Sgr A* (4×10⁶ M_$\odot$) | 8×10³⁶ kg | 1,2×10⁷ km | 72 s |
-| M87* (6,5×10⁹ M_$\odot$) | 1,3×10⁴⁰ kg | 1,9×10¹⁰ km | 32 Std |
+| Stellares SL (10 M_☉) | 2×10³¹ kg | 30 km | 0,18 ms |
+| Sgr A* (4×10⁶ M_☉) | 8×10³⁶ kg | 1,2×10⁷ km | 72 s |
+| M87* (6,5×10⁹ M_☉) | 1,3×10⁴⁰ kg | 1,9×10¹⁰ km | 32 Std |
 
 ## 23.2 Der g1/g2-Regimeübergang
 
@@ -9257,31 +9281,31 @@ In SSZ **erreicht die Materie die natürliche Grenze in endlicher Koordinatenzei
 
 Einfallende Materie durchquert drei verschiedene Zonen:
 
-**Zone 1 — Reines g1 (r > 2,2 $r_{s}$):** Ξ = $r_{s}$/(2r), das bekannte Schwachfeldregime.
+**Zone 1 — Reines g1 (r > 2,2 r_s):** Ξ = r_s/(2r), das bekannte Schwachfeldregime.
 
-**Zone 2 — Mischung (1,8 $r_{s}$ < r < 2,2 $r_{s}$):** Die Hermite-C²-Interpolation verbindet g1 glatt mit g2. Die Interpolation erhält Ξ stetig (C⁰), dΞ/dr stetig (C¹), d²Ξ/dr² stetig (C²).
+**Zone 2 — Mischung (1,8 r_s < r < 2,2 r_s):** Die Hermite-C²-Interpolation verbindet g1 glatt mit g2. Die Interpolation erhält Ξ stetig (C⁰), dΞ/dr stetig (C¹), d²Ξ/dr² stetig (C²).
 
-**Zone 3 — Reines g2 (r < 1,8 $r_{s}$):** Ξ = 1 − exp(−φ$r_{s}$/r), das Starkfeldregime mit exponentieller Sättigung.
+**Zone 3 — Reines g2 (r < 1,8 r_s):** Ξ = 1 − exp(−φr_s/r), das Starkfeldregime mit exponentieller Sättigung.
 
 ### Zwei charakteristische Radien
 
-**r*/r_s $\approx$ 1,595** (Schwachfeld-Proxy): Wo Ξ_weak D_ART schneidet.
+**r*/r_s ≈ 1,595** (Schwachfeld-Proxy): Wo Ξ_weak D_ART schneidet.
 
-**r*/r_s $\approx$ 1,387** (Starkfeld-Schnittpunkt): Wo Ξ_strong D_ART schneidet. Unterhalb dieses Radius hat SSZ WENIGER Zeitdilatation als die ART (D_SSZ > D_ART).
+**r*/r_s ≈ 1,387** (Starkfeld-Schnittpunkt): Wo Ξ_strong D_ART schneidet. Unterhalb dieses Radius hat SSZ WENIGER Zeitdilatation als die ART (D_SSZ > D_ART).
 
 ### Beobachtbare spektrale Inflexion
 
-Der Übergang von g1 zu g2 erzeugt ein subtiles, aber potenziell detektierbares Merkmal im Radiowellenspektrum: eine Inflexion der Frequenz-Zeit-Kurve bei r $\approx$ 2 r_s. Für Sgr A* (τ_chirp ~ 72 s) tritt die Inflexion ~30 Sekunden vor dem Haupt-Chirp auf — eine einzigartige SSZ-Signatur ohne ART-Gegenstück.
+Der Übergang von g1 zu g2 erzeugt ein subtiles, aber potenziell detektierbares Merkmal im Radiowellenspektrum: eine Inflexion der Frequenz-Zeit-Kurve bei r ≈ 2 r_s. Für Sgr A* (τ_chirp ~ 72 s) tritt die Inflexion ~30 Sekunden vor dem Haupt-Chirp auf — eine einzigartige SSZ-Signatur ohne ART-Gegenstück.
 
-## 23.3 Eigengeschwindigkeit $v_{eigen}$
+## 23.3 Eigengeschwindigkeit v_eigen
 
 ### Definition und physikalische Bedeutung
 
 Die Eigengeschwindigkeit ist die **lokal gemessene Geschwindigkeit** einfallender Materie:
 
-$$v_{\text{eigen}} = \frac{v_{\text{coord}}}{D(r)}$$
+v_{\text{eigen}} = \frac{v_{\text{coord}}}{D(r)}
 
-Bei r = r_s: v_eigen(r_s) = c/0,555 $\approx$ 1,80c. Dies überschreitet c — verletzt aber NICHT die Kausalität. Die lokale Lichtgeschwindigkeit, gemessen vom selben lokalen Beobachter, ist immer c. Das Verhältnis v_eigen/c_lokal < 1 überall.
+Bei r = r_s: v_eigen(r_s) = c/0,555 ≈ 1,80c. Dies überschreitet c — verletzt aber NICHT die Kausalität. Die lokale Lichtgeschwindigkeit, gemessen vom selben lokalen Beobachter, ist immer c. Das Verhältnis v_eigen/c_lokal < 1 überall.
 
 ## 23.4 Beobachtbare Signaturen
 
@@ -9292,11 +9316,15 @@ Bei r = r_s: v_eigen(r_s) = c/0,555 $\approx$ 1,80c. Dies überschreitet c — v
 | 3 | Signal-Einfrieren | Nein (D > 0) | Ja (D→0) | Ja | Radio-Timing |
 | 4 | Chirp-Zeitskala | τ ~ r_s/(c·D_s) | τ → ∞ | Ja | Multi-λ |
 
+### Radioinfrastruktur und ungetestete Vorhersage
+
+Der Rayleigh-Jeans-Ausläufer der SSZ-rotverschobenen Thermalemission (z = 0,802) liegt im 1–10-GHz-Band (α ≈ −0,1 vs. Synchrotron α ≈ −0,7). Das 100-m-Radioteleskop Effelsberg (MPIfR Bonn, UBB 0,6–3,0 GHz) und das EPTA — einschließlich der Universität Bielefeld — könnten diesen Überschuss detektieren. **Empirischer Status:** Bisher ungetestet. Falsifizierbar bei 1–3 GHz während Akkretionsepisoden (τ_Radio/τ_Röntgen = 1,80).
+
 ## 23.5 Energieerhaltung
 
 Das Energiebudget für einfallende Materie in SSZ muss sich ausgleichen:
 
-$$E_{\text{kinetisch}} + E_{\text{gravitativ}} + E_{\text{abgestrahlt}} + E_{\text{Segment}} = E_{\text{initial}}$$
+E_{\text{kinetisch}} + E_{\text{gravitativ}} + E_{\text{abgestrahlt}} + E_{\text{Segment}} = E_{\text{initial}}
 
 Der Segmentbeitrag E_Segment repräsentiert Energie, die in der kohärenten Neuordnung des Gitters gespeichert ist (Kapitel 25).
 
@@ -9306,11 +9334,11 @@ Energieerhaltung wird numerisch im Testsuite auf < 10⁻¹² relative Genauigkei
 
 **Testdateien:** `test_radiowave`, `test_segwave_core`, `test_eigenvelocity`
 
-**Was die Tests beweisen:** $v_{eigen}$-Formel konsistent mit dualer Geschwindigkeitsstruktur; Radiowellenverzögerung stimmt mit Shapiro-Vorhersage überein; g1/g2-Übergang C²-glatt; Chirp-Zeitskala skaliert linear mit Masse; Energiebudget schließt bis Maschinengenauigkeit.
+**Was die Tests beweisen:** v_eigen-Formel konsistent mit dualer Geschwindigkeitsstruktur; Radiowellenverzögerung stimmt mit Shapiro-Vorhersage überein; g1/g2-Übergang C²-glatt; Chirp-Zeitskala skaliert linear mit Masse; Energiebudget schließt bis Maschinengenauigkeit.
 
 **Was die Tests NICHT beweisen:** Beobachtungsdetektion von Radiowellenvorläufern — erfordert gezielte Radiobeobachtungen akkretierender kompakter Objekte.
 
-**Reproduktion:** `E:/clone\ssz-metric-pure\`
+**Reproduktion:** `E:\clone\ssz-metric-pure\`
 
 ---
 
@@ -9319,7 +9347,7 @@ Energieerhaltung wird numerisch im Testsuite auf < 10⁻¹² relative Genauigkei
 | # | Formel | Bereich |
 |---|---------|--------|
 | 1 | v_eigen = v_coord/D(r) | Eigengeschwindigkeit |
-| 2 | τ_chirp ~ r_s/(c·D_s) $\approx$ 1,80 r_s/c | Chirp-Zeitskala |
+| 2 | τ_chirp ~ r_s/(c·D_s) ≈ 1,80 r_s/c | Chirp-Zeitskala |
 | 3 | ν_obs(t) = ν_0 · D[r(t)] | beobachtete Frequenz |
 | 4 | Mischzone: 1,8 < r/r_s < 2,2 | Hermite-C²-Übergang |
 
@@ -9335,7 +9363,7 @@ Kapitel 24 wechselt von kompakten Objekten zu expandierenden Nebeln, wo das Grav
 
 ### Akkretionsscheibenstruktur nahe der natürlichen Grenze
 
-In der ART liegt die innerste stabile Kreisbahn (ISCO) eines Schwarzschild-Schwarzen-Lochs bei r = 3 $r_{s}$. Innerhalb des ISCO stürzt Materie auf nahezu radialen Trajektorien zum Horizont, ohne stabile Kreisbahnen. Die Akkretionsscheibe hat daher eine scharfe Innenkante am ISCO.
+In der ART liegt die innerste stabile Kreisbahn (ISCO) eines Schwarzschild-Schwarzen-Lochs bei r = 3 r_s. Innerhalb des ISCO stürzt Materie auf nahezu radialen Trajektorien zum Horizont, ohne stabile Kreisbahnen. Die Akkretionsscheibe hat daher eine scharfe Innenkante am ISCO.
 
 In SSZ ist die ISCO-Position durch die Segmentdichte modifiziert. Der SSZ-ISCO liegt bei einem leicht anderen Radius, und der Übergang von Kreis- zu Sturzbahnen ist glatter, weil der Segmentdichtegradient eine zusätzliche rücktreibende Kraft liefert. Die praktische Konsequenz: Die SSZ-Akkretionsscheibe erstreckt sich etwas näher an das kompakte Objekt, was eine heißere Innenkante und ein härteres Röntgenspektrum erzeugt.
 
@@ -9347,7 +9375,7 @@ Zukünftige Beobachtungen mit verbesserten Röntgenkalorimetern (Athena/X-IFU, E
 
 Relativistische Jets — kollimierte Plasmaausflüsse mit nahezu Lichtgeschwindigkeit — werden von akkretierenden Schwarzen Löchern in AGN und Mikroquasaren beobachtet. Der Blandford-Znajek-Mechanismus (1977) erklärt die Jet-Bildung als elektromagnetische Extraktion von Rotationsenergie aus einem rotierenden Schwarzen Loch.
 
-In SSZ ist der BZ-Mechanismus modifiziert, weil die natürliche Grenze den Ereignishorizont ersetzt. Die SSZ-Vorhersage für die Jet-Leistung ist P_jet_SSZ = P_jet_ART × D_min² $\approx$ 0,31 × P_jet_ART — SSZ-Jets sollten systematisch schwächer sein als ART-Jets bei gleicher Schwarze-Loch-Masse und Spin.
+In SSZ ist der BZ-Mechanismus modifiziert, weil die natürliche Grenze den Ereignishorizont ersetzt. Die SSZ-Vorhersage für die Jet-Leistung ist P_jet_SSZ = P_jet_ART × D_min² ≈ 0,31 × P_jet_ART — SSZ-Jets sollten systematisch schwächer sein als ART-Jets bei gleicher Schwarze-Loch-Masse und Spin.
 
 Aktuelle Messungen zeigen eine große Streuung der Jet-Leistung bei fester Schwarze-Loch-Masse (~2 Größenordnungen), was den Test der 70%-Reduktion erschwert. Falls die Streuung durch bessere Charakterisierung des Akkretionszustands reduziert werden kann, könnte die SSZ-Vorhersage testbar werden.
 
@@ -9355,17 +9383,17 @@ Aktuelle Messungen zeigen eine große Streuung der Jet-Leistung bei fester Schwa
 
 Die Leuchtkraft eines akkretierenden kompakten Objekts hängt von der Akkretionsrate und der Strahlungseffizienz ab. In der ART ist die Strahlungseffizienz eines Schwarzschild-Schwarzen-Lochs η_ART = 1 − √(8/9) = 0,057 (5,7%).
 
-In SSZ ist die Strahlungseffizienz modifiziert: η_SSZ $\approx$ 0,063 (6,3%) — etwa 10% höher als der ART-Wert. Diese 10%-Erhöhung bedeutet, dass SSZ-Akkretionsscheiben bei gleicher Akkretionsrate etwas leuchtkräftiger sind. Für eine gegebene beobachtete Leuchtkraft ist die SSZ-Akkretionsrate entsprechend niedriger. Dies beeinflusst die Massenwachstumsrate supermassiver Schwarzer Löcher und das Soltan-Argument.
+In SSZ ist die Strahlungseffizienz modifiziert: η_SSZ ≈ 0,063 (6,3%) — etwa 10% höher als der ART-Wert. Diese 10%-Erhöhung bedeutet, dass SSZ-Akkretionsscheiben bei gleicher Akkretionsrate etwas leuchtkräftiger sind. Für eine gegebene beobachtete Leuchtkraft ist die SSZ-Akkretionsrate entsprechend niedriger. Dies beeinflusst die Massenwachstumsrate supermassiver Schwarzer Löcher und das Soltan-Argument.
 
 ### Verbindung zur Multi-Messenger-Astronomie
 
 Die Kombination von Radiowellen-, Röntgen- und Metrik-Perturbationenbeobachtungen desselben Objekts bietet die Möglichkeit, SSZ-Vorhersagen zu testen. Ein akkretierendes Schwarzes Loch emittiert:
 
 - **Radiowellen:** Aus der äußeren Akkretionsscheibe und dem Jet (Ξ ≪ 1, Schwachfeld)
-- **Röntgenstrahlung:** Aus der inneren Akkretionsscheibe (r < 10 $r_{s}$, Starkfeld)
-- **Metrik-Perturbationen:** Aus dem Inspiral kompakter Begleiter (r ~ $r_{s}$, Starkfeld)
+- **Röntgenstrahlung:** Aus der inneren Akkretionsscheibe (r < 10 r_s, Starkfeld)
+- **Metrik-Perturbationen:** Aus dem Inspiral kompakter Begleiter (r ~ r_s, Starkfeld)
 
-Die SSZ-Vorhersage für jede Emissionskomponente unterscheidet sich von der ART nur für r < 6 $r_{s}$. Die Radioemission ist daher kein guter Diskriminator (sie kommt aus dem Schwachfeld), aber die Röntgenemission und die Metrik-Perturbationen tragen Starkfeldinformation.
+Die SSZ-Vorhersage für jede Emissionskomponente unterscheidet sich von der ART nur für r < 6 r_s. Die Radioemission ist daher kein guter Diskriminator (sie kommt aus dem Schwachfeld), aber die Röntgenemission und die Metrik-Perturbationen tragen Starkfeldinformation.
 
 ### Zukünftige Beobachtungsmöglichkeiten
 
@@ -9375,7 +9403,7 @@ Das Square Kilometre Array (SKA), geplant für die 2030er Jahre, wird die Empfin
 2. **VLBI-Bildgebung** mit Auflösungen unterhalb des Horizontradius für nahe Schwarze Löcher
 3. **Monitoring** der Radioemission während akkretionsbedingter Ausbruchs-Ereignisse
 
-Für einen Pulsar im Orbit um Sgr A* könnte das Timing die Metrik nahe $r_{s}$ mit einer Präzision von < 1% kartieren — ausreichend, um zwischen SSZ (D($r_{s}$) = 0,555) und ART (D($r_{s}$) = 0) zu unterscheiden.
+Für einen Pulsar im Orbit um Sgr A* könnte das Timing die Metrik nahe r_s mit einer Präzision von < 1% kartieren — ausreichend, um zwischen SSZ (D(r_s) = 0,555) und ART (D(r_s) = 0) zu unterscheiden.
 
 ### Beobachtungsstrategie für SSZ-Tests mit Radiodaten
 
@@ -9385,13 +9413,13 @@ Eine systematische Beobachtungsstrategie zur Unterscheidung von SSZ und ART mit 
 
 **Phase 2 (SKA-Pathfinder, 2025-2030):** MeerKAT und ASKAP bieten verbesserte Empfindlichkeit für schwache, transiente Radioquellen. Monitoring-Programme für Magnetare und Röntgen-Binärsysteme können zeitliche Korrelationen zwischen Radio- und Röntgenemission messen.
 
-**Phase 3 (SKA, 2030er):** Das vollständige SKA wird Pulsare im galaktischen Zentrum detektieren können. Ein Pulsar im Orbit um Sgr A* wäre der ultimative SSZ-Test: Das Pulsar-Timing würde die Metrik nahe $r_{s}$ mit Prozent-Präzision kartieren.
+**Phase 3 (SKA, 2030er):** Das vollständige SKA wird Pulsare im galaktischen Zentrum detektieren können. Ein Pulsar im Orbit um Sgr A* wäre der ultimative SSZ-Test: Das Pulsar-Timing würde die Metrik nahe r_s mit Prozent-Präzision kartieren.
 
 ### Radioemission als Proxy für die innere Akkretionsphysik
 
-Obwohl die Radioemission selbst aus dem Schwachfeld stammt (r > 100 $r_{s}$), trägt sie indirekte Information über die innere Akkretionsscheibe:
+Obwohl die Radioemission selbst aus dem Schwachfeld stammt (r > 100 r_s), trägt sie indirekte Information über die innere Akkretionsscheibe:
 
-1. **Jet-Radio-Korrelation:** Die Jet-Radioleuchtkraft korreliert mit der Akkretionsrate: $L_{radio}$ $\propto$ $L_{X}$^{0.7}. Die Normierung dieser Korrelation hängt von der Metrik nahe $r_{s}$ ab, weil die Jet-Leistung durch den Blandford-Znajek-Mechanismus bestimmt wird.
+1. **Jet-Radio-Korrelation:** Die Jet-Radioleuchtkraft korreliert mit der Akkretionsrate: L_radio ∝ L_X^{0.7}. Die Normierung dieser Korrelation hängt von der Metrik nahe r_s ab, weil die Jet-Leistung durch den Blandford-Znajek-Mechanismus bestimmt wird.
 
 2. **Quasi-periodische Oszillationen (QPOs):** Radiowellen-QPOs mit Perioden von Minuten bis Stunden spiegeln Oszillationen in der Akkretionsscheibe wider. Die Frequenzen hängen von den Orbitalperioden nahe dem ISCO ab, der in SSZ leicht verschoben ist.
 
@@ -9417,26 +9445,26 @@ Ein Schluesseltest fuer SSZ ist das Verhaeltnis der Roentgen- und Radio-Zeitskal
 
 In der ART verschwindet die Materie hinter dem Ereignishorizont, und die Roentgenemission endet abrupt. In SSZ trifft die Materie auf die natuerliche Grenze (D = 0,555) und wird teilweise reflektiert, was zu einem verlaengerten Roentgen-Nachgluehen fuehrt. Das Verhaeltnis der Roentgen- und Radio-Zeitskalen ist daher in SSZ anders als in der ART:
 
-$t_{X}$/t_radio (ART) ~ $r_{s}$/c (Lichtlaufzeit ueber den Horizont)
-$t_{X}$/t_radio (SSZ) ~ $r_{s}$/(c * $D_{min}$) = 1,8 * $r_{s}$/c (verlaengert durch Zeitdilatation)
+t_X/t_radio (ART) ~ r_s/c (Lichtlaufzeit ueber den Horizont)
+t_X/t_radio (SSZ) ~ r_s/(c * D_min) = 1,8 * r_s/c (verlaengert durch Zeitdilatation)
 
 Dieser Faktor 1,8 ist mit aktuellen Roentgenteleskopen (Chandra, XMM-Newton) potenziell messbar, erfordert aber eine praezise Modellierung des Akkretionsflusses.
 
 ### Thermische Emission von der natuerlichen Grenze
 
-Materie, die auf die natuerliche Grenze trifft, wird auf extreme Temperaturen erhitzt. Die kinetische Energie beim Aufprall ist $E_{kin}$ = (1/2) m $v_{fall}$^2, wobei $v_{fall}$ = 0,832c bei r = $r_{s}$ (Kapitel 8). Die resultierende Temperatur haengt von der Akkretionsrate und der Oberflaechenphysik ab.
+Materie, die auf die natuerliche Grenze trifft, wird auf extreme Temperaturen erhitzt. Die kinetische Energie beim Aufprall ist E_kin = (1/2) m v_fall^2, wobei v_fall = 0,832c bei r = r_s (Kapitel 8). Die resultierende Temperatur haengt von der Akkretionsrate und der Oberflaechenphysik ab.
 
-Fuer einen typischen stellaren Schwarzen-Loch-Kandidaten (M = 10 $M_{Sonne}$, Akkretionsrate = 10^{-8} $M_{Sonne}$/Jahr) betraegt die Oberflaechentemperatur der natuerlichen Grenze ~10^7 K, was Roentgenemission im Bereich 1-10 keV erzeugt. Das Spektrum unterscheidet sich von einem Standard-Akkretionsscheiben-Spektrum durch eine zusaetzliche harte Komponente, die der thermischen Emission der natuerlichen Grenze entspricht.
+Fuer einen typischen stellaren Schwarzen-Loch-Kandidaten (M = 10 M_Sonne, Akkretionsrate = 10^{-8} M_Sonne/Jahr) betraegt die Oberflaechentemperatur der natuerlichen Grenze ~10^7 K, was Roentgenemission im Bereich 1-10 keV erzeugt. Das Spektrum unterscheidet sich von einem Standard-Akkretionsscheiben-Spektrum durch eine zusaetzliche harte Komponente, die der thermischen Emission der natuerlichen Grenze entspricht.
 
-Die SSZ-Vorhersage fuer diese harte Komponente ist spezifisch: Die Temperatur skaliert mit M^{-1/4} (wie bei einer Akkretionsscheibe), aber die Luminositaet skaliert mit $D_{min}$^2 * $L_{Edd}$ = 0,308 * $L_{Edd}$ (reduziert durch die Zeitdilatation an der natuerlichen Grenze). Diese Vorhersage ist mit zukuenftigen Roentgenspektrometern (Athena, XRISM) testbar.
+Die SSZ-Vorhersage fuer diese harte Komponente ist spezifisch: Die Temperatur skaliert mit M^{-1/4} (wie bei einer Akkretionsscheibe), aber die Luminositaet skaliert mit D_min^2 * L_Edd = 0,308 * L_Edd (reduziert durch die Zeitdilatation an der natuerlichen Grenze). Diese Vorhersage ist mit zukuenftigen Roentgenspektrometern (Athena, XRISM) testbar.
 
 ### Jet-Leistung und der Blandford-Znajek-Mechanismus in SSZ
 
-Der Blandford-Znajek (BZ) Mechanismus extrahiert Rotationsenergie aus einem rotierenden Schwarzen Loch durch magnetische Feldlinien, die den Horizont durchdringen. In der ART ist die BZ-Leistung $P_{BZ}$ ~ B^2 * $r_{s}$^2 * (a/M)^2 * c, wobei B die Magnetfeldstaerke und a/M der dimensionslose Spin ist.
+Der Blandford-Znajek (BZ) Mechanismus extrahiert Rotationsenergie aus einem rotierenden Schwarzen Loch durch magnetische Feldlinien, die den Horizont durchdringen. In der ART ist die BZ-Leistung P_BZ ~ B^2 * r_s^2 * (a/M)^2 * c, wobei B die Magnetfeldstaerke und a/M der dimensionslose Spin ist.
 
-In SSZ ist der BZ-Mechanismus modifiziert, weil die natuerliche Grenze kein Ereignishorizont ist. Die magnetischen Feldlinien koennen die natuerliche Grenze nicht im selben Sinne durchdringen wie den ART-Horizont. Stattdessen werden sie an der Grenze teilweise reflektiert, was die effektive BZ-Leistung um den Faktor $D_{min}$ reduziert:
+In SSZ ist der BZ-Mechanismus modifiziert, weil die natuerliche Grenze kein Ereignishorizont ist. Die magnetischen Feldlinien koennen die natuerliche Grenze nicht im selben Sinne durchdringen wie den ART-Horizont. Stattdessen werden sie an der Grenze teilweise reflektiert, was die effektive BZ-Leistung um den Faktor D_min reduziert:
 
-P_BZ_SSZ = $D_{min}$ * P_BZ_ART = 0,555 * P_BZ_ART
+P_BZ_SSZ = D_min * P_BZ_ART = 0,555 * P_BZ_ART
 
 Diese 44,5%-Reduktion der Jet-Leistung ist eine spezifische, falsifizierbare Vorhersage von SSZ. Sie koennte durch statistische Analyse der Jet-Leistung in einer grossen Stichprobe von aktiven galaktischen Kernen getestet werden.
 
@@ -9447,8 +9475,8 @@ Die Fe K-alpha Fluoreszenzlinie bei 6,4 keV ist eine der wichtigsten Sonden fuer
 In der ART hat das Linienprofil eine charakteristische asymmetrische Form mit einem scharfen blauen Peak (von der sich naehernden Seite der Scheibe) und einem ausgedehnten roten Fluegel (von der sich entfernenden Seite und durch gravitative Rotverschiebung). Der innere Rand der Scheibe (ISCO) bestimmt die maximale Rotverschiebung des roten Fluegels.
 
 In SSZ ist das Linienprofil modifiziert:
-- Der ISCO ist leicht verschoben (r_ISCO_SSZ ~ 3,5 $r_{s}$ vs. 3 $r_{s}$ in ART fuer Schwarzschild)
-- Die gravitative Rotverschiebung am ISCO ist $z_{SSZ}$ = Xi(3,5 $r_{s}$) = 0,143 vs. $z_{GR}$ = 0,225
+- Der ISCO ist leicht verschoben (r_ISCO_SSZ ~ 3,5 r_s vs. 3 r_s in ART fuer Schwarzschild)
+- Die gravitative Rotverschiebung am ISCO ist z_SSZ = Xi(3,5 r_s) = 0,143 vs. z_GR = 0,225
 - Der rote Fluegel ist weniger ausgedehnt (maximale Rotverschiebung ~14% vs. ~23%)
 
 Die Differenz im Linienprofil ist mit aktuellen Roentgenteleskopen (XMM-Newton, NuSTAR) grenzwertig detektierbar. Das zukuenftige Athena-Roentgenobservatorium (geplant fuer die 2030er Jahre) wird die Energieaufloesung und Empfindlichkeit haben, um die SSZ- und ART-Linienprofile klar zu unterscheiden.
@@ -9457,29 +9485,29 @@ Die Differenz im Linienprofil ist mit aktuellen Roentgenteleskopen (XMM-Newton, 
 
 Quasi-periodische Eruptionen (QPEs) sind ein kuerzlich entdecktes Phaenomen: wiederholte, intensive Roentgenausbrueche aus den Kernen von Galaxien mit einer Periodizitaet von Stunden. Die physikalische Ursache ist umstritten, aber eine Moeglichkeit ist die Wechselwirkung eines kompakten Objekts (Neutronenstern oder stellares Schwarzes Loch) mit der Akkretionsscheibe eines supermassiven Schwarzen Lochs.
 
-In SSZ haben QPEs eine zusaetzliche Interpretation: Die Periodizitaet koennte durch die Orbitalperiode eines Objekts nahe dem Regime-Uebergang (r ~ r*) bestimmt sein. Die Orbitalperiode bei r* = 1,387 $r_{s}$ ist T = 2 pi r* sqrt(r*/(GM)) ~ 6,5 $r_{s}$/c * sqrt(r*/r_s) ~ 7,7 $r_{s}$/c. Fuer ein supermassives Schwarzes Loch mit M = 10^6 $M_{Sonne}$ ergibt sich T ~ 230 s ~ 3,8 Minuten, was im Bereich der beobachteten QPE-Periodizitaeten liegt.
+In SSZ haben QPEs eine zusaetzliche Interpretation: Die Periodizitaet koennte durch die Orbitalperiode eines Objekts nahe dem Regime-Uebergang (r ~ r*) bestimmt sein. Die Orbitalperiode bei r* = 1,387 r_s ist T = 2 pi r* sqrt(r*/(GM)) ~ 6,5 r_s/c * sqrt(r*/r_s) ~ 7,7 r_s/c. Fuer ein supermassives Schwarzes Loch mit M = 10^6 M_Sonne ergibt sich T ~ 230 s ~ 3,8 Minuten, was im Bereich der beobachteten QPE-Periodizitaeten liegt.
 
 ### Roentgen-Reverberation-Mapping
 
 Roentgen-Reverberation-Mapping ist eine Technik, die die Zeitverzoegerung zwischen der primaeren Roentgenemission (von der Korona nahe dem Schwarzen Loch) und der reflektierten Emission (von der Akkretionsscheibe) misst. Die Zeitverzoegerung ist proportional zum Lichtlaufzeitunterschied und damit zur Geometrie der inneren Akkretionsscheibe.
 
-In SSZ ist die Lichtlaufzeit durch die Segmentdichte modifiziert: $t_{SSZ}$ = $t_{GR}$ * (1 + $\Xi_{\text{mean}}$), wobei $\Xi_{\text{mean}}$ die mittlere Segmentdichte entlang des Lichtwegs ist. Fuer typische Reverberation-Geometrien (Korona bei h ~ 5 $r_{s}$, Reflexion bei r ~ 3-10 $r_{s}$) betraegt die SSZ-Korrektur ~5-10%, was mit dem NICER-Instrument und zukuenftigen Missionen (eXTP, STROBE-X) messbar ist.
+In SSZ ist die Lichtlaufzeit durch die Segmentdichte modifiziert: t_SSZ = t_GR * (1 + Xi_mean), wobei Xi_mean die mittlere Segmentdichte entlang des Lichtwegs ist. Fuer typische Reverberation-Geometrien (Korona bei h ~ 5 r_s, Reflexion bei r ~ 3-10 r_s) betraegt die SSZ-Korrektur ~5-10%, was mit dem NICER-Instrument und zukuenftigen Missionen (eXTP, STROBE-X) messbar ist.
 
 ### EHT-Schattenbeobachtungen und SSZ
 
 Das Event Horizon Telescope (EHT) hat 2019 das erste Bild des Schattens von M87* veroeffentlicht und 2022 das Bild von Sgr A*. Der Schattenradius ist eine der wichtigsten Observablen fuer die SSZ-Validierung.
 
-**M87* (2019):** Der gemessene Schattenradius betraegt theta = 42 +/- 3 Mikrobogensekunden. Die ART-Vorhersage (fuer M = 6,5 x 10^9 $M_{Sonne}$ und d = 16,8 Mpc) ist $\theta_{\text{GR}}$ = 42,0 Mikrobogensekunden. Die SSZ-Vorhersage ist $\theta_{\text{SSZ}}$ = 0,987 * $\theta_{\text{GR}}$ = 41,5 Mikrobogensekunden. Beide Vorhersagen sind mit der Messung konsistent (innerhalb der 7% Unsicherheit).
+**M87* (2019):** Der gemessene Schattenradius betraegt theta = 42 +/- 3 Mikrobogensekunden. Die ART-Vorhersage (fuer M = 6,5 x 10^9 M_Sonne und d = 16,8 Mpc) ist theta_GR = 42,0 Mikrobogensekunden. Die SSZ-Vorhersage ist theta_SSZ = 0,987 * theta_GR = 41,5 Mikrobogensekunden. Beide Vorhersagen sind mit der Messung konsistent (innerhalb der 7% Unsicherheit).
 
-**Sgr A* (2022):** Der gemessene Schattenradius betraegt theta = 48,7 +/- 7 Mikrobogensekunden. Die ART-Vorhersage (fuer M = 4 x 10^6 $M_{Sonne}$ und d = 8,3 kpc) ist $\theta_{\text{GR}}$ = 51,8 Mikrobogensekunden. Die SSZ-Vorhersage ist $\theta_{\text{SSZ}}$ = 51,1 Mikrobogensekunden. Beide sind konsistent mit der Messung.
+**Sgr A* (2022):** Der gemessene Schattenradius betraegt theta = 48,7 +/- 7 Mikrobogensekunden. Die ART-Vorhersage (fuer M = 4 x 10^6 M_Sonne und d = 8,3 kpc) ist theta_GR = 51,8 Mikrobogensekunden. Die SSZ-Vorhersage ist theta_SSZ = 51,1 Mikrobogensekunden. Beide sind konsistent mit der Messung.
 
-**ngEHT (ab ~2028):** Das next-generation EHT wird die Aufloesung und Empfindlichkeit um den Faktor ~10 verbessern. Die erwartete Praezision fuer den Schattenradius ist ~1%, was ausreicht, um zwischen SSZ (0,987 * $\theta_{\text{GR}}$) und ART ($\theta_{\text{GR}}$) zu unterscheiden.
+**ngEHT (ab ~2028):** Das next-generation EHT wird die Aufloesung und Empfindlichkeit um den Faktor ~10 verbessern. Die erwartete Praezision fuer den Schattenradius ist ~1%, was ausreicht, um zwischen SSZ (0,987 * theta_GR) und ART (theta_GR) zu unterscheiden.
 
 ### Akkretionsscheiben-Morphologie
 
 Die Morphologie der Akkretionsscheibe (Helligkeit, Asymmetrie, Dicke) haengt von der Raumzeitgeometrie ab. In SSZ ist die Akkretionsscheibe leicht anders als in der ART:
 
-- **Innerer Rand:** Der ISCO ist in SSZ bei ~3,5 $r_{s}$ (vs. 3 $r_{s}$ in ART), was den inneren Rand der Scheibe nach aussen verschiebt.
+- **Innerer Rand:** Der ISCO ist in SSZ bei ~3,5 r_s (vs. 3 r_s in ART), was den inneren Rand der Scheibe nach aussen verschiebt.
 - **Helligkeit:** Die Scheibe ist in SSZ ~5% schwaecher (weil die Rotverschiebung am ISCO geringer ist).
 - **Asymmetrie:** Die Doppler-Asymmetrie (helle Seite vs. dunkle Seite) ist in SSZ ~3% geringer.
 
@@ -9491,8 +9519,8 @@ Diese Unterschiede sind mit dem ngEHT potenziell messbar, erfordern aber eine so
 
 Dieses Kapitel hat die astrophysikalischen Implikationen von SSZ fuer die Beobachtung kompakter Objekte dargestellt. Die wichtigsten Ergebnisse:
 
-1. **Schattenradius:** $\theta_{\text{SSZ}}$ = 0,987 * $\theta_{\text{GR}}$ -- mit dem ngEHT testbar.
-2. **Akkretionsscheibe:** ISCO bei 3,5 $r_{s}$ (vs. 3 $r_{s}$ in ART) -- beeinflusst Spektrum und Morphologie.
+1. **Schattenradius:** theta_SSZ = 0,987 * theta_GR -- mit dem ngEHT testbar.
+2. **Akkretionsscheibe:** ISCO bei 3,5 r_s (vs. 3 r_s in ART) -- beeinflusst Spektrum und Morphologie.
 3. **Eisenlinien:** Breitere rote Fluegel in SSZ -- mit Athena/XRISM testbar.
 4. **Jet-Leistung:** Hoehere Penrose-Effizienz in SSZ (44,5% vs. 29,3%) -- erklaert extreme AGN-Leuchtkraefte.
 
@@ -9518,10 +9546,12 @@ Die Roentgenspektroskopie ist eines der maechtigsten Werkzeuge fuer die Untersuc
 
 Die naechste Generation von Instrumenten wird die SSZ-Vorhersagen fuer astrophysikalische Umgebungen praezise testen. Das ngEHT wird den Schattenradius auf ~1% messen, Athena wird die Eisenlinien-Profile mit beispielloser Praezision aufloesen, und das Einstein-Teleskop wird QNM-Frequenzen auf ~1% bestimmen. Zusammen werden diese Messungen ein konsistentes Bild der Raumzeit nahe kompakten Objekten liefern -- und entweder SSZ bestaetigen oder widerlegen.
 
+---
 
-\newpage
+# Kapitel 24: Molekularzonen in expandierenden Nebeln
 
-# Molekularzonen in expandierenden Nebeln
+**Teil VI — Astrophysikalische Anwendungen**
+**Status:** ERWEITERTE FASSUNG v2
 
 
 ![Abb](figures/ch24_g79/2_coherence_evolution_REAL_DATA.png)
@@ -9549,7 +9579,7 @@ Warum ist dies notwendig? Dieses Kapitel verbindet die SSZ-Theorie mit konkreten
 
 ## Zusammenfassung
 
-Der Leuchtkräftige Blaue Variable (LBV) Nebel G79.29+0.46 bietet einen einzigartigen Test der SSZ-Vorhersagen fern von kompakten Objekten. Im Cygnus-Gebiet in einer Entfernung von etwa 1,7 kpc gelegen, ist G79.29+0.46 ein massereicher Stern (~25–40 M_$\odot$), umgeben von konzentrischen Nebelhüllen, die während LBV-typischer Eruptionen ausgestoßen wurden. Diese Hüllen zeigen anomale Molekülemission — Moleküle wie CO, HCN und CS überleben in Regionen, die Standardmodelle als zu heiß für molekulares Überleben vorhersagen.
+Der Leuchtkräftige Blaue Variable (LBV) Nebel G79.29+0.46 bietet einen einzigartigen Test der SSZ-Vorhersagen fern von kompakten Objekten. Im Cygnus-Gebiet in einer Entfernung von etwa 1,7 kpc gelegen, ist G79.29+0.46 ein massereicher Stern (~25–40 M_☉), umgeben von konzentrischen Nebelhüllen, die während LBV-typischer Eruptionen ausgestoßen wurden. Diese Hüllen zeigen anomale Molekülemission — Moleküle wie CO, HCN und CS überleben in Regionen, die Standardmodelle als zu heiß für molekulares Überleben vorhersagen.
 
 SSZ bietet eine Erklärung: Segmentdichte-Gradienten in den expandierenden Hüllen erzeugen lokale Temperaturinversionen — „Kaltzonen" — in denen Moleküle kondensieren und bestehen können. Sechs spezifische, quantitative Vorhersagen wurden aus dem SSZ-Rahmenwerk abgeleitet und gegen Archivbeobachtungen von Herschel, Spitzer, ALMA und bodengestützten Spektrographen getestet. **Alle sechs wurden bestätigt**, mit null angepassten freien Parametern.
 
@@ -9569,7 +9599,7 @@ SSZ bietet eine Erklärung: Segmentdichte-Gradienten in den expandierenden Hüll
 
 ### Was sind LBV-Sterne?
 
-Luminous Blue Variables (LBVs) sind massereiche, instabile Sterne in einem kurzen Evolutionsstadium zwischen dem Hauptreihen- und dem Wolf-Rayet-Stadium. Sie zeichnen sich durch spektakuläre Eruptionen aus, bei denen große Mengen Masse (0,1–10 M$\odot$) in den umgebenden Raum geschleudert werden.
+Luminous Blue Variables (LBVs) sind massereiche, instabile Sterne in einem kurzen Evolutionsstadium zwischen dem Hauptreihen- und dem Wolf-Rayet-Stadium. Sie zeichnen sich durch spektakuläre Eruptionen aus, bei denen große Mengen Masse (0,1–10 M☉) in den umgebenden Raum geschleudert werden.
 
 Die bekanntesten LBVs: Eta Carinae (das Homunculus-Nebel-System), P Cygni, AG Carinae und der hier diskutierte G79.29+0.46 im Cygnus-Sternbildgebiet. Alle zeigen expandierende Nebel, die reich an Molekülen und Staub sind.
 
@@ -9601,7 +9631,7 @@ G79.29+0.46 hat zwei verschiedene Hüllen:
 
 ### Die Anomalie
 
-Standardmodelle der Astrophysik sagen vorher, dass das Strahlungsfeld des Zentralsterns (L ~ 10⁵·⁵ L_$\odot$, T_eff ~ 25.000 K) alle Moleküle innerhalb von ~1 pc dissoziieren sollte. Dennoch werden CO und HCN bei r ~ 1,0–1,2 pc mit Rotationstemperaturen von T_rot = 50 ± 15 K beobachtet — weit unter der Dissoziationsschwelle.
+Standardmodelle der Astrophysik sagen vorher, dass das Strahlungsfeld des Zentralsterns (L ~ 10⁵·⁵ L_☉, T_eff ~ 25.000 K) alle Moleküle innerhalb von ~1 pc dissoziieren sollte. Dennoch werden CO und HCN bei r ~ 1,0–1,2 pc mit Rotationstemperaturen von T_rot = 50 ± 15 K beobachtet — weit unter der Dissoziationsschwelle.
 
 SSZ bietet einen komplementären Mechanismus, der keine zusätzlichen Parameter erfordert.
 
@@ -9613,7 +9643,7 @@ In SSZ erzeugen Massenverteilungen Segmentdichte-Gradienten. Die expandierende H
 
 Das Inversionskriterium:
 
-$$\frac{d\Xi}{dr}\bigg|_{\text{Hülle}} > \frac{d\Xi}{dr}\bigg|_{\text{Umgebung}}$$
+\frac{d\Xi}{dr}\bigg|_{\text{Hülle}} > \frac{d\Xi}{dr}\bigg|_{\text{Umgebung}}
 
 ### Physikalischer Mechanismus
 
@@ -9634,16 +9664,16 @@ SSZ sagt Molekularzonen bei Radien vorher, wo dΞ/dr Temperaturinversionen unter
 
 ## 24.4 Sechs Vorhersagen — Alle bestätigt
 
-Das g79-cygnus-test Repository (`E:/clone\g79-cygnus-test\`) dokumentiert sechs Vorhersagen, getestet gegen Archivdaten:
+Das g79-cygnus-test Repository (`E:\clone\g79-cygnus-test\`) dokumentiert sechs Vorhersagen, getestet gegen Archivdaten:
 
 | # | Vorhersage | SSZ-Wert | Beobachtet | Quelle | Status |
 |---|-----------|-----------|----------|--------|--------|
-| 1 | CO-Emissionsort | Innenkante, äußere Hülle | Bestätigt | ALMA Band 6 | Y |
-| 2 | Temperaturinversion | dT/dr < 0 an Hülle | Bestätigt | Multi-λ SED | Y |
-| 3 | CO-Rotations-T | 40–80 K | 50 ± 15 K | mm-Spektroskopie | Y |
-| 4 | Staub-zu-Gas-Anomalie | Erhöht am Hüllenrand | Bestätigt | Herschel/PACS | Y |
-| 5 | Radialer v-Gradient | Nach außen abnehmend | Bestätigt | Optische Spektro | Y |
-| 6 | Zeitliche Konsistenz | Passt zum Expansionsalter | Bestätigt | Multi-Epoche | Y |
+| 1 | CO-Emissionsort | Innenkante, äußere Hülle | Bestätigt | ALMA Band 6 | ✓ |
+| 2 | Temperaturinversion | dT/dr < 0 an Hülle | Bestätigt | Multi-λ SED | ✓ |
+| 3 | CO-Rotations-T | 40–80 K | 50 ± 15 K | mm-Spektroskopie | ✓ |
+| 4 | Staub-zu-Gas-Anomalie | Erhöht am Hüllenrand | Bestätigt | Herschel/PACS | ✓ |
+| 5 | Radialer v-Gradient | Nach außen abnehmend | Bestätigt | Optische Spektro | ✓ |
+| 6 | Zeitliche Konsistenz | Passt zum Expansionsalter | Bestätigt | Multi-Epoche | ✓ |
 
 **Alle sechs Vorhersagen bestätigt. Null angepasste freie Parameter.**
 
@@ -9677,7 +9707,7 @@ Drei LBV-Nebel sind Kandidaten für Follow-up: AG Carinae (d~6 kpc, ALMA Band 6)
 
 **Was die Tests NICHT beweisen:** Einzigartige Erklärung — Standard-Astrophysik liefert alternative Erklärungen für einzelne Merkmale.
 
-**Reproduktion:** `E:/clone\g79-cygnus-test\`
+**Reproduktion:** `E:\clone\g79-cygnus-test\`
 
 ---
 
@@ -9693,25 +9723,25 @@ Drei LBV-Nebel sind Kandidaten für Follow-up: AG Carinae (d~6 kpc, ALMA Band 6)
 
 ### Photodissoziation und Segmentdichte
 
-Die Photodissoziation von Molekuelen in LBV-Nebeln wird durch das UV-Strahlungsfeld des Zentralsterns angetrieben. Die Photodissoziationsrate $k_{pd}$ haengt von der lokalen UV-Flussdichte ab:
+Die Photodissoziation von Molekuelen in LBV-Nebeln wird durch das UV-Strahlungsfeld des Zentralsterns angetrieben. Die Photodissoziationsrate k_pd haengt von der lokalen UV-Flussdichte ab:
 
-$k_{pd}$(r) = k_0 * ($R_{star}$/r)^2 * exp(-$\tau_{\text{UV}}$(r))
+k_pd(r) = k_0 * (R_star/r)^2 * exp(-tau_UV(r))
 
-wobei $\tau_{\text{UV}}$ die optische Tiefe im UV und k_0 die Rate bei der Sternoberflaehe ist. In SSZ wird die lokale Zeitskala durch D(r) modifiziert:
+wobei tau_UV die optische Tiefe im UV und k_0 die Rate bei der Sternoberflaehe ist. In SSZ wird die lokale Zeitskala durch D(r) modifiziert:
 
-$k_{pd}$,SSZ(r) = $k_{pd}$(r) * D(r)
+k_pd,SSZ(r) = k_pd(r) * D(r)
 
-Da D(r) < 1 nahe des Sterns (Gravitation verlangsamt lokale Prozesse), ist die effektive Dissoziationsrate in SSZ leicht niedriger als in der Standardberechnung. Fuer einen LBV-Stern (M ~ 50 $M_{sun}$): D($R_{star}$) = 1 - Xi($R_{star}$) ~ 1 - 10^-6, sodass der Effekt vernachlaessigbar ist (~10^-6 Korrektur). Fuer kompaktere Objekte (Neutronensterne, Schwarze Loecher) waere der Effekt signifikant.
+Da D(r) < 1 nahe des Sterns (Gravitation verlangsamt lokale Prozesse), ist die effektive Dissoziationsrate in SSZ leicht niedriger als in der Standardberechnung. Fuer einen LBV-Stern (M ~ 50 M_sun): D(R_star) = 1 - Xi(R_star) ~ 1 - 10^-6, sodass der Effekt vernachlaessigbar ist (~10^-6 Korrektur). Fuer kompaktere Objekte (Neutronensterne, Schwarze Loecher) waere der Effekt signifikant.
 
 ### Staubbildung im expandierenden Nebel
 
-Die Staubbildung in LBV-Nebeln ist ein komplexer Prozess, der von Temperatur, Dichte und chemischer Zusammensetzung abhaengt. Die kritische Temperatur fuer Silikatkondensation ist $T_{cond}$ ~ 1500 K, die fuer Kohlenstoffkondensation $T_{cond}$ ~ 2000 K.
+Die Staubbildung in LBV-Nebeln ist ein komplexer Prozess, der von Temperatur, Dichte und chemischer Zusammensetzung abhaengt. Die kritische Temperatur fuer Silikatkondensation ist T_cond ~ 1500 K, die fuer Kohlenstoffkondensation T_cond ~ 2000 K.
 
-Der Kondensationsradius $r_{cond}$ (wo T = $T_{cond}$) haengt von der Leuchtkraft und dem Massenverlust ab:
+Der Kondensationsradius r_cond (wo T = T_cond) haengt von der Leuchtkraft und dem Massenverlust ab:
 
-$r_{cond}$ ~ ($L_{star}$ / (16*pi*$\sigma_{\text{SB*}}$$T_{cond}$^4))^(1/2)
+r_cond ~ (L_star / (16*pi*sigma_SB*T_cond^4))^(1/2)
 
-Fuer G79.29+0.46: $r_{cond}$ ~ 0.3 pc (Silikat) und $r_{cond}$ ~ 0.2 pc (Kohlenstoff). Dies stimmt mit den beobachteten Staubringen ueberein.
+Fuer G79.29+0.46: r_cond ~ 0.3 pc (Silikat) und r_cond ~ 0.2 pc (Kohlenstoff). Dies stimmt mit den beobachteten Staubringen ueberein.
 
 Die SSZ-Korrektur zum Kondensationsradius ist vernachlaessigbar (< 10^-6), weil das Gravitationsfeld des Sterns bei diesen Abstaenden extrem schwach ist. Der Wert dieses Kapitels liegt nicht in der Groesse der SSZ-Korrektur, sondern in der Demonstration der Methodik: Wie man SSZ-Vorhersagen mit astrophysikalischen Daten vergleicht.
 
@@ -9727,11 +9757,11 @@ Teil VII adressiert den Regimeübergang selbst: Wie geht ein System vom Schwachf
 
 Das Geschwindigkeitsfeld eines expandierenden Nebels trägt Information über das Gravitationspotential, durch das das Gas expandiert hat. Im Standardmodell (ohne SSZ-Korrekturen) wird die Expansionsgeschwindigkeit bei Radius r durch die Energiebilanz bestimmt: v(r) = v_0 √(1 − 2GM/(v_0² r) − ...).
 
-In SSZ ist das Gravitationspotential durch die Segmentdichte modifiziert: $v_{SSZ}$(r) = v_0 √(1 − 2GM/(v_0² r (1 + Ξ(r))) − ...). Die SSZ-Korrektur ist proportional zu Ξ(r), am größten nahe dem zentralen Überrest. Der Effekt ist eine leichte Erhöhung der Expansionsgeschwindigkeit bei kleinen Radien, weil das SSZ-Gravitationspotential flacher als das Newtonsche ist.
+In SSZ ist das Gravitationspotential durch die Segmentdichte modifiziert: v_SSZ(r) = v_0 √(1 − 2GM/(v_0² r (1 + Ξ(r))) − ...). Die SSZ-Korrektur ist proportional zu Ξ(r), am größten nahe dem zentralen Überrest. Der Effekt ist eine leichte Erhöhung der Expansionsgeschwindigkeit bei kleinen Radien, weil das SSZ-Gravitationspotential flacher als das Newtonsche ist.
 
-Die Geschwindigkeitsdifferenz Δv = $v_{SSZ}$ − v_Standard ist klein (~Ξ × v_0, ~1 km/s für typische Expansionsgeschwindigkeit 100 km/s und Ξ ~ 0,01), aber potenziell mit moderner Radiointerferometrie detektierbar. ALMA erreicht Geschwindigkeitsauflösung von ~0,1 km/s für Moleküllinienbeobachtungen.
+Die Geschwindigkeitsdifferenz Δv = v_SSZ − v_Standard ist klein (~Ξ × v_0, ~1 km/s für typische Expansionsgeschwindigkeit 100 km/s und Ξ ~ 0,01), aber potenziell mit moderner Radiointerferometrie detektierbar. ALMA erreicht Geschwindigkeitsauflösung von ~0,1 km/s für Moleküllinienbeobachtungen.
 
-Der statistische Ansatz beinhaltet die Anpassung des Geschwindigkeitsfeldes des gesamten Nebels an SSZ- und Standardmodelle und den Vergleich der Anpassungsgüte. Für G79.29+0.46 liefern die verfügbaren NH₃-Daten von Rizzo et al. (2014) 12 unabhängige Geschwindigkeitsmessungen. Eine vorläufige Chi-Quadrat-Analyse zeigt, dass das SSZ-Modell eine marginal bessere Anpassung liefert (Δχ² $\approx$ 2,1 für 1 zusätzlichen Freiheitsgrad), aber dies ist statistisch nicht signifikant (p $\approx$ 0,15). Mehr Datenpunkte (aus CO- und OH-Beobachtungen) wären für eine signifikante Detektion nötig.
+Der statistische Ansatz beinhaltet die Anpassung des Geschwindigkeitsfeldes des gesamten Nebels an SSZ- und Standardmodelle und den Vergleich der Anpassungsgüte. Für G79.29+0.46 liefern die verfügbaren NH₃-Daten von Rizzo et al. (2014) 12 unabhängige Geschwindigkeitsmessungen. Eine vorläufige Chi-Quadrat-Analyse zeigt, dass das SSZ-Modell eine marginal bessere Anpassung liefert (Δχ² ≈ 2,1 für 1 zusätzlichen Freiheitsgrad), aber dies ist statistisch nicht signifikant (p ≈ 0,15). Mehr Datenpunkte (aus CO- und OH-Beobachtungen) wären für eine signifikante Detektion nötig.
 
 ### Zukünftige Beobachtungen mit ALMA und SKA
 
@@ -9745,9 +9775,9 @@ Ein kombiniertes ALMA+SKA-Beobachtungsprogramm für G79.29+0.46 und ähnliche Ob
 
 Die räumliche Verteilung von Molekülen in expandierenden Nebeln folgt einem Potenzgesetz, das mit der SSZ-Segmentdichte zusammenhängt. Die beobachtete Molekülhäufigkeit N(r) als Funktion des Abstands vom Zentralstern ist:
 
-N(r) $\propto$ r^{−α} mit α = 2,3 ± 0,2
+N(r) ∝ r^{−α} mit α = 2,3 ± 0,2
 
-Dies stimmt mit der SSZ-Vorhersage α = 2 + Ξ_eff überein, wobei Ξ_eff der effektive Segmentdichtebeitrag des Sternwindes ist. Für einen LBV mit Massenverlustrate von 10⁻⁵ M$\odot$/Jahr und Windgeschwindigkeit 200 km/s ist Ξ_eff $\approx$ 0,3, was α $\approx$ 2,3 ergibt — in Übereinstimmung mit den Beobachtungen.
+Dies stimmt mit der SSZ-Vorhersage α = 2 + Ξ_eff überein, wobei Ξ_eff der effektive Segmentdichtebeitrag des Sternwindes ist. Für einen LBV mit Massenverlustrate von 10⁻⁵ M☉/Jahr und Windgeschwindigkeit 200 km/s ist Ξ_eff ≈ 0,3, was α ≈ 2,3 ergibt — in Übereinstimmung mit den Beobachtungen.
 
 ### Vergleich mit anderen Nebeln
 
@@ -9762,20 +9792,20 @@ Die Übereinstimmung ist am besten für massive Sterne (LBV), wo der Sternwind s
 
 ### Infrarot- und Submillimeter-Beobachtungen
 
-ALMA (Atacama Large Millimeter Array) hat die Molekülverteilung in G79.29+0.46 mit Bogensekundenauflösung kartiert. Die Daten zeigen eine Ringstruktur bei r $\approx$ 1,5 pc vom Zentralstern, konsistent mit einer Schockfront, an der der schnelle Wind auf das interstellare Medium trifft. Die SSZ-Vorhersage für die Lage dieser Schockfront (r_shock = v_wind × t_dynamisch × (1 + Ξ_eff)) stimmt mit der beobachteten Position überein.
+ALMA (Atacama Large Millimeter Array) hat die Molekülverteilung in G79.29+0.46 mit Bogensekundenauflösung kartiert. Die Daten zeigen eine Ringstruktur bei r ≈ 1,5 pc vom Zentralstern, konsistent mit einer Schockfront, an der der schnelle Wind auf das interstellare Medium trifft. Die SSZ-Vorhersage für die Lage dieser Schockfront (r_shock = v_wind × t_dynamisch × (1 + Ξ_eff)) stimmt mit der beobachteten Position überein.
 
 ### Detaillierte Analyse von G79.29+0.46
 
 G79.29+0.46 ist ein LBV-Nebel im Sternbild Schwan (Cygnus), entdeckt in den 1990er Jahren durch Radiobeobachtungen. Der Zentralstern ist ein Luminous Blue Variable mit folgenden Eigenschaften:
 
 - **Spektraltyp:** B1.5 Ia+
-- **Leuchtkraft:** ~10⁶ L$\odot$
+- **Leuchtkraft:** ~10⁶ L☉
 - **Effektive Temperatur:** ~12.000 K
-- **Massenverlustrate:** ~3 × 10⁻⁵ M$\odot$/Jahr
+- **Massenverlustrate:** ~3 × 10⁻⁵ M☉/Jahr
 - **Windgeschwindigkeit:** ~200 km/s
 - **Entfernung:** ~1,7 kpc
 
-Der Nebel zeigt eine komplexe Struktur mit einem inneren Ring (r $\approx$ 0,5 pc) und einem äußeren Ring (r $\approx$ 1,5 pc). Die Ringe bestehen aus Gas und Staub, die bei früheren Eruptionen des Zentralsterns ausgestossen wurden.
+Der Nebel zeigt eine komplexe Struktur mit einem inneren Ring (r ≈ 0,5 pc) und einem äußeren Ring (r ≈ 1,5 pc). Die Ringe bestehen aus Gas und Staub, die bei früheren Eruptionen des Zentralsterns ausgestossen wurden.
 
 ### Molekülchemie im expandierenden Nebel
 
@@ -9789,7 +9819,7 @@ ALMA-Beobachtungen haben mehrere Molekülspezies im Nebel nachgewiesen:
 | CS | J=2→1 | 0,5–0,8 pc | 10⁻⁹ |
 | SiO | J=2→1 | 0,3–0,6 pc | 10⁻⁹ |
 
-Die räumliche Verteilung der Moleküle folgt dem Potenzgesetz N(r) $\propto$ r^{−α} mit α = 2,3 ± 0,2, konsistent mit der SSZ-Vorhersage α = 2 + Ξ_eff.
+Die räumliche Verteilung der Moleküle folgt dem Potenzgesetz N(r) ∝ r^{−α} mit α = 2,3 ± 0,2, konsistent mit der SSZ-Vorhersage α = 2 + Ξ_eff.
 
 ### Verbindung zur SSZ-Segmenttheorie
 
@@ -9799,7 +9829,7 @@ Die SSZ-Interpretation der Molekülverteilung: Der expandierende Nebel durchquer
 
 Die Temperaturstruktur des G79.29+0.46-Nebels liefert einen unabhaengigen Test der SSZ-Vorhersagen. Die Molekularzonen existieren nur in einem engen Temperaturbereich: CO ueberlebt bei T < 4000 K, H2 bei T < 2000 K, und OH bei T < 1500 K. Die beobachteten Temperaturprofile zeigen einen steilen Abfall von ~10^4 K (ionisierte Zone) auf ~100 K (molekulare Zone) ueber eine Distanz von ~0,1 pc.
 
-Die SSZ-Vorhersage fuer dieses Temperaturprofil basiert auf der Strahlungsgleichgewichtsberechnung mit der SSZ-modifizierten Leuchtkraft des Zentralsterns. Der Zentralstern (ein Luminous Blue Variable mit L ~ 10^6 $L_{Sonne}$) erzeugt ein UV-Strahlungsfeld, das die inneren Nebelschichten ionisiert. Die Photodissoziationsfront (wo UV-Photonen Molekuele zerstoeren) liegt bei einem Radius, der von der UV-Leuchtkraft und der Nebeldichte abhaengt.
+Die SSZ-Vorhersage fuer dieses Temperaturprofil basiert auf der Strahlungsgleichgewichtsberechnung mit der SSZ-modifizierten Leuchtkraft des Zentralsterns. Der Zentralstern (ein Luminous Blue Variable mit L ~ 10^6 L_Sonne) erzeugt ein UV-Strahlungsfeld, das die inneren Nebelschichten ionisiert. Die Photodissoziationsfront (wo UV-Photonen Molekuele zerstoeren) liegt bei einem Radius, der von der UV-Leuchtkraft und der Nebeldichte abhaengt.
 
 Die sechs Beobachtungstatsachen, die SSZ korrekt vorhersagt:
 1. Die Existenz von CO in der aeusseren Schale (bestaetigt durch Herschel/PACS)
@@ -9821,19 +9851,19 @@ Die Kombination von ALMA (Millimeter) und SKA (Radio) liefert ein vollstaendiges
 
 ### ALMA-Beobachtungen von Cygnus X-1
 
-Das Atacama Large Millimeter/submillimeter Array (ALMA) hat die Faehigkeit, die Molekularzonen um Schwarze-Loch-Kandidaten mit beispielloser raeumlicher Aufloesung zu kartieren. Fuer Cygnus X-1 (d = 1,86 kpc, M = 21,2 $M_{Sonne}$) betraegt die Winkelaufloesung von ALMA bei 345 GHz ~15 Millibogensekunden, was einer linearen Aufloesung von ~28 AU entspricht.
+Das Atacama Large Millimeter/submillimeter Array (ALMA) hat die Faehigkeit, die Molekularzonen um Schwarze-Loch-Kandidaten mit beispielloser raeumlicher Aufloesung zu kartieren. Fuer Cygnus X-1 (d = 1,86 kpc, M = 21,2 M_Sonne) betraegt die Winkelaufloesung von ALMA bei 345 GHz ~15 Millibogensekunden, was einer linearen Aufloesung von ~28 AU entspricht.
 
-Die SSZ-Vorhersage fuer die Molekularzone von Cygnus X-1: Die Photodissoziationsfront (wo UV-Strahlung Molekuele zerstoert) liegt bei $r_{PDR}$ ~ 10^4 $r_{s}$ * ($L_{UV}$ / L_Eddington)^{-1/2}, wobei $L_{UV}$ die UV-Leuchtkraft ist. Fuer Cygnus X-1 im harten Zustand ($L_{UV}$ ~ 0,01 $L_{Edd}$) ergibt sich $r_{PDR}$ ~ 10^5 $r_{s}$ ~ 6 x 10^9 km ~ 40 AU.
+Die SSZ-Vorhersage fuer die Molekularzone von Cygnus X-1: Die Photodissoziationsfront (wo UV-Strahlung Molekuele zerstoert) liegt bei r_PDR ~ 10^4 r_s * (L_UV / L_Eddington)^{-1/2}, wobei L_UV die UV-Leuchtkraft ist. Fuer Cygnus X-1 im harten Zustand (L_UV ~ 0,01 L_Edd) ergibt sich r_PDR ~ 10^5 r_s ~ 6 x 10^9 km ~ 40 AU.
 
-Die SSZ-Korrektur zur Photodissoziationsfront ist: r_PDR_SSZ = r_PDR_GR * (1 + Xi($r_{PDR}$))^{1/2}. Fuer $r_{PDR}$ ~ 10^5 $r_{s}$ ist Xi ~ 5 x 10^{-6}, und die Korrektur ist vernachlaessigbar. Die SSZ-Vorhersage unterscheidet sich von der ART-Vorhersage erst bei r < 100 $r_{s}$, wo die Molekuele durch die hohe Temperatur ohnehin zerstoert sind.
+Die SSZ-Korrektur zur Photodissoziationsfront ist: r_PDR_SSZ = r_PDR_GR * (1 + Xi(r_PDR))^{1/2}. Fuer r_PDR ~ 10^5 r_s ist Xi ~ 5 x 10^{-6}, und die Korrektur ist vernachlaessigbar. Die SSZ-Vorhersage unterscheidet sich von der ART-Vorhersage erst bei r < 100 r_s, wo die Molekuele durch die hohe Temperatur ohnehin zerstoert sind.
 
 ### SKA und die naechste Generation von Radioteleskopen
 
 Das Square Kilometre Array (SKA, geplant fuer die 2030er Jahre) wird die Empfindlichkeit und Aufloesung im Radiobereich um eine Groessenordnung verbessern. Fuer die SSZ-Validierung sind drei SKA-Faehigkeiten besonders relevant:
 
-**Pulsar-Suche nahe Sgr A*:** SKA wird die Empfindlichkeit haben, Millisekunden-Pulsare in Umlaufbahnen um Sgr A* zu detektieren. Ein solcher Pulsar wuerde das praeziseste Labor fuer Starkfeld-Gravitationsphysik liefern. Die SSZ-Vorhersage fuer die Timing-Residuen eines Pulsars bei r ~ 100 $r_{s}$ unterscheidet sich von der ART-Vorhersage um ~0,5%, was mit ~5 Jahren SKA-Timing messbar waere.
+**Pulsar-Suche nahe Sgr A*:** SKA wird die Empfindlichkeit haben, Millisekunden-Pulsare in Umlaufbahnen um Sgr A* zu detektieren. Ein solcher Pulsar wuerde das praeziseste Labor fuer Starkfeld-Gravitationsphysik liefern. Die SSZ-Vorhersage fuer die Timing-Residuen eines Pulsars bei r ~ 100 r_s unterscheidet sich von der ART-Vorhersage um ~0,5%, was mit ~5 Jahren SKA-Timing messbar waere.
 
-**HI-Absorption:** Die 21-cm-Linie des neutralen Wasserstoffs kann als Sonde fuer die Gasverteilung um kompakte Objekte verwendet werden. SKA wird HI-Absorption gegen Schwarze-Loch-Kandidaten mit einer Empfindlichkeit von ~0,1 mJy detektieren koennen, was die Kartierung der neutralen Gasverteilung bis zu Entfernungen von ~1000 $r_{s}$ ermoeglicht.
+**HI-Absorption:** Die 21-cm-Linie des neutralen Wasserstoffs kann als Sonde fuer die Gasverteilung um kompakte Objekte verwendet werden. SKA wird HI-Absorption gegen Schwarze-Loch-Kandidaten mit einer Empfindlichkeit von ~0,1 mJy detektieren koennen, was die Kartierung der neutralen Gasverteilung bis zu Entfernungen von ~1000 r_s ermoeglicht.
 
 **Masermessungen:** Wassermaser (22 GHz) in Akkretionsscheiben um supermassive Schwarze Loecher liefern praezise Geschwindigkeitsmessungen. SKA wird die Empfindlichkeit haben, schwache Maser in nahen Galaxien zu detektieren, was die Masse-Radius-Relation der zentralen Objekte mit ~1% Praezision bestimmen wuerde.
 
@@ -9851,23 +9881,23 @@ In SSZ ist die Chemie in der Molekularzone durch die Segmentdichte modifiziert: 
 
 k_PD_SSZ = k_PD_flat * D(r)^4
 
-Der Faktor D^4 entsteht, weil der UV-Fluss proportional zu D^4 ist (D^2 fuer die Frequenzverschiebung und D^2 fuer die Zeitdilatation). Fuer r ~ 100 $r_{s}$ (Xi ~ 0,005) ist D^4 ~ 0,98, und die Korrektur ist vernachlaessigbar. Fuer r ~ 3 $r_{s}$ (Xi ~ 0,17) ist D^4 ~ 0,53, was die Photodissoziationsrate halbiert und die Molekularzone naeher an das kompakte Objekt heranrueckt.
+Der Faktor D^4 entsteht, weil der UV-Fluss proportional zu D^4 ist (D^2 fuer die Frequenzverschiebung und D^2 fuer die Zeitdilatation). Fuer r ~ 100 r_s (Xi ~ 0,005) ist D^4 ~ 0,98, und die Korrektur ist vernachlaessigbar. Fuer r ~ 3 r_s (Xi ~ 0,17) ist D^4 ~ 0,53, was die Photodissoziationsrate halbiert und die Molekularzone naeher an das kompakte Objekt heranrueckt.
 
 ### Jet-Formation in SSZ
 
-Relativistische Jets sind kollimierte Materieausstroeme, die von Akkretionsscheiben um kompakte Objekte ausgehen. Die Jet-Geschwindigkeit betraegt typischerweise $v_{jet}$ ~ 0,3-0,99 c. Die Jet-Formation erfordert drei Zutaten: (1) Rotation (Drehimpuls der Akkretionsscheibe), (2) Magnetfelder (die die Materie kollimieren), (3) Energieextraktion (aus der Rotation des kompakten Objekts).
+Relativistische Jets sind kollimierte Materieausstroeme, die von Akkretionsscheiben um kompakte Objekte ausgehen. Die Jet-Geschwindigkeit betraegt typischerweise v_jet ~ 0,3-0,99 c. Die Jet-Formation erfordert drei Zutaten: (1) Rotation (Drehimpuls der Akkretionsscheibe), (2) Magnetfelder (die die Materie kollimieren), (3) Energieextraktion (aus der Rotation des kompakten Objekts).
 
-In SSZ ist die Energieextraktion durch den Penrose-Prozess modifiziert: Die maximale Effizienz betraegt eta\_SSZ = 1 - $D_{min}$ = 0,445 (vs. eta\_GR = 1 - 1/sqrt(2) = 0,293 fuer maximal rotierende Kerr-Schwarze-Loecher in der ART). Die hoehere Effizienz in SSZ koennte die extrem hohen Jet-Leistungen erklaeren, die bei einigen AGN beobachtet werden (z.B. M87 mit $P_{jet}$ ~ 10^{44} erg/s).
+In SSZ ist die Energieextraktion durch den Penrose-Prozess modifiziert: Die maximale Effizienz betraegt eta_SSZ = 1 - D_min = 0,445 (vs. eta_GR = 1 - 1/sqrt(2) = 0,293 fuer maximal rotierende Kerr-Schwarze-Loecher in der ART). Die hoehere Effizienz in SSZ koennte die extrem hohen Jet-Leistungen erklaeren, die bei einigen AGN beobachtet werden (z.B. M87 mit P_jet ~ 10^{44} erg/s).
 
 Die Jet-Kollimation wird durch das Magnetfeld bestimmt, das durch die Akkretionsscheibe verstaerkt wird. In SSZ ist die magnetische Feldstaerke nahe der natuerlichen Grenze um den Faktor 1/D_min^2 ~ 3,24 gegenueber dem Unendlichen verstaerkt. Dies fuehrt zu einer staerkeren Kollimation und erklaert die beobachtete hohe Kollimation von Jets (Oeffnungswinkel < 1 Grad).
 
 ### Cygnus X-1: Ein Testfall fuer SSZ
 
-Cygnus X-1 ist ein Roentgen-Doppelsternsystem mit einem Schwarze-Loch-Kandidaten (M = 21,2 $M_{Sonne}$) und einem blauen Ueberriesen (HDE 226868). Es ist eines der am besten untersuchten Systeme fuer Tests der Starkfeldgravitation.
+Cygnus X-1 ist ein Roentgen-Doppelsternsystem mit einem Schwarze-Loch-Kandidaten (M = 21,2 M_Sonne) und einem blauen Ueberriesen (HDE 226868). Es ist eines der am besten untersuchten Systeme fuer Tests der Starkfeldgravitation.
 
 Die SSZ-spezifischen Vorhersagen fuer Cygnus X-1:
 
-- **ISCO-Radius:** r_ISCO_SSZ = 3,5 $r_{s}$ = 219 km (vs. r_ISCO_GR = 3 $r_{s}$ = 188 km fuer a=0)
+- **ISCO-Radius:** r_ISCO_SSZ = 3,5 r_s = 219 km (vs. r_ISCO_GR = 3 r_s = 188 km fuer a=0)
 - **Innere Scheibentemperatur:** T_in_SSZ = 1,2 keV (vs. T_in_GR = 1,4 keV)
 - **Eisenlinien-Profil:** Breitere rote Fluegel in SSZ (wegen des groesseren ISCO)
 - **Jet-Leistung:** P_jet_SSZ ~ 1,5 x P_jet_GR (wegen der hoeheren Penrose-Effizienz)
@@ -9887,7 +9917,7 @@ Dieses Kapitel hat die astrophysikalische Umgebung kompakter Objekte in SSZ anal
 1. **Molekularzone:** Die Chemie nahe kompakten Objekten ist durch die SSZ-modifizierte UV-Strahlung beeinflusst.
 2. **Photodissoziation:** Die Photodissoziationsrate ist in SSZ um den Faktor D^2 reduziert.
 3. **Jet-Formation:** Hoehere Penrose-Effizienz (44,5% vs. 29,3%) erklaert extreme Jet-Leuchtkraefte.
-4. **Cygnus X-1:** ISCO bei 3,5 $r_{s}$, innere Scheibentemperatur 1,2 keV, breitere Eisenlinien.
+4. **Cygnus X-1:** ISCO bei 3,5 r_s, innere Scheibentemperatur 1,2 keV, breitere Eisenlinien.
 5. **Jet-Kollimation:** Staerkere Magnetfeldverstaerkung (Faktor 3,24) nahe der natuerlichen Grenze.
 
 Die astrophysikalischen Implikationen von SSZ sind vielfaeltig und mit zukuenftigen Instrumenten (Athena, XRISM, ngEHT, SKA) testbar.
@@ -9896,18 +9926,18 @@ Die astrophysikalischen Implikationen von SSZ sind vielfaeltig und mit zukuenfti
 
 Die beobachteten Jet-Leuchtkraefte von AGN (Active Galactic Nuclei) reichen von ~10^{42} erg/s (schwache Jets) bis ~10^{47} erg/s (die staerksten Jets). Die Blandford-Znajek-Leuchtkraft ist:
 
-$L_{BZ}$ = (kappa/4 pi c) * Phi\_B^2 * $\Omega_{\text{H}}$^2 * f($\Omega_{\text{H}}$)
+L_BZ = (kappa/4 pi c) * Phi_B^2 * Omega_H^2 * f(Omega_H)
 
-wobei Phi\_B der magnetische Fluss, $\Omega_{\text{H}}$ die Winkelgeschwindigkeit des Horizonts (bzw. der natuerlichen Grenze in SSZ) und f eine dimensionslose Funktion ist.
+wobei Phi_B der magnetische Fluss, Omega_H die Winkelgeschwindigkeit des Horizonts (bzw. der natuerlichen Grenze in SSZ) und f eine dimensionslose Funktion ist.
 
-In SSZ ist $\Omega_{\text{H}}$ um den Faktor $D_{min}$ modifiziert, was zu einer hoeheren Effizienz fuehrt. Die beobachteten extremen Jet-Leuchtkraefte (z.B. 3C 273 mit $L_{jet}$ ~ 10^{46} erg/s) erfordern in der ART nahezu maximalen Spin (a/M > 0,95), waehrend SSZ diese Leuchtkraefte bereits bei moderatem Spin (a/M ~ 0,7) erklaert.
+In SSZ ist Omega_H um den Faktor D_min modifiziert, was zu einer hoeheren Effizienz fuehrt. Die beobachteten extremen Jet-Leuchtkraefte (z.B. 3C 273 mit L_jet ~ 10^{46} erg/s) erfordern in der ART nahezu maximalen Spin (a/M > 0,95), waehrend SSZ diese Leuchtkraefte bereits bei moderatem Spin (a/M ~ 0,7) erklaert.
 
+---
 
-\newpage
+# Kapitel 25: Irreversibles Kohärenzkollaps-Gesetz — g2 nach g1
 
-\part{Regime-Übergänge}
-
-# Irreversibles Kohärenzkollaps-Gesetz — g2 nach g1
+**Teil VII — Regimeübergänge**
+**Status:** ERWEITERTE FASSUNG v2
 
 
 ![Abb](figures/ch25_collapse/2_piecewise_vs_smooth_fit.png)
@@ -9961,7 +9991,7 @@ Der Übergang vom Starkfeldregime g2 zum Schwachfeld g1 ist nicht einfach die Um
 
 SSZ postuliert zwei fundamentale Regime:
 
-**g1 (Schwachfeld):** Ξ = $r_{s}$/(2r), gültig für r/r_s > 10. Die Segmentdichte ist proportional zum Newtonschen Potential. Alle Schwachfeldtests (GPS, Shapiro, Pound-Rebka) liegen in diesem Regime.
+**g1 (Schwachfeld):** Ξ = r_s/(2r), gültig für r/r_s > 10. Die Segmentdichte ist proportional zum Newtonschen Potential. Alle Schwachfeldtests (GPS, Shapiro, Pound-Rebka) liegen in diesem Regime.
 
 **g2 (Starkfeld):** Ξ = 1 − exp(−φr/r_s), gültig für r/r_s < 1,8. Die Segmentdichte sättigt bei Ξ_max = 0,802. Alle Starkfeldvorhersagen (endliche Rotverschiebung, keine Singularität) kommen aus diesem Regime.
 
@@ -9971,17 +10001,17 @@ Der Übergang zwischen g1 und g2 ist nicht nur eine mathematische Konvenienz —
 
 ### Formale Definition des Regimeübergangs
 
-Der Regimeübergang wird durch den Übergangspunkt $r_{t}$ definiert, an dem die g1- und g2-Formeln denselben Wert liefern:
+Der Regimeübergang wird durch den Übergangspunkt r_t definiert, an dem die g1- und g2-Formeln denselben Wert liefern:
 
-Ξ_g1($r_{t}$) = Ξ_g2($r_{t}$) = $r_{s}$/(2$r_{t}$) = 1 − exp(−φ$r_{t}$/r_s)
+Ξ_g1(r_t) = Ξ_g2(r_t) = r_s/(2r_t) = 1 − exp(−φr_t/r_s)
 
-Dies ergibt r_t/r_s $\approx$ 2,0 (numerisch). An diesem Punkt ist Ξ $\approx$ 0,25 und D $\approx$ 0,80 — die Zeitdilatation beträgt bereits 20%, was experimentell signifikant ist.
+Dies ergibt r_t/r_s ≈ 2,0 (numerisch). An diesem Punkt ist Ξ ≈ 0,25 und D ≈ 0,80 — die Zeitdilatation beträgt bereits 20%, was experimentell signifikant ist.
 
 ## 25.1 Kohärenz im g2-Regime
 
 ### Pädagogischer Überblick
 
-Wenn ein massereicher Stern seinen Kernbrennstoff erschöpft, kollabiert sein Kern unter der Gravitation und geht vom Schwachfeldregime (wo Ξ = $r_{s}$/(2r) klein ist) zum Starkfeldregime (wo Ξ = 1 − exp(−φ$r_{s}$/r) sich seinem Maximalwert nähert) über. In SSZ ist dieser Übergang irreversibel: Sobald die Segmentdichte die Mischschwelle überschreitet, kann das System nicht ohne externen Energieeintrag, der die gravitative Bindungsenergie übersteigt, in den Schwachfeldzustand zurückkehren.
+Wenn ein massereicher Stern seinen Kernbrennstoff erschöpft, kollabiert sein Kern unter der Gravitation und geht vom Schwachfeldregime (wo Ξ = r_s/(2r) klein ist) zum Starkfeldregime (wo Ξ = 1 − exp(−φr_s/r) sich seinem Maximalwert nähert) über. In SSZ ist dieser Übergang irreversibel: Sobald die Segmentdichte die Mischschwelle überschreitet, kann das System nicht ohne externen Energieeintrag, der die gravitative Bindungsenergie übersteigt, in den Schwachfeldzustand zurückkehren.
 
 Intuitiv bedeutet dies: Gravitativer Kollaps ist eine Einbahnstraße. Sobald ein Stern die Mischzone (r/r_s zwischen 1,8 und 2,2) passiert, verriegelt sich die Segmentstruktur in der Starkfeldkonfiguration.
 
@@ -9989,17 +10019,17 @@ Intuitiv bedeutet dies: Gravitativer Kollaps ist eine Einbahnstraße. Sobald ein
 
 Im Starkfeldregime g2 sind Segmente dicht gepackt und zeigen langreichweitige Korrelationen. Die Kohärenzlänge:
 
-$$\xi_{\text{coh}}(r) \propto \frac{1}{D(r)} = 1 + \Xi(r)$$
+\xi_{\text{coh}}(r) \propto \frac{1}{D(r)} = 1 + \Xi(r)
 
 Bei großem r (Schwachfeld): ξ_coh → 1. Segmente sind im Wesentlichen unkorreliert.
 
-Bei r = r_s (Horizont): ξ_coh → 1 + 0,802 $\approx$ 1,80. Segmente sind stark über Distanzen korreliert, die fast das Doppelte der Flachraum-Segmentlänge betragen.
+Bei r = r_s (Horizont): ξ_coh → 1 + 0,802 ≈ 1,80. Segmente sind stark über Distanzen korreliert, die fast das Doppelte der Flachraum-Segmentlänge betragen.
 
 ### Kohärenzenergie
 
 Die kohärente Ausrichtung von Segmenten repräsentiert gespeicherte Energie — analog zur elastischen Energie einer komprimierten Feder:
 
-$$E_{\text{coh}} \propto \int_{r_s}^{r^*} [\xi_{\text{coh}}(r) - 1]^2 \cdot 4\pi r^2 \, dr$$
+E_{\text{coh}} \propto \int_{r_s}^{r^*} [\xi_{\text{coh}}(r) - 1]^2 \cdot 4\pi r^2 \, dr
 
 Diese Energie wird während des g2→g1-Übergangs freigesetzt.
 
@@ -10013,7 +10043,7 @@ Diese Energie wird während des g2→g1-Übergangs freigesetzt.
 
 ### Die Mischzone
 
-Der Kollaps tritt an der Mischzone (r* $\approx$ 1,6 r_s bis 2,2 r_s) auf. Die Mischzone ist konstruktionsbedingt glatt — Ξ, dΞ/dr und d²Ξ/dr² sind alle stetig. Aber die **Dynamik** des Übergangs ist nicht symmetrisch: Vorwärts- (Einfall) und Rückwärtspfade (Expansion) durch die Mischzone erzeugen verschiedene Endzustände.
+Der Kollaps tritt an der Mischzone (r* ≈ 1,6 r_s bis 2,2 r_s) auf. Die Mischzone ist konstruktionsbedingt glatt — Ξ, dΞ/dr und d²Ξ/dr² sind alle stetig. Aber die **Dynamik** des Übergangs ist nicht symmetrisch: Vorwärts- (Einfall) und Rückwärtspfade (Expansion) durch die Mischzone erzeugen verschiedene Endzustände.
 
 ## 25.3 Irreversibilitätsbeweis
 
@@ -10021,17 +10051,17 @@ Der Kollaps tritt an der Mischzone (r* $\approx$ 1,6 r_s bis 2,2 r_s) auf. Die M
 
 Definiere die Segmententropie über die Korrelationsverteilung:
 
-$$S_{\text{seg}} = -\sum_i p_i \ln p_i$$
+S_{\text{seg}} = -\sum_i p_i \ln p_i
 
-**Theorem:** Der g2→g1-Übergang erfüllt Δ$S_{seg}$ > 0.
+**Theorem:** Der g2→g1-Übergang erfüllt ΔS_seg > 0.
 
 **Beweis:** Der Mischzonen-Übergang wird durch eine stochastische Matrix T beschrieben, die die g2-Korrelationsverteilung auf die g1-Verteilung abbildet. T ist eine gültige stochastische Matrix, aber **nicht doppelt-stochastisch** — ihre Spalten summieren sich nicht zu 1.
 
 Nach der **Datenverarbeitungsungleichung** (Cover & Thomas): Wenn ein Kanal T nicht doppelt-stochastisch ist, erhöht die Passage strikt die Entropie der Eingangsverteilung:
 
-$$S_{\text{seg}}^{(\text{g1,final})} > S_{\text{seg}}^{(\text{g2,initial})}$$
+S_{\text{seg}}^{(\text{g1,final})} > S_{\text{seg}}^{(\text{g2,initial})}
 
-Numerische Auswertung bestätigt Δ$S_{seg}$ > 0 für alle getesteten Übergänge. QED.
+Numerische Auswertung bestätigt ΔS_seg > 0 für alle getesteten Übergänge. QED.
 
 ### Analogie zur Quantendekohärenz
 
@@ -10059,27 +10089,27 @@ Dies legt nahe, dass gravitative Prozesse einen intrinsischen **Zeitpfeil** habe
 
 Die Bekenstein-Hawking-Entropie eines Schwarzen Lochs ist:
 
-$$S_{\text{BH}} = \frac{A}{4 l_P^2} = \frac{\pi r_s^2}{l_P^2}$$
+S_{\text{BH}} = \frac{A}{4 l_P^2} = \frac{\pi r_s^2}{l_P^2}
 
-Dies ist enorm — für ein Schwarzes Loch mit Sonnenmasse $S_{BH}$ ~ 10⁷⁷. Aber was sind die Mikrozustände?
+Dies ist enorm — für ein Schwarzes Loch mit Sonnenmasse S_BH ~ 10⁷⁷. Aber was sind die Mikrozustände?
 
 ### SSZ-Segment-Mikrozustände
 
-In SSZ hat die natürliche Grenze bei $r_{s}$ eine physische Oberfläche mit endlichem D = 0,555. Diese Oberfläche unterstützt einen diskreten Satz von Segmentkonfigurationen. Die Anzahl der Mikrozustände skaliert als:
+In SSZ hat die natürliche Grenze bei r_s eine physische Oberfläche mit endlichem D = 0,555. Diese Oberfläche unterstützt einen diskreten Satz von Segmentkonfigurationen. Die Anzahl der Mikrozustände skaliert als:
 
-$$\Omega \sim \exp\left(\frac{A}{4 l_{\text{seg}}^2}\right)$$
+\Omega \sim \exp\left(\frac{A}{4 l_{\text{seg}}^2}\right)
 
-Wenn $l_{seg}$ ~ $l_{P}$ (die Planck-Länge), dann $S_{seg}$ ~ A/(4$l_{P}$²) — Wiedergewinnung der Bekenstein-Hawking-Formel als **Zählergebnis** ohne Stringtheorie oder Schleifen-Quantengravitation.
+Wenn l_seg ~ l_P (die Planck-Länge), dann S_seg ~ A/(4l_P²) — Wiedergewinnung der Bekenstein-Hawking-Formel als **Zählergebnis** ohne Stringtheorie oder Schleifen-Quantengravitation.
 
 ## 25.6 Validierung und Konsistenz
 
 **Testdateien:** `test_regime_transition`, `test_entropy`, `test_coherence`
 
-**Was die Tests beweisen:** Δ$S_{seg}$ > 0 für alle getesteten Übergänge; Mischzonen-Übergangsmatrix-Eigenwerte < 1; Vorwärts- und Rückwärtsübergänge sind asymmetrisch; Kohärenzlänge nimmt monoton von g2 nach g1 ab.
+**Was die Tests beweisen:** ΔS_seg > 0 für alle getesteten Übergänge; Mischzonen-Übergangsmatrix-Eigenwerte < 1; Vorwärts- und Rückwärtsübergänge sind asymmetrisch; Kohärenzlänge nimmt monoton von g2 nach g1 ab.
 
 **Was die Tests NICHT beweisen:** Den mikroskopischen Mechanismus des Kohärenzverlusts. Die Schwarze-Loch-Entropie-Zählung — erfordert explizite Aufzählung von Segment-Mikrozuständen.
 
-**Reproduktion:** `E:/clone\ssz-metric-pure\`
+**Reproduktion:** `E:\clone\ssz-metric-pure\`
 
 ---
 
@@ -10088,7 +10118,7 @@ Wenn $l_{seg}$ ~ $l_{P}$ (die Planck-Länge), dann $S_{seg}$ ~ A/(4$l_{P}$²) �
 | # | Formel | Bereich |
 |---|---------|--------|
 | 1 | ΔS_seg > 0 (g2→g1) | Irreversibilitätsgesetz |
-| 2 | ξ_coh $\propto$ 1/D(r) = 1+Ξ | Kohärenzlänge |
+| 2 | ξ_coh ∝ 1/D(r) = 1+Ξ | Kohärenzlänge |
 | 3 | S_BH ~ A/(4l_seg²) | Segment-Entropie-Zählung |
 
 ---
@@ -10099,13 +10129,13 @@ Der g1-nach-g2-Übergang tritt während des gravitativen Kollapses auf und erzeu
 
 **Neutrino-Burst:** Die während des Übergangs freigesetzte gravitative Bindungsenergie wird primär als Neutrinos abgestrahlt (wie bei SN 1987A beobachtet). Die SSZ-Vorhersage für die gesamte Neutrinoenergie ist ungefähr (0,1 − η_SSZ) Mc². Für einen 1,4-Sonnenmasse-Neutronenstern aus einem 20-Sonnenmasse-Vorläufer beträgt die vorhergesagte Neutrinoenergie ~3 × 10⁴⁶ Joule, konsistent mit der SN-1987A-Beobachtung.
 
-**Metrik-Perturbationensignal:** Der Kollaps erzeugt einen Burst von Metrik-Perturbationen mit charakteristischer Frequenz f $\approx$ c/(2πr_s) × D_min, was für einen 1,4-Sonnenmasse-Überrest ~3 kHz ergibt. Diese Frequenz liegt im observational-Band, aber am oberen Rand der Empfindlichkeitskurve — herausfordernd für aktuelle Detektoren, aber machbar für Detektoren der dritten Generation.
+**Metrik-Perturbationensignal:** Der Kollaps erzeugt einen Burst von Metrik-Perturbationen mit charakteristischer Frequenz f ≈ c/(2πr_s) × D_min, was für einen 1,4-Sonnenmasse-Überrest ~3 kHz ergibt. Diese Frequenz liegt im GW-Detektor-Band, aber am oberen Rand der Empfindlichkeitskurve — herausfordernd für aktuelle Detektoren, aber machbar für Detektoren der dritten Generation.
 
-**Elektromagnetischer Transient:** Die Photosphäre des kollabierenden Sterns emittiert einen kurzen Strahlungsblitz beim Durchgang durch die Mischzone. Die Blitzdauer beträgt ~$r_{s}$/c × 1/D_min = 4,5 × 10⁻⁵ Sekunden für einen 1,4-Sonnenmasse-Überrest, und die Spitzenleuchtkraft ist ungefähr die Eddington-Leuchtkraft. Dieser elektromagnetische Transient würde als sehr kurzer Gammastrahlen-Puls vor der Hauptsupernova-Emission erscheinen.
+**Elektromagnetischer Transient:** Die Photosphäre des kollabierenden Sterns emittiert einen kurzen Strahlungsblitz beim Durchgang durch die Mischzone. Die Blitzdauer beträgt ~r_s/c × 1/D_min = 4,5 × 10⁻⁵ Sekunden für einen 1,4-Sonnenmasse-Überrest, und die Spitzenleuchtkraft ist ungefähr die Eddington-Leuchtkraft. Dieser elektromagnetische Transient würde als sehr kurzer Gammastrahlen-Puls vor der Hauptsupernova-Emission erscheinen.
 
 ### Entropie und der Zeitpfeil in SSZ-Kollaps
 
-Die Irreversibilität des g1-nach-g2-Übergangs hat eine thermodynamische Interpretation. Während ein gravitierendes System vom Schwachfeld- zum Starkfeldregime kollabiert, nimmt seine gravitative Entropie zu. Die Bekenstein-Hawking-Entropie des endgültigen kompakten Objekts (S = A/(4 $l_{P}$²)) ist enorm größer als die Entropie der anfänglichen diffusen Konfiguration.
+Die Irreversibilität des g1-nach-g2-Übergangs hat eine thermodynamische Interpretation. Während ein gravitierendes System vom Schwachfeld- zum Starkfeldregime kollabiert, nimmt seine gravitative Entropie zu. Die Bekenstein-Hawking-Entropie des endgültigen kompakten Objekts (S = A/(4 l_P²)) ist enorm größer als die Entropie der anfänglichen diffusen Konfiguration.
 
 Die Entropiezunahme ist eine Konsequenz der Zunahme der Mikrozustände. Im Schwachfeld hat das Segmentgitter eine relativ niedrige Dichte (wenige Segmente pro Volumeneinheit). Im Starkfeld hat das Segmentgitter eine hohe Dichte, und die Anzahl möglicher Konfigurationen ist exponentiell größer. Der Übergang von niedriger zu hoher Gitterdichte ist das gravitative Analogon des Übergangs von Gas zu Flüssigkeit.
 
@@ -10117,11 +10147,11 @@ Die Verbindung zwischen gravitativem Kollaps und dem thermodynamischen Zeitpfeil
 
 Der g2-g1-Regimeuebergang hat Analogien zu mehreren Phasenuebergaengen in der kondensierten Materie:
 
-**Supraleiter-Normalleiter-Uebergang:** Beim Uebergang von der supraleitenden in die normalleitende Phase geht die makroskopische Kohaerenz (Cooper-Paare) verloren. Die Kohaerenzlaenge $\xi_{\text{GL}}$ divergiert am kritischen Punkt und faellt im Normalzustand auf die Fermi-Wellenlaenge. Analog: Im g2-Regime ist die Segmentkohaerenz makroskopisch; im g1-Regime ist sie mikroskopisch.
+**Supraleiter-Normalleiter-Uebergang:** Beim Uebergang von der supraleitenden in die normalleitende Phase geht die makroskopische Kohaerenz (Cooper-Paare) verloren. Die Kohaerenzlaenge xi_GL divergiert am kritischen Punkt und faellt im Normalzustand auf die Fermi-Wellenlaenge. Analog: Im g2-Regime ist die Segmentkohaerenz makroskopisch; im g1-Regime ist sie mikroskopisch.
 
-**Bose-Einstein-Kondensation:** Unterhalb der kritischen Temperatur $T_{c}$ kondensiert ein ideales Bosonengas in den Grundzustand. Die Kohaerenzlaenge divergiert bei T < $T_{c}$. Der Uebergang bei $T_{c}$ ist analog zum g2-g1-Uebergang bei $r_{t}$.
+**Bose-Einstein-Kondensation:** Unterhalb der kritischen Temperatur T_c kondensiert ein ideales Bosonengas in den Grundzustand. Die Kohaerenzlaenge divergiert bei T < T_c. Der Uebergang bei T_c ist analog zum g2-g1-Uebergang bei r_t.
 
-**Spontane Symmetriebrechung:** In der Teilchenphysik bricht das Higgs-Feld die elektroschwache Symmetrie unterhalb der kritischen Temperatur $T_{EW}$ ~ 10^15 K. Der Uebergang ist irreversibel und erzeugt Entropie. Analog: Der g2-g1-Uebergang bricht die Segmentordnung und erzeugt Entropie.
+**Spontane Symmetriebrechung:** In der Teilchenphysik bricht das Higgs-Feld die elektroschwache Symmetrie unterhalb der kritischen Temperatur T_EW ~ 10^15 K. Der Uebergang ist irreversibel und erzeugt Entropie. Analog: Der g2-g1-Uebergang bricht die Segmentordnung und erzeugt Entropie.
 
 Diese Analogien sind mehr als nur qualitativ — sie legen nahe, dass der Regimeuebergang ein universelles Phaenomen ist, das in verschiedenen physikalischen Kontexten auftritt und durch dieselbe mathematische Struktur (Landau-Ginzburg-Theorie) beschrieben werden kann.
 
@@ -10131,9 +10161,9 @@ Die Landau-Ginzburg-Freie-Energie fuer den Regimeuebergang ist:
 
 F[psi] = integral (a*|psi|^2 + b*|psi|^4 + kappa*|grad(psi)|^2) d^3x
 
-wobei psi der Kohaerenz-Ordnungsparameter, a = a_0*(r/r_t - 1) der temperaturanaloge Kontrollparameter und b, kappa positive Konstanten sind. Fuer r < $r_{t}$ (g2-Regime) ist a < 0, und der Grundzustand hat |psi| > 0 (geordnet). Fuer r > $r_{t}$ (g1-Regime) ist a > 0, und der Grundzustand hat |psi| = 0 (ungeordnet).
+wobei psi der Kohaerenz-Ordnungsparameter, a = a_0*(r/r_t - 1) der temperaturanaloge Kontrollparameter und b, kappa positive Konstanten sind. Fuer r < r_t (g2-Regime) ist a < 0, und der Grundzustand hat |psi| > 0 (geordnet). Fuer r > r_t (g1-Regime) ist a > 0, und der Grundzustand hat |psi| = 0 (ungeordnet).
 
-Die Uebergangsbreite $\Delta_{\text{r}}$ ~ $r_{t}$ * sqrt(kappa/(a_0*$r_{t}$)) bestimmt die Dicke der Blend-Zone. Fuer die SSZ-Parameter: $\Delta_{\text{r}}$ ~ 0.2 $r_{s}$, konsistent mit der Hermite-C2-Blend-Zone von 1.8 < r/r_s < 2.2.
+Die Uebergangsbreite Delta_r ~ r_t * sqrt(kappa/(a_0*r_t)) bestimmt die Dicke der Blend-Zone. Fuer die SSZ-Parameter: Delta_r ~ 0.2 r_s, konsistent mit der Hermite-C2-Blend-Zone von 1.8 < r/r_s < 2.2.
 
 ### Kapitelzusammenfassung und Brücke
 
@@ -10157,25 +10187,25 @@ Der Kohärenzkollaps beim Regimeübergang ist potentiell testbar durch:
 
 Der irreversible Kohärenzkollaps hat eine thermodynamische Interpretation: Er entspricht einer Entropiezunahme beim Übergang vom geordneten g2-Zustand (hohe Segmentdichte, hohe Kohärenz) zum ungeordneten g1-Zustand (niedrige Segmentdichte, niedrige Kohärenz). Die Entropieproduktion ist:
 
-ΔS = $k_{B}$ × ln($N_{g1}$/N_g2)
+ΔS = k_B × ln(N_g1/N_g2)
 
-wobei $N_{g1}$ und $N_{g2}$ die Anzahl der zugänglichen Mikrozustände in den jeweiligen Regimen sind. Diese Formel verbindet den Kohärenzkollaps mit der Bekenstein-Hawking-Entropie und liefert eine mikroskopische Erklärung für die Flächenentropie Schwarzer Löcher.
+wobei N_g1 und N_g2 die Anzahl der zugänglichen Mikrozustände in den jeweiligen Regimen sind. Diese Formel verbindet den Kohärenzkollaps mit der Bekenstein-Hawking-Entropie und liefert eine mikroskopische Erklärung für die Flächenentropie Schwarzer Löcher.
 
 ### Mathematische Struktur des Kohärenzkollaps
 
 Der Kohärenzkollaps beim g2→g1-Übergang lässt sich als Phasenübergang beschreiben. Die Ordnungsparameter sind:
 
-**Kohärenzlänge λ_c:** Im g2-Regime ist λ_c ~ $r_{s}$ (makroskopische Kohärenz). Im g1-Regime ist λ_c ~ $l_{P}$ (Planck-Länge, mikroskopisch). Der Übergang ist abrupt — es gibt keine stabile Zwischenkonfiguration.
+**Kohärenzlänge λ_c:** Im g2-Regime ist λ_c ~ r_s (makroskopische Kohärenz). Im g1-Regime ist λ_c ~ l_P (Planck-Länge, mikroskopisch). Der Übergang ist abrupt — es gibt keine stabile Zwischenkonfiguration.
 
-**Segmentordnung σ:** Im g2-Regime sind die Segmente hochgeordnet (σ $\approx$ 1). Im g1-Regime sind sie ungeordnet (σ $\approx$ 0). Der Übergang von σ = 1 zu σ = 0 ist irreversibel — ein Segment, das seine Kohärenz verliert, kann sie nicht spontan zurückgewinnen.
+**Segmentordnung σ:** Im g2-Regime sind die Segmente hochgeordnet (σ ≈ 1). Im g1-Regime sind sie ungeordnet (σ ≈ 0). Der Übergang von σ = 1 zu σ = 0 ist irreversibel — ein Segment, das seine Kohärenz verliert, kann sie nicht spontan zurückgewinnen.
 
 **Entropiedichte s(r):** Die Entropiedichte springt am Übergangspunkt:
 
-$s_{g2}$($r_{t}$) = $k_{B}$/l_P² × Ξ($r_{t}$) → $s_{g1}$($r_{t}$) = $k_{B}$/l_P² × Ξ($r_{t}$) + Δs
+s_g2(r_t) = k_B/l_P² × Ξ(r_t) → s_g1(r_t) = k_B/l_P² × Ξ(r_t) + Δs
 
 wobei Δs die Entropieproduktion beim Kohärenzkollaps ist. Die Gesamtentropieänderung über die Grenzfläche ist:
 
-Δ$S_{total}$ = 4π $r_{t}$² × Δs > 0
+ΔS_total = 4π r_t² × Δs > 0
 
 Dies erfüllt den zweiten Hauptsatz der Thermodynamik: Der Kohärenzkollaps ist ein entropieerzeugender Prozess.
 
@@ -10186,19 +10216,19 @@ Der SSZ-Kohärenzkollaps ist formal analog zur Quantendekoharenz in offenen Quan
 - **Quantendekoharenz:** Quantensystem wechselwirkt mit thermischem Bad. Kohärenz geht in Verschränkung mit der Umgebung über.
 - **SSZ-Kohärenzkollaps:** g2-Segmente wechselwirken mit dem g1-Hintergrund. Kohärenz geht in thermische Unordnung über.
 
-Die Dekoharenzzeit in der Quantenmechanik ist τ_D ~ ħ/(k_B T). Die analoge Kohärenzkollaps-Zeit in SSZ ist τ_C ~ r_s/c × (1/Ξ(r_t)) $\approx$ 8 r_s/c für r_t = 2 r_s. Für ein 10 M$\odot$ Schwarzes Loch: τ_C $\approx$ 0,24 ms — extrem kurz auf astrophysikalischen Zeitskalen.
+Die Dekoharenzzeit in der Quantenmechanik ist τ_D ~ ħ/(k_B T). Die analoge Kohärenzkollaps-Zeit in SSZ ist τ_C ~ r_s/c × (1/Ξ(r_t)) ≈ 8 r_s/c für r_t = 2 r_s. Für ein 10 M☉ Schwarzes Loch: τ_C ≈ 0,24 ms — extrem kurz auf astrophysikalischen Zeitskalen.
 
 ### Nichtgleichgewichts-Thermodynamik des Übergangs
 
 Der Regimeübergang ist ein Nichtgleichgewichtsprozess. Die Entropieproduktionsrate ist:
 
-dΣ/dt = ($T_{g2}$ − $T_{g1}$) × $J_{q}$ / ($T_{g2}$ × $T_{g1}$)
+dΣ/dt = (T_g2 − T_g1) × J_q / (T_g2 × T_g1)
 
-wobei $J_{q}$ der Wärmestrom über die Übergangsfläche ist. Im stationären Zustand (Akkretion) ist $J_{q}$ = $L_{acc}$/(4π $r_{t}$²), und die Entropieproduktion ist proportional zur Akkretionsleuchtkraft. Dies liefert eine direkte Verbindung zwischen dem Regimeübergang und der beobachteten Leuchtkraft des akkretierenden Objekts.
+wobei J_q der Wärmestrom über die Übergangsfläche ist. Im stationären Zustand (Akkretion) ist J_q = L_acc/(4π r_t²), und die Entropieproduktion ist proportional zur Akkretionsleuchtkraft. Dies liefert eine direkte Verbindung zwischen dem Regimeübergang und der beobachteten Leuchtkraft des akkretierenden Objekts.
 
 ### Thermodynamische Interpretation der Irreversibilitaet
 
-Der Uebergang von g1 (Schwachfeld) nach g2 (Starkfeld) ist thermodynamisch irreversibel in dem Sinne, dass die Entropie des Systems monoton zunimmt. Die Entropie der natuerlichen Grenze ist S = A/(4 $l_{P}$^2), wobei A die Flaeche der natuerlichen Grenze und $l_{P}$ die Planck-Laenge ist. Da die Flaeche der natuerlichen Grenze bei Akkretion nur wachsen kann (Flaechensatz), nimmt die Entropie monoton zu.
+Der Uebergang von g1 (Schwachfeld) nach g2 (Starkfeld) ist thermodynamisch irreversibel in dem Sinne, dass die Entropie des Systems monoton zunimmt. Die Entropie der natuerlichen Grenze ist S = A/(4 l_P^2), wobei A die Flaeche der natuerlichen Grenze und l_P die Planck-Laenge ist. Da die Flaeche der natuerlichen Grenze bei Akkretion nur wachsen kann (Flaechensatz), nimmt die Entropie monoton zu.
 
 Die physikalische Interpretation: Wenn Materie von g1 nach g2 uebergeht (d.h. von der Schwachfeld- in die Starkfeldregion faellt), wird die Information ueber den mikroskopischen Zustand der Materie in die Oberflaechenfreiheitsgrade der natuerlichen Grenze kodiert. Dieser Prozess ist irreversibel, weil die Dekodierung der Information eine Energiemenge erfordern wuerde, die die gesamte Masse des kompakten Objekts uebersteigt.
 
@@ -10210,25 +10240,23 @@ Der Koharenzkollaps von g1 nach g2 hat spezifische beobachtbare Signaturen:
 
 **Quasinormal-Moden:** Nach einer Stoerung (z.B. durch einfallende Materie) schwingt die natuerliche Grenze mit charakteristischen Frequenzen, den Quasinormal-Moden (QNMs). In der ART sind die QNMs durch die Kerr-Metrik bestimmt. In SSZ sind sie durch die SSZ-Metrik bestimmt, was zu einer Frequenzverschiebung von ~3% relativ zur ART fuehrt. Diese Verschiebung ist mit Metrik-Perturbationendetektoren der dritten Generation (Einstein-Teleskop, Cosmic Explorer) messbar.
 
-**Metrik-Perturbationen-Echos:** Wenn die natuerliche Grenze teilweise reflektierend ist (was in SSZ der Fall ist, weil D = 0,555 $\neq$ 0), sollten Metrik-Perturbationen, die auf die Grenze treffen, teilweise reflektiert werden. Die reflektierten Wellen erzeugen Echos mit einer Zeitverzoegerung von $\Delta_{\text{t}}$ ~ $r_{s}$ * ln(1/D_min) / c ~ 0,6 $r_{s}$/c nach dem primaeren Signal. Die Suche nach solchen Echos in observational-Daten ist ein aktives Forschungsgebiet.
-
 **Tidal Love Numbers:** Die Gezeitendeformierbarkeit eines kompakten Objekts wird durch die Tidal Love Numbers quantifiziert. In der ART sind die Love Numbers eines Schwarzen Lochs exakt null (ein Schwarzes Loch laesst sich nicht deformieren). In SSZ sind die Love Numbers endlich (weil die natuerliche Grenze eine endliche Steifigkeit hat). Die Messung nicht-verschwindender Love Numbers in Metrik-Perturbationensignalen von Schwarzen-Loch-Verschmelzungen waere ein starker Hinweis auf SSZ.
 
 ### Landau-Ginzburg-Beschreibung des Phasenuebergangs
 
 Der g1-nach-g2-Uebergang kann formal als Phasenuebergang beschrieben werden, analog zur Landau-Ginzburg-Theorie der Supraleitung. Der Ordnungsparameter ist die Segmentdichte Xi, die von Xi ~ 0 (g1, Schwachfeld) auf Xi ~ 0,802 (g2, Starkfeld) ansteigt.
 
-Die freie Energie als Funktion von Xi hat die Form: F(Xi) = a(r) Xi^2 + b(r) Xi^4 + ..., wobei die Koeffizienten a(r) und b(r) vom Radius abhaengen. Fuer r >> $r_{s}$ ist a > 0 (das Minimum liegt bei Xi = 0, Schwachfeld). Fuer r ~ $r_{s}$ wird a < 0 (das Minimum verschiebt sich zu Xi > 0, Starkfeld). Der Uebergang findet bei r = r* = 1,387 $r_{s}$ statt, wo a(r*) = 0.
+Die freie Energie als Funktion von Xi hat die Form: F(Xi) = a(r) Xi^2 + b(r) Xi^4 + ..., wobei die Koeffizienten a(r) und b(r) vom Radius abhaengen. Fuer r >> r_s ist a > 0 (das Minimum liegt bei Xi = 0, Schwachfeld). Fuer r ~ r_s wird a < 0 (das Minimum verschiebt sich zu Xi > 0, Starkfeld). Der Uebergang findet bei r = r* = 1,387 r_s statt, wo a(r*) = 0.
 
 Diese Beschreibung ist formal analog zum Uebergang von der normalen zur supraleitenden Phase: Der Ordnungsparameter (Cooper-Paar-Dichte in der Supraleitung, Segmentdichte in SSZ) springt von null auf einen endlichen Wert am kritischen Punkt. Der Unterschied: In der Supraleitung ist der Uebergang temperaturgetrieben; in SSZ ist er radiusgetrieben.
 
 ### Beobachtbare Signaturen des Regime-Uebergangs
 
-Der Uebergang von g1 (Schwachfeld) nach g2 (Starkfeld) bei r* = 1,387 $r_{s}$ hat spezifische beobachtbare Signaturen:
+Der Uebergang von g1 (Schwachfeld) nach g2 (Starkfeld) bei r* = 1,387 r_s hat spezifische beobachtbare Signaturen:
 
-**Spektrale Signatur:** Materie, die den Regime-Uebergang durchquert, erfahrt eine abrupte Aenderung der Zeitdilatation. Die resultierende Aenderung in der beobachteten Frequenz der emittierten Strahlung erzeugt ein charakteristisches Merkmal im Spektrum: eine Kante bei der Frequenz $f_{edge}$ = $f_{emit}$ * D(r*), wobei D(r*) = 1/(1 + Xi(r*)) = 1/(1 + 0,361) = 0,735. Diese spektrale Kante liegt bei ~73,5% der Emissionsfrequenz und koennte in hochaufgeloesten Roentgenspektren von Akkretionsscheiben detektierbar sein.
+**Spektrale Signatur:** Materie, die den Regime-Uebergang durchquert, erfahrt eine abrupte Aenderung der Zeitdilatation. Die resultierende Aenderung in der beobachteten Frequenz der emittierten Strahlung erzeugt ein charakteristisches Merkmal im Spektrum: eine Kante bei der Frequenz f_edge = f_emit * D(r*), wobei D(r*) = 1/(1 + Xi(r*)) = 1/(1 + 0,361) = 0,735. Diese spektrale Kante liegt bei ~73,5% der Emissionsfrequenz und koennte in hochaufgeloesten Roentgenspektren von Akkretionsscheiben detektierbar sein.
 
-**Zeitliche Signatur:** Materie, die den Regime-Uebergang durchquert, erfahrt eine Aenderung in der Einfallgeschwindigkeit. Die resultierende Aenderung in der Akkretionsrate erzeugt eine quasi-periodische Modulation in der Roentgenemission mit einer Frequenz, die der Orbitalfrequenz bei r* entspricht: $f_{QPO}$ ~ c/(2 pi r*) ~ c/(2 pi * 1,387 $r_{s}$). Fuer ein stellares Schwarzes Loch (M = 10 $M_{Sonne}$) ergibt sich $f_{QPO}$ ~ 1100 Hz, was im Bereich der beobachteten kHz-QPOs liegt.
+**Zeitliche Signatur:** Materie, die den Regime-Uebergang durchquert, erfahrt eine Aenderung in der Einfallgeschwindigkeit. Die resultierende Aenderung in der Akkretionsrate erzeugt eine quasi-periodische Modulation in der Roentgenemission mit einer Frequenz, die der Orbitalfrequenz bei r* entspricht: f_QPO ~ c/(2 pi r*) ~ c/(2 pi * 1,387 r_s). Fuer ein stellares Schwarzes Loch (M = 10 M_Sonne) ergibt sich f_QPO ~ 1100 Hz, was im Bereich der beobachteten kHz-QPOs liegt.
 
 **Polarisations-Signatur:** Die Aenderung der Segmentdichte am Regime-Uebergang erzeugt eine Aenderung in der Polarisation der emittierten Strahlung. Die Polarisationsaenderung ist proportional zu dXi/dr bei r*, was am Regime-Uebergang maximal ist. Das IXPE-Roentgenpolarimeter (gestartet 2021) hat die Empfindlichkeit, um Polarisationsaenderungen von ~1% in hellen Roentgenquellen zu detektieren.
 
@@ -10242,48 +10270,48 @@ Die numerische Simulation des Regime-Uebergangs erfordert besondere Sorgfalt, we
 
 Die Hermite-C2-Mischfunktion garantiert alle drei Stetigkeitsbedingungen. Die numerische Verifikation erfolgt durch Berechnung der Ableitungen mit finiten Differenzen und Vergleich mit den analytischen Ausdruecken. Die Uebereinstimmung ist besser als 10^{-12} fuer alle getesteten Radien.
 
-Die Breite der Mischzone (der Bereich, in dem die Mischfunktion von 0 auf 1 uebergeht) ist ein freier Parameter der Implementierung. Die Standard-Wahl ist $\Delta_{\text{r}}$ = 0,5 $r_{s}$, was einen glatten Uebergang ueber den Bereich 1,137 $r_{s}$ < r < 1,637 $r_{s}$ ergibt. Die physikalischen Vorhersagen sind insensitiv gegenueber der genauen Wahl von $\Delta_{\text{r}}$, solange $\Delta_{\text{r}}$ << $r_{s}$ (was fuer $\Delta_{\text{r}}$ = 0,5 $r_{s}$ erfuellt ist).
+Die Breite der Mischzone (der Bereich, in dem die Mischfunktion von 0 auf 1 uebergeht) ist ein freier Parameter der Implementierung. Die Standard-Wahl ist Delta_r = 0,5 r_s, was einen glatten Uebergang ueber den Bereich 1,137 r_s < r < 1,637 r_s ergibt. Die physikalischen Vorhersagen sind insensitiv gegenueber der genauen Wahl von Delta_r, solange Delta_r << r_s (was fuer Delta_r = 0,5 r_s erfuellt ist).
 
 ### Thermodynamische Irreversibilitaet des Regime-Uebergangs
 
 Der Uebergang von g1 (Schwachfeld) nach g2 (Starkfeld) ist thermodynamisch irreversibel fuer Materie, die radial einfallt. Die Irreversibilitaet entsteht, weil die Entropie der Materie beim Durchqueren des Regime-Uebergangs zunimmt:
 
-$\Delta_{\text{S}}$ = $k_{B}$ * ln(D(r_1)/D(r_2))
+Delta_S = k_B * ln(D(r_1)/D(r_2))
 
-wobei r_1 > r* > r_2. Fuer den Uebergang von r = 2 $r_{s}$ (D = 0,80) nach r = $r_{s}$ (D = 0,555) ist $\Delta_{\text{S}}$ = $k_{B}$ * ln(0,80/0,555) = 0,37 $k_{B}$ pro Freiheitsgrad.
+wobei r_1 > r* > r_2. Fuer den Uebergang von r = 2 r_s (D = 0,80) nach r = r_s (D = 0,555) ist Delta_S = k_B * ln(0,80/0,555) = 0,37 k_B pro Freiheitsgrad.
 
-Die physikalische Interpretation: Die Zeitdilatation am Regime-Uebergang erzeugt eine effektive Temperatur $T_{eff}$ = hbar c / (2 pi $k_{B}$ $r_{s}$) * (1/D_2 - 1/D_1), die die einfallende Materie aufheizt. Diese Aufheizung ist analog zur Unruh-Strahlung (die Strahlung, die ein beschleunigter Beobachter im Vakuum sieht).
+Die physikalische Interpretation: Die Zeitdilatation am Regime-Uebergang erzeugt eine effektive Temperatur T_eff = hbar c / (2 pi k_B r_s) * (1/D_2 - 1/D_1), die die einfallende Materie aufheizt. Diese Aufheizung ist analog zur Unruh-Strahlung (die Strahlung, die ein beschleunigter Beobachter im Vakuum sieht).
 
 ### Stabilität des Regime-Uebergangs
 
-Der Regime-Uebergang bei r* = 1,387 $r_{s}$ ist stabil gegenueber kleinen Stoerungen. Die Stabilitaetsanalyse zeigt:
+Der Regime-Uebergang bei r* = 1,387 r_s ist stabil gegenueber kleinen Stoerungen. Die Stabilitaetsanalyse zeigt:
 
-**Radiale Stoerungen:** Eine kleine Verschiebung des Uebergangsradius (r* -> r* + $\delta_{\text{r}}$) erzeugt eine Rueckstellkraft, die den Uebergang zurueck nach r* treibt. Die Rueckstellkraft ist proportional zu $\delta_{\text{r}}$ und hat eine Zeitskala von ~$r_{s}$/c.
+**Radiale Stoerungen:** Eine kleine Verschiebung des Uebergangsradius (r* -> r* + delta_r) erzeugt eine Rueckstellkraft, die den Uebergang zurueck nach r* treibt. Die Rueckstellkraft ist proportional zu delta_r und hat eine Zeitskala von ~r_s/c.
 
-**Winkelabhaengige Stoerungen:** Stoerungen, die den Uebergang nicht-sphaerisch machen (z.B. durch Rotation oder Gezeitenkraefte), werden durch die Hermite-C2-Mischfunktion gedaempft. Die Daempfungsrate ist proportional zur Breite der Mischzone ($\Delta_{\text{r}}$ = 0,5 $r_{s}$).
+**Winkelabhaengige Stoerungen:** Stoerungen, die den Uebergang nicht-sphaerisch machen (z.B. durch Rotation oder Gezeitenkraefte), werden durch die Hermite-C2-Mischfunktion gedaempft. Die Daempfungsrate ist proportional zur Breite der Mischzone (Delta_r = 0,5 r_s).
 
-**Quantenfluktuationen:** Quantenfluktuationen der Segmentdichte am Regime-Uebergang haben eine Amplitude von ~$l_{P}$/r_s (Planck-Laenge geteilt durch Schwarzschild-Radius). Fuer stellare Schwarze Loecher ist dies ~10^{-38}, voellig vernachlaessigbar.
+**Quantenfluktuationen:** Quantenfluktuationen der Segmentdichte am Regime-Uebergang haben eine Amplitude von ~l_P/r_s (Planck-Laenge geteilt durch Schwarzschild-Radius). Fuer stellare Schwarze Loecher ist dies ~10^{-38}, voellig vernachlaessigbar.
 
 
 
 ### Beobachtbare Konsequenzen des Regime-Uebergangs
 
-Der Regime-Uebergang bei r* = 1,387 $r_{s}$ hat mehrere beobachtbare Konsequenzen:
+Der Regime-Uebergang bei r* = 1,387 r_s hat mehrere beobachtbare Konsequenzen:
 
 **Akkretionsscheiben-Spektrum:** Der Uebergang von g1 nach g2 erzeugt eine Aenderung im Temperaturprofil der Akkretionsscheibe. Im Schwachfeld (r > r*) ist T ~ r^{-3/4} (Standard-Shakura-Sunyaev). Im Starkfeld (r < r*) ist T ~ r^{-1/2} (flacheres Profil). Der Knick im Temperaturprofil bei r = r* koennte als Merkmal im Roentgenspektrum sichtbar sein.
 
-**Metrik-Perturbationen-Phase:** Fuer ein Objekt, das durch den Regime-Uebergang spiralt (z.B. ein EMRI), aendert sich die Metrik-Perturbationen-Phase abrupt. Die Phasenverschiebung betraegt $\Delta_{\phi}$ ~ pi * Xi(r*) ~ 0,3 Radian -- messbar mit LISA.
+**Metrik-Perturbationen-Phase:** Fuer ein Objekt, das durch den Regime-Uebergang spiralt (z.B. ein EMRI), aendert sich die Metrik-Perturbationen-Phase abrupt. Die Phasenverschiebung betraegt Delta_phi ~ pi * Xi(r*) ~ 0,3 Radian -- messbar mit LISA.
 
-**Photonensphere:** Die Photonensphere (der Radius, bei dem Photonen auf Kreisbahnen umlaufen) liegt in SSZ bei $r_{ph}$ = 1,5 $r_{s}$ * (1 + $\delta_{\text{SSZ}}$), wobei $\delta_{\text{SSZ}}$ ~ 0,02. Die 2%-Verschiebung beeinflusst den Schattenradius und die Lichtablenkung nahe kompakten Objekten.
+**Photonensphere:** Die Photonensphere (der Radius, bei dem Photonen auf Kreisbahnen umlaufen) liegt in SSZ bei r_ph = 1,5 r_s * (1 + delta_SSZ), wobei delta_SSZ ~ 0,02. Die 2%-Verschiebung beeinflusst den Schattenradius und die Lichtablenkung nahe kompakten Objekten.
 
 
 
 ### Zusammenfassung: Regime-Uebergaenge
 
-Dieses Kapitel hat den Regime-Uebergang bei r* = 1,387 $r_{s}$ vollstaendig analysiert. Die wichtigsten Ergebnisse:
+Dieses Kapitel hat den Regime-Uebergang bei r* = 1,387 r_s vollstaendig analysiert. Die wichtigsten Ergebnisse:
 
 1. **Hermite-C2-Mischfunktion:** Glatter Uebergang zwischen Schwach- und Starkfeld.
-2. **Thermodynamische Irreversibilitaet:** Der Uebergang erzeugt Entropie ($\Delta_{\text{S}}$ = 0,37 $k_{B}$ pro Freiheitsgrad).
+2. **Thermodynamische Irreversibilitaet:** Der Uebergang erzeugt Entropie (Delta_S = 0,37 k_B pro Freiheitsgrad).
 3. **Stabilitaet:** Der Uebergang ist stabil gegenueber radialen, winkelabhaengigen und Quantenstoerungen.
 4. **Beobachtbare Konsequenzen:** Knick im Temperaturprofil, Phasenverschiebung in GW, Photonensphere-Verschiebung.
 
@@ -10299,28 +10327,28 @@ Der Regime-Uebergang ist ein einzigartiges Merkmal von SSZ, das keine Entsprechu
 
 Der Regime-Uebergang in SSZ hat Analogien zu Phasenuebergaengen in der kondensierten Materie:
 
-**Ordnungsparameter:** In SSZ ist der Ordnungsparameter die Segmentdichte Xi. Im Schwachfeld (Xi << 1) ist die Raumzeit nahezu flach; im Starkfeld (Xi ~ 0,8) ist sie stark gekruemmt. Der Uebergang bei r* = 1,387 $r_{s}$ ist ein kontinuierlicher Uebergang (kein Sprung in Xi, aber ein Knick in der zweiten Ableitung).
+**Ordnungsparameter:** In SSZ ist der Ordnungsparameter die Segmentdichte Xi. Im Schwachfeld (Xi << 1) ist die Raumzeit nahezu flach; im Starkfeld (Xi ~ 0,8) ist sie stark gekruemmt. Der Uebergang bei r* = 1,387 r_s ist ein kontinuierlicher Uebergang (kein Sprung in Xi, aber ein Knick in der zweiten Ableitung).
 
 **Kritischer Exponent:** Die Segmentdichte nahe dem Uebergang skaliert als Xi(r) ~ Xi(r*) + A * (r - r*)^2, wobei A ein Koeffizient ist. Der kritische Exponent ist daher 2 (quadratische Skalierung), was einem Uebergang zweiter Ordnung entspricht.
 
-**Universalitaet:** Der Regime-Uebergang ist universell -- er tritt bei r* = 1,387 $r_{s}$ fuer alle Massen auf. Dies ist analog zur Universalitaet von Phasenuebergaengen in der statistischen Mechanik, wo der kritische Exponent unabhaengig von den mikroskopischen Details ist.
+**Universalitaet:** Der Regime-Uebergang ist universell -- er tritt bei r* = 1,387 r_s fuer alle Massen auf. Dies ist analog zur Universalitaet von Phasenuebergaengen in der statistischen Mechanik, wo der kritische Exponent unabhaengig von den mikroskopischen Details ist.
 
 ### Experimentelle Signaturen des Regime-Uebergangs
 
-Der Regime-Uebergang bei r* = 1,387 $r_{s}$ hat spezifische experimentelle Signaturen:
+Der Regime-Uebergang bei r* = 1,387 r_s hat spezifische experimentelle Signaturen:
 
 **Akkretionsscheiben-Spektrum:** Der Uebergang beeinflusst das Temperaturprofil der Akkretionsscheibe nahe dem ISCO. Die resultierende Aenderung im Roentgenspektrum ist ~2% bei 6,4 keV (Eisenlinie) -- messbar mit Athena.
 
 **Metrik-Perturbationen-Phase:** Der Uebergang beeinflusst die GW-Phase waehrend der letzten ~10 Orbits vor dem Merger. Die kumulative Phasenverschiebung ist ~0,1 Radian -- messbar mit dem Einstein-Teleskop.
 
-**Photonensphere:** Der Uebergang beeinflusst den Photonensphere-Radius ($r_{ph}$ = 1,53 $r_{s}$ in SSZ vs. 1,50 $r_{s}$ in ART). Die resultierende Aenderung im Schattenradius ist ~1,3% -- messbar mit ngEHT.
+**Photonensphere:** Der Uebergang beeinflusst den Photonensphere-Radius (r_ph = 1,53 r_s in SSZ vs. 1,50 r_s in ART). Die resultierende Aenderung im Schattenradius ist ~1,3% -- messbar mit ngEHT.
 
+---
 
-\newpage
+# Kapitel 26: Testmethodik und Anti-Zirkularität
 
-\part{Validierung und Reproduzierbarkeit}
-
-# Testmethodik und Anti-Zirkularität
+**Teil VIII — Validierung und Reproduzierbarkeit**
+**Status:** ERWEITERTE FASSUNG
 
 
 ![Abb 26](figures/ch26_testing/fig_26_01.png)
@@ -10349,7 +10377,7 @@ Jede neue physikalische Theorie muss zwei Tests bestehen: (1) Reproduktion aller
 
 **Test 1 (Reproduktion):** SSZ muss alle ART-Schwachfeldvorhersagen reproduzieren — GPS-Zeitdilatation, Shapiro-Delay, Lichtablenkung, Periheldrehung, Pound-Rebka-Rotverschiebung, Metrik-Perturbationen-Detektion. Dies wird in den Kapiteln 26–28 verifiziert.
 
-**Test 2 (Neue Vorhersagen):** SSZ muss Vorhersagen machen, die sich von der ART unterscheiden und experimentell testbar sind. Die wichtigsten: z($r_{s}$) = 0,802 (endliche Horizontrotverschiebung), D($r_{s}$) = 0,555 (endliche Zeitdilatation), keine Singularität, keine Informationsparadoxon. Dies wird in Kapitel 30 zusammengefasst.
+**Test 2 (Neue Vorhersagen):** SSZ muss Vorhersagen machen, die sich von der ART unterscheiden und experimentell testbar sind. Die wichtigsten: z(r_s) = 0,802 (endliche Horizontrotverschiebung), D(r_s) = 0,555 (endliche Zeitdilatation), keine Singularität, keine Informationsparadoxon. Dies wird in Kapitel 30 zusammengefasst.
 
 ### Die Zirkularitätsfalle
 
@@ -10394,27 +10422,27 @@ Konstruiere den gerichteten azyklischen Graphen (DAG) aller SSZ-Formeln. Der Ver
 - φ = (1+√5)/2 = 1,61803... (Goldener Schnitt — mathematisch, nicht gemessen)
 
 **L1 — Definitionen (aus L0):**
-- $r_{s}$ = 2GM/c² (Schwarzschild-Radius)
-- Ξ_weak(r) = $r_{s}$/(2r), Ξ_strong(r) = 1 − exp(−φ$r_{s}$/r)
+- r_s = 2GM/c² (Schwarzschild-Radius)
+- Ξ_weak(r) = r_s/(2r), Ξ_strong(r) = 1 − exp(−φr_s/r)
 - D(r) = 1/(1 + Ξ(r)), s(r) = 1 + Ξ(r) = 1/D(r)
 
 **L2 — Kinematik (aus L0, L1):**
-- $v_{esc}$ = c√($r_{s}$/r), $v_{fall}$ = c√(r/r_s)
-- $v_{esc}$ · $v_{fall}$ = c² (kinematische Abschließung)
+- v_esc = c√(r_s/r), v_fall = c√(r/r_s)
+- v_esc · v_fall = c² (kinematische Abschließung)
 
 **L3 — Felder und Observablen (aus L0–L2):**
-- Δt_Shapiro = (1+γ)$r_{s}$/c · ln(4r₁r₂/b²)
-- α = (1+γ)$r_{s}$/b (Lichtablenkung)
-- z = Ξ($r_{emit}$) (gravitative Rotverschiebung)
+- Δt_Shapiro = (1+γ)r_s/c · ln(4r₁r₂/b²)
+- α = (1+γ)r_s/b (Lichtablenkung)
+- z = Ξ(r_emit) (gravitative Rotverschiebung)
 
 **L4 — Starkfeld (aus L0–L3):**
 - ds² = −D²c²dt² + dr²/D² + r²dΩ² (SSZ-Metrik)
-- D($r_{s}$) = 0,555, $G_{SSZ}$ = D($r_{s}$)^{2l+1}
+- D(r_s) = 0,555, G_SSZ = D(r_s)^{2l+1}
 
 **L5 — Vorhersagen (aus L0–L4):**
 - NS-Oberflächenrotverschiebung: +13% vs. ART
 - SL-Schattendurchmesser: −1,3% vs. ART
-- GW-Echo-Timing: τ ~ $r_{s}$/c · ln(1/D²)
+- Love-Zahl: k₂ ~ 0,052 (vs. k₂ = 0 in ART)
 
 **Entscheidende Eigenschaft:** Keine L5-Größe fließt zurück nach L0–L4.
 
@@ -10473,7 +10501,7 @@ Alle Tests sind reproduzierbar mit einem einzigen `pytest`-Befehl pro Repository
 
 Der Anti-Zirkularitaetsbeweis erfordert den Nachweis, dass die SSZ-Axiome und die Testdaten logisch unabhaengig sind. Die Analyse gliedert sich in drei Schritte:
 
-**Schritt 1: Axiome identifizieren.** SSZ basiert auf drei Axiomen: (A1) Existenz eines Segmentgitters mit Dichte Xi(r), (A2) Saettigung $\Xi_{\text{max}}$ = 0.802 bei r = $r_{s}$, (A3) Zeitdilatation D = 1/(1+Xi). Diese Axiome wurden aus mathematischen Ueberlegungen (phi-Geometrie) hergeleitet, nicht aus empirischen Daten.
+**Schritt 1: Axiome identifizieren.** SSZ basiert auf drei Axiomen: (A1) Existenz eines Segmentgitters mit Dichte Xi(r), (A2) Saettigung Xi_max = 0.802 bei r = r_s, (A3) Zeitdilatation D = 1/(1+Xi). Diese Axiome wurden aus mathematischen Ueberlegungen (phi-Geometrie) hergeleitet, nicht aus empirischen Daten.
 
 **Schritt 2: Testdaten identifizieren.** Die Validierung verwendet 13 unabhaengige astronomische Datensaetze (Kapitel 27). Keiner dieser Datensaetze wurde bei der Formulierung der Axiome verwendet.
 
@@ -10531,7 +10559,7 @@ Die Validierung verwendet mehrere statistische Methoden:
 
 **Chi-Quadrat-Test:** Für den Vergleich von SSZ-Vorhersagen mit Beobachtungsdaten. Der reduzierte χ² sollte nahe 1 liegen (gute Übereinstimmung). Für die 13 astronomischen Objekte in der Schwachfeldvalidierung: χ²_red = 0,94 (p = 0,51) — ausgezeichnete Übereinstimmung.
 
-**Bayessche Modellvergleiche:** Für den Vergleich von SSZ mit ART im Starkfeld. Der Bayes-Faktor B = P(Daten|SSZ)/P(Daten|ART) quantifiziert die relative Evidenz. Für aktuelle Daten: ln(B) $\approx$ 0 (keine Präferenz) — die Daten reichen nicht aus, um zwischen den Modellen zu unterscheiden. Für zukünftige NICER-Daten wird ln(B) > 5 erwartet (starke Präferenz für eines der Modelle).
+**Bayessche Modellvergleiche:** Für den Vergleich von SSZ mit ART im Starkfeld. Der Bayes-Faktor B = P(Daten|SSZ)/P(Daten|ART) quantifiziert die relative Evidenz. Für aktuelle Daten: ln(B) ≈ 0 (keine Präferenz) — die Daten reichen nicht aus, um zwischen den Modellen zu unterscheiden. Für zukünftige NICER-Daten wird ln(B) > 5 erwartet (starke Präferenz für eines der Modelle).
 
 **Bootstrap-Resampling:** Für die Schätzung der Unsicherheiten in den SSZ-Vorhersagen. 10.000 Bootstrap-Stichproben werden gezogen, um Konfidenzintervalle zu berechnen.
 
@@ -10548,9 +10576,9 @@ Alle Tests sind vollständig reproduzierbar:
 
 Karl Poppers Falsifizierbarkeitspostulat (1934) fordert, dass eine wissenschaftliche Theorie prinzipiell widerlegbar sein muss. SSZ erfüllt dieses Kriterium auf mehreren Ebenen:
 
-**Schwachfeld-Falsifizierbarkeit:** Wenn die SSZ-Schwachfeldformeln (Ξ = $r_{s}$/2r, D = 1/(1+Ξ)) nicht mit GPS, Shapiro oder Pound-Rebka übereinstimmten, wäre SSZ sofort widerlegt. Die Übereinstimmung ist ein notwendiger, aber nicht hinreichender Erfolg.
+**Schwachfeld-Falsifizierbarkeit:** Wenn die SSZ-Schwachfeldformeln (Ξ = r_s/2r, D = 1/(1+Ξ)) nicht mit GPS, Shapiro oder Pound-Rebka übereinstimmten, wäre SSZ sofort widerlegt. Die Übereinstimmung ist ein notwendiger, aber nicht hinreichender Erfolg.
 
-**Starkfeld-Falsifizierbarkeit:** Die drei Starkfeldvorhersagen (z($r_{s}$) = 0,802, D($r_{s}$) = 0,555, Metrik-Perturbationen-Echos) sind jeweils unabhängig testbar. Wenn eine dieser Vorhersagen widerlegt wird, muss SSZ modifiziert oder aufgegeben werden.
+**Starkfeld-Falsifizierbarkeit:** Die drei Starkfeldvorhersagen (z(r_s) = 0,802, D(r_s) = 0,555, k₂ ~ 0,052) sind jeweils unabhängig testbar. Wenn eine dieser Vorhersagen widerlegt wird, muss SSZ modifiziert oder aufgegeben werden.
 
 **Strukturelle Falsifizierbarkeit:** Die Parameterfreiheit von SSZ bedeutet, dass es keine Möglichkeit gibt, die Theorie durch Parameteranpassung zu retten. Wenn die Vorhersagen nicht stimmen, ist SSZ falsch — Punkt.
 
@@ -10601,7 +10629,7 @@ SSZ verwendet ein modifiziertes Blindprotokoll: Die theoretischen Vorhersagen we
 
 Das Protokoll hat drei Stufen:
 
-**Stufe 1 (Vorhersage):** Die SSZ-Vorhersage fuer eine Observable wird aus den Grundgleichungen berechnet und als Testerwartung im Code festgelegt. Beispiel: $z_{NS}$ = Xi($R_{NS}$) = $r_{s}$/(2 $R_{NS}$) fuer die gravitative Rotverschiebung eines Neutronensterns.
+**Stufe 1 (Vorhersage):** Die SSZ-Vorhersage fuer eine Observable wird aus den Grundgleichungen berechnet und als Testerwartung im Code festgelegt. Beispiel: z_NS = Xi(R_NS) = r_s/(2 R_NS) fuer die gravitative Rotverschiebung eines Neutronensterns.
 
 **Stufe 2 (Datenakquisition):** Die Beobachtungsdaten werden aus der Literatur oder aus oeffentlichen Datenbanken bezogen. Die Datenquelle wird im Test dokumentiert.
 
@@ -10611,9 +10639,9 @@ Das Protokoll hat drei Stufen:
 
 SSZ praeregistriert die folgenden Tests fuer zukuenftige Beobachtungen:
 
-1. **ngEHT Sgr A* Schattenmessung (erwartet ~2028):** SSZ sagt einen Schattenradius von 0,987 x $\theta_{\text{GR}}$ vorher. Wenn der gemessene Radius ausserhalb von 0,97-1,00 x $\theta_{\text{GR}}$ liegt, ist SSZ falsifiziert.
+1. **ngEHT Sgr A* Schattenmessung (erwartet ~2028):** SSZ sagt einen Schattenradius von 0,987 x theta_GR vorher. Wenn der gemessene Radius ausserhalb von 0,97-1,00 x theta_GR liegt, ist SSZ falsifiziert.
 
-2. **LISA EMRI-Wellenformen (erwartet ~2035):** SSZ sagt eine Phasenverschiebung von $\Delta_{\phi}$ ~ 0,5 rad gegenueber ART-Wellenformen vorher. Wenn keine Phasenverschiebung detektiert wird ($\Delta_{\phi}$ < 0,1 rad), ist SSZ im Starkfeld falsifiziert.
+2. **LISA EMRI-Wellenformen (erwartet ~2035):** SSZ sagt eine Phasenverschiebung von Delta_phi ~ 0,5 rad gegenueber ART-Wellenformen vorher. Wenn keine Phasenverschiebung detektiert wird (Delta_phi < 0,1 rad), ist SSZ im Starkfeld falsifiziert.
 
 3. **Einstein-Teleskop Love Numbers (erwartet ~2035):** SSZ sagt k_2 ~ 0,052 fuer Schwarze-Loch-Kandidaten vorher. Wenn k_2 < 0,01 gemessen wird, ist SSZ falsifiziert.
 
@@ -10627,7 +10655,7 @@ Das Anti-Zirkularitaetsprotokoll von SSZ hat eine hierarchische Schichtstruktur:
 
 **Schicht 0 (Axiome):** Die drei Eingaben phi, pi, N0 = 4. Diese sind mathematisch definiert (phi als Loesung von x^2 = x + 1, pi als Verhaeltnis von Umfang zu Durchmesser, N0 als Dimensionalitaetsargument). Keine Beobachtungsdaten fliessen ein.
 
-**Schicht 1 (Abgeleitete Konstanten):** alpha = 1/(phi^{2pi} x 4), $\Xi_{\text{max}}$ = 1 - 1/phi = 0,382 (Schwachfeld-Maximum), $D_{min}$ = 0,555. Alle aus Schicht 0 berechnet, keine Beobachtungsdaten.
+**Schicht 1 (Abgeleitete Konstanten):** alpha = 1/(phi^{2pi} x 4), Xi_max = 1 - 1/phi = 0,382 (Schwachfeld-Maximum), D_min = 0,555. Alle aus Schicht 0 berechnet, keine Beobachtungsdaten.
 
 **Schicht 2 (Metrische Groessen):** Die SSZ-Metrik ds^2 = -D^2 c^2 dt^2 + D^{-2} dr^2 + r^2 dOmega^2. Abgeleitet aus Schicht 1 und dem Aequivalenzprinzip. Keine Beobachtungsdaten.
 
@@ -10649,7 +10677,7 @@ SSZ folgt den Prinzipien der Open Science:
 
 1. **Open Code:** Alle Berechnungen sind in oeffentlichen GitHub-Repositories verfuegbar (github.com/error-wtf). Jeder kann die Tests ausfuehren und die Ergebnisse reproduzieren.
 
-2. **Open Data:** Alle Beobachtungsdaten, die fuer die Validierung verwendet werden, stammen aus oeffentlichen Quellen (NASA, ESO, observational campaigns Open Science Center).
+2. **Open Data:** Alle Beobachtungsdaten, die fuer die Validierung verwendet werden, stammen aus oeffentlichen Quellen (NASA, ESO, GW Open Science Center).
 
 3. **Open Access:** Alle SSZ-Preprints sind frei verfuegbar.
 
@@ -10701,7 +10729,7 @@ Die Sensitivitaetsanalyse zeigt, dass die SSZ-Vorhersagen robust gegenueber Para
 
 Die SSZ-Validierung folgt den Open-Science-Prinzipien:
 
-1. **Open Data:** Alle verwendeten Beobachtungsdaten sind oeffentlich zugaenglich (NASA, ESO, observational campaigns Open Science Center).
+1. **Open Data:** Alle verwendeten Beobachtungsdaten sind oeffentlich zugaenglich (NASA, ESO, GW Open Science Center).
 2. **Open Source:** Alle SSZ-Codes sind unter der MIT-Lizenz veroeffentlicht.
 3. **Open Access:** Alle Publikationen werden auf arXiv veroeffentlicht.
 4. **Open Methodology:** Die Validierungsmethodik ist vollstaendig dokumentiert und reproduzierbar.
@@ -10720,11 +10748,12 @@ Dieses Kapitel hat die statistische Validierung von SSZ dargestellt. Die wichtig
 5. **Open-Science-Prinzipien:** Open Data, Open Source, Open Access, Open Methodology.
 6. **Ergebnis:** SSZ ist statistisch nicht von ART unterscheidbar im Schwachfeld; Starkfeld-Tests stehen aus.
 
+---
 
-\newpage
+# Kapitel 27: Datenerfassungsquellen und Methodik
 
-# Datenerfassungsquellen und Methodik
-
+**Teil VIII — Validierung und Reproduzierbarkeit**
+**Status:** ERWEITERTE FASSUNG
 
 ---
 
@@ -10776,9 +10805,9 @@ Diese Tests verifizieren SSZ = ART im Schwachfeldgrenzwert. Jede Abweichung hier
 
 **Merkur-Periheldrehung (EPM2017-Ephemeride):** Die anomale Präzession von 42,98 Bogensekunden/Jahrhundert. SSZ reproduziert dies exakt im Schwachfeld.
 
-**Solare Randablenkung (Hipparcos, VLBI-Kampagnen):** Lichtablenkung von 1,75 Bogensekunden am Sonnenrand. SSZ: α = (1+γ)$r_{s}$/b = 2$r_{s}$/b mit γ = 1.
+**Solare Randablenkung (Hipparcos, VLBI-Kampagnen):** Lichtablenkung von 1,75 Bogensekunden am Sonnenrand. SSZ: α = (1+γ)r_s/b = 2r_s/b mit γ = 1.
 
-**GPS-Satelliten-Uhrendrift (IGS-Daten):** GPS-Satelliten erfahren eine Netto-Uhrenverschiebung von +38,6 μs/Tag relativ zu Bodenuhren. SSZ reproduziert dies durch D($r_{Orbit}$)/D($r_{Oberfl}$äche).
+**GPS-Satelliten-Uhrendrift (IGS-Daten):** GPS-Satelliten erfahren eine Netto-Uhrenverschiebung von +38,6 μs/Tag relativ zu Bodenuhren. SSZ reproduziert dies durch D(r_Orbit)/D(r_Oberfläche).
 
 **Pound-Rebka-Experiment (1959, Neuanalyse):** Gravitative Blauverschiebung von 14,4 keV γ-Strahlen über 22,5 m Höhe. Übereinstimmung: < 1%.
 
@@ -10786,7 +10815,7 @@ Diese Tests verifizieren SSZ = ART im Schwachfeldgrenzwert. Jede Abweichung hier
 
 **Sirius B Spektralrotverschiebung (HST/STIS):** z = (8,0 ± 0,4) × 10⁻⁵. SSZ-Vorhersage: z = Ξ(R) = 8,0 × 10⁻⁵. Übereinstimmung: exakt.
 
-**S2-Sternorbit um Sgr A* (GRAVITY-Kollaboration, ESO VLT):** Gravitative Rotverschiebung am Periapsis (r_peri $\approx$ 1400 r_s). Übereinstimmung innerhalb der Messunsicherheit.
+**S2-Sternorbit um Sgr A* (GRAVITY-Kollaboration, ESO VLT):** Gravitative Rotverschiebung am Periapsis (r_peri ≈ 1400 r_s). Übereinstimmung innerhalb der Messunsicherheit.
 
 ### Stufe 3 — Neutronensterne (r/r_s ~ 3–6, Starkfeld)
 
@@ -10820,7 +10849,7 @@ Die Pipeline hat vier Stufen mit **keinem Anpassungsschritt**:
 
 | Datensatz | SSZ-Inputs | Zur Kalibrierung verwendet? |
 |---------|-----------|----------------------|
-| Cassini Shapiro | M_$\odot$, r_s, Ξ(r) | NEIN — Ξ definiert aus G, M, r |
+| Cassini Shapiro | M_☉, r_s, Ξ(r) | NEIN — Ξ definiert aus G, M, r |
 | Sirius B Rotversch. | M_SirB, R_SirB, D(r) | NEIN — D definiert aus Ξ |
 | GPS-Uhrendrift | M_⊕, R_⊕, Orbithöhe | NEIN — rein aus Konstanten |
 | G79 molekular | Schalenmodell + Ξ-Gradient | NEIN — keine G79-Daten im Modell |
@@ -10830,12 +10859,12 @@ Die Pipeline hat vier Stufen mit **keinem Anpassungsschritt**:
 
 | Stufe | Observable | SSZ−ART | SSZ−Obs | Status |
 |------|-----------|--------|---------|--------|
-| 1 | Shapiro-Delay | < 0,001% | < 0,003% | Y ununterscheidbar |
-| 1 | Merkur-Präzession | 0 | < 0,01% | Y exakte Übereinstimmung |
-| 1 | Solare Ablenkung | 0 | < 0,1% | Y |
-| 1 | GPS-Uhrendrift | 0 | < 0,001% | Y |
-| 2 | Sirius B Rotversch. | < 0,01% | < 5% | Y |
-| 2 | S2 Rotverschiebung | < 0,1% | innerhalb σ | Y |
+| 1 | Shapiro-Delay | < 0,001% | < 0,003% | ✓ ununterscheidbar |
+| 1 | Merkur-Präzession | 0 | < 0,01% | ✓ exakte Übereinstimmung |
+| 1 | Solare Ablenkung | 0 | < 0,1% | ✓ |
+| 1 | GPS-Uhrendrift | 0 | < 0,001% | ✓ |
+| 2 | Sirius B Rotversch. | < 0,01% | < 5% | ✓ |
+| 2 | S2 Rotverschiebung | < 0,1% | innerhalb σ | ✓ |
 | 3 | NS-Oberfläche z | **+13%** | ausstehend | **Vorhersage** |
 | 4 | SL-Schatten | **−1,3%** | ausstehend | **Vorhersage** |
 
@@ -10865,7 +10894,7 @@ Stufen 1–2: SSZ ununterscheidbar von ART mit aktueller Präzision. Stufen 3–
 ### Detaillierte Beschreibung der Schluesselmessungen
 
 **GPS-Zeitdilatation (Test #12):**
-Das Global Positioning System besteht aus 24+ Satelliten in ca. 20.200 km Hoehe. Die Borduhren laufen 45.9 Mikrosekunden pro Tag schneller als identische Uhren am Boden — eine Kombination aus gravitativer Blauverschiebung (+45.9 us/Tag) und speziell-relativistischer Zeitdilatation (-7.2 us/Tag). Die SSZ-Vorhersage fuer den gravitativen Anteil: $\Delta_{\text{t}}$ = ($\Xi_{\text{Erde}}$ - Xi_Satellit) x 86400 s = 45.85 us/Tag. Messwert: 45.9 +/- 0.1 us/Tag. Uebereinstimmung: < 0.2%.
+Das Global Positioning System besteht aus 24+ Satelliten in ca. 20.200 km Hoehe. Die Borduhren laufen 45.9 Mikrosekunden pro Tag schneller als identische Uhren am Boden — eine Kombination aus gravitativer Blauverschiebung (+45.9 us/Tag) und speziell-relativistischer Zeitdilatation (-7.2 us/Tag). Die SSZ-Vorhersage fuer den gravitativen Anteil: Delta_t = (Xi_Erde - Xi_Satellit) x 86400 s = 45.85 us/Tag. Messwert: 45.9 +/- 0.1 us/Tag. Uebereinstimmung: < 0.2%.
 
 **Pound-Rebka-Experiment (Test #13):**
 1960 an der Harvard University durchgefuehrt. Gamma-Photonen (14.4 keV, Fe-57 Moessbauer-Linie) wurden ueber eine Hoehendifferenz von 22.6 m geschickt. Die gemessene Rotverschiebung: z = (2.57 +/- 0.26) x 10^-15. SSZ-Vorhersage: z = g*h/c^2 = 2.46 x 10^-15. Uebereinstimmung: innerhalb 1-sigma.
@@ -10874,7 +10903,7 @@ Das Global Positioning System besteht aus 24+ Satelliten in ca. 20.200 km Hoehe.
 2002 gemessen waehrend der ueberlegenen Konjunktion der Cassini-Sonde. Ein Radarsignal zur Sonde und zurueck wurde um 131.5 +/- 0.1 Mikrosekunden verzoegert (verglichen mit der Flachraumzeit-Vorhersage). SSZ-Vorhersage (mit PPN-Faktor (1+gamma)): 131.4 us. Uebereinstimmung: < 0.1%.
 
 **S2-Stern im galaktischen Zentrum (Test #10):**
-Der Stern S2 umkreist Sgr A* (das supermassive Schwarze Loch im galaktischen Zentrum, M = 4 x 10^6 $M_{sun}$) auf einer elliptischen Bahn mit Periapsis $r_{peri}$ = 120 AU. Die GRAVITY-Kollaboration (2018) hat die gravitativen Rotverschiebung am Periapsis gemessen: z = 6.73 x 10^-4 +/- 0.09 x 10^-4. SSZ-Vorhersage: z = Xi($r_{peri}$) = $r_{s}$/(2*$r_{peri}$) = 6.58 x 10^-4. Uebereinstimmung: 2.2%.
+Der Stern S2 umkreist Sgr A* (das supermassive Schwarze Loch im galaktischen Zentrum, M = 4 x 10^6 M_sun) auf einer elliptischen Bahn mit Periapsis r_peri = 120 AU. Die GRAVITY-Kollaboration (2018) hat die gravitativen Rotverschiebung am Periapsis gemessen: z = 6.73 x 10^-4 +/- 0.09 x 10^-4. SSZ-Vorhersage: z = Xi(r_peri) = r_s/(2*r_peri) = 6.58 x 10^-4. Uebereinstimmung: 2.2%.
 
 ### Kapitelzusammenfassung und Brücke
 
@@ -10897,8 +10926,8 @@ Die SSZ-Validierung verwendet Daten von 13 astronomischen Objekten, die den gesa
 | 5 | PSR J0740+6620 | Pulsar | ~2,5 | NICER | Radius |
 | 6 | Sgr A* | SMBH | variabel | EHT, Keck | Schatten |
 | 7 | M87* | SMBH | variabel | EHT | Schatten |
-| 8 | GW150914 | BBH | ~1 | observational campaigns | Waveform |
-| 9 | GW170817 | BNS | ~2 | observational | Tidal |
+| 8 | GW150914 | BBH | ~1 | GW-Detektor | Waveform |
+| 9 | GW170817 | BNS | ~2 | GW-Detektor | Tidal |
 | 10 | S2 Stern | Orbit | ~1000 | GRAVITY | Orbit |
 | 11 | Cassini | Sonde | variabel | DSN | Shapiro |
 | 12 | GPS | System | 1,4×10⁹ | USNO | Zeitdilatation |
@@ -10920,7 +10949,7 @@ Von den 47 Spektren zeigen 46 gravitative Rotverschiebungen konsistent mit der S
 
 Das Gravity-Probe-A-Experiment (Vessot & Levine, 1979) ist der präziseste direkte Test der gravitativen Rotverschiebung. Ein Wasserstoff-Maser wurde auf einer suborbitalen Rakete auf eine Höhe von 10.000 km geschossen und seine Frequenz mit einem identischen Maser am Boden verglichen.
 
-Die gemessene Rotverschiebung stimmte mit der ART-Vorhersage (und damit der SSZ-Vorhersage im Schwachfeld) auf 70 ppm (parts per million) überein. Dies bestätigt z $\neq$ 0 mit mehr als 10⁴ Sigma Signifikanz — einer der überzeugendsten Tests der Gravitationsphysik überhaupt.
+Die gemessene Rotverschiebung stimmte mit der ART-Vorhersage (und damit der SSZ-Vorhersage im Schwachfeld) auf 70 ppm (parts per million) überein. Dies bestätigt z ≠ 0 mit mehr als 10⁴ Sigma Signifikanz — einer der überzeugendsten Tests der Gravitationsphysik überhaupt.
 
 Die SSZ-Vorhersage für Gravity Probe A ist identisch mit der ART-Vorhersage, weil das Experiment im Schwachfeld stattfindet (Ξ ~ 10⁻¹⁰). Der Wert des Experiments für SSZ liegt in der Bestätigung, dass die Schwachfeldformeln korrekt sind — eine notwendige Bedingung für die Gültigkeit des gesamten Rahmenwerks.
 
@@ -10981,9 +11010,9 @@ Die Plasmaverzoegerung (durch die Sonnenkorona) ist die groesste systematische U
 
 Das Lunar Laser Ranging (LLR) Experiment misst die Entfernung zwischen Erde und Mond mit Millimeter-Praezision durch Reflexion von Laserpulsen an Retroreflektoren, die von den Apollo-Missionen auf der Mondoberflaeche platziert wurden. Die Praezision betraegt ~1 mm ueber eine Entfernung von ~384.000 km, was einer relativen Praezision von ~3 x 10^{-12} entspricht.
 
-Der Nordtvedt-Effekt ist eine Vorhersage einiger alternativer Gravitationstheorien, dass die Gravitationsbeschleunigung eines Koerpers von seiner gravitativen Selbstenergie abhaengt (Verletzung des starken Aequivalenzprinzips). Der Nordtvedt-Parameter eta\_N quantifiziert diese Verletzung: eta\_N = 0 in der ART und in SSZ, eta\_N != 0 in Brans-Dicke-Theorie und einigen f(R)-Theorien.
+Der Nordtvedt-Effekt ist eine Vorhersage einiger alternativer Gravitationstheorien, dass die Gravitationsbeschleunigung eines Koerpers von seiner gravitativen Selbstenergie abhaengt (Verletzung des starken Aequivalenzprinzips). Der Nordtvedt-Parameter eta_N quantifiziert diese Verletzung: eta_N = 0 in der ART und in SSZ, eta_N != 0 in Brans-Dicke-Theorie und einigen f(R)-Theorien.
 
-LLR misst eta\_N = (-0,2 +/- 1,4) x 10^{-13}, konsistent mit null. SSZ sagt eta\_N = 0 exakt vorher (weil SSZ das starke Aequivalenzprinzip erfuellt), was durch die LLR-Messung bestaetigt wird.
+LLR misst eta_N = (-0,2 +/- 1,4) x 10^{-13}, konsistent mit null. SSZ sagt eta_N = 0 exakt vorher (weil SSZ das starke Aequivalenzprinzip erfuellt), was durch die LLR-Messung bestaetigt wird.
 
 ### Binaerpulsar-Timing: PSR J0737-3039
 
@@ -11003,17 +11032,17 @@ Alle fuenf Parameter stimmen mit der ART/SSZ-Vorhersage ueberein. Die SSZ-Vorher
 
 Das Multi-Messenger-Ereignis GW170817 (Neutronenstern-Verschmelzung, detektiert am 17. August 2017) lieferte mehrere Tests der Gravitationsphysik:
 
-**Geschwindigkeit der Metrik-Perturbationen:** |$v_{GW}$ - c|/c < 6 x 10^{-16} (aus der Zeitdifferenz zwischen GW- und Gamma-Signal). SSZ erfuellt diese Schranke.
+**Geschwindigkeit der Metrik-Perturbationen:** |v_GW - c|/c < 6 x 10^{-16} (aus der Zeitdifferenz zwischen GW- und Gamma-Signal). SSZ erfuellt diese Schranke.
 
 **Metrik-Perturbationenform:** Die beobachtete Wellenform stimmt mit der ART-Vorhersage fuer eine Neutronenstern-Verschmelzung ueberein. Die SSZ-Korrektur zur Wellenform ist von der Ordnung Xi ~ 0,01 und liegt unterhalb der aktuellen Detektionsschwelle.
 
-**Gezeitendeformierbarkeit:** Die gemessene Gezeitendeformierbarkeit $\Lambda_{\text{tilde}}$ = 300^{+420}_{-230} ist konsistent mit Neutronenstern-Zustandsgleichungen und mit der SSZ-Vorhersage.
+**Gezeitendeformierbarkeit:** Die gemessene Gezeitendeformierbarkeit Lambda_tilde = 300^{+420}_{-230} ist konsistent mit Neutronenstern-Zustandsgleichungen und mit der SSZ-Vorhersage.
 
 ### Sonnensystem-Tests im Detail
 
 Das Sonnensystem bietet ein einzigartiges Labor fuer Gravitationsphysik, weil die Massen, Entfernungen und Geschwindigkeiten mit hoher Praezision bekannt sind. Die wichtigsten Sonnensystem-Tests fuer SSZ:
 
-**Merkur-Periheldrehung:** Die anomale Periheldrehung des Merkur betraegt 42,98 Bogensekunden pro Jahrhundert. Die SSZ-Vorhersage ist identisch mit der ART-Vorhersage: $\Delta_{\omega}$ = 6 pi G $M_{Sonne}$ / (a c^2 (1-e^2)) = 42,98 ''/Jhd, wobei a = 0,387 AU die grosse Halbachse und e = 0,206 die Exzentrizitaet ist. Die Uebereinstimmung betraegt 0,1%.
+**Merkur-Periheldrehung:** Die anomale Periheldrehung des Merkur betraegt 42,98 Bogensekunden pro Jahrhundert. Die SSZ-Vorhersage ist identisch mit der ART-Vorhersage: Delta_omega = 6 pi G M_Sonne / (a c^2 (1-e^2)) = 42,98 ''/Jhd, wobei a = 0,387 AU die grosse Halbachse und e = 0,206 die Exzentrizitaet ist. Die Uebereinstimmung betraegt 0,1%.
 
 **Venus-Radar-Ranging:** Radarsignale, die von der Venus reflektiert werden, erfahren eine Shapiro-Verzoegerung, wenn sie nahe der Sonne vorbeilaufen. Die Messung bestaetigt gamma = 1 auf 0,1% Praezision.
 
@@ -11025,11 +11054,11 @@ Das Sonnensystem bietet ein einzigartiges Labor fuer Gravitationsphysik, weil di
 
 Neutronensterne sind die kompaktesten beobachtbaren Objekte (abgesehen von Schwarzen-Loch-Kandidaten) und bieten die besten Moeglichkeiten fuer Starkfeldtests:
 
-**NICER (Neutron star Interior Composition ExploreR):** Misst die Roentgenpulsprofile von Millisekunden-Pulsaren, um die Masse-Radius-Relation zu bestimmen. Bisherige Ergebnisse: PSR J0030+0451 (M = 1,34 $M_{Sonne}$, R = 12,71 km) und PSR J0740+6620 (M = 2,07 $M_{Sonne}$, R = 12,39 km). Die SSZ-Vorhersage fuer die Pulsprofile unterscheidet sich von der ART-Vorhersage um ~5% (wegen der unterschiedlichen Rotverschiebung), was mit verbesserter NICER-Statistik testbar ist.
+**NICER (Neutron star Interior Composition ExploreR):** Misst die Roentgenpulsprofile von Millisekunden-Pulsaren, um die Masse-Radius-Relation zu bestimmen. Bisherige Ergebnisse: PSR J0030+0451 (M = 1,34 M_Sonne, R = 12,71 km) und PSR J0740+6620 (M = 2,07 M_Sonne, R = 12,39 km). Die SSZ-Vorhersage fuer die Pulsprofile unterscheidet sich von der ART-Vorhersage um ~5% (wegen der unterschiedlichen Rotverschiebung), was mit verbesserter NICER-Statistik testbar ist.
 
-**Thermonukleare Bursts:** Typ-I-Roentgenbursts auf Neutronenstern-Oberflaechen zeigen Absorptionslinien (z.B. Fe XXV bei 6,7 keV, Fe XXVI bei 6,97 keV), die durch die gravitative Rotverschiebung verschoben sind. Die gemessene Rotverschiebung z = 0,35 fuer den Burst-Quellenstern EXO 0748-676 ist konsistent mit der SSZ-Vorhersage z = Xi = $r_{s}$/(2R) fuer einen Neutronenstern mit M = 1,4 $M_{Sonne}$ und R = 10 km.
+**Thermonukleare Bursts:** Typ-I-Roentgenbursts auf Neutronenstern-Oberflaechen zeigen Absorptionslinien (z.B. Fe XXV bei 6,7 keV, Fe XXVI bei 6,97 keV), die durch die gravitative Rotverschiebung verschoben sind. Die gemessene Rotverschiebung z = 0,35 fuer den Burst-Quellenstern EXO 0748-676 ist konsistent mit der SSZ-Vorhersage z = Xi = r_s/(2R) fuer einen Neutronenstern mit M = 1,4 M_Sonne und R = 10 km.
 
-**Metrik-Perturbationen von Neutronenstern-Verschmelzungen:** observational hat bisher zwei Neutronenstern-Verschmelzungen detektiert (GW170817 und GW190425). Die Gezeitendeformierbarkeit $\Lambda_{\text{tilde}}$, die aus der Metrik-Perturbationenform extrahiert wird, ist konsistent mit der SSZ-Vorhersage. Zukuenftige Detektionen (erwartet ~10-100 pro Jahr mit observational campaigns O5) werden die Statistik dramatisch verbessern.
+**Metrik-Perturbationen von Neutronenstern-Verschmelzungen:** Bisher wurden zwei Neutronenstern-Verschmelzungen detektiert (GW170817 und GW190425). Die Gezeitendeformierbarkeit Lambda_tilde, die aus der Metrik-Perturbationenform extrahiert wird, ist konsistent mit der SSZ-Vorhersage. Zukuenftige Detektionen mit naechster-Generation-Detektoren werden die Statistik dramatisch verbessern.
 
 ### Das GRAVITY-Instrument am VLT
 
@@ -11037,17 +11066,17 @@ GRAVITY ist ein interferometrisches Instrument am Very Large Telescope (VLT) der
 
 Die wichtigsten GRAVITY-Ergebnisse fuer SSZ:
 
-**S2-Orbit (2018):** GRAVITY verfolgte den S2-Stern waehrend seines naechsten Vorbeiflugs an Sgr A* (Periastron bei ~120 AU = ~1400 $r_{s}$). Die gemessene gravitative Rotverschiebung z = 6,6 x 10^{-4} ist konsistent mit der SSZ/ART-Vorhersage z = Xi = $r_{s}$/(2r) = 6,58 x 10^{-4}.
+**S2-Orbit (2018):** GRAVITY verfolgte den S2-Stern waehrend seines naechsten Vorbeiflugs an Sgr A* (Periastron bei ~120 AU = ~1400 r_s). Die gemessene gravitative Rotverschiebung z = 6,6 x 10^{-4} ist konsistent mit der SSZ/ART-Vorhersage z = Xi = r_s/(2r) = 6,58 x 10^{-4}.
 
-**Schwarzschild-Praezession (2020):** GRAVITY detektierte die Schwarzschild-Praezession des S2-Orbits: eine Drehung der Orbitalebene um 12 Bogenminuten pro Umlauf. Dies ist konsistent mit der SSZ/ART-Vorhersage $\Delta_{\omega}$ = 6 pi G M/(a c^2 (1-e^2)).
+**Schwarzschild-Praezession (2020):** GRAVITY detektierte die Schwarzschild-Praezession des S2-Orbits: eine Drehung der Orbitalebene um 12 Bogenminuten pro Umlauf. Dies ist konsistent mit der SSZ/ART-Vorhersage Delta_omega = 6 pi G M/(a c^2 (1-e^2)).
 
-**GRAVITY+ (ab 2024):** Die Aufruestung GRAVITY+ wird die Empfindlichkeit um den Faktor ~10 verbessern und die Beobachtung schwaecherer S-Sterne (naeher an Sgr A*) ermoeglichen. S-Sterne bei r ~ 100 $r_{s}$ wuerden die SSZ-Starkfeldkorrekturen (~1%) direkt testen.
+**GRAVITY+ (ab 2024):** Die Aufruestung GRAVITY+ wird die Empfindlichkeit um den Faktor ~10 verbessern und die Beobachtung schwaecherer S-Sterne (naeher an Sgr A*) ermoeglichen. S-Sterne bei r ~ 100 r_s wuerden die SSZ-Starkfeldkorrekturen (~1%) direkt testen.
 
 ### Zukuenftige Datensaetze
 
 Die naechsten 10 Jahre werden eine Fuelle neuer Datensaetze liefern:
 
-**observational campaigns O5 (ab 2027):** ~1000 Metrik-Perturbationen-Detektionen pro Jahr, darunter ~50 Neutronenstern-Verschmelzungen mit messbarer Gezeitendeformierbarkeit.
+**Naechste-Generation-Detektoren (ab ~2035):** Einstein-Teleskop und Cosmic Explorer werden ~1000 Metrik-Perturbationen-Detektionen pro Jahr liefern, darunter ~50 Neutronenstern-Verschmelzungen mit messbarer Gezeitendeformierbarkeit.
 
 **Vera Rubin Observatory (ab 2025):** Durchmusterung des gesamten suedlichen Himmels alle 3 Naechte. Wird ~10^7 transiente Quellen pro Nacht detektieren, darunter Gravitationslinsen-Ereignisse und Supernovae nahe kompakten Objekten.
 
@@ -11065,7 +11094,7 @@ Das Lunar Laser Ranging misst die Entfernung zum Mond mit einer Praezision von ~
 
 Die wichtigsten LLR-Ergebnisse fuer SSZ:
 
-- **Aequivalenzprinzip:** |$\Delta_{\text{a}}$/a| < 1,3 x 10^{-13} (Nordtvedt-Effekt). SSZ sagt exakt null vorher.
+- **Aequivalenzprinzip:** |Delta_a/a| < 1,3 x 10^{-13} (Nordtvedt-Effekt). SSZ sagt exakt null vorher.
 - **Zeitliche Variation von G:** |dG/dt|/G < 4 x 10^{-13} pro Jahr. SSZ sagt exakt null vorher.
 - **Geodaetische Praezession:** Konsistent mit ART/SSZ auf 0,3%.
 - **PPN-Parameter beta:** |beta - 1| < 8 x 10^{-5}. SSZ sagt beta = 1 exakt vorher.
@@ -11076,8 +11105,8 @@ LLR ist einer der laengsten laufenden Praezisionstests der Gravitation (seit 196
 
 Binaere Pulsare sind die praezisesten Gravitationslabore im Universum. Der Doppelpulsar PSR J0737-3039 liefert fuenf unabhaengige post-Keplersche Parameter:
 
-1. **Periastron-Praezession:** $\omega_{\text{dot}}$ = 16,90 Grad/Jahr (SSZ/ART: 16,90)
-2. **Metrik-Perturbationen-Daempfung:** $P_{dot}$ = -1,25 x 10^{-12} (SSZ/ART: -1,25 x 10^{-12})
+1. **Periastron-Praezession:** omega_dot = 16,90 Grad/Jahr (SSZ/ART: 16,90)
+2. **Metrik-Perturbationen-Daempfung:** P_dot = -1,25 x 10^{-12} (SSZ/ART: -1,25 x 10^{-12})
 3. **Shapiro-Delay (Amplitude):** r = 6,2 us (SSZ/ART: 6,2 us)
 4. **Shapiro-Delay (Form):** s = 0,9997 (SSZ/ART: 0,9997)
 5. **Zeitdilatation:** gamma = 0,384 ms (SSZ/ART: 0,384 ms)
@@ -11088,10 +11117,10 @@ Alle fuenf Parameter stimmen mit der SSZ/ART-Vorhersage ueberein. Die Praezision
 
 Dieses Kapitel hat die wichtigsten Beobachtungsdaten und Instrumente fuer die SSZ-Validierung dargestellt. Die wichtigsten Ergebnisse:
 
-1. **GRAVITY:** S2-Orbit bestaetigt SSZ/ART auf ~0,1%. GRAVITY+ wird S-Sterne bei r ~ 100 $r_{s}$ beobachten.
+1. **GRAVITY:** S2-Orbit bestaetigt SSZ/ART auf ~0,1%. GRAVITY+ wird S-Sterne bei r ~ 100 r_s beobachten.
 2. **LLR:** Aequivalenzprinzip auf 10^{-13}, G-Variation auf 10^{-13}/Jahr, PPN beta auf 10^{-5}.
 3. **Binaere Pulsare:** Fuenf post-Keplersche Parameter bestaetigen SSZ/ART auf ~0,05%.
-4. **observational campaigns O4/O5:** ~100-1000 GW-Detektionen/Jahr, Gezeitendeformierbarkeit, QNM-Spektroskopie.
+4. **Naechste-Generation-Detektoren (ET, CE):** ~100-1000 GW-Detektionen/Jahr, Gezeitendeformierbarkeit, QNM-Spektroskopie.
 5. **Vera Rubin:** ~10^7 transiente Quellen/Nacht, Mikrolensing-Statistik.
 6. **JWST:** Infrarot-Spektroskopie von Akkretionsscheiben.
 
@@ -11099,12 +11128,14 @@ Die naechsten 10 Jahre werden eine Fuelle neuer Daten liefern, die SSZ entweder 
 
 ### Ausblick: Zukuenftige Beobachtungskampagnen
 
-Die naechsten 10 Jahre werden eine Fuelle neuer Daten liefern: observational campaigns O5 (~2027) mit ~1000 GW-Detektionen pro Jahr, ngEHT (~2028) mit sub-Prozent-Schattenradius-Messungen, SKA (~2028) mit Pulsaren nahe Sgr A*, LISA (~2037) mit EMRIs und supermassiven Binaries, und das Einstein-Teleskop (~2035) mit QNM-Spektroskopie. Jede dieser Beobachtungen hat das Potenzial, SSZ zu bestaetigen oder zu widerlegen. Die Zukunft der Gravitationsphysik war nie spannender.
+Die naechsten 10 Jahre werden eine Fuelle neuer Daten liefern: ngEHT (~2028) mit sub-Prozent-Schattenradius-Messungen, SKA (~2028) mit Pulsaren nahe Sgr A*, NANOGrav/IPTA mit Pulsar-Timing-Korrekturen, Einstein-Teleskop (~2035) mit QNM-Spektroskopie und Love-Zahl-Messungen, und LISA (~2037) mit EMRIs und supermassiven Binaries. Jede dieser Beobachtungen hat das Potenzial, SSZ zu bestaetigen oder zu widerlegen. Die Zukunft der Gravitationsphysik war nie spannender.
 
+---
 
-\newpage
+# Kapitel 28: Repository-übergreifende Testergebnisse und Konsistenz
 
-# Repository-übergreifende Testergebnisse und Konsistenz
+**Teil VIII — Validierung und Reproduzierbarkeit**
+**Status:** ERWEITERTE FASSUNG v2
 
 
 ![Abb](figures/ch28_validation/eso_breakthrough_results.png)
@@ -11168,7 +11199,7 @@ Die SSZ-Validierung folgt einer dreistufigen Testpyramide:
 
 ### Aggregierte Ergebnisse
 
-Die SSZ-Testsuite umfasst 11 Repositories in `E:/clone` mit insgesamt 564+ pytest-verifizierten Tests:
+Die SSZ-Testsuite umfasst 11 Repositories in `E:\clone` mit insgesamt 564+ pytest-verifizierten Tests:
 
 | Repository | Tests | Fokusbereich | L-Ebenen | Bestehensrate |
 |-----------|-------|------------|----------|-----------|
@@ -11185,8 +11216,8 @@ Die SSZ-Testsuite umfasst 11 Repositories in `E:/clone` mit insgesamt 564+ pytes
 
 ### Testverteilung nach L-Ebene
 
-- **L1 (Definitionen):** 89 Tests — Ξ(r), D(r), $r_{s}$-Berechnung
-- **L2 (Kinematik):** 156 Tests — $v_{esc}$, $v_{fall}$, γ_seg, duale Geschwindigkeitsabschließung
+- **L1 (Definitionen):** 89 Tests — Ξ(r), D(r), r_s-Berechnung
+- **L2 (Kinematik):** 156 Tests — v_esc, v_fall, γ_seg, duale Geschwindigkeitsabschließung
 - **L3 (Felder):** 198 Tests — Shapiro-Delay, Ablenkung, Rotverschiebung, Gruppengeschwindigkeit
 - **L4 (Starkfeld):** 84 Tests — SSZ-Metrik, Energiebedingungen, Stetigkeit
 - **L5 (Vorhersagen):** 37 Tests — NS-Rotverschiebung, SL-Schatten, G79-Vorhersagen
@@ -11213,9 +11244,9 @@ Dies beweist NICHT, dass die Physik korrekt ist — es beweist, dass die Formeln
 
 ## 28.3 Die 8 Lensing-Fehlschläge
 
-Das ssz-lensing-Repository hat 279 Tests: 271 PASS und 8 FAIL. Alle Fehlschläge treten bei Wurzelfindungs-Präzisionstests bei kleinen Stoßparametern (b < 2$r_{s}$) auf.
+Das ssz-lensing-Repository hat 279 Tests: 271 PASS und 8 FAIL. Alle Fehlschläge treten bei Wurzelfindungs-Präzisionstests bei kleinen Stoßparametern (b < 2r_s) auf.
 
-**Ursache:** Die Klammern des Bisektionslösers waren für ART-typische Ablenkungswinkel kalibriert. SSZ erzeugt größere Ablenkungen nahe der Photonensphäre (weil diese nach innen auf ~1,48 $r_{s}$ verschoben ist).
+**Ursache:** Die Klammern des Bisektionslösers waren für ART-typische Ablenkungswinkel kalibriert. SSZ erzeugt größere Ablenkungen nahe der Photonensphäre (weil diese nach innen auf ~1,48 r_s verschoben ist).
 
 **Behebung:** Adaptive Klammerung basierend auf dem lokalen Ξ-Profil. Die Behebung ist dokumentiert, aber **absichtlich nicht implementiert**, um transparente Fehlschlag-Berichterstattung zu demonstrieren. Fehlschläge zu verbergen — selbst triviale — würde die Glaubwürdigkeit der gesamten Validierungssuite untergraben.
 
@@ -11229,7 +11260,7 @@ Das ssz-lensing-Repository hat 279 Tests: 271 PASS und 8 FAIL. Alle Fehlschläge
 
 **3. Keine Blindanalyse.** SSZ-Tests sind nicht blind — die erwarteten Antworten sind während der Testentwicklung bekannt.
 
-**4. Statistische Leistungsfähigkeit.** Der G79-Test (6/6 bestätigte Vorhersagen, p $\approx$ 1,6%) ist suggestiv, aber nicht schlüssig. Eine größere Stichprobe ist nötig.
+**4. Statistische Leistungsfähigkeit.** Der G79-Test (6/6 bestätigte Vorhersagen, p ≈ 1,6%) ist suggestiv, aber nicht schlüssig. Eine größere Stichprobe ist nötig.
 
 **5. Kein adversariales Testen.** Die Testsuite verifiziert, dass SSZ in bekannten Regimen funktioniert. Sie sucht nicht systematisch nach Regimen, wo SSZ scheitern könnte.
 
@@ -11244,7 +11275,7 @@ Das ssz-lensing-Repository hat 279 Tests: 271 PASS und 8 FAIL. Alle Fehlschläge
 
 ### Tests beweisen NICHT:
 
-- **Korrektheit von SSZ:** Mathematische Konsistenz $\neq$ physikalische Wahrheit
+- **Korrektheit von SSZ:** Mathematische Konsistenz ≠ physikalische Wahrheit
 - **Starkfeld-Vorhersagen:** NS +13% und SL −1,3% sind Vorhersagen, keine bestätigten Ergebnisse
 - **Einzigartigkeit von Ξ:** Andere beschränkte monotone Profile könnten auch konsistente Ergebnisse liefern
 - **Physikalische Realität von Segmenten:** Ob das „Segmentgitter" eine reale physische Struktur oder ein mathematisches Werkzeug ist, bleibt offen
@@ -11292,12 +11323,12 @@ test_mercury_perihelion ............. PASS (0.008s)
   Computed: 42.98 arcsec/century
   Delta: 0.00%
 
-test\_s2_star_redshift ............... PASS (0.004s)
+test_s2_star_redshift ............... PASS (0.004s)
   Expected: 6.58e-4
   Computed: 6.58e-4
   Delta: 0.00%
 
-test\_gw170817_speed ................. PASS (0.001s)
+test_gw170817_speed ................. PASS (0.001s)
   Expected: |v-c|/c < 1e-15
   Computed: 0.00e+00
   Delta: 0.00%
@@ -11309,8 +11340,8 @@ Alle Tests liefern exakte Uebereinstimmung (im Rahmen der Maschinengenauigkeit),
 
 Die automatisierten Tests beweisen die Konsistenz des SSZ-Rahmenwerks, aber sie beweisen NICHT, dass SSZ physikalisch korrekt ist. Insbesondere:
 
-- Die Tests bestaetigen D($r_{s}$) = 0.555, aber sie beweisen nicht, dass die Natur diesen Wert realisiert
-- Die Tests bestaetigen $\Xi_{\text{max}}$ = 0.802, aber sie beweisen nicht, dass die Segmentdichte tatsaechlich saettigt
+- Die Tests bestaetigen D(r_s) = 0.555, aber sie beweisen nicht, dass die Natur diesen Wert realisiert
+- Die Tests bestaetigen Xi_max = 0.802, aber sie beweisen nicht, dass die Segmentdichte tatsaechlich saettigt
 - Die Tests bestaetigen die PPN-Uebereinstimmung, aber sie beweisen nicht, dass SSZ im Starkfeld korrekt ist
 
 Der Unterschied zwischen Konsistenz und Korrektheit ist fundamental: Ein konsistentes Rahmenwerk kann falsch sein (wenn die Axiome nicht der Natur entsprechen). Nur empirische Tests im Starkfeldregime koennen die physikalische Korrektheit etablieren.
@@ -11439,7 +11470,7 @@ Jedes Repository testet einen anderen Aspekt der SSZ-Theorie. Die Cross-Reposito
 
 Die automatisierten Tests sind so konzipiert, dass sie spezifische Fehlermodi erkennen:
 
-**Numerische Instabilitaet:** Tests mit Radien nahe $r_{s}$ (wo Xi sich schnell aendert) verwenden adaptive Schrittweiten und Doppelpraezisions-Arithmetik. Die numerische Genauigkeit wird durch Vergleich mit analytischen Loesungen (wo verfuegbar) verifiziert.
+**Numerische Instabilitaet:** Tests mit Radien nahe r_s (wo Xi sich schnell aendert) verwenden adaptive Schrittweiten und Doppelpraezisions-Arithmetik. Die numerische Genauigkeit wird durch Vergleich mit analytischen Loesungen (wo verfuegbar) verifiziert.
 
 **Formel-Verwechslung:** Tests pruefen explizit, dass die korrekte Xi-Formel verwendet wird (Schwachfeld vs. Starkfeld vs. Mischzone). Die verbotenen Formeln (Anhang B.9) werden als Negativtests implementiert: Ein Test, der eine verbotene Formel verwendet, muss fehlschlagen.
 
@@ -11453,7 +11484,7 @@ Die Cross-Repository-Validierung erfordert eine sorgfaeltige Analyse der systema
 
 **Numerische Praezision:** Alle Berechnungen verwenden 64-Bit-Gleitkommazahlen (IEEE 754 double precision), was eine relative Praezision von ~10^{-16} garantiert. Fuer die meisten SSZ-Tests ist dies ausreichend, aber fuer Tests nahe der natuerlichen Grenze (wo Xi ~ 0,8 und die Ableitungen gross sind) kann die numerische Praezision auf ~10^{-12} sinken. Dies wird durch Vergleich mit analytischen Loesungen (wo verfuegbar) und durch Variation der Schrittweite ueberprueft.
 
-**Modell-Unsicherheit:** Die Hermite-C2-Mischfunktion hat einen freien Parameter (die Breite der Mischzone $\Delta_{\text{r}}$). Die Standard-Wahl $\Delta_{\text{r}}$ = 0,5 $r_{s}$ wird durch Variation von $\Delta_{\text{r}}$ im Bereich 0,1-1,0 $r_{s}$ getestet. Die physikalischen Vorhersagen aendern sich um weniger als 0,1% ueber diesen Bereich, was die Insensitivitaet gegenueber der Mischzonenbreite bestaetigt.
+**Modell-Unsicherheit:** Die Hermite-C2-Mischfunktion hat einen freien Parameter (die Breite der Mischzone Delta_r). Die Standard-Wahl Delta_r = 0,5 r_s wird durch Variation von Delta_r im Bereich 0,1-1,0 r_s getestet. Die physikalischen Vorhersagen aendern sich um weniger als 0,1% ueber diesen Bereich, was die Insensitivitaet gegenueber der Mischzonenbreite bestaetigt.
 
 **Daten-Unsicherheit:** Die Beobachtungsdaten, die fuer die Validierung verwendet werden, haben eigene Unsicherheiten (Messfehler, systematische Effekte). Diese werden in den Tests als Toleranzen beruecksichtigt: Ein Test gilt als bestanden, wenn die SSZ-Vorhersage innerhalb der 3-Sigma-Unsicherheit der Beobachtung liegt.
 
@@ -11476,11 +11507,11 @@ Die Bayessche Analyse beruecksichtigt automatisch die Occam-Rasur: SSZ hat keine
 
 Die Cross-Repository-Integrationstests stellen sicher, dass die verschiedenen SSZ-Module konsistente Ergebnisse liefern. Die Methodik:
 
-**Schritt 1: Identische Eingabeparameter.** Alle Repositories verwenden dieselben physikalischen Konstanten (G, c, hbar) und dieselben SSZ-Parameter (phi, $D_{min}$, $\Xi_{\text{max}}$). Die Werte werden aus einer zentralen Konfigurationsdatei gelesen.
+**Schritt 1: Identische Eingabeparameter.** Alle Repositories verwenden dieselben physikalischen Konstanten (G, c, hbar) und dieselben SSZ-Parameter (phi, D_min, Xi_max). Die Werte werden aus einer zentralen Konfigurationsdatei gelesen.
 
 **Schritt 2: Kreuzvalidierung.** Fuer jede Observable (z.B. gravitative Rotverschiebung) wird das Ergebnis in mindestens zwei unabhaengigen Repositories berechnet und verglichen. Die Uebereinstimmung muss besser als 10^{-10} sein (numerische Praezision).
 
-**Schritt 3: Grenzfall-Tests.** Jede Formel wird in den Grenzfaellen getestet: (a) r -> unendlich (flacher Raum), (b) r -> $r_{s}$ (natuerliche Grenze), (c) r = r* (Regime-Uebergang). Die Ergebnisse muessen physikalisch sinnvoll sein (endlich, positiv, stetig).
+**Schritt 3: Grenzfall-Tests.** Jede Formel wird in den Grenzfaellen getestet: (a) r -> unendlich (flacher Raum), (b) r -> r_s (natuerliche Grenze), (c) r = r* (Regime-Uebergang). Die Ergebnisse muessen physikalisch sinnvoll sein (endlich, positiv, stetig).
 
 **Schritt 4: Regressionstests.** Jede Aenderung am Code wird durch die gesamte Testsuite geprueft. Wenn ein Test fehlschlaegt, wird die Aenderung zurueckgenommen und analysiert.
 
@@ -11519,7 +11550,7 @@ Die Fehlermodus-Analyse identifiziert moegliche Fehlerquellen in der SSZ-Validie
 Die automatisierten Regressionstests stellen sicher, dass Aenderungen am Code keine bestehenden Ergebnisse veraendern. Das System:
 
 1. **Continuous Integration (CI):** Jeder Git-Push loest automatisch die gesamte Testsuite aus (via GitHub Actions).
-2. **Schwellenwerte:** Jeder Test hat einen definierten Schwellenwert (z.B. |$\Delta_{\Xi}$/Xi| < 10^{-10}). Ueberschreitungen werden als Fehler gemeldet.
+2. **Schwellenwerte:** Jeder Test hat einen definierten Schwellenwert (z.B. |Delta_Xi/Xi| < 10^{-10}). Ueberschreitungen werden als Fehler gemeldet.
 3. **Benachrichtigung:** Bei Fehlern wird automatisch eine E-Mail an die Autoren gesendet.
 4. **Rollback:** Fehlgeschlagene Aenderungen werden automatisch zurueckgenommen.
 
@@ -11554,11 +11585,12 @@ Dieses Kapitel hat die Fehleranalyse und Reproduzierbarkeit der SSZ-Validierung 
 5. **Versionierung:** Semantische Versionierung mit Zenodo-DOI fuer permanente Archivierung.
 6. **Open Science:** Alle Codes, Daten und Methoden sind oeffentlich zugaenglich.
 
+---
 
-\newpage
+# Kapitel 29: Bekannte Limitierungen und offene Fragen
 
-# Bekannte Limitierungen und offene Fragen
-
+**Teil VIII — Validierung und Reproduzierbarkeit**
+**Status:** ERWEITERTE FASSUNG v2
 
 ---
 
@@ -11582,7 +11614,7 @@ Die offenen Probleme von SSZ lassen sich in drei Kategorien einteilen:
 
 **Kategorie A — Theoretische Lücken:** Fehlende Erweiterungen des Rahmenwerks. Dazu gehören: Rotation (Kerr-Analog), Kosmologie (Robertson-Walker-Analog), Quantisierung. Diese Lücken beeinträchtigen nicht die Schwachfeldvorhersagen, begrenzen aber die Anwendbarkeit im Starkfeld.
 
-**Kategorie B — Experimentelle Unsicherheiten:** Vorhersagen, die mit existierenden Daten nicht getestet werden können. Dazu gehören: z($r_{s}$) = 0,802, D($r_{s}$) = 0,555, Metrik-Perturbationen-Echos. Diese erfordern nächste Generation Instrumente.
+**Kategorie B — Experimentelle Unsicherheiten:** Vorhersagen, die mit existierenden Daten nicht getestet werden können. Dazu gehören: z(r_s) = 0,802, D(r_s) = 0,555, k₂ ~ 0,052. Diese erfordern nächste Generation Instrumente. Eine spezifische ungetestete Vorhersage betrifft den Radiobereich: SSZ sagt Thermalemission von der natürlichen Grenze im 1–10-GHz-Band voraus (α ≈ −0,1). Das 100-m-Radioteleskop Effelsberg (MPIfR Bonn) und die EPTA einschließlich der Universität Bielefeld könnten dies prinzipiell testen — bisher wurde keine gezielte Beobachtung durchgeführt.
 
 **Kategorie C — Konzeptionelle Fragen:** Fundamentale Fragen zur Interpretation. Dazu gehören: Was ist die physikalische Natur der Segmente? Gibt es eine Verbindung zur Quantengravitation? Ist die Zwei-Regime-Struktur fundamental oder emergent?
 
@@ -11603,9 +11635,9 @@ SSZ löst zwei der größten Probleme der ART (Singularitäten, Informationspara
 
 ## 29.1 Numerische Randfälle
 
-Acht Testfehlschläge existieren im ssz-lensing-Repository, alle in Wurzelfindungs-Präzisionstests innerhalb des Gravitationslinsen-Lösers bei kleinen Stoßparametern (b < 2$r_{s}$).
+Acht Testfehlschläge existieren im ssz-lensing-Repository, alle in Wurzelfindungs-Präzisionstests innerhalb des Gravitationslinsen-Lösers bei kleinen Stoßparametern (b < 2r_s).
 
-**Ursache:** SSZs Linsenformel erzeugt größere Ablenkungswinkel nahe der Photonensphäre als die ART, weil die SSZ-Photonensphäre etwas näher an r_s liegt (r_ph $\approx$ 1,48r_s vs. 1,50r_s). Die obere Klammer des Bisektionslösers, kalibriert für ART-Ablenkungswinkel, ist für die SSZ-Werte zu niedrig.
+**Ursache:** SSZs Linsenformel erzeugt größere Ablenkungswinkel nahe der Photonensphäre als die ART, weil die SSZ-Photonensphäre etwas näher an r_s liegt (r_ph ≈ 1,48r_s vs. 1,50r_s). Die obere Klammer des Bisektionslösers, kalibriert für ART-Ablenkungswinkel, ist für die SSZ-Werte zu niedrig.
 
 **Behebung:** Adaptive Klammerung. Dokumentiert, aber absichtlich nicht implementiert für **transparente Fehlschlag-Berichterstattung**.
 
@@ -11616,7 +11648,7 @@ Acht Testfehlschläge existieren im ssz-lensing-Repository, alle in Wurzelfindun
 Die Segmentdichte Ξ(r) erfüllt zwei Randbedingungen durch Konstruktion:
 
 - Ξ → 0 für r → ∞ (flache Raumzeit im Unendlichen)
-- Ξ → Ξ_max = 1 − e^{−φ} $\approx$ 0,802 für r → r_s (Sättigung)
+- Ξ → Ξ_max = 1 − e^{−φ} ≈ 0,802 für r → r_s (Sättigung)
 
 Diese Randbedingungen und Funktionalformen sind **Axiome** von SSZ, motiviert durch die φ-Geometrie aus Kapitel 3, aber nicht aus einem Variationsprinzip abgeleitet.
 
@@ -11628,14 +11660,14 @@ In der ART ist die Schwarzschild-Metrik die einzige kugelsymmetrische Vakuumlös
 
 ## 29.3 Die z → 0 Kosmologische Grenze
 
-Der Übergang von segmentierter zu flacher Raumzeit ist glatt: Ξ_weak = $r_{s}$/(2r) fällt als 1/r ab. Für Sonnensystemtests ist die systematische Unsicherheit vernachlässigbar. Für **kosmologische Photonenpfade** ist die Situation anders: Ein Photon, das Gigaparsec durchquert, passiert die schwachen Gravitationsfelder von Milliarden von Galaxien.
+Der Übergang von segmentierter zu flacher Raumzeit ist glatt: Ξ_weak = r_s/(2r) fällt als 1/r ab. Für Sonnensystemtests ist die systematische Unsicherheit vernachlässigbar. Für **kosmologische Photonenpfade** ist die Situation anders: Ein Photon, das Gigaparsec durchquert, passiert die schwachen Gravitationsfelder von Milliarden von Galaxien.
 
 Die fundamentale Frage: **Wie kombinieren sich Segmentdichten mehrerer Massen?**
 
 Drei Möglichkeiten:
 
 1. **Lineare Superposition:** Ξ_total = Σ Ξ_i. Einfach, aber kann die Schranke Ξ < 1 verletzen.
-2. **Multiplikative Komposition:** $D_{total}$ = Π $D_{i}$. Erhält die Schranke, ist aber nicht additiv.
+2. **Multiplikative Komposition:** D_total = Π D_i. Erhält die Schranke, ist aber nicht additiv.
 3. **Maximum-Regel:** Ξ_total = max(Ξ_i). Die stärkste Quelle dominiert. Einfach aber unstetig.
 
 SSZ spezifiziert derzeit nicht die Superpositionsregel — deshalb erstreckt sich die Theorie noch nicht auf Kosmologie.
@@ -11664,7 +11696,7 @@ SSZ operiert auf mesoskopischen Skalen (mm–km), nicht der Planck-Skala (10⁻�
 
 ### 4. Keine Rotation aus ersten Prinzipien (Strukturell)
 
-Die Kerr-SSZ-Metrik (Kapitel 7, 22) ersetzt $D_{ART}$ durch $D_{SSZ}$ in Boyer-Lindquist-Koordinaten. Physikalisch motiviert, aber nicht aus einer Wirkung mit Drehimpulskopplung abgeleitet.
+Die Kerr-SSZ-Metrik (Kapitel 7, 22) ersetzt D_ART durch D_SSZ in Boyer-Lindquist-Koordinaten. Physikalisch motiviert, aber nicht aus einer Wirkung mit Drehimpulskopplung abgeleitet.
 
 ### 5. Kein Mehrkörper-SSZ (Strukturell)
 
@@ -11674,7 +11706,7 @@ Für gut getrennte Massen entkoppeln Segmentdichtefelder. Für verschmelzende ko
 
 ### 6. Veraltete Formel (Historisch)
 
-Die Formel Ξ = ($r_{s}$/r)²·exp(−r/r_φ) ist **VERBOTEN** (Anhang B §B.9). Sie war eine frühe Näherung mit inkorrektem Verhalten bei großem und kleinem r.
+Die Formel Ξ = (r_s/r)²·exp(−r/r_φ) ist **VERBOTEN** (Anhang B §B.9). Sie war eine frühe Näherung mit inkorrektem Verhalten bei großem und kleinem r.
 
 ## 29.5 SSZ vs. ART: Vergleich offener Probleme
 
@@ -11684,10 +11716,10 @@ Die Formel Ξ = ($r_{s}$/r)²·exp(−r/r_φ) ist **VERBOTEN** (Anhang B §B.9).
 | Informationsparadoxon | Ungelöst (50+ J.) | Aufgelöst (D > 0) | **SSZ** |
 | Dunkle Energie | Unerklärtes Λ (angepasst) | Nicht adressiert | ART |
 | Quantengravitation | Inkompatibel mit QM | Nicht adressiert | Keiner |
-| Wirkungsprinzip | Einstein-Hilbert Y | Fehlt | **ART** |
-| Kosmologie | ΛCDM-Rahmenwerk Y | Nicht entwickelt | **ART** |
-| Mehrkörper | Numerische Relativität Y | Nicht entwickelt | **ART** |
-| Rotation | Kerr exakt Y | Kerr-SSZ (Ansatz) | **ART** |
+| Wirkungsprinzip | Einstein-Hilbert ✓ | Fehlt | **ART** |
+| Kosmologie | ΛCDM-Rahmenwerk ✓ | Nicht entwickelt | **ART** |
+| Mehrkörper | Numerische Relativität ✓ | Nicht entwickelt | **ART** |
+| Rotation | Kerr exakt ✓ | Kerr-SSZ (Ansatz) | **ART** |
 | Freie Parameter | Λ (1 angepasst) | 0 angepasst | **SSZ** |
 | Falsifizierbarkeit | Schwer (Λ anpassbar) | Stark (null Parameter) | **SSZ** |
 
@@ -11709,11 +11741,11 @@ Der Vergleich offenbart ein komplementäres Muster: ARTs Stärken (Wirkung, Kosm
 
 Das fehlende Kerr-Analog ist das dringendste offene Problem. Hier ist der aktuelle Stand der drei Ansaetze:
 
-**Newman-Janis-Algorithmus:** Der Algorithmus transformiert die statische SSZ-Metrik in eine rotierende Version durch die Substitution r -> r + ia*cos(theta) in komplexen Koordinaten. Das Ergebnis ist eine Metrik mit zwei Parametern (M, a), die im Schwachfeld (r >> $r_{s}$) in die Kerr-Metrik uebergeht. Im Starkfeld (r ~ $r_{s}$) unterscheidet sie sich: Es gibt keine Ringsingularitaet (weil D > 0), und die Ergoregion ist kleiner als in Kerr. Die Herausforderung: Die physikalische Interpretation der resultierenden Metrik ist nicht vollstaendig geklaert. Insbesondere ist unklar, ob die Metrik alle Vakuum-Feldgleichungen mit SSZ-Randbedingungen erfuellt.
+**Newman-Janis-Algorithmus:** Der Algorithmus transformiert die statische SSZ-Metrik in eine rotierende Version durch die Substitution r -> r + ia*cos(theta) in komplexen Koordinaten. Das Ergebnis ist eine Metrik mit zwei Parametern (M, a), die im Schwachfeld (r >> r_s) in die Kerr-Metrik uebergeht. Im Starkfeld (r ~ r_s) unterscheidet sie sich: Es gibt keine Ringsingularitaet (weil D > 0), und die Ergoregion ist kleiner als in Kerr. Die Herausforderung: Die physikalische Interpretation der resultierenden Metrik ist nicht vollstaendig geklaert. Insbesondere ist unklar, ob die Metrik alle Vakuum-Feldgleichungen mit SSZ-Randbedingungen erfuellt.
 
 **Perturbative Rotation:** Fuer langsam rotierende Objekte (a/M << 1) kann die Rotation als Stoerung der statischen SSZ-Metrik behandelt werden. In erster Ordnung in a: g_t_phi = -2GJsin^2(theta)/(c^2*r) * D(r). Dies reproduziert den Lense-Thirring-Effekt exakt. In zweiter Ordnung erscheinen Korrekturen zur Ergoregion und zum ISCO. Die perturbative Loesung ist vollstaendig ausgearbeitet und numerisch implementiert. Limitation: Nicht gueltig fuer schnell rotierende Schwarze Loecher (a/M > 0.5), die den Grossteil der beobachteten Population ausmachen.
 
-**Numerische Loesung:** Die Einstein-Gleichungen mit SSZ-Randbedingungen (D($r_{s}$) = 0.555, keine Singularitaet) werden auf einem 2D-Gitter (r, theta) geloest. Der Algorithmus verwendet Multigrid-Relaxation und konvergiert in ~100 Iterationen. Erste Ergebnisse: Die numerische Loesung stimmt mit der perturbativen Loesung fuer a/M < 0.3 ueberein und zeigt fuer a/M > 0.5 qualitativ neue Effekte (modifizierte Ergoregion, verschobener Photonen-Ring). Status: In Vorbereitung fuer Veroeffentlichung.
+**Numerische Loesung:** Die Einstein-Gleichungen mit SSZ-Randbedingungen (D(r_s) = 0.555, keine Singularitaet) werden auf einem 2D-Gitter (r, theta) geloest. Der Algorithmus verwendet Multigrid-Relaxation und konvergiert in ~100 Iterationen. Erste Ergebnisse: Die numerische Loesung stimmt mit der perturbativen Loesung fuer a/M < 0.3 ueberein und zeigt fuer a/M > 0.5 qualitativ neue Effekte (modifizierte Ergoregion, verschobener Photonen-Ring). Status: In Vorbereitung fuer Veroeffentlichung.
 
 ### Rechnerische Herausforderungen
 
@@ -11733,7 +11765,7 @@ Die langfristige Vision ist die Einbettung von SSZ in eine vollstaendige Quanten
 
 1. **Segmente als Quanten der Raumzeit:** Wenn die Segmente physikalisch real sind (nicht nur ein mathematisches Hilfsmittel), dann sind sie Kandidaten fuer die fundamentalen Raumzeit-Quanten. Die Segmentdichte Xi waere dann eine makroskopische Observable eines mikroskopischen Quantenzustands.
 
-2. **Entropie-Zusammenhang:** Die Bekenstein-Hawking-Entropie S = A/(4*$l_{P}$^2) kann in SSZ als S = N_segments uminterpretiert werden, wobei N_segments die Anzahl der Segmente auf der natuerlichen Grenze ist. Dies liefert eine mikroskopische Erklaerung fuer die Flaechenentropie.
+2. **Entropie-Zusammenhang:** Die Bekenstein-Hawking-Entropie S = A/(4*l_P^2) kann in SSZ als S = N_segments uminterpretiert werden, wobei N_segments die Anzahl der Segmente auf der natuerlichen Grenze ist. Dies liefert eine mikroskopische Erklaerung fuer die Flaechenentropie.
 
 3. **Holographisches Prinzip:** Die Tatsache, dass die SSZ-Entropie proportional zur Flaeche (nicht zum Volumen) ist, ist konsistent mit dem holographischen Prinzip (t'Hooft 1993, Susskind 1995).
 
@@ -11767,8 +11799,8 @@ Die offenen Probleme lassen sich nach Dringlichkeit priorisieren:
 
 SSZ macht mehrere falsifizierbare Vorhersagen:
 
-1. **z($r_{s}$) = 0,802:** Wenn ein Photon mit z > 1 von der Oberfläche eines kompakten Objekts detektiert wird, ist SSZ widerlegt.
-2. **D($r_{s}$) = 0,555:** Wenn Metrik-Perturbationen-Daten D($r_{s}$) = 0 erfordern (konsistent mit einem Ereignishorizont), ist SSZ widerlegt.
+1. **z(r_s) = 0,802:** Wenn ein Photon mit z > 1 von der Oberfläche eines kompakten Objekts detektiert wird, ist SSZ widerlegt.
+2. **D(r_s) = 0,555:** Wenn Metrik-Perturbationen-Daten D(r_s) = 0 erfordern (konsistent mit einem Ereignishorizont), ist SSZ widerlegt.
 3. **Keine Ringdown-Modifikation:** Wenn die Quasinormal-Moden von Schwarzen Löchern exakt mit der Kerr-Metrik übereinstimmen (ohne SSZ-Korrekturen), schwächt dies SSZ.
 
 Jede dieser Vorhersagen ist mit existierender oder geplanter Technologie testbar.
@@ -11800,11 +11832,11 @@ Diese Fragen sind offen und erfordern wesentliche theoretische Arbeit.
 Die offenen Probleme in SSZ koennen nach Dringlichkeit und Machbarkeit priorisiert werden:
 
 **Prioritaet 1 (kurzfristig, 1-3 Jahre):**
-- Kerr-Analog: Erweiterung der SSZ-Metrik auf rotierende kompakte Objekte. Ansaetze: perturbative Erweiterung (Newman-Janis), numerische Loesung, slow-rotation-Approximation. Erforderlich fuer den Vergleich mit EHT-Daten und observational campaigns-Wellenformen.
+- Kerr-Analog: Erweiterung der SSZ-Metrik auf rotierende kompakte Objekte. Ansaetze: perturbative Erweiterung (Newman-Janis), numerische Loesung, slow-rotation-Approximation. Erforderlich fuer den Vergleich mit EHT-Daten und Metrik-Perturbationen-Wellenformen.
 - Neutronenstern-Zustandsgleichung: Integration der SSZ-Metrik mit realistischen Zustandsgleichungen fuer dichte Materie. Erforderlich fuer den Vergleich mit NICER-Messungen von Neutronenstern-Radien und -Massen.
 
 **Prioritaet 2 (mittelfristig, 3-7 Jahre):**
-- Schleifenkorrekturen zu alpha: Berechnung der fuehrenden Quantenkorrektur zur Feinstrukturkonstante. Erfordert eine vollstaendige Quantisierung des Segmentgitters. Koennte die 0,032%-Diskrepanz zwischen $\alpha_{\text{SSZ}}$ und $\alpha_{\text{exp}}$ erklaeren.
+- Schleifenkorrekturen zu alpha: Berechnung der fuehrenden Quantenkorrektur zur Feinstrukturkonstante. Erfordert eine vollstaendige Quantisierung des Segmentgitters. Koennte die 0,032%-Diskrepanz zwischen alpha_SSZ und alpha_exp erklaeren.
 - Kosmologische Erweiterung: Anwendung von SSZ auf kosmologische Skalen. Fragen: Gibt es ein SSZ-Analog der kosmologischen Konstante? Wie verhaelt sich Xi auf Hubble-Skalen?
 
 **Prioritaet 3 (langfristig, 7+ Jahre):**
@@ -11815,15 +11847,15 @@ Die offenen Probleme in SSZ koennen nach Dringlichkeit und Machbarkeit priorisie
 
 SSZ ist falsifizierbar. Die folgenden Beobachtungen wuerden SSZ widerlegen:
 
-1. **D($r_{s}$) = 0:** Wenn gezeigt wird, dass der Zeitdilatationsfaktor am Schwarzschild-Radius exakt null ist (nicht 0,555), ist SSZ falsifiziert. Testbar mit LISA EMRIs.
+1. **D(r_s) = 0:** Wenn gezeigt wird, dass der Zeitdilatationsfaktor am Schwarzschild-Radius exakt null ist (nicht 0,555), ist SSZ falsifiziert. Testbar mit LISA EMRIs.
 
-2. **$\alpha_{\text{SSZ}}$ weicht um >1% ab:** Wenn praezisere Berechnungen zeigen, dass $\alpha_{\text{SSZ}}$ (einschliesslich Schleifenkorrekturen) um mehr als 1% vom experimentellen Wert abweicht, ist die geometrische Ableitung falsifiziert.
+2. **alpha_SSZ weicht um >1% ab:** Wenn praezisere Berechnungen zeigen, dass alpha_SSZ (einschliesslich Schleifenkorrekturen) um mehr als 1% vom experimentellen Wert abweicht, ist die geometrische Ableitung falsifiziert.
 
 3. **Nackte Singularitaeten:** Wenn eine nackte Singularitaet beobachtet wird (was in SSZ unmoeglich ist), ist SSZ falsifiziert.
 
-4. **$\gamma_{\text{PPN}}$ != 1:** Wenn der PPN-Parameter gamma signifikant von 1 abweicht (aktuelle Schranke: |gamma-1| < 2,3 x 10^{-5}), sind sowohl ART als auch SSZ falsifiziert.
+4. **gamma_PPN != 1:** Wenn der PPN-Parameter gamma signifikant von 1 abweicht (aktuelle Schranke: |gamma-1| < 2,3 x 10^{-5}), sind sowohl ART als auch SSZ falsifiziert.
 
-5. **Verletzung der Abschliessungsrelation:** Wenn $v_{esc}$ x $v_{fall}$ != c^2 fuer ein astrophysikalisches System gemessen wird, ist SSZ falsifiziert.
+5. **Verletzung der Abschliessungsrelation:** Wenn v_esc x v_fall != c^2 fuer ein astrophysikalisches System gemessen wird, ist SSZ falsifiziert.
 
 Die Staerke dieser Falsifikationskriterien liegt darin, dass sie spezifisch und quantitativ sind. SSZ macht keine vagen Vorhersagen, die nachtraeglich angepasst werden koennen — jede Vorhersage ist eine exakte Zahl (oder ein exaktes Verhaeltnis), die mit Beobachtungen verglichen werden kann.
 
@@ -11831,11 +11863,11 @@ Die Staerke dieser Falsifikationskriterien liegt darin, dass sie spezifisch und 
 
 Die Verbindung zwischen SSZ und der Quantengravitation ist eines der faszinierendsten offenen Probleme. Das Segmentgitter hat Eigenschaften, die an diskrete Raumzeitstrukturen in der Schleifenquantengravitation (LQG) erinnern:
 
-**Diskretheit:** Das Segmentgitter hat eine minimale Laengenskala (bestimmt durch $r_{s}$), aehnlich wie die Planck-Laenge in der LQG. Allerdings ist die SSZ-Skala massenabhaengig ($r_{s}$ = 2GM/c^2), waehrend die Planck-Laenge universell ist ($l_{P}$ = sqrt(hbar G/c^3) = 1,6 x 10^{-35} m).
+**Diskretheit:** Das Segmentgitter hat eine minimale Laengenskala (bestimmt durch r_s), aehnlich wie die Planck-Laenge in der LQG. Allerdings ist die SSZ-Skala massenabhaengig (r_s = 2GM/c^2), waehrend die Planck-Laenge universell ist (l_P = sqrt(hbar G/c^3) = 1,6 x 10^{-35} m).
 
 **Endlichkeit:** Die Segmentdichte Xi ist ueberall endlich (Maximum 0,802), was Singularitaeten verhindert. In der LQG wird die Singularitaet durch einen Quantenbounce bei der Planck-Dichte aufgeloest. Beide Ansaetze erreichen dasselbe Ziel (Singularitaetsfreiheit) auf verschiedenen Wegen.
 
-**Holographisches Prinzip:** Die Entropie der natuerlichen Grenze S = A/(4 $l_{P}$^2) ist proportional zur Flaeche, nicht zum Volumen. Dies ist konsistent mit dem holographischen Prinzip ('t Hooft, Susskind), das besagt, dass die maximale Entropie einer Region proportional zu ihrer Oberflaechenflaeche ist.
+**Holographisches Prinzip:** Die Entropie der natuerlichen Grenze S = A/(4 l_P^2) ist proportional zur Flaeche, nicht zum Volumen. Dies ist konsistent mit dem holographischen Prinzip ('t Hooft, Susskind), das besagt, dass die maximale Entropie einer Region proportional zu ihrer Oberflaechenflaeche ist.
 
 Eine vollstaendige Quantisierung des Segmentgitters wuerde erfordern: (1) Definition eines Hilbert-Raums der Segmentzustaende, (2) Konstruktion eines Hamilton-Operators, der die Dynamik des Gitters beschreibt, (3) Berechnung der Quantenkorrekturen zu den klassischen SSZ-Vorhersagen. Dies ist ein Mehrjahresprojekt, das Expertise in mathematischer Physik und Quantenfeldtheorie erfordert.
 
@@ -11857,7 +11889,7 @@ Die numerische Loesung der SSZ-Feldgleichungen fuer dynamische Raumzeiten (z.B. 
 
 **Anfangsdaten:** Die Konstruktion konsistenter Anfangsdaten (die die Constraint-Gleichungen erfuellen) ist in SSZ komplizierter als in der ART, weil die Mischfunktion (Hermite-C2) zusaetzliche Bedingungen an die Anfangsdaten stellt.
 
-**Zeitintegration:** Die Zeitintegration der SSZ-Gleichungen erfordert adaptive Schrittweiten, weil die Segmentdichte Xi sich nahe der natuerlichen Grenze schnell aendert. Standard-Methoden (Runge-Kutta 4. Ordnung) sind ausreichend, aber die Schrittweite muss in der Naehe von r = $r_{s}$ um den Faktor ~$D_{min}$ = 0,555 reduziert werden.
+**Zeitintegration:** Die Zeitintegration der SSZ-Gleichungen erfordert adaptive Schrittweiten, weil die Segmentdichte Xi sich nahe der natuerlichen Grenze schnell aendert. Standard-Methoden (Runge-Kutta 4. Ordnung) sind ausreichend, aber die Schrittweite muss in der Naehe von r = r_s um den Faktor ~D_min = 0,555 reduziert werden.
 
 **Metrik-Perturbationen-Extraktion:** Die Extraktion von Metrik-Perturbationen aus der numerischen Loesung erfolgt durch Berechnung des Newman-Penrose-Skalars Psi_4 auf einer Extraktionsflaeche weit vom Quellgebiet. In SSZ ist Psi_4 durch die SSZ-Metrik modifiziert, was eine Anpassung der Standard-Extraktionsroutinen erfordert.
 
@@ -11865,21 +11897,21 @@ Die numerische Loesung der SSZ-Feldgleichungen fuer dynamische Raumzeiten (z.B. 
 
 Fuer Systeme mit vielen Koerpern (z.B. Sternhaufen um supermassive Schwarze Loecher) werden N-Koerper-Simulationen verwendet. Die SSZ-Korrekturen koennen als post-Newtonsche Terme in die Bewegungsgleichungen eingebaut werden:
 
-$a_{SSZ}$ = $a_{Newton}$ * (1 + $\epsilon_{\text{SSZ}}$(r))
+a_SSZ = a_Newton * (1 + epsilon_SSZ(r))
 
-wobei $\epsilon_{\text{SSZ}}$(r) = Xi(r) * (1 + 2 Xi(r)) die SSZ-Korrektur ist. Im Schwachfeld (Xi << 1) ist $\epsilon_{\text{SSZ}}$ ~ Xi ~ $r_{s}$/(2r), was der fuehrenden post-Newtonschen Korrektur entspricht.
+wobei epsilon_SSZ(r) = Xi(r) * (1 + 2 Xi(r)) die SSZ-Korrektur ist. Im Schwachfeld (Xi << 1) ist epsilon_SSZ ~ Xi ~ r_s/(2r), was der fuehrenden post-Newtonschen Korrektur entspricht.
 
-Fuer Sterne nahe Sgr A* (r ~ 100-1000 $r_{s}$) betraegt die SSZ-Korrektur $\epsilon_{\text{SSZ}}$ ~ 0,001-0,01, was die Orbitaldynamik ueber Jahrzehnte messbar beeinflusst. Die GRAVITY-Kollaboration am VLT verfolgt die Orbits von ~30 S-Sternen nahe Sgr A* und koennte die SSZ-Korrektur in den naechsten 10-20 Jahren detektieren.
+Fuer Sterne nahe Sgr A* (r ~ 100-1000 r_s) betraegt die SSZ-Korrektur epsilon_SSZ ~ 0,001-0,01, was die Orbitaldynamik ueber Jahrzehnte messbar beeinflusst. Die GRAVITY-Kollaboration am VLT verfolgt die Orbits von ~30 S-Sternen nahe Sgr A* und koennte die SSZ-Korrektur in den naechsten 10-20 Jahren detektieren.
 
 ### Kosmologische Implikationen von SSZ
 
 SSZ ist primaer eine Theorie der lokalen Gravitation (um kompakte Objekte). Die Erweiterung auf kosmologische Skalen ist ein offenes Problem. Die wichtigsten Fragen:
 
-**Friedmann-Gleichungen:** Die Friedmann-Gleichungen beschreiben die Expansion des Universums. In der ART folgen sie aus den Einstein-Gleichungen mit einer homogenen, isotropen Metrik (FLRW-Metrik). In SSZ muessten die Friedmann-Gleichungen aus der SSZ-Metrik abgeleitet werden. Da die SSZ-Metrik im Schwachfeld mit der Schwarzschild-Metrik identisch ist, und die kosmologische Expansion ein Schwachfeld-Phaenomen ist ($\Xi_{\text{cosmo}}$ ~ 10^{-5}), sind die SSZ-Friedmann-Gleichungen voraussichtlich identisch mit den Standard-Friedmann-Gleichungen.
+**Friedmann-Gleichungen:** Die Friedmann-Gleichungen beschreiben die Expansion des Universums. In der ART folgen sie aus den Einstein-Gleichungen mit einer homogenen, isotropen Metrik (FLRW-Metrik). In SSZ muessten die Friedmann-Gleichungen aus der SSZ-Metrik abgeleitet werden. Da die SSZ-Metrik im Schwachfeld mit der Schwarzschild-Metrik identisch ist, und die kosmologische Expansion ein Schwachfeld-Phaenomen ist (Xi_cosmo ~ 10^{-5}), sind die SSZ-Friedmann-Gleichungen voraussichtlich identisch mit den Standard-Friedmann-Gleichungen.
 
 **Dunkle Energie:** Die beschleunigte Expansion des Universums wird in der ART durch eine kosmologische Konstante Lambda erklaert. In SSZ koennte die beschleunigte Expansion eine alternative Erklaerung haben: Die kumulative Wirkung der Segmentdichte ueber kosmologische Distanzen koennte eine effektive Abstossung erzeugen. Diese Hypothese ist spekulativ und erfordert eine vollstaendige kosmologische Formulierung von SSZ.
 
-**Dunkle Materie:** SSZ modifiziert die Gravitation nur im Starkfeld (r ~ $r_{s}$). Auf galaktischen Skalen (r >> $r_{s}$ fuer alle beteiligten Massen) ist SSZ identisch mit der ART, und das Dunkle-Materie-Problem bleibt bestehen. SSZ bietet keine Alternative zur Dunklen Materie.
+**Dunkle Materie:** SSZ modifiziert die Gravitation nur im Starkfeld (r ~ r_s). Auf galaktischen Skalen (r >> r_s fuer alle beteiligten Massen) ist SSZ identisch mit der ART, und das Dunkle-Materie-Problem bleibt bestehen. SSZ bietet keine Alternative zur Dunklen Materie.
 
 **Kosmische Mikrowellenhintergrundstrahlung (CMB):** Die Anisotropien des CMB werden durch Dichtefluktuationen im fruehen Universum erzeugt. Da SSZ im Schwachfeld mit der ART identisch ist, sind die CMB-Vorhersagen von SSZ identisch mit denen der ART.
 
@@ -11897,7 +11929,7 @@ wobei lambda ein affiner Parameter ist. Die Christoffel-Symbole Gamma enthalten 
 
 Die wichtigsten Ray-Tracing-Ergebnisse fuer SSZ:
 
-- **Schattenradius:** r_shadow_SSZ = 2,60 $r_{s}$ (vs. 2,60 $r_{s}$ in ART fuer a=0) -- die Differenz betraegt 0,987, also ~1,3%.
+- **Schattenradius:** r_shadow_SSZ = 2,60 r_s (vs. 2,60 r_s in ART fuer a=0) -- die Differenz betraegt 0,987, also ~1,3%.
 - **Photonring:** Der Photonring (die helle Ringstruktur im EHT-Bild) ist in SSZ ~2% breiter als in der ART.
 - **Lensing-Ring:** Der sekundaere Lensing-Ring (n=2) ist in SSZ ~5% schwaecher als in der ART.
 
@@ -11909,7 +11941,7 @@ Diese Unterschiede sind mit dem ngEHT (ab ~2028) potenziell messbar.
 
 Dieses Kapitel hat die numerischen Methoden und Simulationen fuer SSZ dargestellt. Die wichtigsten Ergebnisse:
 
-1. **Ray-Tracing:** Schattenradius 0,987 * $\theta_{\text{GR}}$, Photonring ~2% breiter, Lensing-Ring ~5% schwaecher.
+1. **Ray-Tracing:** Schattenradius 0,987 * theta_GR, Photonring ~2% breiter, Lensing-Ring ~5% schwaecher.
 2. **N-Body-Simulationen:** SSZ-Korrekturen fuer Sternhaufen nahe supermassiven Schwarzen Loechern.
 3. **Kosmologische Implikationen:** SSZ ist im Schwachfeld identisch mit ART; keine Alternative zu Dunkler Materie.
 4. **Offene Probleme:** Kosmologische Erweiterung, Dunkle Energie, vollstaendige Kerr-Analog-Metrik.
@@ -11928,16 +11960,18 @@ Die numerischen Simulationen in SSZ erfordern sorgfaeltige Konvergenzanalysen:
 
 **Gitterkonvergenz:** Die Ergebnisse muessen bei Verfeinerung des numerischen Gitters konvergieren. Typische Konvergenzordnung: 4. Ordnung fuer Runge-Kutta-Integratoren, 2. Ordnung fuer finite Differenzen.
 
-**Zeitschrittkonvergenz:** Der Zeitschritt muss die CFL-Bedingung (Courant-Friedrichs-Lewy) erfuellen: $\Delta_{\text{t}}$ < $\Delta_{\text{r}}$ / $c_{max}$. In SSZ ist $c_{max}$ = c (Lichtgeschwindigkeit), sodass die CFL-Bedingung identisch mit der ART ist.
+**Zeitschrittkonvergenz:** Der Zeitschritt muss die CFL-Bedingung (Courant-Friedrichs-Lewy) erfuellen: Delta_t < Delta_r / c_max. In SSZ ist c_max = c (Lichtgeschwindigkeit), sodass die CFL-Bedingung identisch mit der ART ist.
 
 **Rundungsfehler:** Bei Berechnungen nahe der natuerlichen Grenze (D ~ 0,555) koennen Rundungsfehler signifikant werden. Die SSZ-Codes verwenden daher doppelte Praezision (64-bit) und gelegentlich vierfache Praezision (128-bit) fuer kritische Berechnungen.
 
 **Validierung:** Jede numerische Simulation wird gegen analytische Loesungen validiert (wo verfuegbar) und gegen unabhaengige Codes gegengeprüft.
 
+---
 
-\newpage
+# Kapitel 30: Falsifizierbare Vorhersagen und Beobachtungstests
 
-# Falsifizierbare Vorhersagen und Beobachtungstests
+**Teil VIII — Validierung und Reproduzierbarkeit**
+**Status:** ERWEITERTE FASSUNG
 
 
 ![Abb](figures/ch30_predictions/fig_30_01_prediction_timeline.png)
@@ -11962,16 +11996,16 @@ Dieses Kapitel ist das wichtigste im Buch. Alles, was in Kapiteln 1–29 entwick
 
 | Test | ART-Vorhersage | SSZ-Vorhersage | Beobachtung | Übereinstimmung |
 |------|---------------|----------------|-------------|-----------------|
-| GPS-Zeitdilatation | 45,9 μs/Tag | 45,9 μs/Tag | 45,9 μs/Tag | Beide Y |
-| Pound-Rebka | 2,46×10⁻¹⁵ | 2,46×10⁻¹⁵ | (2,57±0,26)×10⁻¹⁵ | Beide Y |
-| Cassini Shapiro | 131,5 μs | 131,4 μs | 131,5±0,1 μs | Beide Y |
-| Lichtablenkung | 1,7505'' | 1,7505'' | 1,7504±0,0018'' | Beide Y |
-| Merkur-Perihel | 42,98''/Jhdt | 42,98''/Jhdt | 42,98±0,04''/Jhdt | Beide Y |
-| GW170817 v_GW | c | c | |c_GW−c|/c < 10⁻¹⁵ | Beide Y |
-| GRB 090510 Dispersion | 0 | 0 | Δv/c < 4×10⁻¹⁸ | Beide Y |
+| GPS-Zeitdilatation | 45,9 μs/Tag | 45,9 μs/Tag | 45,9 μs/Tag | Beide ✓ |
+| Pound-Rebka | 2,46×10⁻¹⁵ | 2,46×10⁻¹⁵ | (2,57±0,26)×10⁻¹⁵ | Beide ✓ |
+| Cassini Shapiro | 131,5 μs | 131,4 μs | 131,5±0,1 μs | Beide ✓ |
+| Lichtablenkung | 1,7505'' | 1,7505'' | 1,7504±0,0018'' | Beide ✓ |
+| Merkur-Perihel | 42,98''/Jhdt | 42,98''/Jhdt | 42,98±0,04''/Jhdt | Beide ✓ |
+| GW170817 v_GW | c | c | |c_GW−c|/c < 10⁻¹⁵ | Beide ✓ |
+| GRB 090510 Dispersion | 0 | 0 | Δv/c < 4×10⁻¹⁸ | Beide ✓ |
 | z(r_s) | ∞ | 0,802 | Nicht gemessen | Offen |
 | D(r_s) | 0 | 0,555 | Nicht gemessen | Offen |
-| GW-Echos | Keine | Δt $\approx$ 0,6 r_s/c | Nicht detektiert | Offen |
+| Love-Zahl k_2 | 0 | 0,052 | Nicht gemessen | Offen |
 
 Die ersten sieben Tests sind Schwachfeldtests, in denen SSZ und ART identische Vorhersagen machen. Die letzten drei sind Starkfeldtests, in denen SSZ und ART sich unterscheiden — aber die Beobachtungen fehlen noch.
 
@@ -11985,22 +12019,22 @@ SSZ macht vier Vorhersagen, die quantitativ von der ART abweichen:
 
 ### Vorhersage 1: Neutronenstern-Oberflächenrotverschiebung (+13%)
 
-SSZ sagt vorher, dass die gravitative Rotverschiebung von Neutronensternoberflächen **13% höher** ist als die ART für dieselbe Masse und denselben Radius vorhersagt. Dies entsteht, weil $D_{SSZ}$(r) < $D_{ART}$(r) im Starkfeld (r/r_s ~ 3–6).
+SSZ sagt vorher, dass die gravitative Rotverschiebung von Neutronensternoberflächen **13% höher** ist als die ART für dieselbe Masse und denselben Radius vorhersagt. Dies entsteht, weil D_SSZ(r) < D_ART(r) im Starkfeld (r/r_s ~ 3–6).
 
-$$z_{\text{SSZ}} = \frac{1}{D_{\text{SSZ}}(R_{\text{NS}})} - 1 \approx 1,13 \times z_{\text{ART}}$$
+z_{\text{SSZ}} = \frac{1}{D_{\text{SSZ}}(R_{\text{NS}})} - 1 \approx 1,13 \times z_{\text{ART}}
 
-Für einen typischen Neutronenstern (M = 1,4 M_$\odot$, R = 12 km, r/r_s $\approx$ 2,9):
+Für einen typischen Neutronenstern (M = 1,4 M_☉, R = 12 km, r/r_s ≈ 2,9):
 
-- ART: z_ART $\approx$ 0,306
-- SSZ: z_SSZ $\approx$ 0,346
+- ART: z_ART ≈ 0,306
+- SSZ: z_SSZ ≈ 0,346
 
-Die Differenz Δz/z $\approx$ +13% liegt in Reichweite der erweiterten NICER-Mission (2025–2027), die Oberflächenrotverschiebungen durch Röntgen-Pulsprofil-Modellierung mit ~5% Präzision misst.
+Die Differenz Δz/z ≈ +13% liegt in Reichweite der erweiterten NICER-Mission (2025–2027), die Oberflächenrotverschiebungen durch Röntgen-Pulsprofil-Modellierung mit ~5% Präzision misst.
 
 ### Vorhersage 2: Schwarze-Loch-Schattendurchmesser (−1,3%)
 
-Die SSZ-Photonensphäre liegt bei r_ph $\approx$ 1,48 r_s (verglichen mit 1,50 r_s in der ART). Dies verschiebt den kritischen Stoßparameter für Photoneneinfang und erzeugt einen Schatten, der **1,3% kleiner** ist als die ART vorhersagt.
+Die SSZ-Photonensphäre liegt bei r_ph ≈ 1,48 r_s (verglichen mit 1,50 r_s in der ART). Dies verschiebt den kritischen Stoßparameter für Photoneneinfang und erzeugt einen Schatten, der **1,3% kleiner** ist als die ART vorhersagt.
 
-$$\theta_{\text{SSZ}} \approx 0,987 \times \theta_{\text{ART}}$$
+\theta_{\text{SSZ}} \approx 0,987 \times \theta_{\text{ART}}
 
 Aktuelle EHT-Präzision: ~10% (unzureichend). Das ngEHT (2027–2030) zielt auf < 1% Präzision ab.
 
@@ -12008,7 +12042,7 @@ Aktuelle EHT-Präzision: ~10% (unzureichend). Das ngEHT (2027–2030) zielt auf 
 
 SSZ modifiziert den gravitativen Zeitverzögerungsbeitrag zu Pulsar-Timing-Modellen:
 
-$$\dot{P}_{\text{SSZ}} \approx 1,30 \times \dot{P}_{\text{ART}}$$
+\dot{P}_{\text{SSZ}} \approx 1,30 \times \dot{P}_{\text{ART}}
 
 NANOGravs 15-Jahres-Datensatz und sein Nachfolger (das International Pulsar Timing Array) sind empfindlich für dieses Korrekturniveau.
 
@@ -12023,7 +12057,7 @@ Die einzige bereits getestete Vorhersage: 6 unabhängige Vorhersagen für den LB
 | 1 | NS-Oberfläche z | +13% | Standard | +13% | NICER | 2025–2027 |
 | 2 | SL-Schatten θ | −1,3% | Standard | −1,3% | ngEHT | 2027–2030 |
 | 3 | Pulsar Ṗ | +30% | Standard | +30% | NANOGrav | laufend |
-| 4 | G79-Zonen | 6/6 Y | N/A | — | Archiv | erledigt |
+| 4 | G79-Zonen | 6/6 ✓ | N/A | — | Archiv | erledigt |
 
 ## 30.2 Vorzeichenvorhersagen
 
@@ -12059,7 +12093,7 @@ SSZ ist falsifiziert, wenn eines der Folgenden beobachtet wird:
 
 **3.** Eine echte Singularitätssignatur wird beobachtet — unendliche Krümmung aus Metrik-Perturbationen abgeleitet.
 
-**4.** D($r_{s}$) wird als exakt 0 gemessen — vollständiger Zeitstillstand am Horizont, durch mehrere unabhängige Methoden bestätigt.
+**4.** D(r_s) wird als exakt 0 gemessen — vollständiger Zeitstillstand am Horizont, durch mehrere unabhängige Methoden bestätigt.
 
 **Jedes einzelne** dieser Ergebnisse würde eine fundamentale Revision von SSZ erfordern. Die Theorie hat keine anpassbaren Parameter, die widersprüchliche Beobachtungen auffangen könnten — sie funktioniert entweder oder sie funktioniert nicht.
 
@@ -12079,15 +12113,15 @@ Die SSZ-Autoren verpflichten sich im Voraus, Ergebnis (1) zu akzeptieren, wenn e
 
 | # | Formel | Bereich |
 |---|---------|--------|
-| 1 | z_SSZ $\approx$ 1,13 × z_ART | NS-Rotverschiebungsvorhersage |
-| 2 | θ_SSZ $\approx$ 0,987 × θ_ART | SL-Schattenvorhersage |
-| 3 | Ṗ_SSZ $\approx$ 1,30 × Ṗ_ART | Pulsar-Timing |
+| 1 | z_SSZ ≈ 1,13 × z_ART | NS-Rotverschiebungsvorhersage |
+| 2 | θ_SSZ ≈ 0,987 × θ_ART | SL-Schattenvorhersage |
+| 3 | Ṗ_SSZ ≈ 1,30 × Ṗ_ART | Pulsar-Timing |
 
 ---
 
 ### Kapitelzusammenfassung und Abschluss
 
-Dieses Kapitel sammelte alle falsifizierbaren Vorhersagen von SSZ, organisiert nach beobachtungsmäßiger Zugänglichkeit. Der zugänglichste Test ist die Neutronenstern-Oberflächenrotverschiebungskorrektur (+13% relativ zur ART), testbar mit NICER. Der dramatischste Test ist die endliche Zeitdilatation bei $r_{s}$ ($D_{min}$ = 0,555), die Next-Generation-Instrumente erfordert.
+Dieses Kapitel sammelte alle falsifizierbaren Vorhersagen von SSZ, organisiert nach beobachtungsmäßiger Zugänglichkeit. Der zugänglichste Test ist die Neutronenstern-Oberflächenrotverschiebungskorrektur (+13% relativ zur ART), testbar mit NICER. Der dramatischste Test ist die endliche Zeitdilatation bei r_s (D_min = 0,555), die Next-Generation-Instrumente erfordert.
 
 Die hier präsentierten Vorhersagen sind der ultimative Test des SSZ-Rahmenwerks. Wenn sie bestätigt werden, wird das Segmentdichte-Konzept ein etabliertes Werkzeug der Gravitationsphysik. Wenn sie widerlegt werden, muss das Rahmenwerk modifiziert oder aufgegeben werden. Beide Ergebnisse treiben die Wissenschaft voran. Dies ist das definierende Merkmal einer falsifizierbaren wissenschaftlichen Theorie.
 
@@ -12095,14 +12129,14 @@ Die hier präsentierten Vorhersagen sind der ultimative Test des SSZ-Rahmenwerks
 
 Zur Referenz sammelt dieser Abschnitt alle quantitativen SSZ-Vorhersagen in einer einzigen Liste:
 
-- **Segmentdichte bei $r_{s}$:** Ξ($r_{s}$) = 0,802 (aus Ξ_strong = 1 − exp(−φ))
-- **Zeitdilatation bei $r_{s}$:** $D_{min}$ = 1/(1+0,802) = 0,555 (endlich, vs. 0 in ART)
+- **Segmentdichte bei r_s:** Ξ(r_s) = 0,802 (aus Ξ_strong = 1 − exp(−φ))
+- **Zeitdilatation bei r_s:** D_min = 1/(1+0,802) = 0,555 (endlich, vs. 0 in ART)
 - **Feinstrukturkonstante (Baumniveau):** α_SSZ = 1/137,08 (vs. experimentell 1/137,036)
 - **Kopplungsradius:** r_φ/r_s = φ/2 = 0,809 (universell, massenunabhängig)
 - **Regime-Schnittpunkt:** r*/r_s = 1,387 (Starkfeld-Schnittpunkt mit ART-D-Faktor)
-- **Neutronenstern-Rotverschiebung (1,4 M$\odot$, 12 km):** z_SSZ = 0,172 (vs. z_ART = 0,235, Differenz −27%)
+- **Neutronenstern-Rotverschiebung (1,4 M☉, 12 km):** z_SSZ = 0,172 (vs. z_ART = 0,235, Differenz −27%)
 - **Schwarzlochschatten-Korrektur:** −1,3% relativ zur ART (Sgr A*)
-- **Hawking-Temperatur-Korrektur:** $T_{SSZ}$ = 0,308 $T_{ART}$ (Faktor $D_{min}$²)
+- **Hawking-Temperatur-Korrektur:** T_SSZ = 0,308 T_ART (Faktor D_min²)
 - **Strahlungseffizienz (Schwarzschild):** η_SSZ = 0,063 (vs. η_ART = 0,057, +10%)
 - **QNM-Frequenzverschiebung:** ~+3% relativ zur ART (Fundamentalmode)
 - **Superradianter Regulator:** η = 0,05 für optimales Massenverhältnis (95% Unterdrückung)
@@ -12114,7 +12148,7 @@ Jede dieser Vorhersagen ist parameterfrei (abgeleitet aus φ, π, N_0 und der Ob
 
 Die mächtigsten Tests von SSZ werden aus Multi-Messenger-Beobachtungen kommen — gleichzeitige Detektion von elektromagnetischer Strahlung, Metrik-Perturbationen und (potenziell) Neutrinos vom selben astrophysikalischen Ereignis.
 
-Das Prototyp-Multi-Messenger-Ereignis ist die Binärneutronenstern-Verschmelzung GW170817, detektiert in Metrik-Perturbationen (observational), Gammastrahlen (Fermi, INTEGRAL), optisch/infrarot (Dutzende bodengestützte Teleskope) und Radio (VLA). Dieses Ereignis lieferte die Einschränkung, dass Metrik-Perturbationen und elektromagnetische Wellen mit derselben Geschwindigkeit reisen (auf 10⁻¹⁵), was SSZ automatisch erfüllt.
+Das Prototyp-Multi-Messenger-Ereignis ist die Binärneutronenstern-Verschmelzung GW170817, detektiert in Metrik-Perturbationen (GW-Detektoren), Gammastrahlen (Fermi, INTEGRAL), optisch/infrarot (Dutzende bodengestützte Teleskope) und Radio (VLA). Dieses Ereignis lieferte die Einschränkung, dass Metrik-Perturbationen und elektromagnetische Wellen mit derselben Geschwindigkeit reisen (auf 10⁻¹⁵), was SSZ automatisch erfüllt.
 
 Zukünftige Multi-Messenger-Ereignisse könnten viel stärkere SSZ-Tests liefern. Eine Neutronenstern-Schwarzes-Loch-Verschmelzung, detektiert in Metrik-Perturbationen und elektromagnetischer Strahlung, würde liefern: (1) Masse und Spin des Schwarzen Lochs (aus dem GW-Inspiral), (2) Gezeitendeformierbarkeit des Neutronensterns (aus dem späten Inspiral), (3) elektromagnetisches Spektrum der Kilonova (aus dem optischen/infraroten Nachglühen), und (4) Jet-Eigenschaften (aus dem Radio- und Röntgen-Nachglühen). Jede dieser Observablen hat eine spezifische SSZ-Vorhersage, die sich von der ART-Vorhersage unterscheidet.
 
@@ -12145,23 +12179,23 @@ Dieses Buch ist eine Einladung an die Physikgemeinschaft, SSZ zu prüfen, zu tes
 ### Zusammenfassung der SSZ-Vorhersagen nach Zeitrahmen
 
 **Bereits bestätigt (Schwachfeld):**
-- GPS-Zeitdilatation: Y
-- Pound-Rebka-Rotverschiebung: Y
-- Cassini Shapiro-Delay: Y
-- Lichtablenkung: Y
-- Merkur-Periheldrehung: Y
-- GW170817 Geschwindigkeitsgleichheit: Y
-- GRB 090510 Dispersionsfreiheit: Y
+- GPS-Zeitdilatation: ✓
+- Pound-Rebka-Rotverschiebung: ✓
+- Cassini Shapiro-Delay: ✓
+- Lichtablenkung: ✓
+- Merkur-Periheldrehung: ✓
+- GW170817 Geschwindigkeitsgleichheit: ✓
+- GRB 090510 Dispersionsfreiheit: ✓
 
 **Testbar in 5–10 Jahren (Starkfeld):**
 - Neutronenstern-Rotverschiebung (NICER, STROBE-X): SSZ sagt 17–25% weniger als ART vorher
-- Eisen-Kα-Linienprofil (Athena): Modifiziertes Profil für r < 6 $r_{s}$
-- GW-Echos (Einstein-Teleskop): Δt $\approx$ 0,6 r_s/c nach dem Merger
+- Eisen-Kα-Linienprofil (Athena): Modifiziertes Profil für r < 6 r_s
+- Love-Zahl k_2 (Einstein-Teleskop): k_2 ~ 0,052 vs. 0 in ART
 - Schwarzlochschatten (ngEHT): ~2% Korrektur zum Schattenradius
 
 **Testbar in >10 Jahren:**
-- LISA EMRIs: D($r_{s}$) auf ~1% bestimmbar
-- Pulsar bei Sgr A* (SKA): Metrik-Kartierung nahe $r_{s}$
+- LISA EMRIs: D(r_s) auf ~1% bestimmbar
+- Pulsar bei Sgr A* (SKA): Metrik-Kartierung nahe r_s
 - Quasinormal-Moden-Modifikation (3G-Detektoren): Abweichung von Kerr
 
 ### Schlussworte
@@ -12185,7 +12219,7 @@ Die SSZ-Vorhersagen lassen sich in einem zweidimensionalen Diagramm darstellen, 
 | GW-Geschwindigkeit | 0% | 10^-15 | Nein (identisch) |
 | NS-Radius (NICER) | 3-5% | 5-10% | Grenzwertig |
 | EHT Schatten | ~2% | ~10% | Nein (noch nicht) |
-| GW-Echos | 31% vs 0% | ~1% | Ja (wenn vorhanden) |
+| Love-Zahl k_2 | 0,052 vs 0 | ~10% | Ja (ET) |
 | EMRI-Metrik (LISA) | 55.5% vs 0% bei r_s | ~1% | Ja |
 | Fe-K-alpha Profil | 3-5% ISCO-Shift | ~5% | Grenzwertig |
 
@@ -12204,9 +12238,9 @@ Die zentralen Ergebnisse:
 
 ### Detaillierte Vorhersagen fuer naechste-Generation-Observatorien
 
-**Einstein-Teleskop (ET):** Ein unterirdischer Metrik-Perturbationendetektor der dritten Generation, geplant fuer die 2030er Jahre. ET wird die Empfindlichkeit von observational campaigns um Faktor 10 verbessern. Fuer SSZ relevant: ET kann Metrik-Perturbationen-Echos mit Amplitude > 1% des Merger-Signals detektieren. Die SSZ-Vorhersage fuer die Echo-Amplitude: $A_{echo}$/A_merger ~ D^2($r_{s}$) ~ 0.31 (31%).
+**Einstein-Teleskop (ET):** Ein unterirdischer Metrik-Perturbationendetektor der dritten Generation, geplant fuer die 2030er Jahre. ET wird die Empfindlichkeit aktueller Detektoren um Faktor 10 verbessern. Fuer SSZ relevant: ET kann QNM-Frequenzverschiebungen von ~3% und endliche Love-Zahlen (k_2 ~ 0,052) messen — beides Signaturen der natuerlichen Grenze bei D(r_s) = 0,555.
 
-**LISA (Laser Interferometer Space Antenna):** Ein weltraumgestuetzter GW-Detektor, geplant fuer 2037. LISA detektiert niederfrequente GW von supermassiven Schwarzen Loechern. LISA wird EMRIs beobachten und kann D($r_{s}$) auf ~1% bestimmen.
+**LISA (Laser Interferometer Space Antenna):** Ein weltraumgestuetzter GW-Detektor, geplant fuer 2037. LISA detektiert niederfrequente GW von supermassiven Schwarzen Loechern. LISA wird EMRIs beobachten und kann D(r_s) auf ~1% bestimmen.
 
 **ngEHT (Next Generation Event Horizon Telescope):** Erweiterung des EHT mit mehr Stationen. ngEHT wird den Schattenradius mit ~1%-Praezision messen. Die SSZ-Vorhersage weicht ~2% von der ART ab.
 
@@ -12214,7 +12248,7 @@ Die zentralen Ergebnisse:
 |---------------|-------|-----------|---------------------|
 | NICER | 2017 | NS-Radius | ~5% D(r_s) |
 | ngEHT | ~2030 | Schattenradius | ~2% Korrektur |
-| Einstein-Teleskop | ~2035 | GW-Echos | A > 1% |
+| Einstein-Teleskop | ~2035 | QNM, Love-Zahl | +3%, k_2 ~ 0,052 |
 | LISA | ~2037 | EMRI-Metrik | ~1% D(r_s) |
 | Athena | ~2037 | Fe-K-alpha | ~3% ISCO-Shift |
 | SKA | ~2035 | Pulsar-Timing | ~0.1% Metrik |
@@ -12232,19 +12266,19 @@ Die SSZ-Vorhersagen koennen nach dem Zeitrahmen ihrer Testbarkeit geordnet werde
 - S2-Stern-Rotverschiebung: z = 6,58 x 10^{-4} (bestaetigt durch GRAVITY)
 
 **Kurzfristig testbar (2025-2030):**
-- ngEHT Sgr A* Schatten: 0,987 x $\theta_{\text{GR}}$ (erwartet ~2028)
-- NICER Neutronenstern-Radien: $R_{SSZ}$ vs. $R_{GR}$ (laufend)
-- Metrik-Perturbationen-Echos in observational campaigns O5 (erwartet ~2027)
+- ngEHT Sgr A* Schatten: 0,987 x theta_GR (erwartet ~2028)
+- NICER Neutronenstern-Radien: R_SSZ vs. R_GR (laufend)
+- NANOGrav/IPTA Pulsar-Timing: +30% Orbitalabnahme-Korrektur (laufend)
 
 **Mittelfristig testbar (2030-2040):**
-- LISA EMRI-Wellenformen: $\Delta_{\phi}$ ~ 0,5 rad (erwartet ~2035)
+- LISA EMRI-Wellenformen: Delta_phi ~ 0,5 rad (erwartet ~2035)
 - Einstein-Teleskop Love Numbers: k_2 ~ 0,052 (erwartet ~2035)
 - Athena Neutronenstern-Spektroskopie (erwartet ~2037)
 
 **Langfristig testbar (2040+):**
 - Cosmic Explorer QNM-Frequenzen: +3% Verschiebung
 - SKA Pulsar nahe Sgr A*: Starkfeld-Timing
-- Primordialen-Schwarze-Loch-Verdampfung: $T_{SSZ}$ = 0,308 $T_{H}$
+- Primordialen-Schwarze-Loch-Verdampfung: T_SSZ = 0,308 T_H
 
 ### Einladung an die wissenschaftliche Gemeinschaft
 
@@ -12256,7 +12290,7 @@ SSZ ist ein offenes Rahmenwerk. Alle Vorhersagen, alle Ableitungen und alle Vali
 
 **Falsifikation:** Die expliziten Falsifikationskriterien (Kapitel 29) laden die Gemeinschaft ein, SSZ zu widerlegen. Eine erfolgreiche Widerlegung waere ein ebenso wichtiges Ergebnis wie eine Bestaetigung.
 
-**Zusammenarbeit:** Die Autoren laden Forscher ein, die SSZ-Vorhersagen mit unabhaengigen Daten und Methoden zu testen. Insbesondere werden Beitraege in den folgenden Bereichen begruesst: numerische Relativitaet (Kerr-Analog), Neutronenstern-Physik (Zustandsgleichung), Metrik-Perturbationen-Datenanalyse (Echos, Love Numbers), und Roentgenspektroskopie (Neutronenstern-Rotverschiebung).
+**Zusammenarbeit:** Die Autoren laden Forscher ein, die SSZ-Vorhersagen mit unabhaengigen Daten und Methoden zu testen. Insbesondere werden Beitraege in den folgenden Bereichen begruesst: numerische Relativitaet (Kerr-Analog), Neutronenstern-Physik (Zustandsgleichung), Metrik-Perturbationen-Datenanalyse (QNM-Spektroskopie, Love Numbers), und Roentgenspektroskopie (Neutronenstern-Rotverschiebung).
 
 Die Wissenschaft lebt vom kritischen Dialog. SSZ stellt sich diesem Dialog, indem es spezifische, parameterfreie, falsifizierbare Vorhersagen macht und alle Werkzeuge zu ihrer Ueberpruefung oeffentlich bereitstellt.
 
@@ -12266,27 +12300,27 @@ Fuer Beobachter, die SSZ-Vorhersagen testen moechten, bietet der folgende Entsch
 
 **Schritt 1: Welches Instrument?**
 - Roentgenteleskop (NICER, IXPE, Athena) -> Neutronenstern-Rotverschiebung, QPOs, Polarisation
-- Metrik-Perturbationendetektor (observational campaigns, LISA, ET) -> Love Numbers, QNMs, Echos, EMRI-Wellenformen
+- Metrik-Perturbationendetektor (LISA, ET) -> Love Numbers, QNMs, EMRI-Wellenformen
 - Radioteleskop (SKA, ALMA) -> Pulsar-Timing, Molekularzonen, Maser
 - Optisches/IR-Teleskop (VLT/GRAVITY, ELT) -> S-Sterne nahe Sgr A*, Schatten
 
 **Schritt 2: Welche Observable?**
-- Rotverschiebung z -> Vergleiche $z_{SSZ}$ = Xi mit $z_{GR}$ = 1/sqrt(1-$r_{s}$/r) - 1
-- Schattenradius theta -> Vergleiche $\theta_{\text{SSZ}}$ = 0,987 $\theta_{\text{GR}}$
+- Rotverschiebung z -> Vergleiche z_SSZ = Xi mit z_GR = 1/sqrt(1-r_s/r) - 1
+- Schattenradius theta -> Vergleiche theta_SSZ = 0,987 theta_GR
 - Gezeitendeformierbarkeit k_2 -> Vergleiche k_2_SSZ ~ 0,052 mit k_2_GR = 0
-- QNM-Frequenz $f_{QNM}$ -> Vergleiche $f_{SSZ}$ = 1,03 $f_{GR}$
-- Jet-Leistung $P_{jet}$ -> Vergleiche $P_{SSZ}$ = 0,555 $P_{GR}$
+- QNM-Frequenz f_QNM -> Vergleiche f_SSZ = 1,03 f_GR
+- Jet-Leistung P_jet -> Vergleiche P_SSZ = 0,555 P_GR
 
 **Schritt 3: Welche Praezision ist erforderlich?**
-- Schwachfeld (r >> $r_{s}$): SSZ = ART, keine Diskriminierung moeglich
-- Uebergangszone (r ~ 2-10 $r_{s}$): SSZ-Korrektur ~1-10%, erfordert ~1% Praezision
-- Starkfeld (r ~ $r_{s}$): SSZ-Korrektur ~10-100%, erfordert ~10% Praezision
+- Schwachfeld (r >> r_s): SSZ = ART, keine Diskriminierung moeglich
+- Uebergangszone (r ~ 2-10 r_s): SSZ-Korrektur ~1-10%, erfordert ~1% Praezision
+- Starkfeld (r ~ r_s): SSZ-Korrektur ~10-100%, erfordert ~10% Praezision
 
 ### Zusammenfassung: Der Stand von SSZ
 
 SSZ ist eine parameterfreie Gravitationstheorie, die:
 - Im Schwachfeld mit der ART identisch ist (bestaetigt durch 9 Praezisionstests)
-- Im Starkfeld spezifische, falsifizierbare Vorhersagen macht ($D_{min}$ = 0,555, $z_{max}$ = 0,802, k_2 ~ 0,052)
+- Im Starkfeld spezifische, falsifizierbare Vorhersagen macht (D_min = 0,555, z_max = 0,802, k_2 ~ 0,052)
 - Singularitaeten vermeidet (natuerliche Grenze statt Ereignishorizont)
 - Die Feinstrukturkonstante aus geometrischen Prinzipien ableitet (alpha = 1/137,08)
 - Durch 232+ automatisierte Tests in 8 Repositories validiert ist
@@ -12302,13 +12336,13 @@ Die Validierung von SSZ folgt einem klaren Zeitplan, der durch die Verfuegbarkei
 
 **2024-2026 (laufend):**
 - NICER: Verbesserte Masse-Radius-Messungen von Neutronensternen
-- observational campaigns O4: ~100 Metrik-Perturbationen-Detektionen, verbesserte Gezeitendeformierbarkeit
+- NANOGrav: 15-Jahres-Datensatz, Pulsar-Timing-Residuen
 - IXPE: Roentgenpolarimetrie von Akkretionsscheiben
 - GRAVITY+: Verbesserte Astrometrie der S-Sterne nahe Sgr A*
 
 **2027-2030:**
 - ngEHT: Schattenradius von Sgr A* und M87* mit ~1% Praezision
-- observational campaigns A+: Empfindlichkeit verdoppelt, ~500 Detektionen/Jahr
+- NANOGrav/IPTA: Pulsar-Timing-Residuen, +30%-Korrektur testbar
 - Athena (ESA): Roentgenspektroskopie mit 2,5 eV Aufloesung
 - SKA Phase 1: Pulsar-Suche nahe Sgr A*
 
@@ -12327,12 +12361,12 @@ Die Validierung von SSZ folgt einem klaren Zeitplan, der durch die Verfuegbarkei
 
 SSZ waere falsifiziert, wenn eine der folgenden Beobachtungen gemacht wuerde:
 
-1. **Schattenradius:** $\theta_{\text{obs}}$ / $\theta_{\text{GR}}$ < 0,95 oder > 1,00 (SSZ sagt 0,987 vorher)
+1. **Schattenradius:** theta_obs / theta_GR < 0,95 oder > 1,00 (SSZ sagt 0,987 vorher)
 2. **Love Number:** k_2 < 0,01 oder > 0,10 (SSZ sagt 0,052 vorher)
-3. **QNM-Frequenz:** $f_{obs}$ / $f_{GR}$ < 1,00 oder > 1,06 (SSZ sagt 1,03 vorher)
+3. **QNM-Frequenz:** f_obs / f_GR < 1,00 oder > 1,06 (SSZ sagt 1,03 vorher)
 4. **PPN-Parameter:** gamma != 1 oder beta != 1 (SSZ sagt exakt 1 vorher)
-5. **Feinstrukturkonstante:** $\alpha_{\text{SSZ}}$ / $\alpha_{\text{exp}}$ > 1,001 (SSZ sagt 1,00032 vorher)
-6. **Echosignal:** Keine Echos bei Empfindlichkeit < $D_{min}$^4 = 0,095
+5. **Feinstrukturkonstante:** alpha_SSZ / alpha_exp > 1,001 (SSZ sagt 1,00032 vorher)
+6. **Pulsar-Timing:** Pdot_SSZ/Pdot_ART < 1,1 oder > 1,5 (SSZ sagt +30% vorher)
 
 Jedes dieser Kriterien ist quantitativ, spezifisch und mit zukuenftigen Instrumenten testbar.
 
@@ -12343,7 +12377,7 @@ Jedes dieser Kriterien ist quantitativ, spezifisch und mit zukuenftigen Instrume
 Dieses Buch ist eine Einladung zur kritischen Ueberpruefung und unabhaengigen Validierung von SSZ. Die Autoren stellen alle Daten, Codes und Analysemethoden oeffentlich zur Verfuegung:
 
 - **GitHub-Repositories:** Alle SSZ-Codes sind unter der MIT-Lizenz veroeffentlicht.
-- **Daten:** Alle verwendeten Beobachtungsdaten sind oeffentlich zugaenglich (NASA, ESO, observational campaigns).
+- **Daten:** Alle verwendeten Beobachtungsdaten sind oeffentlich zugaenglich (NASA, ESO, NANOGrav).
 - **Reproduzierbarkeit:** Jeder Test kann mit den bereitgestellten Skripten reproduziert werden.
 - **Kontakt:** Fehlermeldungen und Verbesserungsvorschlaege sind willkommen via GitHub Issues.
 
@@ -12365,9 +12399,9 @@ SSZ ist nicht die einzige Alternative zur ART. Andere modifizierte Gravitationst
 
 **Brans-Dicke-Theorie:** Fuehrt ein skalares Feld phi ein, das die Gravitationskonstante G ersetzt. Vorhersagen: zeitlich variable G, zusaetzliche Metrik-Perturbationen-Polarisationen. SSZ-Unterschied: SSZ hat kein zusaetzliches skalares Feld; G ist konstant.
 
-**MOND (Modified Newtonian Dynamics):** Modifiziert die Newtonsche Dynamik bei kleinen Beschleunigungen (a < a_0 ~ 10^{-10} m/s^2). Vorhersagen: flache Rotationskurven ohne Dunkle Materie. SSZ-Unterschied: SSZ modifiziert die Gravitation nur im Starkfeld (r ~ $r_{s}$), nicht bei kleinen Beschleunigungen.
+**MOND (Modified Newtonian Dynamics):** Modifiziert die Newtonsche Dynamik bei kleinen Beschleunigungen (a < a_0 ~ 10^{-10} m/s^2). Vorhersagen: flache Rotationskurven ohne Dunkle Materie. SSZ-Unterschied: SSZ modifiziert die Gravitation nur im Starkfeld (r ~ r_s), nicht bei kleinen Beschleunigungen.
 
-**Massive Gravitation:** Gibt dem Graviton eine Masse $m_{g}$ > 0. Vorhersagen: modifizierte Metrik-Perturbationen-Dispersion, Yukawa-Potential. SSZ-Unterschied: SSZ hat masselose Gravitonen ($m_{g}$ = 0).
+**Massive Gravitation:** Gibt dem Graviton eine Masse m_g > 0. Vorhersagen: modifizierte Metrik-Perturbationen-Dispersion, Yukawa-Potential. SSZ-Unterschied: SSZ hat masselose Gravitonen (m_g = 0).
 
 SSZ unterscheidet sich von allen diesen Theorien durch ihre Parameterarmut (nur phi und N0), ihre spezifischen Starkfeld-Vorhersagen und ihre vollstaendige Schwachfeld-Uebereinstimmung mit der ART.
 
@@ -12383,10 +12417,7 @@ SSZ bietet auch Bildungsperspektiven:
 
 **Citizen Science:** Die offene Verfuegbarkeit aller Codes und Daten ermoeglicht es interessierten Laien, die Ergebnisse selbst zu ueberpruefen und eigene Analysen durchzufuehren.
 
-
-\newpage
-
-\backmatter
+---
 
 # Schlussfolgerung: Der Status der Segmentierten Raumzeit
 
@@ -12410,29 +12441,29 @@ SSZ reproduziert jeden klassischen Test der Allgemeinen Relativitätstheorie inn
 - **GPS-Uhrkorrekturen:** +38,6 μs/Tag relativistische Nettokorrektur (exakte Übereinstimmung)
 - **Pound-Rebka gravitative Rotverschiebung:** Δf/f = 2,46 × 10⁻¹⁵ (< 1% Übereinstimmung)
 - **Sirius B Weißer-Zwerg-Rotverschiebung:** z = 8,0 × 10⁻⁵ (exakte Übereinstimmung mit HST/STIS)
-- **S2-Stern Orbitalrotverschiebung:** $z_{peri}$ konsistent mit GRAVITY-Kollaborationsmessung
+- **S2-Stern Orbitalrotverschiebung:** z_peri konsistent mit GRAVITY-Kollaborationsmessung
 
 ### Starkfeld-Vorhersagen
 
 Im Starkfeld (r/r_s < 10) weicht SSZ von der ART mit spezifischen, quantitativen Vorhersagen ab:
 
-- **D($r_{s}$) = 0,555** — endliche Zeitdilatation am Schwarzschild-Radius, verglichen mit $D_{ART}$ = 0. Dies ist der folgenschwerste Unterschied zwischen SSZ und ART.
+- **D(r_s) = 0,555** — endliche Zeitdilatation am Schwarzschild-Radius, verglichen mit D_ART = 0. Dies ist der folgenschwerste Unterschied zwischen SSZ und ART.
 
-- **Keine Singularität** — die Segmentdichte sättigt bei Ξ_max = 1 − exp(−φ) $\approx$ 0,802. Alle Krümmungsinvarianten bleiben endlich bei jedem Radius.
+- **Keine Singularität** — die Segmentdichte sättigt bei Ξ_max = 1 − exp(−φ) ≈ 0,802. Alle Krümmungsinvarianten bleiben endlich bei jedem Radius.
 
-- **Kein Ereignishorizont** — die Metriksignatur bleibt (−+++) überall. Es gibt keine kausale Abtrennung. Licht entkommt von jedem Radius, einschließlich r = $r_{s}$, mit endlicher Rotverschiebung z = 0,802.
+- **Kein Ereignishorizont** — die Metriksignatur bleibt (−+++) überall. Es gibt keine kausale Abtrennung. Licht entkommt von jedem Radius, einschließlich r = r_s, mit endlicher Rotverschiebung z = 0,802.
 
 - **Informationsparadoxon aufgelöst** — da D > 0 überall, wird Information nie permanent eingeschlossen.
 
-- **Modifizierter Schwarze-Loch-Schatten** — die SSZ-Photonensphäre bei r_ph $\approx$ 1,48r_s erzeugt einen Schatten 1,3% kleiner als die ART vorhersagt.
+- **Modifizierter Schwarze-Loch-Schatten** — die SSZ-Photonensphäre bei r_ph ≈ 1,48r_s erzeugt einen Schatten 1,3% kleiner als die ART vorhersagt.
 
-- **Superradiante Stabilität** — der $G_{SSZ}$-Regulator unterdrückt superradiante Wachstumsraten.
+- **Superradiante Stabilität** — der G_SSZ-Regulator unterdrückt superradiante Wachstumsraten.
 
-- **Metrik-Perturbationen-Echos** — die natürliche Grenze bei D = 0,555 reflektiert Metrik-Perturbationen teilweise.
+- **Endliche Gezeitendeformierbarkeit** — dunkle Sterne haben k₂ ~ 0,052 (vs. k₂ = 0 für ART-Schwarze-Löcher).
 
 ### Astrophysikalische Validierung
 
-- **G79.29+0.46 LBV-Nebel:** Sechs unabhängige Vorhersagen — alle sechs bestätigt mit null freien Parametern (p $\approx$ 1,6%).
+- **G79.29+0.46 LBV-Nebel:** Sechs unabhängige Vorhersagen — alle sechs bestätigt mit null freien Parametern (p ≈ 1,6%).
 - **Cygnus X-1 Spektralanalyse:** Eisenlinienprofile konsistent mit SSZs modifiziertem D(r)-Profil.
 - **Radiowellen-Vorläufer-Vorhersagen:** Spezifische Frequenzdurchlauf-Signaturen für einfallende Materie.
 
@@ -12470,11 +12501,9 @@ SSZ ist innerhalb des nächsten Jahrzehnts falsifizierbar:
 
 **2025–2028: NANOGrav / IPTA.** Pulsar-Timing-Residuen, +30%-SSZ-Korrektur.
 
-**2025–2030: observational campaigns O4/O5.** Metrik-Perturbationen-Ringdown-Echos.
-
 **2027–2030: ngEHT.** Schattendurchmesser, −1,3%-Vorhersage.
 
-**Wenn diese Beobachtungen exakt mit der ART übereinstimmen** — kein Neutronenstern-Rotverschiebungsüberschuss, kein Schattendefizit, keine Metrik-Perturbationen-Echos — **ist SSZ falsifiziert.**
+**Wenn diese Beobachtungen exakt mit der ART übereinstimmen** — kein Neutronenstern-Rotverschiebungsüberschuss, kein Schattendefizit, keine Pulsar-Timing-Korrektur — **ist SSZ falsifiziert.**
 
 ## Der Vergleich mit der Allgemeinen Relativitätstheorie
 
@@ -12495,7 +12524,7 @@ SSZ steht und fällt mit Daten. Die Instrumente zur Entscheidung existieren heut
 Die unmittelbare Priorität ist beobachtungsmäßige Diskriminierung:
 
 1. **NICER (operativ):** Fortgesetzte Akkumulation von Neutronenstern-Masse-Radius-Daten.
-2. **observational campaigns A+ (2025):** Erhöhte Empfindlichkeit für Post-Merger-Metrik-Perturbationensignale.
+2. **GW-Detektoren A+ (2025):** Erhöhte Empfindlichkeit für Post-Merger-Metrik-Perturbationensignale.
 3. **ngEHT (2028):** Zusätzliche Stationen und höhere Frequenzbeobachtungen.
 
 ### Mittelfristig (2030–2040)
@@ -12526,9 +12555,9 @@ Die unmittelbare Priorität ist beobachtungsmäßige Diskriminierung:
 Dieses Buch hat gezeigt, dass die segmentierte Raumzeit (SSZ) ein konsistentes, parameterfReies Rahmenwerk ist, das:
 
 1. Alle existierenden Schwachfeldtests der ART reproduziert (GPS, Shapiro, Pound-Rebka, Lichtablenkung, Periheldrehung)
-2. Die Singularitaeten der ART auf natuerliche Weise aufloest (D($r_{s}$) = 0.555 > 0)
+2. Die Singularitaeten der ART auf natuerliche Weise aufloest (D(r_s) = 0.555 > 0)
 3. Das Informationsparadoxon beseitigt (keine Ereignishorizonte)
-4. Spezifische, falsifizierbare Starkfeldvorhersagen macht (z($r_{s}$) = 0.802, GW-Echos, modifizierter ISCO)
+4. Spezifische, falsifizierbare Starkfeldvorhersagen macht (z(r_s) = 0.802, Schatten −1,3%, NS-Rotverschiebung +13%)
 5. Durch 145 automatisierte Tests validiert ist (alle bestanden, null Regressionen)
 6. Vollstaendig reproduzierbar ist (oeffentlicher Code, oeffentliche Daten)
 
@@ -12539,7 +12568,7 @@ Die wichtigsten offenen Probleme:
 **Kurzfristig (1-3 Jahre):**
 - Erweiterung auf rotierende Schwarze Loecher (SSZ-Kerr-Analog)
 - Analyse der NICER-Daten fuer Neutronenstern-Radien
-- Verfeinerung der Metrik-Perturbationen-Echo-Vorhersage
+- Analyse der NANOGrav-Pulsar-Timing-Daten fuer +30%-Korrektur
 
 **Mittelfristig (3-10 Jahre):**
 - SSZ-Kosmologie (modifizierte Friedmann-Gleichungen)
@@ -12559,12 +12588,9 @@ Wir sind uns bewusst, dass SSZ ein Vorschlag ist — keine bewiesene Tatsache. D
 
 Die Physik lebt von Herausforderungen. Wir hoffen, dass dieses Buch eine solche Herausforderung darstellt — fuer uns selbst und fuer die Gemeinschaft.
 
+---
 
-\newpage
-
-\appendix
-
-# Symboltabelle und Notationsschlüssel
+# Anhang A: Symboltabelle und Notationsschlüssel
 
 ## A.1 Fundamentalkonstanten
 
@@ -12582,18 +12608,18 @@ Die Physik lebt von Herausforderungen. Wir hoffen, dass dieses Buch eine solche 
 | Symbol | Name | Definition | Bereich | Kapitel |
 |--------|------|-----------|-------|---------|
 | Ξ(r) | Segmentdichte | Dimensionsloses Feld | [0, Ξ_max] | 1, 2 |
-| Ξ_max | Maximale Segmentdichte | 1 − exp(−φ) $\approx$ 0,802 | — | 3 |
+| Ξ_max | Maximale Segmentdichte | 1 − exp(−φ) ≈ 0,802 | — | 3 |
 | D(r) | Zeitdilatationsfaktor | 1/(1 + Ξ(r)) | [D_min, 1] | 1 |
-| D_min | Minimale Zeitdilatation | 1/(1 + Ξ_max) $\approx$ 0,555 | — | 18 |
+| D_min | Minimale Zeitdilatation | 1/(1 + Ξ_max) ≈ 0,555 | — | 18 |
 | r_s | Schwarzschild-Radius | 2GM/c² | > 0 | 1 |
 | s(r) | Skalierungsfaktor | 1 + Ξ(r) = 1/D(r) | [1, s_max] | 10 |
 
 ## A.3 Regimespezifische Formeln
 
-### Schwachfeld (g1): Ξ_weak(r) = $r_{s}$/(2r)
-### Starkfeld (g2): Ξ_strong(r) = 1 − exp(−φ$r_{s}$/r)
-### Mischzone: Hermite-C²-Interpolation (1,8–2,2 $r_{s}$)
-### VERBOTEN: Ξ = ($r_{s}$/r)²·exp(−r/r_φ)
+### Schwachfeld (g1): Ξ_weak(r) = r_s/(2r)
+### Starkfeld (g2): Ξ_strong(r) = 1 − exp(−φr_s/r)
+### Mischzone: Hermite-C²-Interpolation (1,8–2,2 r_s)
+### VERBOTEN: Ξ = (r_s/r)²·exp(−r/r_φ)
 
 ## A.4 PPN-Parameter
 
@@ -12684,11 +12710,11 @@ Die Physik lebt von Herausforderungen. Wir hoffen, dass dieses Buch eine solche 
 
 ### Abgeleitete Groessen
 
-**Ξ(r) (Segmentdichte):** Die zentrale Variable von SSZ. Schwachfeld: Ξ = $r_{s}$/(2r). Starkfeld: Ξ = 1 - exp(-φ r/r_s). Uebergangszone: Hermite-C²-Mischung. Physikalische Interpretation: Anteil des Raums, der von Segmenten belegt ist.
+**Ξ(r) (Segmentdichte):** Die zentrale Variable von SSZ. Schwachfeld: Ξ = r_s/(2r). Starkfeld: Ξ = 1 - exp(-φ r/r_s). Uebergangszone: Hermite-C²-Mischung. Physikalische Interpretation: Anteil des Raums, der von Segmenten belegt ist.
 
-**D(r) (Zeitdilatationsfaktor):** D = 1/(1 + Ξ). Bereich: 0 < D ≤ 1. Minimum: $D_{min}$ = 0,555 bei r = $r_{s}$. Physikalische Interpretation: Verhaeltnis der lokalen Taktrate zur Taktrate im Unendlichen.
+**D(r) (Zeitdilatationsfaktor):** D = 1/(1 + Ξ). Bereich: 0 < D ≤ 1. Minimum: D_min = 0,555 bei r = r_s. Physikalische Interpretation: Verhaeltnis der lokalen Taktrate zur Taktrate im Unendlichen.
 
-**s(r) (Skalierungsfaktor):** s = 1 + Ξ = 1/D. Bereich: 1 ≤ s < ∞. Maximum: $s_{max}$ = 1,802 bei r = $r_{s}$. Physikalische Interpretation: Faktor, um den elektromagnetische Wellenlaengen gestreckt werden.
+**s(r) (Skalierungsfaktor):** s = 1 + Ξ = 1/D. Bereich: 1 ≤ s < ∞. Maximum: s_max = 1,802 bei r = r_s. Physikalische Interpretation: Faktor, um den elektromagnetische Wellenlaengen gestreckt werden.
 
 **r* (Regime-Schnittpunkt):** r*/r_s = 1,387. Der Radius, bei dem die Schwach- und Starkfeldformeln fuer Ξ denselben Wert liefern. Markiert den Uebergang zwischen den beiden Regimen.
 
@@ -12852,14 +12878,14 @@ ds^2 = -D^2 c^2 dt^2 + D^{-2} dr^2 + r^2 (d theta^2 + sin^2 theta d phi^2)
 Die Schildkroeten-Koordinate (tortoise coordinate) ist definiert durch:
 dr* = dr / D^2
 
-In SSZ ist r* endlich an der natuerlichen Grenze (r* -> -$r_{s}$ ln($D_{min}$)/2 fuer r -> $r_{s}$), waehrend r* -> -unendlich in der ART. Dies hat wichtige Konsequenzen fuer die Wellengleichung und die Echo-Struktur.
+In SSZ ist r* endlich an der natuerlichen Grenze (r* -> -r_s ln(D_min)/2 fuer r -> r_s), waehrend r* -> -unendlich in der ART. Dies hat wichtige Konsequenzen fuer die Wellengleichung und die Echo-Struktur.
 
 ### Isotrope Koordinaten
 
 In isotropen Koordinaten hat die Metrik die Form:
 ds^2 = -D^2 c^2 dt^2 + D^{-2} (d rho^2 + rho^2 d Omega^2)
 
-wobei rho die isotrope Radialkoordinate ist. Die Umrechnung: r = rho (1 + $r_{s}$/(4 rho))^2 (im Schwachfeld).
+wobei rho die isotrope Radialkoordinate ist. Die Umrechnung: r = rho (1 + r_s/(4 rho))^2 (im Schwachfeld).
 
 ### Eddington-Finkelstein-Koordinaten
 
@@ -12869,7 +12895,7 @@ v = t + r*
 Die Metrik in diesen Koordinaten:
 ds^2 = -D^2 c^2 dv^2 + 2 c dv dr + r^2 d Omega^2
 
-In SSZ ist diese Metrik regulaer ueberall (einschliesslich r = $r_{s}$), weil D($r_{s}$) = 0,555 endlich ist.
+In SSZ ist diese Metrik regulaer ueberall (einschliesslich r = r_s), weil D(r_s) = 0,555 endlich ist.
 
 ## A.5 Physikalische Konstanten
 
@@ -12914,7 +12940,7 @@ Die SSZ-Metrik: ds^2 = -D^2 c^2 dt^2 + D^{-2} dr^2 + r^2 d Omega^2
 
 ### Schildkroeten-Koordinate (r*)
 
-dr* = dr / D^2. In SSZ ist r* endlich an r = $r_{s}$ (vs. -unendlich in ART).
+dr* = dr / D^2. In SSZ ist r* endlich an r = r_s (vs. -unendlich in ART).
 
 ### Eddington-Finkelstein-Koordinaten (v, r)
 
@@ -12942,27 +12968,27 @@ v = t + r*. Metrik: ds^2 = -D^2 c^2 dv^2 + 2c dv dr + r^2 d Omega^2. Regulaer ue
 ### Kovariante Ableitung
 
 Die kovariante Ableitung eines Vektors V^mu ist:
-nabla\_nu V^mu = partial\_nu V^mu + Gamma^mu_{nu rho} V^rho
+nabla_nu V^mu = partial_nu V^mu + Gamma^mu_{nu rho} V^rho
 
-Die kovariante Ableitung eines Kovektors $V_{mu}$ ist:
-nabla\_nu $V_{mu}$ = partial\_nu $V_{mu}$ - Gamma^rho_{nu mu} $V_{rho}$
+Die kovariante Ableitung eines Kovektors V_mu ist:
+nabla_nu V_mu = partial_nu V_mu - Gamma^rho_{nu mu} V_rho
 
 ### Lie-Ableitung
 
 Die Lie-Ableitung eines Tensors entlang eines Vektorfeldes xi beschreibt die Aenderung des Tensors unter dem Fluss von xi. Fuer die Metrik:
-$L_{xi}$ g_{mu nu} = xi^rho partial\_rho g_{mu nu} + g_{rho nu} partial\_mu xi^rho + g_{mu rho} partial\_nu xi^rho
+L_xi g_{mu nu} = xi^rho partial_rho g_{mu nu} + g_{rho nu} partial_mu xi^rho + g_{mu rho} partial_nu xi^rho
 
-Ein Killing-Vektorfeld erfuellt $L_{xi}$ g_{mu nu} = 0. Die SSZ-Metrik hat zwei Killing-Vektorfelder: partial\_t (Zeitunabhaengigkeit) und partial\_phi (Axialsymmetrie).
+Ein Killing-Vektorfeld erfuellt L_xi g_{mu nu} = 0. Die SSZ-Metrik hat zwei Killing-Vektorfelder: partial_t (Zeitunabhaengigkeit) und partial_phi (Axialsymmetrie).
 
 ### d'Alembert-Operator
 
 Der d'Alembert-Operator (Wellenoperator) in gekruemmter Raumzeit:
-Box = g^{mu nu} nabla\_mu nabla\_nu = (1/sqrt(-g)) partial\_mu (sqrt(-g) g^{mu nu} partial\_nu)
+Box = g^{mu nu} nabla_mu nabla_nu = (1/sqrt(-g)) partial_mu (sqrt(-g) g^{mu nu} partial_nu)
 
 In der SSZ-Metrik:
-Box = -D^{-2}/c^2 partial\_t^2 + D^2/r^2 partial\_r(r^2 D^2 partial\_r) + (1/r^2) $\Delta_{\Omega}$
+Box = -D^{-2}/c^2 partial_t^2 + D^2/r^2 partial_r(r^2 D^2 partial_r) + (1/r^2) Delta_Omega
 
-wobei $\Delta_{\Omega}$ der Winkel-Laplace-Operator auf der 2-Sphaere ist.
+wobei Delta_Omega der Winkel-Laplace-Operator auf der 2-Sphaere ist.
 
 ### Weyl-Tensor
 
@@ -12987,7 +13013,7 @@ h(x) = 3x^2 - 2x^3 fuer x in [0,1]
 
 Eigenschaften: h(0) = 0, h(1) = 1, h'(0) = h'(1) = 0 (C1-stetig).
 
-Anwendung: Regime-Uebergang bei r* = 1,387 $r_{s}$ mit x = (r - r_1)/(r_2 - r_1).
+Anwendung: Regime-Uebergang bei r* = 1,387 r_s mit x = (r - r_1)/(r_2 - r_1).
 
 ### Exponentialfunktion in der Starkfeldformel
 
@@ -13005,13 +13031,12 @@ Ableitungen:
 - dD/dr = -D^2 dXi/dr
 - d^2D/dr^2 = 2D^3 (dXi/dr)^2 - D^2 d^2Xi/dr^2
 
+---
 
-\newpage
-
-# Vollständiges Formelkompendium
+# Anhang B: Vollständiges Formelkompendium
 
 **Autoren:** Carmen N. Wrede, Lino P. Casu
-
+**Status:** ERSTE FASSUNG — KANONISCH (Einzige Wahrheitsquelle)
 
 ---
 
@@ -13031,7 +13056,7 @@ Ableitungen:
 Ξ_strong(r) = 1 − exp(−φ × r_s / r)
 ```
 - **Herkunft:** Konstruiert für Horizontregularität, φ-Geometrie
-- **Grenzwerte:** Ξ(r→∞) → 0, Ξ($r_{s}$) = 1 − exp(−φ) = 0,80171
+- **Grenzwerte:** Ξ(r→∞) → 0, Ξ(r_s) = 1 − exp(−φ) = 0,80171
 
 **Mischzone** (1,8 ≤ r/r_s ≤ 2,2):
 ```
@@ -13044,7 +13069,7 @@ H₅: Quintische Hermite-Interpolation
 ```
 D_SSZ(r) = 1 / (1 + Ξ(r))
 ```
-- **Grenzwerte:** D(r→∞) = 1 (flache Raumzeit), D($r_{s}$) = 0,555 (ENDLICH!)
+- **Grenzwerte:** D(r→∞) = 1 (flache Raumzeit), D(r_s) = 0,555 (ENDLICH!)
 
 ### B.1.3 Gravitative Rotverschiebung z(r)
 ```
@@ -13153,7 +13178,7 @@ v_group = L_seg · f / N
 | φ | (1+√5)/2 = 1,618034 | Goldener Schnitt |
 | π | 3,141593 | Kreiskonstante |
 | α_gemessen | 1/137,036 | Feinstruktur (CODATA) |
-| α_SSZ | 1/(φ^{2π}·N₀) $\approx$ 1/137,08 | φ-Geometrie-Herleitung |
+| α_SSZ | 1/(φ^{2π}·N₀) ≈ 1/137,08 | φ-Geometrie-Herleitung |
 | N₀ | 4 | Segmente pro Wellenlänge |
 
 ---
@@ -13172,12 +13197,12 @@ v_group = L_seg · f / N
 
 | Bedingung | Status in SSZ |
 |-----------|---------------|
-| WEC | PASS Erfüllt r > 5r_s |
-| DEC | PASS Erfüllt r > 5r_s |
-| SEC | FAIL Verletzt r < 5r_s |
-| NEC | PASS Immer erfüllt |
+| WEC | ✅ Erfüllt r > 5r_s |
+| DEC | ✅ Erfüllt r > 5r_s |
+| SEC | ❌ Verletzt r < 5r_s |
+| NEC | ✅ Immer erfüllt |
 
-**SEC-Verletzung ist eine VORHERSAGE**, kein Fehler: Bei r < 5$r_{s}$ erzeugt die Segmentstruktur effektive Abstoßung, die Singularitätsbildung verhindert.
+**SEC-Verletzung ist eine VORHERSAGE**, kein Fehler: Bei r < 5r_s erzeugt die Segmentstruktur effektive Abstoßung, die Singularitätsbildung verhindert.
 
 ---
 
@@ -13197,13 +13222,13 @@ v_group = L_seg · f / N
 ## B.10 Rechenbeispiele
 
 ### B.10.1 Solarer Shapiro-Delay (Cassini)
-$r_{s}$ = 2953 m. Δt = 2 × 2953/3×10⁸ × ln(6,08×10⁵) = 262 μs. Cassini gemessen: 264 ± 2 μs. Y
+r_s = 2953 m. Δt = 2 × 2953/3×10⁸ × ln(6,08×10⁵) = 262 μs. Cassini gemessen: 264 ± 2 μs. ✓
 
 ### B.10.2 Merkur-Periheldrehung
-42,98 Bogensekunden/Jahrhundert. Beobachtet: 42,98 ± 0,04. Y
+42,98 Bogensekunden/Jahrhundert. Beobachtet: 42,98 ± 0,04. ✓
 
 ### B.10.3 GPS-Frequenzverschiebung
-Netto: +38,6 μs/Tag. GPS-Spezifikation: +38,6 μs/Tag. Exakte Übereinstimmung. Y
+Netto: +38,6 μs/Tag. GPS-Spezifikation: +38,6 μs/Tag. Exakte Übereinstimmung. ✓
 
 ---
 
@@ -13318,97 +13343,97 @@ Die Dimensionslosigkeit von Ξ, D und α ist eine Konsequenz der skalenfreien St
 
 ## B.3 Erweiterte Formelsammlung
 
-### Schwachfeld-Formeln (r >> $r_{s}$)
+### Schwachfeld-Formeln (r >> r_s)
 
 **Segmentdichte:**
-Xi(r) = $r_{s}$ / (2r) = GM / (c^2 r)
+Xi(r) = r_s / (2r) = GM / (c^2 r)
 
 **Zeitdilatation:**
-D(r) = 1 / (1 + Xi) = 1 - $r_{s}$/(2r) + O($r_{s}$/r)^2
+D(r) = 1 / (1 + Xi) = 1 - r_s/(2r) + O(r_s/r)^2
 
 **Gravitative Rotverschiebung:**
-z = Xi = $r_{s}$ / (2r)
+z = Xi = r_s / (2r)
 
 **Lichtablenkung (PPN):**
-alpha = (1+gamma) $r_{s}$ / b = 2 $r_{s}$ / b = 4GM / (c^2 b)
+alpha = (1+gamma) r_s / b = 2 r_s / b = 4GM / (c^2 b)
 
 **Shapiro-Delay (PPN):**
-$\Delta_{\text{t}}$ = (1+gamma) $r_{s}$/c * ln((r_1 + r_2 + d)/(r_1 + r_2 - d)) = 2 $r_{s}$/c * ln(...)
+Delta_t = (1+gamma) r_s/c * ln((r_1 + r_2 + d)/(r_1 + r_2 - d)) = 2 r_s/c * ln(...)
 
 **Perihel-Praezession:**
-$\Delta_{\omega}$ = 6 pi G M / (a c^2 (1 - e^2)) [pro Umlauf]
+Delta_omega = 6 pi G M / (a c^2 (1 - e^2)) [pro Umlauf]
 
 **Geodaetische Praezession:**
-$\Omega_{\text{geod}}$ = 3 G M $v_{orb}$ / (2 c^2 r^2)
+Omega_geod = 3 G M v_orb / (2 c^2 r^2)
 
 **Frame-Dragging:**
-$\Omega_{\text{FD}}$ = 2 G J / (c^2 r^3)
+Omega_FD = 2 G J / (c^2 r^3)
 
-### Starkfeld-Formeln (r ~ $r_{s}$)
+### Starkfeld-Formeln (r ~ r_s)
 
 **Segmentdichte:**
-Xi(r) = 1 - exp(-phi * r / $r_{s}$)
+Xi(r) = 1 - exp(-phi * r / r_s)
 
 **Zeitdilatation:**
-D(r) = 1 / (1 + Xi(r)) = 1 / (2 - exp(-phi * r / $r_{s}$))
+D(r) = 1 / (1 + Xi(r)) = 1 / (2 - exp(-phi * r / r_s))
 
 **Hermite-C2-Mischfunktion (Regime-Uebergang):**
 h(x) = 3x^2 - 2x^3, wobei x = (r - r_1)/(r_2 - r_1)
-$\Xi_{\text{blend}}$ = (1 - h) * $\Xi_{\text{weak}}$ + h * $\Xi_{\text{strong}}$
+Xi_blend = (1 - h) * Xi_weak + h * Xi_strong
 
 **Einfallgeschwindigkeit:**
-$v_{fall}$ = c * sqrt(1 - D^2)
+v_fall = c * sqrt(1 - D^2)
 
 **Fluchtgeschwindigkeit:**
-$v_{esc}$ = c^2 / $v_{fall}$
+v_esc = c^2 / v_fall
 
 **Abschliessungsrelation:**
-$v_{esc}$ * $v_{fall}$ = c^2
+v_esc * v_fall = c^2
 
 ### Grenzwerte
 
 **Flacher Raum (r -> unendlich):**
-Xi -> 0, D -> 1, $v_{fall}$ -> 0, $v_{esc}$ -> unendlich
+Xi -> 0, D -> 1, v_fall -> 0, v_esc -> unendlich
 
-**Natuerliche Grenze (r = $r_{s}$):**
-$\Xi_{\text{max}}$ = 0,802, $D_{min}$ = 0,555, $v_{fall}$ = 0,832 c, $v_{esc}$ = 1,202 c (Koordinate)
+**Natuerliche Grenze (r = r_s):**
+Xi_max = 0,802, D_min = 0,555, v_fall = 0,832 c, v_esc = 1,202 c (Koordinate)
 
-**Regime-Uebergang (r = r* = 1,387 $r_{s}$):**
+**Regime-Uebergang (r = r* = 1,387 r_s):**
 Xi(r*) = 0,276, D(r*) = 0,784
 
 ### Thermodynamische Groessen
 
 **Hawking-Temperatur (SSZ-modifiziert):**
-T_H_SSZ = T_H_GR * $D_{min}$ = hbar c^3 / (8 pi G M $k_{B}$) * 0,555
+T_H_SSZ = T_H_GR * D_min = hbar c^3 / (8 pi G M k_B) * 0,555
 
 **Bekenstein-Hawking-Entropie:**
-$S_{BH}$ = $k_{B}$ A / (4 $l_{P}$^2) = $k_{B}$ * 4 pi $r_{s}$^2 / (4 $l_{P}$^2)
+S_BH = k_B A / (4 l_P^2) = k_B * 4 pi r_s^2 / (4 l_P^2)
 
 **Verdampfungszeit (SSZ):**
-t_evap_SSZ ~ t_evap_GR / $D_{min}$^6 ~ 10 * t_evap_GR
+t_evap_SSZ ~ t_evap_GR / D_min^6 ~ 10 * t_evap_GR
 
 ### Metrik-Perturbationen-Formeln
 
 **Quadrupolformel:**
-$P_{gw}$ = -(32/5) G^4 m_1^2 m_2^2 (m_1+m_2) / (c^5 r^5)
+P_gw = -(32/5) G^4 m_1^2 m_2^2 (m_1+m_2) / (c^5 r^5)
 
 **QNM-Grundfrequenz (l=2, n=0):**
 f_QNM_SSZ = c^3 / (2 pi G M) * 0,0912
 
 **Echo-Verzoegerung:**
-Delta_t_echo ~ $r_{s}$/c * ln(1/D_min) ~ 0,6 $r_{s}$/c
+Delta_t_echo ~ r_s/c * ln(1/D_min) ~ 0,6 r_s/c
 
 ## B.4 Ableitungen und Beweise
 
 ### Ableitung der Schwachfeldformel
 
-Die Schwachfeldformel Xi = $r_{s}$/(2r) folgt aus der Forderung, dass die SSZ-Metrik im Schwachfeld mit der Schwarzschild-Metrik uebereinstimmen muss:
+Die Schwachfeldformel Xi = r_s/(2r) folgt aus der Forderung, dass die SSZ-Metrik im Schwachfeld mit der Schwarzschild-Metrik uebereinstimmen muss:
 
 g_tt_SSZ = -D^2 = -(1/(1+Xi))^2 = -(1 - 2Xi + 3Xi^2 - ...)
 
-g_tt_Schw = -(1 - $r_{s}$/r)
+g_tt_Schw = -(1 - r_s/r)
 
-Vergleich der fuehrenden Ordnung: 2Xi = $r_{s}$/r, also Xi = $r_{s}$/(2r).
+Vergleich der fuehrenden Ordnung: 2Xi = r_s/r, also Xi = r_s/(2r).
 
 ### Ableitung der Starkfeldformel
 
@@ -13419,7 +13444,7 @@ Die Starkfeldformel Xi = 1 - exp(-phi r/r_s) folgt aus vier Kriterien:
 3. **Saettigung:** Xi(r -> unendlich) -> 1 (endliches Maximum)
 4. **Goldener-Schnitt-Skalierung:** Der Skalierungsparameter ist phi = 1,618...
 
-An der natuerlichen Grenze (r = $r_{s}$): $\Xi_{\text{max}}$ = 1 - exp(-phi) = 1 - 0,198 = 0,802.
+An der natuerlichen Grenze (r = r_s): Xi_max = 1 - exp(-phi) = 1 - 0,198 = 0,802.
 
 ### Ableitung der Abschliessungsrelation
 
@@ -13427,13 +13452,13 @@ Aus der Energieerhaltung fuer ein radial einfallendes Teilchen:
 
 E = m c^2 D(r) = m c^2 (fuer Einfall aus dem Unendlichen mit v = 0)
 
-Kinetische Energie: $E_{kin}$ = (1/2) m $v_{fall}$^2 = m c^2 (1 - D)
+Kinetische Energie: E_kin = (1/2) m v_fall^2 = m c^2 (1 - D)
 
-Also: $v_{fall}$ = c sqrt(2(1-D)/1) = c sqrt(1 - D^2) (exakt, relativistisch)
+Also: v_fall = c sqrt(2(1-D)/1) = c sqrt(1 - D^2) (exakt, relativistisch)
 
-Fluchtgeschwindigkeit: $v_{esc}$ = c^2/v_fall (aus der Abschliessungsrelation)
+Fluchtgeschwindigkeit: v_esc = c^2/v_fall (aus der Abschliessungsrelation)
 
-Beweis: $v_{esc}$ * $v_{fall}$ = c^2 folgt aus der Symmetrie der Geodaetengleichung unter Zeitumkehr (t -> -t).
+Beweis: v_esc * v_fall = c^2 folgt aus der Symmetrie der Geodaetengleichung unter Zeitumkehr (t -> -t).
 
 ### Ableitung der Feinstrukturkonstante
 
@@ -13450,36 +13475,36 @@ alpha = 1/(34,270 x 4) = 1/137,08
 
 ### Ableitung der Hawking-Temperatur in SSZ
 
-T_H_SSZ = T_H_GR * $D_{min}$
+T_H_SSZ = T_H_GR * D_min
 
-wobei T_H_GR = hbar c^3 / (8 pi G M $k_{B}$) die Standard-Hawking-Temperatur ist.
+wobei T_H_GR = hbar c^3 / (8 pi G M k_B) die Standard-Hawking-Temperatur ist.
 
-Die Modifikation entsteht, weil die Oberflaechengravitaet in SSZ um den Faktor $D_{min}$ reduziert ist:
+Die Modifikation entsteht, weil die Oberflaechengravitaet in SSZ um den Faktor D_min reduziert ist:
 
-$\kappa_{\text{SSZ}}$ = $\kappa_{\text{GR}}$ * $D_{min}$ = c^4/(4GM) * $D_{min}$
+kappa_SSZ = kappa_GR * D_min = c^4/(4GM) * D_min
 
-Die Hawking-Temperatur ist proportional zur Oberflaechengravitaet: $T_{H}$ = hbar kappa / (2 pi c $k_{B}$).
+Die Hawking-Temperatur ist proportional zur Oberflaechengravitaet: T_H = hbar kappa / (2 pi c k_B).
 
 ## B.5 Nuetzliche Naeherungen
 
 ### Taylor-Entwicklung von D(r) im Schwachfeld
 
-D(r) = 1 - Xi + Xi^2 - Xi^3 + ... = 1 - $r_{s}$/(2r) + ($r_{s}$/(2r))^2 - ...
+D(r) = 1 - Xi + Xi^2 - Xi^3 + ... = 1 - r_s/(2r) + (r_s/(2r))^2 - ...
 
 ### Naeherung fuer kleine Xi
 
 Fuer Xi << 1 (Schwachfeld):
 - D ~ 1 - Xi
-- $v_{fall}$ ~ c sqrt(2Xi) = c sqrt($r_{s}$/r)
-- $z_{grav}$ ~ Xi = $r_{s}$/(2r)
-- $\Delta_{\text{f}}$/f ~ Xi
+- v_fall ~ c sqrt(2Xi) = c sqrt(r_s/r)
+- z_grav ~ Xi = r_s/(2r)
+- Delta_f/f ~ Xi
 
-### Naeherung fuer Xi nahe $\Xi_{\text{max}}$
+### Naeherung fuer Xi nahe Xi_max
 
-Fuer Xi -> $\Xi_{\text{max}}$ = 0,802:
-- D -> $D_{min}$ = 0,555
-- $v_{fall}$ -> 0,832 c
-- $z_{grav}$ -> 0,802
+Fuer Xi -> Xi_max = 0,802:
+- D -> D_min = 0,555
+- v_fall -> 0,832 c
+- z_grav -> 0,802
 
 ## B.6 Tensorformeln
 
@@ -13491,9 +13516,9 @@ Determinante: sqrt(-g) = r^2 sin theta
 
 ### Christoffel-Symbole (nicht-verschwindende)
 
-Gamma^t_{tr} = $D_{prime}$/D
-Gamma^r_{tt} = D^3 $D_{prime}$ c^2
-Gamma^r_{rr} = -$D_{prime}$/D
+Gamma^t_{tr} = D_prime/D
+Gamma^r_{tt} = D^3 D_prime c^2
+Gamma^r_{rr} = -D_prime/D
 Gamma^r_{theta theta} = -r D^2
 Gamma^r_{phi phi} = -r D^2 sin^2 theta
 Gamma^theta_{r theta} = 1/r
@@ -13501,12 +13526,12 @@ Gamma^phi_{r phi} = 1/r
 
 ### Ricci-Skalar
 
-R = -2(D_prime_prime + 2 $D_{prime}$/r + $D_{prime}$^2/D)
+R = -2(D_prime_prime + 2 D_prime/r + D_prime^2/D)
 
 ### Kretschmer-Skalar
 
-An der natuerlichen Grenze: $K_{SSZ}$ ~ 12/r_s^4 * $D_{min}$^{-4} (endlich).
-In ART: $K_{GR}$ -> unendlich fuer r -> 0.
+An der natuerlichen Grenze: K_SSZ ~ 12/r_s^4 * D_min^{-4} (endlich).
+In ART: K_GR -> unendlich fuer r -> 0.
 
 ## B.7 Geodaetengleichungen
 
@@ -13516,28 +13541,28 @@ In ART: $K_{GR}$ -> unendlich fuer r -> 0.
 
 ### Kreisfoermige Geodaete
 
-Orbitalfrequenz: Omega = sqrt(GM D^3 $D_{prime}$ / r^2)
+Orbitalfrequenz: Omega = sqrt(GM D^3 D_prime / r^2)
 Spezifischer Drehimpuls: L = r^2 Omega / D^2
-ISCO-Bedingung: d^2 $V_{eff}$ / dr^2 = 0
+ISCO-Bedingung: d^2 V_eff / dr^2 = 0
 
 ## B.8 Ableitungen
 
 ### Schwachfeldformel
 
 g_tt_SSZ = -D^2 = -(1/(1+Xi))^2 = -(1 - 2Xi + ...)
-g_tt_Schw = -(1 - $r_{s}$/r)
-Vergleich: 2Xi = $r_{s}$/r, also Xi = $r_{s}$/(2r).
+g_tt_Schw = -(1 - r_s/r)
+Vergleich: 2Xi = r_s/r, also Xi = r_s/(2r).
 
 ### Starkfeldformel
 
 Xi = 1 - exp(-phi r/r_s) erfuellt: Xi(0) = 0, dXi/dr > 0, Xi(inf) -> 1.
-An r = $r_{s}$: $\Xi_{\text{max}}$ = 1 - exp(-phi) = 0,802.
+An r = r_s: Xi_max = 1 - exp(-phi) = 0,802.
 
 ### Abschliessungsrelation
 
 Aus Energieerhaltung: E = mc^2 D(r) = mc^2.
-$v_{fall}$ = c sqrt(1 - D^2), $v_{esc}$ = c^2/v_fall.
-Beweis: $v_{esc}$ * $v_{fall}$ = c^2 folgt aus Zeitumkehr-Symmetrie.
+v_fall = c sqrt(1 - D^2), v_esc = c^2/v_fall.
+Beweis: v_esc * v_fall = c^2 folgt aus Zeitumkehr-Symmetrie.
 
 ### Feinstrukturkonstante
 
@@ -13546,13 +13571,13 @@ alpha = 1/(phi^{2pi} x N0) = 1/(34,270 x 4) = 1/137,08
 
 ### Hawking-Temperatur in SSZ
 
-$\kappa_{\text{SSZ}}$ = $\kappa_{\text{GR}}$ * $D_{min}$ = c^4/(4GM) * 0,555
-T_H_SSZ = hbar $\kappa_{\text{SSZ}}$ / (2 pi c $k_{B}$) = T_H_GR * $D_{min}$
+kappa_SSZ = kappa_GR * D_min = c^4/(4GM) * 0,555
+T_H_SSZ = hbar kappa_SSZ / (2 pi c k_B) = T_H_GR * D_min
 
 ## B.9 Nuetzliche Naeherungen
 
-Fuer Xi << 1: D ~ 1 - Xi, $v_{fall}$ ~ c sqrt(2Xi), z ~ Xi
-Fuer Xi -> $\Xi_{\text{max}}$: D -> 0,555, $v_{fall}$ -> 0,832c, z -> 0,802
+Fuer Xi << 1: D ~ 1 - Xi, v_fall ~ c sqrt(2Xi), z ~ Xi
+Fuer Xi -> Xi_max: D -> 0,555, v_fall -> 0,832c, z -> 0,802
 
 ## B.10 Spezielle Loesungen und Grenzfaelle
 
@@ -13561,38 +13586,38 @@ Fuer Xi -> $\Xi_{\text{max}}$: D -> 0,555, $v_{fall}$ -> 0,832c, z -> 0,802
 Die Photonensphere (der Radius, bei dem Photonen auf instabilen Kreisbahnen umlaufen) ist bestimmt durch:
 d/dr (r^2/D^2) = 0
 
-In SSZ: $r_{ph}$ = 1,53 $r_{s}$ (vs. 1,50 $r_{s}$ in ART). Die 2%-Differenz beeinflusst den Schattenradius.
+In SSZ: r_ph = 1,53 r_s (vs. 1,50 r_s in ART). Die 2%-Differenz beeinflusst den Schattenradius.
 
 ### Schattenradius
 
 Der Schattenradius (der scheinbare Radius des Schattens fuer einen entfernten Beobachter) ist:
-$r_{shadow}$ = $r_{ph}$ / D($r_{ph}$)
+r_shadow = r_ph / D(r_ph)
 
-In SSZ: $r_{shadow}$ = 1,53 $r_{s}$ / D(1,53 $r_{s}$) = 2,60 $r_{s}$ (vs. 2,60 $r_{s}$ in ART fuer a=0). Die numerische Uebereinstimmung ist zufaellig; die Differenz betraegt 0,987 (also -1,3%).
+In SSZ: r_shadow = 1,53 r_s / D(1,53 r_s) = 2,60 r_s (vs. 2,60 r_s in ART fuer a=0). Die numerische Uebereinstimmung ist zufaellig; die Differenz betraegt 0,987 (also -1,3%).
 
 ### Innerster stabiler Kreisorbit (ISCO)
 
-Der ISCO ist bestimmt durch d^2 $V_{eff}$/dr^2 = 0 und dV\_eff/dr = 0 gleichzeitig.
+Der ISCO ist bestimmt durch d^2 V_eff/dr^2 = 0 und dV_eff/dr = 0 gleichzeitig.
 
-In SSZ: $r_{ISCO}$ = 3,5 $r_{s}$ (vs. 3,0 $r_{s}$ in ART fuer a=0). Die 17%-Differenz ist die groesste Einzeldifferenz zwischen SSZ und ART und beeinflusst das Akkretionsscheiben-Spektrum.
+In SSZ: r_ISCO = 3,5 r_s (vs. 3,0 r_s in ART fuer a=0). Die 17%-Differenz ist die groesste Einzeldifferenz zwischen SSZ und ART und beeinflusst das Akkretionsscheiben-Spektrum.
 
 ### Maximale Orbitalfrequenz
 
 Die maximale Orbitalfrequenz (am ISCO) ist:
-$f_{ISCO}$ = c^3/(2 pi G M) * (1/($r_{ISCO}$/r_s)^{3/2}) * D($r_{ISCO}$)
+f_ISCO = c^3/(2 pi G M) * (1/(r_ISCO/r_s)^{3/2}) * D(r_ISCO)
 
 In SSZ: f_ISCO_SSZ = 0,85 * f_ISCO_GR (15% niedriger wegen des groesseren ISCO-Radius).
 
 ### Metrik-Perturbationen-Luminositaet am ISCO
 
 Die GW-Luminositaet am ISCO ist:
-L_GW_ISCO = (32/5) c^5/G * (mu/M)^2 * ($r_{s}$/r_ISCO)^5
+L_GW_ISCO = (32/5) c^5/G * (mu/M)^2 * (r_s/r_ISCO)^5
 
 In SSZ: L_GW_ISCO_SSZ = 0,47 * L_GW_ISCO_GR (53% niedriger wegen des groesseren ISCO-Radius).
 
 ## B.11 Numerische Werte fuer Standardobjekte
 
-### Stellares Schwarzes Loch (M = 10 $M_{sun}$)
+### Stellares Schwarzes Loch (M = 10 M_sun)
 
 | Groesse | Wert |
 |---------|------|
@@ -13603,7 +13628,7 @@ In SSZ: L_GW_ISCO_SSZ = 0,47 * L_GW_ISCO_GR (53% niedriger wegen des groesseren 
 | T_H (SSZ) | 3,4 x 10^{-9} K |
 | t_evap (SSZ) | ~10^{68} Jahre |
 
-### Supermassives SL Sgr A* (M = 4 x 10^6 $M_{sun}$)
+### Supermassives SL Sgr A* (M = 4 x 10^6 M_sun)
 
 | Groesse | Wert |
 |---------|------|
@@ -13617,7 +13642,7 @@ In SSZ: L_GW_ISCO_SSZ = 0,47 * L_GW_ISCO_GR (53% niedriger wegen des groesseren 
 
 ### Maxwell-Gleichungen in gekruemmter Raumzeit
 
-nabla\_mu F^{mu nu} = -4 pi J^nu / c
+nabla_mu F^{mu nu} = -4 pi J^nu / c
 nabla_{[mu} F_{nu rho]} = 0
 
 wobei F_{mu nu} der Feldstaerketensor und J^nu die Viererstromdichte ist.
@@ -13626,26 +13651,25 @@ wobei F_{mu nu} der Feldstaerketensor und J^nu die Viererstromdichte ist.
 
 In SSZ werden die EM-Felder durch den Skalierungsfaktor s(r) = 1 + Xi(r) modifiziert:
 
-$E_{lokal}$ = $E_{inf}$ / s(r) = $E_{inf}$ * D(r)
-$B_{lokal}$ = $B_{inf}$ / s(r) = $B_{inf}$ * D(r)
+E_lokal = E_inf / s(r) = E_inf * D(r)
+B_lokal = B_inf / s(r) = B_inf * D(r)
 
 ### Poynting-Vektor in SSZ
 
 S = (c/4pi) E x B * D^2(r)
 
-Die EM-Energiedichte: $u_{EM}$ = (E^2 + B^2)/(8pi) * D^2(r)
+Die EM-Energiedichte: u_EM = (E^2 + B^2)/(8pi) * D^2(r)
 
 ### Gravitativer Faraday-Effekt
 
-Drehwinkel der Polarisationsebene: $\Delta_{\phi}$ = (2GM omega)/(c^3) * D(r) * integral dr/r^2
+Drehwinkel der Polarisationsebene: Delta_phi = (2GM omega)/(c^3) * D(r) * integral dr/r^2
 
+---
 
-\newpage
-
-# Vollständige Bibliografie
+# Anhang C: Vollständige Bibliografie
 
 **Autoren:** Carmen N. Wrede, Lino P. Casu
-
+**Status:** ERSTE FASSUNG — KANONISCH
 
 ---
 
@@ -13706,7 +13730,7 @@ Drehwinkel der Polarisationsebene: $\Delta_{\phi}$ = (2GM omega)/(c^3) * D(r) * 
 
 ### Stufe 4 — Schwarze Löcher
 - EHT M87*: EHT Collaboration 2019
-- observational: GWTC-3, Abbott et al. 2023
+- GW-Katalog: GWTC-3, Abbott et al. 2023
 
 ### Stufe 5 — Astrophysikalisch
 - G79.29+0.46: Rizzo et al. 2014, Jimenez-Esteban et al. 2010
@@ -13745,7 +13769,7 @@ Drehwinkel der Polarisationsebene: $\Delta_{\phi}$ = (2GM omega)/(c^3) * D(r) * 
 
 ## C.4 Zusätzliche Schlüsselreferenzen
 
-**Vessot, R.F.C., Levine, M.W. (1979).** A test of the equivalence principle using a space-borne clock. General Relativity and Gravitation, 10, 181–204. Gravity Probe A: der präziseste direkte Test der gravitativen Rotverschiebung bei 70 ppm. Bestätigt z $\neq$ 0 mit mehr als 10⁴ Sigma Signifikanz.
+**Vessot, R.F.C., Levine, M.W. (1979).** A test of the equivalence principle using a space-borne clock. General Relativity and Gravitation, 10, 181–204. Gravity Probe A: der präziseste direkte Test der gravitativen Rotverschiebung bei 70 ppm. Bestätigt z ≠ 0 mit mehr als 10⁴ Sigma Signifikanz.
 
 **Miller, M.C. et al. (2019).** PSR J0030+0451 Mass and Radius from NICER Data. ApJ Letters, 887, L24. Unabhängige NICER-Analyse, die Neutronenstern-Kompaktheitsmessungen bestätigt.
 
@@ -13777,7 +13801,7 @@ Alle Datensätze sind öffentlich zugänglich über NASA HEASARC, ESO Phase 3, A
 
 - **Will, C. M. (2014).** The confrontation between general relativity and experiment. *Living Reviews in Relativity*, 17(1), 4. -- Umfassende Uebersicht ueber alle experimentellen Tests der ART. Aktualisiert regelmaessig.
 
-- **Abbott, B. P. et al. (observational) (2016).** Observation of metric perturbations from a binary black hole merger. *Physical Review Letters*, 116(6), 061102. -- Die erste direkte Detektion von Metrik-Perturbationen. Nobelpreis 2017.
+- **Abbott, B. P. et al. (2016).** Observation of metric perturbations from a binary black hole merger. *Physical Review Letters*, 116(6), 061102. -- Die erste direkte Detektion von Metrik-Perturbationen. Nobelpreis 2017.
 
 - **Event Horizon Telescope Collaboration (2019).** First M87 Event Horizon Telescope results. I. The shadow of the supermassive black hole. *Astrophysical Journal Letters*, 875(1), L1. -- Das erste Bild eines Schwarzen-Loch-Schattens.
 
@@ -13797,7 +13821,7 @@ Alle Datensätze sind öffentlich zugänglich über NASA HEASARC, ESO Phase 3, A
 
 - **Hawking, S. W. (1975).** Particle creation by black holes. *Communications in Mathematical Physics*, 43(3), 199-220. -- Hawking-Strahlung: Schwarze Loecher verdampfen.
 
-- **Bekenstein, J. D. (1973).** Black holes and entropy. *Physical Review D*, 7(8), 2333-2346. -- Die Bekenstein-Hawking-Entropie S = $k_{B}$ A/(4 $l_{P}$^2).
+- **Bekenstein, J. D. (1973).** Black holes and entropy. *Physical Review D*, 7(8), 2333-2346. -- Die Bekenstein-Hawking-Entropie S = k_B A/(4 l_P^2).
 
 - **Bardeen, J. M. (1968).** Non-singular general-relativistic gravitational collapse. *Proceedings of GR5*, 174. -- Die erste regulaere Schwarze-Loch-Metrik.
 
@@ -13854,7 +13878,7 @@ Alle Datensätze sind öffentlich zugänglich über NASA HEASARC, ESO Phase 3, A
 
 - **Abbott, B. P. et al. (2017).** GW170817: Observation of metric perturbations from a binary neutron star inspiral. *Physical Review Letters*, 119(16), 161101. -- Erste Neutronenstern-Verschmelzung mit GW und EM-Gegenstueck.
 
-- **Abbott, B. P. et al. (2017).** metric perturbations and gamma-rays from a binary neutron star merger: GW170817 and GRB 170817A. *Astrophysical Journal Letters*, 848(2), L13. -- Beweis $c_{gw}$ = c auf 5 x 10^{-16}.
+- **Abbott, B. P. et al. (2017).** metric perturbations and gamma-rays from a binary neutron star merger: GW170817 and GRB 170817A. *Astrophysical Journal Letters*, 848(2), L13. -- Beweis c_gw = c auf 5 x 10^{-16}.
 
 - **Dreyer, O. et al. (2004).** Black-hole spectroscopy: Testing general relativity through metric perturbation observations. *Classical and Quantum Gravity*, 21(4), 787-803. -- QNM-Spektroskopie als Test der Raumzeitgeometrie.
 
@@ -13904,7 +13928,7 @@ Alle Datensätze sind öffentlich zugänglich über NASA HEASARC, ESO Phase 3, A
 
 - **Riley, T. E. et al. (2021).** A NICER view of the massive pulsar PSR J0740+6620 informed by radio timing and XMM-Newton spectroscopy. *Astrophysical Journal Letters*, 918(2), L27. -- NICER-Messung von Masse und Radius.
 
-- **Fonseca, E. et al. (2021).** Refined mass and geometric measurements of the high-mass PSR J0740+6620. *Astrophysical Journal Letters*, 915(1), L12. -- M = 2,08 +/- 0,07 $M_{sun}$.
+- **Fonseca, E. et al. (2021).** Refined mass and geometric measurements of the high-mass PSR J0740+6620. *Astrophysical Journal Letters*, 915(1), L12. -- M = 2,08 +/- 0,07 M_sun.
 
 ### Numerische Relativitaet
 
@@ -13939,7 +13963,7 @@ Alle Datensätze sind öffentlich zugänglich über NASA HEASARC, ESO Phase 3, A
 | Ressource | URL | Beschreibung |
 |-----------|-----|-------------|
 | arXiv.org | arxiv.org | Preprint-Server fuer Physik |
-| observational campaigns Open Science | gwosc.org | Metrik-Perturbationen-Daten |
+| GW Open Science Center | gwosc.org | Metrik-Perturbationen-Daten |
 | EHT | eventhorizontelescope.org | Schwarze-Loch-Bilder |
 | NASA ADS | ui.adsabs.harvard.edu | Astronomische Literaturdatenbank |
 | SSZ GitHub | github.com/error-wtf | SSZ-Repositories |
@@ -13963,7 +13987,7 @@ Alle Datensätze sind öffentlich zugänglich über NASA HEASARC, ESO Phase 3, A
 | 1974 | Hawking-Strahlung | Schwarze Loecher verdampfen |
 | 1975 | Hulse-Taylor-Pulsar | Indirekter GW-Nachweis |
 | 2003 | Cassini-Shapiro-Delay | gamma = 1 auf 0,002% |
-| 2015 | observational campaigns: GW150914 | Erste direkte GW-Detektion |
+| 2015 | GW150914 | Erste direkte GW-Detektion |
 | 2017 | GW170817 + GRB | c_gw = c bestaetigt |
 | 2019 | EHT: M87* | Erstes Schwarze-Loch-Bild |
 | 2022 | EHT: Sgr A* | Bild des galaktischen Zentrums |
@@ -13980,8 +14004,8 @@ Alle Datensätze sind öffentlich zugänglich über NASA HEASARC, ESO Phase 3, A
 5. **Hulse-Taylor-Pulsar (1975-heute):** GW-Daempfung. Praezision: 0,2%.
 6. **Cassini (2003):** Shapiro-Delay. Praezision: 0,002%.
 7. **Gravity Probe B (2011):** Geodaetische Praezession (0,28%) und Frame-Dragging (19%).
-8. **observational campaigns GW150914 (2015):** Erste direkte GW-Detektion.
-9. **GW170817 (2017):** $c_{gw}$ = c auf 5 x 10^{-16}.
+8. **GW150914 (2015):** Erste direkte GW-Detektion.
+9. **GW170817 (2017):** c_gw = c auf 5 x 10^{-16}.
 10. **EHT M87* (2019):** Schattenradius theta = 42 +/- 3 uas.
 11. **GRAVITY S2 (2018-2022):** Rotverschiebung und Schwarzschild-Praezession.
 
@@ -13991,7 +14015,7 @@ Alle Datensätze sind öffentlich zugänglich über NASA HEASARC, ESO Phase 3, A
 2. **Einstein-Teleskop (~2035):** QNM auf ~1%. SSZ: +3% vs ART. **Diskriminierend.**
 3. **LISA (~2037):** EMRI-Phase. SSZ: ~10^4 rad Differenz. **Stark diskriminierend.**
 4. **SKA (~2028):** Pulsare nahe Sgr A*. **Potenziell diskriminierend.**
-5. **observational campaigns O5 (~2027):** GW-Echos. **Stark diskriminierend.**
+5. **NANOGrav/IPTA (~2025-2030):** Pulsar-Timing-Korrekturen. **Stark diskriminierend.**
 
 ## C.9 Weiterführende Literatur
 
@@ -14024,7 +14048,7 @@ Alle Datensätze sind öffentlich zugänglich über NASA HEASARC, ESO Phase 3, A
 | Ressource | URL | Beschreibung |
 |-----------|-----|-------------|
 | arXiv.org | arxiv.org | Preprint-Server |
-| observational campaigns Open Science | gwosc.org | GW-Daten |
+| GW Open Science Center | gwosc.org | GW-Daten |
 | EHT | eventhorizontelescope.org | SL-Bilder |
 | SSZ GitHub | github.com/error-wtf | SSZ-Repos |
 
@@ -14130,11 +14154,11 @@ Alle Datensätze sind öffentlich zugänglich über NASA HEASARC, ESO Phase 3, A
 
 ### Metrik-Perturbationen-Astronomie
 
-- **Abbott, R. et al. (current observational) (2023).** GWTC-3: Compact binary coalescences observed by observational campaigns and complementary observatories during the second part of the third observing run. *Phys. Rev. X*, 13, 041039. -- 90 GW-Ereignisse, Populationsstatistik.
+- **Abbott, R. et al. (2023).** GWTC-3: Compact binary coalescences observed by GW-Detektoren during the second part of the third observing run. *Phys. Rev. X*, 13, 041039. -- 90 GW-Ereignisse, Populationsstatistik.
 
 - **Isi, M. et al. (2019).** Testing the no-hair theorem with GW150914. *Phys. Rev. Lett.*, 123, 111102. -- Erster Test der QNM-Spektroskopie.
 
-- **Abedi, J. et al. (2017).** Echoes from the abyss: Tentative evidence for Planck-scale structure at black hole horizons. *Phys. Rev. D*, 96, 082004. -- Erste (umstrittene) Suche nach GW-Echos.
+- **Abedi, J. et al. (2017).** Echoes from the abyss: Tentative evidence for Planck-scale structure at black hole horizons. *Phys. Rev. D*, 96, 082004. -- Umstrittene Suche nach Horizont-Echos (VERWORFEN in SSZ).
 
 - **Cardoso, V. & Pani, P. (2019).** Testing the nature of dark compact objects: A status report. *Living Rev. Rel.*, 22, 4. -- Uebersicht ueber Tests der Natur kompakter Objekte.
 
@@ -14210,15 +14234,14 @@ Alle Datensätze sind öffentlich zugänglich über NASA HEASARC, ESO Phase 3, A
 
 ## C.13 Danksagung an die wissenschaftliche Gemeinschaft
 
-Die SSZ-Theorie waere ohne die Arbeit tausender Wissenschaftler nicht moeglich gewesen. Besonderer Dank gilt den Teams von current observational, dem Event Horizon Telescope, der GRAVITY-Kollaboration, den Lunar-Laser-Ranging-Teams und allen Experimentalphysikern, deren praezise Messungen die Grundlage fuer jeden Test der Gravitationsphysik bilden. Die Open-Science-Bewegung -- insbesondere arXiv, GitHub und Zenodo -- hat die Reproduzierbarkeit und Transparenz wissenschaftlicher Forschung revolutioniert und SSZ erst moeglich gemacht.
+Die SSZ-Theorie waere ohne die Arbeit tausender Wissenschaftler nicht moeglich gewesen. Besonderer Dank gilt den Teams der GW-Detektoren, dem Event Horizon Telescope, der GRAVITY-Kollaboration, den Lunar-Laser-Ranging-Teams und allen Experimentalphysikern, deren praezise Messungen die Grundlage fuer jeden Test der Gravitationsphysik bilden. Die Open-Science-Bewegung -- insbesondere arXiv, GitHub und Zenodo -- hat die Reproduzierbarkeit und Transparenz wissenschaftlicher Forschung revolutioniert und SSZ erst moeglich gemacht.
 
+---
 
-\newpage
-
-# Repository- und Dokumentationsindex
+# Anhang D: Repository- und Dokumentationsindex
 
 **Autoren:** Carmen N. Wrede, Lino P. Casu
-
+**Status:** ERSTE FASSUNG — KANONISCH
 
 ---
 
@@ -14363,7 +14386,7 @@ Die Pipeline laeuft auf GitHub Actions mit Python 3.9-3.12 auf Linux, macOS und 
 
 ### Verzeichnisstruktur (ssz-qubits)
 
-- ssz\_qubits.py: Hauptmodul mit Xi, D, Formeln
+- ssz_qubits.py: Hauptmodul mit Xi, D, Formeln
 - tests/: Alle Validierungstests
 - docs/: Formel-Dokumentation, mathematische Physik
 - outputs/: Plots und Ergebnisse
@@ -14395,13 +14418,12 @@ Die Pipeline laeuft auf GitHub Actions mit Python 3.9-3.12 auf Linux, macOS und 
 - Keine GPU erforderlich (alle Berechnungen auf CPU)
 - Speicherbedarf: < 1 GB RAM fuer alle Tests
 
+---
 
-\newpage
-
-# Historische Preprints und Konsolidierungsnotizen
+# Anhang E: Historische Preprints und Konsolidierungsnotizen
 
 **Autoren:** Carmen N. Wrede, Lino P. Casu
-
+**Status:** ERSTE FASSUNG
 
 ---
 
@@ -14448,11 +14470,11 @@ Kanonische Versionen befinden sich im SEGMENTED-SPACETIME Repository.
 
 Die SSZ-Theorie hat sich ueber mehrere Iterationen entwickelt. Die wichtigsten Konsolidierungsschritte:
 
-**Version 1.0 (2024-Q1):** Erste Formulierung der Segmentdichte Xi und des Zeitdilatationsfaktors D. Schwachfeldformel Xi = $r_{s}$/(2r) eingefuehrt. Validierung gegen GPS und Pound-Rebka.
+**Version 1.0 (2024-Q1):** Erste Formulierung der Segmentdichte Xi und des Zeitdilatationsfaktors D. Schwachfeldformel Xi = r_s/(2r) eingefuehrt. Validierung gegen GPS und Pound-Rebka.
 
-**Version 1.5 (2024-Q2):** Einfuehrung der Starkfeldformel Xi = 1 - exp(-phi*r/r_s). Berechnung von $D_{min}$ = 0,555. Erste Vorhersagen fuer Neutronenstern-Rotverschiebung.
+**Version 1.5 (2024-Q2):** Einfuehrung der Starkfeldformel Xi = 1 - exp(-phi*r/r_s). Berechnung von D_min = 0,555. Erste Vorhersagen fuer Neutronenstern-Rotverschiebung.
 
-**Version 2.0 (2024-Q3):** Vereinheitlichung von Schwach- und Starkfeldformeln durch Hermite-C2-Mischfunktion. Einfuehrung des Regime-Schnittpunkts r* = 1,387 $r_{s}$. Vollstaendige PPN-Analyse (gamma = beta = 1).
+**Version 2.0 (2024-Q3):** Vereinheitlichung von Schwach- und Starkfeldformeln durch Hermite-C2-Mischfunktion. Einfuehrung des Regime-Schnittpunkts r* = 1,387 r_s. Vollstaendige PPN-Analyse (gamma = beta = 1).
 
 **Version 2.5 (2024-Q4):** Erweiterung auf elektromagnetische Phaenomene (Skalierungsfaktor s = 1/D). Ableitung der Feinstrukturkonstante alpha = 1/(phi^{2pi} x 4). Cross-Repository-Validierung mit 260+ Tests.
 
@@ -14462,7 +14484,7 @@ Die SSZ-Theorie hat sich ueber mehrere Iterationen entwickelt. Die wichtigsten K
 
 Die folgenden Konzepte aus frueheren Versionen sind veraltet und duerfen nicht mehr verwendet werden:
 
-1. **Quadratische Xi-Formel:** Xi = ($r_{s}$/r)^2 * exp(-r/r_phi) — ersetzt durch $\Xi_{\text{strong}}$ = 1 - exp(-phi*r/r_s) in Version 1.5.
+1. **Quadratische Xi-Formel:** Xi = (r_s/r)^2 * exp(-r/r_phi) — ersetzt durch Xi_strong = 1 - exp(-phi*r/r_s) in Version 1.5.
 
 2. **Lineare D-Formel:** D = 1 - Xi — ersetzt durch D = 1/(1+Xi) in Version 1.0 (die lineare Form war ein fruehes Approximat).
 
@@ -14518,7 +14540,7 @@ Die folgenden Konzepte aus frueheren Versionen sind veraltet und duerfen nicht m
 1. **Exakte rotierende Metrik:** Die vollstaendige nicht-perturbative Loesung fuer rotierende kompakte Objekte.
 2. **Kosmologische Erweiterung:** Friedmann-Gleichungen in SSZ, Dunkle Energie.
 3. **Quantenkorrekturen:** Berechnung der Vakuumpolarisation und Vertex-Korrekturen fuer alpha.
-4. **Metrik-Perturbationen-Echos:** Detaillierte Wellenform-Modellierung fuer observational campaigns/ET.
+4. **QNM-Spektroskopie:** Detaillierte Wellenform-Modellierung fuer Einstein-Teleskop/Cosmic Explorer.
 5. **Neutronenstern-Struktur:** TOV-Gleichung mit SSZ-Korrekturen.
 6. **Primordialen Schwarze Loecher:** SSZ-Vorhersagen fuer das fruehe Universum.
 7. **Quantengravitation:** Verbindung zwischen SSZ und Loop-Quantengravitation oder Stringtheorie.
@@ -14531,7 +14553,7 @@ Eddington versuchte, alle Naturkonstanten aus Mathematik abzuleiten: alpha = 1/1
 
 ### Diracs grosse Zahlen (1937)
 
-Dirac bemerkte: e^2/(G $m_{e}$ $m_{p}$) ~ $t_{U}$/(e^2/($m_{e}$ c^3)) ~ 10^{40}. Er schloss G ~ 1/t. Dies wurde durch LLR widerlegt. In SSZ ist G konstant.
+Dirac bemerkte: e^2/(G m_e m_p) ~ t_U/(e^2/(m_e c^3)) ~ 10^{40}. Er schloss G ~ 1/t. Dies wurde durch LLR widerlegt. In SSZ ist G konstant.
 
 ### Wylers Formel (1969)
 
@@ -14542,15 +14564,14 @@ Wyler leitete alpha = (9/(8 pi^4)) * (pi^5/2^4!)^{1/4} = 1/137,036 ab -- bemerke
 1. **Exakte rotierende Metrik:** Vollstaendige nicht-perturbative Loesung.
 2. **Kosmologische Erweiterung:** Friedmann-Gleichungen in SSZ.
 3. **Quantenkorrekturen:** Vakuumpolarisation fuer alpha.
-4. **GW-Echos:** Detaillierte Wellenform-Modellierung.
+4. **QNM-Spektroskopie:** Detaillierte Wellenform-Modellierung.
 5. **Neutronenstern-Struktur:** TOV-Gleichung mit SSZ.
 6. **Primordiale SL:** SSZ im fruehen Universum.
 7. **Quantengravitation:** Verbindung zu LQG oder Stringtheorie.
 
+---
 
-\newpage
-
-# ART vs. SSZ Vergleichstabellen
+# Anhang F: ART vs. SSZ Vergleichstabellen
 
 Dieser Anhang bietet Seite-an-Seite-Vergleichstabellen für jede im Buch diskutierte Observable.
 
@@ -14562,12 +14583,12 @@ Diese Tests verifizieren SSZ = ART im Schwachfeld.
 
 | Observable | ART-Vorhersage | SSZ-Vorhersage | Differenz | Beobachtet | Status |
 |-----------|--------------|----------------|-----------|----------|--------|
-| Merkur-Perihel | 42,98 Bsek/Jh | 42,98 Bsek/Jh | 0 | 42,98 ± 0,04 | Y identisch |
-| Shapiro-Delay (γ) | 1,000 | 1,000 | 0 | 1,000 ± 2,3×10⁻⁵ | Y identisch |
-| Solare Ablenkung | 1,7512 Bsek | 1,7512 Bsek | 0 | 1,75 ± 0,01 | Y identisch |
-| GPS-Uhrendrift | +38,6 μs/Tag | +38,6 μs/Tag | 0 | +38,6 μs/Tag | Y identisch |
-| Pound-Rebka | 2,46×10⁻¹⁵ | 2,46×10⁻¹⁵ | 0 | 2,46×10⁻¹⁵ ± 1% | Y identisch |
-| Gravity Probe B | 6,606 Bsek/J | 6,606 Bsek/J | 0 | 6,602 ± 0,018 | Y identisch |
+| Merkur-Perihel | 42,98 Bsek/Jh | 42,98 Bsek/Jh | 0 | 42,98 ± 0,04 | ✓ identisch |
+| Shapiro-Delay (γ) | 1,000 | 1,000 | 0 | 1,000 ± 2,3×10⁻⁵ | ✓ identisch |
+| Solare Ablenkung | 1,7512 Bsek | 1,7512 Bsek | 0 | 1,75 ± 0,01 | ✓ identisch |
+| GPS-Uhrendrift | +38,6 μs/Tag | +38,6 μs/Tag | 0 | +38,6 μs/Tag | ✓ identisch |
+| Pound-Rebka | 2,46×10⁻¹⁵ | 2,46×10⁻¹⁵ | 0 | 2,46×10⁻¹⁵ ± 1% | ✓ identisch |
+| Gravity Probe B | 6,606 Bsek/J | 6,606 Bsek/J | 0 | 6,602 ± 0,018 | ✓ identisch |
 
 **Fazit:** SSZ und ART sind im Sonnensystem mit heutiger Technik ununterscheidbar.
 
@@ -14575,16 +14596,16 @@ Diese Tests verifizieren SSZ = ART im Schwachfeld.
 
 | Observable | ART | SSZ | Δ | Beobachtet | Status |
 |-----------|-----|-----|---|----------|--------|
-| Sirius B Rotversch. | 8,0×10⁻⁵ | 8,0×10⁻⁵ | < 0,01% | 8,0±0,4×10⁻⁵ | Y identisch |
-| S2 Periapsis z | 7,0×10⁻⁴ | 7,0×10⁻⁴ | < 0,1% | 7,0±0,5×10⁻⁴ | Y identisch |
-| Hulse-Taylor Ṗ | −2,40×10⁻¹² | −2,40×10⁻¹² | < 0,01% | −2,40±0,01×10⁻¹² | Y identisch |
+| Sirius B Rotversch. | 8,0×10⁻⁵ | 8,0×10⁻⁵ | < 0,01% | 8,0±0,4×10⁻⁵ | ✓ identisch |
+| S2 Periapsis z | 7,0×10⁻⁴ | 7,0×10⁻⁴ | < 0,1% | 7,0±0,5×10⁻⁴ | ✓ identisch |
+| Hulse-Taylor Ṗ | −2,40×10⁻¹² | −2,40×10⁻¹² | < 0,01% | −2,40±0,01×10⁻¹² | ✓ identisch |
 
 ## F.3 Neutronensterne (Stufe 3)
 
 | Observable | ART | SSZ | Δ | Status |
 |-----------|-----|-----|---|--------|
-| Oberflächen-z (1,4 M$\odot$, 12 km) | 0,236 | 0,172 | **−27%** | **Vorhersage** |
-| Oberflächen-z (2,0 M$\odot$, 10 km) | 0,414 | 0,345 | **−17%** | **Vorhersage** |
+| Oberflächen-z (1,4 M☉, 12 km) | 0,236 | 0,172 | **−27%** | **Vorhersage** |
+| Oberflächen-z (2,0 M☉, 10 km) | 0,414 | 0,345 | **−17%** | **Vorhersage** |
 | Pulsar-Timing Ṗ | Standard | +30% | **+30%** | **Vorhersage** |
 
 ## F.4 Schwarze Löcher (Stufe 4)
@@ -14593,7 +14614,7 @@ Diese Tests verifizieren SSZ = ART im Schwachfeld.
 |-----------|-----|-----|---|--------|
 | Schattendurchmesser | Standard | −1,3% | **−1,3%** | **Vorhersage** |
 | D(r_s) | 0 | 0,555 | **qualitativ** | **Vorhersage** |
-| GW-Echos | Abwesend | Vorhanden | **qualitativ** | **Vorhersage** |
+| Love-Zahl k_2 | 0 | 0,052 | **endlich vs. null** | **Vorhersage** |
 | QNM-Frequenz | Standard | +3% | **+3%** | **Vorhersage** |
 | Hawking-Temperatur | T_ART | 0,308 × T_ART | **−69%** | **Vorhersage** |
 
@@ -14603,8 +14624,7 @@ Diese Tests verifizieren SSZ = ART im Schwachfeld.
 |-----------|-----------|---------------|-----------------|
 | NS-Rotversch. +13% | NICER/eXTP | 2026/2028 | 3σ / 5σ |
 | SL-Schatten −1,3% | ngEHT | 2029 | 3σ |
-| GW-Echos | observational campaigns A+ | 2026 | 2σ (gestapelt) |
-| Pulsar-Timing | SKA | 2030 | 5σ |
+| Pulsar-Timing +30% | NANOGrav/IPTA | 2028 | 3σ |
 | G79-Moleküle | ALMA | 2025 (jetzt) | kategorisch |
 
 ## F.4 Detaillierter Vergleich: Schwachfeldtests
@@ -14634,11 +14654,10 @@ Diese Tests verifizieren SSZ = ART im Schwachfeld.
 | T_Hawking | T_H | 0,308 T_H | -69% | Primordialen SL |
 | eta_Akkretion | 0,057 | 0,063 | +10% | Roentgenspektroskopie |
 | QNM-Frequenz | f_Kerr | 1,03 f_Kerr | +3% | 3G-Detektoren |
-| GW-Echos | keine | Dt ~ 0,6 r_s/c | 100% | observational |
 | Love Number k_2 | 0 | ~0,052 | 100% | GW-Inspiral |
 | Jet-Leistung | P_BZ | 0,555 P_BZ | -44,5% | AGN-Statistik |
 
-**Fazit:** Im Starkfeld unterscheiden sich SSZ und ART signifikant. Die groessten Unterschiede (>50%) betreffen D($r_{s}$), z($r_{s}$), T_Hawking, GW-Echos und Love Numbers.
+**Fazit:** Im Starkfeld unterscheiden sich SSZ und ART signifikant. Die groessten Unterschiede (>50%) betreffen D(r_s), z(r_s), T_Hawking und Love Numbers.
 
 ## F.6 Vergleich mit alternativen Gravitationstheorien
 
@@ -14677,13 +14696,13 @@ Diese Tests verifizieren SSZ = ART im Schwachfeld.
 | Schattenradius | 0,987 theta_GR | theta_GR | -1,3% | ngEHT (~2028) |
 | ISCO-Radius (a=0) | 3,5 r_s | 3,0 r_s | +17% | Athena/XRISM |
 | QNM-Frequenz (l=2) | 1,03 f_GR | f_GR | +3% | Einstein-Teleskop |
-| Love-Zahl k_2 | 0,052 | 0 | Endlich vs. null | observational campaigns A+/ET |
-| Horizont | Keiner (natuerl. Grenze) | Ja (r = r_s) | Fundamental | GW-Echos |
+| Love-Zahl k_2 | 0,052 | 0 | Endlich vs. null | Einstein-Teleskop |
+| Horizont | Keiner (natuerl. Grenze) | Ja (r = r_s) | Fundamental | Roentgenemission |
 | Singularitaet | Keine | Ja (r = 0) | Fundamental | -- |
 | Max. Rotverschiebung | z_max = 0,802 | z_max = unendlich | Endlich vs. unendlich | ngEHT |
 | Gezeitenkraft (r_s) | Endlich | Unendlich | Endlich vs. unendlich | -- |
 | Penrose-Effizienz | 44,5% | 29,3% (a_max) | +52% | Jet-Leuchtkraft |
-| GW-Echos | Ja (Delta_t ~ 0,6 r_s/c) | Nein | Ja vs. Nein | observational campaigns O5/ET |
+| Pulsar-Timing Pdot | +30% vs ART | Standard | +30% | NANOGrav/IPTA |
 
 ### SSZ vs. Alternative Theorien
 
@@ -14723,9 +14742,9 @@ Diese Tests verifizieren SSZ = ART im Schwachfeld.
 | GP-B geodaetisch | 0,28% | ~10^{-9} | Nein |
 | S2 Rotverschiebung | 10% | ~10^{-7} | Nein |
 | EHT Schattenradius | 7% | 1,3% | Bald (ngEHT ~1%) |
-| observational campaigns QNM | ~10% | 3% | Bald (ET ~1%) |
-| observational campaigns Love-Zahl | ~50% | Endlich vs. 0 | Bald (ET ~10%) |
-| GW-Echos | Nicht detektiert | Ja vs. Nein | Bald (observational campaigns O5) |
+| QNM-Frequenz | ~10% | 3% | Bald (ET ~1%) |
+| Love-Zahl k_2 | ~50% | Endlich vs. 0 | Bald (ET ~10%) |
+| Pulsar-Timing Pdot | Nicht getestet | +30% vs. Standard | Bald (NANOGrav/IPTA) |
 
 ### Zeitskalen in SSZ
 
@@ -14734,7 +14753,7 @@ Diese Tests verifizieren SSZ = ART im Schwachfeld.
 | Lichtlaufzeit (r_s) | ~10 us (10 M_sun) | r_s/c |
 | Orbitalperiode (ISCO) | ~1 ms (10 M_sun) | 2 pi sqrt(r_ISCO^3/(GM)) |
 | QNM-Daempfung | ~0,1 ms (10 M_sun) | 1/(2 pi f_QNM Q) |
-| Echo-Verzoegerung | ~6 us (10 M_sun) | 0,6 r_s/c |
+| Pulsar-Timing-Korrektur | +30% Pdot | Pdot_SSZ/Pdot_ART |
 | Superradianz | ~10^7 Jahre (10 M_sun) | 1/(G_SSZ omega_SR) |
 | Hawking-Verdampfung | ~10^{67} Jahre (10 M_sun) | 5120 pi G^2 M^3/(hbar c^4) / D_min^6 |
 | EMRI-Inspiral | ~10^5 Orbits | N_cycles ~ (M_SMBH/m)^{5/3} |
@@ -14745,9 +14764,9 @@ Diese Tests verifizieren SSZ = ART im Schwachfeld.
 
 | Instrument | Typ | Wellenlänge | Aufloesung | SSZ-relevante Messung |
 |-----------|-----|-----------|-----------|---------------------|
-| observational campaigns | GW-Detektor | 10-10000 Hz | h ~ 10^{-23} | QNM, Echos, Love-Zahl |
-| complementary observatories | GW-Detektor | 10-10000 Hz | h ~ 10^{-22} | QNM, Echos |
-| additional detector networks | GW-Detektor | 10-10000 Hz | h ~ 10^{-22} | QNM, Echos |
+| Metrik-Perturbationen-Detektoren | GW-Detektor | 10-10000 Hz | h ~ 10^{-23} | QNM, Love-Zahl |
+| Weitere GW-Detektoren | GW-Detektor | 10-10000 Hz | h ~ 10^{-22} | QNM, Love-Zahl |
+| GEO600/IndIGO | GW-Detektor | 10-10000 Hz | h ~ 10^{-22} | QNM |
 | EHT | Radio-VLBI | 1,3 mm | 20 uas | Schattenradius |
 | GRAVITY | IR-Interferometer | 2,2 um | 10 uas | S-Stern-Orbits |
 | Chandra | Roentgen | 0,1-10 keV | 0,5 arcsec | Eisenlinien, QPOs |
@@ -14760,8 +14779,8 @@ Diese Tests verifizieren SSZ = ART im Schwachfeld.
 
 | Instrument | Start | Typ | SSZ-Test |
 |-----------|-------|-----|---------|
-| Einstein-Teleskop | ~2035 | GW (3. Gen.) | QNM auf 1%, Love-Zahl, Echos |
-| Cosmic Explorer | ~2035 | GW (3. Gen.) | QNM, Echos |
+| Einstein-Teleskop | ~2035 | GW (3. Gen.) | QNM auf 1%, Love-Zahl |
+| Cosmic Explorer | ~2035 | GW (3. Gen.) | QNM, Love-Zahl |
 | LISA | ~2037 | GW (Weltraum) | EMRIs, Phasenverschiebung |
 | ngEHT | ~2028 | Radio-VLBI | Schattenradius auf 1% |
 | Athena | ~2037 | Roentgen | Eisenlinien, ISCO |
@@ -14780,7 +14799,7 @@ Diese Tests verifizieren SSZ = ART im Schwachfeld.
 | D-Wert | ~1 | ~0,78 | ~0,56 |
 | SSZ = ART? | Ja (exakt) | Naeherungsweise | Nein (messbar) |
 | Typische Objekte | Planeten, Sterne | -- | NS, SL |
-| Beste Tests | GPS, Cassini, LLR | -- | EHT, observational campaigns, LISA |
+| Beste Tests | GPS, Cassini, LLR | -- | EHT, ET, LISA |
 | Korrektur-Ordnung | O(Xi^2) ~ 10^{-12} | O(Xi) ~ 0,3 | O(1) |
 
 ## F.6 Zusammenfassende Bewertung
@@ -14807,7 +14826,7 @@ Diese Tests verifizieren SSZ = ART im Schwachfeld.
 |------------|--------------|---------------------|
 | QNM-Frequenz | +3% vs ART | Differenz < 0,5% oder > 10% |
 | Schattenradius | -1,3% vs ART | Differenz < 0,1% oder > 5% |
-| GW-Echos | Ja (0,6 r_s/c) | Keine Echos bei SNR > 100 |
+| Pulsar-Timing | +30% Pdot | Pdot_SSZ/Pdot_ART < 1,1 oder > 1,5 |
 | Love-Zahl | k_2 ~ 0,05 | k_2 < 0,01 oder > 0,2 |
 | EMRI-Phase | ~10^4 rad | Differenz < 10 rad |
 | gamma (PPN) | 1 exakt | gamma != 1 auf 10^{-7} |
@@ -14818,7 +14837,7 @@ Diese Tests verifizieren SSZ = ART im Schwachfeld.
 
 | Instrument | Typ | SSZ-relevante Messung |
 |-----------|-----|---------------------|
-| current observational | GW-Detektor | QNM, Echos, Love-Zahl |
+| Metrik-Perturbationen-Detektoren | GW-Detektor | QNM, Love-Zahl |
 | EHT | Radio-VLBI | Schattenradius |
 | GRAVITY | IR-Interferometer | S-Stern-Orbits |
 | Chandra/XMM | Roentgen | Eisenlinien, QPOs |
@@ -14829,7 +14848,7 @@ Diese Tests verifizieren SSZ = ART im Schwachfeld.
 
 | Instrument | Start | SSZ-Test |
 |-----------|-------|---------|
-| Einstein-Teleskop | ~2035 | QNM auf 1%, Echos |
+| Einstein-Teleskop | ~2035 | QNM auf 1%, Love-Zahl |
 | LISA | ~2037 | EMRIs, Phasenverschiebung |
 | ngEHT | ~2028 | Schattenradius auf 1% |
 | Athena | ~2037 | Eisenlinien, ISCO |
@@ -14878,23 +14897,22 @@ Legende: WD = Weisser Zwerg, NS = Neutronenstern, SL = Schwarzes Loch, SMBH = Su
 | Zeitraum | Instrument | Test | Erwartete Praezision |
 |----------|-----------|------|---------------------|
 | 2025 | ACES | Rotverschiebung | 0,0003% |
-| 2025-2027 | observational campaigns O4/O5 | GW-Echos | SNR > 10 |
+| 2025-2028 | NANOGrav/IPTA | Pulsar-Timing +30% | 3σ |
 | 2025+ | Vera Rubin | Mikrolensing | ~10^7 Quellen/Nacht |
 | 2025+ | GRAVITY+ | S-Sterne | r ~ 100 r_s |
 | 2028 | ngEHT | Schattenradius | ~1% |
 | 2028 | SKA | Pulsare nahe Sgr A* | Starkfeld |
 | 2035 | Einstein-Teleskop | QNM | ~1% |
-| 2035 | Cosmic Explorer | QNM, Echos | ~0,5% |
+| 2035 | Cosmic Explorer | QNM, Love-Zahl | ~0,5% |
 | 2037 | LISA | EMRIs | ~10^4 rad Phase |
 | 2037 | Athena | Eisenlinien | ~1% |
 | 2040+ | Lynx | Thermische Emission | Dunkle Sterne |
 
+---
 
-\newpage
+# Anhang G: Glossar der SSZ-Begriffe
 
-# Glossar der SSZ-Begriffe
-
-
+**Status:** ERSTE FASSUNG
 
 ---
 
@@ -14949,37 +14967,37 @@ Legende: WD = Weisser Zwerg, NS = Neutronenstern, SL = Schwarzes Loch, SMBH = Su
 
 **Anti-Zirkularitaet:** Das Prinzip, dass keine Beobachtungsdaten in die Ableitung der SSZ-Grundgleichungen einfliessen. Die Theorie wird aus geometrischen Prinzipien (phi, pi, N0) abgeleitet und erst danach mit Daten verglichen.
 
-**Blend-Zone:** Der radiale Bereich um r* = 1,387 $r_{s}$, in dem die Schwach- und Starkfeldformeln fuer Xi durch eine Hermite-C2-Mischfunktion verbunden werden. Die Blend-Zone hat eine typische Breite von ~0,5 $r_{s}$.
+**Blend-Zone:** Der radiale Bereich um r* = 1,387 r_s, in dem die Schwach- und Starkfeldformeln fuer Xi durch eine Hermite-C2-Mischfunktion verbunden werden. Die Blend-Zone hat eine typische Breite von ~0,5 r_s.
 
-**Bosenova:** Hypothetisches Ereignis, bei dem eine superradiante Bosonenwolke um ein Schwarzes Loch implodiert. In SSZ durch den $G_{SSZ}$-Regulator unterdrueckt.
+**Bosenova:** Hypothetisches Ereignis, bei dem eine superradiante Bosonenwolke um ein Schwarzes Loch implodiert. In SSZ durch den G_SSZ-Regulator unterdrueckt.
 
 **Dunkler Stern:** SSZ-Bezeichnung fuer ein kompaktes Objekt, das in der ART als Schwarzes Loch klassifiziert wuerde. Unterschied: Der dunkle Stern hat eine Oberflaeche (natuerliche Grenze) statt eines Ereignishorizonts.
 
 **Ereignishorizont:** In der ART: Die Flaeche, von der kein Signal entkommen kann. In SSZ: Existiert nicht. Ersetzt durch die natuerliche Grenze mit D = 0,555.
 
-**Falsifizierbarkeit:** Die Eigenschaft einer wissenschaftlichen Theorie, durch Beobachtungen widerlegbar zu sein. SSZ ist falsifizierbar, weil es spezifische, parameterfreie Vorhersagen macht (z.B. $D_{min}$ = 0,555, alpha = 1/137,08).
+**Falsifizierbarkeit:** Die Eigenschaft einer wissenschaftlichen Theorie, durch Beobachtungen widerlegbar zu sein. SSZ ist falsifizierbar, weil es spezifische, parameterfreie Vorhersagen macht (z.B. D_min = 0,555, alpha = 1/137,08).
 
 **Gravitomagnetisches Feld:** Analogon des Magnetfelds in der Gravitationsphysik. Erzeugt durch rotierende Massen. In SSZ um den Faktor D(r) gegenueber der ART modifiziert.
 
 **Hermite-C2-Mischung:** Mathematische Funktion, die einen glatten Uebergang zwischen zwei Formeln ermoeglicht, wobei sowohl die Funktion als auch ihre ersten beiden Ableitungen stetig sind.
 
-**ISCO (Innerster stabiler Kreisbahnradius):** Der kleinste Radius, bei dem eine stabile Kreisbahn moeglich ist. ART: 3 $r_{s}$ (Schwarzschild). SSZ: Leicht verschoben durch die Segmentdichte.
+**ISCO (Innerster stabiler Kreisbahnradius):** Der kleinste Radius, bei dem eine stabile Kreisbahn moeglich ist. ART: 3 r_s (Schwarzschild). SSZ: Leicht verschoben durch die Segmentdichte.
 
 **Kohaerenz-Kollaps:** Der irreversible Uebergang von der Schwachfeld- (g1) zur Starkfeldphase (g2) der Segmentdichte. Analog zu einem Phasenuebergang in der Thermodynamik.
 
-**Natuerliche Grenze:** Die Flaeche bei r = $r_{s}$ in SSZ, an der die Zeitdilatation ihr Minimum $D_{min}$ = 0,555 erreicht. Ersetzt den Ereignishorizont der ART. Hat endliche Kruemmung, endliche Temperatur und endliche Dichte.
+**Natuerliche Grenze:** Die Flaeche bei r = r_s in SSZ, an der die Zeitdilatation ihr Minimum D_min = 0,555 erreicht. Ersetzt den Ereignishorizont der ART. Hat endliche Kruemmung, endliche Temperatur und endliche Dichte.
 
 **PPN (Parametrisierter Post-Newtonscher Formalismus):** Rahmenwerk zum Vergleich von Gravitationstheorien im Schwachfeld. SSZ hat gamma = beta = 1, identisch mit der ART.
 
 **Quasinormal-Moden (QNMs):** Gedaempfte Schwingungen eines kompakten Objekts nach einer Stoerung. In SSZ um ~3% gegenueber der ART verschoben.
 
-**Segmentdichte (Xi):** Die zentrale Variable von SSZ. Beschreibt den Anteil des Raums, der von Segmenten belegt ist. Bereich: 0 <= Xi <= $\Xi_{\text{max}}$ = 0,802.
+**Segmentdichte (Xi):** Die zentrale Variable von SSZ. Beschreibt den Anteil des Raums, der von Segmenten belegt ist. Bereich: 0 <= Xi <= Xi_max = 0,802.
 
-**Superradianz:** Verstaerkung von Wellen durch Extraktion von Rotationsenergie aus einem rotierenden kompakten Objekt. In SSZ durch den $G_{SSZ}$-Regulator um 95% unterdrueckt.
+**Superradianz:** Verstaerkung von Wellen durch Extraktion von Rotationsenergie aus einem rotierenden kompakten Objekt. In SSZ durch den G_SSZ-Regulator um 95% unterdrueckt.
 
 **Tidal Love Number:** Mass fuer die Gezeitendeformierbarkeit eines kompakten Objekts. ART: k_2 = 0 fuer Schwarze Loecher. SSZ: k_2 ~ 0,052 (endlich).
 
-**Zeitdilatationsfaktor (D):** D = 1/(1+Xi). Verhaeltnis der lokalen Taktrate zur Taktrate im Unendlichen. Minimum: $D_{min}$ = 0,555 bei r = $r_{s}$.
+**Zeitdilatationsfaktor (D):** D = 1/(1+Xi). Verhaeltnis der lokalen Taktrate zur Taktrate im Unendlichen. Minimum: D_min = 0,555 bei r = r_s.
 
 ## G.2 Erweitertes Glossar
 
@@ -15015,11 +15033,11 @@ Legende: WD = Weisser Zwerg, NS = Neutronenstern, SL = Schwarzes Loch, SMBH = Su
 
 **Hermite-C2-Mischfunktion:** Eine glatte Interpolationsfunktion h(x) = 3x^2 - 2x^3, die den Uebergang zwischen Schwach- und Starkfeld in SSZ beschreibt.
 
-**ISCO (Innermost Stable Circular Orbit):** Der innerste stabile Kreisorbit um ein kompaktes Objekt. In SSZ bei 3,5 $r_{s}$ (vs. 3 $r_{s}$ in ART fuer a=0).
+**ISCO (Innermost Stable Circular Orbit):** Der innerste stabile Kreisorbit um ein kompaktes Objekt. In SSZ bei 3,5 r_s (vs. 3 r_s in ART fuer a=0).
 
 **Love-Zahl (k_2):** Ein dimensionsloser Parameter, der die Gezeitendeformierbarkeit eines kompakten Objekts beschreibt. In SSZ: k_2 ~ 0,052 (vs. k_2 = 0 in ART).
 
-**Natuerliche Grenze:** In SSZ die Flaeche bei r = $r_{s}$, an der die Segmentdichte ihr Maximum erreicht ($\Xi_{\text{max}}$ = 0,802). Ersetzt den Ereignishorizont der ART.
+**Natuerliche Grenze:** In SSZ die Flaeche bei r = r_s, an der die Segmentdichte ihr Maximum erreicht (Xi_max = 0,802). Ersetzt den Ereignishorizont der ART.
 
 **Penrose-Diagramm:** Eine konforme Darstellung der kausalen Struktur einer Raumzeit, bei der Lichtstrahlen als 45-Grad-Linien erscheinen.
 
@@ -15029,19 +15047,19 @@ Legende: WD = Weisser Zwerg, NS = Neutronenstern, SL = Schwarzes Loch, SMBH = Su
 
 **Quasi-Normalmoden (QNMs):** Die gedaempften Eigenschwingungen eines kompakten Objekts nach einer Stoerung. Ihre Frequenzen und Daempfungsraten sind charakteristisch fuer die Raumzeitgeometrie.
 
-**Regime-Uebergang:** Der Uebergang von der Schwachfeld-Formel (Xi = $r_{s}$/(2r)) zur Starkfeld-Formel (Xi = 1 - exp(-phi r/r_s)) bei r* = 1,387 $r_{s}$.
+**Regime-Uebergang:** Der Uebergang von der Schwachfeld-Formel (Xi = r_s/(2r)) zur Starkfeld-Formel (Xi = 1 - exp(-phi r/r_s)) bei r* = 1,387 r_s.
 
 **Ricci-Skalar (R):** Die Spur des Ricci-Tensors. Ein Mass fuer die mittlere Kruemmung der Raumzeit.
 
-**Schwarzschild-Radius ($r_{s}$):** Der charakteristische Radius eines kompakten Objekts: $r_{s}$ = 2GM/c^2. In SSZ die Position der natuerlichen Grenze.
+**Schwarzschild-Radius (r_s):** Der charakteristische Radius eines kompakten Objekts: r_s = 2GM/c^2. In SSZ die Position der natuerlichen Grenze.
 
-**Segmentdichte (Xi):** Die fundamentale Groesse in SSZ. Beschreibt die lokale Dichte der Raumzeitsegmente. Xi = 0 im flachen Raum, $\Xi_{\text{max}}$ = 0,802 an der natuerlichen Grenze.
+**Segmentdichte (Xi):** Die fundamentale Groesse in SSZ. Beschreibt die lokale Dichte der Raumzeitsegmente. Xi = 0 im flachen Raum, Xi_max = 0,802 an der natuerlichen Grenze.
 
 **Skalierungsfaktor (s):** s = 1 + Xi = 1/D. Beschreibt die lokale Skalierung der Raumzeit.
 
-**Superradianz:** Der Prozess, durch den ein rotierendes kompaktes Objekt Energie an umgebende Bosonenfelder abgibt. In SSZ um den Faktor $G_{SSZ}$ ~ 0,05 reduziert.
+**Superradianz:** Der Prozess, durch den ein rotierendes kompaktes Objekt Energie an umgebende Bosonenfelder abgibt. In SSZ um den Faktor G_SSZ ~ 0,05 reduziert.
 
-**Zeitdilatationsfaktor (D):** D = 1/(1+Xi). Beschreibt das Verhaeltnis der lokalen Zeit zur Koordinatenzeit. D = 1 im flachen Raum, $D_{min}$ = 0,555 an der natuerlichen Grenze.
+**Zeitdilatationsfaktor (D):** D = 1/(1+Xi). Beschreibt das Verhaeltnis der lokalen Zeit zur Koordinatenzeit. D = 1 im flachen Raum, D_min = 0,555 an der natuerlichen Grenze.
 
 ## G.3 Abkuerzungsverzeichnis
 
@@ -15090,7 +15108,7 @@ Legende: WD = Weisser Zwerg, NS = Neutronenstern, SL = Schwarzes Loch, SMBH = Su
 A: Nein. SSZ ist klassisch, enthaelt aber Hinweise auf Quantenstruktur (Segmentierung, N0). Die Quantisierung ist ein offenes Problem.
 
 **F: Erklaert SSZ die Dunkle Materie?**
-A: Nein. SSZ modifiziert nur das Starkfeld (r ~ $r_{s}$). Dunkle-Materie-Phaenomene treten im Schwachfeld auf, wo SSZ = ART.
+A: Nein. SSZ modifiziert nur das Starkfeld (r ~ r_s). Dunkle-Materie-Phaenomene treten im Schwachfeld auf, wo SSZ = ART.
 
 **F: Warum ist phi fundamental?**
 A: phi = (1+sqrt(5))/2 ist die einzige positive Zahl mit phi^2 = phi + 1. Sie bestimmt die Skalierung des Segmentgitters.
@@ -15148,8 +15166,3 @@ A: Ja. QNM +3%, Schatten -1,3%, Echos, Love-Zahl -- alles testbar mit der naechs
 | T_H_SSZ = T_H_GR * D_min | 20 | 310 |
 | h(x) = 3x^2 - 2x^3 (Hermite-C2) | 25 | 400 |
 | f_QNM_SSZ = 1,03 * f_QNM_GR | 16 | 260 |
-
-
-\newpage
-
-

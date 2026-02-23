@@ -1,5 +1,3 @@
-﻿\frontmatter
-
 # Preface
 
 This book presents Segmented Spacetime (SSZ) — a theoretical framework that extends General Relativity by introducing a single dimensionless scalar field, the segment density Ξ(r), which modulates time dilation throughout spacetime. Where Einstein's theory predicts singularities — points of infinite curvature where the laws of physics break down — SSZ predicts saturation: a finite maximum segment density beyond which no further compression occurs. The consequences of this single modification cascade through all of gravitational physics, from Solar System tests to black hole interiors, producing a theory that is mathematically consistent, observationally compatible with all current data, and falsifiable by instruments that exist today.
@@ -110,15 +108,12 @@ For readers seeking additional background before engaging with SSZ:
 
 *The complete test suite, all data, and the manuscript source are available at: github.com/error-wtf*
 
+---
 
-\newpage
+# Chapter 1: SSZ Overview and Operational Commitments
 
-\mainmatter
-
-\part{Foundations}
-
-# SSZ Overview and Operational Commitments
-
+**Part I — Foundations**
+**Status:** EXPANDED DRAFT
 
 ---
 
@@ -178,7 +173,7 @@ It is equally important to state clearly what SSZ does *not* claim, to prevent m
 
 **SSZ is not a quantum gravity theory.** It does not modify the Einstein field equations at the action level. It does not quantize spacetime. It operates at the level of *observables*: it provides an alternative prescription for computing time dilation and redshift that coincides with GR in the weak field and deviates systematically in the strong field.
 
-**SSZ does not claim that GR is wrong.** In the weak-field regime (g₁), where r $\gg$ r_s, SSZ reproduces GR to arbitrary precision. The PPN parameters are exactly β = γ = 1, matching all solar-system tests (Cassini, Lunar Laser Ranging, Mercury perihelion). SSZ claims only that the *extrapolation* of GR into the strong-field regime may not be the unique physically correct continuation — just as Newtonian gravity is correct in the weak field but requires relativistic corrections in strong fields.
+**SSZ does not claim that GR is wrong.** In the weak-field regime (g₁), where r ≫ r_s, SSZ reproduces GR to arbitrary precision. The PPN parameters are exactly β = γ = 1, matching all solar-system tests (Cassini, Lunar Laser Ranging, Mercury perihelion). SSZ claims only that the *extrapolation* of GR into the strong-field regime may not be the unique physically correct continuation — just as Newtonian gravity is correct in the weak field but requires relativistic corrections in strong fields.
 
 **SSZ does not introduce dark matter, dark energy, or new particles.** Its modifications are purely geometric — they change the relationship between coordinates and observables near massive bodies, without adding new matter content to the universe.
 
@@ -191,7 +186,7 @@ It is important to note what is not claimed here: SSZ does not claim that GR fai
 
 SSZ makes concrete, sign-definite predictions that differ from GR. These are not vague qualitative statements ("SSZ predicts something different") but specific numbers with specific signs:
 
-- **Neutron star redshift:** At compactness r/r_s $\approx$ 2–4, SSZ predicts systematically *more* redshift than GR, by approximately +13%. This prediction can be tested by the NICER X-ray telescope on the International Space Station, which measures thermal emission from neutron star surfaces.
+- **Neutron star redshift:** At compactness r/r_s ≈ 2–4, SSZ predicts systematically *more* redshift than GR, by approximately +13%. This prediction can be tested by the NICER X-ray telescope on the International Space Station, which measures thermal emission from neutron star surfaces.
 
 - **Black hole shadow diameter:** SSZ predicts a slightly *smaller* apparent shadow size than GR, by approximately −1.3%. The Event Horizon Telescope (EHT) has measured the shadow of M87* and Sgr A* with improving precision; future observations may reach the accuracy needed to distinguish the two predictions.
 
@@ -234,6 +229,12 @@ This analogy, like all analogies, has limits that must be clearly stated: in a f
 
 The segmentation concept originates from the observation that a light wave in vacuum traverses exactly N₀ = 4 fundamental segments per period. This is a geometric consequence: one complete electromagnetic oscillation (angular frequency ω = 2π) divides naturally into four quarter-cycle segments at phases 0, π/2, π, 3π/2, and 2π. The number 4 is the base segmentation of flat spacetime — it is not a free parameter but a consequence of the 2π periodicity of electromagnetic waves.
 
+Equivalently, the segment rate for a wave of frequency f and period T is:
+
+N = 4f = 4/T
+
+This is standard quadrature logic: partitioning one cycle into four quadrants yields an event rate of four per period. The principle is identical to rotary encoder design, where an impulse rate f_impulse = 4 f_rot arises from partitioning each rotation into four quadrants. The factor 4 is geometric (from the four distinguished phases of the sine function), not a fitting parameter.
+
 Under the influence of gravity, the number of segments traversed per period increases:
 
 N' = N_0 \cdot \frac{f}{f'} = N_0 \cdot \frac{\lambda'}{\lambda_0}
@@ -249,24 +250,24 @@ The segment density Ξ(r) formalizes this idea. Ξ is a dimensionless, non-negat
 
 1. **Positivity:** Ξ(r) ≥ 0 for all r > 0. Negative segment density has no physical meaning.
 2. **Monotonicity:** Ξ(r) increases as r decreases toward the mass. Gravity increases segmentation; it never decreases it.
-3. **Saturation:** Ξ(r) is bounded above by Ξ_max $\approx$ 0.802, preventing divergences. This is the key structural difference from GR.
+3. **Saturation:** Ξ(r) is bounded above by Ξ_max ≈ 0.802, preventing divergences. This is the key structural difference from GR.
 
 These properties ensure that D = 1/(1 + Ξ) remains strictly between 0 and 1, never vanishing and never diverging. This is the core structural difference from GR, where D_GR → 0 at the horizon.
 
 These three properties deserve individual attention because each has direct physical consequences. Positivity means that gravity can only increase the segment density; there is no anti-gravity in SSZ, consistent with the weak energy condition. Monotonicity means that closer to the mass, Xi is always higher -- a consequence of radial symmetry. Saturation is the most consequential property: in GR, D decreases without bound, reaching zero at the horizon. In SSZ, the exponential form has a built-in ceiling -- as the argument grows, Xi approaches at most 1, giving D = 0.5 in the worst case. The actual maximum Xi = 0.802 yields D_min = 0.555, comfortably above zero.
 
 
-The physical interpretation is direct: Ξ measures how much "additional structure" the gravitational field imposes on spacetime at radius r. In flat spacetime, Ξ = 0 and D = 1 — clocks tick at the coordinate rate. Near a massive body, Ξ > 0 and D < 1 — clocks tick slower. At the horizon, Ξ saturates at Ξ_max $\approx$ 0.802 and D reaches D_min $\approx$ 0.555 — clocks tick at roughly 55.5% of the coordinate rate, but they *do not stop*.
+The physical interpretation is direct: Ξ measures how much "additional structure" the gravitational field imposes on spacetime at radius r. In flat spacetime, Ξ = 0 and D = 1 — clocks tick at the coordinate rate. Near a massive body, Ξ > 0 and D < 1 — clocks tick slower. At the horizon, Ξ saturates at Ξ_max ≈ 0.802 and D reaches D_min ≈ 0.555 — clocks tick at roughly 55.5% of the coordinate rate, but they *do not stop*.
 
 ### The Role of φ
 
-The golden ratio φ = (1 + √5)/2 $\approx$ 1.618034 enters SSZ as the fundamental scaling constant of the segment geometry. In the strong-field regime, the segment density takes the saturating form:
+The golden ratio φ = (1 + √5)/2 ≈ 1.618034 enters SSZ as the fundamental scaling constant of the segment geometry. In the strong-field regime, the segment density takes the saturating form:
 
 \Xi_{\text{strong}}(r) = 1 - e^{-\varphi \cdot r_s / r}
 
 The appearance of φ in the exponent is not arbitrary — it is motivated by the logarithmic spiral structure: for every quarter-turn of the spiral, the radius increases by a factor of φ. This φ-scaling produces the saturation at Ξ_max = 1 − e^{−φ} and ensures that the segment density remains bounded even as r → r_s. Chapter 4 provides the complete derivation chain from the φ-spiral through Euler's formula to the exponential form.
 
-The structural constants π and φ play complementary roles: π governs the circular geometry of wave propagation (the 2π periodicity), while φ governs the radial growth (the spiral scaling). The relationship 2φ $\approx$ π at unit radius connects these two constants and establishes the base segmentation N₀ = 4. Chapters 2 and 3 develop these relationships in detail.
+The structural constants π and φ play complementary roles: π governs the circular geometry of wave propagation (the 2π periodicity), while φ governs the radial growth (the spiral scaling). The relationship 2φ ≈ π at unit radius connects these two constants and establishes the base segmentation N₀ = 4. Chapters 2 and 3 develop these relationships in detail.
 
 ## The Two-Regime Structure: g₁ and g₂
 
@@ -308,7 +309,7 @@ In the strong-field regime (r/r_s < 1.8), the segment density takes the saturati
 
 Critical properties of this form:
 
-- **At the horizon (r = r_s):** Ξ(r_s) = 1 − e^{−φ} $\approx$ 0.80171, yielding D(r_s) $\approx$ 0.55503.
+- **At the horizon (r = r_s):** Ξ(r_s) = 1 − e^{−φ} ≈ 0.80171, yielding D(r_s) ≈ 0.55503.
 - **For r → 0:** Ξ → 1 (maximum segment density; D → 0.5, finite — no singularity).
 - **For r → ∞:** Ξ → 0, smoothly approaching the weak-field limit.
 
@@ -316,9 +317,9 @@ The saturation maximum Ξ_max = 1 − e^{−φ} is not a parameter — it is a f
 
 ### Complementary Perspectives: Decay vs. Saturation Form
 
-The strong-field formula Ξ = 1 − exp(−φ r_s/r) used throughout this book is the *decay form* (field-intensity perspective): the argument φ r_s/r decreases with r, so Ξ → 0 at large distances. This yields r*/r_s $\approx$ 1.595.
+The strong-field formula Ξ = 1 − exp(−φ r_s/r) used throughout this book is the *decay form* (field-intensity perspective): the argument φ r_s/r decreases with r, so Ξ → 0 at large distances. This yields r*/r_s ≈ 1.595.
 
-A complementary *saturation form* exists: Ξ_sat(r) = 1 − exp(−φ r/r_s), where the argument increases with r and Ξ saturates at Ξ_max. This form is used in ssz-metric-pure and Unified-Results repositories (accumulation perspective), yielding r*/r_s $\approx$ 1.387.
+A complementary *saturation form* exists: Ξ_sat(r) = 1 − exp(−φ r/r_s), where the argument increases with r and Ξ saturates at Ξ_max. This form is used in ssz-metric-pure and Unified-Results repositories (accumulation perspective), yielding r*/r_s ≈ 1.387.
 
 **Both forms give identical values at r = r_s:** Ξ(r_s) = 1 − exp(−φ) = 0.802, D(r_s) = 0.555. They represent complementary physical perspectives — local field intensity (decay) vs. cumulative segment accumulation (saturation). The decay form is preferred for this book because it has the correct weak-field asymptotic (Ξ → 0 as r → ∞) and matches the PPN expansion naturally. See the segmented-calculation-suite documentation (gr-ssz-match.md) for a detailed mathematical comparison.
 
@@ -332,7 +333,7 @@ where w(r) is a weight function satisfying C² continuity (continuous value, fir
 
 \Xi_{\text{weak}}(r^*) = \Xi_{\text{strong}}(r^*)
 
-This equation is solved once, numerically, yielding r*/r_s $\approx$ 1.595 for the weak-field proxy intersection (or r*/r_s $\approx$ 1.387 when both forms are evaluated in the strong-field domain; see Chapter 25 and the Final Paper, Section 3.4). The result is then fixed globally — never adjusted per dataset.
+This equation is solved once, numerically, yielding r*/r_s ≈ 1.595 for the weak-field proxy intersection (or r*/r_s ≈ 1.387 when both forms are evaluated in the strong-field domain; see Chapter 25 and the Final Paper, Section 3.4). The result is then fixed globally — never adjusted per dataset.
 
 The existence of a blend zone often provokes the objection: two different formulas glued together sounds ad hoc. The answer requires careful thought. In physics, piecewise-defined functions are common and reflect genuine physical transitions -- the equation of state of water differs between liquid and solid phases; weak-field and strong-field QCD use different methods. The key question is whether the transition is physically motivated and mathematically smooth. In SSZ, both criteria are met: the blend boundaries are chosen such that no known astrophysical observable falls within the transition, and the Hermite C2 interpolation ensures continuity of the function and its first two derivatives. A common misinterpretation would be to regard the Hermite blend as a fudge factor. The opposite is true: the blend adds no new parameters and lies in a region where no observation is sensitive.
 
@@ -343,11 +344,11 @@ The existence of a blend zone often provokes the objection: two different formul
 |----------|-----------|-------|-------------|
 | Domain | r/r_s > 2.2 | 1.8–2.2 | r/r_s < 1.8 |
 | Ξ formula | r_s/(2r) | Hermite C² | 1 − exp(−φ r_s/r) |
-| D behavior | $\approx$ 1 − GM/(c²r) | smooth | → D_min = 0.555 |
+| D behavior | ≈ 1 − GM/(c²r) | smooth | → D_min = 0.555 |
 | GR match | exact | transitional | systematic deviation |
 | PPN | β = γ = 1 | — | not applicable |
 
-**Important distinction:** The domain boundary r/r_s = 2.2 specifies where the g₁ *formula* is evaluated — it is the outer edge of the Hermite blend. This does not mean SSZ and GR agree everywhere beyond 2.2. In the range 2.2 < r/r_s < 10, the weak formula r_s/(2r) applies, but Ξ is still large enough for measurable SSZ–GR differences (e.g. neutron star surfaces at r/r_s $\approx$ 3–5). Only beyond r/r_s $\approx$ 10 do SSZ predictions become observationally indistinguishable from GR.
+**Important distinction:** The domain boundary r/r_s = 2.2 specifies where the g₁ *formula* is evaluated — it is the outer edge of the Hermite blend. This does not mean SSZ and GR agree everywhere beyond 2.2. In the range 2.2 < r/r_s < 10, the weak formula r_s/(2r) applies, but Ξ is still large enough for measurable SSZ–GR differences (e.g. neutron star surfaces at r/r_s ≈ 3–5). Only beyond r/r_s ≈ 10 do SSZ predictions become observationally indistinguishable from GR.
 
 ## Canonical Constants and the Anti-Circularity Protocol
 
@@ -356,7 +357,7 @@ The existence of a blend zone often provokes the objection: two different formul
 Every constant in SSZ falls into one of three categories:
 
 1. **Mathematical constants:** φ = (1 + √5)/2, π, e — universal and exact. These are the same numbers used throughout mathematics and physics. SSZ does not redefine them or assign them new values.
-2. **Physical constants (external):** G, c, M$\odot$ — from CODATA/BIPM, not from SSZ. These are measured independently by the broader physics community and used as inputs. SSZ does not determine their values.
+2. **Physical constants (external):** G, c, M☉ — from CODATA/BIPM, not from SSZ. These are measured independently by the broader physics community and used as inputs. SSZ does not determine their values.
 3. **Derived SSZ quantities:** Ξ_max, D_min, r*/r_s — follow uniquely from the above. Never adjusted.
 
 There is no fourth category. SSZ contains no tunable parameters calibrated against data. This is an unusually strong constraint for a physical theory. Most models in astrophysics contain at least one free parameter (e.g., the equation of state in neutron star models, or the spin parameter in black hole models). SSZ has none.
@@ -399,7 +400,7 @@ This commitment to acyclicity may seem like an abstract methodological point, bu
 
 **What tests do NOT prove:** Strong-field predictions against observational data (Chapters 26–30). The tests confirm self-consistency and GR-compatibility, not physical correctness in the strong-field regime.
 
-**Reproduction:** `E:/clone\segmented-calculation-suite/tests/` — 145/145 PASS; `E:/clone\ssz-metric-pure/tests/` — 18/18 PASS.
+**Reproduction:** `E:\clone\segmented-calculation-suite\tests\` — 145/145 PASS; `E:\clone\ssz-metric-pure\tests\` — 18/18 PASS.
 
 ## Road Map of the Book
 
@@ -442,8 +443,8 @@ This chapter has laid the architectural foundations of SSZ. The central equation
 | 1 | D = 1/(1 + Ξ) | all regimes |
 | 2 | Ξ_weak = r_s/(2r) | g₁: r/r_s > 10 |
 | 3 | Ξ_strong = 1 − exp(−φ r_s/r) | g₂: r/r_s < 1.8 |
-| 4 | Ξ_max = 1 − e^{−φ} $\approx$ 0.80171 | horizon |
-| 5 | D_min $\approx$ 0.55503 | horizon |
+| 4 | Ξ_max = 1 − e^{−φ} ≈ 0.80171 | horizon |
+| 5 | D_min ≈ 0.55503 | horizon |
 
 ---
 
@@ -463,19 +464,20 @@ This chapter has laid the architectural foundations of SSZ. The central equation
 - **Referenced by:** Ch 2, Ch 6, Ch 8, Ch 10, Ch 16, Ch 18
 - **Appendix:** App. A (Symbol Table), App. B (Formula Compendium B.1)
 
+---
 
-\newpage
+# Chapter 2: Structural Constants — π, φ, and Segmentation
 
-# Structural Constants — π, φ, and Segmentation
-
+**Part I — Foundations**
+**Status:** EXPANDED DRAFT
 
 ---
 
 ## Summary
 
-This chapter develops the mathematical roles of π and φ within the SSZ framework and explains, step by step, why these two constants — and no others — determine the segment structure of spacetime. In classical geometry, π is the ratio of circumference to diameter; it appears wherever circles or periodic oscillations occur. The golden ratio φ = (1 + √5)/2 $\approx$ 1.618 appears in number theory and growth processes but has no established role in fundamental physics.
+This chapter develops the mathematical roles of π and φ within the SSZ framework and explains, step by step, why these two constants — and no others — determine the segment structure of spacetime. In classical geometry, π is the ratio of circumference to diameter; it appears wherever circles or periodic oscillations occur. The golden ratio φ = (1 + √5)/2 ≈ 1.618 appears in number theory and growth processes but has no established role in fundamental physics.
 
-SSZ assigns both constants precise, complementary physical functions. π is the *static divider* of spatial segments: it governs the angular partitioning of electromagnetic wave cycles into four quarter-periods. φ is the *dynamic growth constant*: it governs how segments scale radially as one moves deeper into a gravitational field. The approximate identity 2φ $\approx$ π, which holds at unit radius to within 3%, provides the geometric anchor that fixes the base segmentation number N₀ = 4 — the number of fundamental segments one light-wave period contains in flat spacetime.
+SSZ assigns both constants precise, complementary physical functions. π is the *static divider* of spatial segments: it governs the angular partitioning of electromagnetic wave cycles into four quarter-periods. φ is the *dynamic growth constant*: it governs how segments scale radially as one moves deeper into a gravitational field. The approximate identity 2φ ≈ π, which holds at unit radius to within 3%, provides the geometric anchor that fixes the base segmentation number N₀ = 4 — the number of fundamental segments one light-wave period contains in flat spacetime.
 
 We develop the logarithmic spiral with φ-scaling as the central geometric object connecting these two constants and show that the effective value of π converges to its classical limit in maximally segmented spacetime. This convergence explains, within the SSZ framework, why black hole horizons are geometrically circular.
 
@@ -492,7 +494,7 @@ Why is this necessary? Students encountering SSZ for the first time often ask: w
 
 ### π in Classical Physics — A Brief Reminder
 
-Before examining how π functions within SSZ, let us recall its precise role in standard physics. The number π $\approx$ 3.14159265 is defined as the ratio of a circle's circumference C to its diameter d:
+Before examining how π functions within SSZ, let us recall its precise role in standard physics. The number π ≈ 3.14159265 is defined as the ratio of a circle's circumference C to its diameter d:
 
 \pi = \frac{C}{d}
 
@@ -523,6 +525,8 @@ N_0 = \frac{2\pi}{\pi/2} = 4
 Any different base segmentation would require a different angular periodicity or a different definition of "segment." The choice N₀ = 4 is forced by the structure of Maxwell's equations.
 
 **Analogy.** Think of a clock face. The full rotation (360° = 2π radians) is naturally divided into four quadrants by the 12, 3, 6, and 9 o'clock positions. Each quadrant spans 90° = π/2 radians. The number of quadrants (4) is determined by the geometry of the circle, not by convention. Similarly, the base segmentation N₀ = 4 is determined by the geometry of wave propagation, not by a modeling choice.
+
+**Equivalent formulation.** For a wave of frequency f and period T = 1/f, the segment rate is N = 4f = 4/T. This is standard quadrature logic, identical in structure to rotary encoder design: when one rotation is partitioned into four quadrants, the impulse rate is f_impulse = 4 f_rot. The factor 4 is not adjustable — it is fixed by the geometric symmetry of the cycle.
 
 ### π in the Logarithmic Spiral
 
@@ -558,7 +562,7 @@ As segmentation increases — moving closer to a black hole — the effective gr
 
 This expression deserves careful interpretation:
 
-- **For N = 0 (flat spacetime):** π_eff = 4φ $\approx$ 6.47, which is *not* the classical π. This reflects the fact that the spiral description is not appropriate for flat space — one should use the classical circle definition instead.
+- **For N = 0 (flat spacetime):** π_eff = 4φ ≈ 6.47, which is *not* the classical π. This reflects the fact that the spiral description is not appropriate for flat space — one should use the classical circle definition instead.
 
 - **For intermediate N:** π_eff decreases smoothly from 4φ toward the classical value.
 
@@ -572,7 +576,7 @@ This convergence also provides an internal consistency check. The SSZ framework 
 
 ### φ as the Growth Constant — Motivation
 
-The golden ratio φ = (1 + √5)/2 $\approx$ 1.618034 is the unique positive solution to the quadratic equation:
+The golden ratio φ = (1 + √5)/2 ≈ 1.618034 is the unique positive solution to the quadratic equation:
 
 x^2 = x + 1
 
@@ -606,7 +610,7 @@ The growth rate k is not a free parameter — it is fixed by requiring that the 
 
 ### φ and Self-Similarity in SSZ
 
-The defining property φ² = φ + 1 produces a structural consequence for the segment geometry: **the segment pattern at any scale is identical to the pattern at any other scale, up to a rescaling by powers of φ.** This is why the SSZ framework applies identically to stellar-mass black holes (M ~ 10 M$\odot$, r_s ~ 30 km) and supermassive black holes (M ~ 10⁹ M$\odot$, r_s ~ 3 × 10⁹ km). The segment geometry is self-similar — only the overall scale changes, not the internal structure.
+The defining property φ² = φ + 1 produces a structural consequence for the segment geometry: **the segment pattern at any scale is identical to the pattern at any other scale, up to a rescaling by powers of φ.** This is why the SSZ framework applies identically to stellar-mass black holes (M ~ 10 M☉, r_s ~ 30 km) and supermassive black holes (M ~ 10⁹ M☉, r_s ~ 3 × 10⁹ km). The segment geometry is self-similar — only the overall scale changes, not the internal structure.
 
 A common misinterpretation would be to think that the self-similarity is an approximation. It is not. The self-similarity of the phi-spiral is exact -- it follows from the algebraic property phi-squared = phi + 1, which is an identity, not an approximation. What is approximate is the identification of this mathematical structure with physical spacetime. The SSZ claim is that phi-scaling provides a better description of strong-field segment geometry than any other scaling constant. This claim is tested, not assumed -- Chapters 26-30 compare the predictions that follow from phi-scaling with observational data.
 
@@ -621,13 +625,13 @@ The central appearance of φ in SSZ physics is the strong-field segment density 
 
 The φ in the exponent is not inserted by hand. It emerges from the quarter-turn scaling of the logarithmic spiral, as follows:
 
-1. The segment count from radius r to the horizon is n(r) $\propto$ ln(r_s/r)/ln(φ) (Chapter 4 derives this in detail).
+1. The segment count from radius r to the horizon is n(r) ∝ ln(r_s/r)/ln(φ) (Chapter 4 derives this in detail).
 2. The segment density Ξ measures the fraction of maximum segmentation: Ξ = 1 − e^{−n/n_ref}.
 3. Substituting and simplifying, the factor φ appears naturally in the exponent.
 
-The saturation value Ξ_max = 1 − e^{−φ} $\approx$ 0.80171 is a direct mathematical consequence. It is not adjusted, not fitted, and not a free parameter.
+The saturation value Ξ_max = 1 − e^{−φ} ≈ 0.80171 is a direct mathematical consequence. It is not adjusted, not fitted, and not a free parameter.
 
-## The 2φ $\approx$ π Identity
+## The 2φ ≈ π Identity
 
 ### Statement and Numerical Value
 
@@ -635,13 +639,13 @@ The approximate identity linking the two structural constants of SSZ is:
 
 2\varphi = 2 \times 1.618034... = 3.23607... \approx \pi = 3.14159...
 
-The relative deviation is (2φ − π)/π $\approx$ 3.0%. This is *not* claimed as an exact mathematical identity — φ and π are algebraically independent transcendental constants. The Lindemann–Weierstrass theorem guarantees that no polynomial relation with rational coefficients connects them.
+The relative deviation is (2φ − π)/π ≈ 3.0%. This is *not* claimed as an exact mathematical identity — φ and π are algebraically independent transcendental constants. The Lindemann–Weierstrass theorem guarantees that no polynomial relation with rational coefficients connects them.
 
 The SSZ claim is *geometric*, not algebraic: at unit radius (r = 1), the φ-segmentation and the π-periodicity produce structures of comparable angular scale. The 3% deviation is the quantitative measure of the "gap" between the discrete (φ-based) description and the continuous (π-based) description of the circle.
 
 ### The Geometric Origin
 
-To see why 2φ $\approx$ π arises geometrically, consider the φ-scaled logarithmic spiral at unit radius. Starting at r₀ = 1, after one full revolution (θ = 2π), the spiral reaches:
+To see why 2φ ≈ π arises geometrically, consider the φ-scaled logarithmic spiral at unit radius. Starting at r₀ = 1, after one full revolution (θ = 2π), the spiral reaches:
 
 r(2\pi) = e^{k \cdot 2\pi} = e^{4\ln\varphi} = \varphi^4 \approx 6.854
 
@@ -653,13 +657,13 @@ The spiral has grown by a factor of φ⁴ in one full turn. The angular extent o
 
 The ratio of the full-circle angle (2π) to the φ-growth angle (π/2) is exactly 4 — this is the base segmentation N₀.
 
-The identity 2φ $\approx$ π now has a clear geometric meaning: **the growth factor over one half-turn of the φ-spiral (which is φ² = φ + 1 $\approx$ 2.618) is approximately equal to the angular extent of that half-turn (π $\approx$ 3.14159).** The two constants are "matched" at unit radius — neither overshoots nor undershoots by much.
+The identity 2φ ≈ π now has a clear geometric meaning: **the growth factor over one half-turn of the φ-spiral (which is φ² = φ + 1 ≈ 2.618) is approximately equal to the angular extent of that half-turn (π ≈ 3.14159).** The two constants are "matched" at unit radius — neither overshoots nor undershoots by much.
 
 ### Topological Significance
 
 The identity 2φ = π holds *topologically* at r = 1 in the sense that only at unit radius does the φ-spiral close into a structure where exactly N₀ = 4 segments match the 2π angular extent of the circle. At radii r < 1, the segments are compressed (the spiral is more tightly wound) and more than 4 segments fit into 2π. At radii r > 1, the segments are stretched and fewer than 4 fit.
 
-This makes r = 1 the unique *normal radius* — the calibration point of the SSZ framework. In the original SSZ papers, this is formalized through the "normal clock" concept: a clock at radius 1 in the absence of gravity. The 2φ $\approx$ π condition at this radius establishes the correspondence between the segment-based and angular descriptions of spacetime.
+This makes r = 1 the unique *normal radius* — the calibration point of the SSZ framework. In the original SSZ papers, this is formalized through the "normal clock" concept: a clock at radius 1 in the absence of gravity. The 2φ ≈ π condition at this radius establishes the correspondence between the segment-based and angular descriptions of spacetime.
 
 ### Connection to N₀ = 4
 
@@ -687,7 +691,7 @@ Quantitatively:
 
 N'(r) = 4 \cdot \frac{\lambda'}{\lambda_0} = 4 \cdot \frac{f_0}{f'(r)} = \frac{4}{D(r)} = 4 \cdot (1 + \Xi(r))
 
-where D(r) = 1/(1 + Ξ(r)) is the SSZ time dilation factor. In flat spacetime (Ξ = 0), N' = 4 — the base segmentation. At the horizon (Ξ $\approx$ 0.802), N' $\approx$ 4 × 1.802 $\approx$ 7.2 segments. The photon's period is subdivided into approximately 7 segments instead of 4.
+where D(r) = 1/(1 + Ξ(r)) is the SSZ time dilation factor. In flat spacetime (Ξ = 0), N' = 4 — the base segmentation. At the horizon (Ξ ≈ 0.802), N' ≈ 4 × 1.802 ≈ 7.2 segments. The photon's period is subdivided into approximately 7 segments instead of 4.
 
 ### Segmentation Inside Black Holes
 
@@ -699,7 +703,7 @@ Starting from the base segmentation S_start = 4 and taking a minimum radius of r
 
 n = \frac{\ln(10^6)}{\ln(1.618)} \approx \frac{13.816}{0.481} \approx 28.7
 
-So S_end $\approx$ 4 × φ^{28.7} $\approx$ 4 × 10⁶ $\approx$ 4,000,000 segments. This is a *finite* number. In GR, by contrast, the tidal forces diverge as r → 0, producing an infinite curvature singularity. In SSZ, segmentation stops at a large but finite value.
+So S_end ≈ 4 × φ^{28.7} ≈ 4 × 10⁶ ≈ 4,000,000 segments. This is a *finite* number. In GR, by contrast, the tidal forces diverge as r → 0, producing an infinite curvature singularity. In SSZ, segmentation stops at a large but finite value.
 
 **Physical consequence.** The finite segmentation implies a minimum wavelength for light inside the black hole, which falls in the radio wave band (frequency ~ 1 MHz). This explains why black holes can emit radio signals but appear dark at optical frequencies. Chapter 21 develops this prediction in detail.
 
@@ -708,7 +712,7 @@ It is important to note what is not claimed here: SSZ does not claim that black 
 
 ### The Physical Precision Limit of π
 
-The segmentation principle implies a fundamental precision limit for the physical meaning of π. As the φ-scaled segments become progressively smaller with each subdivision level, they eventually reach the Planck length l_P $\approx$ 1.616 × 10⁻³⁵ m — the scale below which the concept of continuous spacetime presumably breaks down.
+The segmentation principle implies a fundamental precision limit for the physical meaning of π. As the φ-scaled segments become progressively smaller with each subdivision level, they eventually reach the Planck length l_P ≈ 1.616 × 10⁻³⁵ m — the scale below which the concept of continuous spacetime presumably breaks down.
 
 The maximum number of meaningful subdivision levels is:
 
@@ -724,11 +728,11 @@ Note that this does not contradict the mathematical existence of all digits of �
 
 **Test Files:** `test_phi_geometry`, `test_phi_properties`
 
-**What tests prove:** The φ-scaling of the logarithmic spiral is numerically correct; the quarter-turn growth factor is exactly φ to machine precision; the spiral growth rate k = 2ln(φ)/π is consistent with the polar equation; the base segmentation N₀ = 4 emerges correctly from both the angular (π-based) and radial (φ-based) descriptions; and the identity 2φ $\approx$ π holds to the expected 3% accuracy.
+**What tests prove:** The φ-scaling of the logarithmic spiral is numerically correct; the quarter-turn growth factor is exactly φ to machine precision; the spiral growth rate k = 2ln(φ)/π is consistent with the polar equation; the base segmentation N₀ = 4 emerges correctly from both the angular (π-based) and radial (φ-based) descriptions; and the identity 2φ ≈ π holds to the expected 3% accuracy.
 
 **What tests do NOT prove:** The physical interpretation of π as a segment divider, the physical interpretation of φ as a growth constant, or the 42-decimal-place precision limit. These are theoretical claims of the SSZ framework that require independent experimental confirmation — for example, through precision measurements of geometric ratios in strong gravitational fields.
 
-**Reproduction:** `E:/clone\segmented-calculation-suite/tests/` — relevant tests in `test_phi_geometry.py` and `test_phi_properties.py`. All tests pass (145/145).
+**Reproduction:** `E:\clone\segmented-calculation-suite\tests\` — relevant tests in `test_phi_geometry.py` and `test_phi_properties.py`. All tests pass (145/145).
 
 ---
 
@@ -736,13 +740,13 @@ Note that this does not contradict the mathematical existence of all digits of �
 
 | # | Formula | Domain |
 |---|---------|--------|
-| 1 | 2φ $\approx$ π at r = 1 | unit radius (geometric, ~3% accuracy) |
-| 2 | φ = (1 + √5)/2 $\approx$ 1.618034 | universal mathematical constant |
-| 3 | k = 2ln(φ)/π $\approx$ 0.3063 | spiral growth rate |
+| 1 | 2φ ≈ π at r = 1 | unit radius (geometric, ~3% accuracy) |
+| 2 | φ = (1 + √5)/2 ≈ 1.618034 | universal mathematical constant |
+| 3 | k = 2ln(φ)/π ≈ 0.3063 | spiral growth rate |
 | 4 | π_spiral = √(1 + k²)/k | effective π in curved spacetime |
 | 5 | S_end = 4 · φⁿ | segment count inside black holes |
 | 6 | N₀ = 2π/(π/2) = 4 | base segmentation in flat spacetime |
-| 7 | N_max $\approx$ 42 | maximum meaningful subdivision levels |
+| 7 | N_max ≈ 42 | maximum meaningful subdivision levels |
 
 ---
 
@@ -798,11 +802,12 @@ Chapter 3 takes the next step by examining phi specifically as a temporal growth
 
 A common misconception at this stage is to confuse the SSZ use of phi with numerological claims about the golden ratio in popular science. SSZ does not claim that phi appears in the fine-structure constant because of some mystical property of the golden ratio. It claims that the logarithmic spiral with phi-scaling provides the unique self-similar geometric structure consistent with the constraints of Section 2.2, and that this structure makes specific, testable predictions. The test is whether the predictions match observations, not whether phi is aesthetically pleasing.
 
+---
 
+# Chapter 3: φ as Temporal Growth Function and Calibration
 
-\newpage
-
-# φ as Temporal Growth Function and Calibration
+**Part I — Foundations**
+**Status:** EXPANDED DRAFT
 
 
 ![Fig 3.1](figures/ch03_phi/fig_03_01.png)
@@ -864,7 +869,7 @@ where a is the initial radius and θ is the angular displacement measured from t
 
 **The base:** a is the initial radius — the starting point of the spiral. For a gravitational system, a is typically of order r_s (the Schwarzschild radius) or r_φ (the coupling radius).
 
-**The exponent:** θ/(π/2) counts the number of quarter-turns. When θ = 0, R = a (starting point). When θ = π/2 (one quarter-turn), R = aφ. When θ = π (half-turn), R = aφ². When θ = 2π (full turn), R = aφ⁴ $\approx$ 6.854a.
+**The exponent:** θ/(π/2) counts the number of quarter-turns. When θ = 0, R = a (starting point). When θ = π/2 (one quarter-turn), R = aφ. When θ = π (half-turn), R = aφ². When θ = 2π (full turn), R = aφ⁴ ≈ 6.854a.
 
 **The growth pattern:**
 
@@ -886,7 +891,7 @@ t = t_0 \cdot \log_\varphi\left(\frac{R}{a}\right) = t_0 \cdot \frac{\ln(R/a)}{\
 
 where t₀ is the base time unit — the duration of one quarter-turn as measured by a distant observer. This equation has several important consequences:
 
-**1. Time is logarithmic in radius.** Moving from R = a to R = aφ takes one time unit. Moving from R = aφ to R = aφ² also takes one time unit. But the second step covers a *larger* radial distance (aφ² − aφ = a·φ(φ−1) = a·φ/φ = a) compared to the first step (aφ − a = a(φ−1) $\approx$ 0.618a). Equal time intervals correspond to geometrically increasing spatial intervals. This is precisely the behavior of gravitational time dilation: near the horizon, where R is small, each time unit covers very little spatial distance; far away, where R is large, each time unit covers much more.
+**1. Time is logarithmic in radius.** Moving from R = a to R = aφ takes one time unit. Moving from R = aφ to R = aφ² also takes one time unit. But the second step covers a *larger* radial distance (aφ² − aφ = a·φ(φ−1) = a·φ/φ = a) compared to the first step (aφ − a = a(φ−1) ≈ 0.618a). Equal time intervals correspond to geometrically increasing spatial intervals. This is precisely the behavior of gravitational time dilation: near the horizon, where R is small, each time unit covers very little spatial distance; far away, where R is large, each time unit covers much more.
 
 **2. Time has a well-defined direction.** The φ-spiral expands outward (R increases with θ). The temporal interpretation inherits this directionality: time always increases as one moves outward along the spiral. This provides a geometric arrow of time without needing to invoke thermodynamic arguments.
 
@@ -906,11 +911,11 @@ To make this precise, consider a clock at radius r from a mass M. In flat spacet
 
 D(r) = \frac{1}{1 + \Xi(r)}
 
-A clock at the horizon (Ξ $\approx$ 0.802) ticks at a rate D $\approx$ 0.555 compared to a clock at infinity. It has not "lost energy" — it is simply embedded in a more densely segmented region of spacetime where each temporal step requires more internal traversals.
+A clock at the horizon (Ξ ≈ 0.802) ticks at a rate D ≈ 0.555 compared to a clock at infinity. It has not "lost energy" — it is simply embedded in a more densely segmented region of spacetime where each temporal step requires more internal traversals.
 
 **Analogy.** Walking through a forest, your speed depends on the density of trees. In an open meadow (flat spacetime, Ξ = 0), you walk freely — one step per time unit. In a dense thicket (strong gravity, Ξ > 0), you must navigate around more obstacles per step. Your legs move just as fast, but your effective forward progress is slower. The "geometric resistance" of the segment structure plays the same role as the trees in this analogy.
 
-This interpretation has a crucial advantage over the energy-based picture: it explains why time dilation is *finite* at the horizon. In GR, the Schwarzschild metric predicts D → 0 at r = r_s (infinite time dilation). In SSZ, the segment density saturates at Ξ_max = 1 − e^{−φ} $\approx$ 0.802, so D never reaches zero. The clock slows down but never stops — there is no infinite redshift surface. Chapter 18 explores the consequences of this finiteness for black hole physics.
+This interpretation has a crucial advantage over the energy-based picture: it explains why time dilation is *finite* at the horizon. In GR, the Schwarzschild metric predicts D → 0 at r = r_s (infinite time dilation). In SSZ, the segment density saturates at Ξ_max = 1 − e^{−φ} ≈ 0.802, so D never reaches zero. The clock slows down but never stops — there is no infinite redshift surface. Chapter 18 explores the consequences of this finiteness for black hole physics.
 
 If one wanted to measure this: the geometric resistance interpretation makes a specific prediction that differs from GR at the horizon. In GR, the redshift of a photon emitted from r = r_s is infinite -- no photon can escape. In SSZ, the redshift is large but finite: z = 1/D - 1 = 1/0.555 - 1 = 0.80. A photon emitted at the horizon loses about 45 percent of its energy but does not disappear. This is, in principle, testable with next-generation X-ray telescopes observing matter falling into stellar-mass black holes. The predicted spectral cutoff differs from the GR prediction of complete blackout.
 
@@ -919,14 +924,14 @@ If one wanted to measure this: the geometric resistance interpretation makes a s
 
 ### φ/2 as the Fundamental Coupling
 
-The ratio φ/2 $\approx$ 0.80902 appears repeatedly throughout SSZ as a natural coupling constant between the segment geometry and physical observables. Its origin is straightforward: φ is the radial growth factor per quarter-turn, and the factor 1/2 arises from projecting the radial growth onto a diameter. When the φ-spiral is embedded in three-dimensional space, radial measurements relate to diametric measurements by a factor of 2, and the effective coupling becomes φ/2.
+The ratio φ/2 ≈ 0.80902 appears repeatedly throughout SSZ as a natural coupling constant between the segment geometry and physical observables. Its origin is straightforward: φ is the radial growth factor per quarter-turn, and the factor 1/2 arises from projecting the radial growth onto a diameter. When the φ-spiral is embedded in three-dimensional space, radial measurements relate to diametric measurements by a factor of 2, and the effective coupling becomes φ/2.
 
 To see why this projection matters, consider a photon passing a massive body at impact parameter b (the closest approach distance measured from the center). The photon's path curves through the φ-spiral structure, but the observable deflection angle depends on the *diametric* extent of the segment pattern, not the radial extent. The relevant coupling is therefore φ/2, not φ.
 
 Key appearances of φ/2 in the SSZ framework:
 
 - **The coupling radius:** r_φ = (φ/2)·r_s relates the Schwarzschild radius to the characteristic SSZ length scale (Section 3.3).
-- **The segment density at the horizon:** Ξ(r_s) = 1 − e^{−φ} $\approx$ 0.802 is numerically close to φ/2 $\approx$ 0.809. These values are not identical — one is a transcendental expression (1 − e^{−φ}), the other is algebraic (φ/2) — but their proximity (within 0.9%) reflects the deep structural connection between the exponential segment density and the algebraic spiral geometry.
+- **The segment density at the horizon:** Ξ(r_s) = 1 − e^{−φ} ≈ 0.802 is numerically close to φ/2 ≈ 0.809. These values are not identical — one is a transcendental expression (1 − e^{−φ}), the other is algebraic (φ/2) — but their proximity (within 0.9%) reflects the deep structural connection between the exponential segment density and the algebraic spiral geometry.
 - **The β parameter:** In segment dynamics, β = φ/2 describes the ratio of segment growth to angular displacement. This is not the PPN parameter β (which equals 1 in SSZ, as in GR), but a structural constant specific to the φ-spiral embedding.
 
 ### Connection to φ² and the Euler Chain
@@ -935,7 +940,7 @@ The algebraic properties of φ produce a cascade of related quantities. Starting
 
 \varphi^2 - \varphi = 1 \quad \Longrightarrow \quad \varphi(\varphi - 1) = 1 \quad \Longrightarrow \quad \varphi - 1 = \frac{1}{\varphi} \approx 0.618
 
-The quantity φ/2 sits between 1/φ $\approx$ 0.618 and φ $\approx$ 1.618 in the algebraic hierarchy:
+The quantity φ/2 sits between 1/φ ≈ 0.618 and φ ≈ 1.618 in the algebraic hierarchy:
 
 \frac{1}{\varphi} \approx 0.618 \quad < \quad \frac{\varphi}{2} \approx 0.809 \quad < \quad 1 \quad < \quad \varphi \approx 1.618
 
@@ -949,15 +954,15 @@ The coupling radius r_φ is the characteristic length scale of SSZ, defined as:
 
 r_\varphi = \frac{\varphi}{2} \cdot r_s = \frac{\varphi \cdot G M}{c^2}
 
-where r_s = 2GM/c² is the Schwarzschild radius. Numerically, r_φ $\approx$ 0.809·r_s. This radius marks the scale at which the φ-geometry begins to dominate over the classical 1/r behavior of gravity.
+where r_s = 2GM/c² is the Schwarzschild radius. Numerically, r_φ ≈ 0.809·r_s. This radius marks the scale at which the φ-geometry begins to dominate over the classical 1/r behavior of gravity.
 
 To understand the physical meaning of r_φ, recall that the Schwarzschild radius r_s is the scale at which GR predicts the formation of a black hole event horizon. In SSZ, the φ-spiral provides the internal structure of spacetime down to r_s and below. The coupling radius r_φ is the point along this spiral where exactly one φ-segment fits into the radial extent of the gravitational well.
 
-**Below r_φ** (r < r_φ $\approx$ 0.809 r_s): The segment structure is tightly wound. Multiple φ-segments are packed into each radial interval. This is the strong-field regime where the exponential formula Ξ_strong = 1 − e^{−φr_s/r} applies and SSZ deviates from GR predictions.
+**Below r_φ** (r < r_φ ≈ 0.809 r_s): The segment structure is tightly wound. Multiple φ-segments are packed into each radial interval. This is the strong-field regime where the exponential formula Ξ_strong = 1 − e^{−φr_s/r} applies and SSZ deviates from GR predictions.
 
 **Above r_φ** (r > r_φ): Segments are stretched — less than one φ-segment per radial interval. The gravitational field is weak enough that the simple formula Ξ_weak = r_s/(2r) provides an excellent approximation. In this regime, SSZ reproduces GR exactly.
 
-**At r_φ itself:** The segment density takes the value Ξ(r_φ) = 1 − e^{−φ/(φ/2)} = 1 − e^{−2} $\approx$ 0.865. This is between the weak-field limit (Ξ → 0) and the strong-field saturation (Ξ_max $\approx$ 0.802 at r = r_s). Note that Ξ(r_φ) > Ξ(r_s) because r_φ < r_s — the coupling radius is *inside* the Schwarzschild radius.
+**At r_φ itself:** The segment density takes the value Ξ(r_φ) = 1 − e^{−φ/(φ/2)} = 1 − e^{−2} ≈ 0.865. This is between the weak-field limit (Ξ → 0) and the strong-field saturation (Ξ_max ≈ 0.802 at r = r_s). Note that Ξ(r_φ) > Ξ(r_s) because r_φ < r_s — the coupling radius is *inside* the Schwarzschild radius.
 
 The actual transition between weak and strong field does not occur sharply at r_φ but over a broader blend zone (1.8–2.2 r_s), where a smooth Hermite C² interpolation connects the two formulas (Chapter 1). The coupling radius r_φ is the *structural* transition point; the blend zone is the *numerical* implementation that ensures smooth matching.
 
@@ -965,7 +970,7 @@ The actual transition between weak and strong field does not occur sharply at r_
 
 The coupling radius scales linearly with mass, just like the Schwarzschild radius. The ratio r_φ/r_s = φ/2 is universal and mass-independent. The following table illustrates r_φ for objects spanning 15 orders of magnitude in mass:
 
-| Object | M/M$\odot$ | r_s (km) | r_φ (km) | Where r_φ falls |
+| Object | M/M☉ | r_s (km) | r_φ (km) | Where r_φ falls |
 |--------|-------|----------|----------|-----------------|
 | Earth | 3×10⁻⁶ | 0.009 | 0.007 | Deep underground |
 | Sun | 1 | 2.95 | 2.39 | Inside the Sun |
@@ -989,7 +994,7 @@ In SSZ, the mass dependence enters through the number of φ-subdivision levels b
 
 \text{Number of levels} \propto \log_\varphi(r/r_\varphi) \propto \frac{\ln(r/r_\varphi)}{\ln\varphi}
 
-Since r_φ $\propto$ M, the number of levels at a given r/r_s depends on ln(M), producing a logarithmic mass correction.
+Since r_φ ∝ M, the number of levels at a given r/r_s depends on ln(M), producing a logarithmic mass correction.
 
 ### Form of the Correction
 
@@ -1005,7 +1010,7 @@ where a₀ and a₁ are fixed coefficients derived from the φ-geometry (subdivi
 
 \Delta(M) = A \cdot \exp(-\alpha \cdot r_s) + B \quad (A = 98.01,\; \alpha = 2.72 \times 10^4\;\text{m}^{-1},\; B = 1.96)
 
-Since r_s $\propto$ M, both forms are equivalent in the perturbative regime (Δ $\ll$ 1). The logarithmic form is preferred here for transparency; the exponential form is preferred in numerical pipelines where r_s is the primary input.
+Since r_s ∝ M, both forms are equivalent in the perturbative regime (Δ ≪ 1). The logarithmic form is preferred here for transparency; the exponential form is preferred in numerical pipelines where r_s is the primary input.
 
 The corrected strong-field segment density is:
 
@@ -1013,9 +1018,9 @@ The corrected strong-field segment density is:
 
 Several properties of this correction are worth noting:
 
-**1. Logarithmic scaling.** The correction depends on log₁₀(M), not on M directly. This means Δ(M) varies slowly with mass: doubling the mass changes Δ by a₁·log₁₀(2) $\approx$ 0.3a₁. For a₁ of order 10⁻², this is a change of about 0.3% — barely detectable for stellar-mass objects.
+**1. Logarithmic scaling.** The correction depends on log₁₀(M), not on M directly. This means Δ(M) varies slowly with mass: doubling the mass changes Δ by a₁·log₁₀(2) ≈ 0.3a₁. For a₁ of order 10⁻², this is a change of about 0.3% — barely detectable for stellar-mass objects.
 
-**2. Smallness.** For stellar-mass objects (M ~ 1–100 M$\odot$), the correction is typically less than 5% of the uncorrected value. It becomes more significant for supermassive black holes (M ~ 10⁶–10¹⁰ M$\odot$) but remains a perturbative correction, never dominating over the base formula.
+**2. Smallness.** For stellar-mass objects (M ~ 1–100 M☉), the correction is typically less than 5% of the uncorrected value. It becomes more significant for supermassive black holes (M ~ 10⁶–10¹⁰ M☉) but remains a perturbative correction, never dominating over the base formula.
 
 **3. Regime restriction.** The correction applies only in the strong-field regime (r < 10 r_s). In the weak-field regime (r > 10 r_s), Ξ_weak = r_s/(2r) already matches GR exactly, and no correction is needed. The Hermite blend zone (1.8–2.2 r_s) smoothly incorporates the correction through the interpolation.
 
@@ -1039,7 +1044,7 @@ This compliance is essential for the scientific integrity of SSZ. Any framework 
 
 **What tests do NOT prove:** The physical interpretation of φ as a temporal growth function. This is a conceptual claim that cannot be tested computationally — it requires independent experimental evidence for the segment structure of spacetime. Similarly, the "geometric resistance" interpretation of time dilation is physically equivalent to the GR prediction in the weak field; distinguishing the two interpretations requires strong-field measurements that are not yet available.
 
-**Reproduction:** `E:/clone\segmented-calculation-suite/tests/` — `test_phi_calibration.py`, `test_phi_correction.py`. All tests pass.
+**Reproduction:** `E:\clone\segmented-calculation-suite\tests\` — `test_phi_calibration.py`, `test_phi_correction.py`. All tests pass.
 
 ---
 
@@ -1048,10 +1053,10 @@ This compliance is essential for the scientific integrity of SSZ. Any framework 
 | # | Formula | Domain |
 |---|---------|--------|
 | 1 | R(θ) = a · φ^{θ/(π/2)} | spiral growth function |
-| 2 | t $\propto$ log_φ(R) | temporal interpretation |
+| 2 | t ∝ log_φ(R) | temporal interpretation |
 | 3 | D(r) = 1/(1 + Ξ(r)) | time dilation from segment density |
-| 4 | r_φ = (φ/2) · r_s $\approx$ 0.809 r_s | coupling radius |
-| 5 | Δ(M) = a₀ + a₁ · log₁₀(M/M$\odot$) | mass correction |
+| 4 | r_φ = (φ/2) · r_s ≈ 0.809 r_s | coupling radius |
+| 5 | Δ(M) = a₀ + a₁ · log₁₀(M/M☉) | mass correction |
 | 6 | Ξ_corrected = Ξ_strong · (1 + Δ(M)) | corrected segment density |
 
 ---
@@ -1143,11 +1148,12 @@ The uniqueness of the solution deserves emphasis. The self-similarity equation h
 - **Referenced by:** Ch 4 (Euler derivation), Ch 8 (gravitational redshift), Ch 10 (electromagnetic coupling)
 - **Appendix:** App. B (B.6, B.7)
 
+---
 
+# Chapter 4: From φ-Segmentation to Euler
 
-\newpage
-
-# From φ-Segmentation to Euler
+**Part I — Foundations**
+**Status:** EXPANDED DRAFT
 
 
 ![Fig 4.1](figures/ch04_phi_euler/fig_04_01_phi_segmentation.png)
@@ -1191,7 +1197,7 @@ Before deriving the exponential form, let us collect the key results from Chapte
 
 - Spacetime is segmented into φ-scaled units. Each quarter-turn of the logarithmic spiral multiplies the radius by φ. This is the defining property of the φ-spiral: r(θ + π/2) = φ·r(θ).
 
-- The spiral growth rate is k = 2ln(φ)/π $\approx$ 0.3063. This value is not chosen — it is uniquely determined by the requirement that the quarter-turn growth factor equals φ.
+- The spiral growth rate is k = 2ln(φ)/π ≈ 0.3063. This value is not chosen — it is uniquely determined by the requirement that the quarter-turn growth factor equals φ.
 
 - The radial growth function is R(θ) = a·φ^{θ/(π/2)}, which can equivalently be written as R(θ) = a·e^{kθ} using the identity φ^{θ/(π/2)} = e^{kθ}.
 
@@ -1199,7 +1205,7 @@ Before deriving the exponential form, let us collect the key results from Chapte
 
 **From Chapter 3:**
 
-- Time emerges as t $\propto$ log_φ(R) — each expansion step is one temporal unit. The temporal interpretation converts geometric growth into measurable time intervals.
+- Time emerges as t ∝ log_φ(R) — each expansion step is one temporal unit. The temporal interpretation converts geometric growth into measurable time intervals.
 
 - The coupling radius r_φ = (φ/2)·r_s marks the transition between weak and strong field behavior.
 
@@ -1211,7 +1217,7 @@ All of the above results describe the *structure* of segmented spacetime — how
 
 \Xi_{\text{strong}}(r) = 1 - e^{-\varphi \cdot r_s / r}
 
-Why an exponential? Why not Ξ $\propto$ (r_s/r)² (a power law)? Why not Ξ $\propto$ tanh(r_s/r) (a hyperbolic tangent)? Why not any of infinitely many other saturating functions? This chapter answers that question by showing that the exponential is the *unique mathematical consequence* of the logarithmic spiral structure. The derivation passes through Euler
+Why an exponential? Why not Ξ ∝ (r_s/r)² (a power law)? Why not Ξ ∝ tanh(r_s/r) (a hyperbolic tangent)? Why not any of infinitely many other saturating functions? This chapter answers that question by showing that the exponential is the *unique mathematical consequence* of the logarithmic spiral structure. The derivation passes through Euler
 
 
 
@@ -1237,7 +1243,7 @@ The φ-scaled logarithmic spiral is the central geometric object of SSZ. In pola
 
 r(\theta) = r_0 \cdot e^{k\theta}, \quad k = \frac{2\ln\varphi}{\pi} \approx 0.3063
 
-This equation says: as the angle θ increases, the radius r grows exponentially. The growth rate k is small (about 0.31), so the spiral expands gradually — it takes a full quarter-turn (θ = π/2 $\approx$ 1.57 radians) to increase the radius by a factor of φ $\approx$ 1.618.
+This equation says: as the angle θ increases, the radius r grows exponentially. The growth rate k is small (about 0.31), so the spiral expands gradually — it takes a full quarter-turn (θ = π/2 ≈ 1.57 radians) to increase the radius by a factor of φ ≈ 1.618.
 
 The key geometric property of this spiral is its **equiangular nature**: the angle ψ between the tangent line and the radial direction is constant at every point along the curve:
 
@@ -1251,7 +1257,7 @@ The arc length along the spiral from angle θ₁ to angle θ₂ is:
 
 s = \frac{\sqrt{1+k^2}}{k} \cdot r_0 \left(e^{k\theta_2} - e^{k\theta_1}\right)
 
-The prefactor √(1+k²)/k $\approx$ 3.41 is a constant that accounts for the diagonal path of the spiral (it moves both radially and tangentially). For our purposes, the important quantity is not the arc length itself but the **segment count** — the number of quarter-turns from a reference point to a given radius.
+The prefactor √(1+k²)/k ≈ 3.41 is a constant that accounts for the diagonal path of the spiral (it moves both radially and tangentially). For our purposes, the important quantity is not the arc length itself but the **segment count** — the number of quarter-turns from a reference point to a given radius.
 
 Each quarter-turn (Δθ = π/2) adds one segment. Starting from an initial radius r₀ near the center, the total number of segments to reach radius R is:
 
@@ -1261,7 +1267,7 @@ Since θ = ln(R/r₀)/k = ln(R/r₀)·π/(2ln φ), we get:
 
 n = \frac{2}{\pi} \cdot \frac{\ln(R/r_0) \cdot \pi}{2\ln\varphi} = \frac{\ln(R/r_0)}{\ln\varphi} = \log_\varphi(R/r_0)
 
-This is a *logarithmic* count — the segment number grows as the logarithm of the radius ratio. Doubling the radius adds log_φ(2) $\approx$ 1.44 segments, regardless of the absolute scale. This logarithmic structure is the mathematical key to the entire derivation: **the inverse of a logarithm is an exponential.** If the segment count is logarithmic in r, then the segment density — which is a function of the segment count — will naturally take an exponential form.
+This is a *logarithmic* count — the segment number grows as the logarithm of the radius ratio. Doubling the radius adds log_φ(2) ≈ 1.44 segments, regardless of the absolute scale. This logarithmic structure is the mathematical key to the entire derivation: **the inverse of a logarithm is an exponential.** If the segment count is logarithmic in r, then the segment density — which is a function of the segment count — will naturally take an exponential form.
 
 ### Why This Matters for the Derivation
 
@@ -1283,7 +1289,7 @@ z(\theta) = r(\theta) \cdot e^{i\theta} = r_0 \cdot e^{k\theta} \cdot e^{i\theta
 
 This is a single exponential expression with a *complex* exponent (k + i)θ. The real part of the exponent (kθ) governs the radial growth — the spiral expands outward. The imaginary part (iθ) governs the rotation — the spiral winds around the origin. Euler's formula unifies both behaviors into one exponential.
 
-**Physical interpretation.** The complex spiral z(θ) encodes the full spacetime structure at angle θ. The real part |z| = r₀·e^{kθ} gives the radial position (spatial structure). The imaginary part arg(z) = θ gives the angular position (temporal structure, via the t $\propto$ θ relationship from Chapter 3). The exponential e^{(k+i)θ} is therefore not just a mathematical convenience — it is the natural encoding of the combined spatial-temporal segment structure.
+**Physical interpretation.** The complex spiral z(θ) encodes the full spacetime structure at angle θ. The real part |z| = r₀·e^{kθ} gives the radial position (spatial structure). The imaginary part arg(z) = θ gives the angular position (temporal structure, via the t ∝ θ relationship from Chapter 3). The exponential e^{(k+i)θ} is therefore not just a mathematical convenience — it is the natural encoding of the combined spatial-temporal segment structure.
 
 ### The Three-Step Reduction
 
@@ -1337,9 +1343,9 @@ Let us verify that the derived formula gives the correct values at key radii:
 | 3 | 0.5393 | 0.417 | Photon sphere |
 | 1 | 1.618 | 0.802 | Horizon |
 | 0.5 | 3.236 | 0.961 | Inside horizon |
-| 0.1 | 16.18 | $\approx$ 1.000 | Deep interior |
+| 0.1 | 16.18 | ≈ 1.000 | Deep interior |
 
-The values match the expected behavior: Ξ starts at 0 in flat spacetime, increases through the photon sphere, reaches 0.802 at the horizon, and approaches 1 deep inside. The saturation value Ξ(r_s) = 1 − e^{−φ} $\approx$ 0.802 is a fixed prediction, not an adjustable parameter.
+The values match the expected behavior: Ξ starts at 0 in flat spacetime, increases through the photon sphere, reaches 0.802 at the horizon, and approaches 1 deep inside. The saturation value Ξ(r_s) = 1 − e^{−φ} ≈ 0.802 is a fixed prediction, not an adjustable parameter.
 
 ## The Exponential Connection
 
@@ -1347,22 +1353,22 @@ The values match the expected behavior: Ξ starts at 0 in flat spacetime, increa
 
 Having derived the exponential form from the φ-spiral geometry, it is instructive to understand *why* alternative functional forms would fail. This is not merely academic — it demonstrates that the exponential is not one choice among many but the *unique* consequence of the logarithmic spiral structure.
 
-**Polynomial candidate: Ξ $\propto$ (r_s/r)².**
-A polynomial segment density would grow without bound as r → 0. At r = 0.01 r_s, a quadratic would give Ξ $\propto$ 10⁴ — far exceeding the physical maximum of 1. More fundamentally, a polynomial diverges at r = 0, producing the same singularity problem that SSZ is designed to avoid. The logarithmic spiral produces a *bounded* segment count (because each segment has finite angular extent), so the density must saturate. Polynomials cannot saturate — they always diverge.
+**Polynomial candidate: Ξ ∝ (r_s/r)².**
+A polynomial segment density would grow without bound as r → 0. At r = 0.01 r_s, a quadratic would give Ξ ∝ 10⁴ — far exceeding the physical maximum of 1. More fundamentally, a polynomial diverges at r = 0, producing the same singularity problem that SSZ is designed to avoid. The logarithmic spiral produces a *bounded* segment count (because each segment has finite angular extent), so the density must saturate. Polynomials cannot saturate — they always diverge.
 
-**Power-law candidate: Ξ $\propto$ (r_s/r)^α.**
+**Power-law candidate: Ξ ∝ (r_s/r)^α.**
 A power law with α < 1 would vanish too slowly at large r (overestimating the weak-field segment density). A power law with α > 1 would vanish too quickly (underestimating the photon-sphere density). Only α = 1 gives the correct weak-field limit Ξ_weak = r_s/(2r), but this does not saturate — it diverges at r = 0. The power law is the correct *weak-field approximation* but cannot serve as the *global* formula.
 
-**Hyperbolic tangent candidate: Ξ $\propto$ tanh(r_s/r).**
-The hyperbolic tangent does saturate at 1, and it vanishes at r → ∞. However, tanh(x) approaches 1 much more slowly than 1 − e^{−x} for large x. At r = r_s, tanh(1) $\approx$ 0.762, while 1 − e^{−φ} $\approx$ 0.802 — the tanh value would require a different scaling to match the φ-spiral prediction. More importantly, tanh does not arise naturally from the logarithmic-spiral segment count; it would be an *ad hoc* choice without geometric justification.
+**Hyperbolic tangent candidate: Ξ ∝ tanh(r_s/r).**
+The hyperbolic tangent does saturate at 1, and it vanishes at r → ∞. However, tanh(x) approaches 1 much more slowly than 1 − e^{−x} for large x. At r = r_s, tanh(1) ≈ 0.762, while 1 − e^{−φ} ≈ 0.802 — the tanh value would require a different scaling to match the φ-spiral prediction. More importantly, tanh does not arise naturally from the logarithmic-spiral segment count; it would be an *ad hoc* choice without geometric justification.
 
 **The exponential 1 − e^{−x} is the unique function that:**
 
-1. **Vanishes at x = 0** (no segmentation at infinity): Ξ(r → ∞) = 0 Y
-2. **Saturates at 1 for x → ∞** (maximum segmentation at the center): Ξ(r → 0) → 1 Y
-3. **Has a single characteristic scale** (here, φ·r_s) with no additional parameters Y
-4. **Arises naturally from the logarithmic segment count** via the exponential-logarithm inverse relationship Y
-5. **Is the cumulative distribution of a memoryless process** — each segment contributes independently to the total density Y
+1. **Vanishes at x = 0** (no segmentation at infinity): Ξ(r → ∞) = 0 ✓
+2. **Saturates at 1 for x → ∞** (maximum segmentation at the center): Ξ(r → 0) → 1 ✓
+3. **Has a single characteristic scale** (here, φ·r_s) with no additional parameters ✓
+4. **Arises naturally from the logarithmic segment count** via the exponential-logarithm inverse relationship ✓
+5. **Is the cumulative distribution of a memoryless process** — each segment contributes independently to the total density ✓
 
 Property 5 deserves special attention. The exponential distribution is the *unique* continuous probability distribution with the "memoryless" property: the probability of traversing an additional segment does not depend on how many segments have already been traversed. In the SSZ context, this means each φ-segment contributes to the segment density independently of the others — there is no "memory" or correlation between segments. This independence is a direct consequence of the self-similarity of the φ-spiral: each segment is geometrically identical to every other segment (up to scale), so its contribution to the total density is independent.
 
@@ -1381,7 +1387,7 @@ Let us evaluate this at key radii:
 | 3 | 1.417 | 0.706 | Moderate dilation |
 | 1 | 1.802 | 0.555 | Horizon — finite! |
 
-At the horizon (r = r_s), s = 2 − e^{−φ} $\approx$ 1.802, hence D = 1/s $\approx$ 0.555. This is the central prediction of SSZ: **time dilation at the horizon is finite, not infinite.** A clock at the Schwarzschild radius ticks at 55.5% of the rate of a clock at infinity. In GR, by contrast, D → 0 at r = r_s — time stops completely. The SSZ prediction is qualitatively different and, in principle, testable.
+At the horizon (r = r_s), s = 2 − e^{−φ} ≈ 1.802, hence D = 1/s ≈ 0.555. This is the central prediction of SSZ: **time dilation at the horizon is finite, not infinite.** A clock at the Schwarzschild radius ticks at 55.5% of the rate of a clock at infinity. In GR, by contrast, D → 0 at r = r_s — time stops completely. The SSZ prediction is qualitatively different and, in principle, testable.
 
 This completes the derivation chain: φ-spiral → logarithmic segment count → Euler embedding → exponential density → finite time dilation. Each step follows from the previous one without free parameters or adjustable constants. The entire chain is determined by a single geometric input: the golden ratio φ.
 
@@ -1389,11 +1395,11 @@ This completes the derivation chain: φ-spiral → logarithmic segment count →
 
 **Test Files:** `test_euler_embedding`, `test_euler_reduction`
 
-**What tests prove:** The derivation chain from φ-spiral → logarithmic count → exponential density produces numerically correct values at all test radii. Specifically: Ξ_strong(r_s) = 1 − e^{−φ} $\approx$ 0.80171 to machine precision; the three-step reduction is invertible (exponential ↔ logarithmic); the complex spiral z(θ) = r₀·e^{(k+i)θ} reproduces the correct real and imaginary parts; and the segment count n = log_φ(R/r₀) matches the quarter-turn count for integer multiples of π/2.
+**What tests prove:** The derivation chain from φ-spiral → logarithmic count → exponential density produces numerically correct values at all test radii. Specifically: Ξ_strong(r_s) = 1 − e^{−φ} ≈ 0.80171 to machine precision; the three-step reduction is invertible (exponential ↔ logarithmic); the complex spiral z(θ) = r₀·e^{(k+i)θ} reproduces the correct real and imaginary parts; and the segment count n = log_φ(R/r₀) matches the quarter-turn count for integer multiples of π/2.
 
 **What tests do NOT prove:** The uniqueness of the exponential form in a mathematical sense — other saturating functions could be proposed that also satisfy requirements 1–3 of Section 4.4. The tests confirm the *internal consistency* of the derivation (logarithmic spiral → exponential density), not the *physical uniqueness* of the exponential. However, requirements 4 and 5 (natural emergence from the spiral and memoryless independence) are structural properties that only the exponential satisfies.
 
-**Reproduction:** `E:/clone\segmented-calculation-suite/tests/` — `test_euler_embedding.py`, `test_euler_reduction.py`. All tests pass.
+**Reproduction:** `E:\clone\segmented-calculation-suite\tests\` — `test_euler_embedding.py`, `test_euler_reduction.py`. All tests pass.
 
 ---
 
@@ -1406,7 +1412,7 @@ This completes the derivation chain: φ-spiral → logarithmic segment count →
 | 3 | z(θ) = r₀ · e^{(k+i)θ} | Euler embedding (complex spiral) |
 | 4 | Ξ = 1 − e^{−φ·r_s/r} | strong-field density (derived) |
 | 5 | s = 2 − e^{−φ·r_s/r} | stretching factor |
-| 6 | D(r_s) = 1/1.802 $\approx$ 0.555 | time dilation at horizon |
+| 6 | D(r_s) = 1/1.802 ≈ 0.555 | time dilation at horizon |
 
 ---
 
@@ -1491,20 +1497,20 @@ This argument is not a rigorous derivation (it relies on the assumption that the
 - **Referenced by:** Ch 5 (fine-structure constant), Ch 18 (black hole metric)
 - **Appendix:** App. B (B.6)
 
+---
 
+# Chapter 5: Geometric Origin of the Fine-Structure Constant
 
-\newpage
-
-# Geometric Origin of the Fine-Structure Constant
-
+**Part I — Foundations**
+**Status:** EXPANDED DRAFT
 
 ---
 
 ## Summary
 
-The fine-structure constant α $\approx$ 1/137.036 is one of the most precisely measured quantities in all of physics — and one of the least understood. It governs the strength of the electromagnetic interaction: how strongly electrons couple to photons, how tightly atoms are bound, and how probable it is for a charged particle to emit or absorb radiation. In the Standard Model of particle physics, α is a free parameter — measured with extraordinary precision (α⁻¹ = 137.035999084 ± 0.000000021) but not derived from any deeper principle. Richard Feynman called it "one of the greatest damn mysteries of physics."
+The fine-structure constant α ≈ 1/137.036 is one of the most precisely measured quantities in all of physics — and one of the least understood. It governs the strength of the electromagnetic interaction: how strongly electrons couple to photons, how tightly atoms are bound, and how probable it is for a charged particle to emit or absorb radiation. In the Standard Model of particle physics, α is a free parameter — measured with extraordinary precision (α⁻¹ = 137.035999084 ± 0.000000021) but not derived from any deeper principle. Richard Feynman called it "one of the greatest damn mysteries of physics."
 
-In SSZ, α is not a free parameter but emerges from the geometric projection of φ-segmented spacetime onto the electromagnetic interaction sector. This chapter derives α from the segment structure using exactly two ingredients: the golden ratio φ (already fixed by the segment geometry) and the base segmentation N₀ = 4 (already fixed by the 2φ $\approx$ π identity). The result α_SSZ = 1/(φ^{2π}·4) $\approx$ 1/137.08 reproduces the measured value to within 0.03%.
+In SSZ, α is not a free parameter but emerges from the geometric projection of φ-segmented spacetime onto the electromagnetic interaction sector. This chapter derives α from the segment structure using exactly two ingredients: the golden ratio φ (already fixed by the segment geometry) and the base segmentation N₀ = 4 (already fixed by the 2φ ≈ π identity). The result α_SSZ = 1/(φ^{2π}·4) ≈ 1/137.08 reproduces the measured value to within 0.03%.
 
 We explain why this derivation is not numerology, how it connects to the bound energy concept, what it predicts about α in extreme gravitational environments, and how it relates to the QED running of the coupling constant.
 
@@ -1547,19 +1553,19 @@ The remarkable feature of α is that it is *dimensionless* — it has no units. 
 
 - **Atomic spectra.** The energy levels of hydrogen are E_n = −(1/2)α²m_ec²/n². The α² factor determines the overall scale of atomic binding energies. Without α, there would be no atoms — or rather, atoms would be infinitely large (α → 0) or infinitely small (α → ∞).
 
-- **Fine structure.** The splitting of atomic energy levels due to relativistic and spin-orbit effects scales as α⁴m_ec². This "fine structure" gives the constant its name. The splitting is small (of order α² $\approx$ 5×10⁻⁵ relative to the gross structure) precisely because α is small.
+- **Fine structure.** The splitting of atomic energy levels due to relativistic and spin-orbit effects scales as α⁴m_ec². This "fine structure" gives the constant its name. The splitting is small (of order α² ≈ 5×10⁻⁵ relative to the gross structure) precisely because α is small.
 
 - **Anomalous magnetic moment.** The electron's magnetic moment differs from the Dirac prediction by a factor of 1 + α/(2π) + O(α²). This correction, first calculated by Schwinger in 1948, was one of the great triumphs of QED and has since been computed to tenth order in α.
 
-- **Photon emission probability.** The probability that a charged particle emits a photon in an electromagnetic interaction is proportional to α. Since α $\approx$ 1/137, roughly 1 in 137 interactions produces a photon. This makes electromagnetic processes relatively rare compared to strong interactions (where the coupling constant α_s ~ 1).
+- **Photon emission probability.** The probability that a charged particle emits a photon in an electromagnetic interaction is proportional to α. Since α ≈ 1/137, roughly 1 in 137 interactions produces a photon. This makes electromagnetic processes relatively rare compared to strong interactions (where the coupling constant α_s ~ 1).
 
 ### The Open Question
 
-The Standard Model treats α as a free parameter — a number that must be measured experimentally and inserted into the theory by hand. No principle within the Standard Model determines *why* α $\approx$ 1/137 rather than, say, 1/100 or 1/200.
+The Standard Model treats α as a free parameter — a number that must be measured experimentally and inserted into the theory by hand. No principle within the Standard Model determines *why* α ≈ 1/137 rather than, say, 1/100 or 1/200.
 
 Various attempts to derive α from first principles have been made throughout the history of physics:
 
-- **Eddington (1929)** proposed α⁻¹ = 136 based on the number of independent components of a symmetric tensor in his "fundamental theory." When experiment showed α⁻¹ $\approx$ 137, he revised his argument to give 136 + 1 = 137. This is widely regarded as numerology.
+- **Eddington (1929)** proposed α⁻¹ = 136 based on the number of independent components of a symmetric tensor in his "fundamental theory." When experiment showed α⁻¹ ≈ 137, he revised his argument to give 136 + 1 = 137. This is widely regarded as numerology.
 
 - **Pauli** spent years searching for a connection between α and other fundamental constants, reportedly becoming obsessed with the number 137. He died in room 137 of the Red Cross Hospital in Zurich.
 
@@ -1597,7 +1603,7 @@ For the electromagnetic projection, however, the relevant quantity is not the di
 
 \varphi^{2\pi} \approx 34.27
 
-This is φ raised to the power 2π (not 4). The difference between φ⁴ $\approx$ 6.854 and φ^{2π} $\approx$ 34.27 arises because 2π $\approx$ 6.283 > 4: the continuous angular extent (2π radians) corresponds to more growth than the discrete count of 4 quarter-turns.
+This is φ raised to the power 2π (not 4). The difference between φ⁴ ≈ 6.854 and φ^{2π} ≈ 34.27 arises because 2π ≈ 6.283 > 4: the continuous angular extent (2π radians) corresponds to more growth than the discrete count of 4 quarter-turns.
 
 **Step 2: Division by the base segmentation.**
 
@@ -1615,10 +1621,10 @@ This reproduces the measured value α⁻¹ = 137.036 to within **0.03%**.
 
 The distinction between a genuine derivation and numerology is simple: **a derivation uses only quantities that are already determined by the theory, with no new adjustable parameters.** The SSZ derivation of α uses exactly two quantities:
 
-1. **φ = (1 + √5)/2 $\approx$ 1.618** — the spiral growth constant, already fixed by the segment geometry (Chapters 2–3).
-2. **N₀ = 4** — the base segmentation, already fixed by the 2φ $\approx$ π identity (Chapter 2).
+1. **φ = (1 + √5)/2 ≈ 1.618** — the spiral growth constant, already fixed by the segment geometry (Chapters 2–3).
+2. **N₀ = 4** — the base segmentation, already fixed by the 2φ ≈ π identity (Chapter 2).
 
-No new parameters are introduced. No numbers are "tried" until one works. The result α $\approx$ 1/137 is a *consequence* of the same geometry that produces the segment density, time dilation, and all other SSZ observables.
+No new parameters are introduced. No numbers are "tried" until one works. The result α ≈ 1/137 is a *consequence* of the same geometry that produces the segment density, time dilation, and all other SSZ observables.
 
 Compare this with Eddington's attempt: he needed to invoke the number of independent components of a tensor (136 or 137, depending on the version), which was not determined by any independent physical principle. His "derivation" was reverse-engineered to give the right answer. The SSZ derivation, by contrast, follows from
 
@@ -1633,13 +1639,13 @@ The 0.03% discrepancy between α_SSZ⁻¹ = 137.08 and the measured α⁻¹ = 13
 
 In standard physics, α is a universal constant — the same everywhere in the universe at all times. Some speculative theories (string landscape, varying-constant cosmologies) suggest α might vary over cosmic time or in extreme gravitational environments. Observational searches for such variation, using quasar absorption spectra and Big Bang nucleosynthesis constraints, have placed stringent limits: |Δα/α| < 10⁻⁶ over the last 10 billion years.
 
-In SSZ, α is *locally* constant but *structurally* derived. The derivation α = 1/(φ^{2π}·4) depends on two quantities: φ (a mathematical constant, the same everywhere) and N₀ = 4 (the base segmentation, determined by the 2φ $\approx$ π identity at unit radius). As long as the segment geometry is the same — which it is, by the self-similarity of the φ-spiral — α takes the same value everywhere in flat or weakly curved spacetime.
+In SSZ, α is *locally* constant but *structurally* derived. The derivation α = 1/(φ^{2π}·4) depends on two quantities: φ (a mathematical constant, the same everywhere) and N₀ = 4 (the base segmentation, determined by the 2φ ≈ π identity at unit radius). As long as the segment geometry is the same — which it is, by the self-similarity of the φ-spiral — α takes the same value everywhere in flat or weakly curved spacetime.
 
 However, SSZ makes a subtle but testable prediction: **in regions of extreme segmentation (near black hole horizons), the effective electromagnetic coupling could differ from the flat-spacetime value.** The reason is that the projection geometry of Section 5.2 assumes flat-spacetime segment structure. When the segment density is large (Ξ → Ξ_max), the projection geometry changes because the segments are no longer uniformly distributed but compressed. The effective α in such regions would be:
 
 \alpha_{\text{eff}}(r) = \frac{1}{\varphi^{2\pi} \cdot N_0 \cdot (1 + \Xi(r))}
 
-At the horizon (Ξ $\approx$ 0.802), this gives α_eff $\approx$ α/1.802 $\approx$ 1/247 — a significantly weaker electromagnetic coupling. This prediction is currently untestable because we cannot perform electromagnetic experiments at black hole horizons, but it is a genuine, falsifiable prediction of the SSZ framework.
+At the horizon (Ξ ≈ 0.802), this gives α_eff ≈ α/1.802 ≈ 1/247 — a significantly weaker electromagnetic coupling. This prediction is currently untestable because we cannot perform electromagnetic experiments at black hole horizons, but it is a genuine, falsifiable prediction of the SSZ framework.
 
 ### Connection to Running Coupling
 
@@ -1647,7 +1653,7 @@ In QED, α "runs" with energy scale due to vacuum polarization: virtual electron
 
 \alpha(q^2) = \frac{\alpha(0)}{1 - \frac{\alpha(0)}{3\pi}\ln(q^2/m_e^2c^2)}
 
-At the Z boson mass (q $\approx$ 91 GeV/c), α⁻¹ $\approx$ 128 — significantly different from the low-energy value of 137.
+At the Z boson mass (q ≈ 91 GeV/c), α⁻¹ ≈ 128 — significantly different from the low-energy value of 137.
 
 In SSZ, this running has a geometric interpretation. Higher-energy interactions probe finer segment scales — they "see" more of the internal structure of each φ-segment. The effective coupling increases because the projection geometry of Section 5.2 changes when sub-segment structure is resolved. The SSZ framework does not replace QED renormalization but provides a geometric context for understanding *why* the coupling runs: it runs because the segment structure has internal detail that becomes visible at higher energies.
 
@@ -1666,7 +1672,7 @@ E_{\text{bound}} = \alpha \cdot E_{\text{total}}
 
 This means 1/137 of the electromagnetic energy budget goes into maintaining the segment structure through which the photon propagates. The remaining 136/137 is the "free" electromagnetic energy that produces observable effects (photon emission, atomic binding, etc.).
 
-**Physical interpretation.** When a photon travels through segmented spacetime, it must "pay a toll" at each segment boundary — a fraction α of its energy is temporarily absorbed by the segment structure and re-emitted. Over many segments, the net effect is a reduction of the effective coupling by the factor α. This is why electromagnetic interactions are weak (α $\approx$ 1/137) rather than strong (α_s ~ 1): photons interact with the segment structure weakly because the transverse projection (Section 5.2) selects only a small fraction of the total segment cross-section.
+**Physical interpretation.** When a photon travels through segmented spacetime, it must "pay a toll" at each segment boundary — a fraction α of its energy is temporarily absorbed by the segment structure and re-emitted. Over many segments, the net effect is a reduction of the effective coupling by the factor α. This is why electromagnetic interactions are weak (α ≈ 1/137) rather than strong (α_s ~ 1): photons interact with the segment structure weakly because the transverse projection (Section 5.2) selects only a small fraction of the total segment cross-section.
 
 ### Connection to the Hydrogen Atom
 
@@ -1684,11 +1690,11 @@ This pattern extends to higher-order processes. The Lamb shift (a correction to 
 
 **Test Files:** `test_alpha_structure`, `test_bound_energy`
 
-**What tests prove:** The numerical computation α_SSZ = 1/(φ^{2π}·4) $\approx$ 1/137.08 is correct to machine precision; the bound energy fraction E_bound/E_total = α holds for test cases involving photon propagation through segment structures; the projection formula is consistent with the φ-spiral geometry; and the effective α_eff(r) decreases monotonically with increasing Ξ, as predicted.
+**What tests prove:** The numerical computation α_SSZ = 1/(φ^{2π}·4) ≈ 1/137.08 is correct to machine precision; the bound energy fraction E_bound/E_total = α holds for test cases involving photon propagation through segment structures; the projection formula is consistent with the φ-spiral geometry; and the effective α_eff(r) decreases monotonically with increasing Ξ, as predicted.
 
 **What tests do NOT prove:** That α *physically originates* from segment geometry. The tests verify the mathematical derivation, not the physical claim. Independent experimental confirmation would require measuring α in extreme gravitational environments — for example, observing spectral lines from matter very close to a black hole horizon and comparing the inferred α with the flat-spacetime value. Current technology cannot perform this measurement, but future metric perturbation detectors and black hole imaging experiments may provide indirect constraints.
 
-**Reproduction:** `E:/clone\segmented-calculation-suite/tests/` — `test_alpha_structure.py`, `test_bound_energy.py`. All tests pass.
+**Reproduction:** `E:\clone\segmented-calculation-suite\tests\` — `test_alpha_structure.py`, `test_bound_energy.py`. All tests pass.
 
 ---
 
@@ -1696,10 +1702,10 @@ This pattern extends to higher-order processes. The Lamb shift (a correction to 
 
 | # | Formula | Domain |
 |---|---------|--------|
-| 1 | α = e²/(4πε₀ℏc) $\approx$ 1/137.036 | QED definition |
-| 2 | α_SSZ = 1/(φ^{2π}·N₀) $\approx$ 1/137.08 | SSZ derivation |
+| 1 | α = e²/(4πε₀ℏc) ≈ 1/137.036 | QED definition |
+| 2 | α_SSZ = 1/(φ^{2π}·N₀) ≈ 1/137.08 | SSZ derivation |
 | 3 | E_bound = α · E_total | bound energy fraction |
-| 4 | E₁ = −½α²m_ec² $\approx$ −13.6 eV | hydrogen ground state |
+| 4 | E₁ = −½α²m_ec² ≈ −13.6 eV | hydrogen ground state |
 | 5 | α_eff(r) = α/(1 + Ξ(r)) | effective α in curved spacetime |
 
 ---
@@ -1796,13 +1802,12 @@ The sensitivity to the exponent is also instructive. If the exponent were 2pi + 
 - **Referenced by:** Ch 16 (frequency phenomena)
 - **Appendix:** App. B (B.6), App. F (α comparison)
 
+---
 
+# Chapter 6: Lorentz Indeterminacy at v = 0
 
-\newpage
-
-\part{Kinematics}
-
-# Lorentz Indeterminacy at v = 0
+**Part II — Kinematics**
+**Status:** EXPANDED DRAFT
 
 
 ![Fig 6.1](figures/ch06_lorentz/fig_06_01_lorentz_indeterminacy.png)
@@ -1877,7 +1882,7 @@ All three effects vanish at v = 0: γ = 1, so there is no time dilation, no leng
 Now consider a stationary clock on the surface of a neutron star. The clock is not moving (v = 0), so the Lorentz factor gives γ = 1. Yet this clock ticks dramatically slower than a clock far from the neutron star. The gravitational time dilation for a typical neutron star
 
 Intuitively, this means: the Lorentz factor has a blind spot. It sees motion but not gravity. A stationary observer on a neutron star surface experiences extreme gravitational time dilation -- clocks tick at only 76 percent of the rate of distant clocks -- but the Lorentz factor reports gamma = 1, as if nothing unusual were happening. This is not a flaw in the Lorentz factor per se; it was designed for special relativity, where gravity is absent. The flaw is in the conceptual framework that treats kinematic and gravitational time dilation as fundamentally separate phenomena.
- (M = 1.4 M$\odot$, R = 10 km) is:
+ (M = 1.4 M☉, R = 10 km) is:
 
 D_{\text{GR}} = \sqrt{1 - r_s/R} = \sqrt{1 - 4.14/10} \approx 0.764
 
@@ -1887,9 +1892,9 @@ The same problem appears in a more dramatic form at a black hole horizon. A stat
 
 **The GPS illustration.** The Global Positioning System provides the most practical demonstration of this problem. Each GPS satellite orbits Earth at altitude ~20,200 km with velocity ~3.87 km/s. Two time dilation effects act on the satellite clocks:
 
-1. **Kinematic (special-relativistic):** The orbital velocity causes the satellite clock to run slow by Δf/f = −v²/(2c²) $\approx$ −8.3 × 10⁻¹¹, which amounts to −7.2 μs/day.
+1. **Kinematic (special-relativistic):** The orbital velocity causes the satellite clock to run slow by Δf/f = −v²/(2c²) ≈ −8.3 × 10⁻¹¹, which amounts to −7.2 μs/day.
 
-2. **Gravitational (general-relativistic):** The satellite is higher in Earth's gravitational well than ground clocks, so it runs *fast* by Δf/f = +GM/(c²R_earth) − GM/(c²R_sat) $\approx$ +5.3 × 10⁻¹⁰, which amounts to +45.9 μs/day.
+2. **Gravitational (general-relativistic):** The satellite is higher in Earth's gravitational well than ground clocks, so it runs *fast* by Δf/f = +GM/(c²R_earth) − GM/(c²R_sat) ≈ +5.3 × 10⁻¹⁰, which amounts to +45.9 μs/day.
 
 The net effect is +38.7 μs/day — the satellite clocks run fast. Without correcting for this, GPS positions would drift by ~11 km per day. The gravitational correction is **six times larger** than the kinematic correction, yet the Lorentz factor captures only the kinematic part. The gravitational part requires a completely separate calculation using the metric tensor.
 
@@ -1969,7 +1974,7 @@ The exponential form exp(Ξ · v²/c²) is not arbitrary — it is required by t
 
 This multiplicative composition is the hallmark of exponential functions. A linear or polynomial correction would not compose correctly.
 
-**Argument 3: Weak-field limit.** For Ξ $\ll$ 1 and v $\ll$ c, the exponential reduces to:
+**Argument 3: Weak-field limit.** For Ξ ≪ 1 and v ≪ c, the exponential reduces to:
 
 \gamma_{\text{seg}} \approx 1 + \Xi \cdot v^2/c^2 + \mathcal{O}(\Xi^2 v^4/c^4)
 
@@ -1981,7 +1986,7 @@ Combining all contributions, the SSZ total time dilation for a moving clock in a
 
 D_{\text{total}}(r, v) = \frac{1}{1 + \Xi(r)} \cdot \frac{1}{\gamma_{\text{SR}}(v)} \cdot \frac{1}{\gamma_{\text{seg}}(r, v)}
 
-where γ_SR = 1/√(1 − v²/c²) is the standard special-relativistic factor and γ_seg = exp(Ξv²/c²) is the segment correction. In the weak field (Ξ $\ll$ 1), the segment correction γ_seg $\approx$ 1 and the formula reduces to:
+where γ_SR = 1/√(1 − v²/c²) is the standard special-relativistic factor and γ_seg = exp(Ξv²/c²) is the segment correction. In the weak field (Ξ ≪ 1), the segment correction γ_seg ≈ 1 and the formula reduces to:
 
 D_{\text{total}} \approx \sqrt{1 - r_s/r} \cdot \sqrt{1 - v^2/c^2}
 
@@ -2030,7 +2035,7 @@ GPS satellites provide the most stringent everyday test of relativistic time dil
 **Input data:**
 - Orbital altitude: h = 20,200 km above Earth's surface
 - Orbital radius: R_sat = R_Earth + h = 6371 + 20200 = 26571 km
-- Orbital velocity: v = √(GM/R_sat) $\approx$ 3.87 km/s
+- Orbital velocity: v = √(GM/R_sat) ≈ 3.87 km/s
 - Earth's Schwarzschild radius: r_s = 2GM/c² = 8.87 mm
 
 **Segment density at satellite altitude:**
@@ -2049,7 +2054,7 @@ With Ξ_Earth = r_s/(2R_Earth) = 6.96 × 10⁻¹⁰ and Ξ_sat = 1.67 × 10⁻¹
 
 ### Neutron Star Surfaces: The Strong-Field Frontier
 
-For a neutron star with M = 1.4 M$\odot$ and R = 10 km, the gravitational environment is far more extreme:
+For a neutron star with M = 1.4 M☉ and R = 10 km, the gravitational environment is far more extreme:
 
 **Segment density at the surface:**
 \Xi_{\text{NS}} = \frac{r_s}{2R} = \frac{4.14}{20} = 0.207
@@ -2064,7 +2069,7 @@ The total time dilation for such a surface particle is:
 
 D_{\text{total}} = \frac{1}{1.207} \cdot \frac{1}{1.005} \cdot \frac{1}{1.00207} \approx 0.820
 
-Compared with the GR prediction D_GR $\approx$ 0.764 × 0.995 $\approx$ 0.760, SSZ predicts a 7.9% different total time dilation at this radius and velocity. This is a genuine, testable prediction.
+Compared with the GR prediction D_GR ≈ 0.764 × 0.995 ≈ 0.760, SSZ predicts a 7.9% different total time dilation at this radius and velocity. This is a genuine, testable prediction.
 
 ### Black Hole Horizons: The Extreme Limit
 
@@ -2088,7 +2093,7 @@ This finiteness at the horizon is a central prediction of SSZ. It means that **i
 
 **What tests do NOT prove:** The physical correctness of γ_seg in strong gravitational fields. The formula is a theoretical prediction of SSZ that requires observational confirmation in extreme environments (neutron stars, black hole accretion disks). No current experiment probes the regime where Ξ · v²/c² is measurably different from zero.
 
-**Reproduction:** `E:/clone\segmented-calculation-suite/tests/` — `test_lorentz_limit.py`, `test_gamma_seg.py`. All tests pass.
+**Reproduction:** `E:\clone\segmented-calculation-suite\tests\` — `test_lorentz_limit.py`, `test_gamma_seg.py`. All tests pass.
 
 ---
 
@@ -2189,11 +2194,12 @@ Binary pulsar geodetic precession: The geodetic precession of the pulsar spin ax
 - **Referenced by:** Ch 7 (LLI), Ch 8 (dual velocities), Ch 18 (BH metric)
 - **Appendix:** App. B (Kinematics B.3)
 
+---
 
+# Chapter 7: Local Lorentz Invariance and Frame Dragging
 
-\newpage
-
-# Local Lorentz Invariance and Frame Dragging
+**Part II — Kinematics**
+**Status:** EXPANDED DRAFT
 
 
 ![Fig 7.1](figures/ch07_frame_dragging/fig_07_01_dilation_comparison.png)
@@ -2264,7 +2270,7 @@ Any new gravitational theory that introduces additional fields faces a critical 
 
 - **Whitehead's theory of gravity (1922):** Introduced a flat background metric alongside the physical metric. This produced preferred-frame effects that disagree with lunar laser ranging by ~200 meters/year. Ruled out.
 
-- **Rosen's bimetric theory (1973):** Introduced a second metric tensor. This produced preferred-frame effects with PPN parameter α₁ $\neq$ 0. Ruled out by binary pulsar observations.
+- **Rosen's bimetric theory (1973):** Introduced a second metric tensor. This produced preferred-frame effects with PPN parameter α₁ ≠ 0. Ruled out by binary pulsar observations.
 
 - **Einstein-Aether theory:** Introduces a unit timelike vector field. This *can* be compatible with LLI if the vector field aligns with the local four-velocity, but requires careful construction. Constrained by metric perturbation speed measurements (GW170817: |c_gw/c − 1| < 10⁻¹⁵).
 
@@ -2315,7 +2321,7 @@ The Parameterized Post-Newtonian (PPN) framework, developed by Kenneth Nordtvedt
 
 The two most important PPN parameters are:
 
-**γ (gamma):** Measures how much *spatial curvature* is produced per unit mass. In GR, γ = 1. A value γ $\neq$ 1 would mean that the spatial metric near a mass differs from the GR prediction. The best measurement comes from the Cassini spacecraft's superior solar conjunction experiment (2003): γ = 1.000021 ± 0.000023. This is one part in 50,000.
+**γ (gamma):** Measures how much *spatial curvature* is produced per unit mass. In GR, γ = 1. A value γ ≠ 1 would mean that the spatial metric near a mass differs from the GR prediction. The best measurement comes from the Cassini spacecraft's superior solar conjunction experiment (2003): γ = 1.000021 ± 0.000023. This is one part in 50,000.
 
 **β (beta):** Measures the *nonlinearity* of gravity — how the gravitational field of two masses differs from the simple sum of their individual fields. In GR, β = 1. The best constraint comes from Mercury's perihelion precession and lunar laser ranging: |β − 1| < 3 × 10⁻⁴.
 
@@ -2357,7 +2363,7 @@ The SSZ expansion differs from GR at order U³ and beyond. The GR coefficient of
 
 \Delta g_{tt} \sim 4U^3 = 4\left(\frac{GM}{c^2 r}\right)^3
 
-For the Sun at Earth's distance: U = GM/(c²r) $\approx$ 10⁻⁸, so ΔG_tt ~ 4 × 10⁻²⁴. This is 19 orders of magnitude below the Cassini precision. No current or planned solar-system experiment can detect this difference.
+For the Sun at Earth's distance: U = GM/(c²r) ≈ 10⁻⁸, so ΔG_tt ~ 4 × 10⁻²⁴. This is 19 orders of magnitude below the Cassini precision. No current or planned solar-system experiment can detect this difference.
 
 ### Experimental Constraints — All Satisfied
 
@@ -2416,7 +2422,7 @@ This formula encodes three physical effects:
 **3. Saturation clamp:** The min(·, 1) ensures Ξ_rot ≤ 1 — segment density cannot exceed full saturation. For all known astrophysical objects (including rapidly spinning stellar-mass black holes with a/r_s ~ 0.5), this clamp is never reached in the exterior spacetime. It becomes relevant only for hypothetical maximally spinning black holes (a → r_s/2) at the equatorial horizon.
 
 **Worked example — Earth:**
-For Earth, J $\approx$ 5.86 × 10³³ kg·m²/s and a = J/(Mc) = 3.3 mm. At the orbital radius of Gravity Probe B (r $\approx$ 7000 km):
+For Earth, J ≈ 5.86 × 10³³ kg·m²/s and a = J/(Mc) = 3.3 mm. At the orbital radius of Gravity Probe B (r ≈ 7000 km):
 
 \frac{a}{r} = \frac{3.3 \times 10^{-3}}{7 \times 10^6} \approx 4.7 \times 10^{-10}
 
@@ -2451,7 +2457,7 @@ The most promising tests are:
 
 **What tests do NOT prove:** LLI in the strong-field regime. No current experiment probes LLI near black holes or neutron star surfaces. The formal proof of Section 7.2 applies to the mathematical structure of Ξ, not to experimental confirmation in extreme environments.
 
-**Reproduction:** `E:/clone\segmented-calculation-suite/tests/` — all tests pass.
+**Reproduction:** `E:\clone\segmented-calculation-suite\tests\` — all tests pass.
 
 ---
 
@@ -2544,12 +2550,12 @@ Chapter 8 introduces the dual velocity concept (v_esc and v_fall), which is the 
 - **Referenced by:** Ch 18 (BH metric), Ch 22 (superradiance)
 - **Appendix:** App. B (B.3 PPN derivation)
 
+---
 
+# Chapter 8: Dual Velocities — Escape, Fall, and Redshift
 
-\newpage
-
-# Dual Velocities — Escape, Fall, and Redshift
-
+**Part II — Kinematics**
+**Status:** EXPANDED DRAFT
 
 ---
 
@@ -2610,7 +2616,7 @@ where r_s = 2GM/c² is the Schwarzschild radius. This result is remarkable for s
 
 ### Escape Velocity Across Astrophysical Scales
 
-| Object | M/M$\odot$ | R (km) | r_s (km) | v_esc (km/s) | v_esc/c |
+| Object | M/M☉ | R (km) | r_s (km) | v_esc (km/s) | v_esc/c |
 |--------|-------|--------|----------|--------------|---------|
 | Earth | 3×10⁻⁶ | 6371 | 0.00887 | 11.2 | 3.7×10⁻⁵ |
 | Mars | 3.2×10⁻⁷ | 3390 | 0.000945 | 5.0 | 1.7×10⁻⁵ |
@@ -2623,7 +2629,7 @@ where r_s = 2GM/c² is the Schwarzschild radius. This result is remarkable for s
 The table illustrates the enormous range of escape velocities
 
 If one wanted to measure this: escape velocity is not directly observable -- one cannot launch a projectile and check whether it escapes. What is observable is the gravitational redshift, which is directly related to v_esc through z = v_esc-squared/(2c-squared) in the weak field. The fall velocity v_fall, being superluminal for r > r_s, is even less directly observable. Its physical manifestation is the gravitational blueshift experienced by infalling photons -- Chapter 14 develops this connection in detail.
- in nature — from 5 km/s (Mars) to c (black hole horizon), spanning five orders of magnitude. For the Sun and planets, v_esc $\ll$ c and the Newtonian formula is perfectly adequate. For neutron stars (v_esc ~ 0.6c), relativistic corrections become important. At the horizon, v_esc = c exactly.
+ in nature — from 5 km/s (Mars) to c (black hole horizon), spanning five orders of magnitude. For the Sun and planets, v_esc ≪ c and the Newtonian formula is perfectly adequate. For neutron stars (v_esc ~ 0.6c), relativistic corrections become important. At the horizon, v_esc = c exactly.
 
 ### Segment Interpretation of Escape
 
@@ -2716,7 +2722,7 @@ The gravitational redshift of a photon emitted at radius r and received at infin
 
 z = \frac{\lambda_{\text{obs}} - \lambda_{\text{emit}}}{\lambda_{\text{emit}}} = \frac{1}{D(r)} - 1 = \Xi(r)
 
-In the weak field, z $\approx$ Ξ_weak = v_esc²/(2c²). This is the classic gravitational redshift formula: a photon climbing out of a gravitational well loses energy proportional to the escape velocity squared.
+In the weak field, z ≈ Ξ_weak = v_esc²/(2c²). This is the classic gravitational redshift formula: a photon climbing out of a gravitational well loses energy proportional to the escape velocity squared.
 
 **Worked example — Pound-Rebka experiment (1960).** The experiment measured the gravitational redshift of gamma rays falling 22.5 m in Harvard's Jefferson Tower. The predicted redshift is:
 
@@ -2724,9 +2730,9 @@ z = \frac{g \cdot h}{c^2} = \frac{9.81 \times 22.5}{(3 \times 10^8)^2} = 2.45 \t
 
 The measured value was (2.57 ± 0.26) × 10⁻¹⁵, confirming the prediction to ~5%. In SSZ terms, the segment density difference between the top and bottom of the tower is ΔΞ = gh/c² = 2.45 × 10⁻¹⁵ — an extraordinarily small quantity, yet measurable with Mössbauer spectroscopy.
 
-### Important Caveat: D $\neq$ v_fall/c
+### Important Caveat: D ≠ v_fall/c
 
-A tempting but *incorrect* identification would be D(r) = v_fall/c. Let us check: at r = r_s, v_fall = c, so v_fall/c = 1. But D(r_s) = 0.555 $\neq$ 1. The identification fails.
+A tempting but *incorrect* identification would be D(r) = v_fall/c. Let us check: at r = r_s, v_fall = c, so v_fall/c = 1. But D(r_s) = 0.555 ≠ 1. The identification fails.
 
 The correct relationship is:
 
@@ -2750,11 +2756,11 @@ v_{\text{fall}} = c^2/v_{\text{esc}} = (3 \times 10^5)^2/618 = 1.46 \times 10^8 
 
 D = 1/(1 + 2.12 \times 10^{-6}) = 0.9999979
 
-The gravitational redshift from the solar surface is z = Ξ = 2.12 × 10⁻⁶, confirmed by spectroscopic measurements of solar absorption lines. The fall velocity v_fall $\approx$ 487c is enormous but unphysical — it describes the coordinate response of the segment lattice, not the speed of any material object.
+The gravitational redshift from the solar surface is z = Ξ = 2.12 × 10⁻⁶, confirmed by spectroscopic measurements of solar absorption lines. The fall velocity v_fall ≈ 487c is enormous but unphysical — it describes the coordinate response of the segment lattice, not the speed of any material object.
 
 ### Neutron Star: Strong-Field Frontier
 
-For a canonical neutron star (M = 1.4 M$\odot$, R = 10 km, r_s = 4.14 km):
+For a canonical neutron star (M = 1.4 M☉, R = 10 km, r_s = 4.14 km):
 
 v_{\text{esc}} = c\sqrt{4.14/10} = 0.643c = 193{,}000 \text{ km/s}
 
@@ -2764,7 +2770,7 @@ v_{\text{fall}} = c^2/v_{\text{esc}} = c/0.643 = 1.556c
 
 D = 1/(1.207) = 0.829
 
-The redshift from the neutron star surface is z = Ξ = 0.207, meaning spectral lines are shifted by 20.7%. This is observable with X-ray telescopes (NICER, XMM-Newton). The fall velocity v_fall $\approx$ 1.56c indicates that the coordinate description of infall is superluminal — the segment lattice responds faster than light in coordinate terms, though locally all velocities remain subluminal.
+The redshift from the neutron star surface is z = Ξ = 0.207, meaning spectral lines are shifted by 20.7%. This is observable with X-ray telescopes (NICER, XMM-Newton). The fall velocity v_fall ≈ 1.56c indicates that the coordinate description of infall is superluminal — the segment lattice responds faster than light in coordinate terms, though locally all velocities remain subluminal.
 
 **Concrete spectral example: Lyman-α.** The hydrogen Lyman-α line at λ = 121.567 nm, emitted from a neutron star surface with z = 0.207, would be observed at λ_obs = λ(1 + z) = 121.567 × 1.207 = 146.8 nm — shifted from the far-ultraviolet into the near-ultraviolet. For a more extreme compact object with z = 0.802 (at the SSZ natural boundary), the same line shifts to λ_obs = 219.1 nm, well into the UV-A band. This systematic redshifting of known spectral lines provides a direct observational test of the dual velocity framework: measuring the redshift of identified lines from a neutron star surface determines Ξ, which in turn determines both v_esc and v_fall through the duality relation.
 
@@ -2794,11 +2800,11 @@ The decomposition v_total = v_fall + v_eigen is unique to SSZ and provides a nat
 
 **Test Files:** `test_vfall_duality`, `test_dual_velocity`, `test_redshift_velocity`
 
-**What tests prove:** v_esc · v_fall = c² holds for all 500+ test radii spanning r/r_s from 0.01 to 10⁶; weak-field redshift z = Ξ = v_esc²/(2c²) matches GR to machine precision; the self-dual point v_esc = v_fall = c occurs at r = r_s exactly; D(r) $\neq$ v_fall/c for all r < ∞, confirming the independence of the two quantities.
+**What tests prove:** v_esc · v_fall = c² holds for all 500+ test radii spanning r/r_s from 0.01 to 10⁶; weak-field redshift z = Ξ = v_esc²/(2c²) matches GR to machine precision; the self-dual point v_esc = v_fall = c occurs at r = r_s exactly; D(r) ≠ v_fall/c for all r < ∞, confirming the independence of the two quantities.
 
 **What tests do NOT prove:** The physical separation of v_esc and v_fall into distinct observable quantities. In GR, these are the same. The SSZ prediction of distinct escape and fall velocities requires observational confirmation — for example, through the velocity decomposition of infalling matter (Chapter 23).
 
-**Reproduction:** `E:/clone\segmented-calculation-suite/tests/` — all tests pass.
+**Reproduction:** `E:\clone\segmented-calculation-suite\tests\` — all tests pass.
 
 ---
 
@@ -2810,7 +2816,7 @@ The decomposition v_total = v_fall + v_eigen is unique to SSZ and provides a nat
 | 2 | v_fall = c²/v_esc = c√(r/r_s) | fall velocity (SSZ) |
 | 3 | v_esc · v_fall = c² | kinematic closure |
 | 4 | Ξ_weak = v_esc²/(2c²) | velocity-density link |
-| 5 | D = 1/(1+Ξ) $\neq$ v_fall/c | canonical time dilation |
+| 5 | D = 1/(1+Ξ) ≠ v_fall/c | canonical time dilation |
 | 6 | z = Ξ(r) | gravitational redshift |
 
 ---
@@ -2886,11 +2892,12 @@ Chapter 9 proves the closure relation v_esc times v_fall = c^2 formally and expl
 - **Referenced by:** Ch 9 (kinematic closure), Ch 14 (redshift), Ch 18 (BH metric), Ch 21 (dark star), Ch 23 (infalling matter)
 - **Appendix:** App. B (B.3 Dual Velocities)
 
+---
 
+# Chapter 9: Kinematic Closure — v_esc · v_fall = c²
 
-\newpage
-
-# Kinematic Closure — v_esc · v_fall = c²
+**Part II — Kinematics**
+**Status:** EXPANDED DRAFT
 
 
 ![Fig 9.1](figures/ch09_closure/fig_09_01_kinematic_closure.png)
@@ -2950,7 +2957,7 @@ v_{\text{esc}} = 11.2 \text{ km/s}
 v_{\text{fall}} = c^2 / 11.2 = 8.03 \times 10^9 \text{ km/s}
 v_{\text{esc}} \cdot v_{\text{fall}} = 11.2 \times 8.03 \times 10^9 = 9.0 \times 10^{10} = c^2 \;\checkmark
 
-**Neutron star surface (M = 1.4 M$\odot$, R = 10 km):**
+**Neutron star surface (M = 1.4 M☉, R = 10 km):**
 v_{\text{esc}} = 0.643c = 1.93 \times 10^5 \text{ km/s}
 v_{\text{fall}} = c/0.643 = 1.556c = 4.67 \times 10^5 \text{ km/s}
 v_{\text{esc}} \cdot v_{\text{fall}} = 1.93 \times 10^5 \times 4.67 \times 10^5 = 9.0 \times 10^{10} = c^2 \;\checkmark
@@ -3097,9 +3104,9 @@ The key difference: GR produces D = 0 at the horizon, which makes coordinate qua
 
 **What tests prove:** v_esc · v_fall = c² numerically for 500+ test radii spanning r/r_s from 0.01 to 10⁶; closure holds to machine precision (relative error < 10⁻¹⁵); regime independence verified across all three regimes (weak, blend, strong); self-dual point v_esc = v_fall = c confirmed at r = r_s exactly.
 
-**What tests do NOT prove:** Whether the physical separation into v_esc $\neq$ v_fall is observable. This is an SSZ prediction without a current GR counterpart. The tests confirm the mathematical consistency of the dual velocity framework, not its physical reality.
+**What tests do NOT prove:** Whether the physical separation into v_esc ≠ v_fall is observable. This is an SSZ prediction without a current GR counterpart. The tests confirm the mathematical consistency of the dual velocity framework, not its physical reality.
 
-**Reproduction:** `E:/clone\segmented-calculation-suite/tests/` — all tests pass.
+**Reproduction:** `E:\clone\segmented-calculation-suite\tests\` — all tests pass.
 
 ---
 
@@ -3186,14 +3193,12 @@ Part III applies the kinematic framework to electromagnetic phenomena. The scali
 - **Referenced by:** Ch 18 (BH metric), Ch 19 (singularity resolution), Ch 21 (dark star)
 - **Appendix:** App. B (B.3 Closure Proof)
 
+---
 
+# Chapter 10: Radial Scaling Gauge for Maxwell Fields
 
-\newpage
-
-\part{Electromagnetism and Light Propagation}
-
-# Radial Scaling Gauge for Maxwell Fields
-
+**Part III — Electromagnetism and Light Propagation**
+**Status:** EXPANDED DRAFT
 
 ---
 
@@ -3308,7 +3313,7 @@ The duality s = 1/D is central: **what slows clocks also slows light** (in coord
 | Neutron star | ~3 | 0.207 | 1.207 | 0.829 |
 | BH horizon | 1.0 | 0.802 | 1.802 | 0.555 |
 
-The table illustrates the enormous range of the scaling factor: from s $\approx$ 1 + 10⁻¹⁰ (GPS) to s = 1.802 (horizon), spanning ten orders of magnitude. For solar-system applications, s is indistinguishable from 1 plus a tiny correction. Near black holes, the correction is order unity.
+The table illustrates the enormous range of the scaling factor: from s ≈ 1 + 10⁻¹⁰ (GPS) to s = 1.802 (horizon), spanning ten orders of magnitude. For solar-system applications, s is indistinguishable from 1 plus a tiny correction. Near black holes, the correction is order unity.
 
 ### The Gravitational Refractive Index Interpretation
 
@@ -3330,7 +3335,7 @@ The Shapiro delay is small but measurable: for a signal passing the Sun at close
 
 \Delta t_{\text{Shapiro}} \approx \frac{2(1+\gamma) r_s}{c} \ln\left(\frac{4 r_1 r_2}{b^2}\right)
 
-where r₁ and r₂ are the distances of emitter and receiver from the Sun. For Earth-Mercury radar at superior conjunction (b $\approx$ R_Sun), Δt $\approx$ 200 μs — about 0.2 milliseconds of extra travel time over a ~20-minute round trip.
+where r₁ and r₂ are the distances of emitter and receiver from the Sun. For Earth-Mercury radar at superior conjunction (b ≈ R_Sun), Δt ≈ 200 μs — about 0.2 milliseconds of extra travel time over a ~20-minute round trip.
 
 ### SSZ Derivation
 
@@ -3355,8 +3360,8 @@ with γ = 1 (Chapter 7). This factor-of-2 is not a flaw of SSZ — it is the sta
 The most precise Shapiro delay measurement was performed during the Cassini spacecraft's superior solar conjunction on June 21, 2002. The setup:
 
 - **Signal path:** Earth → Cassini (near Saturn), passing the Sun at b = 1.6 R_Sun.
-- **Emitter distance:** r₁ $\approx$ 1 AU = 1.496 × 10⁸ km.
-- **Receiver distance:** r₂ $\approx$ 8.43 AU (Cassini orbit).
+- **Emitter distance:** r₁ ≈ 1 AU = 1.496 × 10⁸ km.
+- **Receiver distance:** r₂ ≈ 8.43 AU (Cassini orbit).
 - **Sun's Schwarzschild radius:** r_s = 2.95 km.
 
 The Ξ-integral for a near-radial path at impact parameter b is:
@@ -3417,7 +3422,7 @@ This matches the GR result exactly.
 | Cassini conjunction | 2003 | Doppler tracking | ±0.0023% |
 | Gaia astrometry | 2022 | Stellar positions | ±0.01% |
 
-SSZ passes all these tests with γ = 1 exactly. The SSZ-GR difference in light deflection is of order (r_s/b)³ $\approx$ 10⁻¹⁸ for solar deflection — utterly unmeasurable.
+SSZ passes all these tests with γ = 1 exactly. The SSZ-GR difference in light deflection is of order (r_s/b)³ ≈ 10⁻¹⁸ for solar deflection — utterly unmeasurable.
 
 ## The Factor-of-2 Decomposition
 
@@ -3458,7 +3463,7 @@ Applying this classification incorrectly — specifically, using Ξ alone for Sh
 
 **What tests do NOT prove:** The scaling gauge in the strong-field regime (r < 3r_s). No electromagnetic tests currently probe this domain directly, though EHT observations of M87* and Sgr A* shadows provide indirect constraints.
 
-**Reproduction:** `E:/clone\frequency-curvature-validation\` — 82/82 PASS; `E:/clone\maxwell\` — 45/45 PASS.
+**Reproduction:** `E:\clone\frequency-curvature-validation\` — 82/82 PASS; `E:\clone\maxwell\` — 45/45 PASS.
 
 ---
 
@@ -3553,11 +3558,12 @@ Chapter 11 takes the next step: interpreting the electromagnetic wave itself wit
 - **Referenced by:** Ch 11 (rotating space), Ch 12 (group velocity), Ch 13 (travel time), Ch 14 (redshift), Ch 16 (frequency)
 - **Appendix:** App. B (B.4 Radial Scaling, B.5 PPN)
 
+---
 
+# Chapter 11: Maxwell Waves as Rotating Space
 
-\newpage
-
-# Maxwell Waves as Rotating Space
+**Part III — Electromagnetism and Light Propagation**
+**Status:** EXPANDED DRAFT
 
 
 ![Fig 11.1](figures/ch11_maxwell_waves/fig_11_01.png)
@@ -3590,7 +3596,7 @@ This ray-tracing picture connects the wave description of this chapter to the se
 
 The geometric optics limit breaks down when the wavelength is comparable to the curvature scale. For electromagnetic waves near a stellar-mass black hole (r_s approximately 10 km), this breakdown occurs at wavelengths of order 10 km, corresponding to frequencies of order 30 kHz. For all astronomical electromagnetic observations (radio through gamma ray), the geometric optics limit is an excellent approximation, and the ray-tracing description is sufficient.
 
-The wave description becomes essential for metric perturbation observations, where the wavelength can be comparable to or larger than the curvature scale. The observational campaigns detector observes metric perturbations with wavelengths of order 1000 km, which is much larger than the Schwarzschild radius of the merging black holes (r_s approximately 20 km for a 10 solar mass black hole). In this regime, the full wave equation must be solved, and the segment-counting approximation is no longer valid.
+The wave description becomes essential for metric perturbation observations, where the wavelength can be comparable to or larger than the curvature scale. The GW detectors detector observes metric perturbations with wavelengths of order 1000 km, which is much larger than the Schwarzschild radius of the merging black holes (r_s approximately 20 km for a 10 solar mass black hole). In this regime, the full wave equation must be solved, and the segment-counting approximation is no longer valid.
 
 ### Energy Transport in the Segment Lattice
 
@@ -3677,7 +3683,7 @@ Planck's relation connects the photon energy to the rotation frequency:
 
 E = h\nu = \hbar\omega
 
-In SSZ, this has a direct geometric meaning: **higher energy means faster segment rotation.** A gamma-ray photon (ν ~ 10²⁰ Hz) rotates the segment boundaries 10¹⁵ times faster than a radio photon (ν ~ 10⁵ Hz). The energy stored in a rotation is proportional to the square of the angular velocity (as in any rotating system), which gives the standard relation E $\propto$ ν.
+In SSZ, this has a direct geometric meaning: **higher energy means faster segment rotation.** A gamma-ray photon (ν ~ 10²⁰ Hz) rotates the segment boundaries 10¹⁵ times faster than a radio photon (ν ~ 10⁵ Hz). The energy stored in a rotation is proportional to the square of the angular velocity (as in any rotating system), which gives the standard relation E ∝ ν.
 
 In a gravitational field, the rotation rate decreases as the photon climbs out — this is gravitational redshift (Chapter 14). The segments in regions of higher Ξ resist rotation more strongly, requiring more energy per cycle. A photon emitted at radius r with frequency ν_emit is observed at infinity with frequency ν_obs = ν_emit · D(r) — the rotation has slowed by the time dilation factor.
 
@@ -3740,7 +3746,7 @@ The photon's intrinsic spin (helicity +/-1) maps naturally onto the rotation dir
 
 **What tests do NOT prove:** That electromagnetic waves *are* segment rotations. This is an interpretive framework, not an independently testable prediction distinct from Maxwell's equations. The SSZ interpretation makes the same numerical predictions as standard electrodynamics in all regimes.
 
-**Reproduction:** `E:/clone\frequency-curvature-validation\`
+**Reproduction:** `E:\clone\frequency-curvature-validation\`
 
 ## Quantitative Connection to Standard Electrodynamics
 
@@ -3807,14 +3813,12 @@ Chapter 12 derives the group velocity of light from segment counting, providing 
 - **Referenced by:** Ch 12 (group velocity), Ch 14 (redshift)
 - **Appendix:** App. B (B.4 Maxwell)
 
+---
 
+# Chapter 12: Segment-Based Group Velocity
 
-\newpage
-
-# Segment-Based Group Velocity
-
-
- v2
+**Part III — Electromagnetism in Segmented Spacetime**
+**Status:** EXPANDED DRAFT v2
 
 
 ![Fig 12.1](figures/ch12_group_velocity/fig_12_01.png)
@@ -3908,8 +3912,8 @@ v_{\text{group}} = \frac{dr}{dt} = c \cdot D(r) = \frac{c}{1 + \Xi(r)}
 The group velocity formula has a transparent interpretation:
 
 - **In flat spacetime (Ξ = 0):** v_group = c. Standard.
-- **Near the Sun's surface (Ξ $\approx$ 2 × 10⁻⁶):** v_group $\approx$ c(1 − 2 × 10⁻⁶). Light is slower by ~0.6 m/s.
-- **At a neutron star surface (Ξ $\approx$ 0.15):** v_group $\approx$ 0.87c. Light is 13% slower.
+- **Near the Sun's surface (Ξ ≈ 2 × 10⁻⁶):** v_group ≈ c(1 − 2 × 10⁻⁶). Light is slower by ~0.6 m/s.
+- **At a neutron star surface (Ξ ≈ 0.15):** v_group ≈ 0.87c. Light is 13% slower.
 - **At the SSZ natural boundary (Ξ = 0.802):** v_group = 0.555c. Light travels at 55.5% of its vacuum speed.
 
 The segment counting mechanism provides the physical explanation that GR lacks: light slows because the segment lattice is denser, and each segment requires a fixed proper time to traverse.
@@ -3960,7 +3964,7 @@ This recovers the Shapiro delay formula (Chapter 10) with the PPN correction fac
 
 ### Example 2: Light Travel Time to a Neutron Star Surface
 
-For a photon traveling radially from infinity to a neutron star surface (R = 12 km, M = 1.4 M_$\odot$, r_s = 4.1 km):
+For a photon traveling radially from infinity to a neutron star surface (R = 12 km, M = 1.4 M_☉, r_s = 4.1 km):
 
 t_{\text{total}} = \int_R^\infty \frac{dr}{c \cdot D(r)} = \frac{1}{c}\int_R^\infty (1 + \Xi(r)) \, dr = t_{\text{geometric}} + t_{\text{segment}}
 
@@ -3996,7 +4000,7 @@ All three are consistent with both SSZ and GR — the discriminating predictions
 
 **What tests do NOT prove:** The physical reality of the segment counting mechanism — this is the interpretation, not the prediction. GR makes the same numerical prediction via the null condition; SSZ provides the mechanism.
 
-**Reproduction:** `E:/clone\ssz-metric-pure\`
+**Reproduction:** `E:\clone\ssz-metric-pure\`
 
 ## Experimental Tests of Frequency Independence
 
@@ -4112,14 +4116,12 @@ Chapter 13 develops this result into a full additive decomposition of the light 
 - **Referenced by:** Ch 13 (travel time), Ch 16 (frequency framework)
 - **Appendix:** App. B (B.4)
 
+---
 
+# Chapter 13: Additive Decomposition of Light Travel Time
 
-\newpage
-
-# Additive Decomposition of Light Travel Time
-
-
- v2
+**Part III — Electromagnetism in Segmented Spacetime**
+**Status:** EXPANDED DRAFT v2
 
 
 ![Fig 13.1](figures/ch13_shapiro/fig_13_01.png)
@@ -4272,7 +4274,7 @@ The superposition principle has practical consequences for precision astrometry.
 
 The Cassini spacecraft measurement (Bertotti et al. 2003) used radio signals between Earth and Cassini passing near the Sun.
 
-Parameters: r₁ = 1 AU = 1.496 × 10¹¹ m, r₂ = 8.43 AU, b = 1.6 R_$\odot$ = 1.11 × 10⁹ m, r_s = 2953 m.
+Parameters: r₁ = 1 AU = 1.496 × 10¹¹ m, r₂ = 8.43 AU, b = 1.6 R_☉ = 1.11 × 10⁹ m, r_s = 2953 m.
 
 Segment delay:
 t_{\text{seg}} = \frac{r_s}{2c} \ln\left(\frac{4r_1 r_2}{b^2}\right) = \frac{2953}{2 \times 3 \times 10^8} \ln\left(\frac{4 \times 1.496 \times 10^{11} \times 1.26 \times 10^{12}}{(1.11 \times 10^9)^2}\right)
@@ -4297,7 +4299,7 @@ This is negligible compared to the Sun's contribution — but the superposition 
 
 **What tests do NOT prove:** Superposition in the strong field — the linear approximation Ξ_total = ΣΞ_i has not been validated for overlapping strong fields.
 
-**Reproduction:** `E:/clone\ssz-metric-pure\`
+**Reproduction:** `E:\clone\ssz-metric-pure\`
 
 ## Mathematical Properties of the Decomposition
 
@@ -4424,12 +4426,12 @@ Chapter 14 applies this framework to the gravitational redshift, the most intuit
 - **Referenced by:** Ch 14 (redshift), Ch 16 (frequency)
 - **Appendix:** App. B (B.4 Shapiro)
 
+---
 
+# Chapter 14: Gravitational Redshift Interpretation
 
-\newpage
-
-# Gravitational Redshift Interpretation
-
+**Part III — Electromagnetism and Light Propagation**
+**Status:** EXPANDED DRAFT
 
 ---
 
@@ -4493,7 +4495,7 @@ For an observer at infinity (Ξ_obs = 0):
 
 This is the key SSZ result: **the gravitational redshift equals the segment density at the emission point.** This formula is strikingly simple — no square roots, no ratios of metric components, just z = Ξ. It has no direct GR counterpart, where the redshift involves √(1 − r_s/r), not a linear function of the gravitational potential.
 
-At the horizon (r = r_s): z = Ξ(r_s) = 1 − e^{−φ} $\approx$ 0.802. The photon loses about 44.5% of its energy — a large but **finite** redshift. This is the most dramatic difference between SSZ and GR: GR predicts infinite redshift at the horizon; SSZ predicts z = 0.802.
+At the horizon (r = r_s): z = Ξ(r_s) = 1 − e^{−φ} ≈ 0.802. The photon loses about 44.5% of its energy — a large but **finite** redshift. This is the most dramatic difference between SSZ and GR: GR predicts infinite redshift at the horizon; SSZ predicts z = 0.802.
 
 ### The General Two-Point Formula
 
@@ -4537,18 +4539,18 @@ The photon did not change — the clocks are different. An observer deeper in th
 
 ## Numerical Comparison: SSZ vs. GR
 
-SSZ and GR agree in the weak field (where Ξ $\ll$ 1 and the formulas linearize identically) but diverge in the strong field:
+SSZ and GR agree in the weak field (where Ξ ≪ 1 and the formulas linearize identically) but diverge in the strong field:
 
 | Object | r/r_s | z_GR | z_SSZ | Δz/z_GR |
 |--------|-------|------|-------|---------|
 | Earth surface | 1.4×10⁹ | 7.0×10⁻¹⁰ | 7.0×10⁻¹⁰ | < 10⁻⁹ |
 | Solar surface | 2.4×10⁵ | 2.1×10⁻⁶ | 2.1×10⁻⁶ | < 10⁻⁶ |
-| White dwarf (0.6 M$\odot$) | ~2000 | 2.5×10⁻⁴ | 2.5×10⁻⁴ | < 10⁻⁵ |
-| Neutron star (1.4 M$\odot$, 10 km) | ~3 | 0.306 | 0.207 | −32% |
-| Neutron star (2.0 M$\odot$, 10 km) | ~1.7 | 0.746 | 0.556 | −25% |
+| White dwarf (0.6 M☉) | ~2000 | 2.5×10⁻⁴ | 2.5×10⁻⁴ | < 10⁻⁵ |
+| Neutron star (1.4 M☉, 10 km) | ~3 | 0.306 | 0.207 | −32% |
+| Neutron star (2.0 M☉, 10 km) | ~1.7 | 0.746 | 0.556 | −25% |
 | At horizon (r = r_s) | 1.0 | ∞ | 0.802 | SSZ finite |
 
-The weak-field agreement is exact: for r $\gg$ r_s, both formulas give z $\approx$ r_s/(2r). The strong-field divergence is dramatic: at the horizon, GR predicts infinite redshift while SSZ predicts z = 0.802.
+The weak-field agreement is exact: for r ≫ r_s, both formulas give z ≈ r_s/(2r). The strong-field divergence is dramatic: at the horizon, GR predicts infinite redshift while SSZ predicts z = 0.802.
 
 For neutron stars (r/r_s ~ 2–4), the discrepancy is 25–32% — well within the reach of current and near-future X-ray telescopes. NICER on the ISS measures thermal emission from neutron star surfaces; STROBE-X and eXTP (planned for the late 2020s) aim for precision that can distinguish SSZ from GR predictions.
 
@@ -4580,7 +4582,7 @@ SSZ reproduces all these results exactly in the weak field. The SSZ prediction z
 
 **What tests do NOT prove:** The strong-field prediction z(r_s) = 0.802. No observation of horizon-emitted photons exists. The neutron star discrepancy (25–32%) is testable but not yet tested at the required precision.
 
-**Reproduction:** `E:/clone\frequency-curvature-validation\` — all tests pass.
+**Reproduction:** `E:\clone\frequency-curvature-validation\` — all tests pass.
 
 ## Redshift as a Diagnostic Tool
 
@@ -4694,11 +4696,12 @@ Chapter 15 addresses a consistency question: does the photon change its intrinsi
 - **Referenced by:** Ch 15 (no-go theorem), Ch 16 (frequency framework), Ch 30 (predictions)
 - **Appendix:** App. B (B.1 Redshift)
 
+---
 
+# Chapter 15: Constraints on In-Flight Photon Retuning
 
-\newpage
-
-# Constraints on In-Flight Photon Retuning
+**Part III — Electromagnetism and Light Propagation**
+**Status:** EXPANDED DRAFT
 
 
 ![Fig 15.1](figures/ch15_retuning/fig_15_01.png)
@@ -4837,7 +4840,7 @@ The nonzero result rules out retuning at **9.9σ** significance. The photon arri
 
 ### GPS System (Operational since 1978)
 
-Each GPS satellite carries an atomic clock at altitude h $\approx$ 20,200 km, where D(r) differs from Earth's surface by ΔΞ = 4.45 × 10⁻¹⁰. The resulting clock drift:
+Each GPS satellite carries an atomic clock at altitude h ≈ 20,200 km, where D(r) differs from Earth's surface by ΔΞ = 4.45 × 10⁻¹⁰. The resulting clock drift:
 
 - **Gravitational contribution:** +45.9 μs/day (clocks tick faster at altitude)
 - **Kinematic contribution:** −7.1 μs/day (time dilation from orbital velocity)
@@ -4853,7 +4856,7 @@ A hydrogen maser clock was launched on a suborbital trajectory to 10,000 km alti
 - **Measured:** z = (4.36 ± 0.03) × 10⁻¹⁰
 - **Precision:** 70 parts per million
 
-The agreement confirms z $\neq$ 0 at **>10⁴ σ** significance. This is the most precise direct test of gravitational redshift and the strongest individual constraint against in-flight retuning.
+The agreement confirms z ≠ 0 at **>10⁴ σ** significance. This is the most precise direct test of gravitational redshift and the strongest individual constraint against in-flight retuning.
 
 ## Implications
 
@@ -5002,13 +5005,12 @@ Part IV reformulates these electromagnetic results in a frequency-based language
 - **Referenced by:** Ch 16 (frequency framework), Ch 30 (predictions)
 - **Appendix:** App. C (No-Go Theorem formal proof)
 
+---
 
+# Chapter 16: Frequency-Based Framework for Gravity, Light, and Black Holes
 
-\newpage
-
-\part{Frequency Framework and Curvature Detection}
-
-# Frequency-Based Framework for Gravity, Light, and Black Holes
+**Part IV — Frequency Framework and Curvature Detection**
+**Status:** EXPANDED DRAFT
 
 
 ![Fig 16.1](figures/ch16_frequency/fig_16_01_frequency_framework.png)
@@ -5159,7 +5161,7 @@ g = c^2 \times 1.09 \times 10^{-16} = 9.81 \text{ m/s}^2 \;\checkmark
 
 Light at radius r has coordinate velocity v_coord = c·D(r). In the frequency picture, this is simply: the photon's apparent frequency (as measured by a distant observer) is reduced by D(r), and its apparent wavelength is unchanged, so the apparent velocity is c·D(r).
 
-The photon sphere — the radius where circular photon orbits exist — occurs where the effective potential for null geodesics has a maximum. In GR (Schwarzschild), this is at r = 3r_s/2 = 1.5r_s. In SSZ, the effective potential is modified by D(r) $\neq$ √(1 − r_s/r), shifting the photon sphere slightly inward to r_ph $\approx$ 1.48r_s — a sub-percent correction currently below observational resolution.
+The photon sphere — the radius where circular photon orbits exist — occurs where the effective potential for null geodesics has a maximum. In GR (Schwarzschild), this is at r = 3r_s/2 = 1.5r_s. In SSZ, the effective potential is modified by D(r) ≠ √(1 − r_s/r), shifting the photon sphere slightly inward to r_ph ≈ 1.48r_s — a sub-percent correction currently below observational resolution.
 
 ### Black Hole Boundary
 
@@ -5179,7 +5181,7 @@ The horizon redshift z = Ξ(r_s) = 0.802 means that photons emitted from the hor
 
 **What tests do NOT prove:** N₀ = 4 from first principles (currently an empirical input); the strong-field frequency predictions near black holes; the UV cutoff (l_seg is unknown).
 
-**Reproduction:** `E:/clone\frequency-curvature-validation\`
+**Reproduction:** `E:\clone\frequency-curvature-validation\`
 
 ## The N_0 = 4 Quantization
 
@@ -5274,7 +5276,7 @@ This simplicity is not accidental -- it reflects the fundamental structure of th
 
 The frequency-based framework is particularly powerful for black hole spectroscopy -- the study of quasi-normal mode frequencies of perturbed black holes. When a black hole is perturbed (e.g., by a binary merger), it oscillates at characteristic frequencies (quasi-normal modes, QNMs) that depend on the black hole mass and spin. These oscillations are damped by metric perturbation emission, producing a ringdown signal that encodes the QNM frequencies.
 
-In GR, the fundamental QNM frequency of a Schwarzschild black hole is f_QNM approximately equal to 1.2 times 10^4 / (M/M_sun) Hz. For a 30 solar mass black hole (typical of observational campaigns sources), f_QNM approximately equal to 400 Hz, well within the observational campaigns frequency band.
+In GR, the fundamental QNM frequency of a Schwarzschild black hole is f_QNM approximately equal to 1.2 times 10^4 / (M/M_sun) Hz. For a 30 solar mass black hole (typical of GW detectors sources), f_QNM approximately equal to 400 Hz, well within the GW detectors frequency band.
 
 In SSZ, the QNM frequencies are modified by the finite D_min at the horizon. The SSZ prediction is f_QNM_SSZ = f_QNM_GR times (1 + epsilon), where epsilon depends on D_min and the mode number. For the fundamental mode, epsilon is of order D_min^2 approximately 0.31, giving a roughly 3 percent shift in the QNM frequency. This shift is currently below the measurement precision of observational (approximately 10 percent for individual events) but could become detectable with the accumulation of many events or with next-generation detectors (Einstein Telescope, Cosmic Explorer).
 
@@ -5304,11 +5306,12 @@ The simplicity of this formula illustrates the power of the frequency-based fram
 - **Referenced by:** Ch 17 (curvature detection), Ch 18 (BH metric)
 - **Appendix:** App. B (B.1 Frequency, B.2 Quantization)
 
+---
 
+# Chapter 17: Frequency-Based Curvature Detection
 
-\newpage
-
-# Frequency-Based Curvature Detection
+**Part IV — Frequency Framework and Curvature Detection**
+**Status:** EXPANDED DRAFT
 
 
 ![Fig 17.1](figures/ch17_curvature/fig_17_01_curvature_detection.png)
@@ -5355,7 +5358,7 @@ In flat spacetime, frequency ratios between clocks are **path-independent**: com
 
 In curved spacetime, transitivity breaks down. The frequency ratio depends on the path taken — specifically, on the enclosed curvature. This is the gravitational analogue of **holonomy** in gauge theory: transporting a vector around a closed loop in a curved space produces a rotation proportional to the enclosed curvature.
 
-SSZ makes this concrete. The segment density Ξ(r) defines a scalar field whose gradient $\nabla$Ξ determines the local gravitational acceleration (Chapter 16). Curvature is encoded in the **second derivatives** of Ξ — specifically, in the non-commutativity of covariant derivatives of $\nabla$Ξ along different paths.
+SSZ makes this concrete. The segment density Ξ(r) defines a scalar field whose gradient ∇Ξ determines the local gravitational acceleration (Chapter 16). Curvature is encoded in the **second derivatives** of Ξ — specifically, in the non-commutativity of covariant derivatives of ∇Ξ along different paths.
 
 ### Two-Clock Comparison
 
@@ -5367,7 +5370,7 @@ Curvature detection requires at least **three clocks** at positions r_A, r_B, r_
 
 R_{ABC} = \frac{D(r_A)}{D(r_B)} \cdot \frac{D(r_B)}{D(r_C)} \cdot \frac{D(r_C)}{D(r_A)} - 1
 
-In flat spacetime, R_ABC = 0 identically (the telescoping product cancels). In curved spacetime, R_ABC $\neq$ 0 because the "shortcut" comparisons through intermediate clocks do not account for the curvature of the connection.
+In flat spacetime, R_ABC = 0 identically (the telescoping product cancels). In curved spacetime, R_ABC ≠ 0 because the "shortcut" comparisons through intermediate clocks do not account for the curvature of the connection.
 
 Wait — for a scalar field Ξ, the telescoping product always cancels regardless of curvature. This is correct: R_ABC as defined above is always zero. The actual curvature detection requires comparing **transported** clock rates, not static ones.
 
@@ -5381,7 +5384,7 @@ The I_ABC invariant is defined as the line integral of the Ξ-gradient around a 
 
 I_{ABC} = \oint_{A \to B \to C \to A} \nabla\Xi \cdot d\mathbf{l}
 
-For a scalar field in flat space, Stokes' theorem gives I_ABC = 0 (the curl of a gradient vanishes). But in curved spacetime, the connection is non-trivial: the covariant derivative of $\nabla$Ξ includes Christoffel symbols that introduce path dependence. The result:
+For a scalar field in flat space, Stokes' theorem gives I_ABC = 0 (the curl of a gradient vanishes). But in curved spacetime, the connection is non-trivial: the covariant derivative of ∇Ξ includes Christoffel symbols that introduce path dependence. The result:
 
 I_{ABC} = \int\int_{\Delta ABC} R_{trtr} \, dA
 
@@ -5409,11 +5412,11 @@ This is the Newtonian tidal tensor — the quantity that produces tidal forces (
 
 ### Worked Example: Earth's Surface
 
-Three optical clocks form a vertical triangle with base 10 km and height 100 m on Earth's surface. The centroid is at r $\approx$ R_Earth. The tidal component:
+Three optical clocks form a vertical triangle with base 10 km and height 100 m on Earth's surface. The centroid is at r ≈ R_Earth. The tidal component:
 
 R_{trtr} = -\frac{2GM}{R^3} = -\frac{2 \times 6.674 \times 10^{-11} \times 5.97 \times 10^{24}}{(6.371 \times 10^6)^3} = -3.08 \times 10^{-6} \text{ s}^{-2}
 
-The triangle area is A $\approx$ ½ × 10⁴ × 100 = 5 × 10⁵ m². The I_ABC invariant:
+The triangle area is A ≈ ½ × 10⁴ × 100 = 5 × 10⁵ m². The I_ABC invariant:
 
 I_{ABC} \approx 3.08 \times 10^{-6} \times 5 \times 10^5 / c^2 \approx 1.7 \times 10^{-17}
 
@@ -5485,15 +5488,15 @@ MAGIS-100 and AION use atom interferometry over 100m baselines. SSZ predictions 
 
 **What tests do NOT prove:** Experimental detection — no three-clock curvature measurement has been performed yet. The I_ABC invariant is a **prediction** of the frequency framework, not yet an observation.
 
-**Reproduction:** `E:/clone\frequency-curvature-validation\`
+**Reproduction:** `E:\clone\frequency-curvature-validation\`
 
 ## Connection to Metric Perturbation Detection
 
 ### Curvature as Wave Detection
 
-metric perturbation detectors are, fundamentally, curvature detectors: they measure the time-varying Riemann tensor through its effect on the separation of test masses. observational campaigns measures R_txtx (the tidal component along the arm) via laser interferometry. The I_ABC invariant measures the same tensor component via clock comparisons.
+metric perturbation detectors are, fundamentally, curvature detectors: they measure the time-varying Riemann tensor through its effect on the separation of test masses. GW detectors measures R_txtx (the tidal component along the arm) via laser interferometry. The I_ABC invariant measures the same tensor component via clock comparisons.
 
-The key difference: observational campaigns measures dynamic curvature (from passing metric perturbations) with sensitivity approximately 10^-23 /sqrt(Hz). The I_ABC method measures static curvature (from nearby masses) with sensitivity approximately 10^-17 after 10^4 seconds averaging. The two methods are complementary: observational campaigns probes high-frequency curvature fluctuations; I_ABC probes the DC curvature background.
+The key difference: GW detectors measures dynamic curvature (from passing metric perturbations) with sensitivity approximately 10^-23 /sqrt(Hz). The I_ABC method measures static curvature (from nearby masses) with sensitivity approximately 10^-17 after 10^4 seconds averaging. The two methods are complementary: GW detectors probes high-frequency curvature fluctuations; I_ABC probes the DC curvature background.
 
 ### Future: Combining Clock and Interferometer Networks
 
@@ -5532,10 +5535,10 @@ The dominant systematic is geoid uncertainty — the imprecise knowledge of the 
 
 | # | Formula | Domain |
 |---|---------|--------|
-| 1 | I_ABC = ∮$\nabla$Ξ · dl | holonomy invariant |
-| 2 | I_ABC $\approx$ R_trtr · A_triangle | curvature connection |
+| 1 | I_ABC = ∮∇Ξ · dl | holonomy invariant |
+| 2 | I_ABC ≈ R_trtr · A_triangle | curvature connection |
 | 3 | R_trtr = −2GM/r³ | weak-field tidal tensor |
-| 4 | ΔN = N_loop − N_flat $\propto$ R · A | segment deficit |
+| 4 | ΔN = N_loop − N_flat ∝ R · A | segment deficit |
 
 ---
 
@@ -5611,14 +5614,13 @@ Part V applies the full SSZ formalism to the strong-field regime: black holes, s
 - **Referenced by:** Ch 30 (falsifiable predictions)
 - **Appendix:** App. B (B.1 Holonomy)
 
+---
 
-
-\newpage
-
-# The Complete SSZ Black Hole Metric
+# Chapter 18: The Complete SSZ Black Hole Metric
 
 Intuitively, this means: SSZ black holes are not infinitely deep wells with a point singularity at the bottom. They are deep but finite wells with a minimum radius determined by the segment saturation. The practical consequence is that the interior of a black hole in SSZ has finite curvature everywhere, avoiding the infinite tidal forces that plague GR solutions.
 
+**Part V
 
 ### Pedagogical Overview
 
@@ -5632,7 +5634,7 @@ For students encountering black hole metrics for the first time: the Schwarzschi
 
 Why is this necessary? The complete black hole metric is the foundation for all strong-field predictions in Chapters 19 through 25. Without it, the singularity resolution (Chapter 19), the natural boundary (Chapter 20), and the dark star properties (Chapter 21) cannot be derived.
  — Strong-Field Objects**
- v2
+**Status:** EXPANDED DRAFT v2
 
 
 ![Fig](figures/ch18_bh_metric/ssz_stability_map.png)
@@ -5687,7 +5689,7 @@ where D(r) = 1/(1 + Ξ(r)) is the time dilation factor and dΩ² = dθ² + sin²
 | Singularity | r = 0 | None |
 | Horizon | r = r_s | None (natural boundary) |
 
-At large r (weak field): D_SSZ $\approx$ 1 − r_s/(2r) + O(r_s/r)², which matches D_GR = √(1 − r_s/r) $\approx$ 1 − r_s/(2r) to leading order. The metrics are indistinguishable for r $\gg$ r_s.
+At large r (weak field): D_SSZ ≈ 1 − r_s/(2r) + O(r_s/r)², which matches D_GR = √(1 − r_s/r) ≈ 1 − r_s/(2r) to leading order. The metrics are indistinguishable for r ≫ r_s.
 
 At r = r_s: D_SSZ = 0.555, D_GR = 0. This is the fundamental difference — a 55.5% residual clock rate versus complete time stoppage.
 
@@ -5721,7 +5723,7 @@ The radial velocity profile of a freely infalling particle (starting from rest a
 
 v_{\text{coord}}(r) = v_{\text{fall}}(r) \cdot D^2(r) = c\sqrt{\frac{r}{r_s}} \cdot D^2(r)
 
-At large r: v_coord $\approx$ c√(r_s/r) · (1 − r_s/r) $\approx$ √(2GM/r) — Newtonian free-fall velocity.
+At large r: v_coord ≈ c√(r_s/r) · (1 − r_s/r) ≈ √(2GM/r) — Newtonian free-fall velocity.
 
 At r = r_s: v_coord = c · D²(r_s) = c · 0.308 = 0.308c — the infalling particle reaches the boundary with finite coordinate velocity.
 
@@ -5757,7 +5759,7 @@ The violation is quantified by the WEC parameter:
 
 w(r) = T_{\mu\nu} u^\mu u^\nu \bigg/ \rho c^2
 
-At r = r_s: w $\approx$ −0.03 — a 3% violation. This is the smallest WEC violation of any singularity-free black hole model in the literature (Bardeen: ~10%, Hayward: ~15%, loop quantum gravity: ~5%).
+At r = r_s: w ≈ −0.03 — a 3% violation. This is the smallest WEC violation of any singularity-free black hole model in the literature (Bardeen: ~10%, Hayward: ~15%, loop quantum gravity: ~5%).
 
 ### Physical Interpretation
 
@@ -5773,7 +5775,7 @@ The violation is not pathological — it is the mechanism by which SSZ prevents 
 
 ### Recovery of Schwarzschild
 
-For r $\gg$ r_s, the SSZ metric reduces to Schwarzschild:
+For r ≫ r_s, the SSZ metric reduces to Schwarzschild:
 
 D_{\text{SSZ}}(r) = \frac{1}{1 + r_s/(2r)} \approx 1 - \frac{r_s}{2r} + \frac{r_s^2}{4r^2} + \ldots
 
@@ -5797,11 +5799,11 @@ SSZ is PPN-identical to GR in the weak field. All Solar System tests pass automa
 
 **Test Files:** `test_metric`, `test_energy_conditions`, `test_ppn`, `test_weak_field_limit`
 
-**What tests prove:** D(r_s) = 0.555 to machine precision; metric signature (−+++) at all radii; WEC violation w $\approx$ −0.03 at r_s; PPN parameters γ = β = 1; weak-field expansion matches Schwarzschild to O(r_s/r); all Christoffel symbols and curvature tensors finite.
+**What tests prove:** D(r_s) = 0.555 to machine precision; metric signature (−+++) at all radii; WEC violation w ≈ −0.03 at r_s; PPN parameters γ = β = 1; weak-field expansion matches Schwarzschild to O(r_s/r); all Christoffel symbols and curvature tensors finite.
 
 **What tests do NOT prove:** Uniqueness of the SSZ metric — other metrics with D(r_s) > 0 exist (Bardeen, Hayward). SSZ's claim to uniqueness rests on the zero-parameter construction, not on the metric form.
 
-**Reproduction:** `E:/clone\ssz-metric-pure\`
+**Reproduction:** `E:\clone\ssz-metric-pure\`
 
 ## Geodesic Structure
 
@@ -5841,7 +5843,7 @@ The SSZ metric can be visualized using a Flamm-like embedding diagram, where the
 | 2 | D(r) = 1/(1+Ξ(r)) | time dilation |
 | 3 | D(r_s) = 0.555 | horizon value |
 | 4 | γ = β = 1 (PPN) | weak-field match |
-| 5 | WEC violation: w $\approx$ −0.03 at r_s | energy condition |
+| 5 | WEC violation: w ≈ −0.03 at r_s | energy condition |
 
 ---
 
@@ -5922,14 +5924,12 @@ Both implementations have been validated against analytical results in the weak 
 - **Referenced by:** Ch 19–22 (all strong-field), Ch 30 (predictions)
 - **Appendix:** App. A (A.5 Metric Derivation), App. B (B.7)
 
+---
 
+# Chapter 19: Paradox of Singularities and SSZ Resolution
 
-\newpage
-
-# Paradox of Singularities and SSZ Resolution
-
-
- v2
+**Part V — Strong-Field Objects**
+**Status:** EXPANDED DRAFT v2
 
 
 ![Fig](figures/ch19_singularity/1_core_radius_vs_mass_NO_SINGULARITY.png)
@@ -5968,7 +5968,7 @@ Intuitively, this means: the segment lattice acts as a natural regulator. Just a
 
 A common misinterpretation would be to think that SSZ eliminates all extreme gravitational effects near compact objects. It does not. The time dilation at r_s is still enormous (D = 0.555 means that a clock at r_s ticks at 55.5 percent of the rate of a clock at infinity). The redshift is still very large (z = 0.802). The gravitational effects are extreme by any standard. What SSZ eliminates is the infinite limit -- the singularity where physical quantities diverge.
 
-This distinction matters for the interpretation of observational data. observational campaigns metric perturbation signals from binary mergers are sensitive to the near-horizon geometry. If the metric differs from Schwarzschild near r_s, the ringdown signal after merger carries information about this difference. The SSZ prediction for the ringdown frequency differs from the GR prediction by an amount that depends on D_min, and future metric perturbation observations may be precise enough to detect this difference.
+This distinction matters for the interpretation of observational data. Metric perturbation signals from binary mergers are sensitive to the near-horizon geometry. If the metric differs from Schwarzschild near r_s, the ringdown signal after merger carries information about this difference. The SSZ prediction for the ringdown frequency differs from the GR prediction by an amount that depends on D_min, and future metric perturbation observations may be precise enough to detect this difference.
 .1 The Singularity Problem in GR
 
 ### What Singularities Are
@@ -6014,7 +6014,7 @@ SSZ's insight: the singularity is caused by the **functional form** of D(r), not
 
 D_{\text{SSZ}}(r) = \frac{1}{1 + \Xi(r)}
 
-where Ξ(r) is the segment density, bounded above by Ξ_max = 1 − e^{−φ} $\approx$ 0.802. Therefore:
+where Ξ(r) is the segment density, bounded above by Ξ_max = 1 − e^{−φ} ≈ 0.802. Therefore:
 
 D_{\text{SSZ}}(r) \geq D_{\text{min}} = \frac{1}{1 + \Xi_{\text{max}}} = \frac{1}{1.802} = 0.555
 
@@ -6051,7 +6051,7 @@ where f(Ξ_max) is a finite correction factor. The curvature is large but finite
 
 ### Ricci Scalar and Einstein Tensor
 
-The Ricci scalar R = g^μν R_μν and all components of the Einstein tensor G_μν are finite everywhere in SSZ. This is verified analytically for the SSZ metric and numerically to machine precision in the test suite (`E:/clone\ssz-metric-pure\`).
+The Ricci scalar R = g^μν R_μν and all components of the Einstein tensor G_μν are finite everywhere in SSZ. This is verified analytically for the SSZ metric and numerically to machine precision in the test suite (`E:\clone\ssz-metric-pure\`).
 
 ### Geodesic Completeness
 
@@ -6079,7 +6079,7 @@ In SSZ, the mass is distributed throughout the interior, with maximum density at
 
 \rho_{\text{max}} \sim \frac{M}{r_s^3} \sim \frac{c^6}{G^3 M^2}
 
-For a solar-mass object: ρ_max ~ 10¹⁸ kg/m³ — comparable to nuclear density. For a supermassive black hole (10⁹ M_$\odot$): ρ_max ~ 1 kg/m³ — comparable to water. The maximum density **decreases** with increasing mass. Supermassive "black holes" in SSZ are actually the lowest-density gravitationally confined objects in the universe.
+For a solar-mass object: ρ_max ~ 10¹⁸ kg/m³ — comparable to nuclear density. For a supermassive black hole (10⁹ M_☉): ρ_max ~ 1 kg/m³ — comparable to water. The maximum density **decreases** with increasing mass. Supermassive "black holes" in SSZ are actually the lowest-density gravitationally confined objects in the universe.
 
 ### The Gravitational Atom
 
@@ -6100,7 +6100,7 @@ This picture dissolves the conceptual crisis of GR black holes: there is no sing
 
 **What tests do NOT prove:** That SSZ is the correct resolution of singularities — other bounded metrics (Bardeen, Hayward) also resolve singularities. What is unique about SSZ is the zero-parameter construction.
 
-**Reproduction:** `E:/clone\ssz-metric-pure\`
+**Reproduction:** `E:\clone\ssz-metric-pure\`
 
 ## Physical Consequences of Singularity Resolution
 
@@ -6225,14 +6225,12 @@ This resolution has a philosophical advantage over the GR situation. In GR, cosm
 - **Referenced by:** Ch 20 (cosmic censorship), Ch 25 (coherence), Ch 30 (predictions)
 - **Appendix:** App. A (A.5 Proofs), App. B (B.7)
 
+---
 
+# Chapter 20: Natural Boundary of Black Holes and Cosmic Censorship
 
-\newpage
-
-# Natural Boundary of Black Holes and Cosmic Censorship
-
-
- v2
+**Part V — Strong-Field Objects**
+**Status:** EXPANDED DRAFT v2
 
 
 ![Fig 20.1](figures/ch20_boundary/fig_20_01.png)
@@ -6374,7 +6372,7 @@ The SSZ natural boundary emits thermal radiation, unlike GR's horizon. For accre
 
 **What tests do NOT prove:** Thermal emission spectrum — requires QFT on SSZ background (future work). GW echo waveform — requires numerical relativity simulation on SSZ metric.
 
-**Reproduction:** `E:/clone\ssz-metric-pure\`
+**Reproduction:** `E:\clone\ssz-metric-pure\`
 
 ## Observational Signatures of the Natural Boundary
 
@@ -6388,7 +6386,7 @@ For stellar-mass compact objects accreting at typical rates, this glow is many o
 
 The most promising signature is metric perturbation echoes. In GR, metric perturbations from a binary merger are absorbed by the event horizon. In SSZ, the natural boundary partially reflects metric perturbations, producing echoes at a delay time tau_echo proportional to the light-crossing time of the potential well. The predicted delay is tau_echo = 2 r_s/c x |ln(D(r_s))| = 2 r_s/c x 0.588 for each echo.
 
-For a 30 solar mass black hole (r_s = 88.6 km), tau_echo = 0.35 milliseconds. observational campaigns A+ should be sensitive to echoes at this delay time with a signal-to-noise ratio of approximately 3 for individual events, and approximately 10 for stacked analysis of 100+ events.
+For a 30 solar mass black hole (r_s = 88.6 km), tau_echo = 0.35 milliseconds. Next-generation GW detectors should be sensitive to echoes at this delay time with a signal-to-noise ratio of approximately 3 for individual events, and approximately 10 for stacked analysis of 100+ events.
 
 ### X-ray Reflection Spectroscopy
 
@@ -6404,7 +6402,7 @@ Current X-ray observatories (XMM-Newton, Chandra, NuSTAR) achieve energy resolut
 |---|---------|--------|
 | 1 | D(r_s) = 0.555 | normal clock at boundary |
 | 2 | z(r_s) = 0.802 | finite escape redshift |
-| 3 | R = (1−D²)/(1+D²) $\approx$ 0.44 | GW reflection coefficient |
+| 3 | R = (1−D²)/(1+D²) ≈ 0.44 | GW reflection coefficient |
 | 4 | No singularity → no censorship | structural result |
 
 ---
@@ -6484,14 +6482,12 @@ Chapter 21 develops the observational consequences. The dark star concept -- a c
 - **Referenced by:** Ch 21 (dark star), Ch 25 (coherence collapse), Ch 30 (predictions)
 - **Appendix:** App. B (B.7), App. F
 
+---
 
+# Chapter 21: The Dark Star Problem — Escape in Strong Gravity
 
-\newpage
-
-# The Dark Star Problem — Escape in Strong Gravity
-
-
- v2
+**Part V — Strong-Field Objects**
+**Status:** EXPANDED DRAFT v2
 
 
 ![Fig 21.1](figures/ch21_dark_star/fig_21_01.png)
@@ -6568,7 +6564,7 @@ At r = r_s, the metric component g_tt = 0 and g_rr diverges. Schwarzschild and h
 
 ### The Oppenheimer–Snyder Collapse (1939)
 
-The transition from dark star to black hole was cemented by Oppenheimer and Snyder's 1939 paper "On Continued Gravitational Contraction," which showed that a sufficiently massive star, having exhausted its nuclear fuel, would collapse through its own Schwarzschild radius in finite proper time. The collapsing matter would form a trapped surface from which no signal could escape. This was the first rigorous demonstration that GR predicts the formation of what we now call black holes — objects fundamentally different from Michell's dark stars because the trapping is causal (geometric), not merely energetic (Newtonian). In SSZ, the Oppenheimer–Snyder scenario plays out differently: the collapse proceeds through r = r_s in finite coordinate time (because D = 0.555 $\neq$ 0), and the infalling matter encounters the natural boundary rather than a singularity. The endpoint is a maximally compressed dark star, not a black hole with an event horizon.
+The transition from dark star to black hole was cemented by Oppenheimer and Snyder's 1939 paper "On Continued Gravitational Contraction," which showed that a sufficiently massive star, having exhausted its nuclear fuel, would collapse through its own Schwarzschild radius in finite proper time. The collapsing matter would form a trapped surface from which no signal could escape. This was the first rigorous demonstration that GR predicts the formation of what we now call black holes — objects fundamentally different from Michell's dark stars because the trapping is causal (geometric), not merely energetic (Newtonian). In SSZ, the Oppenheimer–Snyder scenario plays out differently: the collapse proceeds through r = r_s in finite coordinate time (because D = 0.555 ≠ 0), and the infalling matter encounters the natural boundary rather than a singularity. The endpoint is a maximally compressed dark star, not a black hole with an event horizon.
 
 ### The Event Horizon
 
@@ -6600,9 +6596,9 @@ The event horizon creates several profound paradoxes:
 
 SSZ's resolution is conceptually simple: **replace D_GR = 0 with D_SSZ = 0.555.** The consequences cascade through all of GR's paradoxes:
 
-At the natural boundary (r $\approx$ r_s), D = 0.555. This means:
+At the natural boundary (r ≈ r_s), D = 0.555. This means:
 
-**Light escapes.** Photons emitted at r_s reach infinity with redshift z = Ξ(r_s) = 0.802. The observed frequency is ν_obs = ν_emit/(1 + 0.802) = 0.555 · ν_emit. The object is extremely faint (intensity $\propto$ D⁴ $\approx$ 0.095 of the emitted value) and highly redshifted — but it is **visible in principle**.
+**Light escapes.** Photons emitted at r_s reach infinity with redshift z = Ξ(r_s) = 0.802. The observed frequency is ν_obs = ν_emit/(1 + 0.802) = 0.555 · ν_emit. The object is extremely faint (intensity ∝ D⁴ ≈ 0.095 of the emitted value) and highly redshifted — but it is **visible in principle**.
 
 **Clocks tick.** At D = 0.555, a clock runs at 55.5% of its rate at infinity. All physical processes continue: nuclear reactions, chemical processes, thermal equilibrium. The boundary is an active region, not a frozen surface.
 
@@ -6652,11 +6648,11 @@ The neutron star surface redshift (+13% vs GR) is the most promising near-term t
 
 **Test Files:** `test_dark_star`, `test_escape`, `test_visibility`
 
-**What tests prove:** Light escapes from r_s with z = 0.802; intensity ratio D⁴ $\approx$ 0.095; no trapped surfaces in SSZ metric; all four paradoxes require D = 0 (which SSZ does not have).
+**What tests prove:** Light escapes from r_s with z = 0.802; intensity ratio D⁴ ≈ 0.095; no trapped surfaces in SSZ metric; all four paradoxes require D = 0 (which SSZ does not have).
 
 **What tests do NOT prove:** That SSZ's specific D(r_s) = 0.555 is the correct value — this depends on the axiom Ξ_max = 1 − e^{−φ}. A different saturation function might give a different D(r_s).
 
-**Reproduction:** `E:/clone\ssz-metric-pure\`
+**Reproduction:** `E:\clone\ssz-metric-pure\`
 
 ## Modern Dark Star Candidates
 
@@ -6681,7 +6677,7 @@ The AMPS firewall argument (Almheiri, Marolf, Polchinski, Sully, 2012) suggests 
 | # | Formula | Domain |
 |---|---------|--------|
 | 1 | z(r_s) = 0.802 | escape redshift |
-| 2 | I_obs/I_emit = D⁴ $\approx$ 0.095 | visibility |
+| 2 | I_obs/I_emit = D⁴ ≈ 0.095 | visibility |
 | 3 | D(r_s) = 0.555 > 0 | no causal trapping |
 
 ---
@@ -6752,14 +6748,12 @@ Chapter 22 examines superradiant instabilities -- the process by which rotating 
 - **Referenced by:** Ch 22 (superradiance), Ch 30 (predictions)
 - **Appendix:** App. B (B.7 Dark Stars)
 
+---
 
+# Chapter 22: SSZ as Regulator of Superradiant Instabilities
 
-\newpage
-
-# SSZ as Regulator of Superradiant Instabilities
-
-
- v2
+**Part V — Strong-Field Objects**
+**Status:** EXPANDED DRAFT v2
 
 
 ![Fig 22.1](figures/ch22_superradiance/fig_22s_01.png)
@@ -6820,7 +6814,7 @@ Press and Teukolsky (1972) realized that adding a confining mechanism creates a 
 1. An incident wave scatters off the rotating black hole and is amplified
 2. The amplified wave bounces off the "mirror" (confining mechanism) back toward the black hole
 3. The wave scatters again, is amplified again, bounces again
-4. The amplitude grows exponentially: A(t) $\propto$ e^{Γt} where Γ is the growth rate
+4. The amplitude grows exponentially: A(t) ∝ e^{Γt} where Γ is the growth rate
 
 Nature provides a natural mirror: **massive bosonic fields** with mass μ. The effective potential for a massive scalar field around a Kerr black hole has a potential well at r ~ 1/(Mμ²) that confines low-frequency modes. The system forms a "gravitational atom" with the black hole as nucleus and the boson cloud as electron. The growth rate scales as:
 
@@ -6836,7 +6830,7 @@ If ultralight bosons exist with mass μ ~ 10⁻¹² eV (as proposed by string th
 
 \tau_{\text{SR}} \sim \frac{1}{\Gamma} \sim 10^4 \text{ yr} \times \left(\frac{10^{-12} \text{ eV}}{\mu}\right)^9 \times \left(\frac{10 M_\odot}{M}\right)^8
 
-For M ~ 10 M_$\odot$ and μ ~ 10⁻¹² eV: τ_SR ~ 10⁴ years — much shorter than the age of stellar-mass black holes (~10⁹ years). Such black holes should have been completely spun down. Yet observational observations (GWTC-3 catalog) show black holes with significant spin (χ > 0.3) in the mass range where superradiance should be active.
+For M ~ 10 M_☉ and μ ~ 10⁻¹² eV: τ_SR ~ 10⁴ years — much shorter than the age of stellar-mass black holes (~10⁹ years). Such black holes should have been completely spun down. Yet observational observations (GWTC-3 catalog) show black holes with significant spin (χ > 0.3) in the mass range where superradiance should be active.
 
 This presents three possible explanations:
 1. Ultralight bosons in this mass range do not exist
@@ -6851,7 +6845,7 @@ SSZ provides option 3.
 
 In GR, the ergoregion extends from the outer horizon r_+ to the ergosphere r_ergo. Superradiant amplification is strongest near the horizon, where D_GR → 0 maximizes the frequency mismatch between the incident wave and the horizon angular velocity.
 
-In SSZ, D(r_s) = 0.555 $\neq$ 0. This modification has three effects:
+In SSZ, D(r_s) = 0.555 ≠ 0. This modification has three effects:
 
 **1. Reduced frequency window.** The modified Zel'dovich condition becomes:
 
@@ -6861,7 +6855,7 @@ Since D_SSZ(r_+) < 1 but not zero, the superradiant frequency range is reduced c
 
 **2. Shrunk ergoregion.** The ergoregion volume depends on how far g_tt extends beyond the horizon. With D > 0, the metric does not develop as extreme a signature near the boundary, and the effective ergoregion shrinks.
 
-**3. Finite absorption efficiency.** In GR, the horizon is a perfect absorber (100% absorption for ingoing waves). In SSZ, the natural boundary has a reflection coefficient R $\approx$ 0.44 (Chapter 20). Part of the energy that would have been absorbed in GR is reflected back, reducing the net amplification per cycle.
+**3. Finite absorption efficiency.** In GR, the horizon is a perfect absorber (100% absorption for ingoing waves). In SSZ, the natural boundary has a reflection coefficient R ≈ 0.44 (Chapter 20). Part of the energy that would have been absorbed in GR is reflected back, reducing the net amplification per cycle.
 
 ### Segment Dissipation
 
@@ -6899,7 +6893,7 @@ The superradiant timescale increases correspondingly:
 
 \tau_{\text{SSZ}} = \frac{\tau_{\text{GR}}}{G_{\text{SSZ}}} = \frac{\tau_{\text{GR}}}{D(r_s)^{2l+1}}
 
-For l = 1: τ_SSZ $\approx$ 5.8 × τ_GR. A process that takes 10⁴ years in GR takes ~6 × 10⁴ years in SSZ — potentially pushing the timescale beyond the age of observed black holes.
+For l = 1: τ_SSZ ≈ 5.8 × τ_GR. A process that takes 10⁴ years in GR takes ~6 × 10⁴ years in SSZ — potentially pushing the timescale beyond the age of observed black holes.
 
 ## The S-Index
 
@@ -6911,9 +6905,9 @@ where ω_max is the maximum superradiant frequency. S ranges from 0 (fully unsta
 
 | Object Class | Mass | S-Index | Stability |
 |-------------|------|---------|-----------|
-| Stellar BH | ~10 M_$\odot$ | > 0.83 | Stable |
-| Intermediate BH | ~10³ M_$\odot$ | > 0.90 | Very stable |
-| Supermassive BH | ~10⁶ M_$\odot$ | > 0.95 | Extremely stable |
+| Stellar BH | ~10 M_☉ | > 0.83 | Stable |
+| Intermediate BH | ~10³ M_☉ | > 0.90 | Very stable |
+| Supermassive BH | ~10⁶ M_☉ | > 0.95 | Extremely stable |
 
 All SSZ black holes are robustly stable (S > 0.8), consistent with the observational observation that stellar-mass black holes retain significant spin. The S-Index increases with mass because the superradiant coupling (Mμ) decreases for fixed boson mass μ.
 
@@ -6941,7 +6935,7 @@ A measurement of this ratio determines D(r_s) independently of all other SSZ pre
 
 **What tests do NOT prove:** The segment dissipation mechanism from first principles — requires full quantum treatment of segment lattice dynamics. The exact form of the angular momentum dependence (2l+1 power) — this is a leading-order estimate that may receive corrections from a complete treatment.
 
-**Reproduction:** `E:/clone\ssz-metric-pure\`
+**Reproduction:** `E:\clone\ssz-metric-pure\`
 
 ## Astrophysical Implications
 
@@ -6953,9 +6947,9 @@ In SSZ, the G_SSZ regulator suppresses superradiance for all boson masses, remov
 
 ### Metric Perturbation Signatures
 
-Superradiant boson clouds around rotating black holes would emit continuous metric perturbations at twice the boson Compton frequency. observational campaigns and future detectors (Einstein Telescope, Cosmic Explorer) search for these signals. A detection would confirm GR superradiance and falsify the SSZ regulator; a null detection would be consistent with SSZ suppression but would not prove SSZ correct (the bosons might simply not exist).
+Superradiant boson clouds around rotating black holes would emit continuous metric perturbations at twice the boson Compton frequency. Current and future GW detectors (Einstein Telescope, Cosmic Explorer) search for these signals. A detection would confirm GR superradiance and falsify the SSZ regulator; a null detection would be consistent with SSZ suppression but would not prove SSZ correct (the bosons might simply not exist).
 
-The most sensitive search to date (observational campaigns O3 data) found no superradiant signals, consistent with both GR (bosons absent) and SSZ (bosons present but superradiance suppressed). Future observations with 10x better sensitivity may break this degeneracy.
+The most sensitive search to date (GW detector O3 data) found no superradiant signals, consistent with both GR (bosons absent) and SSZ (bosons present but superradiance suppressed). Future observations with 10x better sensitivity may break this degeneracy.
 
 ---
 
@@ -7036,13 +7030,11 @@ Part VI applies the strong-field results to specific astrophysical systems: infa
 - **Referenced by:** Ch 30 (falsifiable predictions)
 - **Appendix:** App. B (B.2 Superradiance)
 
+---
 
+# Chapter 31: Lagrangian and Hamiltonian Formulation of SSZ
 
-\newpage
-
-# Lagrangian and Hamiltonian Formulation of SSZ
-
-
+**Status:** FIRST DRAFT
 **Paper Reference:** ssz-lagrange repository (Wrede, Casu 2026)
 **Validation:** 54/54 tests PASS (100%)
 
@@ -7362,12 +7354,11 @@ See Appendix D for the complete repository index and test results.
 - **Appendix B:** Formula Compendium
 - **Appendix F:** GR vs SSZ Comparison
 
+---
 
-\newpage
+# Chapter 32: Rotating Metrics, Quantum Corrections, and Numerical Relativity
 
-# Rotating Metrics, Quantum Corrections, and Numerical Relativity
-
-
+**Status:** FIRST DRAFT
 **Paper Reference:** ssz-lagrange repository, Sections 14--19 (Wrede, Casu 2026)
 **Validation:** 54/54 tests PASS (100%)
 
@@ -7657,15 +7648,12 @@ All tests pass with 100% success rate.
 - **Appendix B:** Formula Compendium
 - **Appendix F:** GR vs SSZ Comparison Tables
 
+---
 
-\newpage
+# Chapter 23: Infalling Matter and Radiowaves
 
-\part{Astrophysical Applications}
-
-# Infalling Matter and Radiowaves
-
-
- v2
+**Part VI — Astrophysical Applications**
+**Status:** EXPANDED DRAFT v2
 
 
 ![Fig](figures/ch23_infall_radio/coherence_collapse_piecewise.png)
@@ -7740,7 +7728,7 @@ For an emitter approaching r_s, the delay diverges logarithmically — but finit
 
 \nu_{\text{obs}} = \frac{\nu_0}{1 + z} = \nu_0 \cdot D(r) = \frac{\nu_0}{1 + \Xi(r)}
 
-**Decreasing intensity.** Thermal emission scales as D⁴ in curved spacetime (a combination of time dilation affecting the emission rate and the solid-angle compression). For an emitter near r_s: I_obs/I_emit = D⁴ $\approx$ 0.555⁴ $\approx$ 0.095 — roughly 10% of the emitted intensity reaches a distant observer.
+**Decreasing intensity.** Thermal emission scales as D⁴ in curved spacetime (a combination of time dilation affecting the emission rate and the solid-angle compression). For an emitter near r_s: I_obs/I_emit = D⁴ ≈ 0.555⁴ ≈ 0.095 — roughly 10% of the emitted intensity reaches a distant observer.
 
 ### The Chirp Signal
 
@@ -7766,9 +7754,9 @@ For specific objects:
 
 | Object | Mass | r_s | τ_chirp |
 |--------|------|-----|---------|
-| Stellar BH (10 M_$\odot$) | 2×10³¹ kg | 30 km | 0.18 ms |
-| Sgr A* (4×10⁶ M_$\odot$) | 8×10³⁶ kg | 1.2×10⁷ km | 72 s |
-| M87* (6.5×10⁹ M_$\odot$) | 1.3×10⁴⁰ kg | 1.9×10¹⁰ km | 32 hr |
+| Stellar BH (10 M_☉) | 2×10³¹ kg | 30 km | 0.18 ms |
+| Sgr A* (4×10⁶ M_☉) | 8×10³⁶ kg | 1.2×10⁷ km | 72 s |
+| M87* (6.5×10⁹ M_☉) | 1.3×10⁴⁰ kg | 1.9×10¹⁰ km | 32 hr |
 
 For supermassive black holes, the chirp timescale is hours to days — well within the observation window of modern radio telescopes.
 
@@ -7791,9 +7779,9 @@ Infalling matter crosses three distinct zones:
 
 Two mass-independent invariants mark the transition:
 
-**r*/r_s $\approx$ 1.595** (weak-field proxy): Where Ξ_weak intersects D_GR. Below this radius, SSZ's weak-field approximation diverges from GR by more than 1%. This is the "point of no return" for weak-field analysis.
+**r*/r_s ≈ 1.595** (weak-field proxy): Where Ξ_weak intersects D_GR. Below this radius, SSZ's weak-field approximation diverges from GR by more than 1%. This is the "point of no return" for weak-field analysis.
 
-**r*/r_s $\approx$ 1.387** (strong-field intersection): Where Ξ_strong intersects D_GR. This lies deep in the g2 regime and marks the radius where SSZ's strong-field time dilation matches GR's Schwarzschild value. Below this radius, SSZ has LESS time dilation than GR (D_SSZ > D_GR).
+**r*/r_s ≈ 1.387** (strong-field intersection): Where Ξ_strong intersects D_GR. This lies deep in the g2 regime and marks the radius where SSZ's strong-field time dilation matches GR's Schwarzschild value. Below this radius, SSZ has LESS time dilation than GR (D_SSZ > D_GR).
 
 Both values are derived from the SSZ axioms and the value of φ — they contain no adjustable parameters and do not depend on the mass of the compact object.
 
@@ -7801,8 +7789,8 @@ Both values are derived from the SSZ axioms and the value of φ — they contain
 
 The transition from g1 to g2 produces a subtle but potentially detectable feature in the radiowave spectrum. As the emitter crosses the blend zone (~2 r_s), the frequency-vs-time curve changes its concavity — the chirp rate d²ν/dt² has an inflection point. This inflection is:
 
-- Located at r $\approx$ 2 r_s (mass-independent in units of r_s)
-- Width Δr $\approx$ 0.4 r_s (blend zone width)
+- Located at r ≈ 2 r_s (mass-independent in units of r_s)
+- Width Δr ≈ 0.4 r_s (blend zone width)
 - Amplitude depends on the emitter's velocity and radiation mechanism
 
 For Sgr A* (τ_chirp ~ 72 s), the inflection occurs ~30 seconds before the main chirp, producing a brief change in the signal's character. This is a unique SSZ signature with no GR counterpart.
@@ -7848,6 +7836,14 @@ The analogy: the phase velocity of electromagnetic waves in a waveguide can exce
 
 **For stellar-mass black holes:** X-ray binaries (e.g., Cygnus X-1, GRS 1915+105) show quasi-periodic oscillations (QPOs) from the inner accretion disk. The SSZ spectral inflection at ~2r_s could explain the high-frequency QPO pairs observed at 40–450 Hz — a longstanding puzzle in X-ray astronomy.
 
+### Existing Radio Infrastructure and the Untested Prediction
+
+The radiowave signatures predicted above fall within the operating range of existing radio telescopes — but no targeted search has been conducted. The Rayleigh-Jeans tail of SSZ-redshifted thermal emission (z = 0.802) extends into the 1–10 GHz band with a spectral index (α ≈ −0.1) distinguishable from synchrotron emission (α ≈ −0.7).
+
+The 100-meter Effelsberg radio telescope (MPIfR Bonn), with its ultra-broadband receiver (0.6–3.0 GHz), and the European Pulsar Timing Array (EPTA) — including the Universität Bielefeld radio astronomy group — routinely achieve microsecond-precision timing across 24-year baselines. This infrastructure could detect the SSZ-predicted excess radio flux from accreting compact objects during outburst states.
+
+**Empirical status:** No observation has tested whether the SSZ radio excess from the natural boundary exists. The prediction is specific (spectral slope, flux level, τ_radio/τ_X-ray = 1.80) and falsifiable with a dedicated campaign targeting X-ray binaries at 1–3 GHz during accretion episodes. The numerical framework for this prediction is implemented in the Unified-Results repository (`core/predict.py`: `predict_radio_spectral_index`, `predict_frequency_shift`).
+
 ## Energy Conservation
 
 The energy budget for infalling matter in SSZ must balance:
@@ -7866,7 +7862,7 @@ Energy conservation is verified numerically in the test suite to < 10⁻¹² rel
 
 **What tests do NOT prove:** Observational detection of radiowave precursors — requires targeted radio observations of accreting compact objects (EHT, ngVLA, ALMA).
 
-**Reproduction:** `E:/clone\ssz-metric-pure\`
+**Reproduction:** `E:\clone\ssz-metric-pure\`
 
 ## Observational Predictions for Infalling Matter
 
@@ -7887,7 +7883,7 @@ The inner edge of an accretion disk around a compact object emits thermal radiat
 | # | Formula | Domain |
 |---|---------|--------|
 | 1 | v_eigen = v_coord/D(r) | eigenvelocity |
-| 2 | τ_chirp ~ r_s/(c·D_s) $\approx$ 1.80 r_s/c | chirp timescale |
+| 2 | τ_chirp ~ r_s/(c·D_s) ≈ 1.80 r_s/c | chirp timescale |
 | 3 | ν_obs(t) = ν_0 · D[r(t)] | observed frequency |
 | 4 | Blend zone: 1.8 < r/r_s < 2.2 | Hermite C² transition |
 
@@ -7958,14 +7954,12 @@ Chapter 24 shifts from compact objects to expanding nebulae, where the gravitati
 - **Referenced by:** Ch 24 (nebulae), Ch 30 (predictions)
 - **Appendix:** App. B (B.2, B.4)
 
+---
 
+# Chapter 24: Molecular Zones in Expanding Nebulae
 
-\newpage
-
-# Molecular Zones in Expanding Nebulae
-
-
- v2
+**Part VI — Astrophysical Applications**
+**Status:** EXPANDED DRAFT v2
 
 
 ![Fig](figures/ch24_g79/2_coherence_evolution_REAL_DATA.png)
@@ -7991,7 +7985,7 @@ Chapter 24 shifts from compact objects to expanding nebulae, where the gravitati
 
 ## Summary
 
-The Luminous Blue Variable (LBV) nebula G79.29+0.46 provides a unique test of SSZ predictions far from compact objects. Located in the Cygnus region at a distance of approximately 1.7 kpc, G79.29+0.46 is a massive star (~25–40 M_$\odot$) surrounded by concentric nebular shells ejected during eruptions characteristic of the LBV phase. These shells exhibit anomalous molecular emission — molecules like CO, HCN, and CS survive in regions that standard astrophysical models predict should be too hot for molecular survival.
+The Luminous Blue Variable (LBV) nebula G79.29+0.46 provides a unique test of SSZ predictions far from compact objects. Located in the Cygnus region at a distance of approximately 1.7 kpc, G79.29+0.46 is a massive star (~25–40 M_☉) surrounded by concentric nebular shells ejected during eruptions characteristic of the LBV phase. These shells exhibit anomalous molecular emission — molecules like CO, HCN, and CS survive in regions that standard astrophysical models predict should be too hot for molecular survival.
 
 SSZ offers an explanation: segment-density gradients in the expanding shells create local temperature inversions — "cold zones" — where molecules can condense and persist. Six specific, quantitative predictions were derived from the SSZ framework and tested against archival observations from Herschel, Spitzer, ALMA, and ground-based spectrographs. **All six were confirmed**, with zero free parameters adjusted to match the data.
 
@@ -8039,7 +8033,7 @@ G79.29+0.46 has two distinct shells:
 
 ### The Anomaly
 
-Standard astrophysical models predict that the radiation field from the central star (L ~ 10⁵·⁵ L_$\odot$, T_eff ~ 25,000 K) should dissociate all molecules within ~1 pc. Yet CO and HCN are observed at r ~ 1.0–1.2 pc with rotational temperatures of T_rot = 50 ± 15 K — far below the dissociation threshold.
+Standard astrophysical models predict that the radiation field from the central star (L ~ 10⁵·⁵ L_☉, T_eff ~ 25,000 K) should dissociate all molecules within ~1 pc. Yet CO and HCN are observed at r ~ 1.0–1.2 pc with rotational temperatures of T_rot = 50 ± 15 K — far below the dissociation threshold.
 
 The standard explanation invokes dust shielding: dust grains in the shell absorb UV photons, reducing the photodissociation rate below the molecular formation rate. This is plausible but requires specific dust-to-gas ratios and grain size distributions that are not independently constrained.
 
@@ -8061,7 +8055,7 @@ When the shell's segment compression exceeds the ambient radial gradient from th
 
 The temperature inversion works as follows:
 
-1. **Stellar radiation** propagates outward through the ambient segment density field. The effective temperature decreases with distance as T(r) $\propto$ T_star · D(r)/D(R_star).
+1. **Stellar radiation** propagates outward through the ambient segment density field. The effective temperature decreases with distance as T(r) ∝ T_star · D(r)/D(R_star).
 
 2. **At the shell boundary**, the local segment density jumps (smoothly but steeply) due to the accumulated mass of the shell. This creates a local increase in Ξ.
 
@@ -8073,7 +8067,7 @@ The effect is analogous to a gravitational lens creating a cold spot — but her
 
 ### Quantitative Estimate
 
-For the outer shell of G79 (M_shell ~ 1 M_$\odot$, R_shell ~ 1.2 pc, ΔR ~ 0.1 pc):
+For the outer shell of G79 (M_shell ~ 1 M_☉, R_shell ~ 1.2 pc, ΔR ~ 0.1 pc):
 
 \Xi_{\text{shell}} \approx \frac{G M_{\text{shell}}}{c^2 R_{\text{shell}}} \approx 5 \times 10^{-14}
 
@@ -8101,16 +8095,16 @@ where δΞ is the excess segment density from the shell compression. For typical
 
 ## Six Predictions — All Confirmed
 
-The g79-cygnus-test repository (`E:/clone\g79-cygnus-test\`) documents six predictions tested against archival data:
+The g79-cygnus-test repository (`E:\clone\g79-cygnus-test\`) documents six predictions tested against archival data:
 
 | # | Prediction | SSZ Value | Observed | Source | Status |
 |---|-----------|-----------|----------|--------|--------|
-| 1 | CO emission location | Inner edge, outer shell | Confirmed | ALMA Band 6 | Y |
-| 2 | Temperature inversion | dT/dr < 0 at shell | Confirmed | Multi-λ SED | Y |
-| 3 | CO rotational T | 40–80 K | 50 ± 15 K | mm spectroscopy | Y |
-| 4 | Dust-to-gas anomaly | Elevated at shell edge | Confirmed | Herschel/PACS | Y |
-| 5 | Radial v gradient | Decreasing outward | Confirmed | Optical spectro | Y |
-| 6 | Temporal consistency | Matches expansion age | Confirmed | Multi-epoch | Y |
+| 1 | CO emission location | Inner edge, outer shell | Confirmed | ALMA Band 6 | ✓ |
+| 2 | Temperature inversion | dT/dr < 0 at shell | Confirmed | Multi-λ SED | ✓ |
+| 3 | CO rotational T | 40–80 K | 50 ± 15 K | mm spectroscopy | ✓ |
+| 4 | Dust-to-gas anomaly | Elevated at shell edge | Confirmed | Herschel/PACS | ✓ |
+| 5 | Radial v gradient | Decreasing outward | Confirmed | Optical spectro | ✓ |
+| 6 | Temporal consistency | Matches expansion age | Confirmed | Multi-epoch | ✓ |
 
 **All six predictions confirmed. Zero free parameters adjusted.**
 
@@ -8132,7 +8126,7 @@ This is below the conventional 5% significance threshold — suggestive but not 
 
 **3.** Only one nebula tested. More LBV nebulae (AG Car, η Car, P Cygni) should be analyzed to build a larger sample.
 
-**What makes G79 special:** Unlike Solar System tests (where SSZ $\approx$ GR to ppb), G79 tests the segment lattice mechanism in a dynamic astrophysical context far from compact objects. If the mechanism works here, the segment lattice has observable effects beyond gravitational time dilation.
+**What makes G79 special:** Unlike Solar System tests (where SSZ ≈ GR to ppb), G79 tests the segment lattice mechanism in a dynamic astrophysical context far from compact objects. If the mechanism works here, the segment lattice has observable effects beyond gravitational time dilation.
 
 ### Future Tests
 
@@ -8146,7 +8140,7 @@ Three LBV nebulae are candidates for follow-up: AG Carinae (d~6 kpc, ALMA Band 6
 
 **What tests do NOT prove:** Unique explanation — standard astrophysics provides alternative accounts for individual features.
 
-**Reproduction:** `E:/clone\g79-cygnus-test\`
+**Reproduction:** `E:\clone\g79-cygnus-test\`
 ## Physical Mechanism in Detail
 
 ### Segment-Density Gradient and Temperature Inversion
@@ -8273,16 +8267,12 @@ Part VII addresses the regime transition itself: how does a system transition fr
 - **Referenced by:** Ch 30 (predictions)
 - **Appendix:** App. D (g79-cygnus-tests Index)
 
+---
 
+# Chapter 25: Irreversible Coherence-Collapse Law — g2 to g1
 
-\newpage
-
-\part{Regime Transitions}
-
-# Irreversible Coherence-Collapse Law — g2 to g1
-
-
- v2
+**Part VII — Regime Transitions**
+**Status:** EXPANDED DRAFT v2
 
 
 ![Fig](figures/ch25_collapse/2_piecewise_vs_smooth_fit.png)
@@ -8358,7 +8348,7 @@ In the strong-field regime g2, segments are densely packed and exhibit long-rang
 
 At large r (weak field): ξ_coh → 1. Segments are essentially uncorrelated — each fluctuates independently, like molecules in a gas.
 
-At r = r_s (horizon): ξ_coh → 1 + 0.802 $\approx$ 1.80. Segments are strongly correlated over distances nearly twice the flat-spacetime segment length. The lattice acts as a **collective medium** rather than a collection of independent entities.
+At r = r_s (horizon): ξ_coh → 1 + 0.802 ≈ 1.80. Segments are strongly correlated over distances nearly twice the flat-spacetime segment length. The lattice acts as a **collective medium** rather than a collection of independent entities.
 
 At r → 0 (center): ξ_coh → 1 + 1 = 2. Maximum correlation — every segment is locked to its neighbors with the strongest possible coupling.
 
@@ -8390,7 +8380,7 @@ The asymmetry has a precise mathematical origin: the characteristic time for bui
 
 ### The Blend Zone
 
-The collapse occurs at the blend zone (r* $\approx$ 1.6 r_s to 2.2 r_s) where the Hermite C² interpolation mediates the g1↔g2 transition. The blend zone is smooth by construction — Ξ, dΞ/dr, and d²Ξ/dr² are all continuous. But the **dynamics** of the transition are not symmetric: the forward (infall) and reverse (expansion) paths through the blend zone produce different final states.
+The collapse occurs at the blend zone (r* ≈ 1.6 r_s to 2.2 r_s) where the Hermite C² interpolation mediates the g1↔g2 transition. The blend zone is smooth by construction — Ξ, dΞ/dr, and d²Ξ/dr² are all continuous. But the **dynamics** of the transition are not symmetric: the forward (infall) and reverse (expansion) paths through the blend zone produce different final states.
 
 An analogy: a rubber band stretched slowly (g1→g2) stores elastic energy and returns to its original shape when released slowly. But a rubber band stretched quickly past its elastic limit (g2→g1 quench) deforms permanently — some of the stored energy is dissipated as heat, and the band cannot return to its original state. The g2→g1 transition is a gravitational version of this plastic deformation.
 
@@ -8472,7 +8462,7 @@ This is a suggestive but not rigorous derivation. The identification l_seg ~ l_P
 
 **What tests do NOT prove:** The microscopic mechanism of coherence loss — requires full lattice dynamics simulation (future work). The black hole entropy counting — requires explicit enumeration of segment microstates and derivation of l_seg ~ l_P.
 
-**Reproduction:** `E:/clone\ssz-metric-pure\`
+**Reproduction:** `E:\clone\ssz-metric-pure\`
 
 ## Observational Signatures
 
@@ -8503,7 +8493,7 @@ In GR, black hole entropy is S = A/(4 l_P^2) (Bekenstein-Hawking). In SSZ, the n
 | # | Formula | Domain |
 |---|---------|--------|
 | 1 | ΔS_seg > 0 (g2→g1) | irreversibility law |
-| 2 | ξ_coh $\propto$ 1/D(r) = 1+Ξ | coherence length |
+| 2 | ξ_coh ∝ 1/D(r) = 1+Ξ | coherence length |
 | 3 | S_BH ~ A/(4l_seg²) | segment entropy counting |
 
 ---
@@ -8574,13 +8564,12 @@ Part VIII addresses the final and most important question: does SSZ agree with o
 - **Referenced by:** Ch 30 (predictions)
 - **Appendix:** App. B (B.2 Regime Transitions)
 
+---
 
+# Chapter 26: Test Methodology and Anti-Circularity
 
-\newpage
-
-\part{Validation and Reproducibility}
-
-# Test Methodology and Anti-Circularity
+**Part VIII — Validation and Reproducibility**
+**Status:** EXPANDED DRAFT
 
 
 ![Fig 26.1](figures/ch26_testing/fig_26_01.png)
@@ -8871,12 +8860,12 @@ Chapter 27 documents the specific data sources used in the validation: solar sys
 - **Referenced by:** Ch 27–30
 - **Appendix:** App. D (Test File Index)
 
+---
 
+# Chapter 27: Data Acquisition Sources and Methodology
 
-\newpage
-
-# Data Acquisition Sources and Methodology
-
+**Part VIII — Validation and Reproducibility**
+**Status:** EXPANDED DRAFT
 
 ---
 
@@ -8931,21 +8920,21 @@ These tests verify SSZ = GR in the weak-field limit. Any deviation here would im
 
 **Sirius B spectral redshift (HST/STIS):** The white dwarf companion of Sirius A has a gravitational redshift z = GM/(c²R) = 8.0 × 10⁻⁵. HST/STIS measurement: z = (8.0 ± 0.4) × 10⁻⁵. SSZ prediction: z = Ξ(R) = r_s/(2R) = 8.0 × 10⁻⁵. Agreement: exact.
 
-**S2 star orbit around Sgr A* (GRAVITY collaboration, ESO VLT):** The S2 star's orbit around the Milky Way's central black hole shows gravitational redshift at periapsis (r_peri $\approx$ 1400 r_s). The GRAVITY measurement: z_peri = (7.0 ± 0.5) × 10⁻⁴. SSZ: z = Ξ(r_peri) = r_s/(2r_peri). Agreement within measurement uncertainty.
+**S2 star orbit around Sgr A* (GRAVITY collaboration, ESO VLT):** The S2 star's orbit around the Milky Way's central black hole shows gravitational redshift at periapsis (r_peri ≈ 1400 r_s). The GRAVITY measurement: z_peri = (7.0 ± 0.5) × 10⁻⁴. SSZ: z = Ξ(r_peri) = r_s/(2r_peri). Agreement within measurement uncertainty.
 
 ### Tier 3 — Neutron Stars (r/r_s ~ 3–6, strong field)
 
 This is the regime where SSZ and GR begin to diverge.
 
-**NICER mass-radius measurements (Riley et al. 2019, ApJL 887:L21; Miller et al. 2019, ApJL 887:L24; Riley et al. 2021, ApJL 918:L27):** NASA's Neutron Star Interior Composition Explorer aboard the ISS measures neutron star masses and radii through X-ray pulse profile modeling. For PSR J0030+0451: M = 1.34 M_$\odot$, R = 12.71 km, giving r/r_s $\approx$ 3.2. SSZ predicts a surface redshift 13% higher than GR at this compactness — within the current measurement uncertainty but testable with improved statistics. NICER is the primary data source for the most important near-term SSZ prediction.
+**NICER mass-radius measurements (Riley et al. 2019, ApJL 887:L21; Miller et al. 2019, ApJL 887:L24; Riley et al. 2021, ApJL 918:L27):** NASA's Neutron Star Interior Composition Explorer aboard the ISS measures neutron star masses and radii through X-ray pulse profile modeling. For PSR J0030+0451: M = 1.34 M_☉, R = 12.71 km, giving r/r_s ≈ 3.2. SSZ predicts a surface redshift 13% higher than GR at this compactness — within the current measurement uncertainty but testable with improved statistics. NICER is the primary data source for the most important near-term SSZ prediction.
 
 **NANOGrav pulsar timing (15-year data release):** Pulsar timing arrays are sensitive to subtle modifications of gravitational time dilation. The SSZ correction to pulsar timing models is +30% of the standard GR orbital decay prediction for millisecond pulsars in compact binaries.
 
-**Cygnus X-1 (RXTE archival spectra):** The X-ray binary Cygnus X-1 (M $\approx$ 21 M_$\odot$) provides spectral data from the inner accretion disk (r ~ 6r_s). SSZ predicts modified iron line profiles due to the different D(r) profile compared to the Kerr metric.
+**Cygnus X-1 (RXTE archival spectra):** The X-ray binary Cygnus X-1 (M ≈ 21 M_☉) provides spectral data from the inner accretion disk (r ~ 6r_s). SSZ predicts modified iron line profiles due to the different D(r) profile compared to the Kerr metric.
 
 ### Tier 4 — Black Holes (r/r_s ~ 1–3, extreme strong field)
 
-**EHT shadow images (M87*, Sgr A*):** The Event Horizon Telescope measures the angular diameter of the photon ring. SSZ predicts a shadow 1.3% smaller than GR due to the shifted photon sphere (r_ph $\approx$ 1.48r_s vs 1.50r_s in GR). Current EHT precision: ~10%. ngEHT (2027–2030) target: < 1%.
+**EHT shadow images (M87*, Sgr A*):** The Event Horizon Telescope measures the angular diameter of the photon ring. SSZ predicts a shadow 1.3% smaller than GR due to the shifted photon sphere (r_ph ≈ 1.48r_s vs 1.50r_s in GR). Current EHT precision: ~10%. ngEHT (2027–2030) target: < 1%.
 
 **G79.29+0.46 LBV nebula (Herschel, Spitzer, ALMA):** Molecular shell structure in the expanding nebula. 6/6 SSZ predictions confirmed (Chapter 24).
 
@@ -8971,7 +8960,7 @@ For each dataset, the anti-circularity chain is documented:
 
 | Dataset | SSZ Inputs | Data used to calibrate? |
 |---------|-----------|----------------------|
-| Cassini Shapiro | M_$\odot$, r_s, Ξ(r) | NO — Ξ defined from G, M, r only |
+| Cassini Shapiro | M_☉, r_s, Ξ(r) | NO — Ξ defined from G, M, r only |
 | Sirius B redshift | M_SirB, R_SirB, D(r) | NO — D defined from Ξ only |
 | GPS clock drift | M_⊕, R_⊕, orbit alt | NO — purely from constants |
 | G79 molecular | Shell model + Ξ gradient | NO — no G79 data in model |
@@ -8983,12 +8972,12 @@ For each dataset, the anti-circularity chain is documented:
 
 | Tier | Observable | SSZ−GR | SSZ−Obs | Status |
 |------|-----------|--------|---------|--------|
-| 1 | Shapiro delay | < 0.001% | < 0.003% | Y indistinguishable |
-| 1 | Mercury precession | 0 | < 0.01% | Y exact match |
-| 1 | Solar deflection | 0 | < 0.1% | Y |
-| 1 | GPS clock drift | 0 | < 0.001% | Y |
-| 2 | Sirius B redshift | < 0.01% | < 5% | Y |
-| 2 | S2 redshift | < 0.1% | within σ | Y |
+| 1 | Shapiro delay | < 0.001% | < 0.003% | ✓ indistinguishable |
+| 1 | Mercury precession | 0 | < 0.01% | ✓ exact match |
+| 1 | Solar deflection | 0 | < 0.1% | ✓ |
+| 1 | GPS clock drift | 0 | < 0.001% | ✓ |
+| 2 | Sirius B redshift | < 0.01% | < 5% | ✓ |
+| 2 | S2 redshift | < 0.1% | within σ | ✓ |
 | 3 | NS surface z | **+13%** | pending | **prediction** |
 | 4 | BH shadow | **−1.3%** | pending | **prediction** |
 
@@ -9087,7 +9076,7 @@ For ESO spectroscopic data: the uncertainty in the effective temperature and sur
 
 ### Metric Perturbation Data and SSZ Predictions
 
-metric perturbation observations from observational campaigns, complementary observatories, and additional detector networks provide a new class of tests for the SSZ framework. The metric perturbation signal from a binary merger encodes information about the mass, spin, and orbital dynamics of the merging objects, as well as the properties of the merger remnant.
+metric perturbation observations from GW detectors, complementary observatories, and additional detector networks provide a new class of tests for the SSZ framework. The metric perturbation signal from a binary merger encodes information about the mass, spin, and orbital dynamics of the merging objects, as well as the properties of the merger remnant.
 
 The SSZ predictions for metric perturbation observables fall into three categories:
 
@@ -9129,14 +9118,12 @@ Chapter 28 presents the cross-repository test results: 260+ tests across 6 repos
 - **Referenced by:** Ch 28 (test results)
 - **Appendix:** App. C (Data Sources C.4), App. D
 
+---
 
+# Chapter 28: Cross-Repository Test Results and Consistency
 
-\newpage
-
-# Cross-Repository Test Results and Consistency
-
-
- v2
+**Part VIII — Validation and Reproducibility**
+**Status:** EXPANDED DRAFT v2
 
 
 ![Fig](figures/ch28_validation/eso_breakthrough_results.png)
@@ -9191,7 +9178,7 @@ The single test failure (out of 111 combined tests) occurs for a specific ESO sp
 
 ### Aggregate Results
 
-The SSZ test suite spans 11 repositories in `E:/clone` with a total of 564+ pytest-verified tests plus script-based validations:
+The SSZ test suite spans 11 repositories in `E:\clone` with a total of 564+ pytest-verified tests plus script-based validations:
 
 | Repository | Tests | Focus Area | L-Levels | Pass Rate |
 |-----------|-------|------------|----------|-----------|
@@ -9269,7 +9256,7 @@ The ssz-lensing repository has 279 tests: 271 PASS and 8 FAIL. All failures occu
 
 **3. No blind analysis.** In experimental physics, blind analysis protocols prevent the analyst from seeing the answer while performing the analysis. SSZ tests are not blind — the expected answers are known during test development. A blind test would require an external group to generate new data (e.g., synthetic metric perturbation signals with or without echoes) and ask the SSZ framework to classify them.
 
-**4. Statistical power.** The G79 test (6/6 confirmed predictions, p $\approx$ 1.6%) is suggestive but not conclusive. A larger sample of astrophysical test cases (more LBV nebulae, more neutron stars) is needed to build statistical power.
+**4. Statistical power.** The G79 test (6/6 confirmed predictions, p ≈ 1.6%) is suggestive but not conclusive. A larger sample of astrophysical test cases (more LBV nebulae, more neutron stars) is needed to build statistical power.
 
 **5. No adversarial testing.** The test suite verifies that SSZ works in known regimes. It does not systematically search for regimes where SSZ might fail. An adversarial approach — deliberately constructing scenarios designed to break SSZ — would be more powerful. Examples: extreme mass ratios, rapidly varying potentials, multi-body configurations.
 
@@ -9341,7 +9328,7 @@ This chapter demonstrated the internal consistency of the SSZ implementation acr
 
 Chapter 29 addresses the complementary question: what does SSZ not explain? The known limitations (spherical symmetry restriction, tree-level alpha prediction, observational accessibility) are documented explicitly, and the open questions that would most advance the framework are identified.
 
-- **Correctness of SSZ:** Mathematical consistency $\neq$ physical truth. A perfectly consistent theory can be wrong.
+- **Correctness of SSZ:** Mathematical consistency ≠ physical truth. A perfectly consistent theory can be wrong.
 - **Strong-field predictions:** NS +13% and BH −1.3% are predictions, not confirmed results
 - **Uniqueness of Ξ:** Other bounded monotonic profiles (not based on φ) might also produce consistent results
 - **Physical reality of segments:** Whether the "segment lattice" is a real physical structure or a mathematical tool remains open
@@ -9394,7 +9381,7 @@ This means SSZ validation is structurally simpler (no parameter estimation, no d
 
 ### Numerical Relativity
 
-GR strong-field predictions (metric perturbationforms from binary mergers) are validated by comparing independent numerical relativity codes: Einstein Toolkit, SpEC, BAM, SACRA. Cross-code agreement to better than 1 percent for waveform overlap is required before waveforms are used as observational campaigns templates. SSZ cross-repository agreement at 10^-15 exceeds this standard by many orders of magnitude, though the SSZ calculations are analytically simpler than numerical relativity.
+GR strong-field predictions (metric perturbationforms from binary mergers) are validated by comparing independent numerical relativity codes: Einstein Toolkit, SpEC, BAM, SACRA. Cross-code agreement to better than 1 percent for waveform overlap is required before waveforms are used as GW detectors templates. SSZ cross-repository agreement at 10^-15 exceeds this standard by many orders of magnitude, though the SSZ calculations are analytically simpler than numerical relativity.
 
 ## Reproducibility Protocol
 
@@ -9425,14 +9412,12 @@ SSZ is not a single calculation but a framework implemented across multiple inde
 - **Referenced by:** Ch 29, Ch 30
 - **Appendix:** App. D (Repo Index), App. C (Data Sources)
 
+---
 
+# Chapter 29: Known Limitations and Open Questions
 
-\newpage
-
-# Known Limitations and Open Questions
-
-
- v2
+**Part VIII — Validation and Reproducibility**
+**Status:** EXPANDED DRAFT v2
 
 ---
 
@@ -9456,7 +9441,7 @@ Why is this necessary? Each chapter in this book serves a specific function in t
 
 No physical theory is complete, and intellectual honesty requires explicit acknowledgment of what a theory does not explain, what it explains only partially, and where its predictions are uncertain. This chapter documents the known limitations of SSZ and identifies the open questions whose resolution would most significantly advance the framework.
 
-The limitations fall into three categories. First, scope limitations: SSZ in its current form applies only to spherically symmetric, non-rotating gravitational fields. Extensions to rotating fields (Kerr-like metrics) and to cosmological scales are planned but not yet developed. Second, precision limitations: the tree-level SSZ prediction for the fine-structure constant (alpha_SSZ = 1/137.08) differs from the measured value by 0.03 percent, which is consistent with the expected magnitude of loop corrections but has not been explicitly calculated. Third, observational limitations: the most distinctive SSZ predictions (finite D at r_s, specific black hole shadow correction) require strong-field measurements that are at or beyond the current state of the art.
+The limitations fall into three categories. First, scope limitations: SSZ in its current form applies only to spherically symmetric, non-rotating gravitational fields. Extensions to rotating fields (Kerr-like metrics) and to cosmological scales are planned but not yet developed. Second, precision limitations: the tree-level SSZ prediction for the fine-structure constant (alpha_SSZ = 1/137.08) differs from the measured value by 0.03 percent, which is consistent with the expected magnitude of loop corrections but has not been explicitly calculated. Third, observational limitations: the most distinctive SSZ predictions (finite D at r_s, specific black hole shadow correction) require strong-field measurements that are at or beyond the current state of the art. A specific untested prediction concerns the radio band: SSZ predicts that thermal emission from the natural boundary is redshifted into the 1–10 GHz range with a characteristic spectral index (α ≈ −0.1) distinct from synchrotron emission. Existing infrastructure — notably the 100-m Effelsberg radio telescope (MPIfR Bonn, UBB receiver 0.6–3.0 GHz) and the EPTA collaboration including Universität Bielefeld — could in principle test this prediction, but no dedicated observation has been attempted.
 
 Why is this necessary? A theory that claims to have no limitations is not credible. By documenting limitations explicitly, SSZ invites targeted criticism and focused experimental tests. Each limitation listed in this chapter corresponds to a specific research program that could resolve it.
 
@@ -9471,7 +9456,7 @@ Eight test failures exist in the ssz-lensing repository, all in root-finding pre
 
 All are numerical solver issues, not SSZ physics errors — all 6 core SSZ repositories pass at 100%.
 
-**Root cause:** SSZ's lensing formula α = (1+γ)r_s/b with γ = 1 produces larger deflection angles near the photon sphere than GR because the SSZ photon sphere is slightly closer to r_s (r_ph $\approx$ 1.48r_s vs 1.50r_s). The bisection solver's upper bracket, calibrated for GR deflection angles, is too low for the SSZ values.
+**Root cause:** SSZ's lensing formula α = (1+γ)r_s/b with γ = 1 produces larger deflection angles near the photon sphere than GR because the SSZ photon sphere is slightly closer to r_s (r_ph ≈ 1.48r_s vs 1.50r_s). The bisection solver's upper bracket, calibrated for GR deflection angles, is too low for the SSZ values.
 
 **Fix:** Adaptive bracketing that sets α_max based on the local Ξ profile. This would resolve all 8 failures without changing any physics formula. The fix is documented but intentionally left unimplemented to demonstrate **transparent failure reporting**.
 
@@ -9482,7 +9467,7 @@ All are numerical solver issues, not SSZ physics errors — all 6 core SSZ repos
 The segment density Ξ(r) satisfies two boundary conditions by construction:
 
 - Ξ → 0 as r → ∞ (flat spacetime at infinity)
-- Ξ → Ξ_max = 1 − e^{−φ} $\approx$ 0.802 as r → r_s (saturation)
+- Ξ → Ξ_max = 1 − e^{−φ} ≈ 0.802 as r → r_s (saturation)
 
 These boundary conditions and the functional forms (g1: Ξ = r_s/2r, g2: Ξ = 1 − exp(−φr_s/r)) are **axioms** of SSZ, motivated by the φ-geometry of Chapter 3 but not derived from a variational principle.
 
@@ -9560,10 +9545,10 @@ The formula Ξ = (r_s/r)²·exp(−r/r_φ) is **FORBIDDEN** (Appendix B §B.9). 
 | Information paradox | Unresolved (50+ yr) | Dissolved (D > 0) | **SSZ** |
 | Dark energy | Unexplained Λ (fitted) | Not addressed | GR |
 | Quantum gravity | Incompatible with QM | Not addressed | Neither |
-| Action principle | Einstein-Hilbert Y | Missing | **GR** |
-| Cosmology | ΛCDM framework Y | Not developed | **GR** |
-| Multi-body | Numerical relativity Y | Not developed | **GR** |
-| Rotation | Kerr exact Y | Kerr-SSZ (ansatz) | **GR** |
+| Action principle | Einstein-Hilbert ✓ | Missing | **GR** |
+| Cosmology | ΛCDM framework ✓ | Not developed | **GR** |
+| Multi-body | Numerical relativity ✓ | Not developed | **GR** |
+| Rotation | Kerr exact ✓ | Kerr-SSZ (ansatz) | **GR** |
 | Free parameters | Λ (1 fitted) | 0 fitted | **SSZ** |
 | Falsifiability | Hard (Λ adjustable) | Strong (zero params) | **SSZ** |
 
@@ -9688,11 +9673,12 @@ Chapter 30 collects all falsifiable predictions and specifies the instruments, p
 - **Referenced by:** Ch 30 (predictions)
 - **Appendix:** App. B (B.9 Forbidden Formulas)
 
+---
 
+# Chapter 30: Falsifiable Predictions and Observational Tests
 
-\newpage
-
-# Falsifiable Predictions and Observational Tests
+**Part VIII — Validation and Reproducibility**
+**Status:** EXPANDED DRAFT
 
 
 ![Fig](figures/ch30_predictions/fig_30_01_prediction_timeline.png)
@@ -9738,16 +9724,16 @@ The physical mechanism is straightforward. In GR, the time dilation factor at ra
 
 z_{\text{SSZ}} = \frac{1}{D_{\text{SSZ}}(R_{\text{NS}})} - 1 \approx 1.13 \times z_{\text{GR}}
 
-For a typical neutron star (M = 1.4 M_$\odot$, R = 12 km, r/r_s $\approx$ 2.9):
+For a typical neutron star (M = 1.4 M_☉, R = 12 km, r/r_s ≈ 2.9):
 
-- GR: z_GR $\approx$ 0.306
-- SSZ: z_SSZ $\approx$ 0.346
+- GR: z_GR ≈ 0.306
+- SSZ: z_SSZ ≈ 0.346
 
-The difference Δz/z $\approx$ +13% is within reach of NICER's extended mission (2025–2027), which measures surface redshifts through X-ray pulse profile modeling with ~5% precision.
+The difference Δz/z ≈ +13% is within reach of NICER's extended mission (2025–2027), which measures surface redshifts through X-ray pulse profile modeling with ~5% precision.
 
 ### Prediction 2: Black Hole Shadow Diameter (−1.3%)
 
-The SSZ photon sphere is located at r_ph $\approx$ 1.48 r_s (compared to 1.50 r_s in GR). This shifts the critical impact parameter for photon capture, producing a shadow that is **1.3% smaller** than GR predicts.
+The SSZ photon sphere is located at r_ph ≈ 1.48 r_s (compared to 1.50 r_s in GR). This shifts the critical impact parameter for photon capture, producing a shadow that is **1.3% smaller** than GR predicts.
 
 \theta_{\text{SSZ}} \approx 0.987 \times \theta_{\text{GR}}
 
@@ -9755,7 +9741,7 @@ Current EHT precision: ~10% (insufficient). The next-generation EHT (ngEHT, 2027
 
 ### Prediction 3: Pulsar Timing Correction (+30%)
 
-SSZ modifies the gravitational time delay contribution to pulsar timing models. For millisecond pulsars in compact binaries (orbital period < 1 day, companion mass > 0.5 M_$\odot$), the SSZ correction to the orbital decay rate is:
+SSZ modifies the gravitational time delay contribution to pulsar timing models. For millisecond pulsars in compact binaries (orbital period < 1 day, companion mass > 0.5 M_☉), the SSZ correction to the orbital decay rate is:
 
 \dot{P}_{\text{SSZ}} \approx 1.30 \times \dot{P}_{\text{GR}}
 
@@ -9772,7 +9758,7 @@ The only prediction already tested: 6 independent predictions for the G79.29+0.4
 | 1 | NS surface z | +13% | standard | +13% | NICER | 2025–2027 |
 | 2 | BH shadow θ | −1.3% | standard | −1.3% | ngEHT | 2027–2030 |
 | 3 | Pulsar Ṗ | +30% | standard | +30% | NANOGrav | ongoing |
-| 4 | G79 zones | 6/6 Y | N/A | — | archival | done |
+| 4 | G79 zones | 6/6 ✓ | N/A | — | archival | done |
 
 ## Sign Predictions
 
@@ -9851,7 +9837,7 @@ Quantitatively: if the SSZ prediction for neutron star surface redshift is z_SSZ
 |-----------|-----------|----------|------------|-------------------|
 | NS redshift | +13% higher | baseline | 13% | 5% measurement |
 | BH shadow | -1.3% smaller | baseline | 1.3% | 0.5% measurement |
-| GW echoes | present at tau_echo | absent | binary | detection/null |
+| ~~GW echoes~~ | ~~present~~ | ~~absent~~ | ~~discarded~~ | ~~discarded~~ |
 | Pulsar timing | Delta_P correction | no correction | ~1 microsecond | 0.1 microsecond |
 | G79 molecules | 6/6 zones confirmed | not predicted | categorical | additional LBVs |
 
@@ -9861,7 +9847,7 @@ Prediction 1 (NS redshift): NICER is currently operational and accumulating data
 
 Prediction 2 (BH shadow): The ngEHT, with additional stations in Africa and Greenland, will achieve 2x better angular resolution than the current EHT. First ngEHT observations are expected around 2028. The required 0.5% precision in shadow diameter demands multi-epoch observations to average over interstellar scattering.
 
-Prediction 3 (GW echoes): observational campaigns A+ (operational ~2025) and observational campaigns Voyager (~2030) will have sufficient sensitivity to detect or rule out post-merger echoes at the predicted delay time tau_echo = 2 r_s/c x ln(1/D(r_s)) for stellar-mass black holes. A null detection after 100+ merger events would falsify SSZ at high confidence.
+~~Prediction 3 (GW echoes): DISCARDED — see Section 30.1.~~
 
 Prediction 4 (Pulsar timing): The Square Kilometre Array (SKA, first light ~2028) will time millisecond pulsars to sub-microsecond precision. Binary pulsars in tight orbits (P_orb < 2 hours) would show the SSZ timing correction most clearly.
 
@@ -9874,9 +9860,9 @@ Prediction 5 (G79 molecules): ALMA and NOEMA can observe additional LBV nebulae 
 
 | # | Formula | Domain |
 |---|---------|--------|
-| 1 | z_SSZ $\approx$ 1.13 × z_GR | NS redshift prediction |
-| 2 | θ_SSZ $\approx$ 0.987 × θ_GR | BH shadow prediction |
-| 3 | Ṗ_SSZ $\approx$ 1.30 × Ṗ_GR | pulsar timing |
+| 1 | z_SSZ ≈ 1.13 × z_GR | NS redshift prediction |
+| 2 | θ_SSZ ≈ 0.987 × θ_GR | BH shadow prediction |
+| 3 | Ṗ_SSZ ≈ 1.30 × Ṗ_GR | pulsar timing |
 
 ---
 
@@ -9909,7 +9895,7 @@ Black hole shadow diameter (Sgr A*): SSZ = 98.7 percent of GR prediction, differ
 
 Finite time dilation at r_s: SSZ D_min = 0.555, GR D = 0, difference = qualitative, instrument = future metric perturbation detectors, timeline = 2040s+.
 
-metric perturbation ringdown phase: SSZ differs from GR by a factor depending on D_min^2, difference = approximately 3 percent for stellar-mass mergers, instrument = current observational A+, timeline = 2025-2030.
+Metric perturbation ringdown phase: SSZ differs from GR by a factor depending on D_min^2, difference = approximately 3 percent for stellar-mass mergers, instrument = Einstein Telescope, timeline = 2035+.
 
 Fine-structure constant running near compact objects: SSZ predicts alpha_eff differs from alpha_flat by Xi-dependent corrections, instrument = future X-ray spectrometers, timeline = 2035+.
 
@@ -9919,11 +9905,11 @@ Each prediction has a clear pass/fail criterion: if the measured value falls out
 
 The falsifiable predictions of SSZ span a range of timescales, from currently testable to requiring future technology. The experimental timeline can be organized into three horizons:
 
-Near-term (2025-2030): NICER observations of millisecond pulsars will constrain the neutron star mass-radius relation to approximately 5 percent precision, potentially detecting the SSZ surface redshift correction. current observational observations of binary mergers will accumulate enough events to test the SSZ ringdown frequency prediction at the 5-10 percent level. Multi-wavelength monitoring of X-ray binaries will constrain the X-ray to radio variability timescale ratio.
+Near-term (2025-2030): NICER observations of millisecond pulsars will constrain the neutron star mass-radius relation to approximately 5 percent precision, potentially detecting the SSZ surface redshift correction. GW detector observations of binary mergers will accumulate enough events to test the SSZ ringdown frequency prediction at the 5-10 percent level. Multi-wavelength monitoring of X-ray binaries will constrain the X-ray to radio variability timescale ratio.
 
 Medium-term (2030-2040): The next-generation Event Horizon Telescope (ngEHT) will achieve sub-percent angular resolution for the Sgr A* shadow, potentially detecting the 1.3 percent SSZ correction. The Athena X-ray observatory will achieve 2.5 eV energy resolution below 7 keV, enabling high-precision iron line spectroscopy of accreting compact objects. The LISA metric perturbation detector will observe massive black hole mergers at cosmological distances, providing strong-field tests in a mass range inaccessible to ground-based detectors.
 
-Long-term (2040+): Space-based optical clock networks will achieve the frequency precision needed to detect the SSZ-GR difference in the frequency holonomy. The Einstein Telescope and Cosmic Explorer will detect metric perturbations with enough precision to measure post-merger echoes from the natural boundary. Third-generation X-ray observatories will measure the accretion disk spectral modification predicted by SSZ.
+Long-term (2040+): Space-based optical clock networks will achieve the frequency precision needed to detect the SSZ-GR difference in the frequency holonomy. The Einstein Telescope and Cosmic Explorer will detect metric perturbations with enough precision to measure QNM frequency shifts and tidal Love numbers. Third-generation X-ray observatories will measure the accretion disk spectral modification predicted by SSZ.
 
 Each milestone corresponds to a specific prediction from the SSZ framework. If a milestone is reached and the measurement contradicts the SSZ prediction, the framework is falsified at that level. If the measurement confirms the prediction, the framework survives and the next milestone becomes the critical test. This progressive testing structure ensures that SSZ is continuously subjected to more stringent tests as experimental capabilities improve.
 
@@ -9933,7 +9919,7 @@ The most important near-term milestone is the NICER measurement of the neutron s
 
 The most powerful tests of SSZ will come from multi-messenger observations -- simultaneous detection of electromagnetic radiation, metric perturbations, and (potentially) neutrinos from the same astrophysical event. Multi-messenger observations provide multiple independent probes of the same gravitational field, allowing stringent consistency checks.
 
-The prototype multi-messenger event is the binary neutron star merger GW170817, which was detected in metric perturbations (by observational), gamma rays (by Fermi and INTEGRAL), optical/infrared (by dozens of ground-based telescopes), and radio (by VLA and other radio telescopes). This event provided the constraint that metric perturbations and electromagnetic waves travel at the same speed to within 10^{-15}, which SSZ satisfies automatically.
+The prototype multi-messenger event is the binary neutron star merger GW170817, which was detected in metric perturbations (by GW detectors), gamma rays (by Fermi and INTEGRAL), optical/infrared (by dozens of ground-based telescopes), and radio (by VLA and other radio telescopes). This event provided the constraint that metric perturbations and electromagnetic waves travel at the same speed to within 10^{-15}, which SSZ satisfies automatically.
 
 Future multi-messenger events could provide much stronger SSZ tests. A neutron star-black hole merger detected in both metric perturbations and electromagnetic radiation would provide: (1) the mass and spin of the black hole (from the metric perturbation inspiral), (2) the tidal deformability of the neutron star (from the late inspiral and merger), (3) the electromagnetic spectrum of the kilonova (from the optical/infrared afterglow), and (4) the jet properties (from the radio and X-ray afterglow). Each of these observables has a specific SSZ prediction that differs from the GR prediction, and the consistency of all four predictions provides a much more stringent test than any single measurement.
 
@@ -9980,11 +9966,7 @@ The predictions presented here are the ultimate test of the SSZ framework. If th
 - **Referenced by:** —
 - **Appendix:** App. C (Instruments C.6), App. F (Predictions Index)
 
-
-
-\newpage
-
-\backmatter
+---
 
 # Conclusion: The Status of Segmented Spacetime
 
@@ -10027,23 +10009,23 @@ In the strong field (r/r_s < 10), SSZ diverges from GR with specific, quantitati
 
 - **D(r_s) = 0.555** — finite time dilation at the Schwarzschild radius, compared to D_GR = 0. Clocks at the natural boundary tick at 55.5% of the rate at infinity. This is the single most consequential difference between SSZ and GR.
 
-- **No singularity** — the segment density saturates at Ξ_max = 1 − exp(−φ) $\approx$ 0.802. All curvature invariants (Kretschner scalar, Ricci scalar, Weyl tensor components) remain finite at every radius. Geodesics are complete. The Penrose-Hawking singularity theorems do not apply because their energy condition assumptions are marginally violated near the natural boundary.
+- **No singularity** — the segment density saturates at Ξ_max = 1 − exp(−φ) ≈ 0.802. All curvature invariants (Kretschner scalar, Ricci scalar, Weyl tensor components) remain finite at every radius. Geodesics are complete. The Penrose-Hawking singularity theorems do not apply because their energy condition assumptions are marginally violated near the natural boundary.
 
 - **No event horizon** — the metric signature remains (−+++) everywhere. There is no causal disconnection, no one-way membrane, no point of no return. Light escapes from every radius, including r = r_s, with finite redshift z = 0.802.
 
 - **Information paradox dissolved** — since D > 0 everywhere, information is never permanently trapped. The 50-year-old paradoxes of black hole physics (Hawking information loss, firewall, complementarity) are dissolved by construction. They all require D = 0; SSZ has D = 0.555.
 
-- **Modified black hole shadow** — the SSZ photon sphere at r_ph $\approx$ 1.48r_s (vs 1.50r_s in GR) produces a shadow 1.3% smaller than GR predicts.
+- **Modified black hole shadow** — the SSZ photon sphere at r_ph ≈ 1.48r_s (vs 1.50r_s in GR) produces a shadow 1.3% smaller than GR predicts.
 
 - **Superradiant stability** — the G_SSZ regulator suppresses superradiant growth rates by a factor D(r_s)^{2l+1}, explaining why observational observes spinning black holes in mass ranges where ultralight boson superradiance should have spun them down.
 
-- **metric perturbation echoes** — the natural boundary at D = 0.555 partially reflects metric perturbations (reflection coefficient R $\approx$ 0.44), producing post-merger echoes absent in GR.
+- **Finite tidal deformability** — dark stars have k₂ ~ 0.052 (vs. k₂ = 0 for GR black holes), testable with next-generation detectors.
 
 ### Astrophysical Validation
 
 Beyond standard gravitational tests, SSZ has been validated against astrophysical observations:
 
-- **G79.29+0.46 LBV nebula:** Six independent predictions for molecular zone locations, temperatures, and dust properties — all six confirmed with zero free parameters (p $\approx$ 1.6% under null hypothesis).
+- **G79.29+0.46 LBV nebula:** Six independent predictions for molecular zone locations, temperatures, and dust properties — all six confirmed with zero free parameters (p ≈ 1.6% under null hypothesis).
 
 - **Cygnus X-1 spectral analysis:** Iron line profiles from the inner accretion disk consistent with SSZ's modified D(r) profile.
 
@@ -10092,11 +10074,9 @@ SSZ is falsifiable within the next decade — a remarkably short timeline for a 
 
 **2025–2028: NANOGrav / IPTA.** Pulsar timing residuals sensitive to the +30% SSZ correction to orbital decay rates. The 20-year dataset (expected ~2028) will be definitive.
 
-**2025–2030: observational campaigns O4/O5.** metric perturbation ringdown analysis for echo signals. With ~100 binary black hole mergers at sufficient signal-to-noise ratio, the echo search reaches the sensitivity needed for confirmation or exclusion.
-
 **2027–2030: ngEHT.** Next-generation Event Horizon Telescope with additional stations. Target: < 1% precision on shadow diameter for M87* and Sgr A*. This directly tests the −1.3% prediction.
 
-**If these observations match GR exactly** — no neutron star redshift excess, no shadow deficit, no metric perturbation echoes, no pulsar timing correction — **SSZ is falsified.** This is a feature, not a weakness. Zero-parameter theories are maximally falsifiable: every prediction is a potential death sentence.
+**If these observations match GR exactly** — no neutron star redshift excess, no shadow deficit, no pulsar timing correction — **SSZ is falsified.** This is a feature, not a weakness. Zero-parameter theories are maximally falsifiable: every prediction is a potential death sentence.
 
 ## The Comparison with General Relativity
 
@@ -10155,7 +10135,7 @@ The immediate priority is observational discrimination. Three instruments will p
 
 1. **NICER (operational):** Continued accumulation of neutron star mass-radius data. A sample of 20+ pulsars with simultaneous M and R measurements would provide the statistical power to test Prediction 1 (NS surface redshift +13%).
 
-2. **observational campaigns A+ (2025):** Enhanced sensitivity to post-merger metric perturbation signals. Stacking analysis of 100+ binary black hole mergers would reach the sensitivity needed to detect or rule out post-merger echoes (Prediction 3).
+2. **GW detectors A+ (2025):** Enhanced sensitivity to post-merger metric perturbation signals. Stacking analysis of 100+ binary black hole mergers would reach the sensitivity needed to detect or rule out post-merger echoes (Prediction 3).
 
 3. **ngEHT (2028):** Additional stations and higher frequency observations will improve shadow diameter precision from approximately 10% to approximately 2%, approaching the 1.3% difference between SSZ and GR (Prediction 2).
 
@@ -10164,7 +10144,7 @@ The immediate priority is observational discrimination. Three instruments will p
 Next-generation instruments will provide definitive tests:
 
 - **STROBE-X:** X-ray timing with 10x NICER sensitivity. Individual neutron star redshift measurements at 5% precision.
-- **Einstein Telescope:** Third-generation metric perturbation detector with 10x observational campaigns sensitivity. Echo detection/exclusion at high confidence.
+- **Einstein Telescope:** Third-generation metric perturbation detector with 10x GW detectors sensitivity. Echo detection/exclusion at high confidence.
 - **SKA:** Pulsar timing at sub-microsecond precision. Binary pulsars in tight orbits would test Prediction 4.
 - **Athena:** X-ray spectroscopy at 2.5 eV resolution. Iron line profiles from inner accretion disks would probe the SSZ metric near the ISCO.
 
@@ -10186,12 +10166,9 @@ These critical theoretical developments would ultimately transform SSZ from a ph
 
 *The authors welcome correspondence: mail@error.wtf*
 
+---
 
-\newpage
-
-\appendix
-
-# Symbol Table and Notation Key
+# Appendix A: Symbol Table and Notation Key
 
 ## Dimensional Analysis Guide
 
@@ -10241,9 +10218,9 @@ Any formula that fails dimensional analysis contains an error. This is the simpl
 | Symbol | Name | Definition | Range | Units | Chapter |
 |--------|------|-----------|-------|-------|---------|
 | Ξ(r) | Segment density | Dimensionless field | [0, Ξ_max] | — | 1, 2 |
-| Ξ_max | Maximum segment density | 1 − exp(−φ) $\approx$ 0.802 | — | — | 3 |
+| Ξ_max | Maximum segment density | 1 − exp(−φ) ≈ 0.802 | — | — | 3 |
 | D(r) | Time dilation factor | 1/(1 + Ξ(r)) | [D_min, 1] | — | 1 |
-| D_min | Minimum time dilation | 1/(1 + Ξ_max) $\approx$ 0.555 | — | — | 18 |
+| D_min | Minimum time dilation | 1/(1 + Ξ_max) ≈ 0.555 | — | — | 18 |
 | r_s | Schwarzschild radius | 2GM/c² | > 0 | m | 1 |
 | r* | Regime transition radius | Solution of Ξ_weak = Ξ_strong | ~1.4–1.6 r_s | m | 3 |
 | s(r) | Scaling factor | 1 + Ξ(r) = 1/D(r) | [1, s_max] | — | 10 |
@@ -10310,8 +10287,8 @@ The factor of 2 arises because Ξ-integration captures only the temporal (g_tt) 
 |--------|------|-----------|---------|
 | G_SSZ | Superradiance regulator | D(r_s)^{2l+1} | 22 |
 | S | Stability index | 1 − G_SSZ · ω_max/Ω_H | 22 |
-| R | GW reflection coefficient | (1−D²)/(1+D²) $\approx$ 0.44 | 20 |
-| ξ_coh | Coherence length | $\propto$ 1/D(r) = 1+Ξ(r) | 25 |
+| R | GW reflection coefficient | (1−D²)/(1+D²) ≈ 0.44 | 20 |
+| ξ_coh | Coherence length | ∝ 1/D(r) = 1+Ξ(r) | 25 |
 | K | Kretschner scalar | R_αβγδR^αβγδ | 19 |
 | I_ABC | Curvature invariant | Frequency comparison of 3 clocks | 17 |
 
@@ -10330,8 +10307,8 @@ The factor of 2 arises because Ξ-integration captures only the temporal (g_tt) 
 
 | Symbol | Name | Typical Values | Chapter |
 |--------|------|---------------|---------|
-| M_$\odot$ | Solar mass | 1.989 × 10³⁰ kg | 27 |
-| R_$\odot$ | Solar radius | 6.957 × 10⁸ m | 27 |
+| M_☉ | Solar mass | 1.989 × 10³⁰ kg | 27 |
+| R_☉ | Solar radius | 6.957 × 10⁸ m | 27 |
 | l_P | Planck length | 1.616 × 10⁻³⁵ m | 25 |
 | t_P | Planck time | 5.391 × 10⁻⁴⁴ s | — |
 
@@ -10367,13 +10344,12 @@ The factor of 2 arises because Ξ-integration captures only the temporal (g_tt) 
 | N_tests | 564+ | Total automated tests |
 | Pass rate | 100% (physics) | All physics tests pass |
 
+---
 
-\newpage
-
-# Complete Formula Compendium
+# Appendix B: Complete Formula Compendium
 
 **Authors:** Carmen N. Wrede, Lino P. Casu
- — CANONICAL (Single Source of Truth)
+**Status:** FIRST DRAFT — CANONICAL (Single Source of Truth)
 ## Worked Examples
 
 ### Solar Shapiro Delay (Cassini)
@@ -10468,7 +10444,7 @@ For rapid lookup during calculations, the essential SSZ formulas in order of fre
 ```
 - **Origin:** PPN expansion with β = γ = 1
 - **Domain:** r/r_s > 2.2 (blend zone at 1.8–2.2)
-- **Unit check:** [m]/[m] = dimensionless Y
+- **Unit check:** [m]/[m] = dimensionless ✓
 - **Paper:** 01 (Radial Scaling), 03 (Frequency Framework)
 - **Test:** `test_ppn_exact.py`, `test_weak_field_contract.py`
 
@@ -10479,7 +10455,7 @@ For rapid lookup during calculations, the essential SSZ formulas in order of fre
 - **Origin:** Constructed for horizon regularity, φ-geometry
 - **Domain:** r/r_s < 1.8
 - **Limits:** Ξ(r→∞) → 0, Ξ(r_s) = 1 − exp(−φ) = 0.80171
-- **Unit check:** exp(−[dimensionless]) = dimensionless Y
+- **Unit check:** exp(−[dimensionless]) = dimensionless ✓
 - **Paper:** 04 (Metric), 16 (Singularity)
 - **Test:** `test_horizon_finite.py`, `test_xi_strong.py`
 
@@ -10500,7 +10476,7 @@ D_SSZ(r) = 1 / (1 + Ξ(r))
 ```
 - **Origin:** Directly derived from Ξ
 - **Limits:** D(r→∞) = 1 (flat spacetime), D(r_s) = 0.555 (FINITE!)
-- **Unit check:** 1/(1 + dimensionless) = dimensionless Y
+- **Unit check:** 1/(1 + dimensionless) = dimensionless ✓
 - **Paper:** 03 (Frequency Framework)
 - **Test:** `test_dilation_finite.py`
 
@@ -10525,7 +10501,7 @@ z_SSZ(r) = 1/D_SSZ(r) − 1 = Ξ(r)
 r_s = 2GM / c²
 ```
 - **Standard GR / SSZ identical**
-- **Unit check:** [m³/(kg·s²)]·[kg]/[m²/s²] = [m] Y
+- **Unit check:** [m³/(kg·s²)]·[kg]/[m²/s²] = [m] ✓
 
 ### Scaling Factor s(r)
 
@@ -10632,7 +10608,7 @@ E'(r) = s(r)·E(r),  B'(r) = s(r)·B(r)
 
 ### Maxwell Wave Equation with Scaling
 ```
-$\nabla$·(s² E) = 0,  $\nabla$×(s² B) = μ₀ε₀ s² ∂E/∂t
+∇·(s² E) = 0,  ∇×(s² B) = μ₀ε₀ s² ∂E/∂t
 ```
 - **Paper:** 22 (Maxwell Waves as Rotating Space)
 
@@ -10688,10 +10664,10 @@ v_group = L_seg · f / N
 | φ | (1+√5)/2 = 1.618034 | Golden ratio | All |
 | π | 3.141593 | Circle constant | 13 |
 | α_measured | 1/137.036 | Fine-structure (CODATA) | 15 |
-| α_SSZ | 1/(φ^{2π}·N₀) $\approx$ 1/137.08 | φ-geometry derivation | 05, 15 |
+| α_SSZ | 1/(φ^{2π}·N₀) ≈ 1/137.08 | φ-geometry derivation | 05, 15 |
 | N₀ | 4 | Segments per wavelength | 08 |
 
-**Note:** α_SSZ $\approx$ α_measured within 0.03%. The SSZ derivation uses φ-geometry
+**Note:** α_SSZ ≈ α_measured within 0.03%. The SSZ derivation uses φ-geometry
 and segment quantization; the small deviation is discussed in Ch 5.
 
 ---
@@ -10729,14 +10705,14 @@ I_ABC = D(r_A)/D(r_B) × D(r_B)/D(r_C) × D(r_C)/D(r_A) = 1
 
 | Condition | Formula | Status in SSZ |
 |-----------|---------|---------------|
-| WEC | T_μν u^μ u^ν ≥ 0 | PASS Satisfied r > 5r_s |
-| DEC | T_μν u^μ future-directed | PASS Satisfied r > 5r_s |
-| SEC | (T_μν−½Tg_μν)u^μu^ν ≥ 0 | FAIL Violated r < 5r_s |
-| NEC | T_μν k^μ k^ν ≥ 0 | PASS Always satisfied |
+| WEC | T_μν u^μ u^ν ≥ 0 | ✅ Satisfied r > 5r_s |
+| DEC | T_μν u^μ future-directed | ✅ Satisfied r > 5r_s |
+| SEC | (T_μν−½Tg_μν)u^μu^ν ≥ 0 | ❌ Violated r < 5r_s |
+| NEC | T_μν k^μ k^ν ≥ 0 | ✅ Always satisfied |
 
 **SEC violation is a PREDICTION**, not a bug:
 - At r < 5r_s, the segment structure creates effective repulsion
-- This prevents singularity formation (D(r_s) = 0.555 $\neq$ 0)
+- This prevents singularity formation (D(r_s) = 0.555 ≠ 0)
 - **Paper:** 16 (Singularity Resolution)
 - **Test:** `test_energy_conditions.py`
 
@@ -10774,13 +10750,12 @@ I_ABC = D(r_A)/D(r_B) × D(r_B)/D(r_C) × D(r_C)/D(r_A) = 1
 
 *Complete formula compendium. Every formula includes origin, domain, unit check, paper reference, and test file.*
 
+---
 
-\newpage
-
-# Complete Bibliography
+# Appendix C: Complete Bibliography
 
 **Authors:** Carmen N. Wrede, Lino P. Casu
- — CANONICAL
+**Status:** FIRST DRAFT — CANONICAL
 ## Annotated Key References
 
 ### Foundational GR and PPN
@@ -10904,7 +10879,7 @@ I_ABC = D(r_A)/D(r_B) × D(r_B)/D(r_C) × D(r_C)/D(r_A) = 1
 ### Metric Perturbation Sources
 - Binary black hole mergers (GWTC-3)
 - Neutron star mergers (GW170817)
-- SSZ prediction: ringdown spectrum $\neq$ GR for M < 10M$\odot$
+- SSZ prediction: ringdown spectrum ≠ GR for M < 10M☉
 
 ### Galactic/Nebular Data
 - Herschel/PACS 70/160μm for G79.29+0.46
@@ -10967,21 +10942,20 @@ I_ABC = D(r_A)/D(r_B) × D(r_B)/D(r_C) × D(r_C)/D(r_A) = 1
 |---------------|---------------|-----------|----------|
 | D(r_s) = 0.555 | D(r_s) = 0 | NICER | 2024+ |
 | Shadow −3% | Kerr shadow | ngEHT | 2027+ |
-| Modified QNM | Kerr QNM | observational campaigns O4/O5 | 2–4 yr |
-| α_SSZ $\approx$ 1/137.08 | N/A | Lab | Now |
+| Modified QNM | Kerr QNM | GW detectors | 2–4 yr |
+| α_SSZ ≈ 1/137.08 | N/A | Lab | Now |
 
 **If D(r_s) = 0 is measured → SSZ falsified.**
-**If γ $\neq$ 1 at >10⁻⁶ level → SSZ falsified.**
+**If γ ≠ 1 at >10⁻⁶ level → SSZ falsified.**
 
 ---
 
+---
 
-\newpage
-
-# Repository and Documentation Index
+# Appendix D: Repository and Documentation Index
 
 **Authors:** Carmen N. Wrede, Lino P. Casu
- — CANONICAL
+**Status:** FIRST DRAFT — CANONICAL
 
 ## Archival Policy
 
@@ -11144,13 +11118,16 @@ Every result in SSZ is independently reproducible. Any researcher can clone any 
 
 ---
 
+---
 
-\newpage
-
-# Historical Preprints and Consolidation Notes
+# Appendix E: Historical Preprints and Consolidation Notes
 
 **Authors:** Carmen N. Wrede, Lino P. Casu
+**Status:** FIRST DRAFT
 
+## Nature of the Preprints
+
+The SSZ preprints (Papers 01–25) are **working documents** — they were written to capture and test ideas, build up the theory incrementally, and discuss it with collaborators. They are not journal submissions and were never intended to be self-contained, polished manuscripts. Derivations that are fully developed in earlier papers are referenced rather than re-derived in later ones. This is standard scientific practice: not reinventing the wheel in every document does not imply that the derivation is missing — it means the reader is expected to follow the reference chain. The canonical versions of all papers, together with their full derivations, are consolidated in this book.
 
 ## Canonical vs Preprint Versions
 
@@ -11271,10 +11248,9 @@ The identification of phi as the fundamental scaling constant was not the starti
 
 ---
 
+---
 
-\newpage
-
-# GR vs SSZ Comparison Tables
+# Appendix F: GR vs SSZ Comparison Tables
 
 This appendix provides side-by-side comparison tables for every observable discussed in the book. Each table lists the GR prediction, the SSZ prediction, the percentage difference, the current observational constraint, and the instrument capable of distinguishing the two theories.
 
@@ -11286,11 +11262,11 @@ This appendix provides side-by-side comparison tables for every observable discu
 |-----------|-----------|---------------|-----------------|
 | NS redshift +13% | NICER/eXTP | 2026/2028 | 3-sigma / 5-sigma |
 | BH shadow -1.3% | ngEHT | 2029 | 3-sigma |
-| GW echoes | observational campaigns A+ | 2026 | 2-sigma (stacked) |
+| Tidal deformability | Einstein-Teleskop | 2035 | 3-sigma |
 | Pulsar timing | SKA | 2030 | 5-sigma |
 | G79 molecules | ALMA | 2025 (now) | Categorical |
 
-The G79 molecular zone test is already available with existing data. The metric perturbation echo search is the next chronologically. The neutron star redshift test provides the highest individual discriminating power. The complete program — all five predictions tested — should be accomplished by approximately 2032.
+The G79 molecular zone test is already available with existing data. The neutron star redshift test provides the highest individual discriminating power. The complete program — all five predictions tested — should be accomplished by approximately 2035.
 
 ### What Would Falsification Look Like?
 
@@ -11311,13 +11287,13 @@ These tests verify SSZ = GR in the weak field. Any deviation would immediately f
 
 | Observable | GR Prediction | SSZ Prediction | Difference | Observed | Status |
 |-----------|--------------|----------------|-----------|----------|--------|
-| Mercury perihelion | 42.98 arcsec/cy | 42.98 arcsec/cy | 0 | 42.98 ± 0.04 | Y identical |
-| Shapiro delay (γ) | 1.000 | 1.000 | 0 | 1.000 ± 2.3×10⁻⁵ | Y identical |
-| Solar deflection | 1.7512 arcsec | 1.7512 arcsec | 0 | 1.75 ± 0.01 | Y identical |
-| GPS clock drift | +38.6 μs/day | +38.6 μs/day | 0 | +38.6 μs/day | Y identical |
-| Pound-Rebka | 2.46×10⁻¹⁵ | 2.46×10⁻¹⁵ | 0 | 2.46×10⁻¹⁵ ± 1% | Y identical |
-| Lunar laser ranging | PPN γ=β=1 | PPN γ=β=1 | 0 | γ=1±10⁻⁴ | Y identical |
-| Gravity Probe B | 6.606 arcsec/yr | 6.606 arcsec/yr | 0 | 6.602 ± 0.018 | Y identical |
+| Mercury perihelion | 42.98 arcsec/cy | 42.98 arcsec/cy | 0 | 42.98 ± 0.04 | ✓ identical |
+| Shapiro delay (γ) | 1.000 | 1.000 | 0 | 1.000 ± 2.3×10⁻⁵ | ✓ identical |
+| Solar deflection | 1.7512 arcsec | 1.7512 arcsec | 0 | 1.75 ± 0.01 | ✓ identical |
+| GPS clock drift | +38.6 μs/day | +38.6 μs/day | 0 | +38.6 μs/day | ✓ identical |
+| Pound-Rebka | 2.46×10⁻¹⁵ | 2.46×10⁻¹⁵ | 0 | 2.46×10⁻¹⁵ ± 1% | ✓ identical |
+| Lunar laser ranging | PPN γ=β=1 | PPN γ=β=1 | 0 | γ=1±10⁻⁴ | ✓ identical |
+| Gravity Probe B | 6.606 arcsec/yr | 6.606 arcsec/yr | 0 | 6.602 ± 0.018 | ✓ identical |
 
 **Conclusion:** SSZ and GR are indistinguishable in the Solar System with current and foreseeable technology.
 
@@ -11325,10 +11301,10 @@ These tests verify SSZ = GR in the weak field. Any deviation would immediately f
 
 | Observable | GR | SSZ | Δ | Observed | Status |
 |-----------|-----|-----|---|----------|--------|
-| Sirius B redshift | 8.0×10⁻⁵ | 8.0×10⁻⁵ | < 0.01% | 8.0±0.4×10⁻⁵ | Y identical |
-| S2 periapsis z | 7.0×10⁻⁴ | 7.0×10⁻⁴ | < 0.1% | 7.0±0.5×10⁻⁴ | Y identical |
-| Hulse-Taylor Ṗ | −2.40×10⁻¹² | −2.40×10⁻¹² | < 0.01% | −2.40±0.01×10⁻¹² | Y identical |
-| Double pulsar | Matches GR | Matches GR | < 0.1% | Consistent | Y identical |
+| Sirius B redshift | 8.0×10⁻⁵ | 8.0×10⁻⁵ | < 0.01% | 8.0±0.4×10⁻⁵ | ✓ identical |
+| S2 periapsis z | 7.0×10⁻⁴ | 7.0×10⁻⁴ | < 0.1% | 7.0±0.5×10⁻⁴ | ✓ identical |
+| Hulse-Taylor Ṗ | −2.40×10⁻¹² | −2.40×10⁻¹² | < 0.01% | −2.40±0.01×10⁻¹² | ✓ identical |
+| Double pulsar | Matches GR | Matches GR | < 0.1% | Consistent | ✓ identical |
 
 **Conclusion:** SSZ and GR remain indistinguishable at Tier 2 compactness (r/r_s ~ 10³–10⁴).
 
@@ -11336,11 +11312,11 @@ These tests verify SSZ = GR in the weak field. Any deviation would immediately f
 
 | Observable | GR | SSZ | Δ | Current Obs | Instrument | Timeline |
 |-----------|-----|-----|---|------------|-----------|----------|
-| Surface redshift (1.4 M_$\odot$, 12 km) | z = 0.306 | z = 0.346 | **+13%** | Pending | NICER | 2025–2027 |
-| Surface redshift (2.0 M_$\odot$, 11 km) | z = 0.486 | z = 0.549 | **+13%** | Pending | NICER | 2025–2027 |
+| Surface redshift (1.4 M_☉, 12 km) | z = 0.306 | z = 0.346 | **+13%** | Pending | NICER | 2025–2027 |
+| Surface redshift (2.0 M_☉, 11 km) | z = 0.486 | z = 0.549 | **+13%** | Pending | NICER | 2025–2027 |
 | Orbital decay (compact binary) | Standard Ṗ | 1.30 × Ṗ_GR | **+30%** | Pending | NANOGrav | 2025–2028 |
 | X-ray pulse profile | Schwarzschild | SSZ metric | ~5–10% | Pending | NICER | 2025–2027 |
-| Tidal deformability | Λ_GR | Λ_SSZ $\approx$ 0.87 Λ_GR | **−13%** | Within error | observational campaigns O5 | 2027–2030 |
+| Tidal deformability | Λ_GR | Λ_SSZ ≈ 0.87 Λ_GR | **−13%** | Within error | GW detectors | 2027–2030 |
 
 **Conclusion:** Tier 3 is the frontier where SSZ first diverges measurably from GR. NICER and NANOGrav are the key instruments.
 
@@ -11349,25 +11325,25 @@ These tests verify SSZ = GR in the weak field. Any deviation would immediately f
 | Observable | GR | SSZ | Δ | Current Obs | Instrument | Timeline |
 |-----------|-----|-----|---|------------|-----------|----------|
 | Shadow diameter | 10.39 GM/(c²D_A) | 0.987 × GR | **−1.3%** | ~10% precision | ngEHT | 2027–2030 |
-| Photon sphere | r_ph = 1.50 r_s | r_ph $\approx$ 1.48 r_s | **−1.3%** | Not resolved | ngEHT | 2027–2030 |
-| Ringdown decay | Exponential | Exponential + echoes | **Qualitative** | No echoes found | observational campaigns O4/O5 | 2025–2030 |
-| Echo timescale | N/A (absent) | Δt ~ 1.18 r_s/c | **New signal** | Not searched | observational campaigns O4/O5 | 2025–2030 |
+| Photon sphere | r_ph = 1.50 r_s | r_ph ≈ 1.48 r_s | **−1.3%** | Not resolved | ngEHT | 2027–2030 |
+| Ringdown QNM freq | f_QNM (GR) | f_QNM × 1.03 | **+3%** | Pending | Einstein Telescope | 2035+ |
+| Love number k₂ | k₂ = 0 (BH) | k₂ ≈ 0.052 | **Non-zero** | Pending | Einstein Telescope | 2035+ |
 | Horizon temperature | T_H ~ ℏc³/(8πGMk_B) | T_surface ~ accretion | **Orders of mag** | Not measurable | Future | >2030 |
 | Time dilation at r_s | D = 0 (exact) | D = 0.555 | **Infinite** | Not directly | Indirect | — |
 | Information escape | Impossible | Possible (z=0.802) | **Qualitative** | Not testable | — | — |
 
-**Conclusion:** Black hole tests provide the most dramatic differences. The shadow size (−1.3%) and GW echoes are the most promising near-term tests.
+**Conclusion:** Black hole tests provide the most dramatic differences. The shadow size (−1.3%) and QNM frequency shifts are the most promising near-term tests.
 
 ## Astrophysical Tests
 
 | Observable | GR | SSZ | Δ | Observed | Status |
 |-----------|-----|-----|---|----------|--------|
-| G79 CO emission location | No specific prediction | Inner edge, outer shell | — | Confirmed | Y |
-| G79 temperature inversion | No specific prediction | dT/dr < 0 at shell | — | Confirmed | Y |
-| G79 CO rotational T | No specific prediction | 40–80 K | — | 50±15 K | Y |
-| G79 dust anomaly | No specific prediction | Elevated at shell | — | Confirmed | Y |
-| G79 velocity gradient | Standard | Decreasing outward | — | Confirmed | Y |
-| G79 temporal consistency | Standard | Matches expansion age | — | Confirmed | Y |
+| G79 CO emission location | No specific prediction | Inner edge, outer shell | — | Confirmed | ✓ |
+| G79 temperature inversion | No specific prediction | dT/dr < 0 at shell | — | Confirmed | ✓ |
+| G79 CO rotational T | No specific prediction | 40–80 K | — | 50±15 K | ✓ |
+| G79 dust anomaly | No specific prediction | Elevated at shell | — | Confirmed | ✓ |
+| G79 velocity gradient | Standard | Decreasing outward | — | Confirmed | ✓ |
+| G79 temporal consistency | Standard | Matches expansion age | — | Confirmed | ✓ |
 
 **G79 score: 6/6 SSZ predictions confirmed, zero free parameters.**
 
@@ -11390,10 +11366,10 @@ These tests verify SSZ = GR in the weak field. Any deviation would immediately f
 | Information paradox | Unresolved (50+ years) | Dissolved |
 | Firewall paradox | Unresolved | Dissolved |
 | Metric signature | Swaps at r_s | Preserved (−+++) |
-| Action principle | Einstein-Hilbert Y | Missing |
-| Cosmological framework | ΛCDM Y | Not developed |
-| Multi-body simulations | Numerical relativity Y | Not developed |
-| Rotation | Kerr exact solution Y | Kerr-SSZ (ansatz) |
+| Action principle | Einstein-Hilbert ✓ | Missing |
+| Cosmological framework | ΛCDM ✓ | Not developed |
+| Multi-body simulations | Numerical relativity ✓ | Not developed |
+| Rotation | Kerr exact solution ✓ | Kerr-SSZ (ansatz) |
 | Quantum gravity | Incompatible with QM | Not addressed |
 | Test suite | Community-verified | 564+ tests, self-verified |
 | Falsifiability | Hard (Λ adjustable) | Strong (zero parameters) |
@@ -11404,23 +11380,22 @@ If future observations show:
 
 | Observation | Favors GR | Favors SSZ | Inconclusive |
 |------------|-----------|------------|-------------|
-| NS z matches GR exactly (< 5% error) | Y | | |
-| NS z exceeds GR by ~13% | | Y | |
-| NS z deviates but not by 13% | | | Y |
-| Shadow matches GR (< 0.5%) | Y | | |
-| Shadow is 1.3% smaller | | Y | |
-| GW echoes detected | | Y | |
-| No echoes after 10⁴ events | Y | | |
+| NS z matches GR exactly (< 5% error) | ✓ | | |
+| NS z exceeds GR by ~13% | | ✓ | |
+| NS z deviates but not by 13% | | | ✓ |
+| Shadow matches GR (< 0.5%) | ✓ | | |
+| Shadow is 1.3% smaller | | ✓ | |
+| QNM freq shift +3% detected | | ✓ | |
+| QNM freq matches GR (< 1%) | ✓ | | |
 | Superradiant spindown observed | Depends on rate | If Γ_obs = G_SSZ · Γ_GR | |
 
-**The decisive test:** If ALL of NS redshift, shadow size, and GW echoes match GR exactly with sufficient precision, SSZ is definitively falsified. If ANY one deviates in the predicted direction, SSZ gains strong support.
+**The decisive test:** If ALL of NS redshift, shadow size, and QNM frequencies match GR exactly with sufficient precision, SSZ is definitively falsified. If ANY one deviates in the predicted direction, SSZ gains strong support.
 
+---
 
-\newpage
+# Appendix G: Glossary of SSZ Terms
 
-# Glossary of SSZ Terms
-
-
+**Status:** FIRST DRAFT
 
 ## Symbols
 
@@ -11544,8 +11519,3 @@ For the complete symbol table with units and dimensions, see Appendix A. For the
 This glossary is organized by category rather than alphabetically. The chapter reference points to where each term is first defined. The term *segment* in SSZ refers to a quarter-cycle division of an electromagnetic wave period, not a discrete spacetime element as in lattice gauge theory. The term *natural boundary* replaces event horizon because D > 0 everywhere in SSZ. The term *dark star* replaces black hole for SSZ-specific properties, emphasizing that SSZ compact objects are dark (highly redshifted) but not black (completely opaque). The distinction between Xi-only and PPN calculations is critical: Xi-only captures g_tt only (correct for redshift); PPN captures g_tt + g_rr (required for lensing and Shapiro delay with factor (1+gamma) = 2).
 
 ---
-
-
-\newpage
-
-
