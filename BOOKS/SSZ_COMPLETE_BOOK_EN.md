@@ -1,4 +1,4 @@
-\frontmatter
+﻿\frontmatter
 
 # Preface
 
@@ -195,7 +195,7 @@ SSZ makes concrete, sign-definite predictions that differ from GR. These are not
 
 - **Black hole shadow diameter:** SSZ predicts a slightly *smaller* apparent shadow size than GR, by approximately −1.3%. The Event Horizon Telescope (EHT) has measured the shadow of M87* and Sgr A* with improving precision; future observations may reach the accuracy needed to distinguish the two predictions.
 
-- **~~Gravitational wave phase~~ (discarded):** The original prediction of SSZ-specific signatures in LIGO/Virgo data has been discarded. Current detector technology is methodologically insufficient for SSZ-specific deviations. Next-generation detectors (Einstein Telescope, Cosmic Explorer) may enable this in the future.
+- **Pulsar timing correction:** SSZ predicts a +30% correction to the orbital decay rate for millisecond pulsars in compact binaries. NANOGrav's 15-year dataset and the International Pulsar Timing Array are sensitive to this level of correction.
 
 These predictions have specific numerical values and specific signs. They can be confirmed or refuted by current and near-future experiments. This is what makes SSZ a scientific theory rather than a mathematical curiosity.
 
@@ -677,7 +677,7 @@ Both routes give the same answer: N₀ = 4. This agreement is a non-trivial cons
 
 The segmentation principle unites π and φ into a single physical framework. It can be stated as follows:
 
-> **Segmentation Principle.** In flat spacetime, a light wave at frequency f traverses exactly N₀ = 4 fundamental segments per period. Under the influence of gravity, the segment count increases in proportion to the gravitational wavelength stretching: N' = N₀ · (λ'/λ₀) = N₀ · (f/f'). The segment density Ξ(r) quantifies this increase as a dimensionless scalar field.
+> **Segmentation Principle.** In flat spacetime, a light wave at frequency f traverses exactly N₀ = 4 fundamental segments per period. Under the influence of gravity, the segment count increases in proportion to the metric perturbationlength stretching: N' = N₀ · (λ'/λ₀) = N₀ · (f/f'). The segment density Ξ(r) quantifies this increase as a dimensionless scalar field.
 
 To unpack this, consider a photon emitted at frequency f₀ far from any mass. In flat spacetime, each period of this photon spans exactly 4 segments. Now let the photon fall toward a massive body. As it descends into the gravitational well, its wavelength (as measured by a distant observer) increases — this is the gravitational redshift.
 
@@ -804,6 +804,8 @@ A common misconception at this stage is to confuse the SSZ use of phi with numer
 
 # φ as Temporal Growth Function and Calibration
 
+
+![Fig 3.1](figures/ch03_phi/fig_03_01.png)
 
 ---
 
@@ -1147,6 +1149,8 @@ The uniqueness of the solution deserves emphasis. The self-similarity equation h
 
 # From φ-Segmentation to Euler
 
+
+![Fig 4.1](figures/ch04_phi_euler/fig_04_01_phi_segmentation.png)
 
 ---
 
@@ -1682,7 +1686,7 @@ This pattern extends to higher-order processes. The Lamb shift (a correction to 
 
 **What tests prove:** The numerical computation α_SSZ = 1/(φ^{2π}·4) $\approx$ 1/137.08 is correct to machine precision; the bound energy fraction E_bound/E_total = α holds for test cases involving photon propagation through segment structures; the projection formula is consistent with the φ-spiral geometry; and the effective α_eff(r) decreases monotonically with increasing Ξ, as predicted.
 
-**What tests do NOT prove:** That α *physically originates* from segment geometry. The tests verify the mathematical derivation, not the physical claim. Independent experimental confirmation would require measuring α in extreme gravitational environments — for example, observing spectral lines from matter very close to a black hole horizon and comparing the inferred α with the flat-spacetime value. Current technology cannot perform this measurement, but future gravitational wave detectors and black hole imaging experiments may provide indirect constraints.
+**What tests do NOT prove:** That α *physically originates* from segment geometry. The tests verify the mathematical derivation, not the physical claim. Independent experimental confirmation would require measuring α in extreme gravitational environments — for example, observing spectral lines from matter very close to a black hole horizon and comparing the inferred α with the flat-spacetime value. Current technology cannot perform this measurement, but future metric perturbation detectors and black hole imaging experiments may provide indirect constraints.
 
 **Reproduction:** `E:/clone\segmented-calculation-suite/tests/` — `test_alpha_structure.py`, `test_bound_energy.py`. All tests pass.
 
@@ -1800,6 +1804,8 @@ The sensitivity to the exponent is also instructive. If the exponent were 2pi + 
 
 # Lorentz Indeterminacy at v = 0
 
+
+![Fig 6.1](figures/ch06_lorentz/fig_06_01_lorentz_indeterminacy.png)
 
 ---
 
@@ -2190,6 +2196,8 @@ Binary pulsar geodetic precession: The geodetic precession of the pulsar spin ax
 # Local Lorentz Invariance and Frame Dragging
 
 
+![Fig 7.1](figures/ch07_frame_dragging/fig_07_01_dilation_comparison.png)
+
 ---
 
 ## Summary
@@ -2230,7 +2238,7 @@ The frame-dragging discussion in Section 7.3 extends this analysis to rotating s
 
 ### The Foundation of Modern Physics
 
-Local Lorentz invariance is not just one principle among many — it is the foundation upon which both special relativity and general relativity are built. Every equation in the Standard Model of particle physics, every prediction of quantum electrodynamics, every calculation in gravitational wave astronomy assumes LLI. If LLI were violated even slightly, the consequences would be catastrophic for our understanding of nature.
+Local Lorentz invariance is not just one principle among many — it is the foundation upon which both special relativity and general relativity are built. Every equation in the Standard Model of particle physics, every prediction of quantum electrodynamics, every calculation in metric perturbation astronomy assumes LLI. If LLI were violated even slightly, the consequences would be catastrophic for our understanding of nature.
 
 To appreciate this, consider what LLI actually says. In precise language: **the laws of physics take the same form in every local inertial (freely falling) reference frame, regardless of the frame's velocity or orientation.** This means:
 
@@ -2258,7 +2266,7 @@ Any new gravitational theory that introduces additional fields faces a critical 
 
 - **Rosen's bimetric theory (1973):** Introduced a second metric tensor. This produced preferred-frame effects with PPN parameter α₁ $\neq$ 0. Ruled out by binary pulsar observations.
 
-- **Einstein-Aether theory:** Introduces a unit timelike vector field. This *can* be compatible with LLI if the vector field aligns with the local four-velocity, but requires careful construction. Constrained by gravitational wave speed measurements (GW170817: |c_gw/c − 1| < 10⁻¹⁵).
+- **Einstein-Aether theory:** Introduces a unit timelike vector field. This *can* be compatible with LLI if the vector field aligns with the local four-velocity, but requires careful construction. Constrained by metric perturbation speed measurements (GW170817: |c_gw/c − 1| < 10⁻¹⁵).
 
 SSZ introduces the segment density Ξ(r) as an additional scalar field. The critical question is: does
 
@@ -2844,7 +2852,7 @@ The dual velocities v_esc and v_fall have direct implications for orbital mechan
 
 The ratio v_circ/v_esc characterizes the stability of circular orbits. In Newtonian gravity, v_circ/v_esc = 1/sqrt(2) at all radii, and circular orbits are stable at all radii. In GR, the ratio decreases with decreasing radius, and circular orbits become unstable inside the ISCO at r = 3 r_s. In SSZ, the ratio behaves similarly to GR in the weak field but differs in the strong field: the ISCO location is shifted by the segment density correction, and the transition from stable to unstable orbits is modified by the blend function.
 
-For binary pulsars (such as PSR J0737-3039 or the Hulse-Taylor pulsar PSR B1913+16), the orbital velocity is a few hundred km/s, corresponding to v/c of order 10^{-3}. At this velocity, the SSZ correction to the orbital dynamics is of order Xi approximately 10^{-6}, which is measurable only through accumulated effects (such as the orbital period decay due to gravitational wave emission). The SSZ prediction for the orbital period decay agrees with GR to the precision of the current measurements (approximately 0.1 percent for the Hulse-Taylor pulsar), consistent with the absence of detectable SSZ corrections in the weak field.
+For binary pulsars (such as PSR J0737-3039 or the Hulse-Taylor pulsar PSR B1913+16), the orbital velocity is a few hundred km/s, corresponding to v/c of order 10^{-3}. At this velocity, the SSZ correction to the orbital dynamics is of order Xi approximately 10^{-6}, which is measurable only through accumulated effects (such as the orbital period decay due to metric perturbation emission). The SSZ prediction for the orbital period decay agrees with GR to the precision of the current measurements (approximately 0.1 percent for the Hulse-Taylor pulsar), consistent with the absence of detectable SSZ corrections in the weak field.
 
 For matter orbiting close to a compact object (such as the hot gas in the inner accretion disk of an X-ray binary), the orbital velocity approaches c/sqrt(3) approximately 0.577 c at the ISCO. Here the SSZ correction is significant: the orbital velocity at the SSZ-modified ISCO differs from the GR value by approximately Xi(3 r_s) = r_s/(6 r_s) = 0.167, or about 17 percent. This correction affects the observed properties of the inner accretion disk (temperature, luminosity, spectral shape) and is in principle testable with high-resolution X-ray spectroscopy.
 
@@ -2884,6 +2892,8 @@ Chapter 9 proves the closure relation v_esc times v_fall = c^2 formally and expl
 
 # Kinematic Closure — v_esc · v_fall = c²
 
+
+![Fig 9.1](figures/ch09_closure/fig_09_01_kinematic_closure.png)
 
 ---
 
@@ -3550,6 +3560,8 @@ Chapter 11 takes the next step: interpreting the electromagnetic wave itself wit
 # Maxwell Waves as Rotating Space
 
 
+![Fig 11.1](figures/ch11_maxwell_waves/fig_11_01.png)
+
 ---
 
 ## Summary
@@ -3578,7 +3590,7 @@ This ray-tracing picture connects the wave description of this chapter to the se
 
 The geometric optics limit breaks down when the wavelength is comparable to the curvature scale. For electromagnetic waves near a stellar-mass black hole (r_s approximately 10 km), this breakdown occurs at wavelengths of order 10 km, corresponding to frequencies of order 30 kHz. For all astronomical electromagnetic observations (radio through gamma ray), the geometric optics limit is an excellent approximation, and the ray-tracing description is sufficient.
 
-The wave description becomes essential for gravitational wave observations, where the wavelength can be comparable to or larger than the curvature scale. The LIGO detector observes gravitational waves with wavelengths of order 1000 km, which is much larger than the Schwarzschild radius of the merging black holes (r_s approximately 20 km for a 10 solar mass black hole). In this regime, the full wave equation must be solved, and the segment-counting approximation is no longer valid.
+The wave description becomes essential for metric perturbation observations, where the wavelength can be comparable to or larger than the curvature scale. The observational campaigns detector observes metric perturbations with wavelengths of order 1000 km, which is much larger than the Schwarzschild radius of the merging black holes (r_s approximately 20 km for a 10 solar mass black hole). In this regime, the full wave equation must be solved, and the segment-counting approximation is no longer valid.
 
 ### Energy Transport in the Segment Lattice
 
@@ -3586,7 +3598,7 @@ When an electromagnetic wave propagates through the segment lattice, it transpor
 
 In the SSZ segment lattice, the energy velocity is v_energy = c/s(r) = c/(1 + Xi), which is the same as the phase velocity and the group velocity. This triple equality (v_phase = v_group = v_energy) is characteristic of a non-dispersive medium and ensures that all measures of the wave speed give the same answer. In a dispersive medium (such as glass), these three velocities can differ, leading to subtle effects like pulse broadening and anomalous dispersion.
 
-The energy conservation law for electromagnetic waves in the segment lattice takes the form du/dt + div S = -u times (ds/dt)/s, where the right-hand side represents energy exchange between the wave and the segment lattice. In a static gravitational field (ds/dt = 0), energy is conserved along the ray. In a time-varying gravitational field (such as near a merging binary), the segment density changes with time, and the electromagnetic wave can gain or lose energy. This energy exchange is the SSZ analog of the parametric amplification of electromagnetic waves by gravitational waves, predicted by Gertsenshtein (1962) and still unobserved.
+The energy conservation law for electromagnetic waves in the segment lattice takes the form du/dt + div S = -u times (ds/dt)/s, where the right-hand side represents energy exchange between the wave and the segment lattice. In a static gravitational field (ds/dt = 0), energy is conserved along the ray. In a time-varying gravitational field (such as near a merging binary), the segment density changes with time, and the electromagnetic wave can gain or lose energy. This energy exchange is the SSZ analog of the parametric amplification of electromagnetic waves by metric perturbations, predicted by Gertsenshtein (1962) and still unobserved.
 
 The energy density of the wave, as measured by a local observer, is u_local = u_coord times s^2 = u_coord times (1 + Xi)^2, where u_coord is the coordinate energy density. The factor s^2 arises from the stretching of the spatial coordinates by the scaling factor. This means that a wave with a given coordinate energy density has a higher local energy density in regions of high Xi -- the segment lattice acts as an energy concentrator. This concentration effect is important for understanding the interaction of electromagnetic waves with matter near compact objects, where the local energy density can be significantly enhanced relative to the far-field value.
 
@@ -3804,6 +3816,9 @@ Chapter 12 derives the group velocity of light from segment counting, providing 
 
  v2
 
+
+![Fig 12.1](figures/ch12_group_velocity/fig_12_01.png)
+
 ---
 
 ## Summary
@@ -3987,9 +4002,9 @@ All three are consistent with both SSZ and GR — the discriminating predictions
 
 ### Multi-Messenger Astronomy
 
-The strongest test of frequency-independent propagation comes from multi-messenger events. GW170817 (binary neutron star merger, August 2017) produced both gravitational waves (detected by LIGO/Virgo) and a gamma-ray burst (GRB 170817A, detected by Fermi-GBM) arriving 1.7 seconds apart after traveling 40 Mpc. This constrains the difference between gravitational wave speed and light speed to |v_GW - c|/c < 5e-16.
+The strongest test of frequency-independent propagation comes from multi-messenger events. GW170817 (binary neutron star merger, August 2017) produced both metric perturbations (detected by observational) and a gamma-ray burst (GRB 170817A, detected by Fermi-GBM) arriving 1.7 seconds apart after traveling 40 Mpc. This constrains the difference between metric perturbation speed and light speed to |v_GW - c|/c < 5e-16.
 
-In SSZ, both gravitational waves and electromagnetic waves propagate through the same segment lattice at v = c D(r). The ratio v_GW/v_EM = 1 exactly, because both signals traverse the same segments at the same rate. The 1.7-second delay is attributed entirely to the emission mechanism (the jet breaks out of the merger ejecta with a delay), not to propagation differences. SSZ is fully consistent with this observation.
+In SSZ, both metric perturbations and electromagnetic waves propagate through the same segment lattice at v = c D(r). The ratio v_GW/v_EM = 1 exactly, because both signals traverse the same segments at the same rate. The 1.7-second delay is attributed entirely to the emission mechanism (the jet breaks out of the merger ejecta with a delay), not to propagation differences. SSZ is fully consistent with this observation.
 
 ### Solar Radio Observations
 
@@ -4055,11 +4070,11 @@ Several alternative theories of gravity predict modifications to the speed of li
 
 Brans-Dicke theory: the coordinate speed of light is c_BD = c (1 - (1 + omega_BD^{-1}) r_s/(2r)), where omega_BD is the Brans-Dicke coupling parameter. For omega_BD approaching infinity, this reduces to the GR result. The Cassini mission constrains omega_BD to be greater than 40,000, making the Brans-Dicke correction undetectable in the solar system.
 
-TeVeS (Tensor-Vector-Scalar theory, Bekenstein 2004): predicts different coordinate speeds for electromagnetic and gravitational waves, violating the equivalence of photon and graviton propagation. This prediction was dramatically tested and ruled out by the simultaneous detection of gravitational waves and gamma rays from the neutron star merger GW170817/GRB170817A, which showed that the two speeds agree to within 10^{-15}.
+TeVeS (Tensor-Vector-Scalar theory, Bekenstein 2004): predicts different coordinate speeds for electromagnetic and metric perturbations, violating the equivalence of photon and graviton propagation. This prediction was dramatically tested and ruled out by the simultaneous detection of metric perturbations and gamma rays from the neutron star merger GW170817/GRB170817A, which showed that the two speeds agree to within 10^{-15}.
 
-SSZ: the coordinate speed of light is c_SSZ = c/(1 + Xi), and the gravitational wave speed is also c/(1 + Xi) (because gravitational waves are also distortions of the segment lattice). SSZ therefore predicts equal speeds for electromagnetic and gravitational waves, consistent with GW170817. This is a non-trivial consistency check: the SSZ framework could have predicted different speeds for the two types of waves, but it does not.
+SSZ: the coordinate speed of light is c_SSZ = c/(1 + Xi), and the metric perturbation speed is also c/(1 + Xi) (because metric perturbations are also distortions of the segment lattice). SSZ therefore predicts equal speeds for electromagnetic and metric perturbations, consistent with GW170817. This is a non-trivial consistency check: the SSZ framework could have predicted different speeds for the two types of waves, but it does not.
 
-The GW170817 observation is one of the strongest constraints on modifications to gravitational wave propagation. SSZ passes this constraint automatically because the scaling factor s(r) applies to all wave modes (electromagnetic and gravitational) equally. This equality is a consequence of the universality of the segment lattice: all fields propagate through the same lattice and experience the same effective refractive index.
+The GW170817 observation is one of the strongest constraints on modifications to metric perturbation propagation. SSZ passes this constraint automatically because the scaling factor s(r) applies to all wave modes (electromagnetic and gravitational) equally. This equality is a consequence of the universality of the segment lattice: all fields propagate through the same lattice and experience the same effective refractive index.
 
 ### The Coordinate Speed of Light and Causality
 
@@ -4071,9 +4086,9 @@ This distinction between coordinate speed and local speed is the same in SSZ as 
 
 In SSZ, the coordinate speed of radial light is c/(1 + Xi), which approaches c/1.802 = 0.555c at r = r_s. This is not zero (unlike GR), reflecting the finite time dilation at the SSZ natural boundary. A local observer at r_s measures the speed of light as exactly c, just as in GR. The non-zero coordinate speed in SSZ means that signals can cross the natural boundary in finite coordinate time -- a qualitative difference from GR, where crossing the horizon takes infinite coordinate time.
 
-### Implications for Gravitational Wave Speed
+### Implications for Metric Perturbation Speed
 
-The SSZ framework predicts that gravitational waves propagate at the same speed as electromagnetic waves: c/s(r) = c/(1 + Xi(r)) in coordinates, and exactly c in the local frame. This prediction was dramatically confirmed by the multi-messenger observation of GW170817/GRB170817A in August 2017, which showed that gravitational waves and gamma rays from a neutron star merger arrived within 1.7 seconds of each other after traveling approximately 130 million light-years.
+The SSZ framework predicts that metric perturbations propagate at the same speed as electromagnetic waves: c/s(r) = c/(1 + Xi(r)) in coordinates, and exactly c in the local frame. This prediction was dramatically confirmed by the multi-messenger observation of GW170817/GRB170817A in August 2017, which showed that metric perturbations and gamma rays from a neutron star merger arrived within 1.7 seconds of each other after traveling approximately 130 million light-years.
 
 The constraint from this observation is |c_GW - c_EM|/c < 10^{-15}, which rules out any theory that predicts different propagation speeds for gravitational and electromagnetic waves. SSZ satisfies this constraint by construction: both types of waves are distortions of the same segment lattice and experience the same effective refractive index s(r) = 1 + Xi(r).
 
@@ -4105,6 +4120,9 @@ Chapter 13 develops this result into a full additive decomposition of the light 
 
 
  v2
+
+
+![Fig 13.1](figures/ch13_shapiro/fig_13_01.png)
 
 ---
 
@@ -4313,13 +4331,13 @@ where A and B label two images. The geometric delay depends on the path length d
 
 ### Pulsar Timing Arrays
 
-Pulsar timing arrays (PTAs) search for gravitational waves by monitoring the arrival times of millisecond pulsar signals. Each pulsar signal passes through the gravitational potential of the Milky Way, accumulating a segment delay. The SSZ decomposition predicts that this delay is additive across all mass concentrations along the line of sight, which simplifies the timing model compared to the fully nonlinear GR calculation.
+Pulsar timing arrays (PTAs) search for metric perturbations by monitoring the arrival times of millisecond pulsar signals. Each pulsar signal passes through the gravitational potential of the Milky Way, accumulating a segment delay. The SSZ decomposition predicts that this delay is additive across all mass concentrations along the line of sight, which simplifies the timing model compared to the fully nonlinear GR calculation.
 
 The practical impact is small for current PTAs (the correction is below timing precision), but next-generation PTAs with the Square Kilometre Array may reach the sensitivity needed to detect the difference between additive and non-additive delay models.
 
 ### Binary Pulsar Orbital Decay
 
-In compact binary pulsars, the orbital period decreases due to gravitational wave emission. The SSZ decomposition predicts additive contributions from each companion: the total Shapiro delay for signals passing the binary is Delta_t_seg = Delta_t_seg(star 1) + Delta_t_seg(star 2). This additivity is testable in double-pulsar systems like PSR J0737-3039, where both components are pulsars and the signal geometry is precisely known.
+In compact binary pulsars, the orbital period decreases due to metric perturbation emission. The SSZ decomposition predicts additive contributions from each companion: the total Shapiro delay for signals passing the binary is Delta_t_seg = Delta_t_seg(star 1) + Delta_t_seg(star 2). This additivity is testable in double-pulsar systems like PSR J0737-3039, where both components are pulsars and the signal geometry is precisely known.
 
 ---
 
@@ -4344,7 +4362,7 @@ This chapter has developed the core concepts of additive decomposition of light 
 
 Consider an observer monitoring three pulsars whose signals all pass near the same neutron star. In GR, each signal requires a separate four-dimensional integral along its null geodesic. In SSZ, the segment delay contribution from the neutron star can be computed once (as an integral of Xi along a radial profile) and then applied to each signal path with a geometric correction factor that depends only on the impact parameter. This factorization reduces the computational cost from three full integrations to one radial integration plus three geometric corrections.
 
-For timing arrays (such as the Pulsar Timing Array used for gravitational wave detection), this factorization could significantly speed up the data analysis pipeline. The timing residuals from a pulsar timing array involve correlated delays from many gravitating bodies (the Sun, Jupiter, Saturn, etc.), and the SSZ additive decomposition allows these contributions to be computed independently and summed.
+For timing arrays (such as the Pulsar Timing Array used for metric perturbation detection), this factorization could significantly speed up the data analysis pipeline. The timing residuals from a pulsar timing array involve correlated delays from many gravitating bodies (the Sun, Jupiter, Saturn, etc.), and the SSZ additive decomposition allows these contributions to be computed independently and summed.
 
 ### Mathematical Structure of the Decomposition
 
@@ -4542,7 +4560,7 @@ The SSZ prediction z(r_s) = 0.802 is the single most important falsifiable predi
 
 - **Iron Kα line from accretion disks:** The fluorescent iron line at 6.4 keV is broadened and shifted by the gravitational field near black holes. The profile shape depends on D(r) at the inner disk edge. SSZ predicts a different profile shape than GR, potentially detectable by XRISM and Athena.
 
-- **Gravitational wave inspiral:** The phase evolution of binary inspirals depends on the near-horizon metric. SSZ's finite D(r_s) modifies the late inspiral phase, producing a potentially detectable deviation from GR templates.
+- **metric perturbation inspiral:** The phase evolution of binary inspirals depends on the near-horizon metric. SSZ's finite D(r_s) modifies the late inspiral phase, producing a potentially detectable deviation from GR templates.
 
 ## Historical Context
 
@@ -4682,6 +4700,8 @@ Chapter 15 addresses a consistency question: does the photon change its intrinsi
 
 # Constraints on In-Flight Photon Retuning
 
+
+![Fig 15.1](figures/ch15_retuning/fig_15_01.png)
 
 ---
 
@@ -4991,6 +5011,8 @@ Part IV reformulates these electromagnetic results in a frequency-based language
 # Frequency-Based Framework for Gravity, Light, and Black Holes
 
 
+![Fig 16.1](figures/ch16_frequency/fig_16_01_frequency_framework.png)
+
 ---
 
 ## Summary
@@ -5015,7 +5037,7 @@ Why is this necessary? Each chapter in this book serves a specific function in t
 
 Parts I through III developed the SSZ framework in terms of the segment density Xi, the time dilation factor D, and the scaling factor s(r). These are geometric quantities that describe the structure of spacetime. This chapter introduces a complementary description in terms of directly measurable quantities: frequencies.
 
-The motivation is practical. Astronomers do not measure segment densities or time dilation factors directly. They measure frequencies -- the frequencies of spectral lines, the frequencies of pulsar signals, the frequencies of gravitational waves. A framework expressed in terms of frequencies is therefore closer to the raw observational data and less prone to interpretation-dependent errors.
+The motivation is practical. Astronomers do not measure segment densities or time dilation factors directly. They measure frequencies -- the frequencies of spectral lines, the frequencies of pulsar signals, the frequencies of metric perturbations. A framework expressed in terms of frequencies is therefore closer to the raw observational data and less prone to interpretation-dependent errors.
 
 The frequency-based framework is not a new theory -- it is a reformulation of the same SSZ physics in a different language. Every result in this chapter can be derived from the segment density formalism of Parts I through III. The advantage is that the frequency language makes certain relationships more transparent and certain calculations more straightforward.
 
@@ -5242,7 +5264,7 @@ The frequency framework suggests a deep connection between matter emergence and 
 
 ### Frequency Ratios as Primary Observables
 
-In observational astronomy, frequency ratios are often the most precisely measurable quantities. A spectrograph measures the ratio of an observed spectral line frequency to a laboratory reference frequency. A pulsar timing array measures the ratio of observed pulse frequencies to a local clock frequency. A gravitational wave detector measures the ratio of the strain frequency to the detector arm length resonance.
+In observational astronomy, frequency ratios are often the most precisely measurable quantities. A spectrograph measures the ratio of an observed spectral line frequency to a laboratory reference frequency. A pulsar timing array measures the ratio of observed pulse frequencies to a local clock frequency. A metric perturbation detector measures the ratio of the strain frequency to the detector arm length resonance.
 
 In each case, the raw observable is a dimensionless ratio, not an absolute frequency. The SSZ frequency framework expresses all predictions in terms of such ratios, eliminating the need to convert between coordinate systems or reference frames. The ratio f_obs/f_emit = D(r_emit)/D(r_obs) depends only on the segment densities at the emission and observation points, making it trivially computable once the Xi profile is known.
 
@@ -5250,11 +5272,11 @@ This simplicity is not accidental -- it reflects the fundamental structure of th
 
 ### Application to Black Hole Spectroscopy
 
-The frequency-based framework is particularly powerful for black hole spectroscopy -- the study of quasi-normal mode frequencies of perturbed black holes. When a black hole is perturbed (e.g., by a binary merger), it oscillates at characteristic frequencies (quasi-normal modes, QNMs) that depend on the black hole mass and spin. These oscillations are damped by gravitational wave emission, producing a ringdown signal that encodes the QNM frequencies.
+The frequency-based framework is particularly powerful for black hole spectroscopy -- the study of quasi-normal mode frequencies of perturbed black holes. When a black hole is perturbed (e.g., by a binary merger), it oscillates at characteristic frequencies (quasi-normal modes, QNMs) that depend on the black hole mass and spin. These oscillations are damped by metric perturbation emission, producing a ringdown signal that encodes the QNM frequencies.
 
-In GR, the fundamental QNM frequency of a Schwarzschild black hole is f_QNM approximately equal to 1.2 times 10^4 / (M/M_sun) Hz. For a 30 solar mass black hole (typical of LIGO sources), f_QNM approximately equal to 400 Hz, well within the LIGO frequency band.
+In GR, the fundamental QNM frequency of a Schwarzschild black hole is f_QNM approximately equal to 1.2 times 10^4 / (M/M_sun) Hz. For a 30 solar mass black hole (typical of observational campaigns sources), f_QNM approximately equal to 400 Hz, well within the observational campaigns frequency band.
 
-In SSZ, the QNM frequencies are modified by the finite D_min at the horizon. The SSZ prediction is f_QNM_SSZ = f_QNM_GR times (1 + epsilon), where epsilon depends on D_min and the mode number. For the fundamental mode, epsilon is of order D_min^2 approximately 0.31, giving a roughly 3 percent shift in the QNM frequency. This shift is currently below the measurement precision of LIGO/Virgo (approximately 10 percent for individual events) but could become detectable with the accumulation of many events or with next-generation detectors (Einstein Telescope, Cosmic Explorer).
+In SSZ, the QNM frequencies are modified by the finite D_min at the horizon. The SSZ prediction is f_QNM_SSZ = f_QNM_GR times (1 + epsilon), where epsilon depends on D_min and the mode number. For the fundamental mode, epsilon is of order D_min^2 approximately 0.31, giving a roughly 3 percent shift in the QNM frequency. This shift is currently below the measurement precision of observational (approximately 10 percent for individual events) but could become detectable with the accumulation of many events or with next-generation detectors (Einstein Telescope, Cosmic Explorer).
 
 The frequency ratio f_QNM_SSZ / f_QNM_GR is a clean, dimensionless observable that does not depend on the black hole mass (which cancels in the ratio). This makes it an ideal target for the frequency-based framework: one computes the ratio from the SSZ and GR metrics, compares with the measured ratio, and obtains a test of the theory without needing to know the mass precisely.
 
@@ -5288,6 +5310,8 @@ The simplicity of this formula illustrates the power of the frequency-based fram
 
 # Frequency-Based Curvature Detection
 
+
+![Fig 17.1](figures/ch17_curvature/fig_17_01_curvature_detection.png)
 
 ---
 
@@ -5463,17 +5487,17 @@ MAGIS-100 and AION use atom interferometry over 100m baselines. SSZ predictions 
 
 **Reproduction:** `E:/clone\frequency-curvature-validation\`
 
-## Connection to Gravitational Wave Detection
+## Connection to Metric Perturbation Detection
 
 ### Curvature as Wave Detection
 
-Gravitational wave detectors are, fundamentally, curvature detectors: they measure the time-varying Riemann tensor through its effect on the separation of test masses. LIGO measures R_txtx (the tidal component along the arm) via laser interferometry. The I_ABC invariant measures the same tensor component via clock comparisons.
+metric perturbation detectors are, fundamentally, curvature detectors: they measure the time-varying Riemann tensor through its effect on the separation of test masses. observational campaigns measures R_txtx (the tidal component along the arm) via laser interferometry. The I_ABC invariant measures the same tensor component via clock comparisons.
 
-The key difference: LIGO measures dynamic curvature (from passing gravitational waves) with sensitivity approximately 10^-23 /sqrt(Hz). The I_ABC method measures static curvature (from nearby masses) with sensitivity approximately 10^-17 after 10^4 seconds averaging. The two methods are complementary: LIGO probes high-frequency curvature fluctuations; I_ABC probes the DC curvature background.
+The key difference: observational campaigns measures dynamic curvature (from passing metric perturbations) with sensitivity approximately 10^-23 /sqrt(Hz). The I_ABC method measures static curvature (from nearby masses) with sensitivity approximately 10^-17 after 10^4 seconds averaging. The two methods are complementary: observational campaigns probes high-frequency curvature fluctuations; I_ABC probes the DC curvature background.
 
 ### Future: Combining Clock and Interferometer Networks
 
-A hybrid detector combining optical clock networks with laser interferometers could measure both static and dynamic curvature simultaneously. The static measurement provides the background tidal field; the dynamic measurement detects gravitational waves on top of this background. SSZ predicts that both measurements are consistent and proportional to the same Riemann component, providing a cross-check between the two detection methods.
+A hybrid detector combining optical clock networks with laser interferometers could measure both static and dynamic curvature simultaneously. The static measurement provides the background tidal field; the dynamic measurement detects metric perturbations on top of this background. SSZ predicts that both measurements are consistent and proportional to the same Riemann component, providing a cross-check between the two detection methods.
 
 ## Precision Requirements and Error Budget
 
@@ -5555,7 +5579,7 @@ Signal coherence: The frequency comparison between two clocks requires a coheren
 
 Relativistic corrections: The frequency comparison between a moving clock and a stationary clock includes both the gravitational redshift (the effect being measured) and the second-order Doppler effect (a special relativistic correction proportional to v^2/c^2). For a satellite in low Earth orbit (v approximately 7.7 km/s), the second-order Doppler effect is v^2/(2c^2) approximately 3.3 times 10^{-10}, which is much larger than the gravitational curvature effect being sought. The Doppler correction must be known to a precision of 10^{-8} relative to its value, requiring orbit determination to centimeter accuracy.
 
-Non-gravitational perturbations: Clocks in orbit are subject to thermal fluctuations, radiation pressure, magnetic field variations, and other environmental effects that can mimic or mask the gravitational signal. Drag-free satellites (which use micro-thrusters to cancel non-gravitational accelerations) can reduce these perturbations but cannot eliminate them entirely. The LISA Pathfinder mission demonstrated drag-free control to a residual acceleration of 10^{-15} m/s^2, which is sufficient for gravitational wave detection but may not be sufficient for the frequency holonomy measurement.
+Non-gravitational perturbations: Clocks in orbit are subject to thermal fluctuations, radiation pressure, magnetic field variations, and other environmental effects that can mimic or mask the gravitational signal. Drag-free satellites (which use micro-thrusters to cancel non-gravitational accelerations) can reduce these perturbations but cannot eliminate them entirely. The LISA Pathfinder mission demonstrated drag-free control to a residual acceleration of 10^{-15} m/s^2, which is sufficient for metric perturbation detection but may not be sufficient for the frequency holonomy measurement.
 
 These challenges are formidable but not insurmountable. The technology roadmap suggests that frequency holonomy measurements could become feasible in the 2040-2050 timeframe, driven by advances in optical clock technology, space-based laser links, and drag-free satellite control. The SSZ prediction for the frequency holonomy provides a concrete scientific motivation for these technological developments.
 
@@ -5609,6 +5633,15 @@ For students encountering black hole metrics for the first time: the Schwarzschi
 Why is this necessary? The complete black hole metric is the foundation for all strong-field predictions in Chapters 19 through 25. Without it, the singularity resolution (Chapter 19), the natural boundary (Chapter 20), and the dark star properties (Chapter 21) cannot be derived.
  — Strong-Field Objects**
  v2
+
+
+![Fig](figures/ch18_bh_metric/ssz_stability_map.png)
+
+![Fig](figures/ch18_bh_metric/ssz_stability_xi_rproxy.png)
+
+![Fig](figures/ch18_bh_metric/ssz_stability_energy_series.png)
+
+![Fig](figures/ch18_bh_metric/nested_submetric_analysis.png)
 
 ---
 
@@ -5851,7 +5884,7 @@ In GR, the Schwarzschild interior (r < r_s) is qualitatively different from the 
 
 In SSZ, this role reversal does not occur. Because D > 0 everywhere, the metric signature remains (-,+,+,+) at all radii. The coordinate r remains spacelike and t remains timelike throughout the spacetime. An observer at r < r_s can, in principle, send signals outward (though with extreme redshift) and can, in principle, escape (though with extreme difficulty). The causal structure is fundamentally different from GR: there is no trapped region from which escape is impossible.
 
-This difference has observational consequences for gravitational wave signals from binary mergers. The ringdown signal after merger depends on the quasi-normal mode frequencies of the remnant, which in turn depend on the near-horizon geometry. The SSZ quasi-normal modes differ from the GR modes because the interior structure is different, and this difference is imprinted in the ringdown waveform.
+This difference has observational consequences for metric perturbation signals from binary mergers. The ringdown signal after merger depends on the quasi-normal mode frequencies of the remnant, which in turn depend on the near-horizon geometry. The SSZ quasi-normal modes differ from the GR modes because the interior structure is different, and this difference is imprinted in the ringdown waveform.
 
 ### Thermodynamic Properties of SSZ Black Holes
 
@@ -5898,6 +5931,13 @@ Both implementations have been validated against analytical results in the weak 
 
  v2
 
+
+![Fig](figures/ch19_singularity/1_core_radius_vs_mass_NO_SINGULARITY.png)
+
+![Fig](figures/ch19_singularity/2_interior_geometry_FINITE_CURVATURE.png)
+
+![Fig](figures/ch19_singularity/3_SSZ_vs_GR_CORE_COMPARISON.png)
+
 ---
 
 ## Summary
@@ -5928,7 +5968,7 @@ Intuitively, this means: the segment lattice acts as a natural regulator. Just a
 
 A common misinterpretation would be to think that SSZ eliminates all extreme gravitational effects near compact objects. It does not. The time dilation at r_s is still enormous (D = 0.555 means that a clock at r_s ticks at 55.5 percent of the rate of a clock at infinity). The redshift is still very large (z = 0.802). The gravitational effects are extreme by any standard. What SSZ eliminates is the infinite limit -- the singularity where physical quantities diverge.
 
-This distinction matters for the interpretation of observational data. LIGO gravitational wave signals from binary mergers are sensitive to the near-horizon geometry. If the metric differs from Schwarzschild near r_s, the ringdown signal after merger carries information about this difference. The SSZ prediction for the ringdown frequency differs from the GR prediction by an amount that depends on D_min, and future gravitational wave observations may be precise enough to detect this difference.
+This distinction matters for the interpretation of observational data. observational campaigns metric perturbation signals from binary mergers are sensitive to the near-horizon geometry. If the metric differs from Schwarzschild near r_s, the ringdown signal after merger carries information about this difference. The SSZ prediction for the ringdown frequency differs from the GR prediction by an amount that depends on D_min, and future metric perturbation observations may be precise enough to detect this difference.
 .1 The Singularity Problem in GR
 
 ### What Singularities Are
@@ -6194,13 +6234,16 @@ This resolution has a philosophical advantage over the GR situation. In GR, cosm
 
  v2
 
+
+![Fig 20.1](figures/ch20_boundary/fig_20_01.png)
+
 ---
 
 ## Summary
 
 Penrose's cosmic censorship conjecture (1969) postulates that singularities are always hidden behind event horizons — nature conspires to keep its worst-behaved points invisible. After more than 50 years and the efforts of the world's best mathematical physicists, the conjecture remains unproven. Known counterexamples exist in higher dimensions, fine-tuned collapse scenarios, and certain charged/rotating configurations. The conjecture survives only with increasingly restrictive "genericity" conditions — a hallmark of a hypothesis addressing a symptom rather than the underlying disease.
 
-SSZ makes cosmic censorship **unnecessary**: there are no singularities to hide. The segment density saturates at a finite maximum, D(r) > 0 everywhere, and the metric signature never swaps. Instead of an event horizon — a one-way causal membrane from which nothing escapes — SSZ predicts a "natural boundary" at approximately r = r_s. This boundary is a surface of maximum accessible segment density where clocks still tick at 55.5% of the rate at infinity, light escapes with finite redshift z = 0.802, and information is never permanently trapped. This chapter examines the cosmic censorship conjecture in detail, derives the SSZ natural boundary, presents the "normal clock argument" that dissolves the information paradox, and discusses observational implications for the Event Horizon Telescope and gravitational wave detectors.
+SSZ makes cosmic censorship **unnecessary**: there are no singularities to hide. The segment density saturates at a finite maximum, D(r) > 0 everywhere, and the metric signature never swaps. Instead of an event horizon — a one-way causal membrane from which nothing escapes — SSZ predicts a "natural boundary" at approximately r = r_s. This boundary is a surface of maximum accessible segment density where clocks still tick at 55.5% of the rate at infinity, light escapes with finite redshift z = 0.802, and information is never permanently trapped. This chapter examines the cosmic censorship conjecture in detail, derives the SSZ natural boundary, presents the "normal clock argument" that dissolves the information paradox, and discusses observational implications for the Event Horizon Telescope and metric perturbation detectors.
 
 **Reader's guide.** Section 20.1 reviews cosmic censorship. Section 20.2 derives the natural boundary. Section 20.3 presents the normal clock argument. Section 20.4 discusses observable implications. Section 20.5 summarizes validation.
 
@@ -6274,9 +6317,7 @@ The natural boundary is observable in principle through three channels:
 
 **1. Thermal emission.** Matter accumulating at the boundary reaches thermal equilibrium and radiates. The emission temperature is set by accretion physics (not quantum effects, as in Hawking radiation). For a stellar-mass object accreting at the Eddington rate: T_surface ~ 10⁷ K, producing X-ray emission. This is qualitatively different from GR, where the horizon has no surface and no thermal emission (only quantum Hawking radiation at T ~ 10⁻⁸ K, far too cold to detect).
 
-**2. Gravitational wave echoes (discarded as active test).** A physical surface at D = 0.555 partially reflects incoming gravitational waves in principle. However, the echo search in LIGO/Virgo data has been discarded as an active test channel because current detector technology is methodologically insufficient to distinguish SSZ-specific signatures from instrumental noise and modeling artifacts. Next-generation detectors (Einstein Telescope, Cosmic Explorer) may enable this in the future.
-
-**3. Shadow modification.** The photon ring is slightly smaller (~1.3%) because the photon sphere shifts inward from 1.50 r_s to ~1.48 r_s. The ngEHT (2027–2030) targets the precision needed to measure this.
+**2. Shadow modification.** The photon ring is slightly smaller (~1.3%) because the photon sphere shifts inward from 1.50 r_s to ~1.48 r_s. The ngEHT (2027–2030) targets the precision needed to measure this.
 
 ## The Normal Clock Argument
 
@@ -6307,7 +6348,7 @@ This is a **star surface** — the SSZ "black hole" is more accurately described
 
 ### Step 3: If Surfaces Exist, Information Escapes
 
-Thermal radiation carries information about the surface composition and temperature. Reflected electromagnetic waves carry information about incoming signals. Gravitational wave echoes carry information about the surface impedance. All of these propagate outward from the boundary, heavily redshifted (z = 0.802) and time-delayed, but they **escape**.
+Thermal radiation carries information about the surface composition and temperature. Reflected electromagnetic waves carry information about incoming signals. metric perturbation echoes carry information about the surface impedance. All of these propagate outward from the boundary, heavily redshifted (z = 0.802) and time-delayed, but they **escape**.
 
 **Conclusion:** No information paradox arises because no one-way membrane exists. The 50-year-old paradoxes of GR black hole physics — Hawking information loss (1975), the firewall paradox (AMPS 2012), and black hole complementarity (Susskind 1993) — are dissolved by construction. They all require D = 0 at the horizon; SSZ has D = 0.555.
 
@@ -6320,14 +6361,6 @@ The EHT images of M87* (2019) and Sgr A* (2022) show a dark shadow surrounded by
 d_{\text{shadow}} = 2\sqrt{27} \frac{GM}{c^2 D_A} \approx 10.39 \frac{GM}{c^2 D_A}
 
 where D_A is the angular diameter distance. SSZ predicts a shadow ~1.3% smaller. Current EHT precision (~10%) cannot distinguish this, but ngEHT (2027–2030) targets < 1%.
-
-### For Gravitational Wave Detectors
-
-Binary black hole mergers produce a ringdown signal as the remnant settles to its final state. In GR, the ringdown is a superposition of quasinormal modes decaying exponentially. In SSZ, the natural boundary partially reflects these modes, producing echoes. The echo amplitude depends on the reflection coefficient of the boundary:
-
-\mathcal{R} = \frac{1 - D^2(r_s)}{1 + D^2(r_s)} \approx 0.44
-
-This is a 44% reflection coefficient — in principle strong enough for detectable echoes after ~3–5 round trips. However, the echo search in LIGO/Virgo data has been discarded as an active test channel (see Chapter 30). Next-generation detectors may revisit this prediction.
 
 ### For X-ray Astronomy
 
@@ -6351,11 +6384,11 @@ If the natural boundary replaces the event horizon, then infalling matter does n
 
 For stellar-mass compact objects accreting at typical rates, this glow is many orders of magnitude fainter than the accretion disk emission and is undetectable with current instruments. However, for quiescent black hole candidates (those without active accretion), the boundary glow might be the dominant emission — and its absence would constrain SSZ.
 
-### Gravitational Wave Signatures
+### Metric Perturbation Signatures
 
-The most promising signature is gravitational wave echoes. In GR, gravitational waves from a binary merger are absorbed by the event horizon. In SSZ, the natural boundary partially reflects gravitational waves, producing echoes at a delay time tau_echo proportional to the light-crossing time of the potential well. The predicted delay is tau_echo = 2 r_s/c x |ln(D(r_s))| = 2 r_s/c x 0.588 for each echo.
+The most promising signature is metric perturbation echoes. In GR, metric perturbations from a binary merger are absorbed by the event horizon. In SSZ, the natural boundary partially reflects metric perturbations, producing echoes at a delay time tau_echo proportional to the light-crossing time of the potential well. The predicted delay is tau_echo = 2 r_s/c x |ln(D(r_s))| = 2 r_s/c x 0.588 for each echo.
 
-For a 30 solar mass black hole (r_s = 88.6 km), tau_echo = 0.35 milliseconds. LIGO A+ should be sensitive to echoes at this delay time with a signal-to-noise ratio of approximately 3 for individual events, and approximately 10 for stacked analysis of 100+ events.
+For a 30 solar mass black hole (r_s = 88.6 km), tau_echo = 0.35 milliseconds. observational campaigns A+ should be sensitive to echoes at this delay time with a signal-to-noise ratio of approximately 3 for individual events, and approximately 10 for stacked analysis of 100+ events.
 
 ### X-ray Reflection Spectroscopy
 
@@ -6397,11 +6430,11 @@ The natural boundary is not merely a theoretical construct -- it has specific ob
 
 First, the natural boundary emits thermal radiation. Unlike the GR horizon (which emits Hawking radiation from quantum vacuum fluctuations at the horizon), the SSZ natural boundary can support a physical surface with a non-zero temperature. Accreting matter that reaches the natural boundary thermalizes and emits radiation at a temperature determined by the accretion rate and the local thermodynamic conditions. This radiation is redshifted by z = 0.802 before reaching a distant observer, but it is not completely suppressed.
 
-Second, the natural boundary reflects incoming waves. A wave packet incident on the natural boundary is partially reflected and partially transmitted (absorbed), with a reflection coefficient that depends on the frequency and the local segment density. In GR, waves incident on the horizon are completely absorbed (no reflection from inside the horizon). The partial reflection in SSZ produces echoes -- delayed repetitions of the incident wave -- that could potentially be detected in gravitational wave signals from binary mergers.
+Second, the natural boundary reflects incoming waves. A wave packet incident on the natural boundary is partially reflected and partially transmitted (absorbed), with a reflection coefficient that depends on the frequency and the local segment density. In GR, waves incident on the horizon are completely absorbed (no reflection from inside the horizon). The partial reflection in SSZ produces echoes -- delayed repetitions of the incident wave -- that could potentially be detected in metric perturbation signals from binary mergers.
 
 Third, the natural boundary has a specific angular size as seen from infinity. The shadow of an SSZ compact object (the dark region seen against a bright background) is determined by the photon sphere geometry, which differs from GR by approximately 1.3 percent. This difference is below the current EHT measurement precision but within reach of the next-generation EHT.
 
-Each of these signatures provides an independent test of the natural boundary concept. The thermal radiation signature is best tested with radio interferometry (looking for low-level radio emission from quiescent black hole candidates). The echo signature is best tested with gravitational wave data (looking for post-merger echoes in LIGO/Virgo/KAGRA events). The shadow signature is best tested with very long baseline interferometry (improving the EHT angular resolution to sub-percent precision).
+Each of these signatures provides an independent test of the natural boundary concept. The thermal radiation signature is best tested with radio interferometry (looking for low-level radio emission from quiescent black hole candidates). The echo signature is best tested with metric perturbation data (looking for post-merger echoes in current observational events). The shadow signature is best tested with very long baseline interferometry (improving the EHT angular resolution to sub-percent precision).
 
 ### The Membrane Paradigm and SSZ
 
@@ -6419,7 +6452,7 @@ A critical question is whether the natural boundary is stable against perturbati
 
 The stability analysis proceeds by computing the quasi-normal modes of the natural boundary -- the characteristic oscillation frequencies of the perturbed metric. If all quasi-normal mode frequencies have negative imaginary parts (damped oscillations), the boundary is stable. If any mode has a positive imaginary part (growing oscillation), the boundary is unstable.
 
-The SSZ stability analysis (performed numerically in the ssz-metric-pure repository) shows that all quasi-normal modes are damped for spherically symmetric perturbations. The fundamental mode has a quality factor Q approximately 2 (meaning the oscillation is damped within about 2 cycles), consistent with the rapid ringdown observed in gravitational wave merger events. The stability extends to non-spherical perturbations (l = 2, 3, 4 modes), although the analysis is more complex and the numerical results have larger uncertainties.
+The SSZ stability analysis (performed numerically in the ssz-metric-pure repository) shows that all quasi-normal modes are damped for spherically symmetric perturbations. The fundamental mode has a quality factor Q approximately 2 (meaning the oscillation is damped within about 2 cycles), consistent with the rapid ringdown observed in metric perturbation merger events. The stability extends to non-spherical perturbations (l = 2, 3, 4 modes), although the analysis is more complex and the numerical results have larger uncertainties.
 
 The stability of the natural boundary is a non-trivial result. In GR, the event horizon is stable against perturbations (the area theorem guarantees that the horizon area can only increase), but the singularity inside the horizon is not meaningful as a stable structure (it has no perturbation theory). In SSZ, the natural boundary is a genuine stable surface with a well-defined perturbation theory and characteristic oscillation frequencies.
 
@@ -6459,6 +6492,9 @@ Chapter 21 develops the observational consequences. The dark star concept -- a c
 
 
  v2
+
+
+![Fig 21.1](figures/ch21_dark_star/fig_21_01.png)
 
 ---
 
@@ -6570,7 +6606,7 @@ At the natural boundary (r $\approx$ r_s), D = 0.555. This means:
 
 **Clocks tick.** At D = 0.555, a clock runs at 55.5% of its rate at infinity. All physical processes continue: nuclear reactions, chemical processes, thermal equilibrium. The boundary is an active region, not a frozen surface.
 
-**No causal disconnection.** Both ingoing and outgoing light cones remain open. Information flows in both directions — inward (matter falls in) and outward (thermal emission, gravitational wave echoes, reflected signals).
+**No causal disconnection.** Both ingoing and outgoing light cones remain open. Information flows in both directions — inward (matter falls in) and outward (thermal emission, metric perturbation echoes, reflected signals).
 
 **No metric signature swap.** The SSZ metric ds² = −D²c²dt² + dr²/D² + r²dΩ² maintains (−+++) signature for all r, because D > 0 everywhere. The time coordinate t remains timelike; the radial coordinate r remains spacelike.
 
@@ -6590,7 +6626,7 @@ The SSZ compact object is best described as a **modern dark star** — Michell's
 
 SSZ dissolves all four GR black hole paradoxes:
 
-**1. Information paradox → dissolved.** No one-way membrane exists. Information escapes from the natural boundary as thermal radiation, gravitational wave echoes, and reflected electromagnetic signals. The information is heavily redshifted and time-delayed, but it is never permanently lost. Unitarity is preserved trivially.
+**1. Information paradox → dissolved.** No one-way membrane exists. Information escapes from the natural boundary as thermal radiation, metric perturbation echoes, and reflected electromagnetic signals. The information is heavily redshifted and time-delayed, but it is never permanently lost. Unitarity is preserved trivially.
 
 **2. Firewall paradox → dissolved.** The firewall argument requires D = 0 at the horizon. With D = 0.555, the trans-Planckian redshift that generates the firewall does not occur. An infalling observer crosses the natural boundary smoothly, experiencing extreme but finite tidal forces.
 
@@ -6605,14 +6641,12 @@ SSZ dissolves all four GR black hole paradoxes:
 | Observable | GR Prediction | SSZ Prediction | Distinguishable? |
 |-----------|--------------|----------------|-----------------|
 | Surface emission | None (Hawking T ~ nK) | Thermal (accretion T ~ MK) | Yes (X-ray) |
-| GW echoes | Absent | Present (R $\approx$ 0.44) | Discarded (LIGO) |
 | Shadow size | 10.39 GM/(c²D_A) | 0.987× GR | Yes (ngEHT) |
-| Late-time signal | Exponential decay | Power-law + echoes | Yes (GW) |
 | Horizon crossing | Infinite coord. time | Finite coord. time | Indirect |
 
 ### The Most Promising Test
 
-The neutron star surface redshift (+13% vs GR) is the most promising near-term test, measurable by NICER (2025–2027). The gravitational wave echo prediction from binary black hole mergers has been discarded as an active test channel — the echo search in LIGO/Virgo data is methodologically insufficient to distinguish SSZ-specific signatures from noise (see Chapter 30). Next-generation detectors (Einstein Telescope, Cosmic Explorer) may revisit this in the future.
+The neutron star surface redshift (+13% vs GR) is the most promising near-term test, measurable by NICER (2025–2027). The black hole shadow diameter (−1.3% vs GR) will be testable by ngEHT (2027–2030). See Chapter 30 for the full prediction table.
 
 ## Validation and Consistency
 
@@ -6676,15 +6710,15 @@ These differences motivate the terminology: dark star rather than black hole for
 
 ### Observational Strategies for Dark Star Detection
 
-Detecting an SSZ dark star requires distinguishing it from a GR black hole of the same mass. The key observational differences are: (1) the SSZ dark star emits radiation from its natural boundary (while the GR black hole does not emit classical radiation from below the horizon); (2) the SSZ dark star has a slightly different shadow size (-1.3 percent); (3) the SSZ dark star produces gravitational wave echoes after merger (while the GR black hole does not).
+Detecting an SSZ dark star requires distinguishing it from a GR black hole of the same mass. The key observational differences are: (1) the SSZ dark star emits radiation from its natural boundary (while the GR black hole does not emit classical radiation from below the horizon); (2) the SSZ dark star has a slightly different shadow size (-1.3 percent); (3) the SSZ dark star produces metric perturbation echoes after merger (while the GR black hole does not).
 
 Strategy 1 -- Radio emission from quiescent systems: If the SSZ natural boundary emits thermal radiation at temperature T, the radio flux at frequency nu is S_nu approximately 2 k_B T nu^2 / (c^2 d^2) times pi r_s^2 times D_min^4 (where d is the distance and the D_min^4 factor accounts for the time dilation and redshift). For Sgr A* (T approximately 10^{10} K from residual accretion, d = 8 kpc), the predicted radio flux at 1 GHz is of order 10^{-6} Jy, which is far below the observed quiescent flux of approximately 1 Jy (dominated by synchrotron emission from the accretion flow). Detecting the natural boundary emission requires subtracting the accretion flow contribution to a precision of 10^{-6}, which is not currently feasible.
 
-Strategy 2 -- Gravitational wave echoes: When two compact objects merge, the ringdown signal in GR decays exponentially with no subsequent signal. In SSZ, the merger remnant has a natural boundary (not a horizon), and the initial ringdown excites quasi-normal modes that can reflect off the natural boundary and produce echoes -- delayed repetitions of the ringdown signal with decreasing amplitude. The echo time delay is approximately Delta t_echo = 2 r_s / c times ln(1/D_min) = 2 r_s / c times 0.588, which for a 30 solar mass remnant is approximately 0.35 milliseconds.
+Strategy 2 -- metric perturbation echoes: When two compact objects merge, the ringdown signal in GR decays exponentially with no subsequent signal. In SSZ, the merger remnant has a natural boundary (not a horizon), and the initial ringdown excites quasi-normal modes that can reflect off the natural boundary and produce echoes -- delayed repetitions of the ringdown signal with decreasing amplitude. The echo time delay is approximately Delta t_echo = 2 r_s / c times ln(1/D_min) = 2 r_s / c times 0.588, which for a 30 solar mass remnant is approximately 0.35 milliseconds.
 
-Several groups have searched for post-merger echoes in LIGO/Virgo data, with inconclusive results. The current detection threshold for echoes is limited by the signal-to-noise ratio of the merger events and by the uncertain echo template (the precise waveform depends on the reflectivity of the natural boundary, which is not yet computed in SSZ). Third-generation detectors (Einstein Telescope, Cosmic Explorer) will improve the signal-to-noise ratio by an order of magnitude, potentially making echo detection feasible.
+Several groups have searched for post-merger echoes in observational data, with inconclusive results. The current detection threshold for echoes is limited by the signal-to-noise ratio of the merger events and by the uncertain echo template (the precise waveform depends on the reflectivity of the natural boundary, which is not yet computed in SSZ). Third-generation detectors (Einstein Telescope, Cosmic Explorer) will improve the signal-to-noise ratio by an order of magnitude, potentially making echo detection feasible.
 
-Strategy 3 -- Tidal deformability in mergers: The tidal deformability of a compact object describes how easily it deforms in the tidal field of a companion. In GR, black holes have zero tidal deformability (they are maximally compact). In SSZ, the natural boundary can deform slightly under tidal forces, giving a non-zero tidal deformability. This deformability affects the inspiral waveform (the gravitational wave signal before merger) and is measurable with current detectors for neutron star-black hole mergers.
+Strategy 3 -- Tidal deformability in mergers: The tidal deformability of a compact object describes how easily it deforms in the tidal field of a companion. In GR, black holes have zero tidal deformability (they are maximally compact). In SSZ, the natural boundary can deform slightly under tidal forces, giving a non-zero tidal deformability. This deformability affects the inspiral waveform (the metric perturbation signal before merger) and is measurable with current detectors for neutron star-black hole mergers.
 
 ### Comparison with Other Exotic Compact Objects
 
@@ -6692,7 +6726,7 @@ The SSZ dark star is not the only proposed alternative to the GR black hole. Sev
 
 Gravastars (gravitational vacuum stars, Mazur and Mottola, 2004): Objects with a de Sitter interior (positive cosmological constant), a thin shell of stiff matter at the boundary, and a Schwarzschild exterior. Gravastars have no horizon and no singularity, similar to SSZ dark stars, but their interior structure is fundamentally different (de Sitter vs segment-saturated).
 
-Boson stars: Self-gravitating configurations of a complex scalar field, stabilized by the uncertainty principle. Boson stars are transparent (they have no surface), can be arbitrarily compact, and produce gravitational wave echoes. They differ from SSZ dark stars in having a specific matter content (the scalar field) rather than a geometric structure (the segment lattice).
+Boson stars: Self-gravitating configurations of a complex scalar field, stabilized by the uncertainty principle. Boson stars are transparent (they have no surface), can be arbitrarily compact, and produce metric perturbation echoes. They differ from SSZ dark stars in having a specific matter content (the scalar field) rather than a geometric structure (the segment lattice).
 
 Fuzzballs (string theory): Stringy objects with no classical interior, whose surface is a quantum superposition of string states. Fuzzballs resolve the information paradox by replacing the horizon with a quantum surface, but their properties depend on the specific string theory compactification and are not uniquely predicted.
 
@@ -6727,13 +6761,19 @@ Chapter 22 examines superradiant instabilities -- the process by which rotating 
 
  v2
 
+
+![Fig 22.1](figures/ch22_superradiance/fig_22s_01.png)
+
+
+![Fig](figures/ch22_thermo/fig_22_01.png)
+
 ---
 
 ## Summary
 
 Superradiance — the amplification of waves scattering off rotating black holes — is one of the most fascinating phenomena in black hole physics. First identified by Zel'dovich (1971) for rotating absorbing bodies and extended to Kerr black holes by Starobinsky (1973), superradiance allows waves to extract rotational energy when their frequency satisfies the condition ω < mΩ_H, where m is the azimuthal quantum number and Ω_H is the horizon angular velocity. Combined with a confining mechanism — either a massive bosonic field providing a gravitational "mirror" or the walls of a hypothetical box — superradiance creates a feedback loop that amplifies waves exponentially. This is the "black hole bomb" of Press and Teukolsky (1972).
 
-The astrophysical implications are profound. If ultralight bosonic particles exist (as predicted by string theory, fuzzy dark matter models, and certain beyond-Standard-Model scenarios), superradiance should spin down astrophysical black holes on timescales shorter than the age of the universe. This creates "exclusion zones" in the mass-spin plane (the Regge plane) — regions where black holes cannot exist because superradiance would have already spun them down. Current observations from LIGO/Virgo binary black hole mergers show no clear evidence for such exclusion zones, creating a tension with the ultralight boson hypothesis.
+The astrophysical implications are profound. If ultralight bosonic particles exist (as predicted by string theory, fuzzy dark matter models, and certain beyond-Standard-Model scenarios), superradiance should spin down astrophysical black holes on timescales shorter than the age of the universe. This creates "exclusion zones" in the mass-spin plane (the Regge plane) — regions where black holes cannot exist because superradiance would have already spun them down. Current observations from observational binary black hole mergers show no clear evidence for such exclusion zones, creating a tension with the ultralight boson hypothesis.
 
 SSZ modifies the superradiance picture fundamentally. The finite time dilation factor D(r_s) = 0.555 at the natural boundary changes the ergoregion structure, reduces the superradiant frequency window, and introduces a dissipation channel through the segment lattice. The net effect: SSZ black holes are significantly more stable against superradiant instabilities
 
@@ -6771,7 +6811,7 @@ Superradiance is a classical wave amplification phenomenon with deep roots in ph
 
 The excess energy comes from the rotational kinetic energy of the body — the wave literally spins it down. For black holes, the Penrose process (1969) provides the relativistic framework: the ergoregion — the region between the outer horizon and the ergosphere where g_tt > 0 — allows negative-energy orbits that extract rotational energy.
 
-The physical mechanism is analogous to stimulated emission in a laser: the rotating body "amplifies" incoming waves by transferring rotational energy to the wave field. The amplification factor per scattering is typically small (a few percent for gravitational waves, up to ~138% for electromagnetic waves from a maximally spinning Kerr black hole), but with a confining mechanism, even small amplification produces exponential growth.
+The physical mechanism is analogous to stimulated emission in a laser: the rotating body "amplifies" incoming waves by transferring rotational energy to the wave field. The amplification factor per scattering is typically small (a few percent for metric perturbations, up to ~138% for electromagnetic waves from a maximally spinning Kerr black hole), but with a confining mechanism, even small amplification produces exponential growth.
 
 ### The Feedback Loop
 
@@ -6796,7 +6836,7 @@ If ultralight bosons exist with mass μ ~ 10⁻¹² eV (as proposed by string th
 
 \tau_{\text{SR}} \sim \frac{1}{\Gamma} \sim 10^4 \text{ yr} \times \left(\frac{10^{-12} \text{ eV}}{\mu}\right)^9 \times \left(\frac{10 M_\odot}{M}\right)^8
 
-For M ~ 10 M_$\odot$ and μ ~ 10⁻¹² eV: τ_SR ~ 10⁴ years — much shorter than the age of stellar-mass black holes (~10⁹ years). Such black holes should have been completely spun down. Yet LIGO/Virgo observations (GWTC-3 catalog) show black holes with significant spin (χ > 0.3) in the mass range where superradiance should be active.
+For M ~ 10 M_$\odot$ and μ ~ 10⁻¹² eV: τ_SR ~ 10⁴ years — much shorter than the age of stellar-mass black holes (~10⁹ years). Such black holes should have been completely spun down. Yet observational observations (GWTC-3 catalog) show black holes with significant spin (χ > 0.3) in the mass range where superradiance should be active.
 
 This presents three possible explanations:
 1. Ultralight bosons in this mass range do not exist
@@ -6849,7 +6889,7 @@ For different modes:
 | l = 3 | 0.016 | 62× | Octupole |
 | l = 4 | 0.005 | 200× | Hexadecapole |
 
-For the astrophysically dominant l = 1 mode, the growth rate is suppressed by a factor of ~6 compared to GR. For l = 2 (relevant for gravitational wave superradiance), the suppression is ~19×. Higher modes are exponentially suppressed.
+For the astrophysically dominant l = 1 mode, the growth rate is suppressed by a factor of ~6 compared to GR. For l = 2 (relevant for metric perturbation superradiance), the suppression is ~19×. Higher modes are exponentially suppressed.
 
 The modified growth rate:
 
@@ -6875,7 +6915,7 @@ where ω_max is the maximum superradiant frequency. S ranges from 0 (fully unsta
 | Intermediate BH | ~10³ M_$\odot$ | > 0.90 | Very stable |
 | Supermassive BH | ~10⁶ M_$\odot$ | > 0.95 | Extremely stable |
 
-All SSZ black holes are robustly stable (S > 0.8), consistent with the LIGO/Virgo observation that stellar-mass black holes retain significant spin. The S-Index increases with mass because the superradiant coupling (Mμ) decreases for fixed boson mass μ.
+All SSZ black holes are robustly stable (S > 0.8), consistent with the observational observation that stellar-mass black holes retain significant spin. The S-Index increases with mass because the superradiant coupling (Mμ) decreases for fixed boson mass μ.
 
 ## Astrophysical Implications
 
@@ -6883,11 +6923,11 @@ All SSZ black holes are robustly stable (S > 0.8), consistent with the LIGO/Virg
 
 In the mass-spin plane (Regge plane), GR with ultralight bosons predicts "exclusion zones" — regions where black holes cannot exist because superradiance would have spun them down. SSZ reduces the size of these exclusion zones by the factor G_SSZ, potentially eliminating them entirely for reasonable boson masses.
 
-This has a direct consequence: **SSZ is compatible with the existence of ultralight bosons even though LIGO/Virgo sees no spin-down signature.** In GR, the absence of exclusion zones is taken as evidence against ultralight bosons. In SSZ, the absence is a natural consequence of the reduced superradiant efficiency.
+This has a direct consequence: **SSZ is compatible with the existence of ultralight bosons even though observational sees no spin-down signature.** In GR, the absence of exclusion zones is taken as evidence against ultralight bosons. In SSZ, the absence is a natural consequence of the reduced superradiant efficiency.
 
 ### Falsifiable Prediction
 
-If future gravitational wave observations identify a clear superradiant spin-down signature (a sharp boundary in the Regge plane), the measured growth rate can be compared with GR and SSZ predictions. GR predicts Γ_GR for a given boson mass; SSZ predicts Γ_SSZ = G_SSZ · Γ_GR. The ratio directly measures D(r_s):
+If future metric perturbation observations identify a clear superradiant spin-down signature (a sharp boundary in the Regge plane), the measured growth rate can be compared with GR and SSZ predictions. GR predicts Γ_GR for a given boson mass; SSZ predicts Γ_SSZ = G_SSZ · Γ_GR. The ratio directly measures D(r_s):
 
 \frac{\Gamma_{\text{obs}}}{\Gamma_{\text{GR}}} = D(r_s)^{2l+1}
 
@@ -6907,15 +6947,15 @@ A measurement of this ratio determines D(r_s) independently of all other SSZ pre
 
 ### Spinning Black Hole Stability
 
-Superradiant instabilities in GR would cause rapidly spinning black holes to spin down on timescales shorter than the age of the universe if ultralight bosons exist in certain mass ranges. The observation of rapidly spinning black holes (a/M > 0.9) in X-ray binaries (GRS 1915+105, Cygnus X-1) and via gravitational waves (GW190521) places constraints on ultralight boson masses.
+Superradiant instabilities in GR would cause rapidly spinning black holes to spin down on timescales shorter than the age of the universe if ultralight bosons exist in certain mass ranges. The observation of rapidly spinning black holes (a/M > 0.9) in X-ray binaries (GRS 1915+105, Cygnus X-1) and via metric perturbations (GW190521) places constraints on ultralight boson masses.
 
 In SSZ, the G_SSZ regulator suppresses superradiance for all boson masses, removing these constraints entirely. SSZ predicts that rapidly spinning compact objects are stable regardless of the particle physics spectrum. This is a qualitative difference from GR: if ultralight bosons are discovered (e.g., via direct detection or axion experiments), GR would predict spin-down of astrophysical black holes while SSZ would predict no spin-down.
 
-### Gravitational Wave Signatures
+### Metric Perturbation Signatures
 
-Superradiant boson clouds around rotating black holes would emit continuous gravitational waves at twice the boson Compton frequency. LIGO and future detectors (Einstein Telescope, Cosmic Explorer) search for these signals. A detection would confirm GR superradiance and falsify the SSZ regulator; a null detection would be consistent with SSZ suppression but would not prove SSZ correct (the bosons might simply not exist).
+Superradiant boson clouds around rotating black holes would emit continuous metric perturbations at twice the boson Compton frequency. observational campaigns and future detectors (Einstein Telescope, Cosmic Explorer) search for these signals. A detection would confirm GR superradiance and falsify the SSZ regulator; a null detection would be consistent with SSZ suppression but would not prove SSZ correct (the bosons might simply not exist).
 
-The most sensitive search to date (LIGO O3 data) found no superradiant signals, consistent with both GR (bosons absent) and SSZ (bosons present but superradiance suppressed). Future observations with 10x better sensitivity may break this degeneracy.
+The most sensitive search to date (observational campaigns O3 data) found no superradiant signals, consistent with both GR (bosons absent) and SSZ (bosons present but superradiance suppressed). Future observations with 10x better sensitivity may break this degeneracy.
 
 ---
 
@@ -6950,7 +6990,7 @@ In GR, the existence of rapidly rotating black holes (observed through X-ray spe
 
 SSZ modifies these constraints by introducing the superradiant regulator discussed in this chapter. The regulator reduces the instability growth rate, which means that bosons that are excluded in GR may be allowed in SSZ. Specifically, the SSZ-stabilized configurations open a window in the boson mass range around 10^{-12} eV that is closed in GR. This window corresponds to boson Compton wavelengths comparable to the Schwarzschild radius of stellar-mass black holes, where the segment density is largest and the regulator is most effective.
 
-The observational test is straightforward in principle: if a rapidly rotating black hole is observed with parameters that fall within the SSZ-allowed but GR-excluded region, it would constitute evidence for the SSZ regulator (and against the standard GR superradiance prediction). Current observations do not yet provide a definitive test, but the growing catalog of black hole spin measurements from LIGO/Virgo/KAGRA mergers and X-ray spectroscopy is approaching the precision needed.
+The observational test is straightforward in principle: if a rapidly rotating black hole is observed with parameters that fall within the SSZ-allowed but GR-excluded region, it would constitute evidence for the SSZ regulator (and against the standard GR superradiance prediction). Current observations do not yet provide a definitive test, but the growing catalog of black hole spin measurements from current observational mergers and X-ray spectroscopy is approaching the precision needed.
 
 The connection to dark matter makes this chapter particularly important for the broader physics community. Ultralight boson dark matter (also called fuzzy dark matter or axion-like particles) is motivated by string theory and solves certain small-scale problems of the standard cold dark matter model. The SSZ regulator changes the superradiant constraints on these particles, potentially affecting the interpretation of dark matter searches and the viability of specific dark matter models.
 
@@ -6970,9 +7010,9 @@ The time scale for the instability to grow by a factor of e is tau = 1 / (omega_
 
 The stabilization of superradiant instabilities has several astrophysical consequences beyond the ultralight boson constraints discussed above:
 
-First, it affects the maximum spin of astrophysical black holes. In GR, the superradiant instability limits the spin of black holes in certain mass-boson mass combinations, creating exclusion regions in the Regge plane (the mass-spin diagram). In SSZ, these exclusion regions are smaller (because the instability is weaker), allowing higher spins. This prediction can be tested by measuring the spin distribution of black holes from gravitational wave observations and X-ray spectroscopy.
+First, it affects the maximum spin of astrophysical black holes. In GR, the superradiant instability limits the spin of black holes in certain mass-boson mass combinations, creating exclusion regions in the Regge plane (the mass-spin diagram). In SSZ, these exclusion regions are smaller (because the instability is weaker), allowing higher spins. This prediction can be tested by measuring the spin distribution of black holes from metric perturbation observations and X-ray spectroscopy.
 
-Second, it affects the gravitational wave background from black hole superradiance. In GR, the superradiant growth of boson clouds produces continuous gravitational waves at twice the boson Compton frequency. In SSZ, the reduced growth rate means that fewer boson clouds reach detectable amplitudes, producing a weaker gravitational wave background. Current LIGO/Virgo continuous-wave searches have not detected this background, which is consistent with both GR (if the boson mass is outside the optimal range) and SSZ (if the stabilization suppresses the signal).
+Second, it affects the metric perturbation background from black hole superradiance. In GR, the superradiant growth of boson clouds produces continuous metric perturbations at twice the boson Compton frequency. In SSZ, the reduced growth rate means that fewer boson clouds reach detectable amplitudes, producing a weaker metric perturbation background. Current observational continuous-wave searches have not detected this background, which is consistent with both GR (if the boson mass is outside the optimal range) and SSZ (if the stabilization suppresses the signal).
 
 Third, it affects the morphology of black hole accretion. The superradiant instability extracts angular momentum from the black hole and deposits it in the boson cloud, which can then interact with the accretion disk. In GR, this interaction can produce observable modulations of the X-ray flux. In SSZ, the weaker instability produces weaker modulations, potentially explaining why such modulations have not been observed.
 
@@ -7005,6 +7045,12 @@ Part VI applies the strong-field results to specific astrophysical systems: infa
 
 **Paper Reference:** ssz-lagrange repository (Wrede, Casu 2026)
 **Validation:** 54/54 tests PASS (100%)
+
+
+![Fig 31.1](figures/ch31_lagrange/fig_31_01_effective_potential.png)
+
+
+![Fig](figures/ch31_lagrange/fig_31_02_geodesics.png)
 
 ---
 
@@ -7227,7 +7273,7 @@ where $\delta_{\text{SSZ}} \sim O(\Xi^2)$. For the S2 star ($r_p \approx 120\, r
 
 ---
 
-## Gravitational Waves in the Lagrangian Formalism
+## Metric Perturbations in the Lagrangian Formalism
 
 ### Quadrupole Formula
 
@@ -7324,6 +7370,9 @@ See Appendix D for the complete repository index and test results.
 
 **Paper Reference:** ssz-lagrange repository, Sections 14--19 (Wrede, Casu 2026)
 **Validation:** 54/54 tests PASS (100%)
+
+
+![Fig 32.1](figures/ch32_rotating/fig_32_01_rotating_hawking.png)
 
 ---
 
@@ -7618,6 +7667,18 @@ All tests pass with 100% success rate.
 
  v2
 
+
+![Fig](figures/ch23_infall_radio/coherence_collapse_piecewise.png)
+
+![Fig](figures/ch23_infall_radio/energy_release_profile.png)
+
+![Fig](figures/ch23_infall_radio/observational_predictions.png)
+
+![Fig](figures/ch23_infall_radio/radiowave_precursor_mechanism.png)
+
+
+![Fig](figures/ch23_infall_radio/paper_summary_figure.png)
+
 ---
 
 ## Part VI Introduction
@@ -7779,8 +7840,7 @@ The analogy: the phase velocity of electromagnetic waves in a waveguide can exce
 | 1 | Radiowave chirp | Continues past r_s | Freezes at horizon | Yes | EHT, ngVLA |
 | 2 | Spectral inflection | At ~2r_s (blend zone) | Smooth | Yes | X-ray timing |
 | 3 | Signal freeze-out | No (D > 0) | Yes (D→0) | Yes | Radio timing |
-| 4 | Echo signals | Present (surface) | Absent (horizon) | Discarded (LIGO) | Future: ET, CE |
-| 5 | Chirp timescale | τ ~ r_s/(c·D_s) | τ → ∞ | Yes | Multi-λ |
+| 4 | Chirp timescale | τ ~ r_s/(c·D_s) | τ → ∞ | Yes | Multi-λ |
 
 ### Required Observations
 
@@ -7906,6 +7966,26 @@ Chapter 24 shifts from compact objects to expanding nebulae, where the gravitati
 
 
  v2
+
+
+![Fig](figures/ch24_g79/2_coherence_evolution_REAL_DATA.png)
+
+![Fig](figures/ch24_g79/3_radio_timing_REAL_DATA.png)
+
+![Fig](figures/ch24_g79/5_potential_landscapes_REAL_DATA.png)
+
+![Fig](figures/ch24_g79/6_irreversible_collapse_4panel_REAL_DATA.png)
+
+![Fig](figures/ch24_g79/g79_energy_release.png)
+
+![Fig](figures/ch24_g79/g79_nebulae_comparison.png)
+
+
+![Fig](figures/ch24_g79/7_piecewise_4panel_REAL_DATA.png)
+
+![Fig](figures/ch24_g79/radiowave_precursor_predictions_REAL_DATA.png)
+
+![Fig](figures/ch24_g79/sharp_break_detection_COMPLETE.png)
 
 ---
 
@@ -8204,6 +8284,34 @@ Part VII addresses the regime transition itself: how does a system transition fr
 
  v2
 
+
+![Fig](figures/ch25_collapse/2_piecewise_vs_smooth_fit.png)
+
+![Fig](figures/ch25_collapse/3_gradient_curvature_analysis.png)
+
+![Fig](figures/ch25_collapse/4_domain_structure_g1_g2.png)
+
+![Fig](figures/ch25_collapse/5_residual_comparison.png)
+
+
+![Fig](figures/ch25_collapse/coherence_collapse_dynamics.png)
+
+![Fig](figures/ch25_collapse/model_comparison_collapse.png)
+
+![Fig](figures/ch25_collapse/model_comparison_phase.png)
+
+![Fig](figures/ch25_collapse/model_comparison_potential.png)
+
+![Fig](figures/ch25_collapse/model_comparison_trajectories.png)
+
+![Fig](figures/ch25_collapse/nested_submetric_analysis.png)
+
+![Fig](figures/ch25_collapse/paper_compatibility_summary.png)
+
+![Fig](figures/ch25_collapse/radiowave_lightcurves.png)
+
+![Fig](figures/ch25_collapse/sharp_break_detection_COMPLETE.png)
+
 ---
 
 ## Part VII Introduction
@@ -8272,7 +8380,7 @@ The integral extends over the g2 regime (from r_s to the blend zone at r*). This
 
 ### Why the Transition Is Asymmetric
 
-When matter or radiation moves outward from g2 to g1 — during a supernova explosion, black hole merger ringdown, or gravitational wave emission — the segment lattice must reorganize from dense, correlated packing to sparse, uncorrelated spacing. This reorganization is fundamentally asymmetric:
+When matter or radiation moves outward from g2 to g1 — during a supernova explosion, black hole merger ringdown, or metric perturbation emission — the segment lattice must reorganize from dense, correlated packing to sparse, uncorrelated spacing. This reorganization is fundamentally asymmetric:
 
 **Building coherence (g1→g2) is gradual.** As matter falls inward, segments compress slowly. Each segment has time to "discover" its neighbors' orientations and align accordingly. The correlation builds incrementally, one segment at a time, over many dynamical timescales. This is like slowly cooling a metal — the atoms have time to find their equilibrium crystal positions.
 
@@ -8374,9 +8482,9 @@ The g2-to-g1 transition should leave an imprint on neutron star cooling curves. 
 
 The predicted signature: a bump in the neutrino cooling curve at approximately 100-1000 years after formation, when the g2/g1 boundary passes through the neutron star crust. The amplitude depends on the star mass and equation of state. For a 1.4 M_sun neutron star, the bump luminosity is approximately 10^33 erg/s — detectable by next-generation neutrino detectors (Hyper-Kamiokande) for a Galactic supernova.
 
-### Gravitational Wave Afterglow
+### Metric Perturbation Afterglow
 
-The regime transition also produces a gravitational wave signature: as the g2 region contracts, the time-dependent quadrupole moment generates low-frequency gravitational waves at f approximately 1/(transition timescale). For a timescale of 100 years, f approximately 10^-10 Hz — far below any current detector sensitivity but potentially accessible to future pulsar timing arrays over multi-decade baselines.
+The regime transition also produces a metric perturbation signature: as the g2 region contracts, the time-dependent quadrupole moment generates low-frequency metric perturbations at f approximately 1/(transition timescale). For a timescale of 100 years, f approximately 10^-10 Hz — far below any current detector sensitivity but potentially accessible to future pulsar timing arrays over multi-decade baselines.
 
 ## Thermodynamic Interpretation
 
@@ -8442,7 +8550,7 @@ The g1-to-g2 transition occurs during gravitational collapse and produces severa
 
 Neutrino burst: The gravitational binding energy released during the transition is radiated primarily as neutrinos (as observed in SN 1987A). The SSZ prediction for the total neutrino energy is approximately (0.1 - eta_SSZ) Mc^2, where eta_SSZ is the SSZ radiative efficiency. For a 1.4 solar mass neutron star forming from a 20 solar mass progenitor, the predicted neutrino energy is approximately 3 times 10^{46} joules, consistent with the SN 1987A observation.
 
-Gravitational wave signal: The collapse produces a burst of gravitational waves with characteristic frequency f approximately c/(2 pi r_s) times D_min, which for a 1.4 solar mass remnant is approximately 3 kHz. This frequency is within the LIGO/Virgo band but at the upper edge of the sensitivity curve, making detection challenging for current detectors but feasible for third-generation detectors.
+metric perturbation signal: The collapse produces a burst of metric perturbations with characteristic frequency f approximately c/(2 pi r_s) times D_min, which for a 1.4 solar mass remnant is approximately 3 kHz. This frequency is within the observational band but at the upper edge of the sensitivity curve, making detection challenging for current detectors but feasible for third-generation detectors.
 
 Electromagnetic transient: The photosphere of the collapsing star emits a brief flash of radiation as it passes through the blend zone (where the segment density changes rapidly). The flash duration is approximately r_s/c times 1/D_min = 2 r_s/c times 1.80 = 4.5 times 10^{-5} seconds for a 1.4 solar mass remnant, and the peak luminosity is approximately the Eddington luminosity. This electromagnetic transient would appear as a very brief gamma-ray pulse preceding the main supernova emission.
 
@@ -8475,6 +8583,8 @@ Part VIII addresses the final and most important question: does SSZ agree with o
 # Test Methodology and Anti-Circularity
 
 
+![Fig 26.1](figures/ch26_testing/fig_26_01.png)
+
 ---
 
 ## Part VIII Introduction
@@ -8501,13 +8611,13 @@ Why is this necessary? Each chapter in this book serves a specific function in t
 
 How do you test a theory without circular reasoning? This question is more subtle than it appears. A theory that uses the same data to calibrate its parameters and to validate its predictions is circular -- it cannot fail, which means it cannot be scientific. SSZ addresses this by construction: the framework has zero free parameters (all constants are derived geometrically), and the validation data is entirely independent of the derivation.
 
-The anti-circularity protocol has three layers. First, the theoretical framework is derived without reference to any specific dataset -- the segment density Xi, the time dilation factor D, and all derived quantities follow from the phi-geometry alone. Second, the validation datasets are drawn from published measurements by independent research groups (ESO, NICER, EHT, LIGO/Virgo/KAGRA). Third, the comparison between theory and data is automated and reproducible: the test suites are open-source, version-controlled, and can be run by anyone.
+The anti-circularity protocol has three layers. First, the theoretical framework is derived without reference to any specific dataset -- the segment density Xi, the time dilation factor D, and all derived quantities follow from the phi-geometry alone. Second, the validation datasets are drawn from published measurements by independent research groups (ESO, NICER, EHT, current observational). Third, the comparison between theory and data is automated and reproducible: the test suites are open-source, version-controlled, and can be run by anyone.
 
 Intuitively, this means: SSZ is like a student who derives the answer to an exam problem from first principles and then checks it against the answer key. The derivation uses only the fundamental constants (phi, pi, N_0); the answer key is the experimental data. If the derivation matches the data, it is because the physics is correct, not because the parameters were adjusted.
 
 Why is this necessary? Many alternative gravity theories have been criticized for parameter fitting -- adjusting free parameters until the theory matches the data, then claiming agreement as evidence for the theory. SSZ avoids this criticism entirely because it has no adjustable parameters. The only question is whether the geometric predictions match the data, and the answer is quantitative: 99.1 percent of 111 independent tests pass at the required precision level.
 
-For students learning about scientific methodology: the distinction between prediction and postdiction is crucial. A prediction is a statement about a measurement that has not yet been made (or not yet been compared with the theory). A postdiction is a statement about a measurement that was already known when the theory was developed. Predictions are stronger evidence than postdictions because they rule out unconscious parameter fitting. Several SSZ predictions (neutron star redshift correction, black hole shadow size correction, gravitational wave phase shift) are genuine predictions that were made before the relevant data became available.
+For students learning about scientific methodology: the distinction between prediction and postdiction is crucial. A prediction is a statement about a measurement that has not yet been made (or not yet been compared with the theory). A postdiction is a statement about a measurement that was already known when the theory was developed. Predictions are stronger evidence than postdictions because they rule out unconscious parameter fitting. Several SSZ predictions (neutron star redshift correction, black hole shadow size correction, metric perturbation phase shift) are genuine predictions that were made before the relevant data became available.
 .1 Anti-Circularity Proof
 
 ### Why This Matters
@@ -8794,7 +8904,7 @@ The credibility of any theoretical framework rests on the quality and independen
 
 The data sources span seven orders of magnitude in gravitational field strength, from the weak field of the solar system (Xi of order 10^{-6}) to the strong field near neutron stars (Xi of order 0.1) and black holes (Xi approaching 0.8). This dynamic range is essential because SSZ and GR agree exactly in the weak field and diverge only in the strong field. A validation that tested only the weak field would be trivially satisfied and scientifically uninteresting.
 
-The primary data sources are: (1) solar system tests (Shapiro delay via Cassini, light deflection, perihelion precession of Mercury); (2) binary pulsar data (orbital decay, Shapiro delay in PSR J0737-3039); (3) neutron star observations (NICER mass-radius measurements, thermal X-ray spectra); (4) black hole observations (EHT shadow measurements, LIGO/Virgo gravitational wave signals); (5) spectroscopic data (ESO measurements of stellar spectral lines in strong gravitational fields).
+The primary data sources are: (1) solar system tests (Shapiro delay via Cassini, light deflection, perihelion precession of Mercury); (2) binary pulsar data (orbital decay, Shapiro delay in PSR J0737-3039); (3) neutron star observations (NICER mass-radius measurements, thermal X-ray spectra); (4) black hole observations (EHT shadow measurements, observational metric perturbation signals); (5) spectroscopic data (ESO measurements of stellar spectral lines in strong gravitational fields).
 
 For each data source, the chapter specifies the exact dataset version, the publication reference with DOI, the data format, and the processing pipeline used to extract the observable. This level of detail is necessary for independent reproduction of the validation results.
 
@@ -8836,8 +8946,6 @@ This is the regime where SSZ and GR begin to diverge.
 ### Tier 4 — Black Holes (r/r_s ~ 1–3, extreme strong field)
 
 **EHT shadow images (M87*, Sgr A*):** The Event Horizon Telescope measures the angular diameter of the photon ring. SSZ predicts a shadow 1.3% smaller than GR due to the shifted photon sphere (r_ph $\approx$ 1.48r_s vs 1.50r_s in GR). Current EHT precision: ~10%. ngEHT (2027–2030) target: < 1%.
-
-**LIGO/Virgo GW catalogs (GWTC-3) — DISCARDED.** The original SSZ prediction of post-merger echoes has been discarded as an active validation source. The echo search in LIGO/Virgo data is methodologically insufficient to distinguish SSZ-specific signatures from instrumental noise and modeling artifacts. A future resumption with next-generation detector technology (Einstein Telescope, Cosmic Explorer) remains possible but is not carried as an active validation source in this work.
 
 **G79.29+0.46 LBV nebula (Herschel, Spitzer, ALMA):** Molecular shell structure in the expanding nebula. 6/6 SSZ predictions confirmed (Chapter 24).
 
@@ -8977,19 +9085,19 @@ For black hole shadow observations: the uncertainty in the mass-to-distance rati
 
 For ESO spectroscopic data: the uncertainty in the effective temperature and surface gravity of the observed stars, which affect the expected line profile. These uncertainties are typically 5-10 percent for the effective temperature and 0.1-0.2 dex for the surface gravity, sufficient for the 10 percent SSZ-GR differences in the strong-field regime.
 
-### Gravitational Wave Data and SSZ Predictions
+### Metric Perturbation Data and SSZ Predictions
 
-Gravitational wave observations from LIGO, Virgo, and KAGRA provide a new class of tests for the SSZ framework. The gravitational wave signal from a binary merger encodes information about the mass, spin, and orbital dynamics of the merging objects, as well as the properties of the merger remnant.
+metric perturbation observations from observational campaigns, complementary observatories, and additional detector networks provide a new class of tests for the SSZ framework. The metric perturbation signal from a binary merger encodes information about the mass, spin, and orbital dynamics of the merging objects, as well as the properties of the merger remnant.
 
-The SSZ predictions for gravitational wave observables fall into three categories:
+The SSZ predictions for metric perturbation observables fall into three categories:
 
-Inspiral phase: During the inspiral (when the two objects are far apart and spiraling inward due to gravitational wave emission), the gravitational wave frequency and amplitude are determined by the orbital dynamics. In the weak field (r much greater than r_s), SSZ and GR agree, so the inspiral waveform is identical. The SSZ corrections become significant only in the last few orbits before merger, when the orbital separation approaches a few r_s.
+Inspiral phase: During the inspiral (when the two objects are far apart and spiraling inward due to metric perturbation emission), the metric perturbation frequency and amplitude are determined by the orbital dynamics. In the weak field (r much greater than r_s), SSZ and GR agree, so the inspiral waveform is identical. The SSZ corrections become significant only in the last few orbits before merger, when the orbital separation approaches a few r_s.
 
 Merger phase: During the merger (when the two objects collide), the gravitational field is highly dynamic and the full nonlinear field equations must be solved. SSZ does not yet have a numerical relativity implementation (which would be required to compute the merger waveform), so the merger phase predictions are currently unavailable. Developing a numerical SSZ code is one of the high-priority open problems identified in Chapter 29.
 
-Ringdown phase: After the merger, the remnant settles down to its final state by emitting gravitational waves at the quasi-normal mode (QNM) frequencies. These frequencies are determined by the metric of the remnant, which differs between SSZ and GR near the natural boundary (r approximately r_s). The SSZ QNM frequencies differ from the GR values by approximately D_min^2 approximately 3 percent, which is below the current measurement precision for individual events but potentially detectable with the accumulation of many events (stacking analysis).
+Ringdown phase: After the merger, the remnant settles down to its final state by emitting metric perturbations at the quasi-normal mode (QNM) frequencies. These frequencies are determined by the metric of the remnant, which differs between SSZ and GR near the natural boundary (r approximately r_s). The SSZ QNM frequencies differ from the GR values by approximately D_min^2 approximately 3 percent, which is below the current measurement precision for individual events but potentially detectable with the accumulation of many events (stacking analysis).
 
-The LIGO/Virgo/KAGRA collaboration has published approximately 90 confirmed binary merger events as of the O4 observing run (2023-2025). The combined ringdown analysis of these events provides a statistical test of the QNM frequencies, with a precision that improves as sqrt(N) where N is the number of events. With 90 events, the combined precision is approximately 10 percent / sqrt(90) approximately 1 percent, approaching the 3 percent SSZ-GR difference. Future observing runs (O5, O6) and third-generation detectors will provide hundreds to thousands of events, making the QNM frequency test increasingly stringent.
+The current observational collaboration has published approximately 90 confirmed binary merger events as of the O4 observing run (2023-2025). The combined ringdown analysis of these events provides a statistical test of the QNM frequencies, with a precision that improves as sqrt(N) where N is the number of events. With 90 events, the combined precision is approximately 10 percent / sqrt(90) approximately 1 percent, approaching the 3 percent SSZ-GR difference. Future observing runs (O5, O6) and third-generation detectors will provide hundreds to thousands of events, making the QNM frequency test increasingly stringent.
 
 ### The ESO Spectroscopic Dataset in Detail
 
@@ -9029,6 +9137,26 @@ Chapter 28 presents the cross-repository test results: 260+ tests across 6 repos
 
 
  v2
+
+
+![Fig](figures/ch28_validation/eso_breakthrough_results.png)
+
+![Fig](figures/ch28_validation/key_winrate_vs_radius.png)
+
+![Fig](figures/ch28_validation/key_stratified_performance.png)
+
+
+![Fig](figures/ch28_validation/eso_data_quality_impact.png)
+
+![Fig](figures/ch28_validation/eso_phi_geometry_impact.png)
+
+![Fig](figures/ch28_validation/eso_vs_mixed_regimes.png)
+
+![Fig](figures/ch28_validation/key_performance_heatmap.png)
+
+![Fig](figures/ch28_validation/key_phi_geometry_impact.png)
+
+![Fig](figures/ch28_validation/key_stratification_robustness.png)
 
 ---
 
@@ -9139,7 +9267,7 @@ The ssz-lensing repository has 279 tests: 271 PASS and 8 FAIL. All failures occu
 
 **2. Weak-field degeneracy.** SSZ and GR are indistinguishable in the weak field (r/r_s > 10). Passing Solar System tests (Cassini, GPS, Pound-Rebka, Mercury) validates SSZ only to the extent that it reduces to GR at large r — which is guaranteed by construction (Ξ_weak = r_s/2r matches Schwarzschild at leading order). The discriminating power lies entirely in strong-field predictions (Tier 3–4).
 
-**3. No blind analysis.** In experimental physics, blind analysis protocols prevent the analyst from seeing the answer while performing the analysis. SSZ tests are not blind — the expected answers are known during test development. A blind test would require an external group to generate new data (e.g., synthetic gravitational wave signals with or without echoes) and ask the SSZ framework to classify them.
+**3. No blind analysis.** In experimental physics, blind analysis protocols prevent the analyst from seeing the answer while performing the analysis. SSZ tests are not blind — the expected answers are known during test development. A blind test would require an external group to generate new data (e.g., synthetic metric perturbation signals with or without echoes) and ask the SSZ framework to classify them.
 
 **4. Statistical power.** The G79 test (6/6 confirmed predictions, p $\approx$ 1.6%) is suggestive but not conclusive. A larger sample of astrophysical test cases (more LBV nebulae, more neutron stars) is needed to build statistical power.
 
@@ -9266,7 +9394,7 @@ This means SSZ validation is structurally simpler (no parameter estimation, no d
 
 ### Numerical Relativity
 
-GR strong-field predictions (gravitational waveforms from binary mergers) are validated by comparing independent numerical relativity codes: Einstein Toolkit, SpEC, BAM, SACRA. Cross-code agreement to better than 1 percent for waveform overlap is required before waveforms are used as LIGO templates. SSZ cross-repository agreement at 10^-15 exceeds this standard by many orders of magnitude, though the SSZ calculations are analytically simpler than numerical relativity.
+GR strong-field predictions (metric perturbationforms from binary mergers) are validated by comparing independent numerical relativity codes: Einstein Toolkit, SpEC, BAM, SACRA. Cross-code agreement to better than 1 percent for waveform overlap is required before waveforms are used as observational campaigns templates. SSZ cross-repository agreement at 10^-15 exceeds this standard by many orders of magnitude, though the SSZ calculations are analytically simpler than numerical relativity.
 
 ## Reproducibility Protocol
 
@@ -9567,6 +9695,8 @@ Chapter 30 collects all falsifiable predictions and specifies the instruments, p
 # Falsifiable Predictions and Observational Tests
 
 
+![Fig](figures/ch30_predictions/fig_30_01_prediction_timeline.png)
+
 ---
 
 ## Summary
@@ -9589,7 +9719,7 @@ Why is this necessary? Each chapter in this book serves a specific function in t
 
 A theory that cannot be falsified is not a scientific theory -- this is Popper's falsification criterion, and it is the standard by which all physical theories are judged. This chapter collects all falsifiable predictions of SSZ, specifies the required measurement precision for each, and identifies the instruments or missions that could provide the test.
 
-The predictions are organized by observational accessibility: (1) predictions that can be tested with current instruments (solar system tests, pulsar timing, NICER observations); (2) predictions that require next-generation instruments (ngEHT, Athena, LISA); (3) predictions that require future technology (space-based clock networks, gravitational wave detectors at decihertz frequencies).
+The predictions are organized by observational accessibility: (1) predictions that can be tested with current instruments (solar system tests, pulsar timing, NICER observations); (2) predictions that require next-generation instruments (ngEHT, Athena, LISA); (3) predictions that require future technology (space-based clock networks, metric perturbation detectors at decihertz frequencies).
 
 For each prediction, the chapter specifies: the observable quantity, the SSZ predicted value, the GR predicted value, the fractional difference, the required measurement precision, and the instrument or mission that could provide the measurement. This level of specificity ensures that the predictions are genuinely falsifiable -- there is no ambiguity about what constitutes a confirmation or a refutation.
 
@@ -9623,11 +9753,7 @@ The SSZ photon sphere is located at r_ph $\approx$ 1.48 r_s (compared to 1.50 r_
 
 Current EHT precision: ~10% (insufficient). The next-generation EHT (ngEHT, 2027–2030), with additional stations in Africa and Greenland, targets < 1% precision on the shadow diameter — sufficient to test this prediction.
 
-### ~~Prediction 3: Gravitational Wave Ringdown Echoes~~ — DISCARDED
-
-The original SSZ prediction of post-merger echoes from the natural boundary at D(r_s) = 0.555 has been discarded. The echo search in LIGO/Virgo data is methodologically insufficient to distinguish SSZ-specific signatures from instrumental noise and modeling artifacts. A future resumption with next-generation detectors (Einstein Telescope, Cosmic Explorer) remains open but is not carried as an active prediction in this work.
-
-### Prediction 4: Pulsar Timing Correction (+30%)
+### Prediction 3: Pulsar Timing Correction (+30%)
 
 SSZ modifies the gravitational time delay contribution to pulsar timing models. For millisecond pulsars in compact binaries (orbital period < 1 day, companion mass > 0.5 M_$\odot$), the SSZ correction to the orbital decay rate is:
 
@@ -9635,7 +9761,7 @@ SSZ modifies the gravitational time delay contribution to pulsar timing models. 
 
 NANOGrav's 15-year dataset and its successor (the International Pulsar Timing Array) are sensitive to this level of correction.
 
-### Prediction 5: G79 Molecular Zones (6/6 Confirmed)
+### Prediction 4: G79 Molecular Zones (6/6 Confirmed)
 
 The only prediction already tested: 6 independent predictions for the G79.29+0.46 LBV nebula, all confirmed with zero free parameters (Chapter 24). This is not a GR comparison (GR does not make specific predictions for nebular molecular zones) but demonstrates SSZ's predictive power in a non-gravitational context.
 
@@ -9645,9 +9771,8 @@ The only prediction already tested: 6 independent predictions for the G79.29+0.4
 |---|-----------|-----|-----|---|-----------|----------|
 | 1 | NS surface z | +13% | standard | +13% | NICER | 2025–2027 |
 | 2 | BH shadow θ | −1.3% | standard | −1.3% | ngEHT | 2027–2030 |
-| ~~3~~ | ~~GW echo~~ | ~~present~~ | ~~absent~~ | ~~discarded~~ | ~~LIGO~~ | ~~discarded~~ |
-| 4 | Pulsar Ṗ | +30% | standard | +30% | NANOGrav | ongoing |
-| 5 | G79 zones | 6/6 Y | N/A | — | archival | done |
+| 3 | Pulsar Ṗ | +30% | standard | +30% | NANOGrav | ongoing |
+| 4 | G79 zones | 6/6 Y | N/A | — | archival | done |
 
 ## Sign Predictions
 
@@ -9656,8 +9781,6 @@ SSZ makes unambiguous **sign predictions** — not just magnitudes but direction
 **NS redshift is HIGHER than GR (not lower).** D_SSZ < D_GR in the strong field means more time dilation at the surface, producing greater frequency shift.
 
 **BH shadow is SMALLER (not larger).** The SSZ photon sphere shifts inward (r_ph = 1.48r_s vs 1.50r_s), reducing the critical impact parameter.
-
-**~~GW echoes arrive LATER (not earlier).~~** Discarded (see Section 30.1).
 
 **Radiowave precursor sweeps DOWNWARD in frequency.** Infalling matter radiates at decreasing frequencies as it approaches stronger Ξ regions (Chapter 23).
 
@@ -9671,8 +9794,6 @@ The predictions are testable within the next decade:
 
 **2025–2028: NANOGrav / IPTA.** Pulsar timing residuals sensitive to the +30% SSZ correction. The 15-year dataset already provides constraints; the 20-year dataset (expected ~2028) will be definitive.
 
-**~~2025–2030: LIGO O4/O5~~ — DISCARDED.** The GW echo search has been discarded as an active test channel (see Section 30.1).
-
 **2027–2030: ngEHT.** Next-generation Event Horizon Telescope with additional stations. Target: < 1% precision on shadow diameter for M87* and Sgr A*. This directly tests the −1.3% prediction.
 
 **Ongoing: ALMA/VLT/JWST.** Molecular zone mapping in LBV nebulae (G79 follow-up and new targets). Additional confirmed predictions would strengthen the case; failures would weaken it.
@@ -9685,7 +9806,7 @@ SSZ is falsified if any of the following is observed:
 
 **2.** BH shadow diameter matches GR exactly (no −1.3% deficit) with < 0.5% precision.
 
-**3.** A true singularity signature is observed — infinite curvature inferred from gravitational waves.
+**3.** A true singularity signature is observed — infinite curvature inferred from metric perturbations.
 
 **4.** D(r_s) is measured to be exactly 0 — complete time stoppage at the horizon, confirmed by multiple independent methods.
 
@@ -9740,7 +9861,7 @@ Prediction 1 (NS redshift): NICER is currently operational and accumulating data
 
 Prediction 2 (BH shadow): The ngEHT, with additional stations in Africa and Greenland, will achieve 2x better angular resolution than the current EHT. First ngEHT observations are expected around 2028. The required 0.5% precision in shadow diameter demands multi-epoch observations to average over interstellar scattering.
 
-Prediction 3 (GW echoes): LIGO A+ (operational ~2025) and LIGO Voyager (~2030) will have sufficient sensitivity to detect or rule out post-merger echoes at the predicted delay time tau_echo = 2 r_s/c x ln(1/D(r_s)) for stellar-mass black holes. A null detection after 100+ merger events would falsify SSZ at high confidence.
+Prediction 3 (GW echoes): observational campaigns A+ (operational ~2025) and observational campaigns Voyager (~2030) will have sufficient sensitivity to detect or rule out post-merger echoes at the predicted delay time tau_echo = 2 r_s/c x ln(1/D(r_s)) for stellar-mass black holes. A null detection after 100+ merger events would falsify SSZ at high confidence.
 
 Prediction 4 (Pulsar timing): The Square Kilometre Array (SKA, first light ~2028) will time millisecond pulsars to sub-microsecond precision. Binary pulsars in tight orbits (P_orb < 2 hours) would show the SSZ timing correction most clearly.
 
@@ -9755,8 +9876,7 @@ Prediction 5 (G79 molecules): ALMA and NOEMA can observe additional LBV nebulae 
 |---|---------|--------|
 | 1 | z_SSZ $\approx$ 1.13 × z_GR | NS redshift prediction |
 | 2 | θ_SSZ $\approx$ 0.987 × θ_GR | BH shadow prediction |
-| ~~3~~ | ~~Δt_echo — discarded~~ | ~~GW echo — discarded~~ |
-| 4 | Ṗ_SSZ $\approx$ 1.30 × Ṗ_GR | pulsar timing |
+| 3 | Ṗ_SSZ $\approx$ 1.30 × Ṗ_GR | pulsar timing |
 
 ---
 
@@ -9787,9 +9907,9 @@ Neutron star surface redshift (M = 1.4 M_sun, R = 12 km): SSZ z = 0.172, GR z = 
 
 Black hole shadow diameter (Sgr A*): SSZ = 98.7 percent of GR prediction, difference = -1.3 percent, instrument = ngEHT, timeline = 2030s.
 
-Finite time dilation at r_s: SSZ D_min = 0.555, GR D = 0, difference = qualitative, instrument = future gravitational wave detectors, timeline = 2040s+.
+Finite time dilation at r_s: SSZ D_min = 0.555, GR D = 0, difference = qualitative, instrument = future metric perturbation detectors, timeline = 2040s+.
 
-Gravitational wave ringdown phase: SSZ differs from GR by a factor depending on D_min^2, difference = approximately 3 percent for stellar-mass mergers, instrument = LIGO/Virgo/KAGRA A+, timeline = 2025-2030.
+metric perturbation ringdown phase: SSZ differs from GR by a factor depending on D_min^2, difference = approximately 3 percent for stellar-mass mergers, instrument = current observational A+, timeline = 2025-2030.
 
 Fine-structure constant running near compact objects: SSZ predicts alpha_eff differs from alpha_flat by Xi-dependent corrections, instrument = future X-ray spectrometers, timeline = 2035+.
 
@@ -9799,11 +9919,11 @@ Each prediction has a clear pass/fail criterion: if the measured value falls out
 
 The falsifiable predictions of SSZ span a range of timescales, from currently testable to requiring future technology. The experimental timeline can be organized into three horizons:
 
-Near-term (2025-2030): NICER observations of millisecond pulsars will constrain the neutron star mass-radius relation to approximately 5 percent precision, potentially detecting the SSZ surface redshift correction. LIGO/Virgo/KAGRA observations of binary mergers will accumulate enough events to test the SSZ ringdown frequency prediction at the 5-10 percent level. Multi-wavelength monitoring of X-ray binaries will constrain the X-ray to radio variability timescale ratio.
+Near-term (2025-2030): NICER observations of millisecond pulsars will constrain the neutron star mass-radius relation to approximately 5 percent precision, potentially detecting the SSZ surface redshift correction. current observational observations of binary mergers will accumulate enough events to test the SSZ ringdown frequency prediction at the 5-10 percent level. Multi-wavelength monitoring of X-ray binaries will constrain the X-ray to radio variability timescale ratio.
 
-Medium-term (2030-2040): The next-generation Event Horizon Telescope (ngEHT) will achieve sub-percent angular resolution for the Sgr A* shadow, potentially detecting the 1.3 percent SSZ correction. The Athena X-ray observatory will achieve 2.5 eV energy resolution below 7 keV, enabling high-precision iron line spectroscopy of accreting compact objects. The LISA gravitational wave detector will observe massive black hole mergers at cosmological distances, providing strong-field tests in a mass range inaccessible to ground-based detectors.
+Medium-term (2030-2040): The next-generation Event Horizon Telescope (ngEHT) will achieve sub-percent angular resolution for the Sgr A* shadow, potentially detecting the 1.3 percent SSZ correction. The Athena X-ray observatory will achieve 2.5 eV energy resolution below 7 keV, enabling high-precision iron line spectroscopy of accreting compact objects. The LISA metric perturbation detector will observe massive black hole mergers at cosmological distances, providing strong-field tests in a mass range inaccessible to ground-based detectors.
 
-Long-term (2040+): Space-based optical clock networks will achieve the frequency precision needed to detect the SSZ-GR difference in the frequency holonomy. The Einstein Telescope and Cosmic Explorer will detect gravitational waves with enough precision to measure post-merger echoes from the natural boundary. Third-generation X-ray observatories will measure the accretion disk spectral modification predicted by SSZ.
+Long-term (2040+): Space-based optical clock networks will achieve the frequency precision needed to detect the SSZ-GR difference in the frequency holonomy. The Einstein Telescope and Cosmic Explorer will detect metric perturbations with enough precision to measure post-merger echoes from the natural boundary. Third-generation X-ray observatories will measure the accretion disk spectral modification predicted by SSZ.
 
 Each milestone corresponds to a specific prediction from the SSZ framework. If a milestone is reached and the measurement contradicts the SSZ prediction, the framework is falsified at that level. If the measurement confirms the prediction, the framework survives and the next milestone becomes the critical test. This progressive testing structure ensures that SSZ is continuously subjected to more stringent tests as experimental capabilities improve.
 
@@ -9811,15 +9931,15 @@ The most important near-term milestone is the NICER measurement of the neutron s
 
 ### The Role of Multi-Messenger Astronomy
 
-The most powerful tests of SSZ will come from multi-messenger observations -- simultaneous detection of electromagnetic radiation, gravitational waves, and (potentially) neutrinos from the same astrophysical event. Multi-messenger observations provide multiple independent probes of the same gravitational field, allowing stringent consistency checks.
+The most powerful tests of SSZ will come from multi-messenger observations -- simultaneous detection of electromagnetic radiation, metric perturbations, and (potentially) neutrinos from the same astrophysical event. Multi-messenger observations provide multiple independent probes of the same gravitational field, allowing stringent consistency checks.
 
-The prototype multi-messenger event is the binary neutron star merger GW170817, which was detected in gravitational waves (by LIGO/Virgo), gamma rays (by Fermi and INTEGRAL), optical/infrared (by dozens of ground-based telescopes), and radio (by VLA and other radio telescopes). This event provided the constraint that gravitational waves and electromagnetic waves travel at the same speed to within 10^{-15}, which SSZ satisfies automatically.
+The prototype multi-messenger event is the binary neutron star merger GW170817, which was detected in metric perturbations (by observational), gamma rays (by Fermi and INTEGRAL), optical/infrared (by dozens of ground-based telescopes), and radio (by VLA and other radio telescopes). This event provided the constraint that metric perturbations and electromagnetic waves travel at the same speed to within 10^{-15}, which SSZ satisfies automatically.
 
-Future multi-messenger events could provide much stronger SSZ tests. A neutron star-black hole merger detected in both gravitational waves and electromagnetic radiation would provide: (1) the mass and spin of the black hole (from the gravitational wave inspiral), (2) the tidal deformability of the neutron star (from the late inspiral and merger), (3) the electromagnetic spectrum of the kilonova (from the optical/infrared afterglow), and (4) the jet properties (from the radio and X-ray afterglow). Each of these observables has a specific SSZ prediction that differs from the GR prediction, and the consistency of all four predictions provides a much more stringent test than any single measurement.
+Future multi-messenger events could provide much stronger SSZ tests. A neutron star-black hole merger detected in both metric perturbations and electromagnetic radiation would provide: (1) the mass and spin of the black hole (from the metric perturbation inspiral), (2) the tidal deformability of the neutron star (from the late inspiral and merger), (3) the electromagnetic spectrum of the kilonova (from the optical/infrared afterglow), and (4) the jet properties (from the radio and X-ray afterglow). Each of these observables has a specific SSZ prediction that differs from the GR prediction, and the consistency of all four predictions provides a much more stringent test than any single measurement.
 
 The expected rate of such events is approximately 1-10 per year with the current detector network, increasing to 10-100 per year with third-generation detectors. Over a decade of observation, the accumulated multi-messenger events will provide a comprehensive test of the SSZ framework across multiple observational channels and multiple gravitational field strengths.
 
-The ultimate multi-messenger test would be the detection of Hawking radiation (or its SSZ equivalent) from a primordial black hole, simultaneously in gravitational waves (from the final evaporation) and gamma rays (from the high-energy photon emission). Such an event, if it occurs, would directly probe the near-horizon geometry and provide a definitive test of the SSZ natural boundary concept. Current and planned gamma-ray observatories (Fermi, CTA) are sensitive to such events if they occur within our galaxy, but the expected event rate is highly uncertain (it depends on the unknown abundance of primordial black holes with the right mass).
+The ultimate multi-messenger test would be the detection of Hawking radiation (or its SSZ equivalent) from a primordial black hole, simultaneously in metric perturbations (from the final evaporation) and gamma rays (from the high-energy photon emission). Such an event, if it occurs, would directly probe the near-horizon geometry and provide a definitive test of the SSZ natural boundary concept. Current and planned gamma-ray observatories (Fermi, CTA) are sensitive to such events if they occur within our galaxy, but the expected event rate is highly uncertain (it depends on the unknown abundance of primordial black holes with the right mass).
 
 ### Summary of All Quantitative Predictions
 
@@ -9915,9 +10035,9 @@ In the strong field (r/r_s < 10), SSZ diverges from GR with specific, quantitati
 
 - **Modified black hole shadow** — the SSZ photon sphere at r_ph $\approx$ 1.48r_s (vs 1.50r_s in GR) produces a shadow 1.3% smaller than GR predicts.
 
-- **Superradiant stability** — the G_SSZ regulator suppresses superradiant growth rates by a factor D(r_s)^{2l+1}, explaining why LIGO/Virgo observes spinning black holes in mass ranges where ultralight boson superradiance should have spun them down.
+- **Superradiant stability** — the G_SSZ regulator suppresses superradiant growth rates by a factor D(r_s)^{2l+1}, explaining why observational observes spinning black holes in mass ranges where ultralight boson superradiance should have spun them down.
 
-- **Gravitational wave echoes** — the natural boundary at D = 0.555 partially reflects gravitational waves (reflection coefficient R $\approx$ 0.44), producing post-merger echoes absent in GR.
+- **metric perturbation echoes** — the natural boundary at D = 0.555 partially reflects metric perturbations (reflection coefficient R $\approx$ 0.44), producing post-merger echoes absent in GR.
 
 ### Astrophysical Validation
 
@@ -9972,11 +10092,11 @@ SSZ is falsifiable within the next decade — a remarkably short timeline for a 
 
 **2025–2028: NANOGrav / IPTA.** Pulsar timing residuals sensitive to the +30% SSZ correction to orbital decay rates. The 20-year dataset (expected ~2028) will be definitive.
 
-**2025–2030: LIGO O4/O5.** Gravitational wave ringdown analysis for echo signals. With ~100 binary black hole mergers at sufficient signal-to-noise ratio, the echo search reaches the sensitivity needed for confirmation or exclusion.
+**2025–2030: observational campaigns O4/O5.** metric perturbation ringdown analysis for echo signals. With ~100 binary black hole mergers at sufficient signal-to-noise ratio, the echo search reaches the sensitivity needed for confirmation or exclusion.
 
 **2027–2030: ngEHT.** Next-generation Event Horizon Telescope with additional stations. Target: < 1% precision on shadow diameter for M87* and Sgr A*. This directly tests the −1.3% prediction.
 
-**If these observations match GR exactly** — no neutron star redshift excess, no shadow deficit, no gravitational wave echoes, no pulsar timing correction — **SSZ is falsified.** This is a feature, not a weakness. Zero-parameter theories are maximally falsifiable: every prediction is a potential death sentence.
+**If these observations match GR exactly** — no neutron star redshift excess, no shadow deficit, no metric perturbation echoes, no pulsar timing correction — **SSZ is falsified.** This is a feature, not a weakness. Zero-parameter theories are maximally falsifiable: every prediction is a potential death sentence.
 
 ## The Comparison with General Relativity
 
@@ -10035,7 +10155,7 @@ The immediate priority is observational discrimination. Three instruments will p
 
 1. **NICER (operational):** Continued accumulation of neutron star mass-radius data. A sample of 20+ pulsars with simultaneous M and R measurements would provide the statistical power to test Prediction 1 (NS surface redshift +13%).
 
-2. **LIGO A+ (2025):** Enhanced sensitivity to post-merger gravitational wave signals. Stacking analysis of 100+ binary black hole mergers would reach the sensitivity needed to detect or rule out post-merger echoes (Prediction 3).
+2. **observational campaigns A+ (2025):** Enhanced sensitivity to post-merger metric perturbation signals. Stacking analysis of 100+ binary black hole mergers would reach the sensitivity needed to detect or rule out post-merger echoes (Prediction 3).
 
 3. **ngEHT (2028):** Additional stations and higher frequency observations will improve shadow diameter precision from approximately 10% to approximately 2%, approaching the 1.3% difference between SSZ and GR (Prediction 2).
 
@@ -10044,7 +10164,7 @@ The immediate priority is observational discrimination. Three instruments will p
 Next-generation instruments will provide definitive tests:
 
 - **STROBE-X:** X-ray timing with 10x NICER sensitivity. Individual neutron star redshift measurements at 5% precision.
-- **Einstein Telescope:** Third-generation gravitational wave detector with 10x LIGO sensitivity. Echo detection/exclusion at high confidence.
+- **Einstein Telescope:** Third-generation metric perturbation detector with 10x observational campaigns sensitivity. Echo detection/exclusion at high confidence.
 - **SKA:** Pulsar timing at sub-microsecond precision. Binary pulsars in tight orbits would test Prediction 4.
 - **Athena:** X-ray spectroscopy at 2.5 eV resolution. Iron line profiles from inner accretion disks would probe the SSZ metric near the ISCO.
 
@@ -10779,9 +10899,9 @@ I_ABC = D(r_A)/D(r_B) × D(r_B)/D(r_C) × D(r_C)/D(r_A) = 1
 ### Black Hole Data
 - EHT M87* shadow (2019): 42±3 μas
 - EHT Sgr A* shadow (2022): 51.8±2.3 μas
-- LIGO/Virgo GWTC-3 catalog (Abbott et al. 2023)
+- observational GWTC-3 catalog (Abbott et al. 2023)
 
-### Gravitational Wave Sources
+### Metric Perturbation Sources
 - Binary black hole mergers (GWTC-3)
 - Neutron star mergers (GW170817)
 - SSZ prediction: ringdown spectrum $\neq$ GR for M < 10M$\odot$
@@ -10833,7 +10953,7 @@ I_ABC = D(r_A)/D(r_B) × D(r_B)/D(r_C) × D(r_C)/D(r_A) = 1
 | NICER | NASA | 2017– | NS redshift |
 | NANOGrav | NSF | 2004– | Pulsar timing |
 | ngEHT | EHT | 2027–30 | Shadow <5 μas |
-| LIGO/Virgo/KAGRA | Multi | 2015– | Ringdown QNM |
+| current observational | Multi | 2015– | Ringdown QNM |
 | ALMA | ESO | 2011– | G79 molecules |
 | GRAVITY/VLTI | ESO | 2016– | S2 orbit |
 | Gaia | ESA | 2013– | Parallax |
@@ -10847,7 +10967,7 @@ I_ABC = D(r_A)/D(r_B) × D(r_B)/D(r_C) × D(r_C)/D(r_A) = 1
 |---------------|---------------|-----------|----------|
 | D(r_s) = 0.555 | D(r_s) = 0 | NICER | 2024+ |
 | Shadow −3% | Kerr shadow | ngEHT | 2027+ |
-| Modified QNM | Kerr QNM | LIGO O4/O5 | 2–4 yr |
+| Modified QNM | Kerr QNM | observational campaigns O4/O5 | 2–4 yr |
 | α_SSZ $\approx$ 1/137.08 | N/A | Lab | Now |
 
 **If D(r_s) = 0 is measured → SSZ falsified.**
@@ -11166,17 +11286,22 @@ This appendix provides side-by-side comparison tables for every observable discu
 |-----------|-----------|---------------|-----------------|
 | NS redshift +13% | NICER/eXTP | 2026/2028 | 3-sigma / 5-sigma |
 | BH shadow -1.3% | ngEHT | 2029 | 3-sigma |
-| GW echoes | LIGO A+ | 2026 | 2-sigma (stacked) |
+| GW echoes | observational campaigns A+ | 2026 | 2-sigma (stacked) |
 | Pulsar timing | SKA | 2030 | 5-sigma |
 | G79 molecules | ALMA | 2025 (now) | Categorical |
 
-The G79 molecular zone test is already available with existing data. The gravitational wave echo search is the next chronologically. The neutron star redshift test provides the highest individual discriminating power. The complete program — all five predictions tested — should be accomplished by approximately 2032.
+The G79 molecular zone test is already available with existing data. The metric perturbation echo search is the next chronologically. The neutron star redshift test provides the highest individual discriminating power. The complete program — all five predictions tested — should be accomplished by approximately 2032.
 
 ### What Would Falsification Look Like?
 
 A clean falsification of SSZ would be: a neutron star with independently measured M and R (from NICER pulse profile modeling) showing a surface redshift z_obs consistent with z_GR and inconsistent with z_SSZ at 3-sigma or greater. Two such objects from independent analyses would constitute definitive falsification.
 
 A clean confirmation would be: the same measurement showing z_obs consistent with z_SSZ and inconsistent with z_GR. Combined with BH shadow measurement consistent with the -1.3% SSZ prediction and inconsistent with GR at 2-sigma, the cumulative evidence would strongly favor SSZ.
+
+
+![Fig](figures/appF_gr_vs_ssz/fig_F_01_D_gr_vs_ssz.png)
+
+![Fig](figures/appF_gr_vs_ssz/fig_F_02_Xi_profiles.png)
 
 ---
 
@@ -11215,7 +11340,7 @@ These tests verify SSZ = GR in the weak field. Any deviation would immediately f
 | Surface redshift (2.0 M_$\odot$, 11 km) | z = 0.486 | z = 0.549 | **+13%** | Pending | NICER | 2025–2027 |
 | Orbital decay (compact binary) | Standard Ṗ | 1.30 × Ṗ_GR | **+30%** | Pending | NANOGrav | 2025–2028 |
 | X-ray pulse profile | Schwarzschild | SSZ metric | ~5–10% | Pending | NICER | 2025–2027 |
-| Tidal deformability | Λ_GR | Λ_SSZ $\approx$ 0.87 Λ_GR | **−13%** | Within error | LIGO O5 | 2027–2030 |
+| Tidal deformability | Λ_GR | Λ_SSZ $\approx$ 0.87 Λ_GR | **−13%** | Within error | observational campaigns O5 | 2027–2030 |
 
 **Conclusion:** Tier 3 is the frontier where SSZ first diverges measurably from GR. NICER and NANOGrav are the key instruments.
 
@@ -11225,8 +11350,8 @@ These tests verify SSZ = GR in the weak field. Any deviation would immediately f
 |-----------|-----|-----|---|------------|-----------|----------|
 | Shadow diameter | 10.39 GM/(c²D_A) | 0.987 × GR | **−1.3%** | ~10% precision | ngEHT | 2027–2030 |
 | Photon sphere | r_ph = 1.50 r_s | r_ph $\approx$ 1.48 r_s | **−1.3%** | Not resolved | ngEHT | 2027–2030 |
-| Ringdown decay | Exponential | Exponential + echoes | **Qualitative** | No echoes found | LIGO O4/O5 | 2025–2030 |
-| Echo timescale | N/A (absent) | Δt ~ 1.18 r_s/c | **New signal** | Not searched | LIGO O4/O5 | 2025–2030 |
+| Ringdown decay | Exponential | Exponential + echoes | **Qualitative** | No echoes found | observational campaigns O4/O5 | 2025–2030 |
+| Echo timescale | N/A (absent) | Δt ~ 1.18 r_s/c | **New signal** | Not searched | observational campaigns O4/O5 | 2025–2030 |
 | Horizon temperature | T_H ~ ℏc³/(8πGMk_B) | T_surface ~ accretion | **Orders of mag** | Not measurable | Future | >2030 |
 | Time dilation at r_s | D = 0 (exact) | D = 0.555 | **Infinite** | Not directly | Indirect | — |
 | Information escape | Impossible | Possible (z=0.802) | **Qualitative** | Not testable | — | — |
@@ -11358,7 +11483,7 @@ If future observations show:
 | EHT | Event Horizon Telescope |
 | ngEHT | Next-generation Event Horizon Telescope |
 | NICER | Neutron Star Interior Composition Explorer |
-| LIGO | Laser Interferometer Gravitational-Wave Observatory |
+| SSZ | Segmented Spacetime (Segmentierte Raumzeit) |
 | GPS | Global Positioning System |
 | LBV | Luminous Blue Variable |
 | DAG | Directed Acyclic Graph |
@@ -11422,4 +11547,5 @@ This glossary is organized by category rather than alphabetically. The chapter r
 
 
 \newpage
+
 

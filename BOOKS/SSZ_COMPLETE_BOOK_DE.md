@@ -216,7 +216,7 @@ SSZ macht konkrete, vorzeichenbestimmte Vorhersagen, die sich von der ART unters
 
 - **Schwarzes-Loch-Schattendurchmesser:** SSZ sagt einen geringfügig *kleineren* scheinbaren Schattendurchmesser voraus als die ART, um etwa −1,3%. Das Event Horizon Telescope (EHT) hat den Schatten von M87* und Sgr A* mit zunehmender Präzision gemessen; zukünftige Beobachtungen könnten die nötige Genauigkeit erreichen, um die beiden Vorhersagen zu unterscheiden.
 
-- **~~Gravitationswellenphase~~ (verworfen):** Die ursprüngliche Vorhersage von SSZ-spezifischen Signaturen in LIGO/Virgo-Daten wurde verworfen. Die aktuelle Detektortechnologie ist methodisch nicht ausreichend trennscharf für SSZ-spezifische Abweichungen. Next-Generation-Detektoren (Einstein Telescope, Cosmic Explorer) könnten dies in Zukunft ermöglichen.
+- **Pulsar-Timing-Korrektur:** SSZ sagt eine +30%-Korrektur der Orbitalabnahmerate für Millisekundenpulsare in kompakten Doppelsternsystemen voraus. NANOGravs 15-Jahres-Datensatz und das International Pulsar Timing Array sind empfindlich für dieses Korrekturniveau.
 
 Diese Vorhersagen haben spezifische numerische Werte und spezifische Vorzeichen. Sie können durch aktuelle und nahe zukünftige Experimente bestätigt oder widerlegt werden. Das macht SSZ zu einer wissenschaftlichen Theorie und nicht zu einer mathematischen Kuriosität.
 
@@ -457,7 +457,7 @@ Die Geschichte der Gravitationstheorie ist eine Geschichte zunehmender Praezisio
 
 **Newton (1687):** Die Gravitation ist eine Kraft, die zwischen Massen wirkt. Die Kraft ist proportional zum Produkt der Massen und umgekehrt proportional zum Quadrat des Abstands: F = G M m / r^2. Newtons Theorie erklaert die Planetenbewegung mit bemerkenswerter Praezision, versagt aber bei der Erklaerung der Merkur-Periheldrehung (43 Bogensekunden pro Jahrhundert) und der Lichtablenkung durch die Sonne.
 
-**Einstein (1915):** Die Gravitation ist keine Kraft, sondern eine Kruemmung der Raumzeit. Massen kruemmen die Raumzeit, und Objekte bewegen sich auf Geodaeten (kuerzesten Wegen) in der gekruemmten Raumzeit. Einsteins Allgemeine Relativitaetstheorie (ART) erklaert die Merkur-Periheldrehung, die Lichtablenkung, die gravitative Rotverschiebung und die Existenz von Gravitationswellen. Die ART sagt auch Schwarze Loecher vorher — Regionen der Raumzeit, aus denen nichts entkommen kann.
+**Einstein (1915):** Die Gravitation ist keine Kraft, sondern eine Kruemmung der Raumzeit. Massen kruemmen die Raumzeit, und Objekte bewegen sich auf Geodaeten (kuerzesten Wegen) in der gekruemmten Raumzeit. Einsteins Allgemeine Relativitaetstheorie (ART) erklaert die Merkur-Periheldrehung, die Lichtablenkung, die gravitative Rotverschiebung und die Existenz von Metrik-Perturbationen. Die ART sagt auch Schwarze Loecher vorher — Regionen der Raumzeit, aus denen nichts entkommen kann.
 
 **SSZ (2020er):** Die Segmentierte Raumzeit-Theorie (SSZ) behalt die geometrische Interpretation der Gravitation bei, fuehrt aber eine neue Groesse ein: die Segmentdichte Xi(r). Die Segmentdichte beschreibt, wie dicht das Raumzeitgitter an einem gegebenen Punkt gepackt ist. Im Schwachfeld (weit von Massen entfernt) ist Xi klein und SSZ identisch mit der ART. Im Starkfeld (nahe kompakten Objekten) weicht SSZ von der ART ab: Die Segmentdichte erreicht ein endliches Maximum ($\Xi_{\text{max}}$ = 0,802), was Singularitaeten verhindert und den Ereignishorizont durch eine natuerliche Grenze ersetzt.
 
@@ -1065,6 +1065,8 @@ Ein häufiges Missverständnis in diesem Stadium ist die Verwechslung der SSZ-Ve
 # φ als temporale Wachstumsfunktion und Kalibrierung
 
 
+![Abb 3](figures/ch03_phi/fig_03_01.png)
+
 ---
 
 ## Zusammenfassung
@@ -1512,6 +1514,8 @@ Die Verengung der Lichtkegel hat eine physikalische Konsequenz: Ein Beobachter n
 
 # Von φ-Segmentierung zu Euler
 
+
+![Abb 4](figures/ch04_phi_euler/fig_04_01_phi_segmentation.png)
 
 ---
 
@@ -2271,6 +2275,8 @@ Der SSZ-Ansatz unterscheidet sich von allen frueheren Versuchen durch seine Verb
 # Lorentz-Unbestimmtheit bei v = 0
 
 
+![Abb 6](figures/ch06_lorentz/fig_06_01_lorentz_indeterminacy.png)
+
 ---
 
 ## Zusammenfassung
@@ -2602,7 +2608,7 @@ Waehrend aktuelle Experimente $\gamma_{\text{seg}}$ nicht vom Standard-Lorentz-F
 
 **Binaerpulsar-geodaetische Praezession:** Die geodaetische Praezession der Pulsar-Spinachse in einem kompakten Binaersystem haengt vom gravitativen Zeitdilatationsfaktor am Orbitalradius des Pulsars ab. Fuer den kompaktesten bekannten Binaerpulsar (den Doppelpulsar PSR J0737-3039) betraegt der Orbitalradius ~900.000 km und Xi ~3 x 10^{-6}. Die SSZ-Korrektur zur geodaetischen Praezessionsrate ist von der Ordnung Xi, was mit ~30 Jahren fortgesetzter Timing-Beobachtungen messbar ist.
 
-**LISA und extreme Massenverhaeltnis-Inspirale (EMRIs):** Das Laser Interferometer Space Antenna (LISA, geplant fuer die 2030er Jahre) wird Gravitationswellen von kompakten Objekten detektieren, die in supermassive Schwarze Loecher spiralen. Diese EMRIs kartieren die Raumzeitgeometrie nahe dem Horizont mit beispielloser Praezision. Die SSZ-Vorhersage fuer die EMRI-Wellenform unterscheidet sich von der ART-Vorhersage durch den endlichen Zeitdilatationsfaktor $D_{min}$ = 0,555, was zu messbaren Phasenverschiebungen in der Gravitationswelle fuehrt.
+**LISA und extreme Massenverhaeltnis-Inspirale (EMRIs):** Das Laser Interferometer Space Antenna (LISA, geplant fuer die 2030er Jahre) wird Metrik-Perturbationen von kompakten Objekten detektieren, die in supermassive Schwarze Loecher spiralen. Diese EMRIs kartieren die Raumzeitgeometrie nahe dem Horizont mit beispielloser Praezision. Die SSZ-Vorhersage fuer die EMRI-Wellenform unterscheidet sich von der ART-Vorhersage durch den endlichen Zeitdilatationsfaktor $D_{min}$ = 0,555, was zu messbaren Phasenverschiebungen in der Metrik-Perturbation fuehrt.
 
 
 ### Experimentelle Vorschläge zum Testen von γ_seg
@@ -2764,6 +2770,8 @@ Alle bisherigen Tests bestaetigen die SSZ/ART-Vorhersage. Die SSZ-Starkfeldkorre
 # Lokale Lorentz-Invarianz und Frame-Dragging
 
 
+![Abb 7](figures/ch07_frame_dragging/fig_07_01_dilation_comparison.png)
+
 ---
 
 Warum ist dies notwendig? Lokale Lorentz-Invarianz (LLI) ist das Fundament der modernen Physik. Jede Modifikation der Gravitationstheorie muss LLI respektieren, sonst widerspricht sie der gesamten Teilchenphysik. Dieses Kapitel beweist, dass SSZ LLI exakt erhält.
@@ -2792,7 +2800,7 @@ Intuitiv bedeutet dies: Die Segmentdichte ist wie die Temperatur in einem Raum. 
 
 ### Das Fundament der modernen Physik
 
-Lokale Lorentz-Invarianz ist nicht nur ein Prinzip unter vielen — sie ist das Fundament, auf dem sowohl die Spezielle als auch die Allgemeine Relativitätstheorie aufgebaut sind. Jede Gleichung im Standardmodell der Teilchenphysik, jede Vorhersage der Quantenelektrodynamik, jede Berechnung in der Gravitationswellenastronomie setzt LLI voraus. In präziser Sprache: **Die Naturgesetze nehmen in jedem lokalen inertialen (frei fallenden) Bezugssystem dieselbe Form an, unabhängig von der Geschwindigkeit oder Orientierung des Bezugssystems.** Dies bedeutet:
+Lokale Lorentz-Invarianz ist nicht nur ein Prinzip unter vielen — sie ist das Fundament, auf dem sowohl die Spezielle als auch die Allgemeine Relativitätstheorie aufgebaut sind. Jede Gleichung im Standardmodell der Teilchenphysik, jede Vorhersage der Quantenelektrodynamik, jede Berechnung in der Metrik-Perturbationenastronomie setzt LLI voraus. In präziser Sprache: **Die Naturgesetze nehmen in jedem lokalen inertialen (frei fallenden) Bezugssystem dieselbe Form an, unabhängig von der Geschwindigkeit oder Orientierung des Bezugssystems.** Dies bedeutet:
 
 - Ein Physiker in einem geschlossenen Labor kann die Geschwindigkeit des Labors durch kein internes Experiment bestimmen.
 
@@ -2814,7 +2822,7 @@ Historisch sind viele vorgeschlagene Gravitationsmodifikationen gerade wegen ein
 
 - **Whiteheads Gravitationstheorie (1922):** Führte eine flache Hintergrundmetrik ein. Durch Mondlaser-Entfernungsmessung um ~200 m/Jahr ausgeschlossen.
 - **Rosens bimetrische Theorie (1973):** Führte einen zweiten metrischen Tensor ein. Durch Doppelpulsar-Beobachtungen ausgeschlossen.
-- **Einstein-Äther-Theorie:** Führt ein zeitartiges Einheitsvektorfeld ein. Durch Gravitationswellengeschwindigkeitsmessungen eingeschränkt (GW170817: |$c_{gw}$/c − 1| < 10⁻¹⁵).
+- **Einstein-Äther-Theorie:** Führt ein zeitartiges Einheitsvektorfeld ein. Durch Metrik-Perturbationengeschwindigkeitsmessungen eingeschränkt (GW170817: |$c_{gw}$/c − 1| < 10⁻¹⁵).
 
 SSZ führt die Segmentdichte Ξ(r) als zusätzliches Skalarfeld ein. Die kritische Frage ist: Bricht Ξ die LLI? Der nächste Abschnitt beweist, dass dies nicht der Fall ist.
 
@@ -3055,7 +3063,7 @@ Die Lorentz-Invarianz wurde mit beispielloser Präzision getestet:
 | Michelson-Morley (modern) | Photon | Δc/c < 10⁻¹⁷ | 2009 |
 | Ives-Stilwell (modern) | Zeitdilatation | α < 2×10⁻⁸ | 2014 |
 | Neutrino-Geschwindigkeit | Neutrino | |v_ν − c|/c < 10⁻⁵ | 2012 |
-| Gravitationswellen | GW | |c_GW − c|/c < 10⁻¹⁵ | 2017 |
+| Metrik-Perturbationen | GW | |c_GW − c|/c < 10⁻¹⁵ | 2017 |
 
 SSZ ist mit allen diesen Schranken konsistent, weil LLI exakt erhalten bleibt. Die lokale Lichtgeschwindigkeit ist überall c — nur die Koordinatengeschwindigkeit variiert mit der Segmentdichte.
 
@@ -3479,7 +3487,7 @@ Die dualen Geschwindigkeiten $v_{esc}$ und $v_{fall}$ haben direkte Implikatione
 
 Das Verhältnis $v_{circ}$/v_esc charakterisiert die Stabilität von Kreisbahnen. In der Newtonschen Gravitation ist $v_{circ}$/v_esc = 1/√2 bei allen Radien, und Kreisbahnen sind überall stabil. In der ART nimmt das Verhältnis mit abnehmendem Radius ab, und Kreisbahnen werden innerhalb des ISCO bei r = 3 $r_{s}$ instabil. In SSZ verhält sich das Verhältnis ähnlich wie in der ART im Schwachfeld, unterscheidet sich aber im Starkfeld.
 
-Für Binärpulsare (wie PSR J0737-3039 oder den Hulse-Taylor-Pulsar PSR B1913+16) beträgt die Orbitalgeschwindigkeit einige hundert km/s, entsprechend v/c ~ 10⁻³. Die SSZ-Korrektur zur Orbitaldynamik ist von der Ordnung Ξ $\approx$ 10⁻⁶, messbar nur durch akkumulierte Effekte (wie den Orbitalperiodenzerfall durch Gravitationswellenemission). Die SSZ-Vorhersage für den Periodenzerfall stimmt mit der ART bis zur Präzision der aktuellen Messungen überein (~0,1% für den Hulse-Taylor-Pulsar).
+Für Binärpulsare (wie PSR J0737-3039 oder den Hulse-Taylor-Pulsar PSR B1913+16) beträgt die Orbitalgeschwindigkeit einige hundert km/s, entsprechend v/c ~ 10⁻³. Die SSZ-Korrektur zur Orbitaldynamik ist von der Ordnung Ξ $\approx$ 10⁻⁶, messbar nur durch akkumulierte Effekte (wie den Orbitalperiodenzerfall durch Metrik-Perturbationenemission). Die SSZ-Vorhersage für den Periodenzerfall stimmt mit der ART bis zur Präzision der aktuellen Messungen überein (~0,1% für den Hulse-Taylor-Pulsar).
 
 Für Materie nahe einem kompakten Objekt (wie das heiße Gas in der inneren Akkretionsscheibe eines Röntgen-Binärsystems) nähert sich die Orbitalgeschwindigkeit c/√3 $\approx$ 0,577c am ISCO. Hier ist die SSZ-Korrektur signifikant: Die Orbitalgeschwindigkeit am SSZ-modifizierten ISCO unterscheidet sich vom ART-Wert um ~Ξ(3 r_s) = r_s/(6 r_s) = 0,167, oder ~17%. Diese Korrektur beeinflusst die beobachteten Eigenschaften der inneren Akkretionsscheibe und ist prinzipiell mit hochauflösender Röntgenspektroskopie testbar.
 
@@ -3497,7 +3505,7 @@ Die dualen Geschwindigkeiten haben direkte astrophysikalische Anwendungen:
 
 **Akkretionsphysik:** Die Einfallgeschwindigkeit $v_{fall}$ bestimmt die Rate, mit der Materie auf kompakte Objekte akkretiert wird. Die Eddington-Leuchtkraft $L_{Edd}$ = 4πGMm\_pc/σ_T setzt eine obere Grenze für die Akkretionsrate. In SSZ ist die Einfallgeschwindigkeit bei $r_{s}$ endlich ($v_{fall}$ = c), was eine endliche Akkretionsrate impliziert — im Gegensatz zur ART, wo $v_{fall}$ → c bei $r_{s}$ in Eigenzeit, aber die Koordinatengeschwindigkeit null wird.
 
-**Gravitationswellen-Inspiral:** Die Orbitalgeschwindigkeit eines kompakten Doppelsterns im späten Inspiral nähert sich v_esc(r). In SSZ ist v_esc(r_s) = c, was die maximale Orbitalgeschwindigkeit begrenzt. Die Gravitationswellen-Frequenz am letzten stabilen Orbit ist f_ISCO = c³/(6√6 π GM) $\approx$ 4,4 kHz × (M$\odot$/M) für Schwarzschild.
+**Metrik-Perturbationen-Inspiral:** Die Orbitalgeschwindigkeit eines kompakten Doppelsterns im späten Inspiral nähert sich v_esc(r). In SSZ ist v_esc(r_s) = c, was die maximale Orbitalgeschwindigkeit begrenzt. Die Metrik-Perturbationen-Frequenz am letzten stabilen Orbit ist f_ISCO = c³/(6√6 π GM) $\approx$ 4,4 kHz × (M$\odot$/M) für Schwarzschild.
 
 **Kosmische Strahlen:** Die maximale Energie, die ein kosmisches Strahlungsteilchen beim Einfall in ein Gravitationsfeld gewinnen kann, ist $E_{max}$ = γ mc², wobei γ = 1/D(r). In SSZ ist γ_max = 1/D($r_{s}$) = 1,80 — endlich. In der ART ist γ_max = ∞ am Horizont.
 
@@ -3525,7 +3533,7 @@ Die Trennung von $v_{esc}$ und $v_{fall}$ hat mehrere beobachtbare Konsequenzen:
 
 **Modifizierte Bondi-Akkretionsrate:** Die Bondi-Akkretionsrate (die Rate, mit der ein kompaktes Objekt Gas aus seiner Umgebung akkretiert) haengt von der Einfallgeschwindigkeit ab. In SSZ ist die Einfallgeschwindigkeit modifiziert, was zu einer leicht veraenderten Akkretionsrate fuehrt. Die Korrektur ist von der Ordnung Xi und damit im Schwachfeld vernachlaessigbar, aber im Starkfeld (nahe Neutronenstern-Oberflaechen) potenziell messbar.
 
-**Gravitationswellen-Inspiral:** Die Orbitalentwicklung eines kompakten Binaersystems (z.B. zweier Neutronensterne) haengt von der Orbitalgeschwindigkeit ab, die in SSZ durch die Segmentdichte modifiziert ist. Die resultierende Aenderung in der Gravitationswellenphase akkumuliert sich ueber viele Orbitalzyklen und koennte mit Gravitationswellendetektoren der dritten Generation messbar sein.
+**Metrik-Perturbationen-Inspiral:** Die Orbitalentwicklung eines kompakten Binaersystems (z.B. zweier Neutronensterne) haengt von der Orbitalgeschwindigkeit ab, die in SSZ durch die Segmentdichte modifiziert ist. Die resultierende Aenderung in der Metrik-Perturbationenphase akkumuliert sich ueber viele Orbitalzyklen und koennte mit Metrik-Perturbationendetektoren der dritten Generation messbar sein.
 
 ### Pound-Rebka-Experiment: Der erste direkte Rotverschiebungstest
 
@@ -3661,6 +3669,8 @@ Fuer r_0 = 10 $r_{s}$ und ein stellares SL (M = 10 $M_{sun}$): $\tau_{\text{fall
 
 # Kinematische Abschließung — $v_{esc}$ · $v_{fall}$ = c²
 
+
+![Abb 9](figures/ch09_closure/fig_09_01_kinematic_closure.png)
 
 ---
 
@@ -3924,11 +3934,11 @@ Fuer Protonen (m = 1,67 x 10^{-27} kg) ergibt sich $T_{max}$ ~ 3,6 x 10^{12} K. 
 
 Die Endlichkeit der maximalen Temperatur ist eine direkte Konsequenz der Abschliessungsrelation und der Endlichkeit von $D_{min}$. In der ART gibt es keine solche Obergrenze: Die Temperatur divergiert am Horizont (wo D -> 0), was zu den bekannten Problemen der Schwarze-Loch-Thermodynamik fuehrt.
 
-### Anwendung auf Gravitationswellen-Inspiral
+### Anwendung auf Metrik-Perturbationen-Inspiral
 
-Die Abschliessungsrelation hat Konsequenzen fuer die Gravitationswellenemission von kompakten Binaersystemen. Die Gravitationswellenleistung eines Binaersystems haengt von der Orbitalgeschwindigkeit ab: $P_{GW}$ ~ (v/c)^{10} x c^5/G. In SSZ ist die Orbitalgeschwindigkeit durch die Segmentdichte modifiziert, was zu einer modifizierten Gravitationswellenleistung fuehrt.
+Die Abschliessungsrelation hat Konsequenzen fuer die Metrik-Perturbationenemission von kompakten Binaersystemen. Die Metrik-Perturbationenleistung eines Binaersystems haengt von der Orbitalgeschwindigkeit ab: $P_{GW}$ ~ (v/c)^{10} x c^5/G. In SSZ ist die Orbitalgeschwindigkeit durch die Segmentdichte modifiziert, was zu einer modifizierten Metrik-Perturbationenleistung fuehrt.
 
-Fuer den spaeteren Inspiral (nahe der Verschmelzung) ist die Orbitalgeschwindigkeit v ~ 0,3-0,5 c, und die SSZ-Korrektur ist von der Ordnung Xi ~ 0,01-0,1. Die resultierende Aenderung in der Gravitationswellenphase akkumuliert sich ueber Tausende von Orbitalzyklen und betraegt $\Delta_{\phi}$ ~ 0,1-1 Radian fuer typische Neutronenstern-Verschmelzungen. Diese Phasenverschiebung ist mit aktuellen Gravitationswellendetektoren (LIGO/Virgo bei Design-Sensitivitaet) grenzwertig messbar und mit Detektoren der dritten Generation (Einstein-Teleskop, Cosmic Explorer) klar detektierbar.
+Fuer den spaeteren Inspiral (nahe der Verschmelzung) ist die Orbitalgeschwindigkeit v ~ 0,3-0,5 c, und die SSZ-Korrektur ist von der Ordnung Xi ~ 0,01-0,1. Die resultierende Aenderung in der Metrik-Perturbationenphase akkumuliert sich ueber Tausende von Orbitalzyklen und betraegt $\Delta_{\phi}$ ~ 0,1-1 Radian fuer typische Neutronenstern-Verschmelzungen. Diese Phasenverschiebung ist mit aktuellen Metrik-Perturbationendetektoren (observational bei Design-Sensitivitaet) grenzwertig messbar und mit Detektoren der dritten Generation (Einstein-Teleskop, Cosmic Explorer) klar detektierbar.
 
 ### Verbindung zur Quantenmechanik
 
@@ -4447,6 +4457,8 @@ Die Teilreflexion an der natuerlichen Grenze ist eine der wichtigsten Vorhersage
 # Maxwell-Wellen als rotierender Raum
 
 
+![Abb 11](figures/ch11_maxwell_waves/fig_11_01.png)
+
 ---
 
 ## Zusammenfassung
@@ -4747,6 +4759,8 @@ Der praeziseste Test des Shapiro-Delays wurde mit der Cassini-Sonde durchgefuehr
 # Segmentbasierte Gruppengeschwindigkeit
 
 
+![Abb 12](figures/ch12_group_velocity/fig_12_01.png)
+
 ---
 
 ## Zusammenfassung
@@ -4866,9 +4880,9 @@ SSZ sagt exakt Δv = 0 vorher, konsistent mit dieser Schranke.
 
 ### Multi-Messenger-Astronomie
 
-Der stärkste Test frequenzunabhängiger Ausbreitung kommt von Multi-Messenger-Ereignissen. GW170817 (Neutronensternverschmelzung, August 2017) produzierte sowohl Gravitationswellen (detektiert von LIGO/Virgo) als auch einen Gammastrahlenblitz (GRB 170817A), die 1,7 Sekunden auseinander ankamen nach einer Reise von 40 Mpc. Die Schranke: |$c_{GW}$ − $c_{EM}$|/c < 10⁻¹⁵.
+Der stärkste Test frequenzunabhängiger Ausbreitung kommt von Multi-Messenger-Ereignissen. GW170817 (Neutronensternverschmelzung, August 2017) produzierte sowohl Metrik-Perturbationen (detektiert von observational) als auch einen Gammastrahlenblitz (GRB 170817A), die 1,7 Sekunden auseinander ankamen nach einer Reise von 40 Mpc. Die Schranke: |$c_{GW}$ − $c_{EM}$|/c < 10⁻¹⁵.
 
-In SSZ breiten sich sowohl Gravitationswellen als auch elektromagnetische Wellen durch dasselbe Segmentgitter mit v = c·D(r) aus. SSZ ist vollständig konsistent mit dieser Beobachtung.
+In SSZ breiten sich sowohl Metrik-Perturbationen als auch elektromagnetische Wellen durch dasselbe Segmentgitter mit v = c·D(r) aus. SSZ ist vollständig konsistent mit dieser Beobachtung.
 
 ## 12.4 Rechenbeispiele
 
@@ -4978,9 +4992,9 @@ Das SSZ-Ergebnis unterscheidet sich vom isotropen ART-Ergebnis in zweiter Ordnun
 
 Brans-Dicke-Theorie: Die Koordinatenlichtgeschwindigkeit ist $c_{BD}$ = c(1 − (1 + ω_BD⁻¹) $r_{s}$/(2r)). Die Cassini-Mission schränkt ω_BD > 40.000 ein, was die Brans-Dicke-Korrektur im Sonnensystem undetektierbar macht.
 
-TeVeS (Tensor-Vektor-Skalar-Theorie, Bekenstein 2004): Sagt unterschiedliche Koordinatengeschwindigkeiten für elektromagnetische und Gravitationswellen vorher. Diese Vorhersage wurde durch die gleichzeitige Detektion von GW170817/GRB170817A dramatisch getestet und widerlegt.
+TeVeS (Tensor-Vektor-Skalar-Theorie, Bekenstein 2004): Sagt unterschiedliche Koordinatengeschwindigkeiten für elektromagnetische und Metrik-Perturbationen vorher. Diese Vorhersage wurde durch die gleichzeitige Detektion von GW170817/GRB170817A dramatisch getestet und widerlegt.
 
-SSZ: Die Koordinatenlichtgeschwindigkeit ist c/(1 + Ξ), und die Gravitationswellengeschwindigkeit ist ebenfalls c/(1 + Ξ). SSZ sagt daher gleiche Geschwindigkeiten für elektromagnetische und Gravitationswellen vorher, konsistent mit GW170817.
+SSZ: Die Koordinatenlichtgeschwindigkeit ist c/(1 + Ξ), und die Metrik-Perturbationengeschwindigkeit ist ebenfalls c/(1 + Ξ). SSZ sagt daher gleiche Geschwindigkeiten für elektromagnetische und Metrik-Perturbationen vorher, konsistent mit GW170817.
 
 ### Koordinatengeschwindigkeit und Kausalität
 
@@ -4988,9 +5002,9 @@ Eine häufige Sorge bei Modifikationen der Lichtgeschwindigkeit in einem Gravita
 
 In SSZ ist die Koordinatengeschwindigkeit radialen Lichts c/(1 + Ξ), die sich bei r = $r_{s}$ dem Wert c/1,802 = 0,555c nähert. Dies ist nicht null (anders als in der ART), was die endliche Zeitdilatation an der natürlichen SSZ-Grenze widerspiegelt. Die nicht-verschwindende Koordinatengeschwindigkeit in SSZ bedeutet, dass Signale die natürliche Grenze in endlicher Koordinatenzeit überqueren können — ein qualitativer Unterschied zur ART, wo die Horizontdurchquerung unendliche Koordinatenzeit dauert.
 
-### Implikationen für die Gravitationswellengeschwindigkeit
+### Implikationen für die Metrik-Perturbationengeschwindigkeit
 
-Das SSZ-Rahmenwerk sagt vorher, dass Gravitationswellen sich mit derselben Geschwindigkeit wie elektromagnetische Wellen ausbreiten: c/s(r) = c/(1 + Ξ(r)) in Koordinaten und exakt c im lokalen Bezugssystem. Diese Vorhersage wurde dramatisch bestätigt durch die Multi-Messenger-Beobachtung von GW170817/GRB170817A im August 2017, die zeigte, dass Gravitationswellen und Gammastrahlen von einer Neutronensternverschmelzung innerhalb von 1,7 Sekunden voneinander eintrafen nach einer Reise von etwa 130 Millionen Lichtjahren.
+Das SSZ-Rahmenwerk sagt vorher, dass Metrik-Perturbationen sich mit derselben Geschwindigkeit wie elektromagnetische Wellen ausbreiten: c/s(r) = c/(1 + Ξ(r)) in Koordinaten und exakt c im lokalen Bezugssystem. Diese Vorhersage wurde dramatisch bestätigt durch die Multi-Messenger-Beobachtung von GW170817/GRB170817A im August 2017, die zeigte, dass Metrik-Perturbationen und Gammastrahlen von einer Neutronensternverschmelzung innerhalb von 1,7 Sekunden voneinander eintrafen nach einer Reise von etwa 130 Millionen Lichtjahren.
 
 Die Schranke aus dieser Beobachtung ist |$c_{GW}$ − $c_{EM}$|/c < 10⁻¹⁵, was jede Theorie ausschließt, die unterschiedliche Ausbreitungsgeschwindigkeiten für Gravitations- und elektromagnetische Wellen vorhersagt. SSZ erfüllt diese Schranke konstruktionsbedingt: Beide Wellentypen sind Störungen desselben Segmentgitters und erfahren denselben effektiven Brechungsindex s(r) = 1 + Ξ(r).
 
@@ -5024,9 +5038,9 @@ wobei nabla\_mu die kovariante Ableitung bezueglich der SSZ-Metrik ist. Die Modi
 
 Die physikalische Konsequenz: Elektromagnetische Wellen, die sich radial in einem Gravitationsfeld ausbreiten, erfahren eine Frequenzverschiebung (Rotverschiebung) und eine Geschwindigkeitsaenderung (Shapiro-Verzoegerung). Beide Effekte sind durch die Segmentdichte Xi bestimmt und werden durch die automatisierten Tests in den SSZ-Repositories verifiziert.
 
-### Experimentelle Verifikation: Gravitationswellen und EM-Wellen
+### Experimentelle Verifikation: Metrik-Perturbationen und EM-Wellen
 
-Das Multi-Messenger-Ereignis GW170817 (Neutronenstern-Verschmelzung) lieferte den staerksten Test der Gleichheit von Gravitationswellen- und EM-Wellengeschwindigkeit: |$v_{GW}$ - c|/c < 10^{-15}. SSZ erfuellt diese Schranke automatisch, weil sowohl Gravitationswellen als auch EM-Wellen sich mit der lokalen Lichtgeschwindigkeit c ausbreiten (die Koordinatengeschwindigkeit variiert mit Xi, aber die lokale Geschwindigkeit ist immer c).
+Das Multi-Messenger-Ereignis GW170817 (Neutronenstern-Verschmelzung) lieferte den staerksten Test der Gleichheit von Metrik-Perturbationen- und EM-Wellengeschwindigkeit: |$v_{GW}$ - c|/c < 10^{-15}. SSZ erfuellt diese Schranke automatisch, weil sowohl Metrik-Perturbationen als auch EM-Wellen sich mit der lokalen Lichtgeschwindigkeit c ausbreiten (die Koordinatengeschwindigkeit variiert mit Xi, aber die lokale Geschwindigkeit ist immer c).
 
 ### Stokes-Parameter in Gravitationsfeldern
 
@@ -5111,6 +5125,8 @@ Dieses Kapitel hat die elektromagnetische Energie in der SSZ-Raumzeit behandelt:
 
 # Additive Zerlegung der Lichtlaufzeit
 
+
+![Abb 13](figures/ch13_shapiro/fig_13_01.png)
 
 ---
 
@@ -5287,7 +5303,7 @@ Gravitationslinsen-Zeitverzögerungen wurden für mehrere mehrfach abgebildete Q
 
 ### Pulsar-Timing-Arrays
 
-Pulsar-Timing-Arrays (PTAs) suchen nach Gravitationswellen durch Überwachung der Ankunftszeiten von Millisekunden-Pulsar-Signalen. Jedes Pulsarsignal durchquert das Gravitationspotential der Milchstraße und akkumuliert eine Segmentverzögerung. Die SSZ-Zerlegung sagt vorher, dass diese Verzögerung über alle Massekonzentrationen entlang der Sichtlinie additiv ist, was das Timing-Modell vereinfacht.
+Pulsar-Timing-Arrays (PTAs) suchen nach Metrik-Perturbationen durch Überwachung der Ankunftszeiten von Millisekunden-Pulsar-Signalen. Jedes Pulsarsignal durchquert das Gravitationspotential der Milchstraße und akkumuliert eine Segmentverzögerung. Die SSZ-Zerlegung sagt vorher, dass diese Verzögerung über alle Massekonzentrationen entlang der Sichtlinie additiv ist, was das Timing-Modell vereinfacht.
 
 Die praktische Auswirkung ist für aktuelle PTAs gering (die Korrektur liegt unter der Timing-Präzision), aber nächste-Generation-PTAs mit dem Square Kilometre Array könnten die Empfindlichkeit erreichen, um den Unterschied zwischen additiven und nicht-additiven Verzögerungsmodellen zu detektieren.
 
@@ -5321,7 +5337,7 @@ Gravitationslinsen-Zeitverzögerungen wurden für mehrere mehrfach abgebildete Q
 
 Betrachte einen Beobachter, der drei Pulsare überwacht, deren Signale alle nahe demselben Neutronenstern vorbeilaufen. In der ART erfordert jedes Signal eine separate vierdimensionale Integration entlang seiner Nullgeodäte. In SSZ kann der Segmentverzögerungsbeitrag des Neutronensterns einmal berechnet werden (als Integral von Ξ entlang eines radialen Profils) und dann auf jeden Signalpfad mit einem geometrischen Korrekturfaktor angewandt werden, der nur vom Stoßparameter abhängt. Diese Faktorisierung reduziert die Rechenkosten von drei vollen Integrationen auf eine radiale Integration plus drei geometrische Korrekturen.
 
-Für Timing-Arrays (wie das Pulsar-Timing-Array zur Gravitationswellendetektion) könnte diese Faktorisierung die Datenanalyse-Pipeline erheblich beschleunigen. Die Timing-Residuen eines Pulsar-Timing-Arrays beinhalten korrelierte Verzögerungen von vielen gravitierenden Körpern (Sonne, Jupiter, Saturn usw.), und die SSZ-additive Zerlegung erlaubt es, diese Beiträge unabhängig zu berechnen und zu summieren.
+Für Timing-Arrays (wie das Pulsar-Timing-Array zur Metrik-Perturbationendetektion) könnte diese Faktorisierung die Datenanalyse-Pipeline erheblich beschleunigen. Die Timing-Residuen eines Pulsar-Timing-Arrays beinhalten korrelierte Verzögerungen von vielen gravitierenden Körpern (Sonne, Jupiter, Saturn usw.), und die SSZ-additive Zerlegung erlaubt es, diese Beiträge unabhängig zu berechnen und zu summieren.
 
 ### Signalverarbeitungsanwendungen
 
@@ -5530,7 +5546,7 @@ Die SSZ-Vorhersage z($r_{s}$) = 0,802 ist die wichtigste falsifizierbare Vorhers
 
 - **Neutronenstern-Oberflächenemission:** Bei r/r_s ~ 2,5 sagt SSZ ~13% mehr Rotverschiebung als die Schwachfeld-Extrapolation, aber ~25% weniger als die ART vorher.
 - **Eisen-Kα-Linie aus Akkretionsscheiben:** Die fluoreszierende Eisenlinie bei 6,4 keV wird durch das Gravitationsfeld nahe Schwarzer Löcher verbreitert und verschoben.
-- **Gravitationswellen-Inspiral:** Die Phasenentwicklung binärer Inspirals hängt von der Metrik nahe des Horizonts ab. SSZs endliches D($r_{s}$) modifiziert die späte Inspiralphase.
+- **Metrik-Perturbationen-Inspiral:** Die Phasenentwicklung binärer Inspirals hängt von der Metrik nahe des Horizonts ab. SSZs endliches D($r_{s}$) modifiziert die späte Inspiralphase.
 
 ### NICER und zukünftige Missionen
 
@@ -5728,6 +5744,8 @@ Die endliche maximale Rotverschiebung ist eine der wichtigsten Vorhersagen von S
 # Beschränkungen der Photonen-Nachstimmung im Flug
 
 
+![Abb 15](figures/ch15_retuning/fig_15_01.png)
+
 ---
 
 ## Zusammenfassung
@@ -5914,7 +5932,7 @@ Das No-Go-Theorem hat eine informationstheoretische Interpretation: Ein Photon t
 
 ### Verallgemeinerung auf nicht-statische Felder
 
-Das No-Go-Theorem wurde oben für statische Gravitationsfelder bewiesen. In einem zeitabhängigen Feld (z.B. einer Gravitationswelle) kann die Photonenfrequenz tatsächlich während des Transits ändern — dies ist kein Widerspruch zum No-Go-Theorem, weil das Theorem die Stationarität des Feldes voraussetzt. Die Frequenzänderung durch Gravitationswellen ist der physikalische Effekt, den Pulsar-Timing-Arrays detektieren wollen.
+Das No-Go-Theorem wurde oben für statische Gravitationsfelder bewiesen. In einem zeitabhängigen Feld (z.B. einer Metrik-Perturbation) kann die Photonenfrequenz tatsächlich während des Transits ändern — dies ist kein Widerspruch zum No-Go-Theorem, weil das Theorem die Stationarität des Feldes voraussetzt. Die Frequenzänderung durch Metrik-Perturbationen ist der physikalische Effekt, den Pulsar-Timing-Arrays detektieren wollen.
 
 ## 15.5 Validierung und Konsistenz
 
@@ -6042,23 +6060,23 @@ Die EHT-Messung des Schattenradius von M87* (theta = 42 +/- 3 Mikrobogensekunden
 - **Referenziert von:** Kap. 16 (Frequenzrahmenwerk), Kap. 30 (Vorhersagen)
 - **Anhang:** Anh. C (Formaler Beweis des No-Go-Theorems)
 
-### Gravitationswellen-Polarisationen in SSZ
+### Metrik-Perturbationen-Polarisationen in SSZ
 
-In der ART haben Gravitationswellen zwei Polarisationszustaende: Plus (+) und Kreuz (x). In einigen alternativen Gravitationstheorien gibt es zusaetzliche Polarisationen (Skalar, Vektor, Longitudinal).
+In der ART haben Metrik-Perturbationen zwei Polarisationszustaende: Plus (+) und Kreuz (x). In einigen alternativen Gravitationstheorien gibt es zusaetzliche Polarisationen (Skalar, Vektor, Longitudinal).
 
 In SSZ gibt es genau zwei Polarisationszustaende -- identisch mit der ART. Dies ist eine direkte Konsequenz der Tatsache, dass SSZ im Schwachfeld mit der ART uebereinstimmt und keine zusaetzlichen Felder (Skalar, Vektor) einfuehrt.
 
-Die experimentelle Suche nach zusaetzlichen Polarisationen wird mit dem LIGO-Virgo-KAGRA-Netzwerk durchgefuehrt. Bisherige Ergebnisse (GW170814, GW170817) sind konsistent mit nur zwei Polarisationen -- und damit mit SSZ/ART.
+Die experimentelle Suche nach zusaetzlichen Polarisationen wird mit dem observational campaigns-complementary observatories-additional detector networks-Netzwerk durchgefuehrt. Bisherige Ergebnisse (GW170814, GW170817) sind konsistent mit nur zwei Polarisationen -- und damit mit SSZ/ART.
 
-### Gravitationswellen-Geschwindigkeit
+### Metrik-Perturbationen-Geschwindigkeit
 
-Die Geschwindigkeit von Gravitationswellen in SSZ ist $c_{gw}$ = c (exakt). Dies wurde durch die gleichzeitige Beobachtung von GW170817 (Gravitationswellen) und GRB 170817A (Gamma-Strahlung) bestaetigt: |$c_{gw}$/c - 1| < 5 x 10^{-16}.
+Die Geschwindigkeit von Metrik-Perturbationen in SSZ ist $c_{gw}$ = c (exakt). Dies wurde durch die gleichzeitige Beobachtung von GW170817 (Metrik-Perturbationen) und GRB 170817A (Gamma-Strahlung) bestaetigt: |$c_{gw}$/c - 1| < 5 x 10^{-16}.
 
-In SSZ ist $c_{gw}$ = c eine exakte Konsequenz der Metrikstruktur: Die Gravitationswellen propagieren auf Null-Geodaeten der Hintergrundmetrik, und die Hintergrundmetrik hat die Lichtgeschwindigkeit c als Grenzgeschwindigkeit.
+In SSZ ist $c_{gw}$ = c eine exakte Konsequenz der Metrikstruktur: Die Metrik-Perturbationen propagieren auf Null-Geodaeten der Hintergrundmetrik, und die Hintergrundmetrik hat die Lichtgeschwindigkeit c als Grenzgeschwindigkeit.
 
-### Gravitationswellen-Daempfung
+### Metrik-Perturbationen-Daempfung
 
-Die Gravitationswellen-Daempfung (der Energieverlust eines Doppelsternsystems durch Gravitationswellenemission) ist in SSZ identisch mit der ART-Vorhersage im Schwachfeld:
+Die Metrik-Perturbationen-Daempfung (der Energieverlust eines Doppelsternsystems durch Metrik-Perturbationenemission) ist in SSZ identisch mit der ART-Vorhersage im Schwachfeld:
 
 $P_{gw}$ = -(32/5) * G^4/(c^5) * m_1^2 m_2^2 (m_1+m_2) / r^5
 
@@ -6071,6 +6089,8 @@ Der Hulse-Taylor-Pulsar (PSR B1913+16) bestaetigt diese Formel auf 0,2% -- einer
 
 # Frequenzbasiertes Rahmenwerk fuer Gravitation, Licht und Schwarze Loecher
 
+
+![Abb 16](figures/ch16_frequency/fig_16_01_frequency_framework.png)
 
 ---
 
@@ -6092,7 +6112,7 @@ Dieses Kapitel entwickelt das Frequenzrahmenwerk, erklaert die Segmentquantisier
 
 Die Teile I bis III entwickelten das SSZ-Rahmenwerk in Form der Segmentdichte Xi, des Zeitdilatationsfaktors D und des Skalierungsfaktors s(r). Dies sind geometrische Groessen, die die Struktur der Raumzeit beschreiben. Dieses Kapitel fuehrt eine komplementaere Beschreibung in direkt messbaren Groessen ein: Frequenzen.
 
-Astronomen messen keine Segmentdichten direkt. Sie messen Frequenzen -- die Frequenzen von Spektrallinien, die Frequenzen von Pulsar-Signalen, die Frequenzen von Gravitationswellen. Ein in Frequenzen formuliertes Rahmenwerk liegt naeher an den Rohdaten und ist weniger anfaellig fuer interpretationsabhaengige Fehler.
+Astronomen messen keine Segmentdichten direkt. Sie messen Frequenzen -- die Frequenzen von Spektrallinien, die Frequenzen von Pulsar-Signalen, die Frequenzen von Metrik-Perturbationen. Ein in Frequenzen formuliertes Rahmenwerk liegt naeher an den Rohdaten und ist weniger anfaellig fuer interpretationsabhaengige Fehler.
 
 Das frequenzbasierte Rahmenwerk ist keine neue Theorie -- es ist eine Umformulierung derselben SSZ-Physik in einer anderen Sprache. Jedes Ergebnis dieses Kapitels laesst sich aus dem Segmentdichte-Formalismus der Teile I bis III ableiten. Der Vorteil: Die Frequenzsprache macht bestimmte Zusammenhaenge transparenter und bestimmte Berechnungen direkter.
 
@@ -6320,7 +6340,7 @@ In jedem Fall ist die rohe Observable ein dimensionsloses Verhaeltnis, keine abs
 
 Das Frequenzrahmenwerk ist besonders maechtig fuer die Schwarze-Loch-Spektroskopie -- die Untersuchung quasi-normaler Modenfrequenzen gestoerter Schwarzer Loecher. Wenn ein Schwarzes Loch gestoert wird (z.B. durch eine Binaerverschmelzung), oszilliert es bei charakteristischen Frequenzen (quasi-normale Moden, QNM), die von Masse und Spin abhaengen.
 
-In der ART betraegt die fundamentale QNM-Frequenz eines Schwarzschild-Schwarzen-Lochs $f_{\text{QNM}} \approx 1{,}2 \times 10^4 / (M/M_\odot)$ Hz. In SSZ sind die QNM-Frequenzen durch das endliche $D_{\min}$ am Horizont modifiziert. Die SSZ-Vorhersage lautet $f_{\text{QNM,SSZ}} = f_{\text{QNM,ART}} \times (1 + \epsilon)$, wobei $\epsilon \approx D_{\min}^2 \approx 0{,}31$ betraegt -- eine etwa 3-prozentige Verschiebung. Diese liegt derzeit unter der Messgenauigkeit von LIGO/Virgo (ca. 10%), koennte aber mit Detektoren der naechsten Generation (Einstein-Teleskop, Cosmic Explorer) detektierbar werden.
+In der ART betraegt die fundamentale QNM-Frequenz eines Schwarzschild-Schwarzen-Lochs $f_{\text{QNM}} \approx 1{,}2 \times 10^4 / (M/M_\odot)$ Hz. In SSZ sind die QNM-Frequenzen durch das endliche $D_{\min}$ am Horizont modifiziert. Die SSZ-Vorhersage lautet $f_{\text{QNM,SSZ}} = f_{\text{QNM,ART}} \times (1 + \epsilon)$, wobei $\epsilon \approx D_{\min}^2 \approx 0{,}31$ betraegt -- eine etwa 3-prozentige Verschiebung. Diese liegt derzeit unter der Messgenauigkeit von observational (ca. 10%), koennte aber mit Detektoren der naechsten Generation (Einstein-Teleskop, Cosmic Explorer) detektierbar werden.
 
 - **Voraussetzungen:** Kap. 1-5 (Grundlagen), Kap. 10 (Skalierungseiche), Kap. 14 (Rotverschiebung)
 - **Referenziert von:** Kap. 17 (Kruemmungsdetektion), Kap. 18 (SL-Metrik)
@@ -6369,11 +6389,11 @@ Die Planck-Einstein-Relation E = h f in einem Gravitationsfeld: $E_{lokal}$ = h 
 
 ### Experimentelle Perspektiven
 
-Die Frequenzquantisierung koennte getestet werden durch: (1) Atomuhren in verschiedenen Gravitationsfeldern, (2) Gravitationswellen-Spektroskopie mit dem Einstein-Teleskop (~1% QNM-Praezision), (3) Neutronenstern-Seismologie (SSZ-Korrektur ~5-10% zu Modenfrequenzen).
+Die Frequenzquantisierung koennte getestet werden durch: (1) Atomuhren in verschiedenen Gravitationsfeldern, (2) Metrik-Perturbationen-Spektroskopie mit dem Einstein-Teleskop (~1% QNM-Praezision), (3) Neutronenstern-Seismologie (SSZ-Korrektur ~5-10% zu Modenfrequenzen).
 
 ### Zusammenfassung: Das Frequenz-Rahmenwerk als Bruecke
 
-Das Frequenz-Rahmenwerk bildet die Bruecke zwischen den kinematischen Grundlagen (Teil II) und den Starkfeld-Anwendungen (Teil V). Es zeigt, dass Frequenzen -- nicht Kraefte oder Potentiale -- die fundamentalen Observablen in SSZ sind. Die drei Saeulen des Rahmenwerks (Quantisierung, Masse-Skalierung, Kruemmungs-Kopplung) liefern spezifische, testbare Vorhersagen fuer Gravitationswellen-Detektoren, Roentgenteleskope und Radiointerferometer.
+Das Frequenz-Rahmenwerk bildet die Bruecke zwischen den kinematischen Grundlagen (Teil II) und den Starkfeld-Anwendungen (Teil V). Es zeigt, dass Frequenzen -- nicht Kraefte oder Potentiale -- die fundamentalen Observablen in SSZ sind. Die drei Saeulen des Rahmenwerks (Quantisierung, Masse-Skalierung, Kruemmungs-Kopplung) liefern spezifische, testbare Vorhersagen fuer Metrik-Perturbationen-Detektoren, Roentgenteleskope und Radiointerferometer.
 
 Die wichtigste Vorhersage -- die 3%-Verschiebung der QNM-Frequenzen -- wird innerhalb der naechsten 10 Jahre mit dem Einstein-Teleskop testbar sein. Dies macht das Frequenz-Rahmenwerk zu einem der vielversprechendsten Aspekte von SSZ fuer die experimentelle Validierung.
 
@@ -6381,7 +6401,7 @@ Das naechste Kapitel (Kap. 17) erweitert das Frequenz-Rahmenwerk auf gebundene Z
 
 ### Verbindung zum Frequenz-Rahmenwerk der Quantengravitation
 
-Das SSZ-Frequenz-Rahmenwerk hat Parallelen zu anderen Ansaetzen der Quantengravitation. In der Loop-Quantengravitation (LQG) ist die Flaechenquantisierung A = 8 pi gamma $l_{P}$^2 sqrt(j(j+1)) eine Frequenzquantisierung im verkleideten Gewand (weil A ~ 1/f^2 fuer Gravitationswellen). In der Stringtheorie sind die Schwingungsmoden der Strings ebenfalls quantisiert, mit $f_{n}$ = n/(2 pi $l_{s}$), wobei $l_{s}$ die Stringlaenge ist.
+Das SSZ-Frequenz-Rahmenwerk hat Parallelen zu anderen Ansaetzen der Quantengravitation. In der Loop-Quantengravitation (LQG) ist die Flaechenquantisierung A = 8 pi gamma $l_{P}$^2 sqrt(j(j+1)) eine Frequenzquantisierung im verkleideten Gewand (weil A ~ 1/f^2 fuer Metrik-Perturbationen). In der Stringtheorie sind die Schwingungsmoden der Strings ebenfalls quantisiert, mit $f_{n}$ = n/(2 pi $l_{s}$), wobei $l_{s}$ die Stringlaenge ist.
 
 Der entscheidende Unterschied: In SSZ ist die Frequenzquantisierung eine Konsequenz der Segmentgeometrie (N0 = 4, phi), nicht einer fundamentalen Stringlaenge oder eines Schleifen-Parameters. Die SSZ-Quantisierung ist daher parameterarm (nur phi und N0) und macht spezifischere Vorhersagen als LQG oder Stringtheorie.
 
@@ -6414,6 +6434,8 @@ Das SSZ-Frequenz-Rahmenwerk oeffnet mehrere Forschungsrichtungen:
 
 # Frequenzbasierte Kruemmungsdetektion
 
+
+![Abb 17](figures/ch17_curvature/fig_17_01_curvature_detection.png)
 
 ---
 
@@ -6565,13 +6587,13 @@ MAGIS-100 und AION nutzen Atominterferometrie ueber 100-m-Basislinien. SSZ-Vorhe
 
 **Reproduktion:** `E:/clone\frequency-curvature-validation\`
 
-## 17.7 Verbindung zur Gravitationswellendetektion
+## 17.7 Verbindung zur Metrik-Perturbationendetektion
 
 ### Kruemmung als Wellendetektion
 
-Gravitationswellendetektoren sind fundamental Kruemmungsdetektoren: Sie messen den zeitveraenderlichen Riemann-Tensor ueber seinen Effekt auf den Abstand von Testmassen. LIGO misst $R_{txtx}$ (die Gezeitenkomponente entlang des Arms) via Laserinterferometrie. Die $I_{ABC}$-Methode misst dieselbe Tensorkomponente via Uhrenvergleiche.
+Metrik-Perturbationendetektoren sind fundamental Kruemmungsdetektoren: Sie messen den zeitveraenderlichen Riemann-Tensor ueber seinen Effekt auf den Abstand von Testmassen. observational campaigns misst $R_{txtx}$ (die Gezeitenkomponente entlang des Arms) via Laserinterferometrie. Die $I_{ABC}$-Methode misst dieselbe Tensorkomponente via Uhrenvergleiche.
 
-Der Schluesselunterschied: LIGO misst dynamische Kruemmung (von vorbeiziehenden Gravitationswellen) mit Empfindlichkeit ca. 10^-23/sqrt(Hz). Die $I_{ABC}$-Methode misst statische Kruemmung (von nahen Massen) mit Empfindlichkeit ca. 10^-17 nach 10^4 Sekunden Mittelung. Die beiden Methoden sind komplementaer.
+Der Schluesselunterschied: observational campaigns misst dynamische Kruemmung (von vorbeiziehenden Metrik-Perturbationen) mit Empfindlichkeit ca. 10^-23/sqrt(Hz). Die $I_{ABC}$-Methode misst statische Kruemmung (von nahen Massen) mit Empfindlichkeit ca. 10^-17 nach 10^4 Sekunden Mittelung. Die beiden Methoden sind komplementaer.
 
 ### Zukunft: Kombination von Uhr- und Interferometer-Netzwerken
 
@@ -6670,6 +6692,14 @@ Teil V wendet den vollstaendigen SSZ-Formalismus auf das Starkfeld-Regime an: Sc
 
 # Die vollständige SSZ-Schwarze-Loch-Metrik
 
+
+![Abb](figures/ch18_bh_metric/ssz_stability_map.png)
+
+![Abb](figures/ch18_bh_metric/ssz_stability_xi_rproxy.png)
+
+![Abb](figures/ch18_bh_metric/ssz_stability_energy_series.png)
+
+![Abb](figures/ch18_bh_metric/nested_submetric_analysis.png)
 
 ---
 
@@ -6887,7 +6917,7 @@ In der ART ist das Schwarzschild-Innere (r < $r_{s}$) qualitativ verschieden vom
 
 In SSZ tritt dieser Rollentausch nicht auf. Weil D > 0 überall, bleibt die Metriksignatur (−,+,+,+) bei allen Radien. Die Koordinate r bleibt raumartig und t zeitartig in der gesamten Raumzeit. Ein Beobachter bei r < $r_{s}$ kann prinzipiell Signale nach außen senden (wenn auch mit extremer Rotverschiebung) und kann prinzipiell entkommen. Die Kausalstruktur ist fundamental verschieden von der ART: Es gibt keine gefangene Region, aus der Entkommen unmöglich ist.
 
-Dieser Unterschied hat Beobachtungskonsequenzen für Gravitationswellensignale von Binärverschmelzungen. Das Ringdown-Signal nach der Verschmelzung hängt von den quasi-normalen Modenfrequenzen des Remnants ab, die wiederum von der Horizont-nahen Geometrie abhängen. Die SSZ-quasi-normalen Moden unterscheiden sich von den ART-Moden, weil die Innenstruktur verschieden ist.
+Dieser Unterschied hat Beobachtungskonsequenzen für Metrik-Perturbationensignale von Binärverschmelzungen. Das Ringdown-Signal nach der Verschmelzung hängt von den quasi-normalen Modenfrequenzen des Remnants ab, die wiederum von der Horizont-nahen Geometrie abhängen. Die SSZ-quasi-normalen Moden unterscheiden sich von den ART-Moden, weil die Innenstruktur verschieden ist.
 
 ### Thermodynamische Eigenschaften von SSZ-Schwarzen Löchern
 
@@ -7073,6 +7103,12 @@ Die SSZ-Metrik wirft mehrere offene Fragen auf:
 # Paradoxon der Singularitäten und SSZ-Auflösung
 
 
+![Abb](figures/ch19_singularity/1_core_radius_vs_mass_NO_SINGULARITY.png)
+
+![Abb](figures/ch19_singularity/2_interior_geometry_FINITE_CURVATURE.png)
+
+![Abb](figures/ch19_singularity/3_SSZ_vs_GR_CORE_COMPARISON.png)
+
 ---
 
 ## Zusammenfassung
@@ -7212,15 +7248,15 @@ Beide Modifikationen sind strukturelle Konsequenzen von D > 0. Die Annahmen der 
 
 ## 19.5 Beobachtbare Konsequenzen der Singularitätsfreiheit
 
-### Gravitationswellen-Signatur
+### Metrik-Perturbationen-Signatur
 
 Die Singularitätsfreiheit modifiziert die späte Inspiral-Phase von kompakten Doppelsternen. In der ART endet der Inspiral am ISCO, gefolgt von Plunge und Ringdown. In SSZ gibt es keinen Plunge in eine Singularität — das einfallende Objekt erreicht die natürliche Grenze bei $r_{s}$ mit endlicher Geschwindigkeit und kann dort reflektiert werden oder in eine stabile Konfiguration übergehen.
 
-Die Gravitationswellen-Signatur unterscheidet sich im Post-Merger: ART sagt einen exponentiell gedämpften Ringdown vorher (Quasinormal-Moden); SSZ sagt zusätzliche Echos vorher — wiederholte Reflexionen zwischen der natürlichen Grenze und dem Lichtring. Diese Echos haben eine charakteristische Zeitskala:
+Die Metrik-Perturbationen-Signatur unterscheidet sich im Post-Merger: ART sagt einen exponentiell gedämpften Ringdown vorher (Quasinormal-Moden); SSZ sagt zusätzliche Echos vorher — wiederholte Reflexionen zwischen der natürlichen Grenze und dem Lichtring. Diese Echos haben eine charakteristische Zeitskala:
 
 Δt_echo $\approx$ r_s/c × ln(1/D(r_s)) $\approx$ 0,6 r_s/c
 
-Für ein 10 M$\odot$ Schwarzes Loch: Δt_echo $\approx$ 0,03 ms. Dies liegt am Rand der LIGO-Empfindlichkeit, aber nächste Generation Detektoren (Einstein-Teleskop, Cosmic Explorer) könnten diese Echos detektieren.
+Für ein 10 M$\odot$ Schwarzes Loch: Δt_echo $\approx$ 0,03 ms. Dies liegt am Rand der observational campaigns-Empfindlichkeit, aber nächste Generation Detektoren (Einstein-Teleskop, Cosmic Explorer) könnten diese Echos detektieren.
 
 ### Röntgenemission aus der Nähe der natürlichen Grenze
 
@@ -7406,13 +7442,13 @@ Die rotierende SSZ-Metrik hat folgende Eigenschaften:
 
 ### Extreme Mass Ratio Inspirals (EMRIs)
 
-EMRIs sind Systeme, in denen ein stellares kompaktes Objekt (Neutronenstern oder stellares Schwarzes Loch) langsam in ein supermassives Schwarzes Loch spiralt. Die Gravitationswellen von EMRIs sind eine der Hauptziele von LISA (Laser Interferometer Space Antenna, geplant fuer ~2035).
+EMRIs sind Systeme, in denen ein stellares kompaktes Objekt (Neutronenstern oder stellares Schwarzes Loch) langsam in ein supermassives Schwarzes Loch spiralt. Die Metrik-Perturbationen von EMRIs sind eine der Hauptziele von LISA (Laser Interferometer Space Antenna, geplant fuer ~2035).
 
 In SSZ unterscheidet sich die EMRI-Wellenform von der ART-Wellenform in zwei Aspekten:
 
 1. **Phasenverschiebung:** Die kumulative Phasenverschiebung ueber ~10^5 Orbitalzyklen betraegt $\Delta_{\phi}$ ~ Xi($r_{ISCO}$) * $N_{cycles}$ ~ 0,1 * 10^5 = 10^4 Radian. Dies ist eine enorme Phasenverschiebung, die mit LISA leicht messbar waere.
 
-2. **Amplitude:** Die Gravitationswellen-Amplitude ist in SSZ um den Faktor D(r) modifiziert, was eine ~5% Aenderung der Amplitude nahe dem ISCO bedeutet.
+2. **Amplitude:** Die Metrik-Perturbationen-Amplitude ist in SSZ um den Faktor D(r) modifiziert, was eine ~5% Aenderung der Amplitude nahe dem ISCO bedeutet.
 
 LISA wird ~10-100 EMRIs pro Jahr detektieren, was eine statistische Analyse der SSZ-Korrekturen ermoeglicht. Dies ist einer der vielversprechendsten Tests fuer SSZ.
 
@@ -7450,6 +7486,8 @@ Die rotierende SSZ-Metrik kann durch mehrere Beobachtungen getestet werden:
 
 # Natürliche Grenze Schwarzer Löcher und Kosmische Zensur
 
+
+![Abb 20](figures/ch20_boundary/fig_20_01.png)
 
 ---
 
@@ -7531,9 +7569,7 @@ Die natürliche Grenze ist prinzipiell über drei Kanäle beobachtbar:
 
 **1. Thermische Emission.** Materie, die sich an der Grenze ansammelt, erreicht thermisches Gleichgewicht und strahlt. Qualitativ verschieden von der ART, wo der Horizont keine Oberfläche und keine thermische Emission hat.
 
-**2. Gravitationswellenechos (verworfen als aktiver Test).** Eine physische Oberfläche bei D = 0,555 reflektiert prinzipiell einkommende Gravitationswellen. Die Echo-Suche in LIGO/Virgo-Daten wurde jedoch als aktiver Testkanal verworfen, da die aktuelle Detektortechnologie methodisch nicht ausreichend trennscharf ist. Next-Generation-Detektoren (Einstein Telescope, Cosmic Explorer) könnten dies in Zukunft ermöglichen.
-
-**3. Schattenmodifikation.** Der Photonenring ist geringfügig kleiner (~1,3%), weil sich die Photonsphäre leicht nach innen verschiebt. Das ngEHT (2027–2030) zielt auf die dafür nötige Präzision.
+**2. Schattenmodifikation.** Der Photonenring ist geringfügig kleiner (~1,3%), weil sich die Photonsphäre leicht nach innen verschiebt. Das ngEHT (2027–2030) zielt auf die dafür nötige Präzision.
 
 ### Vergleich mit dem Event Horizon Telescope (EHT)
 
@@ -7580,7 +7616,7 @@ Dies ist eine **Sternoberfläche** — das SSZ-„Schwarze Loch" wird genauer al
 
 ### Schritt 3: Wenn Oberflächen existieren, entkommt Information
 
-Thermische Strahlung trägt Information über Oberflächenzusammensetzung und Temperatur. Reflektierte elektromagnetische Wellen tragen Information über einkommende Signale. Gravitationswellenechos tragen Information über die Oberflächenimpedanz. All dies breitet sich von der Grenze nach außen aus, stark rotverschoben (z = 0,802), aber es **entkommt**.
+Thermische Strahlung trägt Information über Oberflächenzusammensetzung und Temperatur. Reflektierte elektromagnetische Wellen tragen Information über einkommende Signale. All dies breitet sich von der Grenze nach außen aus, stark rotverschoben (z = 0,802), aber es **entkommt**.
 
 **Schlussfolgerung:** Kein Informationsparadoxon entsteht, weil keine Einwegmembran existiert. Die 50 Jahre alten Paradoxa der ART-Schwarze-Loch-Physik — Hawkings Informationsverlust (1975), das Firewall-Paradoxon (AMPS 2012) und Schwarze-Loch-Komplementarität (Susskind 1993) — werden durch Konstruktion aufgelöst. Sie alle erfordern D = 0 am Horizont; SSZ hat D = 0,555.
 
@@ -7590,14 +7626,6 @@ Thermische Strahlung trägt Information über Oberflächenzusammensetzung und Te
 
 Die EHT-Bilder von M87* (2019) und Sgr A* (2022) zeigen einen dunklen Schatten, umgeben von einem hellen Photonenring. SSZ sagt einen Schatten ~1,3% kleiner als die ART vorher. Die aktuelle EHT-Präzision (~10%) kann dies nicht unterscheiden, aber das ngEHT (2027–2030) zielt auf < 1%.
 
-### Für Gravitationswellendetektoren
-
-Die natürliche Grenze reflektiert teilweise Quasinormalmoden und erzeugt Echos. Der Reflexionskoeffizient:
-
-$$\mathcal{R} = \frac{1 - D^2(r_s)}{1 + D^2(r_s)} \approx 0.44$$
-
-Dies ist ein 44%-Reflexionskoeffizient — prinzipiell stark genug für detektierbare Echos nach ~3–5 Umläufen. Die Echo-Suche in LIGO/Virgo-Daten wurde jedoch als aktiver Testkanal verworfen (siehe Kapitel 30). Next-Generation-Detektoren könnten diese Vorhersage in Zukunft überprüfen.
-
 ### Für Röntgenastronomie
 
 Die SSZ-natürliche Grenze emittiert thermische Strahlung, anders als der ART-Horizont. Für akkretierendes stellare Objekte addiert die Oberflächenemission zum Standard-Akkretionsscheibenspektrum.
@@ -7605,8 +7633,6 @@ Die SSZ-natürliche Grenze emittiert thermische Strahlung, anders als der ART-Ho
 ### Quantitative Vorhersagen für zukünftige Beobachtungen
 
 **EHT/ngEHT:** Schattenradius-Korrektur δ $\approx$ 2% für M87* und Sgr A*. Auflösbar mit ngEHT (2030er).
-
-**LIGO/Einstein-Teleskop:** Gravitationswellen-Echos mit Δt $\approx$ 0,6 r_s/c nach dem Merger. Detektierbar für M < 50 M$\odot$ mit Einstein-Teleskop.
 
 **Röntgenteleskope (Athena, eXTP):** Oberflächenemission der natürlichen Grenze bei E_obs $\approx$ E_surface/(1 + z) = E_surface/1,802. Für Akkretionsraten > 10⁻⁸ M$\odot$/Jahr detektierbar.
 
@@ -7618,7 +7644,7 @@ Die SSZ-natürliche Grenze emittiert thermische Strahlung, anders als der ART-Ho
 
 **Was die Tests beweisen:** D($r_{s}$) > 0; Grenze ist C²-glatt; kein kausales Einfangen in der Metrikstruktur; normale Uhrenraten an der Grenze; Reflexionskoeffizient konsistent mit D($r_{s}$).
 
-**Was die Tests NICHT beweisen:** Thermisches Emissionsspektrum — erfordert QFT auf SSZ-Hintergrund (zukünftige Arbeit). GW-Echo-Wellenform — erfordert numerische Relativitätssimulation auf SSZ-Metrik.
+**Was die Tests NICHT beweisen:** Thermisches Emissionsspektrum — erfordert QFT auf SSZ-Hintergrund (zukünftige Arbeit).
 
 **Reproduktion:** `E:/clone\ssz-metric-pure\`
 
@@ -7657,15 +7683,13 @@ Die Rate des Informationslecks wird durch die Emissionsrate an der natürlichen 
 
 ### Stabilitätsanalyse der natürlichen Grenze
 
-Die SSZ-Stabilitätsanalyse (numerisch durchgeführt im ssz-metric-pure-Repository) zeigt, dass alle quasi-normalen Moden für kugelsymmetrische Störungen gedämpft sind. Die Fundamentalmode hat einen Gütefaktor Q $\approx$ 2 (die Oszillation ist innerhalb von etwa 2 Zyklen gedämpft), konsistent mit dem schnellen Ringdown, der in Gravitationswellen-Verschmelzungsereignissen beobachtet wird. Die Stabilität erstreckt sich auf nicht-kugelförmige Störungen (l = 2, 3, 4 Moden).
+Die SSZ-Stabilitätsanalyse (numerisch durchgeführt im ssz-metric-pure-Repository) zeigt, dass alle quasi-normalen Moden für kugelsymmetrische Störungen gedämpft sind. Die Fundamentalmode hat einen Gütefaktor Q $\approx$ 2 (die Oszillation ist innerhalb von etwa 2 Zyklen gedämpft), konsistent mit dem schnellen Ringdown, der in Metrik-Perturbationen-Verschmelzungsereignissen beobachtet wird. Die Stabilität erstreckt sich auf nicht-kugelförmige Störungen (l = 2, 3, 4 Moden).
 
 Die Stabilität der natürlichen Grenze ist ein nicht-triviales Ergebnis. In der ART ist der Ereignishorizont stabil gegen Störungen (das Flächentheorem garantiert, dass die Horizontfläche nur zunehmen kann), aber die Singularität im Inneren hat keine sinnvolle Störungstheorie. In SSZ ist die natürliche Grenze eine echte stabile Fläche mit wohldefinierter Störungstheorie und charakteristischen Oszillationsfrequenzen.
 
 ### Beobachtungssignaturen der natürlichen Grenze
 
 Die natürliche Grenze erzeugt spezifische Beobachtungssignaturen, die sie von einem Ereignishorizont unterscheiden:
-
-**Gravitationswellen-Echos:** Nach einer Binärverschmelzung können Gravitationswellen an der natürlichen Grenze reflektiert werden, was Echos mit Zeitverzögerung Δt $\approx$ 0,6 r_s/c nach dem Hauptsignal erzeugt. Das Einstein-Teleskop könnte diese Echos für M < 50 M$\odot$ detektieren.
 
 **Röntgenemission:** Die Oberflächenemission der natürlichen Grenze bei E_obs $\approx$ E_surface/1,802. Für Akkretionsraten > 10⁻⁸ M$\odot$/Jahr mit Athena oder eXTP detektierbar.
 
@@ -7803,6 +7827,8 @@ Dieses Kapitel hat die natuerliche Grenze und ihren Informationsgehalt in SSZ an
 
 # Das Dunkle-Stern-Problem — Flucht in starker Gravitation
 
+
+![Abb 21](figures/ch21_dark_star/fig_21_01.png)
 
 ---
 
@@ -7949,13 +7975,12 @@ Die Fuzzball-Hypothese der Stringtheorie (Mathur 2005) ersetzt den ART-Horizont 
 | Observable | ART-Vorhersage | SSZ-Vorhersage | Unterscheidbar? |
 |-----------|--------------|----------------|-----------------|
 | Oberflächenemission | Keine (Hawking T ~ nK) | Thermisch (Akkretion T ~ MK) | Ja (Röntgen) |
-| GW-Echos | Abwesend | Vorhanden (R $\approx$ 0,44) | Verworfen (LIGO) |
 | Schattengröße | 10,39 GM/(c²D_A) | 0,987× ART | Ja (ngEHT) |
-| Spätzeitliches Signal | Exponentieller Abfall | Potenzgesetz + Echos | Ja (GW) |
+| Horizontüberquerung | Unendliche Koord.-Zeit | Endliche Koord.-Zeit | Indirekt |
 
 ### Der vielversprechendste Test
 
-Gravitationswellenechos von Binärverschmelzungen Schwarzer Löcher sind der vielversprechendste Nahzeitest. In der ART zerfällt das Ringdown-Signal nach der Verschmelzung exponentiell. In SSZ erzeugt die natürliche Grenze mit Reflexionskoeffizient R $\approx$ 0,44 verzögerte Echos.
+Die Neutronenstern-Oberflächenrotverschiebung (+13% vs. ART) ist der vielversprechendste Nahzeitest, messbar durch NICER (2025–2027). Der Schwarze-Loch-Schattendurchmesser (−1,3% vs. ART) wird durch ngEHT (2027–2030) testbar sein. Siehe Kapitel 30 für die vollständige Vorhersagetabelle.
 
 ## 21.6 Historische Entwicklung des Schwarzen-Loch-Konzepts
 
@@ -8001,7 +8026,7 @@ Drei Beobachtungsstrategien könnten SSZ-Dunkle-Sterne von ART-Schwarzen-Löcher
 
 **Strategie 1 — Radioemission von der natürlichen Grenze:** Die natürliche Grenze emittiert thermische Strahlung, die um z = 0,802 rotverschoben wird. Für ein stellares Schwarzes Loch mit Akkretionsrate ~10⁻⁸ M$\odot$/Jahr liegt die beobachtete Emission im Radiobereich (~GHz). Das ngEHT (next-generation Event Horizon Telescope) könnte diese Emission für Sgr A* und M87* detektieren, falls sie existiert. Die vorhergesagte Flussdichte ist ~μJy — an der Grenze der ngEHT-Empfindlichkeit.
 
-**Strategie 2 — Gravitationswellen-Echos:** Nach einer Binärverschmelzung können Gravitationswellen an der natürlichen Grenze reflektiert werden und als Echos mit Zeitverzögerung Δt $\approx$ 0,6 r_s/c nach dem Hauptsignal erscheinen. Für ein 30-M$\odot$-Schwarzes-Loch ist Δt $\approx$ 0,3 ms. LIGO/Virgo haben nach solchen Echos gesucht (Abedi et al. 2017), mit nicht-schlüssigen Ergebnissen. Das Einstein-Teleskop (geplant für die 2030er Jahre) wird die Empfindlichkeit haben, Echos für M < 50 M$\odot$ definitiv zu detektieren oder auszuschließen.
+**Strategie 2 — Metrik-Perturbationen-Echos:** Nach einer Binärverschmelzung können Metrik-Perturbationen an der natürlichen Grenze reflektiert werden und als Echos mit Zeitverzögerung Δt $\approx$ 0,6 r_s/c nach dem Hauptsignal erscheinen. Für ein 30-M$\odot$-Schwarzes-Loch ist Δt $\approx$ 0,3 ms. observational haben nach solchen Echos gesucht (Abedi et al. 2017), mit nicht-schlüssigen Ergebnissen. Das Einstein-Teleskop (geplant für die 2030er Jahre) wird die Empfindlichkeit haben, Echos für M < 50 M$\odot$ definitiv zu detektieren oder auszuschließen.
 
 **Strategie 3 — Gezeitendeformierbarkeit bei Verschmelzungen:** Die Gezeitendeformierbarkeit beschreibt, wie leicht ein kompaktes Objekt sich im Gezeitenfeld eines Begleiters verformt. In der ART haben Schwarze Löcher null Gezeitendeformierbarkeit. In SSZ kann die natürliche Grenze sich leicht unter Gezeitenkräften verformen, was eine nicht-verschwindende Gezeitendeformierbarkeit ergibt. Dies beeinflusst die Inspiral-Wellenform und ist mit aktuellen Detektoren für Neutronenstern-Schwarzes-Loch-Verschmelzungen messbar.
 
@@ -8011,7 +8036,7 @@ Der SSZ-Dunkle-Stern ist nicht die einzige vorgeschlagene Alternative zum ART-Sc
 
 **Gravastars** (Mazur und Mottola, 2004): Objekte mit einem de-Sitter-Inneren (positive kosmologische Konstante), einer dünnen Schale steifer Materie an der Grenze und einem Schwarzschild-Äußeren. Gravastars haben keinen Horizont und keine Singularität, ähnlich SSZ-Dunklen-Sternen, aber ihre Innenstruktur ist fundamental verschieden (de Sitter vs. segmentgesättigt).
 
-**Bosonensterne:** Selbstgravitierende Konfigurationen eines komplexen Skalarfeldes, stabilisiert durch die Unschärferelation. Bosonensterne sind transparent (keine Oberfläche), können beliebig kompakt sein und erzeugen Gravitationswellen-Echos. Sie unterscheiden sich von SSZ-Dunklen-Sternen durch einen spezifischen Materieinhalt (das Skalarfeld) statt einer geometrischen Struktur (das Segmentgitter).
+**Bosonensterne:** Selbstgravitierende Konfigurationen eines komplexen Skalarfeldes, stabilisiert durch die Unschärferelation. Bosonensterne sind transparent (keine Oberfläche), können beliebig kompakt sein und erzeugen Metrik-Perturbationen-Echos. Sie unterscheiden sich von SSZ-Dunklen-Sternen durch einen spezifischen Materieinhalt (das Skalarfeld) statt einer geometrischen Struktur (das Segmentgitter).
 
 **Fuzzballs** (Stringtheorie): Stringartige Objekte ohne klassisches Inneres, deren Oberfläche eine Quantenüberlagerung von Stringzuständen ist. Fuzzballs lösen das Informationsparadoxon, aber ihre Eigenschaften hängen von der spezifischen Stringtheorie-Kompaktifizierung ab.
 
@@ -8053,9 +8078,9 @@ Das nächste Kapitel behandelt superradiante Instabilitäten und zeigt, wie SSZ 
 
 Die Gezeitendeformierbarkeit eines kompakten Objekts wird durch die dimensionslose Tidal Love Number k_2 quantifiziert. In der ART ist k_2 = 0 fuer Schwarze Loecher (ein Schwarzes Loch laesst sich nicht deformieren) und k_2 ~ 0,05-0,15 fuer Neutronensterne (abhaengig von der Zustandsgleichung).
 
-In SSZ haben dunkle Sterne eine endliche Gezeitendeformierbarkeit, weil die natuerliche Grenze eine endliche Steifigkeit besitzt. Die SSZ-Vorhersage ist k_2_SSZ ~ $D_{min}$^5 ~ 0,555^5 ~ 0,052 fuer ein Objekt an der natuerlichen Grenze. Dieser Wert ist vergleichbar mit dem eines Neutronensterns, was bedeutet, dass ein SSZ-dunkler-Stern in Gravitationswellensignalen einem Neutronenstern aehnlich sehen wuerde.
+In SSZ haben dunkle Sterne eine endliche Gezeitendeformierbarkeit, weil die natuerliche Grenze eine endliche Steifigkeit besitzt. Die SSZ-Vorhersage ist k_2_SSZ ~ $D_{min}$^5 ~ 0,555^5 ~ 0,052 fuer ein Objekt an der natuerlichen Grenze. Dieser Wert ist vergleichbar mit dem eines Neutronensterns, was bedeutet, dass ein SSZ-dunkler-Stern in Metrik-Perturbationensignalen einem Neutronenstern aehnlich sehen wuerde.
 
-Die Konsequenz fuer Gravitationswellenbeobachtungen: Wenn LIGO/Virgo eine Verschmelzung zweier kompakter Objekte mit Massen im Schwarze-Loch-Bereich (> 3 $M_{Sonne}$) detektiert, aber mit einer endlichen Gezeitendeformierbarkeit (k_2 > 0), waere dies ein starker Hinweis auf SSZ-dunkle-Sterne. Die aktuelle Sensitivitaet von LIGO/Virgo reicht aus, um k_2 > 0,1 bei Massen von 5-10 $M_{Sonne}$ zu detektieren. Zukuenftige Detektoren (Einstein-Teleskop) werden k_2 > 0,01 messen koennen.
+Die Konsequenz fuer Metrik-Perturbationenbeobachtungen: Wenn observational eine Verschmelzung zweier kompakter Objekte mit Massen im Schwarze-Loch-Bereich (> 3 $M_{Sonne}$) detektiert, aber mit einer endlichen Gezeitendeformierbarkeit (k_2 > 0), waere dies ein starker Hinweis auf SSZ-dunkle-Sterne. Die aktuelle Sensitivitaet von observational reicht aus, um k_2 > 0,1 bei Massen von 5-10 $M_{Sonne}$ zu detektieren. Zukuenftige Detektoren (Einstein-Teleskop) werden k_2 > 0,01 messen koennen.
 
 ### Historische Entwicklung: Von Michell zu SSZ
 
@@ -8085,7 +8110,7 @@ In der ART hat ein Schwarzes Loch keine Oberflaeche und daher keine thermische O
 
 Allerdings ist die Burst-Physik auf der natuerlichen Grenze (D = 0,555) anders als auf einer Neutronenstern-Oberflaeche (D ~ 0,85): Die Zeitskalen sind um den Faktor $D_{min}$/D_NS ~ 0,65 gestreckt, und die Burst-Energien sind um den Faktor ($D_{min}$/D_NS)^4 ~ 0,18 reduziert. Diese Unterschiede koennten die Bursts schwer detektierbar machen.
 
-**Gravitationswellen-Ringdown:** Nach einer Verschmelzung zweier kompakter Objekte schwingt das resultierende Objekt mit Quasinormal-Moden (QNMs). In der ART sind die QNMs durch die Kerr-Metrik bestimmt. In SSZ sind die QNMs durch die SSZ-Metrik bestimmt, was zu einer Frequenzverschiebung von ~3% und einer Daempfungszeitaenderung von ~5% fuehrt. Diese Unterschiede sind mit Gravitationswellendetektoren der dritten Generation messbar.
+**Metrik-Perturbationen-Ringdown:** Nach einer Verschmelzung zweier kompakter Objekte schwingt das resultierende Objekt mit Quasinormal-Moden (QNMs). In der ART sind die QNMs durch die Kerr-Metrik bestimmt. In SSZ sind die QNMs durch die SSZ-Metrik bestimmt, was zu einer Frequenzverschiebung von ~3% und einer Daempfungszeitaenderung von ~5% fuehrt. Diese Unterschiede sind mit Metrik-Perturbationendetektoren der dritten Generation messbar.
 
 ### Massenluecke und Klassifikation kompakter Objekte
 
@@ -8093,15 +8118,15 @@ In der ART gibt es eine scharfe Grenze zwischen Neutronensternen (M < ~3 $M_{Son
 
 In SSZ ist die Grenze weniger scharf: Ein kompaktes Objekt mit M > 3 $M_{Sonne}$ ist ein dunkler Stern (nicht ein Schwarzes Loch), der eine Oberflaeche bei r = $r_{s}$ hat. Die Massenluecke koennte in SSZ eine andere Erklaerung haben: Sie koennte durch die Physik der Supernova-Explosion bestimmt sein (welche Massen der kompakte Ueberrest haben kann), nicht durch die Gravitationstheorie.
 
-Die LIGO/Virgo-Beobachtungen haben begonnen, die Massenluecke zu fuellen: GW190814 enthielt ein kompaktes Objekt mit M = 2,6 $M_{Sonne}$ (zu schwer fuer die meisten Neutronenstern-Zustandsgleichungen, zu leicht fuer die klassische Massenluecke). In SSZ ist dieses Objekt ein dunkler Stern mit $\Xi_{\text{surface}}$ ~ 0,25 und D_surface ~ 0,80.
+Die observational-Beobachtungen haben begonnen, die Massenluecke zu fuellen: GW190814 enthielt ein kompaktes Objekt mit M = 2,6 $M_{Sonne}$ (zu schwer fuer die meisten Neutronenstern-Zustandsgleichungen, zu leicht fuer die klassische Massenluecke). In SSZ ist dieses Objekt ein dunkler Stern mit $\Xi_{\text{surface}}$ ~ 0,25 und D_surface ~ 0,80.
 
-### Echosignaturen in Gravitationswellen
+### Echosignaturen in Metrik-Perturbationen
 
-Eine der aufregendsten Vorhersagen von SSZ ist die Existenz von Gravitationswellen-Echos. In der ART absorbiert der Ereignishorizont alle einfallenden Gravitationswellen vollstaendig. In SSZ reflektiert die natuerliche Grenze einen Teil der einfallenden Wellen, was zu Echos fuehrt.
+Eine der aufregendsten Vorhersagen von SSZ ist die Existenz von Metrik-Perturbationen-Echos. In der ART absorbiert der Ereignishorizont alle einfallenden Metrik-Perturbationen vollstaendig. In SSZ reflektiert die natuerliche Grenze einen Teil der einfallenden Wellen, was zu Echos fuehrt.
 
 Die Echo-Zeitskala ist: $t_{echo}$ ~ $r_{s}$/c * |ln($D_{min}$)| ~ $r_{s}$/c * 0,59. Fuer ein stellares Schwarzes Loch (M = 10 $M_{Sonne}$) ist $t_{echo}$ ~ 0,035 ms. Die Echos sind stark gedaempft (Amplitude ~ $D_{min}$^2 ~ 0,31 pro Echo) und klingen exponentiell ab.
 
-Die Suche nach Echos in LIGO-Daten ist ein aktives Forschungsgebiet. Bisherige Analysen (Abedi et al., 2017; Westerweck et al., 2018) haben widersprüchliche Ergebnisse geliefert. Die naechste Generation von Detektoren (LIGO A+, Einstein-Teleskop) wird die Empfindlichkeit haben, um Echos mit der von SSZ vorhergesagten Amplitude zu detektieren oder auszuschliessen.
+Die Suche nach Echos in observational campaigns-Daten ist ein aktives Forschungsgebiet. Bisherige Analysen (Abedi et al., 2017; Westerweck et al., 2018) haben widersprüchliche Ergebnisse geliefert. Die naechste Generation von Detektoren (observational campaigns A+, Einstein-Teleskop) wird die Empfindlichkeit haben, um Echos mit der von SSZ vorhergesagten Amplitude zu detektieren oder auszuschliessen.
 
 ### Gezeitendeformierbarkeit in SSZ
 
@@ -8111,7 +8136,7 @@ Lambda = (2/3) k_2 (R/M)^5
 
 wobei k_2 die Love-Zahl und R der Radius des Objekts ist. In der ART ist k_2 = 0 fuer Schwarze Loecher (sie haben keine Oberflaeche und koennen nicht deformiert werden). In SSZ ist k_2 ~ 0,052 fuer dunkle Sterne (sie haben eine Oberflaeche bei r = $r_{s}$ und koennen deformiert werden).
 
-Die Konsequenz fuer Gravitationswellen: Bei der Verschmelzung zweier kompakter Objekte beeinflusst die Gezeitendeformierbarkeit die Gravitationswellen-Phase in den letzten ~100 Orbitalzyklen vor der Verschmelzung. Die Phasenverschiebung betraegt:
+Die Konsequenz fuer Metrik-Perturbationen: Bei der Verschmelzung zweier kompakter Objekte beeinflusst die Gezeitendeformierbarkeit die Metrik-Perturbationen-Phase in den letzten ~100 Orbitalzyklen vor der Verschmelzung. Die Phasenverschiebung betraegt:
 
 Delta_Phi_tidal ~ Lambda * ($M_{total}$ / $r_{sep}$)^5
 
@@ -8144,8 +8169,8 @@ Dieses Kapitel hat die SSZ-Vorhersagen fuer kompakte Sterne und dunkle Sterne da
 1. **Masse-Luecke:** SSZ sagt eine Masse-Luecke zwischen Neutronensternen (~2,5 $M_{sun}$) und dunklen Sternen (~5 $M_{sun}$) vorher.
 2. **Gezeitendeformierbarkeit:** k_2 ~ 0,052 fuer dunkle Sterne (vs. k_2 = 0 fuer ART-Schwarze-Loecher).
 3. **Thermische Emission:** Oberflaechentemperatur ~10^6 K im weichen Roentgenbereich.
-4. **Gravitationswellen-Echos:** Echos mit Verzoegerung $\Delta_{\text{t}}$ ~ $r_{s}$/c * ln(1/D_min) ~ 0,6 $r_{s}$/c.
-5. **LIGO/Virgo:** Aktuelle Daten sind mit SSZ konsistent; Einstein-Teleskop wird diskriminieren.
+4. **Metrik-Perturbationen-Echos:** Echos mit Verzoegerung $\Delta_{\text{t}}$ ~ $r_{s}$/c * ln(1/D_min) ~ 0,6 $r_{s}$/c.
+5. **observational:** Aktuelle Daten sind mit SSZ konsistent; Einstein-Teleskop wird diskriminieren.
 
 Dunkle Sterne sind die dramatischste Vorhersage von SSZ -- Objekte, die wie Schwarze Loecher aussehen, aber eine Oberflaeche haben. Ihre Detektion waere ein entscheidender Test fuer SSZ.
 
@@ -8154,6 +8179,11 @@ Dunkle Sterne sind die dramatischste Vorhersage von SSZ -- Objekte, die wie Schw
 
 # SSZ als Regulator superradianter Instabilitäten
 
+
+![Abb 22](figures/ch22_superradiance/fig_22s_01.png)
+
+
+![Abb](figures/ch22_thermo/fig_22_01.png)
 
 ---
 
@@ -8196,7 +8226,7 @@ Die Natur liefert einen natürlichen Spiegel: **massive bosonische Felder** mit 
 
 ### Das Beobachtungspuzzle
 
-Wenn ultraleichte Bosonen mit Masse μ ~ 10⁻¹² eV existierten, wäre die superradiante Wachstumszeitskala für stellare Schwarze Löcher ~10⁴ Jahre — viel kürzer als das Alter stellarer Schwarzer Löcher (~10⁹ Jahre). Solche Schwarzen Löcher sollten vollständig abgebremst sein. Doch LIGO/Virgo-Beobachtungen zeigen Schwarze Löcher mit signifikantem Spin (χ > 0,3) im Massenbereich, wo Superradianz aktiv sein sollte.
+Wenn ultraleichte Bosonen mit Masse μ ~ 10⁻¹² eV existierten, wäre die superradiante Wachstumszeitskala für stellare Schwarze Löcher ~10⁴ Jahre — viel kürzer als das Alter stellarer Schwarzer Löcher (~10⁹ Jahre). Solche Schwarzen Löcher sollten vollständig abgebremst sein. Doch observational-Beobachtungen zeigen Schwarze Löcher mit signifikantem Spin (χ > 0,3) im Massenbereich, wo Superradianz aktiv sein sollte.
 
 SSZ liefert die Erklärung: Ein Stabilisierungsmechanismus unterdrückt Superradianz stärker als die ART vorhersagt.
 
@@ -8306,9 +8336,9 @@ Die Regulatoreffizienz wird durch das Verhältnis η = A_SSZ/A_ART quantifiziert
 
 Die Stabilisierung superradianter Instabilitäten hat mehrere astrophysikalische Konsequenzen:
 
-**Maximaler Spin:** In der ART begrenzt die superradiante Instabilität den Spin Schwarzer Löcher in bestimmten Masse-Bosonenmasse-Kombinationen und erzeugt Ausschlusszonen in der Regge-Ebene. In SSZ sind diese Ausschlusszonen kleiner, was höhere Spins erlaubt. Diese Vorhersage kann durch Messung der Spinverteilung aus Gravitationswellenbeobachtungen und Röntgenspektroskopie getestet werden.
+**Maximaler Spin:** In der ART begrenzt die superradiante Instabilität den Spin Schwarzer Löcher in bestimmten Masse-Bosonenmasse-Kombinationen und erzeugt Ausschlusszonen in der Regge-Ebene. In SSZ sind diese Ausschlusszonen kleiner, was höhere Spins erlaubt. Diese Vorhersage kann durch Messung der Spinverteilung aus Metrik-Perturbationenbeobachtungen und Röntgenspektroskopie getestet werden.
 
-**Gravitationswellenhintergrund:** In der ART erzeugt das superradiante Wachstum von Bosonenwolken kontinuierliche Gravitationswellen bei der doppelten Bosonen-Compton-Frequenz. In SSZ bedeutet die reduzierte Wachstumsrate, dass weniger Bosonenwolken detektierbare Amplituden erreichen. Aktuelle LIGO/Virgo-Suchen haben diesen Hintergrund nicht detektiert — konsistent mit beiden Theorien.
+**Metrik-Perturbationenhintergrund:** In der ART erzeugt das superradiante Wachstum von Bosonenwolken kontinuierliche Metrik-Perturbationen bei der doppelten Bosonen-Compton-Frequenz. In SSZ bedeutet die reduzierte Wachstumsrate, dass weniger Bosonenwolken detektierbare Amplituden erreichen. Aktuelle observational-Suchen haben diesen Hintergrund nicht detektiert — konsistent mit beiden Theorien.
 
 **Akkretionsmorphologie:** Die superradiante Instabilität extrahiert Drehimpuls vom Schwarzen Loch und deponiert ihn in der Bosonenwolke, die dann mit der Akkretionsscheibe wechselwirken kann. In SSZ erzeugt die schwächere Instabilität schwächere Modulationen, was möglicherweise erklärt, warum solche Modulationen nicht beobachtet wurden.
 
@@ -8326,7 +8356,7 @@ S reicht von 0 (vollständig instabil, ART-Grenzwert) bis 1 (vollständig stabil
 | Intermediäres SL | ~10³ M_$\odot$ | > 0,90 | Sehr stabil |
 | Supermassereiches SL | ~10⁶ M_$\odot$ | > 0,95 | Extrem stabil |
 
-Alle SSZ-Schwarzen-Löcher sind robust stabil (S > 0,8), konsistent mit der LIGO/Virgo-Beobachtung, dass stellare Schwarze Löcher signifikanten Spin behalten.
+Alle SSZ-Schwarzen-Löcher sind robust stabil (S > 0,8), konsistent mit der observational-Beobachtung, dass stellare Schwarze Löcher signifikanten Spin behalten.
 
 ## 22.5 Vergleich mit anderen Stabilisierungsvorschlägen
 
@@ -8334,7 +8364,7 @@ Alle SSZ-Schwarzen-Löcher sind robust stabil (S > 0,8), konsistent mit der LIGO
 
 In der ART wird die superradiante Instabilität durch mehrere Mechanismen begrenzt:
 
-1. **Gravitationswellen-Abstrahlung:** Die rotierenden Moden strahlen Gravitationswellen ab und verlieren Energie.
+1. **Metrik-Perturbationen-Abstrahlung:** Die rotierenden Moden strahlen Metrik-Perturbationen ab und verlieren Energie.
 2. **Absorption am Horizont:** Ein Teil der Wellenenergie wird am Horizont absorbiert.
 3. **Nichtlineare Sättigung:** Bei großer Amplitude werden nichtlineare Effekte wichtig.
 
@@ -8354,11 +8384,11 @@ SSZ löst das Problem der superradianten Instabilität ohne zusätzliche Annahme
 
 In der Masse-Spin-Ebene (Regge-Ebene) sagt die ART mit ultraleichten Bosonen „Ausschlusszonen" vorher. SSZ reduziert die Größe dieser Ausschlusszonen um den Faktor $G_{SSZ}$ und eliminiert sie möglicherweise vollständig.
 
-**SSZ ist kompatibel mit der Existenz ultraleichter Bosonen, obwohl LIGO/Virgo keine Spin-Down-Signatur sieht.** In der ART wird die Abwesenheit von Ausschlusszonen als Beweis gegen ultraleichte Bosonen genommen. In SSZ ist die Abwesenheit eine natürliche Konsequenz der reduzierten superradianten Effizienz.
+**SSZ ist kompatibel mit der Existenz ultraleichter Bosonen, obwohl observational keine Spin-Down-Signatur sieht.** In der ART wird die Abwesenheit von Ausschlusszonen als Beweis gegen ultraleichte Bosonen genommen. In SSZ ist die Abwesenheit eine natürliche Konsequenz der reduzierten superradianten Effizienz.
 
 ### Falsifizierbare Vorhersage
 
-Wenn zukünftige Gravitationswellenbeobachtungen eine klare superradiante Spin-Down-Signatur identifizieren, kann die gemessene Wachstumsrate mit ART- und SSZ-Vorhersagen verglichen werden. Das Verhältnis bestimmt D($r_{s}$) direkt:
+Wenn zukünftige Metrik-Perturbationenbeobachtungen eine klare superradiante Spin-Down-Signatur identifizieren, kann die gemessene Wachstumsrate mit ART- und SSZ-Vorhersagen verglichen werden. Das Verhältnis bestimmt D($r_{s}$) direkt:
 
 $$\frac{\Gamma_{\text{obs}}}{\Gamma_{\text{ART}}} = D(r_s)^{2l+1}$$
 
@@ -8395,33 +8425,33 @@ Teil VI wendet die Starkfeldergebnisse auf spezifische astrophysikalische System
 
 Das naechste Kapitel beginnt Teil VI (Astrophysikalische Anwendungen) und wendet die Starkfeldergebnisse der Kapitel 18–22 auf konkrete astronomische Systeme an.
 
-### Bosenova und Gravitationswellensignaturen
+### Bosenova und Metrik-Perturbationensignaturen
 
-Wenn die superradiante Instabilitaet nicht reguliert wird, kann sie zu einem dramatischen Ereignis fuehren: der Bosenova. In diesem Szenario waechst die Bosonenwolke um das Schwarze Loch exponentiell, bis die Selbstgravitation der Wolke eine Implosion ausloest. Die Implosion erzeugt einen Burst von Gravitationswellen und Teilchen.
+Wenn die superradiante Instabilitaet nicht reguliert wird, kann sie zu einem dramatischen Ereignis fuehren: der Bosenova. In diesem Szenario waechst die Bosonenwolke um das Schwarze Loch exponentiell, bis die Selbstgravitation der Wolke eine Implosion ausloest. Die Implosion erzeugt einen Burst von Metrik-Perturbationen und Teilchen.
 
-In SSZ wird die Bosenova durch den $G_{SSZ}$-Regulator verhindert oder stark abgeschwaecht. Der Regulator begrenzt die maximale Amplitude der superradianten Wolke auf einen Bruchteil der Schwarzen-Loch-Masse. Die Konsequenz: Statt einer katastrophalen Bosenova ergibt sich ein quasi-stationaerer Zustand, in dem die Wolke langsam Energie an Gravitationswellen abgibt.
+In SSZ wird die Bosenova durch den $G_{SSZ}$-Regulator verhindert oder stark abgeschwaecht. Der Regulator begrenzt die maximale Amplitude der superradianten Wolke auf einen Bruchteil der Schwarzen-Loch-Masse. Die Konsequenz: Statt einer katastrophalen Bosenova ergibt sich ein quasi-stationaerer Zustand, in dem die Wolke langsam Energie an Metrik-Perturbationen abgibt.
 
-Die Gravitationswellensignatur dieses quasi-stationaeren Zustands ist ein nahezu monochromatisches Signal mit einer Frequenz, die durch die Bosonenmasse bestimmt wird: $f_{GW}$ = 2 * $m_{boson}$ * c^2 / h. Fuer ultraleichte Bosonen mit m ~ 10^{-13} eV liegt die Frequenz im LIGO-Band (~100 Hz). Fuer schwerere Bosonen mit m ~ 10^{-10} eV liegt sie im LISA-Band (~1 mHz).
+Die Metrik-Perturbationensignatur dieses quasi-stationaeren Zustands ist ein nahezu monochromatisches Signal mit einer Frequenz, die durch die Bosonenmasse bestimmt wird: $f_{GW}$ = 2 * $m_{boson}$ * c^2 / h. Fuer ultraleichte Bosonen mit m ~ 10^{-13} eV liegt die Frequenz im observational campaigns-Band (~100 Hz). Fuer schwerere Bosonen mit m ~ 10^{-10} eV liegt sie im LISA-Band (~1 mHz).
 
-Die SSZ-Vorhersage unterscheidet sich von der ART-Vorhersage in zwei Aspekten: (1) Die Amplitude des Gravitationswellensignals ist um den Faktor eta = 0,05 reduziert (weil der Regulator die Wolkenamplitude begrenzt), und (2) die Frequenz ist um ~3% verschoben (weil die SSZ-Metrik nahe $r_{s}$ von der Kerr-Metrik abweicht).
+Die SSZ-Vorhersage unterscheidet sich von der ART-Vorhersage in zwei Aspekten: (1) Die Amplitude des Metrik-Perturbationensignals ist um den Faktor eta = 0,05 reduziert (weil der Regulator die Wolkenamplitude begrenzt), und (2) die Frequenz ist um ~3% verschoben (weil die SSZ-Metrik nahe $r_{s}$ von der Kerr-Metrik abweicht).
 
 ### Astrophysikalische Konsequenzen fuer Schwarze-Loch-Populationen
 
-Die superradiante Instabilitaet hat Konsequenzen fuer die beobachtete Population Schwarzer Loecher. In der ART wuerden ultraleichte Bosonen die Rotation schnell rotierender Schwarzer Loecher abbremsen, was zu einer Luecke im Regge-Diagramm (Spin vs. Masse) fuehren wuerde. Beobachtungen von LIGO/Virgo zeigen tatsaechlich eine Praeferenz fuer moderate Spins (a/M ~ 0,3-0,7), was als Hinweis auf superradiante Abbremsung interpretiert werden koennte.
+Die superradiante Instabilitaet hat Konsequenzen fuer die beobachtete Population Schwarzer Loecher. In der ART wuerden ultraleichte Bosonen die Rotation schnell rotierender Schwarzer Loecher abbremsen, was zu einer Luecke im Regge-Diagramm (Spin vs. Masse) fuehren wuerde. Beobachtungen von observational zeigen tatsaechlich eine Praeferenz fuer moderate Spins (a/M ~ 0,3-0,7), was als Hinweis auf superradiante Abbremsung interpretiert werden koennte.
 
-In SSZ ist die Abbremsung durch den Regulator um 95% unterdrueckt. Dies bedeutet, dass die Luecke im Regge-Diagramm viel kleiner waere als in der ART vorhergesagt. Zukuenftige Gravitationswellendetektoren (Einstein-Teleskop, Cosmic Explorer) werden die Spin-Verteilung mit ausreichender Statistik messen, um zwischen der ART-Vorhersage (grosse Luecke) und der SSZ-Vorhersage (kleine Luecke) zu unterscheiden.
+In SSZ ist die Abbremsung durch den Regulator um 95% unterdrueckt. Dies bedeutet, dass die Luecke im Regge-Diagramm viel kleiner waere als in der ART vorhergesagt. Zukuenftige Metrik-Perturbationendetektoren (Einstein-Teleskop, Cosmic Explorer) werden die Spin-Verteilung mit ausreichender Statistik messen, um zwischen der ART-Vorhersage (grosse Luecke) und der SSZ-Vorhersage (kleine Luecke) zu unterscheiden.
 
 ### Detektionsperspektiven fuer Superradianz
 
 Die Suche nach Superradianz-Signaturen ist ein aktives Forschungsgebiet mit mehreren vielversprechenden Ansaetzen:
 
-**Kontinuierliche Gravitationswellen:** Eine Bosonenwolke um ein rotierendes Schwarzes Loch emittiert quasi-monochromatische Gravitationswellen mit einer Frequenz $f_{GW}$ ~ 2 mu c^2/h, wobei mu die Bosonenmasse ist. Fuer ultraleichte Axionen (mu ~ 10^{-12} eV) liegt $f_{GW}$ im LIGO-Band (~100 Hz). Die aktuelle LIGO-Sensitivitaet reicht aus, um Bosonenwolken um stellare Schwarze Loecher innerhalb von ~1 kpc zu detektieren.
+**Kontinuierliche Metrik-Perturbationen:** Eine Bosonenwolke um ein rotierendes Schwarzes Loch emittiert quasi-monochromatische Metrik-Perturbationen mit einer Frequenz $f_{GW}$ ~ 2 mu c^2/h, wobei mu die Bosonenmasse ist. Fuer ultraleichte Axionen (mu ~ 10^{-12} eV) liegt $f_{GW}$ im observational campaigns-Band (~100 Hz). Die aktuelle observational campaigns-Sensitivitaet reicht aus, um Bosonenwolken um stellare Schwarze Loecher innerhalb von ~1 kpc zu detektieren.
 
-In SSZ ist die Gravitationswellenamplitude um den Faktor $G_{SSZ}$ ~ 0,05 gegenueber der ART reduziert (weil der Superradianz-Regulator die Wolkenmasse begrenzt). Dies bedeutet, dass die Detektionsreichweite in SSZ um den Faktor sqrt(0,05) ~ 0,22 reduziert ist, was die Detektion auf ~200 pc beschraenkt.
+In SSZ ist die Metrik-Perturbationenamplitude um den Faktor $G_{SSZ}$ ~ 0,05 gegenueber der ART reduziert (weil der Superradianz-Regulator die Wolkenmasse begrenzt). Dies bedeutet, dass die Detektionsreichweite in SSZ um den Faktor sqrt(0,05) ~ 0,22 reduziert ist, was die Detektion auf ~200 pc beschraenkt.
 
 **Spin-Messungen:** Superradianz extrahiert Drehimpuls aus dem Schwarzen Loch, was den Spin reduziert. In der ART fuehrt dies zu Luecken im Spin-Masse-Diagramm (Regge-Ebene): Schwarze Loecher mit bestimmten Spin-Masse-Kombinationen sollten nicht existieren, weil die Superradianz ihren Spin zu schnell reduziert.
 
-In SSZ ist die Spin-Reduktion um 95% unterdrueckt, was bedeutet, dass die Luecken in der Regge-Ebene viel kleiner sind. Die aktuelle Datenlage (LIGO/Virgo-Spin-Messungen) ist mit beiden Vorhersagen konsistent, weil die Spin-Messungen noch zu ungenau sind. Zukuenftige Detektoren (Einstein-Teleskop) werden die Spins mit ausreichender Praezision messen, um zwischen SSZ und ART zu unterscheiden.
+In SSZ ist die Spin-Reduktion um 95% unterdrueckt, was bedeutet, dass die Luecken in der Regge-Ebene viel kleiner sind. Die aktuelle Datenlage (observational-Spin-Messungen) ist mit beiden Vorhersagen konsistent, weil die Spin-Messungen noch zu ungenau sind. Zukuenftige Detektoren (Einstein-Teleskop) werden die Spins mit ausreichender Praezision messen, um zwischen SSZ und ART zu unterscheiden.
 
 **Schwarze-Loch-Schatten:** Eine Bosonenwolke um ein Schwarzes Loch modifiziert den Schatten, der vom EHT beobachtet wird. Die Modifikation ist proportional zur Wolkenmasse und damit in SSZ um 95% reduziert. Das ngEHT wird die Empfindlichkeit haben, um Bosonenwolken mit Massen > 0,01 $M_{BH}$ zu detektieren, was in der ART leicht erreichbar ist, aber in SSZ an der Detektionsgrenze liegt.
 
@@ -8439,7 +8469,7 @@ tau_spin_SSZ = tau_spin_GR / $G_{SSZ}$ ~ 20 * tau_spin_GR
 
 Fuer ein stellares Schwarzes Loch (M = 10 $M_{Sonne}$, a/M = 0,9) und ein ultraleichtes Boson (mu = 10^{-12} eV) ist tau_spin_GR ~ 10^6 Jahre und tau_spin_SSZ ~ 2 x 10^7 Jahre. Beide Zeitskalen sind viel kuerzer als das Alter des Universums (~10^{10} Jahre), was bedeutet, dass die Spin-Abbremsung in beiden Theorien stattfinden sollte — aber mit unterschiedlicher Effizienz.
 
-Die beobachtbare Konsequenz: In der ART sollten Schwarze Loecher mit bestimmten Spin-Masse-Kombinationen nicht existieren (weil die Superradianz ihren Spin zu schnell reduziert). In SSZ sind die verbotenen Regionen in der Spin-Masse-Ebene kleiner, weil die Spin-Abbremsung langsamer ist. Zukuenftige Gravitationswellendetektoren (Einstein-Teleskop, Cosmic Explorer) werden die Spins mit ausreichender Praezision messen, um zwischen den beiden Vorhersagen zu unterscheiden.
+Die beobachtbare Konsequenz: In der ART sollten Schwarze Loecher mit bestimmten Spin-Masse-Kombinationen nicht existieren (weil die Superradianz ihren Spin zu schnell reduziert). In SSZ sind die verbotenen Regionen in der Spin-Masse-Ebene kleiner, weil die Spin-Abbremsung langsamer ist. Zukuenftige Metrik-Perturbationendetektoren (Einstein-Teleskop, Cosmic Explorer) werden die Spins mit ausreichender Praezision messen, um zwischen den beiden Vorhersagen zu unterscheiden.
 
 ### Bosonenwolken als Gravitationslinsen
 
@@ -8453,9 +8483,9 @@ Die erwartete Linsenverstärkung fuer eine Bosonenwolke um ein stellares Schwarz
 
 Die experimentelle Suche nach Superradianz konzentriert sich auf drei Strategien:
 
-**Strategie 1: Spin-Messungen.** Wenn Superradianz effizient ist, sollten Schwarze Loecher in bestimmten Masse-Spin-Bereichen nicht existieren (Regge-Ebene-Ausschlussregionen). Die SSZ-Ausschlussregionen sind kleiner als die ART-Regionen (weil die Superradianz-Rate in SSZ um den Faktor $G_{SSZ}$ ~ 0,05 reduziert ist). Aktuelle LIGO/Virgo-Daten zeigen keine klaren Ausschlussregionen, was mit SSZ konsistent ist.
+**Strategie 1: Spin-Messungen.** Wenn Superradianz effizient ist, sollten Schwarze Loecher in bestimmten Masse-Spin-Bereichen nicht existieren (Regge-Ebene-Ausschlussregionen). Die SSZ-Ausschlussregionen sind kleiner als die ART-Regionen (weil die Superradianz-Rate in SSZ um den Faktor $G_{SSZ}$ ~ 0,05 reduziert ist). Aktuelle observational-Daten zeigen keine klaren Ausschlussregionen, was mit SSZ konsistent ist.
 
-**Strategie 2: Kontinuierliche Gravitationswellen.** Eine Bosonenwolke um ein rotierendes Schwarzes Loch emittiert kontinuierliche Gravitationswellen mit einer Frequenz f = 2 * $\mu_{\text{boson}}$ * c^2 / h. Fuer ultraleichte Bosonen (mu ~ 10^{-13} eV) liegt die Frequenz im LIGO-Band (~100 Hz). Bisherige Suchen haben keine Signale gefunden, was Schranken auf die Bosonenmasse setzt.
+**Strategie 2: Kontinuierliche Metrik-Perturbationen.** Eine Bosonenwolke um ein rotierendes Schwarzes Loch emittiert kontinuierliche Metrik-Perturbationen mit einer Frequenz f = 2 * $\mu_{\text{boson}}$ * c^2 / h. Fuer ultraleichte Bosonen (mu ~ 10^{-13} eV) liegt die Frequenz im observational campaigns-Band (~100 Hz). Bisherige Suchen haben keine Signale gefunden, was Schranken auf die Bosonenmasse setzt.
 
 **Strategie 3: Schwarze-Loch-Schatten.** Eine Bosonenwolke modifiziert den Schatten des Schwarzen Lochs leicht. Die Modifikation betraegt ~$G_{SSZ}$ * ($M_{cloud}$/M_BH) ~ 0,05 * 0,05 = 0,25% -- unterhalb der aktuellen EHT-Praezision, aber potenziell mit dem ngEHT messbar.
 
@@ -8468,10 +8498,10 @@ Dieses Kapitel hat die Superradianz in SSZ analysiert -- den Prozess, durch den 
 1. **Superradianz-Rate:** In SSZ um den Faktor $G_{SSZ}$ ~ 0,05 gegenueber der ART reduziert.
 2. **Spin-Down:** Langsamerer Spin-Down in SSZ -- konsistent mit den beobachteten hohen Spins.
 3. **Bosonenwolken:** Weniger massiv in SSZ -- schwierigere Detektion, aber nicht unmoeglich.
-4. **Gravitationswellen:** Kontinuierliche GW-Emission mit f = 2 mu c^2/h -- Suche mit LIGO/Virgo laeuft.
+4. **Metrik-Perturbationen:** Kontinuierliche GW-Emission mit f = 2 mu c^2/h -- Suche mit observational laeuft.
 5. **Schatten-Modifikation:** ~0,25% -- unterhalb der aktuellen EHT-Praezision, aber mit ngEHT messbar.
 
-Die Superradianz ist ein einzigartiger Test fuer SSZ, weil sie die Starkfeldstruktur nahe der natuerlichen Grenze direkt abtastet. Die naechste Generation von Gravitationswellendetektoren wird die SSZ-Vorhersagen testen koennen.
+Die Superradianz ist ein einzigartiger Test fuer SSZ, weil sie die Starkfeldstruktur nahe der natuerlichen Grenze direkt abtastet. Die naechste Generation von Metrik-Perturbationendetektoren wird die SSZ-Vorhersagen testen koennen.
 
 ## Querverweise
 
@@ -8483,7 +8513,7 @@ Die Superradianz ist ein einzigartiger Test fuer SSZ, weil sie die Starkfeldstru
 
 Die Superradianz hat eine enge Verbindung zur Teilchenphysik: Sie kann verwendet werden, um Schranken auf die Masse ultraleichter Teilchen zu setzen. Wenn ein ultraleichtes Boson (z.B. ein Axion oder ein dunkles Photon) existiert, wuerde es durch Superradianz um rotierende Schwarze Loecher akkumuliert werden. Die Nicht-Beobachtung von Superradianz-Effekten setzt daher Schranken auf die Bosonenmasse.
 
-Die aktuellen Schranken (aus LIGO/Virgo-Spin-Messungen):
+Die aktuellen Schranken (aus observational-Spin-Messungen):
 
 | Bosonentyp | Ausgeschlossener Massenbereich |
 |-----------|-------------------------------|
@@ -8505,6 +8535,12 @@ Die Superradianz bietet ein einzigartiges Fenster zur Teilchenphysik jenseits de
 
 **Paper-Referenz:** ssz-lagrange Repository (Wrede, Casu 2026)
 **Validierung:** 54/54 Tests BESTANDEN (100%)
+
+
+![Abb 31](figures/ch31_lagrange/fig_31_01_effective_potential.png)
+
+
+![Abb](figures/ch31_lagrange/fig_31_02_geodesics.png)
 
 ---
 
@@ -8727,7 +8763,7 @@ wobei $\delta_{\text{SSZ}} \sim O(\Xi^2)$. Für den S2-Stern ($r_p \approx 120\,
 
 ---
 
-## Gravitationswellen im Lagrange-Formalismus
+## Metrik-Perturbationen im Lagrange-Formalismus
 
 ### Quadrupolformel
 
@@ -8747,7 +8783,7 @@ Da SSZ keinen Horizont, sondern eine natürliche Grenze bei $r^* \approx 1{,}595
 
 $$f_{\text{QNM}}^{\text{SSZ}} \approx f_{\text{QNM}}^{\text{ART}} \cdot D(r^*)^{-1} \approx 1{,}39\, f_{\text{QNM}}^{\text{ART}}$$
 
-Dies ist eine **falsifizierbare Vorhersage**, testbar mit Gravitationswellendetektoren der nächsten Generation (LISA, Einstein-Teleskop).
+Dies ist eine **falsifizierbare Vorhersage**, testbar mit Metrik-Perturbationendetektoren der nächsten Generation (LISA, Einstein-Teleskop).
 
 ---
 
@@ -8823,6 +8859,9 @@ Siehe Anhang D für den vollständigen Repository-Index und die Testergebnisse.
 
 **Paper-Referenz:** ssz-lagrange Repository, Abschnitte 14--19 (Wrede, Casu 2026)
 **Validierung:** 54/54 Tests BESTANDEN (100%)
+
+
+![Abb 32](figures/ch32_rotating/fig_32_01_rotating_hawking.png)
 
 ---
 
@@ -9114,6 +9153,17 @@ Alle Tests bestehen mit einer Erfolgsquote von 100%.
 # Einfallende Materie und Radiowellen
 
 
+![Abb](figures/ch23_infall_radio/coherence_collapse_piecewise.png)
+
+![Abb](figures/ch23_infall_radio/energy_release_profile.png)
+
+![Abb](figures/ch23_infall_radio/observational_predictions.png)
+
+![Abb](figures/ch23_infall_radio/radiowave_precursor_mechanism.png)
+
+
+![Abb](figures/ch23_infall_radio/paper_summary_figure.png)
+
 ---
 
 ## Einführung zu Teil VI
@@ -9240,8 +9290,7 @@ Bei r = r_s: v_eigen(r_s) = c/0,555 $\approx$ 1,80c. Dies überschreitet c — v
 | 1 | Radiowellen-Chirp | Setzt sich fort jenseits r_s | Friert am Horizont ein | Ja | EHT, ngVLA |
 | 2 | Spektrale Inflexion | Bei ~2r_s (Mischzone) | Glatt | Ja | Röntgen-Timing |
 | 3 | Signal-Einfrieren | Nein (D > 0) | Ja (D→0) | Ja | Radio-Timing |
-| 4 | Echo-Signale | Vorhanden (Oberfläche) | Abwesend (Horizont) | Verworfen (LIGO) | Zukunft: ET, CE |
-| 5 | Chirp-Zeitskala | τ ~ r_s/(c·D_s) | τ → ∞ | Ja | Multi-λ |
+| 4 | Chirp-Zeitskala | τ ~ r_s/(c·D_s) | τ → ∞ | Ja | Multi-λ |
 
 ## 23.5 Energieerhaltung
 
@@ -9310,13 +9359,13 @@ In SSZ ist die Strahlungseffizienz modifiziert: η_SSZ $\approx$ 0,063 (6,3%) �
 
 ### Verbindung zur Multi-Messenger-Astronomie
 
-Die Kombination von Radiowellen-, Röntgen- und Gravitationswellenbeobachtungen desselben Objekts bietet die Möglichkeit, SSZ-Vorhersagen zu testen. Ein akkretierendes Schwarzes Loch emittiert:
+Die Kombination von Radiowellen-, Röntgen- und Metrik-Perturbationenbeobachtungen desselben Objekts bietet die Möglichkeit, SSZ-Vorhersagen zu testen. Ein akkretierendes Schwarzes Loch emittiert:
 
 - **Radiowellen:** Aus der äußeren Akkretionsscheibe und dem Jet (Ξ ≪ 1, Schwachfeld)
 - **Röntgenstrahlung:** Aus der inneren Akkretionsscheibe (r < 10 $r_{s}$, Starkfeld)
-- **Gravitationswellen:** Aus dem Inspiral kompakter Begleiter (r ~ $r_{s}$, Starkfeld)
+- **Metrik-Perturbationen:** Aus dem Inspiral kompakter Begleiter (r ~ $r_{s}$, Starkfeld)
 
-Die SSZ-Vorhersage für jede Emissionskomponente unterscheidet sich von der ART nur für r < 6 $r_{s}$. Die Radioemission ist daher kein guter Diskriminator (sie kommt aus dem Schwachfeld), aber die Röntgenemission und die Gravitationswellen tragen Starkfeldinformation.
+Die SSZ-Vorhersage für jede Emissionskomponente unterscheidet sich von der ART nur für r < 6 $r_{s}$. Die Radioemission ist daher kein guter Diskriminator (sie kommt aus dem Schwachfeld), aber die Röntgenemission und die Metrik-Perturbationen tragen Starkfeldinformation.
 
 ### Zukünftige Beobachtungsmöglichkeiten
 
@@ -9358,7 +9407,7 @@ Obwohl die Radioemission selbst aus dem Schwachfeld stammt (r > 100 $r_{s}$), tr
 | Jet-Leistung (BZ) | P_BZ | 0.31 * P_BZ | ~69% |
 | Reflexionsvermoegen | 0 (Horizont) | 0.31 (Oberflaeche) | Qualitativ |
 | Thermische Emission | Nur Scheibe | Scheibe + Oberflaeche | Qualitativ |
-| Ringdown-Moden | Kerr QNMs | Modifizierte QNMs + Echos | Qualitativ |
+| Ringdown-Moden | Kerr QNMs | Modifizierte QNMs | Qualitativ |
 
 Die groessten Unterschiede sind qualitativ: Die SSZ-Oberflaeche reflektiert Strahlung und emittiert thermisch, waehrend der ART-Horizont alles absorbiert. Dies fuehrt zu unterschiedlichen Spektren im harten Roentgenbereich (E > 10 keV), wo die Oberflaechenstrahlung beitraegt.
 
@@ -9474,6 +9523,25 @@ Die naechste Generation von Instrumenten wird die SSZ-Vorhersagen fuer astrophys
 
 # Molekularzonen in expandierenden Nebeln
 
+
+![Abb](figures/ch24_g79/2_coherence_evolution_REAL_DATA.png)
+
+![Abb](figures/ch24_g79/3_radio_timing_REAL_DATA.png)
+
+![Abb](figures/ch24_g79/5_potential_landscapes_REAL_DATA.png)
+
+![Abb](figures/ch24_g79/6_irreversible_collapse_4panel_REAL_DATA.png)
+
+![Abb](figures/ch24_g79/g79_energy_release.png)
+
+![Abb](figures/ch24_g79/g79_nebulae_comparison.png)
+
+
+![Abb](figures/ch24_g79/7_piecewise_4panel_REAL_DATA.png)
+
+![Abb](figures/ch24_g79/radiowave_precursor_predictions_REAL_DATA.png)
+
+![Abb](figures/ch24_g79/sharp_break_detection_COMPLETE.png)
 
 ---
 
@@ -9842,6 +9910,33 @@ In SSZ ist $\Omega_{\text{H}}$ um den Faktor $D_{min}$ modifiziert, was zu einer
 # Irreversibles Kohärenzkollaps-Gesetz — g2 nach g1
 
 
+![Abb](figures/ch25_collapse/2_piecewise_vs_smooth_fit.png)
+
+![Abb](figures/ch25_collapse/3_gradient_curvature_analysis.png)
+
+![Abb](figures/ch25_collapse/4_domain_structure_g1_g2.png)
+
+![Abb](figures/ch25_collapse/5_residual_comparison.png)
+
+
+![Abb](figures/ch25_collapse/coherence_collapse_dynamics.png)
+
+![Abb](figures/ch25_collapse/model_comparison_collapse.png)
+
+![Abb](figures/ch25_collapse/model_comparison_phase.png)
+
+![Abb](figures/ch25_collapse/model_comparison_potential.png)
+
+![Abb](figures/ch25_collapse/model_comparison_trajectories.png)
+
+![Abb](figures/ch25_collapse/nested_submetric_analysis.png)
+
+![Abb](figures/ch25_collapse/paper_compatibility_summary.png)
+
+![Abb](figures/ch25_collapse/radiowave_lightcurves.png)
+
+![Abb](figures/ch25_collapse/sharp_break_detection_COMPLETE.png)
+
 ---
 
 ## Einführung zu Teil VII
@@ -10004,7 +10099,7 @@ Der g1-nach-g2-Übergang tritt während des gravitativen Kollapses auf und erzeu
 
 **Neutrino-Burst:** Die während des Übergangs freigesetzte gravitative Bindungsenergie wird primär als Neutrinos abgestrahlt (wie bei SN 1987A beobachtet). Die SSZ-Vorhersage für die gesamte Neutrinoenergie ist ungefähr (0,1 − η_SSZ) Mc². Für einen 1,4-Sonnenmasse-Neutronenstern aus einem 20-Sonnenmasse-Vorläufer beträgt die vorhergesagte Neutrinoenergie ~3 × 10⁴⁶ Joule, konsistent mit der SN-1987A-Beobachtung.
 
-**Gravitationswellensignal:** Der Kollaps erzeugt einen Burst von Gravitationswellen mit charakteristischer Frequenz f $\approx$ c/(2πr_s) × D_min, was für einen 1,4-Sonnenmasse-Überrest ~3 kHz ergibt. Diese Frequenz liegt im LIGO/Virgo-Band, aber am oberen Rand der Empfindlichkeitskurve — herausfordernd für aktuelle Detektoren, aber machbar für Detektoren der dritten Generation.
+**Metrik-Perturbationensignal:** Der Kollaps erzeugt einen Burst von Metrik-Perturbationen mit charakteristischer Frequenz f $\approx$ c/(2πr_s) × D_min, was für einen 1,4-Sonnenmasse-Überrest ~3 kHz ergibt. Diese Frequenz liegt im observational-Band, aber am oberen Rand der Empfindlichkeitskurve — herausfordernd für aktuelle Detektoren, aber machbar für Detektoren der dritten Generation.
 
 **Elektromagnetischer Transient:** Die Photosphäre des kollabierenden Sterns emittiert einen kurzen Strahlungsblitz beim Durchgang durch die Mischzone. Die Blitzdauer beträgt ~$r_{s}$/c × 1/D_min = 4,5 × 10⁻⁵ Sekunden für einen 1,4-Sonnenmasse-Überrest, und die Spitzenleuchtkraft ist ungefähr die Eddington-Leuchtkraft. Dieser elektromagnetische Transient würde als sehr kurzer Gammastrahlen-Puls vor der Hauptsupernova-Emission erscheinen.
 
@@ -10054,7 +10149,7 @@ Der Kohärenzkollaps beim Regimeübergang ist potentiell testbar durch:
 
 1. **Neutronenstern-Oberflächenemission:** Der Übergang von g2 (nahe der Oberfläche) zu g1 (weit entfernt) sollte die Kohärenzeigenschaften der emittierten Strahlung beeinflussen. Insbesondere sollte die Polarisation der Röntgenstrahlung beim Regimeübergang depolarisieren.
 
-2. **Gravitationswellen-Inspiral:** Während des Inspirals eines kompakten Doppelsterns durchläuft das System den g2-g1-Übergang. Die Phasenentwicklung der Gravitationswelle könnte eine Signatur des Kohärenzkollaps tragen.
+2. **Metrik-Perturbationen-Inspiral:** Während des Inspirals eines kompakten Doppelsterns durchläuft das System den g2-g1-Übergang. Die Phasenentwicklung der Metrik-Perturbation könnte eine Signatur des Kohärenzkollaps tragen.
 
 3. **Laborexperimente:** Obwohl die gravitativen Effekte auf der Erde vernachlässigbar sind (Ξ ~ 10⁻⁹), könnten Analogexperimente mit Bose-Einstein-Kondensaten den Kohärenzkollaps in einem analogen gravitativen System simulieren.
 
@@ -10113,11 +10208,11 @@ Die Analogie zur gewoehnlichen Thermodynamik ist aufschlussreich: Der g1-nach-g2
 
 Der Koharenzkollaps von g1 nach g2 hat spezifische beobachtbare Signaturen:
 
-**Quasinormal-Moden:** Nach einer Stoerung (z.B. durch einfallende Materie) schwingt die natuerliche Grenze mit charakteristischen Frequenzen, den Quasinormal-Moden (QNMs). In der ART sind die QNMs durch die Kerr-Metrik bestimmt. In SSZ sind sie durch die SSZ-Metrik bestimmt, was zu einer Frequenzverschiebung von ~3% relativ zur ART fuehrt. Diese Verschiebung ist mit Gravitationswellendetektoren der dritten Generation (Einstein-Teleskop, Cosmic Explorer) messbar.
+**Quasinormal-Moden:** Nach einer Stoerung (z.B. durch einfallende Materie) schwingt die natuerliche Grenze mit charakteristischen Frequenzen, den Quasinormal-Moden (QNMs). In der ART sind die QNMs durch die Kerr-Metrik bestimmt. In SSZ sind sie durch die SSZ-Metrik bestimmt, was zu einer Frequenzverschiebung von ~3% relativ zur ART fuehrt. Diese Verschiebung ist mit Metrik-Perturbationendetektoren der dritten Generation (Einstein-Teleskop, Cosmic Explorer) messbar.
 
-**Gravitationswellen-Echos:** Wenn die natuerliche Grenze teilweise reflektierend ist (was in SSZ der Fall ist, weil D = 0,555 $\neq$ 0), sollten Gravitationswellen, die auf die Grenze treffen, teilweise reflektiert werden. Die reflektierten Wellen erzeugen Echos mit einer Zeitverzoegerung von $\Delta_{\text{t}}$ ~ $r_{s}$ * ln(1/D_min) / c ~ 0,6 $r_{s}$/c nach dem primaeren Signal. Die Suche nach solchen Echos in LIGO/Virgo-Daten ist ein aktives Forschungsgebiet.
+**Metrik-Perturbationen-Echos:** Wenn die natuerliche Grenze teilweise reflektierend ist (was in SSZ der Fall ist, weil D = 0,555 $\neq$ 0), sollten Metrik-Perturbationen, die auf die Grenze treffen, teilweise reflektiert werden. Die reflektierten Wellen erzeugen Echos mit einer Zeitverzoegerung von $\Delta_{\text{t}}$ ~ $r_{s}$ * ln(1/D_min) / c ~ 0,6 $r_{s}$/c nach dem primaeren Signal. Die Suche nach solchen Echos in observational-Daten ist ein aktives Forschungsgebiet.
 
-**Tidal Love Numbers:** Die Gezeitendeformierbarkeit eines kompakten Objekts wird durch die Tidal Love Numbers quantifiziert. In der ART sind die Love Numbers eines Schwarzen Lochs exakt null (ein Schwarzes Loch laesst sich nicht deformieren). In SSZ sind die Love Numbers endlich (weil die natuerliche Grenze eine endliche Steifigkeit hat). Die Messung nicht-verschwindender Love Numbers in Gravitationswellensignalen von Schwarzen-Loch-Verschmelzungen waere ein starker Hinweis auf SSZ.
+**Tidal Love Numbers:** Die Gezeitendeformierbarkeit eines kompakten Objekts wird durch die Tidal Love Numbers quantifiziert. In der ART sind die Love Numbers eines Schwarzen Lochs exakt null (ein Schwarzes Loch laesst sich nicht deformieren). In SSZ sind die Love Numbers endlich (weil die natuerliche Grenze eine endliche Steifigkeit hat). Die Messung nicht-verschwindender Love Numbers in Metrik-Perturbationensignalen von Schwarzen-Loch-Verschmelzungen waere ein starker Hinweis auf SSZ.
 
 ### Landau-Ginzburg-Beschreibung des Phasenuebergangs
 
@@ -10177,7 +10272,7 @@ Der Regime-Uebergang bei r* = 1,387 $r_{s}$ hat mehrere beobachtbare Konsequenze
 
 **Akkretionsscheiben-Spektrum:** Der Uebergang von g1 nach g2 erzeugt eine Aenderung im Temperaturprofil der Akkretionsscheibe. Im Schwachfeld (r > r*) ist T ~ r^{-3/4} (Standard-Shakura-Sunyaev). Im Starkfeld (r < r*) ist T ~ r^{-1/2} (flacheres Profil). Der Knick im Temperaturprofil bei r = r* koennte als Merkmal im Roentgenspektrum sichtbar sein.
 
-**Gravitationswellen-Phase:** Fuer ein Objekt, das durch den Regime-Uebergang spiralt (z.B. ein EMRI), aendert sich die Gravitationswellen-Phase abrupt. Die Phasenverschiebung betraegt $\Delta_{\phi}$ ~ pi * Xi(r*) ~ 0,3 Radian -- messbar mit LISA.
+**Metrik-Perturbationen-Phase:** Fuer ein Objekt, das durch den Regime-Uebergang spiralt (z.B. ein EMRI), aendert sich die Metrik-Perturbationen-Phase abrupt. Die Phasenverschiebung betraegt $\Delta_{\phi}$ ~ pi * Xi(r*) ~ 0,3 Radian -- messbar mit LISA.
 
 **Photonensphere:** Die Photonensphere (der Radius, bei dem Photonen auf Kreisbahnen umlaufen) liegt in SSZ bei $r_{ph}$ = 1,5 $r_{s}$ * (1 + $\delta_{\text{SSZ}}$), wobei $\delta_{\text{SSZ}}$ ~ 0,02. Die 2%-Verschiebung beeinflusst den Schattenradius und die Lichtablenkung nahe kompakten Objekten.
 
@@ -10216,7 +10311,7 @@ Der Regime-Uebergang bei r* = 1,387 $r_{s}$ hat spezifische experimentelle Signa
 
 **Akkretionsscheiben-Spektrum:** Der Uebergang beeinflusst das Temperaturprofil der Akkretionsscheibe nahe dem ISCO. Die resultierende Aenderung im Roentgenspektrum ist ~2% bei 6,4 keV (Eisenlinie) -- messbar mit Athena.
 
-**Gravitationswellen-Phase:** Der Uebergang beeinflusst die GW-Phase waehrend der letzten ~10 Orbits vor dem Merger. Die kumulative Phasenverschiebung ist ~0,1 Radian -- messbar mit dem Einstein-Teleskop.
+**Metrik-Perturbationen-Phase:** Der Uebergang beeinflusst die GW-Phase waehrend der letzten ~10 Orbits vor dem Merger. Die kumulative Phasenverschiebung ist ~0,1 Radian -- messbar mit dem Einstein-Teleskop.
 
 **Photonensphere:** Der Uebergang beeinflusst den Photonensphere-Radius ($r_{ph}$ = 1,53 $r_{s}$ in SSZ vs. 1,50 $r_{s}$ in ART). Die resultierende Aenderung im Schattenradius ist ~1,3% -- messbar mit ngEHT.
 
@@ -10227,6 +10322,8 @@ Der Regime-Uebergang bei r* = 1,387 $r_{s}$ hat spezifische experimentelle Signa
 
 # Testmethodik und Anti-Zirkularität
 
+
+![Abb 26](figures/ch26_testing/fig_26_01.png)
 
 ---
 
@@ -10250,7 +10347,7 @@ Jede neue physikalische Theorie muss demonstrieren, dass ihre Vorhersagen nicht 
 
 Jede neue physikalische Theorie muss zwei Tests bestehen: (1) Reproduktion aller existierenden Beobachtungen, die von der Vorgängertheorie erklärt werden, und (2) Vorhersage neuer Phänomene, die von der Vorgängertheorie nicht vorhergesagt werden. Für SSZ bedeutet dies:
 
-**Test 1 (Reproduktion):** SSZ muss alle ART-Schwachfeldvorhersagen reproduzieren — GPS-Zeitdilatation, Shapiro-Delay, Lichtablenkung, Periheldrehung, Pound-Rebka-Rotverschiebung, Gravitationswellen-Detektion. Dies wird in den Kapiteln 26–28 verifiziert.
+**Test 1 (Reproduktion):** SSZ muss alle ART-Schwachfeldvorhersagen reproduzieren — GPS-Zeitdilatation, Shapiro-Delay, Lichtablenkung, Periheldrehung, Pound-Rebka-Rotverschiebung, Metrik-Perturbationen-Detektion. Dies wird in den Kapiteln 26–28 verifiziert.
 
 **Test 2 (Neue Vorhersagen):** SSZ muss Vorhersagen machen, die sich von der ART unterscheiden und experimentell testbar sind. Die wichtigsten: z($r_{s}$) = 0,802 (endliche Horizontrotverschiebung), D($r_{s}$) = 0,555 (endliche Zeitdilatation), keine Singularität, keine Informationsparadoxon. Dies wird in Kapitel 30 zusammengefasst.
 
@@ -10453,7 +10550,7 @@ Karl Poppers Falsifizierbarkeitspostulat (1934) fordert, dass eine wissenschaftl
 
 **Schwachfeld-Falsifizierbarkeit:** Wenn die SSZ-Schwachfeldformeln (Ξ = $r_{s}$/2r, D = 1/(1+Ξ)) nicht mit GPS, Shapiro oder Pound-Rebka übereinstimmten, wäre SSZ sofort widerlegt. Die Übereinstimmung ist ein notwendiger, aber nicht hinreichender Erfolg.
 
-**Starkfeld-Falsifizierbarkeit:** Die drei Starkfeldvorhersagen (z($r_{s}$) = 0,802, D($r_{s}$) = 0,555, Gravitationswellen-Echos) sind jeweils unabhängig testbar. Wenn eine dieser Vorhersagen widerlegt wird, muss SSZ modifiziert oder aufgegeben werden.
+**Starkfeld-Falsifizierbarkeit:** Die drei Starkfeldvorhersagen (z($r_{s}$) = 0,802, D($r_{s}$) = 0,555, Metrik-Perturbationen-Echos) sind jeweils unabhängig testbar. Wenn eine dieser Vorhersagen widerlegt wird, muss SSZ modifiziert oder aufgegeben werden.
 
 **Strukturelle Falsifizierbarkeit:** Die Parameterfreiheit von SSZ bedeutet, dass es keine Möglichkeit gibt, die Theorie durch Parameteranpassung zu retten. Wenn die Vorhersagen nicht stimmen, ist SSZ falsch — Punkt.
 
@@ -10552,7 +10649,7 @@ SSZ folgt den Prinzipien der Open Science:
 
 1. **Open Code:** Alle Berechnungen sind in oeffentlichen GitHub-Repositories verfuegbar (github.com/error-wtf). Jeder kann die Tests ausfuehren und die Ergebnisse reproduzieren.
 
-2. **Open Data:** Alle Beobachtungsdaten, die fuer die Validierung verwendet werden, stammen aus oeffentlichen Quellen (NASA, ESO, LIGO Open Science Center).
+2. **Open Data:** Alle Beobachtungsdaten, die fuer die Validierung verwendet werden, stammen aus oeffentlichen Quellen (NASA, ESO, observational campaigns Open Science Center).
 
 3. **Open Access:** Alle SSZ-Preprints sind frei verfuegbar.
 
@@ -10604,7 +10701,7 @@ Die Sensitivitaetsanalyse zeigt, dass die SSZ-Vorhersagen robust gegenueber Para
 
 Die SSZ-Validierung folgt den Open-Science-Prinzipien:
 
-1. **Open Data:** Alle verwendeten Beobachtungsdaten sind oeffentlich zugaenglich (NASA, ESO, LIGO Open Science Center).
+1. **Open Data:** Alle verwendeten Beobachtungsdaten sind oeffentlich zugaenglich (NASA, ESO, observational campaigns Open Science Center).
 2. **Open Source:** Alle SSZ-Codes sind unter der MIT-Lizenz veroeffentlicht.
 3. **Open Access:** Alle Publikationen werden auf arXiv veroeffentlicht.
 4. **Open Methodology:** Die Validierungsmethodik ist vollstaendig dokumentiert und reproduzierbar.
@@ -10703,8 +10800,6 @@ Dies ist das Regime, in dem SSZ und ART beginnen, voneinander abzuweichen.
 
 **EHT-Schattenbilder (M87*, Sgr A*):** SSZ sagt einen Schatten 1,3% kleiner als ART vorher. Aktuelle EHT-Präzision: ~10%. ngEHT (2027–2030) Ziel: < 1%.
 
-**LIGO/Virgo GW-Kataloge (GWTC-3) — VERWORFEN.** Die ursprüngliche SSZ-Vorhersage von Post-Merger-Echos wurde als Datenquelle verworfen. Die Echo-Suche in den LIGO/Virgo-Daten ist methodisch nicht ausreichend trennscharf, um SSZ-spezifische Signaturen von instrumentellem Rauschen und Modellierungsartefakten zu unterscheiden. Eine zukünftige Wiederaufnahme mit verbesserter Detektortechnologie (LIGO Voyager, Einstein Telescope) bleibt möglich, wird aber in dieser Arbeit nicht als aktive Validierungsquelle geführt.
-
 **G79.29+0.46 LBV-Nebel (Herschel, Spitzer, ALMA):** Molekulare Schalenstruktur im expandierenden Nebel. 6/6 SSZ-Vorhersagen bestätigt (Kapitel 24).
 
 Alle Datensätze sind öffentlich zugänglich. DOIs und Archiv-URLs sind in Anhang C aufgelistet.
@@ -10802,8 +10897,8 @@ Die SSZ-Validierung verwendet Daten von 13 astronomischen Objekten, die den gesa
 | 5 | PSR J0740+6620 | Pulsar | ~2,5 | NICER | Radius |
 | 6 | Sgr A* | SMBH | variabel | EHT, Keck | Schatten |
 | 7 | M87* | SMBH | variabel | EHT | Schatten |
-| 8 | GW150914 | BBH | ~1 | LIGO | Waveform |
-| 9 | GW170817 | BNS | ~2 | LIGO/Virgo | Tidal |
+| 8 | GW150914 | BBH | ~1 | observational campaigns | Waveform |
+| 9 | GW170817 | BNS | ~2 | observational | Tidal |
 | 10 | S2 Stern | Orbit | ~1000 | GRAVITY | Orbit |
 | 11 | Cassini | Sonde | variabel | DSN | Shapiro |
 | 12 | GPS | System | 1,4×10⁹ | USNO | Zeitdilatation |
@@ -10904,13 +10999,13 @@ Der Doppelpulsar PSR J0737-3039 ist das praeziseste Labor fuer Gravitationsphysi
 
 Alle fuenf Parameter stimmen mit der ART/SSZ-Vorhersage ueberein. Die SSZ-Vorhersage ist im Schwachfeld identisch mit der ART-Vorhersage, weil Xi ~ 10^{-6} fuer die Orbitalradien des Doppelpulsars.
 
-### Gravitationswellen-Detektion: GW170817
+### Metrik-Perturbationen-Detektion: GW170817
 
 Das Multi-Messenger-Ereignis GW170817 (Neutronenstern-Verschmelzung, detektiert am 17. August 2017) lieferte mehrere Tests der Gravitationsphysik:
 
-**Geschwindigkeit der Gravitationswellen:** |$v_{GW}$ - c|/c < 6 x 10^{-16} (aus der Zeitdifferenz zwischen GW- und Gamma-Signal). SSZ erfuellt diese Schranke.
+**Geschwindigkeit der Metrik-Perturbationen:** |$v_{GW}$ - c|/c < 6 x 10^{-16} (aus der Zeitdifferenz zwischen GW- und Gamma-Signal). SSZ erfuellt diese Schranke.
 
-**Gravitationswellenform:** Die beobachtete Wellenform stimmt mit der ART-Vorhersage fuer eine Neutronenstern-Verschmelzung ueberein. Die SSZ-Korrektur zur Wellenform ist von der Ordnung Xi ~ 0,01 und liegt unterhalb der aktuellen Detektionsschwelle.
+**Metrik-Perturbationenform:** Die beobachtete Wellenform stimmt mit der ART-Vorhersage fuer eine Neutronenstern-Verschmelzung ueberein. Die SSZ-Korrektur zur Wellenform ist von der Ordnung Xi ~ 0,01 und liegt unterhalb der aktuellen Detektionsschwelle.
 
 **Gezeitendeformierbarkeit:** Die gemessene Gezeitendeformierbarkeit $\Lambda_{\text{tilde}}$ = 300^{+420}_{-230} ist konsistent mit Neutronenstern-Zustandsgleichungen und mit der SSZ-Vorhersage.
 
@@ -10934,7 +11029,7 @@ Neutronensterne sind die kompaktesten beobachtbaren Objekte (abgesehen von Schwa
 
 **Thermonukleare Bursts:** Typ-I-Roentgenbursts auf Neutronenstern-Oberflaechen zeigen Absorptionslinien (z.B. Fe XXV bei 6,7 keV, Fe XXVI bei 6,97 keV), die durch die gravitative Rotverschiebung verschoben sind. Die gemessene Rotverschiebung z = 0,35 fuer den Burst-Quellenstern EXO 0748-676 ist konsistent mit der SSZ-Vorhersage z = Xi = $r_{s}$/(2R) fuer einen Neutronenstern mit M = 1,4 $M_{Sonne}$ und R = 10 km.
 
-**Gravitationswellen von Neutronenstern-Verschmelzungen:** LIGO/Virgo hat bisher zwei Neutronenstern-Verschmelzungen detektiert (GW170817 und GW190425). Die Gezeitendeformierbarkeit $\Lambda_{\text{tilde}}$, die aus der Gravitationswellenform extrahiert wird, ist konsistent mit der SSZ-Vorhersage. Zukuenftige Detektionen (erwartet ~10-100 pro Jahr mit LIGO O5) werden die Statistik dramatisch verbessern.
+**Metrik-Perturbationen von Neutronenstern-Verschmelzungen:** observational hat bisher zwei Neutronenstern-Verschmelzungen detektiert (GW170817 und GW190425). Die Gezeitendeformierbarkeit $\Lambda_{\text{tilde}}$, die aus der Metrik-Perturbationenform extrahiert wird, ist konsistent mit der SSZ-Vorhersage. Zukuenftige Detektionen (erwartet ~10-100 pro Jahr mit observational campaigns O5) werden die Statistik dramatisch verbessern.
 
 ### Das GRAVITY-Instrument am VLT
 
@@ -10952,7 +11047,7 @@ Die wichtigsten GRAVITY-Ergebnisse fuer SSZ:
 
 Die naechsten 10 Jahre werden eine Fuelle neuer Datensaetze liefern:
 
-**LIGO O5 (ab 2027):** ~1000 Gravitationswellen-Detektionen pro Jahr, darunter ~50 Neutronenstern-Verschmelzungen mit messbarer Gezeitendeformierbarkeit.
+**observational campaigns O5 (ab 2027):** ~1000 Metrik-Perturbationen-Detektionen pro Jahr, darunter ~50 Neutronenstern-Verschmelzungen mit messbarer Gezeitendeformierbarkeit.
 
 **Vera Rubin Observatory (ab 2025):** Durchmusterung des gesamten suedlichen Himmels alle 3 Naechte. Wird ~10^7 transiente Quellen pro Nacht detektieren, darunter Gravitationslinsen-Ereignisse und Supernovae nahe kompakten Objekten.
 
@@ -10982,12 +11077,12 @@ LLR ist einer der laengsten laufenden Praezisionstests der Gravitation (seit 196
 Binaere Pulsare sind die praezisesten Gravitationslabore im Universum. Der Doppelpulsar PSR J0737-3039 liefert fuenf unabhaengige post-Keplersche Parameter:
 
 1. **Periastron-Praezession:** $\omega_{\text{dot}}$ = 16,90 Grad/Jahr (SSZ/ART: 16,90)
-2. **Gravitationswellen-Daempfung:** $P_{dot}$ = -1,25 x 10^{-12} (SSZ/ART: -1,25 x 10^{-12})
+2. **Metrik-Perturbationen-Daempfung:** $P_{dot}$ = -1,25 x 10^{-12} (SSZ/ART: -1,25 x 10^{-12})
 3. **Shapiro-Delay (Amplitude):** r = 6,2 us (SSZ/ART: 6,2 us)
 4. **Shapiro-Delay (Form):** s = 0,9997 (SSZ/ART: 0,9997)
 5. **Zeitdilatation:** gamma = 0,384 ms (SSZ/ART: 0,384 ms)
 
-Alle fuenf Parameter stimmen mit der SSZ/ART-Vorhersage ueberein. Die Praezision betraegt ~0,05% fuer die Gravitationswellen-Daempfung -- der praeziseste Test der Gravitationswellenemission.
+Alle fuenf Parameter stimmen mit der SSZ/ART-Vorhersage ueberein. Die Praezision betraegt ~0,05% fuer die Metrik-Perturbationen-Daempfung -- der praeziseste Test der Metrik-Perturbationenemission.
 
 ### Zusammenfassung: Beobachtungsdaten und Instrumente
 
@@ -10996,7 +11091,7 @@ Dieses Kapitel hat die wichtigsten Beobachtungsdaten und Instrumente fuer die SS
 1. **GRAVITY:** S2-Orbit bestaetigt SSZ/ART auf ~0,1%. GRAVITY+ wird S-Sterne bei r ~ 100 $r_{s}$ beobachten.
 2. **LLR:** Aequivalenzprinzip auf 10^{-13}, G-Variation auf 10^{-13}/Jahr, PPN beta auf 10^{-5}.
 3. **Binaere Pulsare:** Fuenf post-Keplersche Parameter bestaetigen SSZ/ART auf ~0,05%.
-4. **LIGO O4/O5:** ~100-1000 GW-Detektionen/Jahr, Gezeitendeformierbarkeit, QNM-Spektroskopie.
+4. **observational campaigns O4/O5:** ~100-1000 GW-Detektionen/Jahr, Gezeitendeformierbarkeit, QNM-Spektroskopie.
 5. **Vera Rubin:** ~10^7 transiente Quellen/Nacht, Mikrolensing-Statistik.
 6. **JWST:** Infrarot-Spektroskopie von Akkretionsscheiben.
 
@@ -11004,13 +11099,32 @@ Die naechsten 10 Jahre werden eine Fuelle neuer Daten liefern, die SSZ entweder 
 
 ### Ausblick: Zukuenftige Beobachtungskampagnen
 
-Die naechsten 10 Jahre werden eine Fuelle neuer Daten liefern: LIGO O5 (~2027) mit ~1000 GW-Detektionen pro Jahr, ngEHT (~2028) mit sub-Prozent-Schattenradius-Messungen, SKA (~2028) mit Pulsaren nahe Sgr A*, LISA (~2037) mit EMRIs und supermassiven Binaries, und das Einstein-Teleskop (~2035) mit QNM-Spektroskopie. Jede dieser Beobachtungen hat das Potenzial, SSZ zu bestaetigen oder zu widerlegen. Die Zukunft der Gravitationsphysik war nie spannender.
+Die naechsten 10 Jahre werden eine Fuelle neuer Daten liefern: observational campaigns O5 (~2027) mit ~1000 GW-Detektionen pro Jahr, ngEHT (~2028) mit sub-Prozent-Schattenradius-Messungen, SKA (~2028) mit Pulsaren nahe Sgr A*, LISA (~2037) mit EMRIs und supermassiven Binaries, und das Einstein-Teleskop (~2035) mit QNM-Spektroskopie. Jede dieser Beobachtungen hat das Potenzial, SSZ zu bestaetigen oder zu widerlegen. Die Zukunft der Gravitationsphysik war nie spannender.
 
 
 \newpage
 
 # Repository-übergreifende Testergebnisse und Konsistenz
 
+
+![Abb](figures/ch28_validation/eso_breakthrough_results.png)
+
+![Abb](figures/ch28_validation/key_winrate_vs_radius.png)
+
+![Abb](figures/ch28_validation/key_stratified_performance.png)
+
+
+![Abb](figures/ch28_validation/eso_data_quality_impact.png)
+
+![Abb](figures/ch28_validation/eso_phi_geometry_impact.png)
+
+![Abb](figures/ch28_validation/eso_vs_mixed_regimes.png)
+
+![Abb](figures/ch28_validation/key_performance_heatmap.png)
+
+![Abb](figures/ch28_validation/key_phi_geometry_impact.png)
+
+![Abb](figures/ch28_validation/key_stratification_robustness.png)
 
 ---
 
@@ -11217,7 +11331,7 @@ Die SSZ-Validierung kann mit den Validierungsstandards anderer physikalischer Th
 
 **Kosmologie — Das ΛCDM-Modell:** Das Lambda-CDM-Modell wird durch CMB (Planck), BAO (BOSS/DESI) und Typ-Ia-Supernovae (Pantheon+) validiert. Der Schlüsselunterschied zu SSZ: ΛCDM hat 6 freie Parameter, die an Daten angepasst werden, während SSZ null hat. Dies bedeutet, dass die SSZ-Validierung strukturell einfacher ist (keine Parameterschätzung, keine Entartungsanalyse), aber auch rigider (eine einzelne diskrepante Beobachtung falsifiziert die Theorie ohne Möglichkeit der Parameteranpassung).
 
-**Numerische Relativität:** ART-Starkfeldvorhersagen (Gravitationswellenformen aus Binärverschmelzungen) werden durch Vergleich unabhängiger numerischer Relativitätscodes validiert: Einstein Toolkit, SpEC, BAM, SACRA. Code-übergreifende Übereinstimmung besser als 1% für den Wellenform-Überlapp ist erforderlich. Die SSZ-Repository-übergreifende Übereinstimmung bei 10⁻¹⁵ übertrifft diesen Standard um viele Größenordnungen, obwohl die SSZ-Berechnungen analytisch einfacher sind.
+**Numerische Relativität:** ART-Starkfeldvorhersagen (Metrik-Perturbationenformen aus Binärverschmelzungen) werden durch Vergleich unabhängiger numerischer Relativitätscodes validiert: Einstein Toolkit, SpEC, BAM, SACRA. Code-übergreifende Übereinstimmung besser als 1% für den Wellenform-Überlapp ist erforderlich. Die SSZ-Repository-übergreifende Übereinstimmung bei 10⁻¹⁵ übertrifft diesen Standard um viele Größenordnungen, obwohl die SSZ-Berechnungen analytisch einfacher sind.
 
 ### Reproduzierbarkeitsprotokoll
 
@@ -11468,7 +11582,7 @@ Die offenen Probleme von SSZ lassen sich in drei Kategorien einteilen:
 
 **Kategorie A — Theoretische Lücken:** Fehlende Erweiterungen des Rahmenwerks. Dazu gehören: Rotation (Kerr-Analog), Kosmologie (Robertson-Walker-Analog), Quantisierung. Diese Lücken beeinträchtigen nicht die Schwachfeldvorhersagen, begrenzen aber die Anwendbarkeit im Starkfeld.
 
-**Kategorie B — Experimentelle Unsicherheiten:** Vorhersagen, die mit existierenden Daten nicht getestet werden können. Dazu gehören: z($r_{s}$) = 0,802, D($r_{s}$) = 0,555, Gravitationswellen-Echos. Diese erfordern nächste Generation Instrumente.
+**Kategorie B — Experimentelle Unsicherheiten:** Vorhersagen, die mit existierenden Daten nicht getestet werden können. Dazu gehören: z($r_{s}$) = 0,802, D($r_{s}$) = 0,555, Metrik-Perturbationen-Echos. Diese erfordern nächste Generation Instrumente.
 
 **Kategorie C — Konzeptionelle Fragen:** Fundamentale Fragen zur Interpretation. Dazu gehören: Was ist die physikalische Natur der Segmente? Gibt es eine Verbindung zur Quantengravitation? Ist die Zwei-Regime-Struktur fundamental oder emergent?
 
@@ -11654,7 +11768,7 @@ Die offenen Probleme lassen sich nach Dringlichkeit priorisieren:
 SSZ macht mehrere falsifizierbare Vorhersagen:
 
 1. **z($r_{s}$) = 0,802:** Wenn ein Photon mit z > 1 von der Oberfläche eines kompakten Objekts detektiert wird, ist SSZ widerlegt.
-2. **D($r_{s}$) = 0,555:** Wenn Gravitationswellen-Daten D($r_{s}$) = 0 erfordern (konsistent mit einem Ereignishorizont), ist SSZ widerlegt.
+2. **D($r_{s}$) = 0,555:** Wenn Metrik-Perturbationen-Daten D($r_{s}$) = 0 erfordern (konsistent mit einem Ereignishorizont), ist SSZ widerlegt.
 3. **Keine Ringdown-Modifikation:** Wenn die Quasinormal-Moden von Schwarzen Löchern exakt mit der Kerr-Metrik übereinstimmen (ohne SSZ-Korrekturen), schwächt dies SSZ.
 
 Jede dieser Vorhersagen ist mit existierender oder geplanter Technologie testbar.
@@ -11686,7 +11800,7 @@ Diese Fragen sind offen und erfordern wesentliche theoretische Arbeit.
 Die offenen Probleme in SSZ koennen nach Dringlichkeit und Machbarkeit priorisiert werden:
 
 **Prioritaet 1 (kurzfristig, 1-3 Jahre):**
-- Kerr-Analog: Erweiterung der SSZ-Metrik auf rotierende kompakte Objekte. Ansaetze: perturbative Erweiterung (Newman-Janis), numerische Loesung, slow-rotation-Approximation. Erforderlich fuer den Vergleich mit EHT-Daten und LIGO-Wellenformen.
+- Kerr-Analog: Erweiterung der SSZ-Metrik auf rotierende kompakte Objekte. Ansaetze: perturbative Erweiterung (Newman-Janis), numerische Loesung, slow-rotation-Approximation. Erforderlich fuer den Vergleich mit EHT-Daten und observational campaigns-Wellenformen.
 - Neutronenstern-Zustandsgleichung: Integration der SSZ-Metrik mit realistischen Zustandsgleichungen fuer dichte Materie. Erforderlich fuer den Vergleich mit NICER-Messungen von Neutronenstern-Radien und -Massen.
 
 **Prioritaet 2 (mittelfristig, 3-7 Jahre):**
@@ -11745,7 +11859,7 @@ Die numerische Loesung der SSZ-Feldgleichungen fuer dynamische Raumzeiten (z.B. 
 
 **Zeitintegration:** Die Zeitintegration der SSZ-Gleichungen erfordert adaptive Schrittweiten, weil die Segmentdichte Xi sich nahe der natuerlichen Grenze schnell aendert. Standard-Methoden (Runge-Kutta 4. Ordnung) sind ausreichend, aber die Schrittweite muss in der Naehe von r = $r_{s}$ um den Faktor ~$D_{min}$ = 0,555 reduziert werden.
 
-**Gravitationswellen-Extraktion:** Die Extraktion von Gravitationswellen aus der numerischen Loesung erfolgt durch Berechnung des Newman-Penrose-Skalars Psi_4 auf einer Extraktionsflaeche weit vom Quellgebiet. In SSZ ist Psi_4 durch die SSZ-Metrik modifiziert, was eine Anpassung der Standard-Extraktionsroutinen erfordert.
+**Metrik-Perturbationen-Extraktion:** Die Extraktion von Metrik-Perturbationen aus der numerischen Loesung erfolgt durch Berechnung des Newman-Penrose-Skalars Psi_4 auf einer Extraktionsflaeche weit vom Quellgebiet. In SSZ ist Psi_4 durch die SSZ-Metrik modifiziert, was eine Anpassung der Standard-Extraktionsroutinen erfordert.
 
 ### N-Koerper-Simulationen mit SSZ-Korrekturen
 
@@ -11826,6 +11940,8 @@ Die numerischen Simulationen in SSZ erfordern sorgfaeltige Konvergenzanalysen:
 # Falsifizierbare Vorhersagen und Beobachtungstests
 
 
+![Abb](figures/ch30_predictions/fig_30_01_prediction_timeline.png)
+
 ---
 
 Warum ist dies notwendig? Dieses abschließende Kapitel fasst alle SSZ-Vorhersagen zusammen und bewertet den aktuellen Status der experimentellen Bestätigung. Es bietet eine Gesamtbewertung des Rahmenwerks und einen Ausblick auf zukünftige Tests.
@@ -11888,11 +12004,7 @@ $$\theta_{\text{SSZ}} \approx 0,987 \times \theta_{\text{ART}}$$
 
 Aktuelle EHT-Präzision: ~10% (unzureichend). Das ngEHT (2027–2030) zielt auf < 1% Präzision ab.
 
-### ~~Vorhersage 3: Gravitationswellen-Ringdown-Echos~~ — VERWORFEN
-
-Die ursprüngliche SSZ-Vorhersage von Post-Merger-Echos aus der natürlichen Grenze bei D($r_{s}$) = 0,555 wurde verworfen. Die Echo-Suche in LIGO/Virgo-Daten ist methodisch nicht ausreichend trennscharf, um SSZ-spezifische Signaturen von instrumentellem Rauschen und Modellierungsartefakten zu unterscheiden. Eine zukünftige Wiederaufnahme mit Next-Generation-Detektoren (Einstein Telescope, Cosmic Explorer) bleibt offen, wird aber in dieser Arbeit nicht als aktive Vorhersage geführt.
-
-### Vorhersage 4: Pulsar-Timing-Korrektur (+30%)
+### Vorhersage 3: Pulsar-Timing-Korrektur (+30%)
 
 SSZ modifiziert den gravitativen Zeitverzögerungsbeitrag zu Pulsar-Timing-Modellen:
 
@@ -11900,7 +12012,7 @@ $$\dot{P}_{\text{SSZ}} \approx 1,30 \times \dot{P}_{\text{ART}}$$
 
 NANOGravs 15-Jahres-Datensatz und sein Nachfolger (das International Pulsar Timing Array) sind empfindlich für dieses Korrekturniveau.
 
-### Vorhersage 5: G79-Molekularzonen (6/6 Bestätigt)
+### Vorhersage 4: G79-Molekularzonen (6/6 Bestätigt)
 
 Die einzige bereits getestete Vorhersage: 6 unabhängige Vorhersagen für den LBV-Nebel G79.29+0.46, alle bestätigt mit null freien Parametern (Kapitel 24).
 
@@ -11910,9 +12022,8 @@ Die einzige bereits getestete Vorhersage: 6 unabhängige Vorhersagen für den LB
 |---|-----------|-----|-----|---|-----------|----------|
 | 1 | NS-Oberfläche z | +13% | Standard | +13% | NICER | 2025–2027 |
 | 2 | SL-Schatten θ | −1,3% | Standard | −1,3% | ngEHT | 2027–2030 |
-| ~~3~~ | ~~GW-Echo~~ | ~~vorhanden~~ | ~~abwesend~~ | ~~verworfen~~ | ~~LIGO~~ | ~~verworfen~~ |
-| 4 | Pulsar Ṗ | +30% | Standard | +30% | NANOGrav | laufend |
-| 5 | G79-Zonen | 6/6 Y | N/A | — | Archiv | erledigt |
+| 3 | Pulsar Ṗ | +30% | Standard | +30% | NANOGrav | laufend |
+| 4 | G79-Zonen | 6/6 Y | N/A | — | Archiv | erledigt |
 
 ## 30.2 Vorzeichenvorhersagen
 
@@ -11934,8 +12045,6 @@ Die Vorhersagen sind innerhalb des nächsten Jahrzehnts testbar:
 
 **2025–2028: NANOGrav / IPTA.** Pulsar-Timing-Residuen empfindlich für die +30%-SSZ-Korrektur.
 
-**~~2025–2030: LIGO O4/O5~~ — VERWORFEN.** Die GW-Echo-Suche wurde als aktiver Testkanal verworfen (siehe Abschnitt 30.1).
-
 **2027–2030: ngEHT.** Next-Generation Event Horizon Telescope. Ziel: < 1% Präzision auf Schattendurchmesser.
 
 **Laufend: ALMA/VLT/JWST.** Molekularzonen-Kartierung in LBV-Nebeln (G79-Follow-up und neue Ziele).
@@ -11948,7 +12057,7 @@ SSZ ist falsifiziert, wenn eines der Folgenden beobachtet wird:
 
 **2.** SL-Schattendurchmesser stimmt exakt mit ART überein (kein −1,3%-Defizit) bei < 0,5% Präzision.
 
-**3.** Eine echte Singularitätssignatur wird beobachtet — unendliche Krümmung aus Gravitationswellen abgeleitet.
+**3.** Eine echte Singularitätssignatur wird beobachtet — unendliche Krümmung aus Metrik-Perturbationen abgeleitet.
 
 **4.** D($r_{s}$) wird als exakt 0 gemessen — vollständiger Zeitstillstand am Horizont, durch mehrere unabhängige Methoden bestätigt.
 
@@ -11972,8 +12081,7 @@ Die SSZ-Autoren verpflichten sich im Voraus, Ergebnis (1) zu akzeptieren, wenn e
 |---|---------|--------|
 | 1 | z_SSZ $\approx$ 1,13 × z_ART | NS-Rotverschiebungsvorhersage |
 | 2 | θ_SSZ $\approx$ 0,987 × θ_ART | SL-Schattenvorhersage |
-| ~~3~~ | ~~Δt_Echo — verworfen~~ | ~~GW-Echo — verworfen~~ |
-| 4 | Ṗ_SSZ $\approx$ 1,30 × Ṗ_ART | Pulsar-Timing |
+| 3 | Ṗ_SSZ $\approx$ 1,30 × Ṗ_ART | Pulsar-Timing |
 
 ---
 
@@ -12004,11 +12112,11 @@ Jede dieser Vorhersagen ist parameterfrei (abgeleitet aus φ, π, N_0 und der Ob
 
 ### Multi-Messenger-Beobachtungen als ultimativer Test
 
-Die mächtigsten Tests von SSZ werden aus Multi-Messenger-Beobachtungen kommen — gleichzeitige Detektion von elektromagnetischer Strahlung, Gravitationswellen und (potenziell) Neutrinos vom selben astrophysikalischen Ereignis.
+Die mächtigsten Tests von SSZ werden aus Multi-Messenger-Beobachtungen kommen — gleichzeitige Detektion von elektromagnetischer Strahlung, Metrik-Perturbationen und (potenziell) Neutrinos vom selben astrophysikalischen Ereignis.
 
-Das Prototyp-Multi-Messenger-Ereignis ist die Binärneutronenstern-Verschmelzung GW170817, detektiert in Gravitationswellen (LIGO/Virgo), Gammastrahlen (Fermi, INTEGRAL), optisch/infrarot (Dutzende bodengestützte Teleskope) und Radio (VLA). Dieses Ereignis lieferte die Einschränkung, dass Gravitationswellen und elektromagnetische Wellen mit derselben Geschwindigkeit reisen (auf 10⁻¹⁵), was SSZ automatisch erfüllt.
+Das Prototyp-Multi-Messenger-Ereignis ist die Binärneutronenstern-Verschmelzung GW170817, detektiert in Metrik-Perturbationen (observational), Gammastrahlen (Fermi, INTEGRAL), optisch/infrarot (Dutzende bodengestützte Teleskope) und Radio (VLA). Dieses Ereignis lieferte die Einschränkung, dass Metrik-Perturbationen und elektromagnetische Wellen mit derselben Geschwindigkeit reisen (auf 10⁻¹⁵), was SSZ automatisch erfüllt.
 
-Zukünftige Multi-Messenger-Ereignisse könnten viel stärkere SSZ-Tests liefern. Eine Neutronenstern-Schwarzes-Loch-Verschmelzung, detektiert in Gravitationswellen und elektromagnetischer Strahlung, würde liefern: (1) Masse und Spin des Schwarzen Lochs (aus dem GW-Inspiral), (2) Gezeitendeformierbarkeit des Neutronensterns (aus dem späten Inspiral), (3) elektromagnetisches Spektrum der Kilonova (aus dem optischen/infraroten Nachglühen), und (4) Jet-Eigenschaften (aus dem Radio- und Röntgen-Nachglühen). Jede dieser Observablen hat eine spezifische SSZ-Vorhersage, die sich von der ART-Vorhersage unterscheidet.
+Zukünftige Multi-Messenger-Ereignisse könnten viel stärkere SSZ-Tests liefern. Eine Neutronenstern-Schwarzes-Loch-Verschmelzung, detektiert in Metrik-Perturbationen und elektromagnetischer Strahlung, würde liefern: (1) Masse und Spin des Schwarzen Lochs (aus dem GW-Inspiral), (2) Gezeitendeformierbarkeit des Neutronensterns (aus dem späten Inspiral), (3) elektromagnetisches Spektrum der Kilonova (aus dem optischen/infraroten Nachglühen), und (4) Jet-Eigenschaften (aus dem Radio- und Röntgen-Nachglühen). Jede dieser Observablen hat eine spezifische SSZ-Vorhersage, die sich von der ART-Vorhersage unterscheidet.
 
 Die erwartete Rate solcher Ereignisse beträgt ~1–10 pro Jahr mit dem aktuellen Detektornetzwerk, steigend auf 10–100 pro Jahr mit Detektoren der dritten Generation. Über ein Jahrzehnt Beobachtung werden die akkumulierten Multi-Messenger-Ereignisse einen umfassenden Test des SSZ-Rahmenwerks über mehrere Beobachtungskanäle und Gravitationsfeldstärken liefern.
 
@@ -12028,7 +12136,7 @@ Die erwartete Rate solcher Ereignisse beträgt ~1–10 pro Jahr mit dem aktuelle
 - Keine Quantisierung
 - Starkfeldvorhersagen noch nicht experimentell bestätigt
 
-**Fazit:** SSZ ist ein konsistentes, falsifizierbares Rahmenwerk, das alle existierenden Beobachtungen reproduziert und spezifische Vorhersagen für das Starkfeldregime macht. Die entscheidenden Tests werden in den nächsten 5–10 Jahren durch NICER, STROBE-X, eXTP, Athena und nächste Generation Gravitationswellendetektoren (Einstein-Teleskop, LISA) möglich sein.
+**Fazit:** SSZ ist ein konsistentes, falsifizierbares Rahmenwerk, das alle existierenden Beobachtungen reproduziert und spezifische Vorhersagen für das Starkfeldregime macht. Die entscheidenden Tests werden in den nächsten 5–10 Jahren durch NICER, STROBE-X, eXTP, Athena und nächste Generation Metrik-Perturbationendetektoren (Einstein-Teleskop, LISA) möglich sein.
 
 ### Einladung an die Gemeinschaft
 
@@ -12096,7 +12204,7 @@ Die zentralen Ergebnisse:
 
 ### Detaillierte Vorhersagen fuer naechste-Generation-Observatorien
 
-**Einstein-Teleskop (ET):** Ein unterirdischer Gravitationswellendetektor der dritten Generation, geplant fuer die 2030er Jahre. ET wird die Empfindlichkeit von LIGO um Faktor 10 verbessern. Fuer SSZ relevant: ET kann Gravitationswellen-Echos mit Amplitude > 1% des Merger-Signals detektieren. Die SSZ-Vorhersage fuer die Echo-Amplitude: $A_{echo}$/A_merger ~ D^2($r_{s}$) ~ 0.31 (31%).
+**Einstein-Teleskop (ET):** Ein unterirdischer Metrik-Perturbationendetektor der dritten Generation, geplant fuer die 2030er Jahre. ET wird die Empfindlichkeit von observational campaigns um Faktor 10 verbessern. Fuer SSZ relevant: ET kann Metrik-Perturbationen-Echos mit Amplitude > 1% des Merger-Signals detektieren. Die SSZ-Vorhersage fuer die Echo-Amplitude: $A_{echo}$/A_merger ~ D^2($r_{s}$) ~ 0.31 (31%).
 
 **LISA (Laser Interferometer Space Antenna):** Ein weltraumgestuetzter GW-Detektor, geplant fuer 2037. LISA detektiert niederfrequente GW von supermassiven Schwarzen Loechern. LISA wird EMRIs beobachten und kann D($r_{s}$) auf ~1% bestimmen.
 
@@ -12126,7 +12234,7 @@ Die SSZ-Vorhersagen koennen nach dem Zeitrahmen ihrer Testbarkeit geordnet werde
 **Kurzfristig testbar (2025-2030):**
 - ngEHT Sgr A* Schatten: 0,987 x $\theta_{\text{GR}}$ (erwartet ~2028)
 - NICER Neutronenstern-Radien: $R_{SSZ}$ vs. $R_{GR}$ (laufend)
-- Gravitationswellen-Echos in LIGO O5 (erwartet ~2027)
+- Metrik-Perturbationen-Echos in observational campaigns O5 (erwartet ~2027)
 
 **Mittelfristig testbar (2030-2040):**
 - LISA EMRI-Wellenformen: $\Delta_{\phi}$ ~ 0,5 rad (erwartet ~2035)
@@ -12148,7 +12256,7 @@ SSZ ist ein offenes Rahmenwerk. Alle Vorhersagen, alle Ableitungen und alle Vali
 
 **Falsifikation:** Die expliziten Falsifikationskriterien (Kapitel 29) laden die Gemeinschaft ein, SSZ zu widerlegen. Eine erfolgreiche Widerlegung waere ein ebenso wichtiges Ergebnis wie eine Bestaetigung.
 
-**Zusammenarbeit:** Die Autoren laden Forscher ein, die SSZ-Vorhersagen mit unabhaengigen Daten und Methoden zu testen. Insbesondere werden Beitraege in den folgenden Bereichen begruesst: numerische Relativitaet (Kerr-Analog), Neutronenstern-Physik (Zustandsgleichung), Gravitationswellen-Datenanalyse (Echos, Love Numbers), und Roentgenspektroskopie (Neutronenstern-Rotverschiebung).
+**Zusammenarbeit:** Die Autoren laden Forscher ein, die SSZ-Vorhersagen mit unabhaengigen Daten und Methoden zu testen. Insbesondere werden Beitraege in den folgenden Bereichen begruesst: numerische Relativitaet (Kerr-Analog), Neutronenstern-Physik (Zustandsgleichung), Metrik-Perturbationen-Datenanalyse (Echos, Love Numbers), und Roentgenspektroskopie (Neutronenstern-Rotverschiebung).
 
 Die Wissenschaft lebt vom kritischen Dialog. SSZ stellt sich diesem Dialog, indem es spezifische, parameterfreie, falsifizierbare Vorhersagen macht und alle Werkzeuge zu ihrer Ueberpruefung oeffentlich bereitstellt.
 
@@ -12158,7 +12266,7 @@ Fuer Beobachter, die SSZ-Vorhersagen testen moechten, bietet der folgende Entsch
 
 **Schritt 1: Welches Instrument?**
 - Roentgenteleskop (NICER, IXPE, Athena) -> Neutronenstern-Rotverschiebung, QPOs, Polarisation
-- Gravitationswellendetektor (LIGO, LISA, ET) -> Love Numbers, QNMs, Echos, EMRI-Wellenformen
+- Metrik-Perturbationendetektor (observational campaigns, LISA, ET) -> Love Numbers, QNMs, Echos, EMRI-Wellenformen
 - Radioteleskop (SKA, ALMA) -> Pulsar-Timing, Molekularzonen, Maser
 - Optisches/IR-Teleskop (VLT/GRAVITY, ELT) -> S-Sterne nahe Sgr A*, Schatten
 
@@ -12194,24 +12302,24 @@ Die Validierung von SSZ folgt einem klaren Zeitplan, der durch die Verfuegbarkei
 
 **2024-2026 (laufend):**
 - NICER: Verbesserte Masse-Radius-Messungen von Neutronensternen
-- LIGO O4: ~100 Gravitationswellen-Detektionen, verbesserte Gezeitendeformierbarkeit
+- observational campaigns O4: ~100 Metrik-Perturbationen-Detektionen, verbesserte Gezeitendeformierbarkeit
 - IXPE: Roentgenpolarimetrie von Akkretionsscheiben
 - GRAVITY+: Verbesserte Astrometrie der S-Sterne nahe Sgr A*
 
 **2027-2030:**
 - ngEHT: Schattenradius von Sgr A* und M87* mit ~1% Praezision
-- LIGO A+: Empfindlichkeit verdoppelt, ~500 Detektionen/Jahr
+- observational campaigns A+: Empfindlichkeit verdoppelt, ~500 Detektionen/Jahr
 - Athena (ESA): Roentgenspektroskopie mit 2,5 eV Aufloesung
 - SKA Phase 1: Pulsar-Suche nahe Sgr A*
 
 **2030-2035:**
-- LISA (ESA): Gravitationswellen im mHz-Bereich, EMRIs
+- LISA (ESA): Metrik-Perturbationen im mHz-Bereich, EMRIs
 - Einstein-Teleskop: 3. Generation GW-Detektor, QNM-Spektroskopie
 - Cosmic Explorer: 40 km Arme, Praezisions-GW-Astronomie
 - ELT: 39 m Spiegel, direkte Bildgebung naher Exoplaneten
 
 **2035+:**
-- DECIGO/BBO: Gravitationswellen im dHz-Bereich
+- DECIGO/BBO: Metrik-Perturbationen im dHz-Bereich
 - Weltraum-Atomuhren: Praezisionstests im Sonnensystem
 - Quantengravitations-Experimente: Tabletop-Tests der Planck-Skala
 
@@ -12235,7 +12343,7 @@ Jedes dieser Kriterien ist quantitativ, spezifisch und mit zukuenftigen Instrume
 Dieses Buch ist eine Einladung zur kritischen Ueberpruefung und unabhaengigen Validierung von SSZ. Die Autoren stellen alle Daten, Codes und Analysemethoden oeffentlich zur Verfuegung:
 
 - **GitHub-Repositories:** Alle SSZ-Codes sind unter der MIT-Lizenz veroeffentlicht.
-- **Daten:** Alle verwendeten Beobachtungsdaten sind oeffentlich zugaenglich (NASA, ESO, LIGO).
+- **Daten:** Alle verwendeten Beobachtungsdaten sind oeffentlich zugaenglich (NASA, ESO, observational campaigns).
 - **Reproduzierbarkeit:** Jeder Test kann mit den bereitgestellten Skripten reproduziert werden.
 - **Kontakt:** Fehlermeldungen und Verbesserungsvorschlaege sind willkommen via GitHub Issues.
 
@@ -12255,11 +12363,11 @@ SSZ ist nicht die einzige Alternative zur ART. Andere modifizierte Gravitationst
 
 **f(R)-Gravitation:** Ersetzt den Ricci-Skalar R in der Einstein-Hilbert-Wirkung durch eine allgemeine Funktion f(R). Vorhersagen: modifizierte Friedmann-Gleichungen, Chamaeleon-Mechanismus. SSZ-Unterschied: SSZ modifiziert nicht die Wirkung, sondern die Metrik direkt.
 
-**Brans-Dicke-Theorie:** Fuehrt ein skalares Feld phi ein, das die Gravitationskonstante G ersetzt. Vorhersagen: zeitlich variable G, zusaetzliche Gravitationswellen-Polarisationen. SSZ-Unterschied: SSZ hat kein zusaetzliches skalares Feld; G ist konstant.
+**Brans-Dicke-Theorie:** Fuehrt ein skalares Feld phi ein, das die Gravitationskonstante G ersetzt. Vorhersagen: zeitlich variable G, zusaetzliche Metrik-Perturbationen-Polarisationen. SSZ-Unterschied: SSZ hat kein zusaetzliches skalares Feld; G ist konstant.
 
 **MOND (Modified Newtonian Dynamics):** Modifiziert die Newtonsche Dynamik bei kleinen Beschleunigungen (a < a_0 ~ 10^{-10} m/s^2). Vorhersagen: flache Rotationskurven ohne Dunkle Materie. SSZ-Unterschied: SSZ modifiziert die Gravitation nur im Starkfeld (r ~ $r_{s}$), nicht bei kleinen Beschleunigungen.
 
-**Massive Gravitation:** Gibt dem Graviton eine Masse $m_{g}$ > 0. Vorhersagen: modifizierte Gravitationswellen-Dispersion, Yukawa-Potential. SSZ-Unterschied: SSZ hat masselose Gravitonen ($m_{g}$ = 0).
+**Massive Gravitation:** Gibt dem Graviton eine Masse $m_{g}$ > 0. Vorhersagen: modifizierte Metrik-Perturbationen-Dispersion, Yukawa-Potential. SSZ-Unterschied: SSZ hat masselose Gravitonen ($m_{g}$ = 0).
 
 SSZ unterscheidet sich von allen diesen Theorien durch ihre Parameterarmut (nur phi und N0), ihre spezifischen Starkfeld-Vorhersagen und ihre vollstaendige Schwachfeld-Uebereinstimmung mit der ART.
 
@@ -12320,7 +12428,7 @@ Im Starkfeld (r/r_s < 10) weicht SSZ von der ART mit spezifischen, quantitativen
 
 - **Superradiante Stabilität** — der $G_{SSZ}$-Regulator unterdrückt superradiante Wachstumsraten.
 
-- **Gravitationswellen-Echos** — die natürliche Grenze bei D = 0,555 reflektiert Gravitationswellen teilweise.
+- **Metrik-Perturbationen-Echos** — die natürliche Grenze bei D = 0,555 reflektiert Metrik-Perturbationen teilweise.
 
 ### Astrophysikalische Validierung
 
@@ -12362,11 +12470,11 @@ SSZ ist innerhalb des nächsten Jahrzehnts falsifizierbar:
 
 **2025–2028: NANOGrav / IPTA.** Pulsar-Timing-Residuen, +30%-SSZ-Korrektur.
 
-**2025–2030: LIGO O4/O5.** Gravitationswellen-Ringdown-Echos.
+**2025–2030: observational campaigns O4/O5.** Metrik-Perturbationen-Ringdown-Echos.
 
 **2027–2030: ngEHT.** Schattendurchmesser, −1,3%-Vorhersage.
 
-**Wenn diese Beobachtungen exakt mit der ART übereinstimmen** — kein Neutronenstern-Rotverschiebungsüberschuss, kein Schattendefizit, keine Gravitationswellen-Echos — **ist SSZ falsifiziert.**
+**Wenn diese Beobachtungen exakt mit der ART übereinstimmen** — kein Neutronenstern-Rotverschiebungsüberschuss, kein Schattendefizit, keine Metrik-Perturbationen-Echos — **ist SSZ falsifiziert.**
 
 ## Der Vergleich mit der Allgemeinen Relativitätstheorie
 
@@ -12387,13 +12495,13 @@ SSZ steht und fällt mit Daten. Die Instrumente zur Entscheidung existieren heut
 Die unmittelbare Priorität ist beobachtungsmäßige Diskriminierung:
 
 1. **NICER (operativ):** Fortgesetzte Akkumulation von Neutronenstern-Masse-Radius-Daten.
-2. **LIGO A+ (2025):** Erhöhte Empfindlichkeit für Post-Merger-Gravitationswellensignale.
+2. **observational campaigns A+ (2025):** Erhöhte Empfindlichkeit für Post-Merger-Metrik-Perturbationensignale.
 3. **ngEHT (2028):** Zusätzliche Stationen und höhere Frequenzbeobachtungen.
 
 ### Mittelfristig (2030–2040)
 
 - **STROBE-X:** Röntgen-Timing mit 10× NICER-Empfindlichkeit.
-- **Einstein-Teleskop:** Gravitationswellendetektor der dritten Generation.
+- **Einstein-Teleskop:** Metrik-Perturbationendetektor der dritten Generation.
 - **SKA:** Pulsar-Timing auf Sub-Mikrosekunden-Präzision.
 - **Athena:** Röntgenspektroskopie bei 2,5 eV Auflösung.
 
@@ -12431,7 +12539,7 @@ Die wichtigsten offenen Probleme:
 **Kurzfristig (1-3 Jahre):**
 - Erweiterung auf rotierende Schwarze Loecher (SSZ-Kerr-Analog)
 - Analyse der NICER-Daten fuer Neutronenstern-Radien
-- Verfeinerung der Gravitationswellen-Echo-Vorhersage
+- Verfeinerung der Metrik-Perturbationen-Echo-Vorhersage
 
 **Mittelfristig (3-10 Jahre):**
 - SSZ-Kosmologie (modifizierte Friedmann-Gleichungen)
@@ -12555,7 +12663,6 @@ Die Physik lebt von Herausforderungen. Wir hoffen, dass dieses Buch eine solche 
 | SEC | Starke Energiebedingung |
 | LLI | Lokale Lorentz-Invarianz |
 | EHT | Event Horizon Telescope |
-| LIGO | Laser Interferometer Gravitational-Wave Observatory |
 | LISA | Laser Interferometer Space Antenna |
 | NICER | Neutron star Interior Composition Explorer |
 | SKA | Square Kilometre Array |
@@ -13280,7 +13387,7 @@ $S_{BH}$ = $k_{B}$ A / (4 $l_{P}$^2) = $k_{B}$ * 4 pi $r_{s}$^2 / (4 $l_{P}$^2)
 **Verdampfungszeit (SSZ):**
 t_evap_SSZ ~ t_evap_GR / $D_{min}$^6 ~ 10 * t_evap_GR
 
-### Gravitationswellen-Formeln
+### Metrik-Perturbationen-Formeln
 
 **Quadrupolformel:**
 $P_{gw}$ = -(32/5) G^4 m_1^2 m_2^2 (m_1+m_2) / (c^5 r^5)
@@ -13476,7 +13583,7 @@ $f_{ISCO}$ = c^3/(2 pi G M) * (1/($r_{ISCO}$/r_s)^{3/2}) * D($r_{ISCO}$)
 
 In SSZ: f_ISCO_SSZ = 0,85 * f_ISCO_GR (15% niedriger wegen des groesseren ISCO-Radius).
 
-### Gravitationswellen-Luminositaet am ISCO
+### Metrik-Perturbationen-Luminositaet am ISCO
 
 Die GW-Luminositaet am ISCO ist:
 L_GW_ISCO = (32/5) c^5/G * (mu/M)^2 * ($r_{s}$/r_ISCO)^5
@@ -13599,7 +13706,7 @@ Drehwinkel der Polarisationsebene: $\Delta_{\phi}$ = (2GM omega)/(c^3) * D(r) * 
 
 ### Stufe 4 — Schwarze Löcher
 - EHT M87*: EHT Collaboration 2019
-- LIGO/Virgo: GWTC-3, Abbott et al. 2023
+- observational: GWTC-3, Abbott et al. 2023
 
 ### Stufe 5 — Astrophysikalisch
 - G79.29+0.46: Rizzo et al. 2014, Jimenez-Esteban et al. 2010
@@ -13670,7 +13777,7 @@ Alle Datensätze sind öffentlich zugänglich über NASA HEASARC, ESO Phase 3, A
 
 - **Will, C. M. (2014).** The confrontation between general relativity and experiment. *Living Reviews in Relativity*, 17(1), 4. -- Umfassende Uebersicht ueber alle experimentellen Tests der ART. Aktualisiert regelmaessig.
 
-- **Abbott, B. P. et al. (LIGO/Virgo) (2016).** Observation of gravitational waves from a binary black hole merger. *Physical Review Letters*, 116(6), 061102. -- Die erste direkte Detektion von Gravitationswellen. Nobelpreis 2017.
+- **Abbott, B. P. et al. (observational) (2016).** Observation of metric perturbations from a binary black hole merger. *Physical Review Letters*, 116(6), 061102. -- Die erste direkte Detektion von Metrik-Perturbationen. Nobelpreis 2017.
 
 - **Event Horizon Telescope Collaboration (2019).** First M87 Event Horizon Telescope results. I. The shadow of the supermassive black hole. *Astrophysical Journal Letters*, 875(1), L1. -- Das erste Bild eines Schwarzen-Loch-Schattens.
 
@@ -13706,9 +13813,9 @@ Alle Datensätze sind öffentlich zugänglich über NASA HEASARC, ESO Phase 3, A
 
 - **Nordtvedt, K. (1968).** Equivalence principle for massive bodies. II. Theory. *Physical Review*, 169(5), 1017-1025. -- Der Nordtvedt-Effekt: Verletzung des starken Aequivalenzprinzips in Skalar-Tensor-Theorien.
 
-### Gravitationswellen
+### Metrik-Perturbationen
 
-- **Peters, P. C. & Mathews, J. (1963).** Gravitational radiation from point masses in a Keplerian orbit. *Physical Review*, 131(1), 435-440. -- Die Formel fuer die Gravitationswellenemission von Doppelsternsystemen.
+- **Peters, P. C. & Mathews, J. (1963).** Gravitational radiation from point masses in a Keplerian orbit. *Physical Review*, 131(1), 435-440. -- Die Formel fuer die Metrik-Perturbationenemission von Doppelsternsystemen.
 
 - **Hulse, R. A. & Taylor, J. H. (1975).** Discovery of a pulsar in a binary system. *Astrophysical Journal*, 195, L51-L53. -- Entdeckung des Hulse-Taylor-Pulsars. Nobelpreis 1993.
 
@@ -13726,7 +13833,7 @@ Alle Datensätze sind öffentlich zugänglich über NASA HEASARC, ESO Phase 3, A
 | ART Fortgeschritten | Carroll, *Spacetime and Geometry* | Master |
 | ART Mathematisch | Wald, *General Relativity* | Doktorand |
 | Schwarze Loecher | Frolov & Novikov, *Black Hole Physics* | Doktorand |
-| Gravitationswellen | Maggiore, *Gravitational Waves* (2 Bde.) | Doktorand |
+| Metrik-Perturbationen | Maggiore, *Metric Perturbations* (2 Bde.) | Doktorand |
 | Kosmologie | Weinberg, *Cosmology* | Master |
 | PPN-Formalismus | Will, *Theory and Experiment* | Master |
 | Numerische Relativitaet | Baumgarte & Shapiro, *Numerical Relativity* | Doktorand |
@@ -13743,13 +13850,13 @@ Alle Datensätze sind öffentlich zugänglich über NASA HEASARC, ESO Phase 3, A
 
 - **Cacciapuoti, L. & Salomon, C. (2009).** Space clocks and fundamental tests: The ACES experiment. *European Physical Journal Special Topics*, 172(1), 57-68. -- ACES-Mission auf der ISS.
 
-### Gravitationswellen
+### Metrik-Perturbationen
 
-- **Abbott, B. P. et al. (2017).** GW170817: Observation of gravitational waves from a binary neutron star inspiral. *Physical Review Letters*, 119(16), 161101. -- Erste Neutronenstern-Verschmelzung mit GW und EM-Gegenstueck.
+- **Abbott, B. P. et al. (2017).** GW170817: Observation of metric perturbations from a binary neutron star inspiral. *Physical Review Letters*, 119(16), 161101. -- Erste Neutronenstern-Verschmelzung mit GW und EM-Gegenstueck.
 
-- **Abbott, B. P. et al. (2017).** Gravitational waves and gamma-rays from a binary neutron star merger: GW170817 and GRB 170817A. *Astrophysical Journal Letters*, 848(2), L13. -- Beweis $c_{gw}$ = c auf 5 x 10^{-16}.
+- **Abbott, B. P. et al. (2017).** metric perturbations and gamma-rays from a binary neutron star merger: GW170817 and GRB 170817A. *Astrophysical Journal Letters*, 848(2), L13. -- Beweis $c_{gw}$ = c auf 5 x 10^{-16}.
 
-- **Dreyer, O. et al. (2004).** Black-hole spectroscopy: Testing general relativity through gravitational-wave observations. *Classical and Quantum Gravity*, 21(4), 787-803. -- QNM-Spektroskopie als Test der Raumzeitgeometrie.
+- **Dreyer, O. et al. (2004).** Black-hole spectroscopy: Testing general relativity through metric perturbation observations. *Classical and Quantum Gravity*, 21(4), 787-803. -- QNM-Spektroskopie als Test der Raumzeitgeometrie.
 
 ### Schwarze-Loch-Schatten
 
@@ -13803,7 +13910,7 @@ Alle Datensätze sind öffentlich zugänglich über NASA HEASARC, ESO Phase 3, A
 
 - **Pretorius, F. (2005).** Evolution of binary black-hole spacetimes. *Physical Review Letters*, 95(12), 121101. -- Erster erfolgreicher numerischer Merger zweier Schwarzer Loecher.
 
-- **Baker, J. G. et al. (2006).** Gravitational-wave extraction from an inspiraling configuration of merging black holes. *Physical Review Letters*, 96(11), 111102. -- Moving-puncture-Methode.
+- **Baker, J. G. et al. (2006).** metric perturbation extraction from an inspiraling configuration of merging black holes. *Physical Review Letters*, 96(11), 111102. -- Moving-puncture-Methode.
 
 ### Quantengravitation
 
@@ -13832,7 +13939,7 @@ Alle Datensätze sind öffentlich zugänglich über NASA HEASARC, ESO Phase 3, A
 | Ressource | URL | Beschreibung |
 |-----------|-----|-------------|
 | arXiv.org | arxiv.org | Preprint-Server fuer Physik |
-| LIGO Open Science | gwosc.org | Gravitationswellen-Daten |
+| observational campaigns Open Science | gwosc.org | Metrik-Perturbationen-Daten |
 | EHT | eventhorizontelescope.org | Schwarze-Loch-Bilder |
 | NASA ADS | ui.adsabs.harvard.edu | Astronomische Literaturdatenbank |
 | SSZ GitHub | github.com/error-wtf | SSZ-Repositories |
@@ -13856,7 +13963,7 @@ Alle Datensätze sind öffentlich zugänglich über NASA HEASARC, ESO Phase 3, A
 | 1974 | Hawking-Strahlung | Schwarze Loecher verdampfen |
 | 1975 | Hulse-Taylor-Pulsar | Indirekter GW-Nachweis |
 | 2003 | Cassini-Shapiro-Delay | gamma = 1 auf 0,002% |
-| 2015 | LIGO: GW150914 | Erste direkte GW-Detektion |
+| 2015 | observational campaigns: GW150914 | Erste direkte GW-Detektion |
 | 2017 | GW170817 + GRB | c_gw = c bestaetigt |
 | 2019 | EHT: M87* | Erstes Schwarze-Loch-Bild |
 | 2022 | EHT: Sgr A* | Bild des galaktischen Zentrums |
@@ -13873,7 +13980,7 @@ Alle Datensätze sind öffentlich zugänglich über NASA HEASARC, ESO Phase 3, A
 5. **Hulse-Taylor-Pulsar (1975-heute):** GW-Daempfung. Praezision: 0,2%.
 6. **Cassini (2003):** Shapiro-Delay. Praezision: 0,002%.
 7. **Gravity Probe B (2011):** Geodaetische Praezession (0,28%) und Frame-Dragging (19%).
-8. **LIGO GW150914 (2015):** Erste direkte GW-Detektion.
+8. **observational campaigns GW150914 (2015):** Erste direkte GW-Detektion.
 9. **GW170817 (2017):** $c_{gw}$ = c auf 5 x 10^{-16}.
 10. **EHT M87* (2019):** Schattenradius theta = 42 +/- 3 uas.
 11. **GRAVITY S2 (2018-2022):** Rotverschiebung und Schwarzschild-Praezession.
@@ -13884,7 +13991,7 @@ Alle Datensätze sind öffentlich zugänglich über NASA HEASARC, ESO Phase 3, A
 2. **Einstein-Teleskop (~2035):** QNM auf ~1%. SSZ: +3% vs ART. **Diskriminierend.**
 3. **LISA (~2037):** EMRI-Phase. SSZ: ~10^4 rad Differenz. **Stark diskriminierend.**
 4. **SKA (~2028):** Pulsare nahe Sgr A*. **Potenziell diskriminierend.**
-5. **LIGO O5 (~2027):** GW-Echos. **Stark diskriminierend.**
+5. **observational campaigns O5 (~2027):** GW-Echos. **Stark diskriminierend.**
 
 ## C.9 Weiterführende Literatur
 
@@ -13917,7 +14024,7 @@ Alle Datensätze sind öffentlich zugänglich über NASA HEASARC, ESO Phase 3, A
 | Ressource | URL | Beschreibung |
 |-----------|-----|-------------|
 | arXiv.org | arxiv.org | Preprint-Server |
-| LIGO Open Science | gwosc.org | GW-Daten |
+| observational campaigns Open Science | gwosc.org | GW-Daten |
 | EHT | eventhorizontelescope.org | SL-Bilder |
 | SSZ GitHub | github.com/error-wtf | SSZ-Repos |
 
@@ -13989,9 +14096,9 @@ Alle Datensätze sind öffentlich zugänglich über NASA HEASARC, ESO Phase 3, A
 - Pound, R. V. & Rebka, G. A. (1960). Apparent weight of photons. *Phys. Rev. Lett.*, 4, 337.
 - GRAVITY Collaboration (2018). Detection of the gravitational redshift in the orbit of S2. *A&A*, 615, L15.
 
-**Kapitel 15 (Gravitationswellen):**
-- Abbott, B. P. et al. (2016). Observation of gravitational waves from a binary black hole merger. *Phys. Rev. Lett.*, 116, 061102.
-- Maggiore, M. (2007). *Gravitational Waves: Theory and Experiments*. Oxford UP.
+**Kapitel 15 (Metrik-Perturbationen):**
+- Abbott, B. P. et al. (2016). Observation of metric perturbations from a binary black hole merger. *Phys. Rev. Lett.*, 116, 061102.
+- Maggiore, M. (2007). *Metric Perturbations: Theory and Experiments*. Oxford UP.
 
 ### Teil IV-VIII: Weiterführende Referenzen
 
@@ -14003,7 +14110,7 @@ Alle Datensätze sind öffentlich zugänglich über NASA HEASARC, ESO Phase 3, A
 - Kerr, R. P. (1963). Gravitational field of a spinning mass. *Phys. Rev. Lett.*, 11, 237.
 - Newman, E. T. & Janis, A. I. (1965). Note on the Kerr spinning-particle metric. *J. Math. Phys.*, 6, 915.
 - Brito, R., Cardoso, V. & Pani, P. (2015). *Superradiance*. Springer.
-- Cardoso, V. et al. (2016). Is the gravitational-wave ringdown a probe of the event horizon? *Phys. Rev. Lett.*, 116, 171101.
+- Cardoso, V. et al. (2016). Is the metric perturbation ringdown a probe of the event horizon? *Phys. Rev. Lett.*, 116, 171101.
 
 **Kapitel 23-24 (Astrophysik):**
 - Event Horizon Telescope Collaboration (2019). First M87 EHT results. I-VI. *ApJL*, 875.
@@ -14016,14 +14123,14 @@ Alle Datensätze sind öffentlich zugänglich über NASA HEASARC, ESO Phase 3, A
 **Kapitel 26-30 (Validierung):**
 - Kramer, M. et al. (2021). Strong-field gravity tests with the double pulsar. *Phys. Rev. X*, 11, 041050.
 - Psaltis, D. et al. (2020). Gravitational test with the M87 shadow. *Phys. Rev. Lett.*, 125, 141104.
-- Punturo, M. et al. (2010). The Einstein Telescope: A third-generation gravitational wave observatory. *Class. Quantum Grav.*, 27, 194002.
+- Punturo, M. et al. (2010). The Einstein Telescope: A third-generation metric perturbation observatory. *Class. Quantum Grav.*, 27, 194002.
 - Amaro-Seoane, P. et al. (2017). Laser Interferometer Space Antenna. *arXiv:1702.00786*.
 
 ## C.11 Ergaenzende Referenzen
 
-### Gravitationswellen-Astronomie
+### Metrik-Perturbationen-Astronomie
 
-- **Abbott, R. et al. (LIGO/Virgo/KAGRA) (2023).** GWTC-3: Compact binary coalescences observed by LIGO and Virgo during the second part of the third observing run. *Phys. Rev. X*, 13, 041039. -- 90 GW-Ereignisse, Populationsstatistik.
+- **Abbott, R. et al. (current observational) (2023).** GWTC-3: Compact binary coalescences observed by observational campaigns and complementary observatories during the second part of the third observing run. *Phys. Rev. X*, 13, 041039. -- 90 GW-Ereignisse, Populationsstatistik.
 
 - **Isi, M. et al. (2019).** Testing the no-hair theorem with GW150914. *Phys. Rev. Lett.*, 123, 111102. -- Erster Test der QNM-Spektroskopie.
 
@@ -14049,11 +14156,11 @@ Alle Datensätze sind öffentlich zugänglich über NASA HEASARC, ESO Phase 3, A
 
 ### Kosmologische Tests
 
-- **Zhao, W. et al. (2011).** Constraining the equation of state of dark energy with gravitational wave observations. *Phys. Rev. D*, 83, 023005. -- GW als kosmologische Sonden.
+- **Zhao, W. et al. (2011).** Constraining the equation of state of dark energy with metric perturbation observations. *Phys. Rev. D*, 83, 023005. -- GW als kosmologische Sonden.
 
-- **Schutz, B. F. (1986).** Determining the Hubble constant from gravitational wave observations. *Nature*, 323, 310. -- Standard-Sirenen-Methode.
+- **Schutz, B. F. (1986).** Determining the Hubble constant from metric perturbation observations. *Nature*, 323, 310. -- Standard-Sirenen-Methode.
 
-- **Abbott, B. P. et al. (2017).** A gravitational-wave standard siren measurement of the Hubble constant. *Nature*, 551, 85. -- Erste H_0-Messung mit GW.
+- **Abbott, B. P. et al. (2017).** A metric perturbation standard siren measurement of the Hubble constant. *Nature*, 551, 85. -- Erste H_0-Messung mit GW.
 
 ### Aequivalenzprinzip
 
@@ -14093,17 +14200,17 @@ Alle Datensätze sind öffentlich zugänglich über NASA HEASARC, ESO Phase 3, A
 
 - **Berti, E. et al. (2015).** Testing general relativity with present and future astrophysical observations. *Class. Quantum Grav.*, 32, 243001. -- Umfassender Review ueber GR-Tests mit 100+ Autoren.
 
-- **Barack, L. et al. (2019).** Black holes, gravitational waves and fundamental physics: A roadmap. *Class. Quantum Grav.*, 36, 143001. -- Roadmap fuer die Gravitationsphysik der naechsten Dekade.
+- **Barack, L. et al. (2019).** Black holes, metric perturbations and fundamental physics: A roadmap. *Class. Quantum Grav.*, 36, 143001. -- Roadmap fuer die Gravitationsphysik der naechsten Dekade.
 
 - **Cardoso, V. & Pani, P. (2019).** Testing the nature of dark compact objects. *Living Rev. Rel.*, 22, 4. -- Uebersicht ueber Tests der Natur kompakter Objekte, einschliesslich horizontfreier Alternativen.
 
-- **Yunes, N. & Siemens, X. (2013).** Gravitational-wave tests of general relativity with ground-based detectors and pulsar-timing arrays. *Living Rev. Rel.*, 16, 9. -- GW-Tests der Gravitation.
+- **Yunes, N. & Siemens, X. (2013).** metric perturbation tests of general relativity with ground-based detectors and pulsar-timing arrays. *Living Rev. Rel.*, 16, 9. -- GW-Tests der Gravitation.
 
 - **Psaltis, D. (2008).** Probes of strong-field gravity. *Living Rev. Rel.*, 11, 9. -- Starkfeld-Tests der Gravitation.
 
 ## C.13 Danksagung an die wissenschaftliche Gemeinschaft
 
-Die SSZ-Theorie waere ohne die Arbeit tausender Wissenschaftler nicht moeglich gewesen. Besonderer Dank gilt den Teams von LIGO/Virgo/KAGRA, dem Event Horizon Telescope, der GRAVITY-Kollaboration, den Lunar-Laser-Ranging-Teams und allen Experimentalphysikern, deren praezise Messungen die Grundlage fuer jeden Test der Gravitationsphysik bilden. Die Open-Science-Bewegung -- insbesondere arXiv, GitHub und Zenodo -- hat die Reproduzierbarkeit und Transparenz wissenschaftlicher Forschung revolutioniert und SSZ erst moeglich gemacht.
+Die SSZ-Theorie waere ohne die Arbeit tausender Wissenschaftler nicht moeglich gewesen. Besonderer Dank gilt den Teams von current observational, dem Event Horizon Telescope, der GRAVITY-Kollaboration, den Lunar-Laser-Ranging-Teams und allen Experimentalphysikern, deren praezise Messungen die Grundlage fuer jeden Test der Gravitationsphysik bilden. Die Open-Science-Bewegung -- insbesondere arXiv, GitHub und Zenodo -- hat die Reproduzierbarkeit und Transparenz wissenschaftlicher Forschung revolutioniert und SSZ erst moeglich gemacht.
 
 
 \newpage
@@ -14411,7 +14518,7 @@ Die folgenden Konzepte aus frueheren Versionen sind veraltet und duerfen nicht m
 1. **Exakte rotierende Metrik:** Die vollstaendige nicht-perturbative Loesung fuer rotierende kompakte Objekte.
 2. **Kosmologische Erweiterung:** Friedmann-Gleichungen in SSZ, Dunkle Energie.
 3. **Quantenkorrekturen:** Berechnung der Vakuumpolarisation und Vertex-Korrekturen fuer alpha.
-4. **Gravitationswellen-Echos:** Detaillierte Wellenform-Modellierung fuer LIGO/ET.
+4. **Metrik-Perturbationen-Echos:** Detaillierte Wellenform-Modellierung fuer observational campaigns/ET.
 5. **Neutronenstern-Struktur:** TOV-Gleichung mit SSZ-Korrekturen.
 6. **Primordialen Schwarze Loecher:** SSZ-Vorhersagen fuer das fruehe Universum.
 7. **Quantengravitation:** Verbindung zwischen SSZ und Loop-Quantengravitation oder Stringtheorie.
@@ -14496,7 +14603,7 @@ Diese Tests verifizieren SSZ = ART im Schwachfeld.
 |-----------|-----------|---------------|-----------------|
 | NS-Rotversch. +13% | NICER/eXTP | 2026/2028 | 3σ / 5σ |
 | SL-Schatten −1,3% | ngEHT | 2029 | 3σ |
-| GW-Echos | LIGO A+ | 2026 | 2σ (gestapelt) |
+| GW-Echos | observational campaigns A+ | 2026 | 2σ (gestapelt) |
 | Pulsar-Timing | SKA | 2030 | 5σ |
 | G79-Moleküle | ALMA | 2025 (jetzt) | kategorisch |
 
@@ -14527,7 +14634,7 @@ Diese Tests verifizieren SSZ = ART im Schwachfeld.
 | T_Hawking | T_H | 0,308 T_H | -69% | Primordialen SL |
 | eta_Akkretion | 0,057 | 0,063 | +10% | Roentgenspektroskopie |
 | QNM-Frequenz | f_Kerr | 1,03 f_Kerr | +3% | 3G-Detektoren |
-| GW-Echos | keine | Dt ~ 0,6 r_s/c | 100% | LIGO/Virgo |
+| GW-Echos | keine | Dt ~ 0,6 r_s/c | 100% | observational |
 | Love Number k_2 | 0 | ~0,052 | 100% | GW-Inspiral |
 | Jet-Leistung | P_BZ | 0,555 P_BZ | -44,5% | AGN-Statistik |
 
@@ -14570,13 +14677,13 @@ Diese Tests verifizieren SSZ = ART im Schwachfeld.
 | Schattenradius | 0,987 theta_GR | theta_GR | -1,3% | ngEHT (~2028) |
 | ISCO-Radius (a=0) | 3,5 r_s | 3,0 r_s | +17% | Athena/XRISM |
 | QNM-Frequenz (l=2) | 1,03 f_GR | f_GR | +3% | Einstein-Teleskop |
-| Love-Zahl k_2 | 0,052 | 0 | Endlich vs. null | LIGO A+/ET |
+| Love-Zahl k_2 | 0,052 | 0 | Endlich vs. null | observational campaigns A+/ET |
 | Horizont | Keiner (natuerl. Grenze) | Ja (r = r_s) | Fundamental | GW-Echos |
 | Singularitaet | Keine | Ja (r = 0) | Fundamental | -- |
 | Max. Rotverschiebung | z_max = 0,802 | z_max = unendlich | Endlich vs. unendlich | ngEHT |
 | Gezeitenkraft (r_s) | Endlich | Unendlich | Endlich vs. unendlich | -- |
 | Penrose-Effizienz | 44,5% | 29,3% (a_max) | +52% | Jet-Leuchtkraft |
-| GW-Echos | Ja (Delta_t ~ 0,6 r_s/c) | Nein | Ja vs. Nein | LIGO O5/ET |
+| GW-Echos | Ja (Delta_t ~ 0,6 r_s/c) | Nein | Ja vs. Nein | observational campaigns O5/ET |
 
 ### SSZ vs. Alternative Theorien
 
@@ -14616,9 +14723,9 @@ Diese Tests verifizieren SSZ = ART im Schwachfeld.
 | GP-B geodaetisch | 0,28% | ~10^{-9} | Nein |
 | S2 Rotverschiebung | 10% | ~10^{-7} | Nein |
 | EHT Schattenradius | 7% | 1,3% | Bald (ngEHT ~1%) |
-| LIGO QNM | ~10% | 3% | Bald (ET ~1%) |
-| LIGO Love-Zahl | ~50% | Endlich vs. 0 | Bald (ET ~10%) |
-| GW-Echos | Nicht detektiert | Ja vs. Nein | Bald (LIGO O5) |
+| observational campaigns QNM | ~10% | 3% | Bald (ET ~1%) |
+| observational campaigns Love-Zahl | ~50% | Endlich vs. 0 | Bald (ET ~10%) |
+| GW-Echos | Nicht detektiert | Ja vs. Nein | Bald (observational campaigns O5) |
 
 ### Zeitskalen in SSZ
 
@@ -14638,9 +14745,9 @@ Diese Tests verifizieren SSZ = ART im Schwachfeld.
 
 | Instrument | Typ | Wellenlänge | Aufloesung | SSZ-relevante Messung |
 |-----------|-----|-----------|-----------|---------------------|
-| LIGO | GW-Detektor | 10-10000 Hz | h ~ 10^{-23} | QNM, Echos, Love-Zahl |
-| Virgo | GW-Detektor | 10-10000 Hz | h ~ 10^{-22} | QNM, Echos |
-| KAGRA | GW-Detektor | 10-10000 Hz | h ~ 10^{-22} | QNM, Echos |
+| observational campaigns | GW-Detektor | 10-10000 Hz | h ~ 10^{-23} | QNM, Echos, Love-Zahl |
+| complementary observatories | GW-Detektor | 10-10000 Hz | h ~ 10^{-22} | QNM, Echos |
+| additional detector networks | GW-Detektor | 10-10000 Hz | h ~ 10^{-22} | QNM, Echos |
 | EHT | Radio-VLBI | 1,3 mm | 20 uas | Schattenradius |
 | GRAVITY | IR-Interferometer | 2,2 um | 10 uas | S-Stern-Orbits |
 | Chandra | Roentgen | 0,1-10 keV | 0,5 arcsec | Eisenlinien, QPOs |
@@ -14673,7 +14780,7 @@ Diese Tests verifizieren SSZ = ART im Schwachfeld.
 | D-Wert | ~1 | ~0,78 | ~0,56 |
 | SSZ = ART? | Ja (exakt) | Naeherungsweise | Nein (messbar) |
 | Typische Objekte | Planeten, Sterne | -- | NS, SL |
-| Beste Tests | GPS, Cassini, LLR | -- | EHT, LIGO, LISA |
+| Beste Tests | GPS, Cassini, LLR | -- | EHT, observational campaigns, LISA |
 | Korrektur-Ordnung | O(Xi^2) ~ 10^{-12} | O(Xi) ~ 0,3 | O(1) |
 
 ## F.6 Zusammenfassende Bewertung
@@ -14711,7 +14818,7 @@ Diese Tests verifizieren SSZ = ART im Schwachfeld.
 
 | Instrument | Typ | SSZ-relevante Messung |
 |-----------|-----|---------------------|
-| LIGO/Virgo/KAGRA | GW-Detektor | QNM, Echos, Love-Zahl |
+| current observational | GW-Detektor | QNM, Echos, Love-Zahl |
 | EHT | Radio-VLBI | Schattenradius |
 | GRAVITY | IR-Interferometer | S-Stern-Orbits |
 | Chandra/XMM | Roentgen | Eisenlinien, QPOs |
@@ -14771,7 +14878,7 @@ Legende: WD = Weisser Zwerg, NS = Neutronenstern, SL = Schwarzes Loch, SMBH = Su
 | Zeitraum | Instrument | Test | Erwartete Praezision |
 |----------|-----------|------|---------------------|
 | 2025 | ACES | Rotverschiebung | 0,0003% |
-| 2025-2027 | LIGO O4/O5 | GW-Echos | SNR > 10 |
+| 2025-2027 | observational campaigns O4/O5 | GW-Echos | SNR > 10 |
 | 2025+ | Vera Rubin | Mikrolensing | ~10^7 Quellen/Nacht |
 | 2025+ | GRAVITY+ | S-Sterne | r ~ 100 r_s |
 | 2028 | ngEHT | Schattenradius | ~1% |
@@ -14904,7 +15011,7 @@ Legende: WD = Weisser Zwerg, NS = Neutronenstern, SL = Schwarzes Loch, SMBH = Su
 
 **Goldener Schnitt (phi):** Die irrationale Zahl phi = (1 + sqrt(5))/2 = 1,61803... Sie ist der fundamentale Skalierungsparameter in SSZ.
 
-**Gravitationswellen-Echo:** Ein wiederholtes Signal in Gravitationswellen, das durch Reflexion an der natuerlichen Grenze entsteht. Eine Schluesselvorhersage von SSZ.
+**Metrik-Perturbationen-Echo:** Ein wiederholtes Signal in Metrik-Perturbationen, das durch Reflexion an der natuerlichen Grenze entsteht. Eine Schluesselvorhersage von SSZ.
 
 **Hermite-C2-Mischfunktion:** Eine glatte Interpolationsfunktion h(x) = 3x^2 - 2x^3, die den Uebergang zwischen Schwach- und Starkfeld in SSZ beschreibt.
 
@@ -14954,10 +15061,9 @@ Legende: WD = Weisser Zwerg, NS = Neutronenstern, SL = Schwarzes Loch, SMBH = Su
 | GP-B | Gravity Probe B |
 | GR | General Relativity |
 | GRB | Gamma-Ray Burst |
-| GW | Gravitationswelle |
+| GW | Metrik-Perturbation |
 | ISCO | Innermost Stable Circular Orbit |
 | JWST | James Webb Space Telescope |
-| LIGO | Laser Interferometer Gravitational-Wave Observatory |
 | LISA | Laser Interferometer Space Antenna |
 | LLI | Lokale Lorentz-Invarianz |
 | LLR | Lunar Laser Ranging |
@@ -15011,9 +15117,8 @@ A: Ja. QNM +3%, Schatten -1,3%, Echos, Love-Zahl -- alles testbar mit der naechs
 | ET | Einstein-Teleskop |
 | GR | General Relativity |
 | GRB | Gamma-Ray Burst |
-| GW | Gravitationswelle |
+| GW | Metrik-Perturbation |
 | ISCO | Innermost Stable Circular Orbit |
-| LIGO | Laser Interferometer Gravitational-Wave Observatory |
 | LISA | Laser Interferometer Space Antenna |
 | LLR | Lunar Laser Ranging |
 | LQG | Loop-Quantengravitation |
