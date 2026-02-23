@@ -323,6 +323,36 @@ Kritische Eigenschaften dieser Form:
 
 Das Sättigungsmaximum Ξ_max = 1 − e^{−φ} ist kein Parameter — es ist ein fester mathematischer Wert, der vollständig durch den Goldenen Schnitt bestimmt wird. Es gibt keine Freiheit, ihn pro Objekt oder pro Datensatz anzupassen.
 
+### Komplementäre Perspektiven: Abkling- vs. Sättigungsform
+
+Zwei Exponentialformen der Starkfeld-Segmentdichte erscheinen in der SSZ-Literatur. Ihre Argumente sind reziprok (r_s/r vs. r/r_s), daher unterscheidet sich ihr asymptotisches Verhalten grundlegend. Dieser Abschnitt macht die Unterscheidung explizit.
+
+**Abklingform** (durchgehend in diesem Buch verwendet):
+
+Ξ_Abkling(r) = 1 − exp(−φ · r_s / r)
+
+*Physikalische Perspektive:* Feldintensität. Das Argument φ r_s/r nimmt mit zunehmendem r ab, daher Ξ → 0 bei großen Entfernungen. Dies ist die korrekte Starkfeld-Formel für die äußere Raumzeit. Schnittpunkt mit Ξ_schwach ergibt r*/r_s ≈ 1,595.
+
+**Sättigungsform** (in Repositories verwendet):
+
+Ξ_Sätt(r) = 1 − exp(−φ · r / r_s)
+
+*Physikalische Perspektive:* kumulative Segmentakkumulation. Das Argument φ r/r_s nimmt mit r zu und Ξ sättigt bei Ξ_max. Verwendet in ssz-metric-pure und Unified-Results (Akkumulationsperspektive), ergibt r*/r_s ≈ 1,387.
+
+**Expliziter Grenzwertvergleich:**
+
+| Grenzwert | Ξ_schwach = r_s/(2r) | Ξ_Abkling = 1−exp(−φ r_s/r) | Ξ_Sätt = 1−exp(−φ r/r_s) |
+|-----------|----------------------|------------------------------|---------------------------|
+| r → ∞ | → 0 | → 0 | → 1 − e^{−φ} ≈ 0,80 |
+| r = r_s | 0,5 | 1 − e^{−φ} ≈ 0,80 | 1 − e^{−φ} ≈ 0,80 |
+| r → 0 | → ∞ | → 1 | → 0 |
+
+Die Tabelle zeigt, warum die Abklingform die kanonische Starkfeld-Formel in diesem Buch ist: Sie ist die einzige Exponentialform, die die korrekte äußere Asymptotik (Ξ → 0 für r → ∞) mit der Schwachfeld-Formel teilt und daher glatt in das PPN-Regime übergeht. Die Sättigungsform hat Ξ → 0,80 für r ≫ r_s — das ist ein Starkfeld-Wert, der *nicht* das schwache äußere Feld beschreibt.
+
+**Beide Formen stimmen bei r = r_s überein:** Ξ(r_s) = 1 − e^{−φ} = 0,802, D(r_s) = 0,555.
+
+**Hinweis für Leser des Repository-Codes:** Die Sättigungsform 1 − exp(−φ r/r_s) darf nicht als Schwachfeld-Formel missverstanden werden. Ihr Grenzwert für große r ist ca. 0,80, nicht null. Die Schwachfeld-Formel ist immer Ξ_schwach = r_s/(2r).
+
 ### Die Übergangszone
 
 Der Übergang zwischen g₁ und g₂ erfolgt in einer Übergangszone bei 1,8 ≤ r/r_s ≤ 2,2. Eine quintische Hermite-C²-Interpolation verbindet die beiden Formen glatt:

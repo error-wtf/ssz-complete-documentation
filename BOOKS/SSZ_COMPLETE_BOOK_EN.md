@@ -317,11 +317,33 @@ The saturation maximum Ξ_max = 1 − e^{−φ} is not a parameter — it is a f
 
 ### Complementary Perspectives: Decay vs. Saturation Form
 
-The strong-field formula Ξ = 1 − exp(−φ r_s/r) used throughout this book is the *decay form* (field-intensity perspective): the argument φ r_s/r decreases with r, so Ξ → 0 at large distances. This yields r*/r_s ≈ 1.595.
+Two exponential forms of the strong-field segment density appear in SSZ literature. Their arguments are reciprocal (r_s/r vs. r/r_s), so their asymptotic behavior differs. This subsection makes the distinction explicit so that no reader confuses one for the other.
 
-A complementary *saturation form* exists: Ξ_sat(r) = 1 − exp(−φ r/r_s), where the argument increases with r and Ξ saturates at Ξ_max. This form is used in ssz-metric-pure and Unified-Results repositories (accumulation perspective), yielding r*/r_s ≈ 1.387.
+**Decay form** (used throughout this book):
 
-**Both forms give identical values at r = r_s:** Ξ(r_s) = 1 − exp(−φ) = 0.802, D(r_s) = 0.555. They represent complementary physical perspectives — local field intensity (decay) vs. cumulative segment accumulation (saturation). The decay form is preferred for this book because it has the correct weak-field asymptotic (Ξ → 0 as r → ∞) and matches the PPN expansion naturally. See the segmented-calculation-suite documentation (gr-ssz-match.md) for a detailed mathematical comparison.
+Ξ_decay(r) = 1 − exp(−φ · r_s / r)
+
+*Physical perspective:* field intensity. The argument φ r_s/r decreases with increasing r, so Ξ → 0 at large distances. This is the correct strong-field formula for the exterior spacetime. Intersection with Ξ_weak yields r*/r_s ≈ 1.595.
+
+**Saturation form** (used in repositories):
+
+Ξ_sat(r) = 1 − exp(−φ · r / r_s)
+
+*Physical perspective:* cumulative segment accumulation. The argument φ r/r_s increases with r and Ξ saturates at Ξ_max. Used in ssz-metric-pure and Unified-Results repositories, yielding r*/r_s ≈ 1.387.
+
+**Explicit asymptotic comparison:**
+
+| Limit | Ξ_weak = r_s/(2r) | Ξ_decay = 1−exp(−φ r_s/r) | Ξ_sat = 1−exp(−φ r/r_s) |
+|-------|---------------------|-------------------------------|------------------------------|
+| r → ∞ | → 0 | → 0 | → 1 − e^{−φ} ≈ 0.80 |
+| r = r_s | 0.5 | 1 − e^{−φ} ≈ 0.80 | 1 − e^{−φ} ≈ 0.80 |
+| r → 0 | → ∞ | → 1 | → 0 |
+
+The table shows why the decay form is the canonical strong-field formula in this book: it is the only exponential form that shares the correct outer asymptotic (Ξ → 0 as r → ∞) with the weak-field formula, and therefore blends smoothly into the PPN regime. The saturation form has Ξ → 0.80 for r ≫ r_s, which is a strong-field value -- it does *not* describe the weak-field exterior. Its domain of physical applicability is the interior accumulation perspective near and below r_s.
+
+**Both forms agree at r = r_s:** Ξ(r_s) = 1 − e^{−φ} = 0.802, D(r_s) = 0.555. They represent complementary physical perspectives -- local field intensity (decay) vs. cumulative segment accumulation (saturation). See the segmented-calculation-suite documentation (gr-ssz-match.md) for a detailed mathematical comparison.
+
+**Caution for readers of the repository code:** The saturation form 1 − exp(−φ r/r_s) must not be misread as a weak-field formula. Its large-r limit is approximately 0.80, not zero. It is a strong-field quantity evaluated from the accumulation perspective. The weak-field formula is always Ξ_weak = r_s/(2r).
 
 ### The Blend Zone
 
