@@ -10706,7 +10706,9 @@ and segment quantization; the small deviation is discussed in Ch 5.
 ```
 Ξ_weak(r*) = Ξ_strong(r*)
 r_s/(2r*) = 1 − exp(−φ·r_s/r*)
-→ r*/r_s = 1.59481 (mass-independent!)
+→ r*_proxy/r_s = 1.59481 (mass-independent, decay form intersection)
+
+When using the saturation form instead: r*_blend/r_s ≈ 1.387 (saturation form intersection).
 ```
 - **Paper:** 04 — **Test:** `test_intersection.py`
 

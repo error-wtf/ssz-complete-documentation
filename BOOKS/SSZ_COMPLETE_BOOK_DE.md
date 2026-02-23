@@ -12737,13 +12737,17 @@ Die Physik lebt von Herausforderungen. Wir hoffen, dass dieses Buch eine solche 
 
 ### Abgeleitete Groessen
 
-**Ξ(r) (Segmentdichte):** Die zentrale Variable von SSZ. Schwachfeld: Ξ = r_s/(2r). Starkfeld: Ξ = 1 - exp(-φ r/r_s). Uebergangszone: Hermite-C²-Mischung. Physikalische Interpretation: Anteil des Raums, der von Segmenten belegt ist.
+**Ξ(r) (Segmentdichte):** Die zentrale Variable von SSZ. Schwachfeld: Ξ = r_s/(2r). Starkfeld (Abklingform, kanonisch): Ξ_dec = 1 − exp(−φ r_s/r). Starkfeld (Sättigungsdarstellung): Ξ_sat = 1 − exp(−φ r/r_s). Uebergangszone: Hermite-C²-Mischung. Physikalische Interpretation: Anteil des Raums, der von Segmenten belegt ist. Konvention: In Aussenraum-/PPN-Abschnitten wird Ξ_dec verwendet; Ξ_sat nur in Sättigungs-/Innenraum-Abschnitten.
 
 **D(r) (Zeitdilatationsfaktor):** D = 1/(1 + Ξ). Bereich: 0 < D ≤ 1. Minimum: D_min = 0,555 bei r = r_s. Physikalische Interpretation: Verhaeltnis der lokalen Taktrate zur Taktrate im Unendlichen.
 
 **s(r) (Skalierungsfaktor):** s = 1 + Ξ = 1/D. Bereich: 1 ≤ s < ∞. Maximum: s_max = 1,802 bei r = r_s. Physikalische Interpretation: Faktor, um den elektromagnetische Wellenlaengen gestreckt werden.
 
-**r* (Regime-Schnittpunkt):** r*/r_s = 1,387. Der Radius, bei dem die Schwach- und Starkfeldformeln fuer Ξ denselben Wert liefern. Markiert den Uebergang zwischen den beiden Regimen.
+**r* (Regime-Schnittpunkt):** Zwei Definitionen existieren je nach verwendeter Starkfeldform:
+- r*_proxy/r_s ≈ 1,595 (Schnittpunkt Ξ_weak = Ξ_dec, Abklingform — verwendet in Kapitel 1)
+- r*_blend/r_s ≈ 1,387 (Schnittpunkt Ξ_weak = Ξ_sat, Sättigungsform — verwendet in Repositories)
+
+Beide markieren den Uebergang zwischen den Regimen; der numerische Unterschied ergibt sich aus den unterschiedlichen Exponentialargumenten (r_s/r vs. r/r_s).
 
 ### Astrophysikalische Groessen
 
@@ -13044,11 +13048,15 @@ Anwendung: Regime-Uebergang bei r* = 1,387 r_s mit x = (r - r_1)/(r_2 - r_1).
 
 ### Exponentialfunktion in der Starkfeldformel
 
-Xi(r) = 1 - exp(-phi r/r_s)
+**Abklingform** (kanonisch, Aussenraum):
+Xi_dec(r) = 1 - exp(-phi r_s/r)
+- dXi/dr = -phi r_s/r² exp(-phi r_s/r)
+- d²Xi/dr² = phi r_s/r³ (2 - phi r_s/r) exp(-phi r_s/r)
 
-Ableitungen:
+**Sättigungsform** (Hilfsdarstellung, Innenraum):
+Xi_sat(r) = 1 - exp(-phi r/r_s)
 - dXi/dr = (phi/r_s) exp(-phi r/r_s)
-- d^2Xi/dr^2 = -(phi/r_s)^2 exp(-phi r/r_s)
+- d²Xi/dr² = -(phi/r_s)² exp(-phi r/r_s)
 
 ### Zeitdilatationsfaktor und Ableitungen
 
@@ -13268,7 +13276,8 @@ Netto: +38,6 μs/Tag. GPS-Spezifikation: +38,6 μs/Tag. Exakte Übereinstimmung.
 | Formel | Beschreibung | Kapitel |
 |--------|-------------|---------|
 | Xi = r_s/(2r) | Segmentdichte (Schwachfeld) | 1 |
-| Xi = 1 - exp(-phi*r/r_s) | Segmentdichte (Starkfeld) | 1 |
+| Xi = 1 − exp(−φ·r_s/r) | Segmentdichte (Starkfeld, Abklingform — kanonisch) | 1 |
+| Xi = 1 − exp(−φ·r/r_s) | Segmentdichte (Sättigungsdarstellung — nur Innenraum) | 1 |
 | D(r) = 1/(1+Xi(r)) | Zeitdilatationsfaktor | 2 |
 | s(r) = 1 + Xi(r) = 1/D(r) | Skalierungsfaktor | 2 |
 | r_s = 2GM/c^2 | Schwarzschild-Radius | 1 |
@@ -13328,7 +13337,7 @@ Die folgenden Formeln sind in der SSZ-Literatur veraltet oder fehlerhaft und due
 
 | # | Verbotene Formel | Grund | Korrekte Alternative |
 |---|-----------------|-------|---------------------|
-| 1 | Ξ = (r_s/r)² × exp(-r/r_φ) | Veraltet (Pre-v2.0) | Ξ_strong = 1 - exp(-φr/r_s) |
+| 1 | Ξ = (r_s/r)² × exp(-r/r_φ) | Veraltet (Pre-v2.0) | Ξ_strong = 1 − exp(−φr_s/r) (Abklingform) |
 | 2 | D = 1 - Ξ | Falsch (nicht-kanonisch) | D = 1/(1 + Ξ) |
 | 3 | z = 1/D - 1 | Nur naeherungsweise | z = Ξ (exakt in SSZ) |
 | 4 | α = φ/(2π) | Dimensionsfehler | α = 1/(φ^{2π} × 4) |
@@ -13343,11 +13352,11 @@ Jede Verwendung einer verbotenen Formel in einer Berechnung fuehrt zu falschen E
 | D = 1/(1+Ξ) | Kap. 1 | Alle Kapitel |
 | s = 1 + Ξ = 1/D | Kap. 1 | Kap. 10-15 |
 | Ξ_weak = r_s/(2r) | Kap. 1 | Kap. 6-9, 26-28 |
-| Ξ_strong = 1 - exp(-φr/r_s) | Kap. 3 | Kap. 18-22 |
+| Ξ_strong = 1 − exp(−φr_s/r) (Abklingform) | Kap. 1 | Kap. 18-22 |
 | v_esc · v_fall = c² | Kap. 9 | Kap. 8, 18, 21 |
 | α_SSZ = 1/(φ^{2π} × 4) | Kap. 4-5 | Kap. 16, 29 |
 | γ_seg = exp(Ξ · v²/c²) | Kap. 6 | Kap. 7, 18 |
-| r*/r_s = 1,387 | Kap. 3 | Kap. 18, 25 |
+| r*_blend/r_s = 1,387 (Sättigungsform-Schnittpunkt) | Kap. 3 | Kap. 18, 25 |
 | D_min = 0,555 | Kap. 1 | Kap. 18-22, 30 |
 | T_SSZ = D_min² · T_H | Kap. 20 | Kap. 30 |
 
@@ -13464,14 +13473,28 @@ Vergleich der fuehrenden Ordnung: 2Xi = r_s/r, also Xi = r_s/(2r).
 
 ### Ableitung der Starkfeldformel
 
-Die Starkfeldformel Xi = 1 - exp(-phi r/r_s) folgt aus vier Kriterien:
+SSZ verwendet zwei komplementaere Exponentialformen (siehe Kapitel 1, Abschnitt "Komplementaere Perspektiven"):
+
+**Kanonische Abklingform** (operativ im Aussenraum, in allen Hauptkapiteln):
+
+Xi_dec(r) = 1 - exp(-phi r_s/r)
+
+Kriterien: Xi(r -> unendlich) -> 0 (schwachfeldkompatibel), Xi(r -> 0) -> 1 (Saettigung), Xi(r_s) = 0,802.
+
+**Saettigungsform** (Hilfsdarstellung, Akkumulationsperspektive):
+
+Xi_sat(r) = 1 - exp(-phi r/r_s)
+
+Kriterien dieser Form:
 
 1. **Regularitaet:** Xi(0) = 1 - exp(0) = 0 (regulaer am Ursprung)
 2. **Monotonie:** dXi/dr = (phi/r_s) exp(-phi r/r_s) > 0 (monoton steigend)
 3. **Saettigung:** Xi(r -> unendlich) -> 1 (endliches Maximum)
 4. **Goldener-Schnitt-Skalierung:** Der Skalierungsparameter ist phi = 1,618...
 
-An der natuerlichen Grenze (r = r_s): Xi_max = 1 - exp(-phi) = 1 - 0,198 = 0,802.
+**Wichtig:** Die Saettigungsform beschreibt die kumulative Segmentakkumulation (Innenraum-Intuition). Fuer Aussenraum-/PPN-Aussagen (Xi -> 0 bei r -> unendlich) ist ausschliesslich die Abklingform relevant.
+
+Beide Formen stimmen bei r = r_s ueberein: Xi_max = 1 - exp(-phi) = 1 - 0,198 = 0,802.
 
 ### Ableitung der Abschliessungsrelation
 
@@ -13582,8 +13605,9 @@ Vergleich: 2Xi = r_s/r, also Xi = r_s/(2r).
 
 ### Starkfeldformel
 
-Xi = 1 - exp(-phi r/r_s) erfuellt: Xi(0) = 0, dXi/dr > 0, Xi(inf) -> 1.
-An r = r_s: Xi_max = 1 - exp(-phi) = 0,802.
+Kanonische Abklingform (Aussenraum): Xi_dec = 1 - exp(-phi r_s/r). Erfuellt: Xi(inf) -> 0, Xi(0) -> 1.
+Saettigungsform (Hilfsdarstellung): Xi_sat = 1 - exp(-phi r/r_s). Erfuellt: Xi(0) = 0, Xi(inf) -> 1.
+Beide bei r = r_s: Xi_max = 1 - exp(-phi) = 0,802.
 
 ### Abschliessungsrelation
 
@@ -14499,7 +14523,7 @@ Die SSZ-Theorie hat sich ueber mehrere Iterationen entwickelt. Die wichtigsten K
 
 **Version 1.0 (2024-Q1):** Erste Formulierung der Segmentdichte Xi und des Zeitdilatationsfaktors D. Schwachfeldformel Xi = r_s/(2r) eingefuehrt. Validierung gegen GPS und Pound-Rebka.
 
-**Version 1.5 (2024-Q2):** Einfuehrung der Starkfeldformel Xi = 1 - exp(-phi*r/r_s). Berechnung von D_min = 0,555. Erste Vorhersagen fuer Neutronenstern-Rotverschiebung.
+**Version 1.5 (2024-Q2):** Einfuehrung der Starkfeldformel (Sättigungsform Xi = 1 − exp(−φ r/r_s); später ergänzt durch die kanonische Abklingform Xi = 1 − exp(−φ r_s/r)). Berechnung von D_min = 0,555. Erste Vorhersagen fuer Neutronenstern-Rotverschiebung.
 
 **Version 2.0 (2024-Q3):** Vereinheitlichung von Schwach- und Starkfeldformeln durch Hermite-C2-Mischfunktion. Einfuehrung des Regime-Schnittpunkts r* = 1,387 r_s. Vollstaendige PPN-Analyse (gamma = beta = 1).
 
@@ -14511,7 +14535,7 @@ Die SSZ-Theorie hat sich ueber mehrere Iterationen entwickelt. Die wichtigsten K
 
 Die folgenden Konzepte aus frueheren Versionen sind veraltet und duerfen nicht mehr verwendet werden:
 
-1. **Quadratische Xi-Formel:** Xi = (r_s/r)^2 * exp(-r/r_phi) — ersetzt durch Xi_strong = 1 - exp(-phi*r/r_s) in Version 1.5.
+1. **Quadratische Xi-Formel:** Xi = (r_s/r)^2 * exp(-r/r_phi) — ersetzt durch Xi_strong = 1 − exp(−φ r_s/r) (Abklingform) in Version 1.5.
 
 2. **Lineare D-Formel:** D = 1 - Xi — ersetzt durch D = 1/(1+Xi) in Version 1.0 (die lineare Form war ein fruehes Approximat).
 
@@ -14554,7 +14578,7 @@ Die folgenden Konzepte aus frueheren Versionen sind veraltet und duerfen nicht m
 | 2023-Q1 | Konzeption | Erste Formulierung der Segmentdichte Xi |
 | 2023-Q2 | Schwachfeld | Ableitung der Schwachfeldformel Xi = r_s/(2r) |
 | 2023-Q3 | PPN-Validierung | Nachweis gamma = beta = 1 |
-| 2023-Q4 | Starkfeld | Ableitung der Starkfeldformel Xi = 1 - exp(-phi r/r_s) |
+| 2023-Q4 | Starkfeld | Ableitung der Starkfeldformel (Sättigungsform Xi = 1 − exp(−φ r/r_s), später kanonisiert als Abklingform Xi = 1 − exp(−φ r_s/r)) |
 | 2024-Q1 | Natuerliche Grenze | Entdeckung von D_min = 0,555 und Xi_max = 0,802 |
 | 2024-Q2 | Feinstrukturkonstante | Ableitung alpha = 1/(phi^{2pi} x 4) |
 | 2024-Q3 | Maxwell-Erweiterung | SSZ fuer elektromagnetische Felder |
@@ -14821,7 +14845,7 @@ Diese Tests verifizieren SSZ = ART im Schwachfeld.
 
 | Eigenschaft | Schwachfeld (r >> r_s) | Uebergangszone (r ~ r*) | Starkfeld (r ~ r_s) |
 |------------|----------------------|------------------------|-------------------|
-| Xi-Formel | r_s/(2r) | Hermite-C2-Mischung | 1 - exp(-phi r/r_s) |
+| Xi-Formel | r_s/(2r) | Hermite-C2-Mischung | 1 − exp(−φ r_s/r) (Abklingform) |
 | Xi-Wert | << 1 | ~0,28 | ~0,80 |
 | D-Wert | ~1 | ~0,78 | ~0,56 |
 | SSZ = ART? | Ja (exakt) | Naeherungsweise | Nein (messbar) |
@@ -15074,7 +15098,7 @@ Legende: WD = Weisser Zwerg, NS = Neutronenstern, SL = Schwarzes Loch, SMBH = Su
 
 **Quasi-Normalmoden (QNMs):** Die gedaempften Eigenschwingungen eines kompakten Objekts nach einer Stoerung. Ihre Frequenzen und Daempfungsraten sind charakteristisch fuer die Raumzeitgeometrie.
 
-**Regime-Uebergang:** Der Uebergang von der Schwachfeld-Formel (Xi = r_s/(2r)) zur Starkfeld-Formel (Xi = 1 - exp(-phi r/r_s)) bei r* = 1,387 r_s.
+**Regime-Uebergang:** Der Uebergang von der Schwachfeld-Formel (Xi = r_s/(2r)) zur Starkfeld-Formel. Kanonische Abklingform: Xi_dec = 1 − exp(−φ r_s/r) (Aussenraum, r*_proxy/r_s ≈ 1,595). Sättigungsform: Xi_sat = 1 − exp(−φ r/r_s) (Akkumulationsperspektive, r*_blend/r_s ≈ 1,387).
 
 **Ricci-Skalar (R):** Die Spur des Ricci-Tensors. Ein Mass fuer die mittlere Kruemmung der Raumzeit.
 
@@ -15184,7 +15208,8 @@ A: Ja. QNM +3%, Schatten -1,3%, Echos, Love-Zahl -- alles testbar mit der naechs
 | Gleichung | Kapitel | Seite (ca.) |
 |-----------|---------|------------|
 | Xi = r_s/(2r) (Schwachfeld) | 2 | 25 |
-| Xi = 1 - exp(-phi r/r_s) (Starkfeld) | 3 | 45 |
+| Xi_dec = 1 − exp(−φ r_s/r) (Starkfeld, Abklingform) | 1 | 15 |
+| Xi_sat = 1 − exp(−φ r/r_s) (Sättigungsdarstellung) | 1 | 15 |
 | D = 1/(1+Xi) | 2 | 26 |
 | v_esc * v_fall = c^2 | 8 | 120 |
 | alpha = 1/(phi^{2pi} x 4) | 5 | 80 |
