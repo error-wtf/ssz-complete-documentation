@@ -982,7 +982,7 @@ where r_s = 2GM/c² is the Schwarzschild radius. Numerically, r_φ $\approx$ 0.8
 
 To understand the physical meaning of r_φ, recall that the Schwarzschild radius r_s is the scale at which GR predicts the formation of a black hole event horizon. In SSZ, the φ-spiral provides the internal structure of spacetime down to r_s and below. The coupling radius r_φ is the point along this spiral where exactly one φ-segment fits into the radial extent of the gravitational well.
 
-**Below r_φ** (r < r_φ $\approx$ 0.809 r_s): The segment structure is tightly wound. Multiple φ-segments are packed into each radial interval. This is the strong-field regime where the exponential formula Ξ_strong = 1 − e^{−φr_s/r} applies and SSZ deviates from GR predictions.
+**Below r_φ** (r < r_φ $\approx$ 0.809 r_s): The segment structure is tightly wound. Multiple φ-segments are packed into each radial interval. This is the strong-field regime where the exponential formula Ξ_strong = min(1 − e^{−φr/r_s}, Ξ_max) applies and SSZ deviates from GR predictions.
 
 **Above r_φ** (r > r_φ): Segments are stretched — less than one φ-segment per radial interval. The gravitational field is weak enough that the simple formula Ξ_weak = r_s/(2r) provides an excellent approximation. In this regime, SSZ reproduces GR exactly.
 
@@ -1110,7 +1110,7 @@ The mass-dependent correction Delta(M) is small for stellar-mass objects (Delta 
 
 ### Why the Coupling Radius Matters
 
-The coupling radius r_phi = (phi/2) r_s = 0.809 r_s defines the radial scale at which the segment lattice transitions from weak-field to strong-field behavior. Inside r_phi, the segment density grows faster than the weak-field formula Xi = r_s/(2r) would predict. Outside r_phi, the segment density decays faster than the strong-field formula Xi = 1 - exp(-phi r_s/r) would predict. The coupling radius is the point where both formulas give approximately the same value of Xi.
+The coupling radius r_phi = (phi/2) r_s = 0.809 r_s defines the radial scale at which the segment lattice transitions from weak-field to strong-field behavior. Inside r_phi, the segment density grows faster than the weak-field formula Xi = r_s/(2r) would predict. Outside r_phi, the segment density decays faster than the strong-field formula Xi = min(1 - exp(-phi r/r_s), Xi_max) would predict. The coupling radius is the point where both formulas give approximately the same value of Xi.
 
 The physical significance of r_phi is that it represents the scale where the segment lattice structure changes character. In the weak field (r much greater than r_phi), the segments are sparse and their spacing increases linearly with r. In the strong field (r much less than r_phi), the segments are dense and their spacing saturates at a minimum value determined by the golden ratio. The transition between these two regimes is smooth (mediated by the Hermite C2 blend) but occurs over a relatively narrow radial range (approximately 1.8 to 2.2 r_s).
 
@@ -1990,7 +1990,7 @@ This is the unified formula that SSZ provides. The gravitational piece D_grav = 
 
 The exponential form exp(Ξ · v²/c²) is not arbitrary — it is required by three independent arguments:
 
-**Argument 1: Consistency with the Euler derivation.** Chapter 4 showed that the segment density itself takes an exponential form (Ξ = 1 − e^{−φr_s/r}) because segment counting is logarithmic. The kinematic correction, which involves traversing segments, must respect the same logarithmic-exponential structure. A polynomial correction (e.g., 1 + Ξv²/c²) would be inconsistent with the exponential segment framework.
+**Argument 1: Consistency with the Euler derivation.** Chapter 4 showed that the segment density itself takes an exponential form (Ξ_strong = min(1 − e^{−φr/r_s}, Ξ_max)) because segment counting is logarithmic. The kinematic correction, which involves traversing segments, must respect the same logarithmic-exponential structure. A polynomial correction (e.g., 1 + Ξv²/c²) would be inconsistent with the exponential segment framework.
 
 **Argument 2: Composition law.** If an object moves at velocity v₁ and then at velocity v₂ (both small compared to c), the kinematic corrections should compose multiplicatively:
 
@@ -3073,7 +3073,7 @@ The closure v_esc · v_fall = c² is regime-independent: it holds in both the we
 
 **Weak field (Ξ_weak = r_s/(2r)):** The definitions v_esc = c√(r_s/r) and v_fall = c√(r/r_s) are derived from energy conservation, not from the specific form of Ξ. The closure follows from the definitions alone, independent of whether Ξ_weak or Ξ_strong is used for the segment density.
 
-**Strong field (Ξ_strong = 1 − exp(−φr_s/r)):** The same definitions apply. The segment density determines D(r) and the redshift, but v_esc and v_fall depend only on r_s/r — a ratio that is well-defined in both regimes.
+**Strong field (Ξ_strong = min(1 − exp(−φr/r_s), Ξ_max)):** The same definitions apply. The segment density determines D(r) and the redshift, but v_esc and v_fall depend only on r_s/r — a ratio that is well-defined in both regimes.
 
 **Blend zone (1.8 < r/r_s < 2.2):** The Hermite C² blending affects Ξ(r) but not the velocity definitions. The closure is algebraic and does not depend on Ξ at all.
 
@@ -8376,7 +8376,7 @@ Why is this necessary? Each chapter in this book serves a specific function in t
 
 ### Pedagogical Overview
 
-When a massive star exhausts its nuclear fuel, its core collapses under gravity, transitioning from the weak-field regime (where Xi = r_s/(2r) is small) to the strong-field regime (where Xi = 1 - exp(-phi r_s/r) approaches its maximum value). In SSZ, this transition is governed by the Hermite C2 blend between the two Xi formulas, and it is irreversible: once the segment density exceeds the blend threshold, the system cannot return to the weak-field state without an external energy input exceeding the gravitational binding energy.
+When a massive star exhausts its nuclear fuel, its core collapses under gravity, transitioning from the weak-field regime (where Xi = r_s/(2r) is small) to the strong-field regime (where Xi = min(1 - exp(-phi r/r_s), Xi_max) approaches its maximum value). In SSZ, this transition is governed by the Hermite C2 blend between the two Xi formulas, and it is irreversible: once the segment density exceeds the blend threshold, the system cannot return to the weak-field state without an external energy input exceeding the gravitational binding energy.
 
 This irreversibility is the SSZ analog of the second law of thermodynamics applied to gravitational collapse. Just as entropy increases in thermodynamic processes, the segment density increases during gravitational collapse, and reversing this increase requires more energy than was released during the collapse.
 
@@ -8403,7 +8403,7 @@ At r → 0 (center): ξ_coh → 1 + 1 = 2. Maximum correlation — every segment
 
 The g2 coherence can be visualized as follows. In flat spacetime (g1), the segment lattice resembles a disordered collection of grains — each grain has a random orientation, and there are no long-range patterns. In g2, the gravitational compression forces segments into aligned configurations — the lattice develops crystalline order. The stronger the gravity (higher Ξ), the more ordered the lattice becomes, with the correlation length ξ_coh measuring the extent of this order.
 
-This coherence is not merely a mathematical description — it is responsible for the physical effects of the g2 metric. The exponential saturation Ξ = 1 − exp(−φr_s/r) is the **mean-field solution** of a system with these correlations. Without coherence, the segment density would follow the simple 1/r behavior of g1; with coherence, the collective alignment produces the bounded exponential form.
+This coherence is not merely a mathematical description — it is responsible for the physical effects of the g2 metric. The exponential saturation Ξ = min(1 − exp(−φr/r_s), Ξ_max) is the **mean-field solution** of a system with these correlations. Without coherence, the segment density would follow the simple 1/r behavior of g1; with coherence, the collective alignment produces the bounded exponential form.
 
 ### Coherence Energy
 
@@ -8561,7 +8561,7 @@ The irreversibility is not merely dynamical (the collapse proceeds faster than a
 
 ### The Hermite C2 Blend in Detail
 
-The transition between the weak-field regime (g1: Xi = r_s/(2r)) and the strong-field regime (g2: Xi = 1 - exp(-phi r_s/r)) is mediated by a Hermite C2 blend. The blend function w(r) satisfies three conditions: w(r_outer) = 0 (pure g1 at the outer boundary), w(r_inner) = 1 (pure g2 at the inner boundary), and the first two derivatives of w are continuous at both boundaries (C2 continuity).
+The transition between the weak-field regime (g1: Xi = r_s/(2r)) and the strong-field regime (g2: Xi = min(1 - exp(-phi r/r_s), Xi_max)) is mediated by a Hermite C2 blend. The blend function w(r) satisfies three conditions: w(r_outer) = 0 (pure g1 at the outer boundary), w(r_inner) = 1 (pure g2 at the inner boundary), and the first two derivatives of w are continuous at both boundaries (C2 continuity).
 
 The blend boundaries are r_outer/r_s = 2.2 and r_inner/r_s = 1.8. These values are chosen such that no known astrophysical observable has its primary contribution from within the blend zone. The photon sphere (r = 1.5 r_s) is entirely within the g2 regime. The ISCO (r = 3 r_s in GR) is entirely within the g1 regime. The perihelion of Mercury (r much greater than r_s) is deep in the g1 regime. No current observation is sensitive to the details of the blend, which means that the choice of blend function (Hermite C2 vs. other smooth interpolations) does not affect any prediction.
 
@@ -9521,7 +9521,7 @@ The segment density Ξ(r) satisfies two boundary conditions by construction:
 - Ξ → 0 as r → ∞ (flat spacetime at infinity)
 - Ξ → Ξ_max = 1 − e^{−φ} $\approx$ 0.802 as r → r_s (saturation)
 
-These boundary conditions and the functional forms (g1: Ξ = r_s/2r, g2: Ξ = 1 − exp(−φr_s/r)) are **axioms** of SSZ, motivated by the φ-geometry of Chapter 3 but not derived from a variational principle.
+These boundary conditions and the functional forms (g1: Ξ = r_s/2r, g2: Ξ = min(1 − exp(−φr/r_s), Ξ_max)) are **axioms** of SSZ, motivated by the φ-geometry of Chapter 3 but not derived from a variational principle.
 
 In GR, the Schwarzschild metric is the unique spherically symmetric vacuum solution of the Einstein field equations, which themselves follow from extremizing the Einstein-Hilbert action S = ∫R√(−g)d⁴x. This gives GR a powerful uniqueness guarantee: given the symmetry and boundary conditions, there is exactly one solution.
 
@@ -9557,7 +9557,7 @@ SSZ currently does not specify the superposition rule — this is why the theory
 
 SSZ defines Ξ(r) axiomatically. An action S[Ξ] from which the Ξ profile follows as an extremum would provide: uniqueness (the profile is the only solution), coupling prescription (how Ξ interacts with matter fields), and a natural quantization procedure (path integral over Ξ configurations).
 
-**Resolution path:** Construct L(Ξ, ∂Ξ, g_μν) such that the Euler-Lagrange equation ∂L/∂Ξ − ∂_μ(∂L/∂(∂_μΞ)) = 0 yields Ξ_weak = r_s/2r at large r and Ξ_strong = 1 − exp(−φr_s/r) at small r. A candidate: L = (∂Ξ)² − V(Ξ) with V(Ξ) = λΞ²(1−Ξ/Ξ_max)² — a double-well potential that stabilizes Ξ at 0 and Ξ_max.
+**Resolution path:** Construct L(Ξ, ∂Ξ, g_μν) such that the Euler-Lagrange equation ∂L/∂Ξ − ∂_μ(∂L/∂(∂_μΞ)) = 0 yields Ξ_weak = r_s/2r at large r and Ξ_strong = min(1 − exp(−φr/r_s), Ξ_max) at small r. A candidate: L = (∂Ξ)² − V(Ξ) with V(Ξ) = λΞ²(1−Ξ/Ξ_max)² — a double-well potential that stabilizes Ξ at 0 and Ξ_max.
 
 **Partial resolution (2025):** The ssz-lagrange repository provides a Lagrangian formulation with effective potential, geodesic equations, Hamiltonian reformulation, Kerr-analog metric, and BSSN numerical relativity framework (54/54 tests pass). This addresses the action-principle gap for test particles; the field-theoretic action S[Ξ] remains open.
 
@@ -9771,7 +9771,7 @@ SSZ makes four predictions that quantitatively differ from GR:
 
 SSZ predicts that the gravitational redshift from neutron star surfaces is **13% higher** than GR predicts for the same mass and radius. This arises because D_SSZ(r) < D_GR(r) in the strong field (r/r_s ~ 3-6), producing a larger frequency ratio between the surface and infinity.
 
-The physical mechanism is straightforward. In GR, the time dilation factor at radius r is D_GR = sqrt(1 - r_s/r). In SSZ, it is D_SSZ = 1/(1 + Xi_strong) where Xi_strong = 1 - exp(-phi*r_s/r). For neutron stars at r/r_s ~ 3, the SSZ segment density is higher than the GR equivalent, producing deeper time dilation. The 13% figure is not approximate — it is a structural consequence of the exponential saturation in Xi_strong versus the square-root form in D_GR.
+The physical mechanism is straightforward. In GR, the time dilation factor at radius r is D_GR = sqrt(1 - r_s/r). In SSZ, it is D_SSZ = 1/(1 + Xi_strong) where Xi_strong = min(1 - exp(-phi*r/r_s), Xi_max). For neutron stars at r/r_s ~ 3, the SSZ segment density is higher than the GR equivalent, producing deeper time dilation. The 13% figure is not approximate — it is a structural consequence of the exponential saturation in Xi_strong versus the square-root form in D_GR.
 
 z_{\text{SSZ}} = \frac{1}{D_{\text{SSZ}}(R_{\text{NS}})} - 1 \approx 1.13 \times z_{\text{GR}}
 
