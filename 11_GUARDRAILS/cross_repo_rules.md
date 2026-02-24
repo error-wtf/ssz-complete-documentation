@@ -23,7 +23,7 @@ The repos are **physically correct and internally consistent.** Guardrails preve
 | ssz-qubits | Weak field | r_s/(2r) | NO | GPS, PR, S2 |
 | frequency-curvature-validation | Weak field | r_s/(2r) | YES | Shapiro, lensing |
 | ssz-lensing | Weak-to-strong | Full | YES | Gravitational lensing |
-| ssz-metric-pure | Strong field | 1-exp(-φr_s/r) | YES | 4D tensors |
+| ssz-metric-pure | Strong field | min(1-exp(-φr/r_s), Ξ_max) | YES | 4D tensors |
 | maxwell | Blend | Hermite C² | YES | EM fields |
 | Unified-Results | All regimes | Full | YES | 25 test suites |
 | g79-cygnus-tests | Specific object | As needed | NO | G79 nebula |

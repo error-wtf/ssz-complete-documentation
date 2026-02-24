@@ -10,7 +10,7 @@ SSZ defines five regimes based on the ratio r/r_s (distance to Schwarzschild rad
 
 | Regime | r/r_s range | Ξ formula | Physical context |
 |--------|------------|-----------|------------------|
-| **very_close** | < 1.8 | Ξ_strong = 1-exp(-φr_s/r) | At/near horizon |
+| **very_close** | < 1.8 | Ξ_strong = min(1-exp(-φr/r_s), Ξ_max) | At/near horizon |
 | **blended** | 1.8–2.2 | Hermite C² interpolation | Smooth transition |
 | **photon_sphere** | 2.2–3.0 | Ξ_strong | Photon orbit zone |
 | **strong** | 3.0–10.0 | Ξ_strong | Neutron stars, compact objects |

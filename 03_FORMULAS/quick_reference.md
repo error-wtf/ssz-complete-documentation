@@ -8,7 +8,7 @@
 
 ```
 Ξ_weak(r)   = r_s / (2r)              [r/r_s > 10]
-Ξ_strong(r) = 1 - exp(-φ·r_s/r)       [r/r_s < 1.8]
+Ξ_strong(r) = min(1 - exp(-φ·r/r_s), Ξ_max)  [r/r_s < 1.8]
 D(r)        = 1 / (1 + Ξ(r))
 s(r)        = 1 + Ξ(r) = 1/D(r)
 z(r)        = Ξ(r)

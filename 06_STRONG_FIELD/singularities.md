@@ -42,9 +42,9 @@ z(r_s) = 0.80171
 ### At r → 0 (Center)
 SSZ's Ξ_strong formula:
 ```
-Ξ_strong(r→0) = 1 - exp(-φ·r_s/r) → 1 - 0 = 1
+Ξ_strong(r→0) = min(1 - exp(-φ·r/r_s), Ξ_max) → min(0, Ξ_max) = 0
 ```
-So Ξ → 1 (bounded), D → 1/2 (finite), and all metric components remain finite.
+So Ξ → 0, D → 1 (flat spacetime at center), and all metric components remain finite.
 
 **SSZ has NO singularities** — neither coordinate nor physical.
 

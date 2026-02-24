@@ -9,7 +9,7 @@
 Xi = (r_s/r)**2 * exp(-r/r_phi)    # DEPRECATED!
 
 # CORRECT:
-Xi_strong = 1 - exp(-phi * r_s/r)  # CANONICAL
+Xi_strong = min(1 - exp(-phi * r/r_s), Xi_max)  # CANONICAL (saturation form)
 ```
 
 ---
@@ -83,13 +83,13 @@ D = 1/(1 + Ξ)    # No factor 2!
 if r/r_s > 2.0:
     xi = r_s/(2*r)     # weak
 else:
-    xi = 1 - exp(-phi*r_s/r)  # strong
+    xi = min(1 - exp(-phi*r/r_s), Xi_max)  # strong (saturation)
 
 # CORRECT — use C² blend zone:
 if r/r_s > 2.2:
     xi = r_s/(2*r)
 elif r/r_s < 1.8:
-    xi = 1 - exp(-phi*r_s/r)
+    xi = min(1 - exp(-phi*r/r_s), Xi_max)
 else:
     xi = hermite_c2_blend(r, r_s)  # smooth transition
 ```

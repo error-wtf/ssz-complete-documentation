@@ -73,7 +73,7 @@ r_e = φ / N_e
 
 Segmentation grows like a **logarithmic spiral** rather than a smooth polynomial. This is not metaphorical — the growth law:
 ```
-Ξ(r) ∝ 1 - exp(-φ · r_s/r)
+Ξ(r) ∝ 1 - exp(-φ · r/r_s)
 ```
 has the same functional form as approach to equilibrium along a φ-scaled coordinate.
 

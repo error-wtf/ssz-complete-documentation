@@ -85,7 +85,7 @@ Before using any Ξ formula, determine regime via r/r_s:
 
 | Regime | r/r_s | Formula |
 |--------|-------|---------|
-| **very_close** | < 1.8 | Ξ = 1 - exp(-φ·r_s/r) |
+| **very_close** | < 1.8 | Ξ = min(1 - exp(-φ·r/r_s), Ξ_max) |
 | **blended** | 1.8–2.2 | C² Hermite blend |
 | **photon_sphere** | 2.2–3.0 | Ξ_strong |
 | **strong** | 3.0–10.0 | Ξ_strong |
@@ -97,7 +97,7 @@ Before using any Ξ formula, determine regime via r/r_s:
 Regime              → Formula
 ─────────────────────────────────
 r/r_s > 10          → Ξ = r_s/(2r)
-r/r_s < 1.8         → Ξ = 1-exp(-φr_s/r)
+r/r_s < 1.8         → Ξ = min(1-exp(-φr/r_s), Ξ_max)
 1.8 ≤ r/r_s ≤ 2.2   → Hermite blend
 ```
 

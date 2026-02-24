@@ -23,7 +23,7 @@
 
 φ appears in SSZ as a **structural constraint**, not a fitted parameter:
 
-1. **Strong-field Ξ:** `Ξ_strong = 1 - exp(-φ · r_s/r)` — φ sets the exponential scale
+1. **Strong-field Ξ:** `Ξ_strong = min(1 - exp(-φ · r/r_s), Ξ_max)` — φ sets the exponential scale
 2. **Horizon value:** `Ξ(r_s) = 1 - e^(-φ) = 0.80171` — determined by φ
 3. **Coupling radius:** `r_φ = (φ/2) · r_s · [1 + β·Δ(M)]` — φ/2 as coupling
 4. **Frequency grid:** `R = φ^N` — discrete redshift scaling

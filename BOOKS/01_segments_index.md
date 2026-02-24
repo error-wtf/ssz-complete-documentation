@@ -9,8 +9,8 @@
 
 | Datei | Seiten | Größe |
 |-------|--------|-------|
-| SSZ_BOOK_EN.pdf | 660 | 14.6 MB |
-| SSZ_BOOK_DE.pdf | 674 | 15.3 MB |
+| SSZ_BOOK_EN.pdf | 663 | 14.7 MB |
+| SSZ_BOOK_DE.pdf | 678 | 15.3 MB |
 
 ---
 

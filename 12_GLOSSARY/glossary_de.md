@@ -22,7 +22,7 @@
 | Begriff | Definition |
 |---------|------------|
 | **g1 (Schwaches Feld)** | Bereich r/r_s > 10. SSZ ≡ ART. Formel: Ξ = r_s/(2r) |
-| **g2 (Starkes Feld)** | Bereich r/r_s < 1.8. SSZ ≠ ART. Formel: Ξ = 1-exp(-φr_s/r) |
+| **g2 (Starkes Feld)** | Bereich r/r_s < 1.8. SSZ ≠ ART. Formel: Ξ = min(1-exp(-φr/r_s), Ξ_max) |
 | **Mischzone** | Übergangsbereich 1.8 ≤ r/r_s ≤ 2.2. Hermite-C²-Interpolation |
 | **Photonensphäre** | Bereich 2.2 ≤ r/r_s ≤ 3.0. SSZ-optimale Zone |
 | **Kohärenz-Kollaps** | Irreversibler Übergang g1→g2. Nicht umkehrbar |

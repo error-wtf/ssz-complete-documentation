@@ -6,7 +6,7 @@
 
 | Symbol | LaTeX | Name | Definition | Unit | Paper |
 |--------|-------|------|------------|------|-------|
-| Ξ | `\Xi` | Segment density | Weak: r_s/(2r), Strong: 1-exp(-φr_s/r) | dimensionless | 01, 03 |
+| Ξ | `\Xi` | Segment density | Weak: r_s/(2r), Strong: min(1-exp(-φr/r_s), Ξ_max) | dimensionless | 01, 03 |
 | φ | `\varphi` | Golden ratio | (1+√5)/2 = 1.618... | dimensionless | All |
 | α | `\alpha` | Fine-structure const. | e²/(4πε₀ℏc) = 1/137.036 | dimensionless | 15 |
 | α_lens | `\alpha_{\text{lens}}` | Lensing deflection | (1+γ)r_s/b | rad | 01 |
@@ -82,7 +82,7 @@
 
 | Formula | Status | Replacement |
 |---------|--------|-------------|
-| Ξ = (r_s/r)² exp(-r/r_φ) | **DEPRECATED** | Ξ_strong = 1-exp(-φr_s/r) |
+| Ξ = (r_s/r)² exp(-r/r_φ) | **DEPRECATED** | Ξ_strong = min(1-exp(-φr/r_s), Ξ_max) |
 | r/r_s = 90 or 110 as boundary | **WRONG** | 1.8 and 2.2 |
 | r_s = GM/c² | **WRONG** | r_s = 2GM/c² |
 | D = 1/(1+2Ξ) | **WRONG** | D = 1/(1+Ξ) |

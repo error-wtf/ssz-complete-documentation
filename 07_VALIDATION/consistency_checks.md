@@ -52,7 +52,7 @@ Each repository has a defined scope:
 | Repo | Scope | Ξ Formula | PPN? |
 |------|-------|-----------|------|
 | ssz-qubits | Weak field | r_s/(2r) | NO |
-| ssz-metric-pure | Strong field | 1-exp(-φr_s/r) | YES |
+| ssz-metric-pure | Strong field | min(1-exp(-φr/r_s), Ξ_max) | YES |
 | maxwell | Blend | Hermite C² | YES |
 | Unified-Results | All regimes | Full | YES |
 | segcalc | All regimes | Full | YES |
