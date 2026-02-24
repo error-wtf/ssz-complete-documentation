@@ -1,4 +1,4 @@
-\frontmatter
+﻿\frontmatter
 
 # Preface
 
@@ -8701,7 +8701,7 @@ The SSZ formula hierarchy has six levels, each depending only on levels below it
 **L1 — Definitions (from L0):**
 - r_s = 2GM/c² (Schwarzschild radius)
 - Ξ_weak(r) = r_s/(2r) (weak-field segment density)
-- Ξ_strong(r) = 1 − exp(−φr_s/r) (strong-field segment density)
+- Ξ_strong(r) = min(1 − exp(−φr/r_s), Ξ_max) (strong-field segment density)
 - D(r) = 1/(1 + Ξ(r)) (time dilation factor)
 - s(r) = 1 + Ξ(r) = 1/D(r) (scaling factor)
 
@@ -9266,7 +9266,7 @@ Key SSZ formulas are implemented independently in multiple repositories. The imp
 |---------|---------------|-------------------|-------|
 | Ξ_weak(r) = r_s/(2r) | segcalc, qubits, metric-pure | < 10⁻¹⁵ | Exact arithmetic |
 | D(r) = 1/(1+Ξ) | segcalc, qubits, freq-curv | < 10⁻¹⁵ | Exact arithmetic |
-| Ξ_strong = 1−exp(−φr_s/r) | metric-pure, Unified | < 10⁻¹⁵ | exp() precision |
+| Ξ_strong = min(1−exp(−φr/r_s), Ξ_max) | metric-pure, Unified | < 10⁻¹⁵ | exp() precision |
 | v_esc · v_fall = c² | segcalc, qubits | < 10⁻¹⁴ | √ precision |
 | Hermite C² blend | segcalc, metric-pure | < 10⁻¹³ | Polynomial eval |
 | Shapiro delay integral | segcalc, freq-curv | < 10⁻¹² | Quadrature |
