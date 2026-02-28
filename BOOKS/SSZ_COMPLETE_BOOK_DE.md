@@ -8,7 +8,7 @@ Dieses Buch präsentiert Segmentierte Raumzeit (SSZ) — ein theoretisches Rahme
 
 SSZ begann als Versuch, eine einfache Frage zu verstehen: Was geschieht mit der Zeit im Zentrum eines Schwarzen Lochs? Die Antwort der Allgemeinen Relativitätstheorie — die Zeit stoppt, die Krümmung divergiert, die Physik bricht zusammen — hat Physiker beunruhigt, seit Karl Schwarzschild 1916 die erste exakte Lösung der Einsteinschen Feldgleichungen fand. Über ein Jahrhundert wurde die Singularität entweder als fundamentales Merkmal der Natur oder als Signal behandelt, dass die ART auf der Planck-Skala durch Quantengravitation ersetzt werden muss. Aber keine vollständige Quantengravitationstheorie ist entstanden, und das Singularitätsproblem bleibt offen.
 
-SSZ nähert sich dem Problem anders. Anstatt die Gravitation zu quantisieren (ein Top-Down-Ansatz), fragt SSZ: Was ist die minimale Modifikation der ART, die Singularitäten eliminiert, ohne freie Parameter einzuführen? Die Antwort erweist sich als überraschend einfach: Ersetze den Schwarzschild-Zeitdilatationsfaktor $D_{ART}$(r) = √(1 − $r_{s}$/r), der am Horizont null erreicht, durch $D_{SSZ}$(r) = 1/(1 + Ξ(r)), der nach unten durch $D_{min}$ = 0,555 > 0 begrenzt ist.
+SSZ nähert sich dem Problem anders. Anstatt die Gravitation zu quantisieren (ein Top-Down-Ansatz), fragt SSZ: Was ist die minimale Modifikation der ART, die Singularitäten eliminiert, ohne freie Parameter einzuführen? Die Antwort erweist sich als überraschend einfach: Ersetze den Schwarzschild-Zeitdilatationsfaktor $D_{ART}$(r) = √(1 − $r_{s}$/r), der am Horizont null erreicht, durch $D_{SSZ}$(r) = 1/(1 + Ξ(r)), der nach unten durch $D_{min}$ = 0.555 > 0 begrenzt ist.
 
 Das Rahmenwerk wurde von Carmen N. Wrede und Lino P. Casu über mehrere Jahre kollaborativer Arbeit entwickelt, beginnend mit der Beobachtung, dass der Goldene Schnitt φ = (1+√5)/2 natürlich im Sättigungsverhalten beschränkter Exponentialfunktionen erscheint. Die resultierende Theorie wurde gegen jeden klassischen Test der ART validiert, in 11 unabhängigen Code-Repositories mit 564+ automatisierten Tests implementiert und einer Anti-Zirkularitätsanalyse unterzogen.
 
@@ -29,6 +29,14 @@ Dieses Buch dient gleichzeitig drei Zwecken:
 - **Mathematiker, die Strenge suchen:** Kapitel 2–4, Kapitel 18 und Anhang B.
 - **Skeptiker, die Schwächen suchen:** Kapitel 26, 28, 29 und 30.
 - **Studenten, die Pädagogik suchen:** Jedes Kapitel enthält eine Zusammenfassung, einen Lesehinweis, Schlüsselformeln und Querverweise.
+
+### Für Studierende
+
+Dieses Buch ist für Physikstudierende ab dem dritten Semester geschrieben, die Einführungskurse in klassischer Mechanik, Elektrodynamik und Spezieller Relativitätstheorie abgeschlossen haben. Vorkenntnisse in Allgemeiner Relativitätstheorie werden nicht vorausgesetzt, obwohl Studierende, die bereits ART-Konzepte kennengelernt haben, einiges Material vertraut finden werden. Die mathematischen Voraussetzungen sind Analysis, Lineare Algebra und grundlegende komplexe Analysis (Euler-Formel und komplexe Exponentialfunktion).
+
+Jedes Kapitel ist innerhalb seines Teils in sich geschlossen aufgebaut. Die Kapitel innerhalb eines Teils bauen sequenziell aufeinander auf, aber die Teile können nach Teil I (Grundlagen) etwas unabhängig gelesen werden. Studierende mit wenig Zeit können Teil I lesen und dann direkt zu Teil V (Starkfeld) oder Teil VIII (Validierung) springen, ohne den logischen Faden zu verlieren.
+
+Die Rechenbeispiele im Text sind darauf ausgelegt, rechnerisches Vertrauen aufzubauen. Jedes Beispiel enthält explizite numerische Werte und Einheiten, sodass der Leser die Berechnung unabhängig verifizieren kann.
 
 ## Für Forscher
 
@@ -57,10 +65,10 @@ Forscher mit ART-Hintergrund finden das relevanteste Material in Teil V (Starkfe
 ## Konventionen
 
 Alle Formeln verwenden SI-Einheiten sofern nicht anders angegeben. Die Fundamentalkonstanten sind:
-- G = 6,674 × 10⁻¹¹ m³ kg⁻¹ s⁻² (Gravitationskonstante)
-- c = 2,998 × 10⁸ m/s (Lichtgeschwindigkeit)
-- ℏ = 1,055 × 10⁻³⁴ J·s (reduziertes Plancksches Wirkungsquantum)
-- φ = (1+√5)/2 = 1,618... (Goldener Schnitt — mathematische Konstante, nicht angepasst)
+- G = 6.674 × 10⁻¹¹ m³ kg⁻¹ s⁻² (Gravitationskonstante)
+- c = 2.998 × 10⁸ m/s (Lichtgeschwindigkeit)
+- ℏ = 1.055 × 10⁻³⁴ J·s (reduziertes Plancksches Wirkungsquantum)
+- φ = (1+√5)/2 = 1.618... (Goldener Schnitt — mathematische Konstante, nicht angepasst)
 
 Der Schwarzschild-Radius ist $r_{s}$ = 2GM/c². Die Segmentdichte Ξ ist stets dimensionslos und nichtnegativ. Der Zeitdilatationsfaktor D = 1/(1+Ξ) erfüllt 0 < D ≤ 1. Die PPN-Parameter sind γ = β = 1 durchgehend — SSZ ist PPN-identisch mit der ART im Schwachfeld.
 
@@ -70,6 +78,8 @@ Wissenschaft schreitet voran, indem Theorien vorgeschlagen, gegen Beobachtungen 
 
 Wenn SSZ die Beobachtungstests des nächsten Jahrzehnts überlebt, wird es sich einen Platz neben der ART als tragfähige Beschreibung der Starkfeldgravitation verdient haben. Wenn es diese Tests nicht besteht, wird die Theorie verworfen, und dieses Buch wird als Dokumentation einer falsifizierten Hypothese dienen — was selbst ein Beitrag zur Wissenschaft ist.
 
+Die Autoren sind überzeugt, dass Null-Parameter-Theorien gerade deshalb ernsthafte Aufmerksamkeit verdienen, weil sie maximal falsifizierbar sind. Jede Vorhersage ist ein potenzielles Todesurteil. SSZ hat alle bisherigen Tests bestanden; die entscheidenden Tests stehen bevor.
+
 ## Danksagungen
 
 Carmen N. Wrede und Lino P. Casu entwickelten SSZ über mehrere Jahre kollaborativer Forschung. KI-Unterstützung (Akira) trug zur Codegenerierung, Testautomatisierung, numerischen Verifikation und Manuskripterstellung bei. Alle physikalischen Inhalte — die Axiome, Herleitungen, Interpretationen und Vorhersagen — spiegeln die originäre Forschung der Autoren wider.
@@ -78,13 +88,15 @@ Die Autoren danken den Open-Source-Gemeinschaften hinter Python, NumPy, SciPy, p
 
 ## Weiterführende Literaturempfehlungen
 
-**Grundlagen der Allgemeinen Relativitätstheorie:** Hartle, Gravity (2003); Carroll, Spacetime and Geometry (2004); Misner, Thorne, Wheeler, Gravitation (1973).
+**Grundlagen der Allgemeinen Relativitätstheorie:** Hartle, *Gravity* (2003) für Undergraduate-Niveau; Carroll, *Spacetime and Geometry* (2004) für Graduate-Niveau; Misner, Thorne, Wheeler, *Gravitation* (1973) als umfassende Referenz.
 
-**Experimentelle Gravitation:** Will, Theory and Experiment in Gravitational Physics (2018).
+**Experimentelle Gravitation:** Will, *Theory and Experiment in Gravitational Physics* (2018) für das PPN-Rahmenwerk und experimentelle Tests. Ciufolini und Wheeler, *Gravitation and Inertia* (1995) für Frame-Dragging und geodätische Präzession.
 
-**Schwarze-Loch-Physik:** Frolov und Zelnikov, Introduction to Black Hole Physics (2011).
+**Schwarze-Loch-Physik:** Frolov und Zelnikov, *Introduction to Black Hole Physics* (2011). Poisson, *A Relativist's Toolkit* (2004) für mathematische Methoden.
 
-**Quantengravitations-Kontext:** Rovelli, Quantum Gravity (2004); Kiefer, Quantum Gravity (2012).
+**Quantengravitations-Kontext:** Rovelli, *Quantum Gravity* (2004) für Schleifen-Quantengravitation. Kiefer, *Quantum Gravity* (2012) für einen breiteren Überblick. Diese liefern Kontext für die offenen Fragen von SSZ (Kapitel 29).
+
+**Beobachtungsastrophysik:** Shapiro und Teukolsky, *Black Holes, White Dwarfs, and Neutron Stars* (1983). Rezzolla und Zanotti, *Relativistic Hydrodynamics* (2013) für Akkretionsscheiben-Physik relevant für Kapitel 21-23.
 
 ---
 
@@ -92,38 +104,38 @@ Die Autoren danken den Open-Source-Gemeinschaften hinter Python, NumPy, SciPy, p
 
 *Die vollständige Testsuite, alle Daten und die Manuskriptquelle sind verfügbar unter: github.com/error-wtf*
 
-## Hinweise fuer den Leser
+## Hinweise für den Leser
 
 ### Wie dieses Buch zu lesen ist
 
 Dieses Buch ist in acht Teile gegliedert, die aufeinander aufbauen:
 
-**Teil I (Kap. 1-3): Grundlagen.** Hier werden die Axiome des SSZ-Rahmenwerks eingefuehrt — Segmentdichte, phi-Geometrie und Zeitdilatation. Diesen Teil sollte jeder Leser gruendlich studieren, da alle nachfolgenden Ergebnisse auf diesen Grundlagen aufbauen.
+**Teil I (Kap. 1-3): Grundlagen.** Hier werden die Axiome des SSZ-Rahmenwerks eingeführt — Segmentdichte, φ-Geometrie und Zeitdilatation. Diesen Teil sollte jeder Leser gründlich studieren, da alle nachfolgenden Ergebnisse auf diesen Grundlagen aufbauen.
 
 **Teil II (Kap. 4-9): Kinematik.** Die kinematischen Konsequenzen der SSZ-Axiome — Geschwindigkeiten, Flucht, Fall, Lorentz-Invarianz. Hier wird das physikalische Fundament gelegt.
 
-**Teil III (Kap. 10-15): Elektromagnetismus.** Die Modifikation der Maxwell-Gleichungen durch die Segmentdichte und die resultierenden Vorhersagen fuer Lichtausbreitung, Shapiro-Delay und Rotverschiebung.
+**Teil III (Kap. 10-15): Elektromagnetismus.** Die Modifikation der Maxwell-Gleichungen durch die Segmentdichte und die resultierenden Vorhersagen für Lichtausbreitung, Shapiro-Delay und Rotverschiebung.
 
-**Teil IV (Kap. 16-17): Frequenzrahmenwerk.** Eine alternative, experimentell zugaenglichere Formulierung der SSZ-Physik in der Sprache von Frequenzverhaeltnissen.
+**Teil IV (Kap. 16-17): Frequenzrahmenwerk.** Eine alternative, experimentell zugänglichere Formulierung der SSZ-Physik in der Sprache von Frequenzverhältnissen.
 
-**Teil V (Kap. 18-22): Starkfeld.** Das Herzstuck des Buches — die SSZ-Schwarze-Loch-Metrik, Singularitaetsaufloesung, natuerliche Grenze und Superradianz.
+**Teil V (Kap. 18-22): Starkfeld.** Das Herzstück des Buches — die SSZ-Schwarze-Loch-Metrik, Singularitätsauflösung, natürliche Grenze und Superradianz.
 
 **Teil VI (Kap. 23-24): Astrophysik.** Anwendungen auf konkrete astronomische Systeme.
 
-**Teil VII (Kap. 25): Regimeuebergaenge.** Die Physik des Uebergangs zwischen Schwach- und Starkfeld.
+**Teil VII (Kap. 25): Regimeübergänge.** Die Physik des Übergangs zwischen Schwach- und Starkfeld.
 
 **Teil VIII (Kap. 26-30): Validierung.** Tests, Daten, Ergebnisse, offene Probleme und Vorhersagen.
 
 ### Voraussetzungen
 
-Der Leser sollte mit den Grundlagen der Speziellen Relativitaetstheorie (Lorentz-Transformation, Zeitdilatation, E = mc^2) und der Allgemeinen Relativitaetstheorie (Metrik, Christoffel-Symbole, Schwarzschild-Loesung) vertraut sein. Kenntnisse in Differentialgeometrie sind hilfreich, aber nicht zwingend erforderlich — alle notwendigen mathematischen Werkzeuge werden im Text eingefuehrt.
+Der Leser sollte mit den Grundlagen der Speziellen Relativitätstheorie (Lorentz-Transformation, Zeitdilatation, E = mc²) und der Allgemeinen Relativitätstheorie (Metrik, Christoffel-Symbole, Schwarzschild-Lösung) vertraut sein. Kenntnisse in Differentialgeometrie sind hilfreich, aber nicht zwingend erforderlich — alle notwendigen mathematischen Werkzeuge werden im Text eingeführt.
 
 ### Notation und Konventionen
 
 Dieses Buch verwendet die folgenden Konventionen:
 
 - **Metrische Signatur:** (-+++)
-- **Einheiten:** Natuerliche Einheiten (c = G = 1) in Formeln, SI-Einheiten in numerischen Beispielen
+- **Einheiten:** Natürliche Einheiten (c = G = 1) in Formeln, SI-Einheiten in numerischen Beispielen
 - **Griechische Indizes:** mu, nu = 0,1,2,3 (Raumzeit)
 - **Lateinische Indizes:** i, j = 1,2,3 (Raum)
 - **Schwarzschild-Radius:** $r_{s}$ = 2GM/c^2
@@ -131,7 +143,7 @@ Dieses Buch verwendet die folgenden Konventionen:
 - **Zeitdilatation:** D = 1/(1+Xi)
 - **Skalierungsfaktor:** s = 1 + Xi = 1/D
 
-Eine vollstaendige Symboltabelle findet sich in Anhang A.
+Eine vollständige Symboltabelle findet sich in Anhang A.
 
 
 \newpage
@@ -563,33 +575,33 @@ Die wichtigsten quantitativen Ergebnisse von SSZ:
 
 SSZ verwendet ein dreistufiges Validierungsprotokoll:
 
-**Stufe 1: Automatisierte Tests.** 232+ Tests in 8 GitHub-Repositories pruefen die internen Konsistenz der Theorie und die Uebereinstimmung mit Beobachtungsdaten. Alle Tests bestehen mit 100% Erfolgsrate.
+**Stufe 1: Automatisierte Tests.** 232+ Tests in 8 GitHub-Repositories prüfen die interne Konsistenz der Theorie und die Übereinstimmung mit Beobachtungsdaten. Alle Tests bestehen mit 100% Erfolgsrate.
 
-**Stufe 2: Anti-Zirkularitaet.** Ein geschichtetes Protokoll stellt sicher, dass keine zirkulaere Argumentation vorliegt. Die Vorhersagen werden aus den Axiomen (phi, pi, N0) abgeleitet, bevor sie mit Daten verglichen werden.
+**Stufe 2: Anti-Zirkularität.** Ein geschichtetes Protokoll stellt sicher, dass keine zirkuläre Argumentation vorliegt. Die Vorhersagen werden aus den Axiomen (φ, π, N₀) abgeleitet, bevor sie mit Daten verglichen werden.
 
-**Stufe 3: Falsifizierbarkeit.** Explizite Kriterien definieren, welche Beobachtungen SSZ widerlegen wuerden. Diese Kriterien sind quantitativ und spezifisch.
+**Stufe 3: Falsifizierbarkeit.** Explizite Kriterien definieren, welche Beobachtungen SSZ widerlegen würden. Diese Kriterien sind quantitativ und spezifisch.
 
-### Fuer wen ist dieses Buch?
+### Für wen ist dieses Buch?
 
 Dieses Buch richtet sich an:
 
-**Physik-Studierende (ab Master-Niveau):** Das Buch setzt Kenntnisse in der Allgemeinen Relativitaetstheorie, der Quantenmechanik und der mathematischen Physik voraus. Die Ableitungen sind vollstaendig und nachvollziehbar.
+**Physik-Studierende (ab Master-Niveau):** Das Buch setzt Kenntnisse in der Allgemeinen Relativitätstheorie, der Quantenmechanik und der mathematischen Physik voraus. Die Ableitungen sind vollständig und nachvollziehbar.
 
-**Forschende in der Gravitationsphysik:** Das Buch praesentiert eine vollstaendige alternative Gravitationstheorie mit spezifischen, testbaren Vorhersagen. Es laedt zur kritischen Ueberpruefung und unabhaengigen Validierung ein.
+**Forschende in der Gravitationsphysik:** Das Buch präsentiert eine vollständige alternative Gravitationstheorie mit spezifischen, testbaren Vorhersagen. Es lädt zur kritischen Überprüfung und unabhängigen Validierung ein.
 
-**Wissenschaftsinteressierte mit physikalischem Hintergrund:** Die konzeptionellen Kapitel (insbesondere Kapitel 1-3 und 25-30) sind auch ohne tiefe mathematische Kenntnisse verstaendlich.
+**Wissenschaftsinteressierte mit physikalischem Hintergrund:** Die konzeptionellen Kapitel (insbesondere Kapitel 1-3 und 25-30) sind auch ohne tiefe mathematische Kenntnisse verständlich.
 
 ### Philosophische Implikationen von SSZ
 
 SSZ hat tiefgreifende philosophische Implikationen:
 
-**Determinismus:** In der ART endet die Vorhersagbarkeit am Ereignishorizont — die Physik jenseits des Horizonts ist prinzipiell unzugaenglich. In SSZ gibt es keinen solchen Informationshorizont. Die Physik ist ueberall vorhersagbar (wenn auch an der natuerlichen Grenze extrem schwer zu beobachten). SSZ ist daher deterministischer als die ART.
+**Determinismus:** In der ART endet die Vorhersagbarkeit am Ereignishorizont — die Physik jenseits des Horizonts ist prinzipiell unzugänglich. In SSZ gibt es keinen solchen Informationshorizont. Die Physik ist überall vorhersagbar (wenn auch an der natürlichen Grenze extrem schwer zu beobachten). SSZ ist daher deterministischer als die ART.
 
-**Realismus:** Die Singularitaet in der ART wird oft als Grenze der physikalischen Realitaet interpretiert — ein Punkt, an dem die Raumzeit aufhoert zu existieren. In SSZ existiert die Raumzeit ueberall (mit endlicher Segmentdichte), was eine realistischere Ontologie nahelegt.
+**Realismus:** Die Singularität in der ART wird oft als Grenze der physikalischen Realität interpretiert — ein Punkt, an dem die Raumzeit aufhört zu existieren. In SSZ existiert die Raumzeit überall (mit endlicher Segmentdichte), was eine realistischere Ontologie nahelegt.
 
-**Einfachheit:** SSZ hat null freie Parameter (verglichen mit 19 im Standardmodell und 0 in der ART). Die Theorie ist maximal einfach in dem Sinne, dass alle Vorhersagen aus drei mathematischen Eingaben (phi, pi, N0) folgen. Dies ist ein starkes Argument fuer SSZ nach dem Prinzip der Occam-Rasur.
+**Einfachheit:** SSZ hat null freie Parameter (verglichen mit 19 im Standardmodell und 0 in der ART). Die Theorie ist maximal einfach in dem Sinne, dass alle Vorhersagen aus drei mathematischen Eingaben (φ, π, N₀) folgen. Dies ist ein starkes Argument für SSZ nach dem Prinzip der Occam-Rasur.
 
-**Falsifizierbarkeit:** SSZ erfuellt das Poppersche Kriterium der Falsifizierbarkeit in vorbildlicher Weise: Die Theorie macht spezifische, quantitative Vorhersagen, die mit zukuenftigen Experimenten getestet werden koennen. Explizite Falsifikationskriterien sind in Kapitel 29 angegeben.
+**Falsifizierbarkeit:** SSZ erfüllt das Poppersche Kriterium der Falsifizierbarkeit in vorbildlicher Weise: Die Theorie macht spezifische, quantitative Vorhersagen, die mit zukünftigen Experimenten getestet werden können. Explizite Falsifikationskriterien sind in Kapitel 29 angegeben.
 
 ### Notation und Konventionen
 

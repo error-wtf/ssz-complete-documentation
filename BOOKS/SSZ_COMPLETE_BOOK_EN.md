@@ -36,21 +36,33 @@ The worked examples throughout the text are designed to build computational conf
 
 ### For Researchers
 
+Researchers familiar with GR will find the most relevant material in Part V (Strong Field) and Part VIII (Validation). The key differences between SSZ and GR are concentrated in the strong-field regime (r/r_s less than 3), where the segment density Ξ deviates significantly from the Schwarzschild metric predictions.
 
+The most important single result is the finite time dilation at the Schwarzschild radius: D_min = 0.555 (SSZ) versus D = 0 (GR). All other strong-field predictions follow from this difference. Researchers who wish to test SSZ against their own data can use the open-source repositories documented in Appendix D.
+
+### Collaboration Links
+
+| Repository | URL | Focus |
+|-----------|-----|-------|
+| Core Engine | github.com/error-wtf/segmented-calculation-suite | Ξ, D, regime, C² blend |
+| Qubit Corrections | github.com/error-wtf/ssz-qubits | GPS, Pound-Rebka, S2 |
+| Frequency Validation | github.com/error-wtf/frequency-curvature-validation | PPN, Shapiro, Cassini |
+| Gravitational Lensing | github.com/error-wtf/ssz-lensing | Lens equations |
+| Metric Tensor | github.com/error-wtf/ssz-metric-pure | 4D tensor, Einstein/Ricci |
+| Schumann Resonance | github.com/error-wtf/ssz-schumann | EM cavity scaling |
+| G79/Cygnus | github.com/error-wtf/g79-cygnus-tests | LBV nebula validation |
+| Paper Plots | github.com/error-wtf/ssz-paper-plots | Publication figures |
+| Unified Results | github.com/error-wtf/Segmented-Spacetime-Mass-Projection-Unified-Results | 25 test suites |
+| Theory Papers | github.com/error-wtf/SEGMENTED_SPACETIME | Primary papers |
+| Star Maps | github.com/error-wtf/Segmented-Spacetime-Starmaps | Star map validation |
+
+**Quick start:** `git clone` → `pip install -r requirements.txt` → `pytest -v`. All repos follow this convention. Total runtime < 90 seconds. No GPU required.
+
+**Contributions:** Pull requests welcome via GitHub. Contact: mail@error.wtf
 
 ### Notation and Conventions
 
 Throughout this book, we use the following notation conventions: c denotes the speed of light in vacuum (2.998 times 10^8 m/s), G denotes Newton's gravitational constant (6.674 times 10^{-11} m^3 kg^{-1} s^{-2}), hbar denotes the reduced Planck constant (1.055 times 10^{-34} J s), phi denotes the golden ratio (1.618034...), and pi denotes the ratio of circumference to diameter (3.14159...). The Schwarzschild radius is r_s = 2GM/c^2. The segment density is Xi (uppercase Greek xi). The time dilation factor is D = 1/(1 + Xi). The scaling factor is s = 1 + Xi = 1/D. The metric signature is (-,+,+,+). Natural units (c = G = hbar = 1) are not used; all formulas are written in SI units for clarity. Einstein summation convention is used for tensor indices where explicitly noted.
-
-
-
-
-Researchers familiar with GR will find the most relevant material in Part V (Strong Field) and Part VIII (Validation). The key differences between SSZ and GR are concentrated in the strong-field regime (r/r_s less than 3), where the segment density Xi deviates significantly from the Schwarzschild metric predictions. The validation chapters provide quantitative comparisons with published observational data, including specific predictions that can be tested with current and near-future instruments.
-
-The most important single result is the finite time dilation at the Schwarzschild radius: D_min = 0.555 (SSZ) versus D = 0 (GR). All other strong-field predictions follow from this difference. Researchers who wish to test SSZ against their own data can use the open-source repositories documented in Appendix D.
-
-
-
 
 The book is organized into eight parts plus appendices. Different readers will find different entry points most useful:
 
