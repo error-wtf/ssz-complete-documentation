@@ -160,7 +160,7 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 | Tests | 747+ validated, 200+ test files |
 | Documentation files | 56 MD files (this repo) |
 | Consistency checks | 171/171 PASS |
-| Book chapters | 32 (9 parts + appendices A–G) |
+
 
 ---
 
