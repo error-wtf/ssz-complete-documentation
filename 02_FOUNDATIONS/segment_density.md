@@ -129,10 +129,13 @@ This old formula appears in some early drafts. It is **permanently deprecated** 
 
 ## Cross-References
 
-- Time dilation: `02_FOUNDATIONS/time_dilation.md`
-- Regime definitions: `02_FOUNDATIONS/regime_definitions.md`
-- Full formula list: `03_FORMULAS/formula_compendium.md`
-- Test: `test_xi_calculations.py`, `test_xi_strong.py` in segmented-calculation-suite
+- [Time dilation D(r)](time_dilation.md) — D = 1/(1+Ξ)
+- [Regime definitions](regime_definitions.md) — 5 regimes, blend zone
+- [Regime vs formula domains](regime_and_formula_domain_clarification.md) — Why formula choice matters
+- [Formula compendium](../03_FORMULAS/formula_compendium.md) — Complete formula list
+- [Special values](../03_FORMULAS/special_values.md) — Ξ(rₛ)=0.802, D(rₛ)=0.555
+- [Forbidden formulas](../03_FORMULAS/forbidden_formulas.md) — Deprecated variants
+- Tests: `test_xi_calculations.py`, `test_xi_strong.py` in [segmented-calculation-suite](https://github.com/error-wtf/segmented-calculation-suite)
 
 ---
 

@@ -110,9 +110,14 @@ They are **probe radii** (test sampling points) for continuity checks in `unifie
 
 ## Cross-References
 
-- Segment density: `02_FOUNDATIONS/segment_density.md`
-- Hermite details: `03_FORMULAS/formula_compendium.md` §B.2
-- Test: `test_regime_definitions.py` in segmented-calculation-suite
+- [Segment density Ξ(r)](segment_density.md) — Weak, strong, blend formulas
+- [Regime vs formula domains](regime_and_formula_domain_clarification.md) — Why formula boundaries ≠ regime boundaries
+- [Coherence collapse](coherence_collapse.md) — g₁→g₂ irreversible transition
+- [Time dilation D(r)](time_dilation.md) — D = 1/(1+Ξ)
+- [Formula compendium §B.2](../03_FORMULAS/formula_compendium.md) — Hermite C² details
+- [Special values](../03_FORMULAS/special_values.md) — Ξ(rₛ)=0.802, D(rₛ)=0.555
+- [Forbidden formulas](../03_FORMULAS/forbidden_formulas.md) — Deprecated variants
+- Test: `test_regime_definitions.py` in [segmented-calculation-suite](https://github.com/error-wtf/segmented-calculation-suite)
 
 ---
 

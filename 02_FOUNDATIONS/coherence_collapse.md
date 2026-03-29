@@ -68,7 +68,14 @@ CORRECT: Use regime_selector(r) to pick automatically
 
 ## Relation to Other Sections
 
-- [Regime Definitions](regime_definitions.md) — complete table of all 5 regimes
-- [Segment Density Xi](segment_density.md) — both formulas
-- [phi-Lattice Discretization](phi_lattice_discretization.md) — why phi appears in Xi_g2
-- [Singularities Resolved](../06_STRONG_FIELD/singularities.md) — the g2 regime prevents divergence
+- [Regime Definitions](regime_definitions.md) — complete table of all 5 regimes, two-layer clarification
+- [Regime vs formula domains](regime_and_formula_domain_clarification.md) — Formula boundaries ≠ regime boundaries, numerical evidence
+- [Segment Density Xi](segment_density.md) — both formulas (g₁/g₂)
+- [Time dilation D(r)](time_dilation.md) — D = 1/(1+Ξ)
+- [phi-Lattice Discretization](phi_lattice_discretization.md) — why φ appears in Ξ_g2
+- [Singularities Resolved](../06_STRONG_FIELD/singularities.md) — the g₂ regime prevents divergence
+- [Forbidden formulas](../03_FORMULAS/forbidden_formulas.md) — Deprecated variants incl. Ξ=rₛ/(r−rₛ)
+
+---
+
+© 2025–2026 Carmen N. Wrede, Lino P. Casu

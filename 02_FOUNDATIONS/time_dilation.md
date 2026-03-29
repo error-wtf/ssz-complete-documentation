@@ -121,9 +121,21 @@ D_SSZ(r_s) = 1/(1 + 0.80171) = 0.55503
 
 | Test File | Repository | What it tests |
 |-----------|------------|---------------|
-| test_time_dilation.py | segmented-calculation-suite | D(r) computation |
-| test_dilation_finite.py | segmented-calculation-suite | D(r_s) > 0 |
-| test_validation.py | ssz-qubits | GPS, Pound-Rebka, S2 |
+| test_time_dilation.py | [segmented-calculation-suite](https://github.com/error-wtf/segmented-calculation-suite) | D(r) computation |
+| test_dilation_finite.py | [segmented-calculation-suite](https://github.com/error-wtf/segmented-calculation-suite) | D(r_s) > 0 |
+| test_validation.py | [ssz-qubits](https://github.com/error-wtf/ssz-qubits) | GPS, Pound-Rebka, S2 |
+
+---
+
+## Cross-References
+
+- [Segment density Ξ(r)](segment_density.md) — The field that determines D
+- [Regime definitions](regime_definitions.md) — 5 regimes, where each Ξ formula applies
+- [Regime vs formula domains](regime_and_formula_domain_clarification.md) — Formula boundaries ≠ regime boundaries
+- [Scaling factor s(r)](scaling_factor.md) — s = 1+Ξ = 1/D
+- [Special values](../03_FORMULAS/special_values.md) — D(rₛ)=0.555, Ξ(rₛ)=0.802
+- [Formula compendium](../03_FORMULAS/formula_compendium.md) — Complete formula list
+- [PPN formulas](../03_FORMULAS/ppn_formulas.md) — Lensing/Shapiro use PPN, not Ξ
 
 ---
 
