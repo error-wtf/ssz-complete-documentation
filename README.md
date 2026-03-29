@@ -3,7 +3,7 @@
 **Authors:** Carmen N. Wrede, Lino P. Casu
 **AI Assistants:** Bingsi, Akira
 **Status:** Canonical Reference — Single Source of Truth
-**Last Updated:** 2026-03-16
+**Last Updated:** 2026-03-29
 
 ---
 
@@ -51,13 +51,14 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 ### 02_FOUNDATIONS
 - [segment_density.md](02_FOUNDATIONS/segment_density.md) — Xi(r): weak, strong, blend formulas
 - [time_dilation.md](02_FOUNDATIONS/time_dilation.md) — D(r) = 1/(1+Xi)
-- [scaling_factor.md](02_FOUNDATIONS/scaling_factor.md) — s(r) = 1+Xi = 1/D ← **NEW**
-- [regime_definitions.md](02_FOUNDATIONS/regime_definitions.md) — 5 regimes, transition radii
+- [scaling_factor.md](02_FOUNDATIONS/scaling_factor.md) — s(r) = 1+Xi = 1/D
+- [regime_definitions.md](02_FOUNDATIONS/regime_definitions.md) — 5 regimes, transition radii, two-layer coherence collapse clarification
+- [regime_and_formula_domain_clarification.md](02_FOUNDATIONS/regime_and_formula_domain_clarification.md) — Formula domains vs physical regimes, numerical table, 6 common misunderstandings
 - [phi_geometry.md](02_FOUNDATIONS/phi_geometry.md) — Golden ratio in SSZ
-- [phi_lattice_discretization.md](02_FOUNDATIONS/phi_lattice_discretization.md) — φ-lattice x_k=φ^k, bracket theorem, QNM connection ← **NEW**
-- [intersection_invariance.md](02_FOUNDATIONS/intersection_invariance.md) — r*/r_s = 1.387, mass-independent ← **NEW**
-- [coherence_collapse.md](02_FOUNDATIONS/coherence_collapse.md) — g1→g2 irreversible transition ← **NEW**
-- [energy_conditions.md](02_FOUNDATIONS/energy_conditions.md) — WEC/DEC/SEC/NEC in SSZ, SEC violation ← **NEW**
+- [phi_lattice_discretization.md](02_FOUNDATIONS/phi_lattice_discretization.md) — φ-lattice x_k=φ^k, bracket theorem, QNM connection
+- [intersection_invariance.md](02_FOUNDATIONS/intersection_invariance.md) — r*/r_s = 1.387, mass-independent
+- [coherence_collapse.md](02_FOUNDATIONS/coherence_collapse.md) — g1→g2 irreversible transition
+- [energy_conditions.md](02_FOUNDATIONS/energy_conditions.md) — WEC/DEC/SEC/NEC in SSZ, SEC violation
 - [emergent_axes.md](02_FOUNDATIONS/emergent_axes.md) — Emergent coordinate axes
 - [euler_derivation.md](02_FOUNDATIONS/euler_derivation.md) — Euler identity connection
 - [fine_structure.md](02_FOUNDATIONS/fine_structure.md) — alpha = 1/137 derivation
@@ -68,10 +69,10 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 - [formula_compendium.md](03_FORMULAS/formula_compendium.md) — Complete formula list with origin + domain
 - [quick_reference.md](03_FORMULAS/quick_reference.md) — Top-10 formulas on one page
 - [symbol_table.md](03_FORMULAS/symbol_table.md) — All symbols defined
-- [ppn_formulas.md](03_FORMULAS/ppn_formulas.md) — PPN gamma=1, lensing, Shapiro — **CRITICAL** ← **NEW**
-- [worked_examples.md](03_FORMULAS/worked_examples.md) — Cassini, Mercury, GPS, NS calculations ← **NEW**
-- [unit_conversion_table.md](03_FORMULAS/unit_conversion_table.md) — SI/CGS/Natural units ← **NEW**
-- [special_values.md](03_FORMULAS/special_values.md) — Xi(r_s)=0.8017, D(r_s)=0.555, r*/r_s, phi-table ← **NEW**
+- [ppn_formulas.md](03_FORMULAS/ppn_formulas.md) — PPN gamma=1, lensing, Shapiro — **CRITICAL**
+- [worked_examples.md](03_FORMULAS/worked_examples.md) — Cassini, Mercury, GPS, NS calculations
+- [unit_conversion_table.md](03_FORMULAS/unit_conversion_table.md) — SI/CGS/Natural units
+- [special_values.md](03_FORMULAS/special_values.md) — Xi(r_s)=0.8017, D(r_s)=0.555, r*/r_s, phi-table
 - [phi_beta_calibration.md](03_FORMULAS/phi_beta_calibration.md) — Calibration curves
 - [forbidden_formulas.md](03_FORMULAS/forbidden_formulas.md) — Deprecated/wrong formulas to avoid
 
@@ -80,8 +81,8 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 - [lorentz_v0.md](04_KINEMATICS/lorentz_v0.md) — Lorentz factor at v=0
 - [kinematic_closure.md](04_KINEMATICS/kinematic_closure.md) — Kinematic closure condition
 - [frame_dragging.md](04_KINEMATICS/frame_dragging.md) — Lense-Thirring, Gravity Probe B
-- [geodesics.md](04_KINEMATICS/geodesics.md) — Geodesic equations, radial free-fall ← **NEW**
-- [orbital_mechanics.md](04_KINEMATICS/orbital_mechanics.md) — ISCO, photon sphere, effective potential ← **NEW**
+- [geodesics.md](04_KINEMATICS/geodesics.md) — Geodesic equations, radial free-fall
+- [orbital_mechanics.md](04_KINEMATICS/orbital_mechanics.md) — ISCO, photon sphere, effective potential
 
 ### 05_ELECTROMAGNETISM
 - [radial_scaling.md](05_ELECTROMAGNETISM/radial_scaling.md) — Radial scaling gauge for Maxwell fields
@@ -89,9 +90,9 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 - [light_travel_time.md](05_ELECTROMAGNETISM/light_travel_time.md) — Additive travel time correction
 - [maxwell_rotating.md](05_ELECTROMAGNETISM/maxwell_rotating.md) — Maxwell equations in rotating SSZ
 - [redshift.md](05_ELECTROMAGNETISM/redshift.md) — Gravitational redshift z = Delta_Xi
-- [energy_em_field.md](05_ELECTROMAGNETISM/energy_em_field.md) — EM energy in segment lattice, u = s^2*u_flat ← **NEW**
-- [shapiro_delay.md](05_ELECTROMAGNETISM/shapiro_delay.md) — Shapiro delay, PPN factor, Cassini ← **NEW**
-- [gravitational_lensing.md](05_ELECTROMAGNETISM/gravitational_lensing.md) — Lensing alpha=2r_s/b, Eddington, VLBI ← **NEW**
+- [energy_em_field.md](05_ELECTROMAGNETISM/energy_em_field.md) — EM energy in segment lattice, u = s^2*u_flat
+- [shapiro_delay.md](05_ELECTROMAGNETISM/shapiro_delay.md) — Shapiro delay, PPN factor, Cassini
+- [gravitational_lensing.md](05_ELECTROMAGNETISM/gravitational_lensing.md) — Lensing alpha=2r_s/b, Eddington, VLBI
 
 ### 06_STRONG_FIELD
 - [black_hole_metric.md](06_STRONG_FIELD/black_hole_metric.md) — SSZ Schwarzschild metric
@@ -100,11 +101,11 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 - [cosmic_censorship.md](06_STRONG_FIELD/cosmic_censorship.md) — SSZ version of cosmic censorship
 - [infalling_matter.md](06_STRONG_FIELD/infalling_matter.md) — Infalling matter, no freezing
 - [superradiance.md](06_STRONG_FIELD/superradiance.md) — Wave amplification in ergosphere
-- [rotating_black_holes.md](06_STRONG_FIELD/rotating_black_holes.md) — Kerr-SSZ, ergosphere, frame dragging ← **NEW**
-- [qnm_spectrum.md](06_STRONG_FIELD/qnm_spectrum.md) — QNM: f_SSZ/f_GR = 1.39, phi-lattice connection ← **NEW**
-- [isco_comparison.md](06_STRONG_FIELD/isco_comparison.md) — ISCO: SSZ r_ISCO = 2.95 r_s vs GR 3 r_s ← **NEW**
-- [penrose_process.md](06_STRONG_FIELD/penrose_process.md) — Penrose efficiency: SSZ 21.4% vs GR 20.71% ← **NEW**
-- [lagrangian_mechanics.md](06_STRONG_FIELD/lagrangian_mechanics.md) — Effective Lagrangian, Euler-Lagrange, orbit equations ← **NEW**
+- [rotating_black_holes.md](06_STRONG_FIELD/rotating_black_holes.md) — Kerr-SSZ, ergosphere, frame dragging
+- [qnm_spectrum.md](06_STRONG_FIELD/qnm_spectrum.md) — QNM: f_SSZ/f_GR = 1.39, phi-lattice connection
+- [isco_comparison.md](06_STRONG_FIELD/isco_comparison.md) — ISCO: SSZ r_ISCO = 2.95 r_s vs GR 3 r_s
+- [penrose_process.md](06_STRONG_FIELD/penrose_process.md) — Penrose efficiency: SSZ 21.4% vs GR 20.71%
+- [lagrangian_mechanics.md](06_STRONG_FIELD/lagrangian_mechanics.md) — Effective Lagrangian, Euler-Lagrange, orbit equations
 
 ### 07_VALIDATION
 - [test_methodology.md](07_VALIDATION/test_methodology.md) — Test framework, 260+ tests
@@ -112,11 +113,11 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 - [gr_vs_ssz_tables.md](07_VALIDATION/gr_vs_ssz_tables.md) — Side-by-side comparison tables
 - [curvature_detection.md](07_VALIDATION/curvature_detection.md) — Frequency curvature observables
 - [nebulae_validation.md](07_VALIDATION/nebulae_validation.md) — G79.29+0.46 LBV nebula (Cygnus X-1)
-- [gps_validation.md](07_VALIDATION/gps_validation.md) — GPS: +38.45 µs/day confirmed ← **NEW**
-- [cassini_test.md](07_VALIDATION/cassini_test.md) — Cassini: gamma=1.000021±0.000023 ← **NEW**
-- [mercury_precession.md](07_VALIDATION/mercury_precession.md) — Mercury: 42.98"/century confirmed ← **NEW**
-- [neutron_star_redshift.md](07_VALIDATION/neutron_star_redshift.md) — NS: z_SSZ=0.173 vs z_GR=0.236 ← **NEW**
-- [power_law_universal.md](07_VALIDATION/power_law_universal.md) — E/E_rest = 1+0.32*(r_s/R)^0.98, R²=0.997 ← **NEW**
+- [gps_validation.md](07_VALIDATION/gps_validation.md) — GPS: +38.45 µs/day confirmed
+- [cassini_test.md](07_VALIDATION/cassini_test.md) — Cassini: gamma=1.000021±0.000023
+- [mercury_precession.md](07_VALIDATION/mercury_precession.md) — Mercury: 42.98"/century confirmed
+- [neutron_star_redshift.md](07_VALIDATION/neutron_star_redshift.md) — NS: z_SSZ=0.173 vs z_GR=0.236
+- [power_law_universal.md](07_VALIDATION/power_law_universal.md) — E/E_rest = 1+0.32*(r_s/R)^0.98, R²=0.997
 
 ### 08_FALSIFICATION
 - [falsification_criteria.md](08_FALSIFICATION/falsification_criteria.md) — When SSZ is falsified
@@ -144,10 +145,10 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 - [glossary_en.md](12_GLOSSARY/glossary_en.md) — English terminology
 - [glossary_de.md](12_GLOSSARY/glossary_de.md) — German terminology
 
-### 13_FREQUENCY_FRAMEWORK ← **NEW SECTION**
-- [holonomy_invariants.md](13_FREQUENCY_FRAMEWORK/holonomy_invariants.md) — I_ABC=1, LISA connection, topological invariance ← **NEW**
-- [frequency_curvature.md](13_FREQUENCY_FRAMEWORK/frequency_curvature.md) — d²D/dr² = 4× GR, 3-clock measurement ← **NEW**
-- [future_experimental_prospects.md](13_FREQUENCY_FRAMEWORK/future_experimental_prospects.md) — Timeline 2024–2038: EHT, eXTP, ET, LISA, Athena ← **NEW**
+### 13_FREQUENCY_FRAMEWORK
+- [holonomy_invariants.md](13_FREQUENCY_FRAMEWORK/holonomy_invariants.md) — I_ABC=1, LISA connection, topological invariance
+- [frequency_curvature.md](13_FREQUENCY_FRAMEWORK/frequency_curvature.md) — d²D/dr² = 4× GR, 3-clock measurement
+- [future_experimental_prospects.md](13_FREQUENCY_FRAMEWORK/future_experimental_prospects.md) — Timeline 2024–2038: EHT, eXTP, ET, LISA, Athena
 
 ---
 
@@ -158,7 +159,7 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 | Papers | 25 primary + 7 additional |
 | Repositories | 35 total |
 | Tests | 747+ validated, 200+ test files |
-| Documentation files | 56 MD files (this repo) |
+| Documentation files | 57 MD files (this repo) |
 | Consistency checks | 171/171 PASS |
 
 
@@ -171,8 +172,9 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 3. **Quick card** → See [03_FORMULAS/quick_reference.md](03_FORMULAS/quick_reference.md)
 4. **Method selection** → Read [11_GUARDRAILS/prime_directive.md](11_GUARDRAILS/prime_directive.md)
 5. **Validation data** → Check [07_VALIDATION/gr_vs_ssz_tables.md](07_VALIDATION/gr_vs_ssz_tables.md)
-6. **φ-Lattice** → See [02_FOUNDATIONS/phi_lattice_discretization.md](02_FOUNDATIONS/phi_lattice_discretization.md)
-7. **Experimental timeline** → See [13_FREQUENCY_FRAMEWORK/future_experimental_prospects.md](13_FREQUENCY_FRAMEWORK/future_experimental_prospects.md)
+6. **Regime vs formula domains?** → Read [02_FOUNDATIONS/regime_and_formula_domain_clarification.md](02_FOUNDATIONS/regime_and_formula_domain_clarification.md)
+7. **φ-Lattice** → See [02_FOUNDATIONS/phi_lattice_discretization.md](02_FOUNDATIONS/phi_lattice_discretization.md)
+8. **Experimental timeline** → See [13_FREQUENCY_FRAMEWORK/future_experimental_prospects.md](13_FREQUENCY_FRAMEWORK/future_experimental_prospects.md)
 
 ---
 
