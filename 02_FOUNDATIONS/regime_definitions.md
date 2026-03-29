@@ -64,11 +64,27 @@ This guarantees:
 The transition from weak (g₁) to strong (g₂) is **unidirectional**:
 
 ```
-g₁ → g₂: Irreversible
-g₂ → g₁: FORBIDDEN
+g₁ → g₂: Irreversible (spacetime regime assignment)
+g₂ → g₁: FORBIDDEN (spacetime does not spontaneously de-segment)
 ```
 
-This is a fundamental postulate, not a computational convenience. Once spacetime enters the strong-field segmentation regime, it does not spontaneously return to weak-field behavior.
+This is a fundamental postulate, not a computational convenience. Once a region of spacetime enters the strong-field segmentation regime, it does not spontaneously return to weak-field behavior.
+
+### Important Clarification: Two Layers of Transition
+
+SSZ distinguishes two conceptually different processes that must not be conflated:
+
+**Layer 1 — Spacetime regime assignment (irreversible):**
+Once a spatial region acquires g₂ segmentation (e.g., by gravitational collapse), the regime label is permanent. The spacetime itself does not "un-segment." This is what "g₂ → g₁: FORBIDDEN" means.
+
+**Layer 2 — Matter/radiation moving through regimes (physical process):**
+Matter and radiation CAN physically move from a g₂ region outward into g₁ space (e.g., during supernova explosion, black hole ringdown, or metric perturbation emission). When this happens, the coherence structure of the segment lattice undergoes an **irreversible collapse** — the ordered g₂ packing is destroyed as the material expands into the disordered g₁ environment. This process is described in detail in Book Chapter 25.
+
+The g₂ → g₁ coherence collapse (Layer 2) is NOT the reversal of the g₁ → g₂ regime assignment (Layer 1). It is a distinct, entropy-producing physical process analogous to melting: the spacetime region remains g₂, but matter ejected from it loses its coherent segment structure as it enters g₁ space. ΔS_seg > 0 always.
+
+**Summary:**
+- Spacetime regime: g₁ → g₂ irreversible, g₂ → g₁ forbidden
+- Matter motion: matter CAN move from g₂ regions to g₁ regions; when it does, coherence collapses irreversibly (ΔS > 0)
 
 ---
 
