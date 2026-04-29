@@ -3,7 +3,7 @@
 **Authors:** Carmen N. Wrede, Lino P. Casu
 **AI Assistants:** Bingsi, Akira
 **Status:** Canonical Reference — Single Source of Truth
-**Last Updated:** 2026-03-29
+**Last Updated:** 2026-04-29
 
 ---
 
@@ -16,7 +16,7 @@ Segmented Spacetime (SSZ) is a falsifiable extension of General Relativity (GR) 
 D_SSZ(r) = 1 / (1 + Ξ(r))
 ```
 
-At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (singularity).
+At the Schwarzschild radius: **D(r_s) ≈ 0.55503** (finite!) vs GR: D(r_s) = 0 (singularity).
 
 ---
 
@@ -72,7 +72,7 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 - [ppn_formulas.md](03_FORMULAS/ppn_formulas.md) — PPN gamma=1, lensing, Shapiro — **CRITICAL**
 - [worked_examples.md](03_FORMULAS/worked_examples.md) — Cassini, Mercury, GPS, NS calculations
 - [unit_conversion_table.md](03_FORMULAS/unit_conversion_table.md) — SI/CGS/Natural units
-- [special_values.md](03_FORMULAS/special_values.md) — Xi(r_s)=0.8017, D(r_s)=0.555, r*/r_s, phi-table
+- [special_values.md](03_FORMULAS/special_values.md) — Xi(r_s)=0.80171, D(r_s)=0.55503, r*/r_s=1.387, phi-table
 - [phi_beta_calibration.md](03_FORMULAS/phi_beta_calibration.md) — Calibration curves
 - [forbidden_formulas.md](03_FORMULAS/forbidden_formulas.md) — Deprecated/wrong formulas to avoid
 
@@ -96,7 +96,7 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 
 ### 06_STRONG_FIELD
 - [black_hole_metric.md](06_STRONG_FIELD/black_hole_metric.md) — SSZ Schwarzschild metric
-- [singularities.md](06_STRONG_FIELD/singularities.md) — Singularity resolution, D(r_s)=0.555
+- [singularities.md](06_STRONG_FIELD/singularities.md) — Singularity resolution, D(r_s)=0.55503
 - [dark_star.md](06_STRONG_FIELD/dark_star.md) — Dark star (no true horizon)
 - [cosmic_censorship.md](06_STRONG_FIELD/cosmic_censorship.md) — SSZ version of cosmic censorship
 - [infalling_matter.md](06_STRONG_FIELD/infalling_matter.md) — Infalling matter, no freezing
@@ -108,7 +108,7 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 - [lagrangian_mechanics.md](06_STRONG_FIELD/lagrangian_mechanics.md) — Effective Lagrangian, Euler-Lagrange, orbit equations
 
 ### 07_VALIDATION
-- [test_methodology.md](07_VALIDATION/test_methodology.md) — Test framework, 260+ tests
+- [test_methodology.md](07_VALIDATION/test_methodology.md) — Test framework, 1296 tests / 100% PASS
 - [consistency_checks.md](07_VALIDATION/consistency_checks.md) — 171/171 consistency checks
 - [gr_vs_ssz_tables.md](07_VALIDATION/gr_vs_ssz_tables.md) — Side-by-side comparison tables
 - [curvature_detection.md](07_VALIDATION/curvature_detection.md) — Frequency curvature observables
@@ -158,10 +158,9 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 |--------|-------|
 | Papers | 25 primary + 7 additional |
 | Repositories | 35 total |
-| Tests | 747+ validated, 200+ test files |
+| Tests | **1,296 / 1,296 PASS (100%)** |
 | Documentation files | 57 MD files (this repo) |
 | Consistency checks | 171/171 PASS |
-
 
 ---
 
