@@ -10,24 +10,24 @@
 | # | Repository | Description | Tests | Branch |
 |---|-----------|-------------|-------|--------|
 | 1 | [segmented-calculation-suite](https://github.com/error-wtf/segmented-calculation-suite) | Core SSZ engine: Ξ, D, z, regime, C² blend | 158 | main |
-| 2 | [Unified-Results](https://github.com/error-wtf/Segmented-Spacetime-Mass-Projection-Unified-Results) | Unified test framework, 25 suites | 139 | main |
+| 2 | [Unified-Results](https://github.com/error-wtf/Segmented-Spacetime-Mass-Projection-Unified-Results) | Unified test framework, 25 suites | 147 | main |
 | 3 | [ssz-qubits](https://github.com/error-wtf/ssz-qubits) | Qubit corrections, GPS, Pound-Rebka, S2 — 184/184 PASS | 184 | main |
-| 4 | [frequency-curvature-validation](https://github.com/error-wtf/frequency-curvature-validation) | PPN, Shapiro, lensing, Cassini — 56/56 PASS | 56 | main |
+| 4 | [frequency-curvature-validation](https://github.com/error-wtf/frequency-curvature-validation) | PPN, Shapiro, lensing, Cassini — 82/82 PASS | 82 | main |
 | 5 | [ssz-lensing](https://github.com/error-wtf/ssz-lensing) | Gravitational lensing — 279/279 PASS | 279 | master |
-| 6 | [ssz-metric-pure](https://github.com/error-wtf/ssz-metric-pure) | 4D metric tensor, Einstein/Ricci (SSZ only) | 46 | main |
+| 6 | [ssz-metric-pure](https://github.com/error-wtf/ssz-metric-pure) | 4D metric tensor, Einstein/Ricci (SSZ only) | 36 | main |
 | 7 | [ssz-metric-final](https://github.com/error-wtf/ssz-metric-final) | Singularity-free BH solution *(private)* | — | master |
 | 8 | [ssz-full-metric](https://github.com/error-wtf/ssz-full-metric) | Full metric package *(private)* | — | master |
-| 9 | [ssz-schumann](https://github.com/error-wtf/ssz-schumann) | Schumann resonance, SSZ scaling | 191 | main |
+| 9 | [ssz-schumann](https://github.com/error-wtf/ssz-schumann) | Schumann resonance, SSZ scaling | 178 | main |
 | 10 | [g79-cygnus-tests](https://github.com/error-wtf/g79-cygnus-tests) | G79.29+0.46 LBV nebula validation — 5/5 PASS | 5 | main |
-| 11 | [ssz-paper-plots](https://github.com/error-wtf/ssz-paper-plots) | Paper plot generation | 6 | main |
-| 12 | [segmented-energy](https://github.com/error-wtf/segmented-energy) | Energy analysis, 129 astronomical objects | 6 | main |
-| 13 | [Starmaps](https://github.com/error-wtf/Segmented-Spacetime-Starmaps) | Star map validation, SSZ physics plots | 46 | main |
+| 11 | [ssz-paper-plots](https://github.com/error-wtf/ssz-paper-plots) | Paper plot generation (figures only) | — | main |
+| 12 | [segmented-energy](https://github.com/error-wtf/segmented-energy) | Energy analysis, 129 astronomical objects | 7 | main |
+| 13 | [Starmaps](https://github.com/error-wtf/Segmented-Spacetime-Starmaps) | Star map validation, SSZ physics plots | — | main |
 | 14 | [SEGMENTED_SPACETIME](https://github.com/error-wtf/SEGMENTED_SPACETIME) | Theory papers (no code) | — | main |
 | 15 | [emergent-spacetime](https://github.com/error-wtf/emergent-spacetime) | Emergent spatial axes from temporal interference | — | main |
 | 16 | [ssz-complete-documentation](https://github.com/error-wtf/ssz-complete-documentation) | This documentation repository | — | main |
 | 17 | [ssz-lagrange](https://github.com/error-wtf/ssz-lagrange) | Lagrange formulation, Kerr analog, quantum corrections — 54/54 PASS | 54 | main |
 | 18 | [ssz-trajectories](https://github.com/error-wtf/ssz-trajectories) | Geodesic trajectory integration — 63/63 PASS | 63 | main |
-| 19 | [ssz-all-tests](https://github.com/error-wtf/ssz-all-tests) | Central orchestration: clones + runs all repos, 1125+ tests | — | main |
+| 19 | [ssz-all-tests](https://github.com/error-wtf/ssz-all-tests) | Central orchestration: run_all_live.py — 1296/1296 PASS | — | main |
 
 ---
 
@@ -93,8 +93,8 @@ Live counts from `ssz-all-tests` run 2026-04-29:
 | SSZ-specific repos (public) | 16 |
 | SSZ-specific repos (private) | 2 (ssz-metric-final, ssz-full-metric) |
 | Central test orchestrator | ssz-all-tests |
-| Total test functions (live run) | 1,125+ passed, 3 platform-specific |
-| Pass rate | 99.7% |
+| Total test functions (live run) | **1,296 / 1,296 PASS** |
+| Pass rate | **100%** |
 | Total assertions | ~1,918 |
 
 ---

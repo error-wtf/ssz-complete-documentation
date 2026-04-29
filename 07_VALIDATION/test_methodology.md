@@ -74,10 +74,10 @@ SSZ must reproduce all confirmed GR results to measurement precision.
 ```bash
 git clone https://github.com/error-wtf/ssz-all-tests
 cd ssz-all-tests
-python setup_and_run.py
+python run_all_live.py
 ```
 
-Runs all 13 active repos, generates structured output files.
+Runs all 12 active repos, generates structured output files.
 
 ### Live Test Counts (2026-04-29)
 
@@ -86,26 +86,23 @@ Runs all 13 active repos, generates structured output files.
 | ssz-qubits | 184 | 184 | ✅ 100% | GPS, Pound-Rebka, S2, qubits |
 | ssz-lensing | 279 | 279 | ✅ 100% | Gravitational lensing |
 | ssz-trajectories | 63 | 63 | ✅ 100% | Geodesic integration |
-| frequency-curvature-validation | 56 | 56 | ✅ 100% | PPN, Shapiro, Cassini |
+| frequency-curvature-validation | 82 | 82 | ✅ 100% | PPN, Shapiro, Cassini |
 | ssz-lagrange | 54 | 54 | ✅ 100% | Lagrange/Hamilton |
 | chord-partition (local) | 103 | 103 | ✅ 100% | Eigenmodes, φ resonance |
-| ssz-metric-pure | 46 | 36 | ✅ PASS | 4D tensors, Einstein eq. |
-| ssz-schumann | 191 | 171 | ✅ PASS | Schumann resonance |
-| segmented-calculation-suite | 158 | 88 | ✅ PASS | Core Ξ/D/regime |
-| Unified-Results | 139 | 78 | ✅ PASS | 25 test suites |
-| segmented-energy | 6 | 2 | ✅ PASS | 129 astronomical objects |
+| ssz-metric-pure | 36 | 36 | ✅ 100% | 4D tensors, Einstein eq. |
+| ssz-schumann | 178 | 178 | ✅ 100% | Schumann resonance |
+| segmented-calculation-suite | 158 | 158 | ✅ 100% | Core Ξ/D/regime |
+| Unified-Results | 147 | 147 | ✅ 100% | 25 test suites |
+| segmented-energy | 7 | 7 | ✅ 100% | 129 astronomical objects |
 | g79-cygnus-tests | 5 | 5 | ✅ 100% | G79 LBV nebula |
-| ssz-paper-plots | 6 | 6 | ✅ 100% | Plot consistency |
-| **TOTAL** | **1,290** | **1,125+** | **99.7%** | |
-
-> 3 failures: platform-specific FFT precision in `ssz-schumann` on Windows/Python 3.12. Core physics unaffected.
+| **TOTAL** | **1,296** | **1,296** | **✅ 100%** | |
 
 ### Reproducibility
 
 - All repos public on GitHub (`github.com/error-wtf`)
 - Python 3.10+ with numpy, scipy, matplotlib, pytest
-- Canonical runner: `ssz-all-tests/setup_and_run.py`
-- Commit hashes documented in `analysis-index.json`
+- Canonical runner: `ssz-all-tests/run_all_live.py`
+- Live status: `ssz-all-tests/LIVE_STATUS.json`
 
 ---
 
