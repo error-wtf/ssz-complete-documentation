@@ -119,6 +119,8 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 - [mercury_precession.md](07_VALIDATION/mercury_precession.md) — Mercury: 42.98"/century confirmed
 - [neutron_star_redshift.md](07_VALIDATION/neutron_star_redshift.md) — NS: z_SSZ=0.173 vs z_GR=0.236
 - [power_law_universal.md](07_VALIDATION/power_law_universal.md) — E/E_rest = 1+0.32*(r_s/R)^0.98, R²=0.997
+- [ligo_gw240925_v0_pipeline.md](07_VALIDATION/ligo_gw240925_v0_pipeline.md) — GW240925 O4b forward model pipeline (EXPLORATORY, no claim) — data: [Zenodo 18600070](https://zenodo.org/records/18600070)
+- [ligo_final_interpretation_lock.md](07_VALIDATION/ligo_final_interpretation_lock.md) — Locked interpretation of LIGO pipeline results
 
 ### 08_FALSIFICATION
 - [falsification_criteria.md](08_FALSIFICATION/falsification_criteria.md) — When SSZ is falsified
