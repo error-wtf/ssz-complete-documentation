@@ -15,7 +15,8 @@
 | PSR J0030+0451 | NS | 3.06 | 0.819 | 0.790 | **-3.5%** | strong |
 | PSR J0740+6620 | NS | 2.23 | 0.742 | 0.697 | **-6.1%** | strong |
 | PSR J0348+0432 | NS | 2.10 | 0.724 | 0.674 | **-6.9%** | strong |
-| Universal intersection | — | 1.595 | 0.611 | 0.611 | **0.0%** | blend |
+| D-intersection (decay/global) | — | 1.595 | 0.611 | 0.611 | **0.0%** | comparison |
+| D-intersection (saturation/local) | — | 1.387 | 0.528 | 0.528 | **0.0%** | comparison |
 | Schwarzschild radius | BH | 1.00 | 0.000 (∞) | **0.555** | **∞** | very_close |
 
 ---

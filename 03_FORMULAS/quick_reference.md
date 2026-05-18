@@ -7,8 +7,9 @@
 ## Core Formulas
 
 ```
-Ξ_weak(r)   = r_s / (2r)              [r/r_s > 10]
-Ξ_strong(r) = min(1 - exp(-φ·r/r_s), Ξ_max)  [r/r_s < 1.8]
+Ξ_weak(r)   = r_s / (2r)                  [outer/g1 branch]
+Ξ_decay(r)  = 1 - exp(-φ·r_s/r)            [inner/g2 branch in segcalc]
+Ξ_sat(r)    = min(1 - exp(-φ·r/r_s), Ξ_max) [local saturation form]
 D(r)        = 1 / (1 + Ξ(r))
 s(r)        = 1 + Ξ(r) = 1/D(r)
 z(r)        = Ξ(r)
@@ -19,7 +20,8 @@ r_s         = 2GM/c²
 
 ```
 Ξ(r_s) = 0.802    D(r_s) = 0.555    z(r_s) = 0.802
-r*/r_s = 1.595     φ = 1.618          φ/2 = 0.809
+r*/r_s = 1.594811 (decay/global) / 1.386562 (saturation/local)
+φ = 1.618          φ/2 = 0.809
 β = 1              γ = 1
 ```
 
@@ -34,11 +36,11 @@ TIMELIKE (orbits) → PPN (β,γ)
 ## Regime Boundaries
 
 ```
-very_close:    r/r_s < 1.8    → Ξ_strong
+very_close:    r/r_s < 1.8    → g2 / inner exponential
 blended:       1.8 – 2.2      → Hermite C²
-photon_sphere: 2.2 – 3.0      → Ξ_strong
-strong:        3.0 – 10.0     → Ξ_strong
-weak:          > 10.0         → Ξ_weak
+photon_sphere: 2.2 – 3.0      → physical regime, g1 branch
+strong:        3.0 – 10.0     → physical regime, g1 branch
+weak:          > 10.0         → g1 / weak field
 ```
 
 ## PPN Formulas

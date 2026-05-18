@@ -26,14 +26,14 @@ Known patterns that look like errors but are design features:
 
 ### 2. "Two different r* values!"
 **Pattern:** r*/r_s = 1.595 in one place, 1.387 in another
-**Reality:** Different Ξ formulas have different GR intersection points:
-- 1.595: Ξ_weak ∩ D_GR
-- 1.387: Ξ_strong ∩ D_GR
-**Fix:** Identify which Ξ form is being used.
+**Reality:** Different Ξ forms have different `D_SSZ = D_GR` intersection points:
+- 1.594811: decay/global comparison, `Xi_A(x)=1-exp(-phi/x)`, `D*=0.610710`
+- 1.386562: saturation/local comparison, `Xi_B(x)=1-exp(-phi*x)`, `D*=0.528007`
+**Fix:** Identify which Xi form and which repo/paper context is being used. Do not describe either as `Xi_weak = Xi_strong` unless the source explicitly defines that proxy.
 
 ### 3. "Ξ values don't match between repos!"
 **Pattern:** ssz-qubits gives Ξ=0.167 at r/r_s=3, ssz-metric-pure gives Ξ=0.259
-**Reality:** qubits uses Ξ_weak, metric-pure uses Ξ_strong
+**Reality:** repos can use different documented scopes: weak-field g1, inner exponential, local saturation, or full blend.
 **Fix:** Check repo scope before comparing.
 
 ### 4. "D_SSZ ≠ D_GR everywhere!"

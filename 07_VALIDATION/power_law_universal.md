@@ -98,7 +98,7 @@ For Sun: `r_s/R_sun = 2953/6.96e8 = 4.24e-6`, giving `E/E_rest - 1 = 1.35e-6` (b
 
 ## Connection to Intersection Value
 
-At the universal intersection r*/r_s = 1.387, a hypothetical object with R = r* would have:
+At the saturation/local D-intersection r*/r_s = 1.387, a hypothetical object with R = r* would have:
 ```
 E/E_rest = 1 + 0.3187 * (r_s/(1.387*r_s))^0.9821
          = 1 + 0.3187 * (1/1.387)^0.9821

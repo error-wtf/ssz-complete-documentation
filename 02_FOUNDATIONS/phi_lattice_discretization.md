@@ -21,11 +21,13 @@ where `phi = (1+sqrt(5))/2 = 1.618034...` is the golden ratio.
 | k | r/r_s  | Xi_SSZ | D_SSZ | D_GR  | Regime                  |
 |---|--------|--------|-------|-------|-------------------------|
 | 0 | 1.000  | 0.8017 | 0.555 | 0     | Natural boundary        |
-| 1 | 1.618  | 0.457  | 0.686 | 0.786 | Near photon sphere      |
-| 2 | 2.618  | 0.299  | 0.770 | 0.882 | Near ISCO               |
-| 3 | 4.236  | 0.192  | 0.839 | 0.929 | Blend zone              |
-| 4 | 6.854  | 0.121  | 0.892 | 0.963 | Strong field            |
-| 5 | 11.09  | 0.045  | 0.957 | 0.982 | Weak field onset        |
+| 1 | 1.618  | 0.632  | 0.613 | 0.618 | Phi bracket edge        |
+| 2 | 2.618  | 0.191  | 0.840 | 0.786 | Photon-sphere regime    |
+| 3 | 4.236  | 0.118  | 0.894 | 0.874 | Strong regime           |
+| 4 | 6.854  | 0.073  | 0.932 | 0.924 | Strong regime           |
+| 5 | 11.09  | 0.045  | 0.957 | 0.954 | Weak field onset        |
+
+The table follows the current formula-domain rule: inner decay form below `1.8`, Hermite blend from `1.8` to `2.2`, and the g1/weak-form branch above `2.2`.
 
 ## Bracket Theorem
 
@@ -33,7 +35,12 @@ where `phi = (1+sqrt(5))/2 = 1.618034...` is the golden ratio.
 r* in [r_s, phi * r_s]
 ```
 
-A sign change of `Xi_weak - Xi_strong` is **guaranteed** to exist within this bracket. The intersection `r*/r_s = 1.387` lies strictly between 1.000 and 1.618.
+The invariant statement is that both documented `D_SSZ = D_GR` comparison points lie inside this bracket:
+
+- decay/global form: `r*/r_s = 1.594811`
+- saturation/local form: `r*/r_s = 1.386562`
+
+This is not a generic `Xi_weak = Xi_strong` regime-boundary equation.
 
 ## Algebraic Identity
 
@@ -77,9 +84,9 @@ Start from the segment counting condition: the number of complete segments N(r) 
 
 ```
 Xi_SSZ(r_s)        = 1 - exp(-phi)      = 0.80171
-Xi_SSZ(phi * r_s)  = 1 - exp(-phi^2)    = 0.9281  [WRONG: use weak field here]
-Xi_weak(phi * r_s) = r_s/(2*phi*r_s)    = 1/(2*phi) = 0.3090
-D_SSZ(phi * r_s)   = 1/(1 + 0.3090)     = 0.764
+Xi_decay(phi*r_s)  = 1 - exp(-1)        = 0.63212
+D_SSZ(phi*r_s)     = 1/(1 + 0.63212)    = 0.61270
+D_GR(phi*r_s)      = 1/phi              = 0.61803
 ```
 
 ## Relation to Other Sections
@@ -88,5 +95,5 @@ D_SSZ(phi * r_s)   = 1/(1 + 0.3090)     = 0.764
 - [Time Dilation D](time_dilation.md) — D(r) = 1/(1+Xi)
 - [Regime Definitions](regime_definitions.md) — which formula applies at each lattice point
 - [Structural Constants](structural_constants.md) — phi value and derivation
-- [Intersection Invariance](intersection_invariance.md) — r*/r_s = 1.387 within the bracket
+- [Intersection Invariance](intersection_invariance.md) — both r*/r_s comparisons lie within the bracket
 - [QNM Spectrum](../06_STRONG_FIELD/qnm_spectrum.md) — observable consequences

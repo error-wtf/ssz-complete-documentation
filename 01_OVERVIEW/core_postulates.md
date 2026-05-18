@@ -83,7 +83,7 @@ Not all observables use the same formula. SSZ mandates:
 SSZ has exactly **zero** tunable fitting parameters:
 - φ is a mathematical constant
 - β, γ are PPN parameters (both = 1)
-- Regime boundaries are derived from Ξ_weak = Ξ_strong intersection
+- Formula-domain boundaries are fixed by the canonical 1.8/2.2 blend rule; `r*` values are derived `D_SSZ = D_GR` comparisons for declared Xi forms
 - Mass-dependent correction Δ(M) follows from φ-geometry
 
 If SSZ predictions are wrong, SSZ is wrong — there is no knob to turn.

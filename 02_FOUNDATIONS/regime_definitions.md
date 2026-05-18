@@ -8,13 +8,15 @@
 
 SSZ defines five regimes based on the ratio r/r_s (distance to Schwarzschild radius):
 
-| Regime | r/r_s range | Ξ formula | Physical context |
-|--------|------------|-----------|------------------|
-| **very_close** | < 1.8 | Ξ_strong = min(1-exp(-φr/r_s), Ξ_max) | At/near horizon |
+| Regime | r/r_s range | Operative Xi branch | Physical context |
+|--------|------------|---------------------|------------------|
+| **very_close** | < 1.8 | g2 / inner exponential | At/near horizon |
 | **blended** | 1.8–2.2 | Hermite C² interpolation | Smooth transition |
-| **photon_sphere** | 2.2–3.0 | Ξ_strong | Photon orbit zone |
-| **strong** | 3.0–10.0 | Ξ_strong | Neutron stars, compact objects |
+| **photon_sphere** | 2.2–3.0 | g1 formula, photon-sphere regime | Photon orbit zone |
+| **strong** | 3.0–10.0 | g1 formula, strong physical regime | Neutron stars, compact objects |
 | **weak** | > 10.0 | Ξ_weak = r_s/(2r) | Solar System, GPS, stars |
+
+The operative formula domain and the physical regime label are not identical. Above `r/r_s=2.2`, the current calculation branch uses the g1/weak-form expression for Xi, but the physical regime is still "photon_sphere" up to 3.0 and "strong" up to 10.0.
 
 ---
 
@@ -28,13 +30,13 @@ The wrong formula in the wrong regime produces incorrect results. This is the mo
 def get_regime(r, r_s):
     ratio = r / r_s
     if ratio < 1.8:
-        return 'very_close'   # Ξ_strong
+        return 'very_close'   # g2 / inner exponential
     elif ratio <= 2.2:
         return 'blended'      # Hermite C²
     elif ratio <= 3.0:
-        return 'photon_sphere' # Ξ_strong
+        return 'photon_sphere' # physical regime; operative branch is g1
     elif ratio <= 10.0:
-        return 'strong'       # Ξ_strong
+        return 'strong'       # physical regime; operative branch is g1
     else:
         return 'weak'         # Ξ_weak
 ```
@@ -56,6 +58,8 @@ This guarantees:
 - **C² continuity:** d²Ξ/dr² matches at both boundaries
 
 **Never mix formulas without an explicit blend rule.**
+
+For the exact formula-domain table, see [regime and formula domain clarification](regime_and_formula_domain_clarification.md). That file is authoritative for deciding which `Xi` branch is evaluated.
 
 ---
 

@@ -59,21 +59,20 @@ SSZ deviates from GR **only** in the strong field (r/r_s < ~10):
 
 ---
 
-## The Universal Intersection
+## D-Intersection Comparisons
 
-SSZ and GR **exactly agree** at one special radius:
+SSZ and GR agree at mass-independent comparison radii. The numerical value depends on the declared Xi form:
 ```
-r*/r_s = 1.59481
-D_SSZ(r*) = D_GR(r*) = 0.61071
+r*/r_s = 1.594811,  D* = 0.610710  for Xi_A(x)=1-exp(-phi/x)
+r*/r_s = 1.386562,  D* = 0.528007  for Xi_B(x)=1-exp(-phi*x)
 ```
 
-This intersection point is:
+These intersection points are:
 - Mass-independent (purely geometric)
-- Derived from Ξ_weak(r) = Ξ_strong(r), not fitted
-- An exact, testable prediction
+- Derived from `D_SSZ = D_GR`, not fitted
+- Meaningful only when the Xi form is stated
 
-Below r*, SSZ gives *higher* time dilation than GR (D_SSZ > D_GR).
-Above r*, the two converge.
+They are not hard regime boundaries. The operative blend remains fixed at `1.8 <= r/r_s <= 2.2`.
 
 ---
 

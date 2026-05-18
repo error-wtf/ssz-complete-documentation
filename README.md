@@ -3,7 +3,7 @@
 **Authors:** Carmen N. Wrede, Lino P. Casu
 **AI Assistants:** Bingsi, Akira
 **Status:** Canonical Reference — Single Source of Truth
-**Last Updated:** 2026-05-08
+**Last Updated:** 2026-03-29
 
 ---
 
@@ -16,7 +16,7 @@ Segmented Spacetime (SSZ) is a falsifiable extension of General Relativity (GR) 
 D_SSZ(r) = 1 / (1 + Ξ(r))
 ```
 
-At the Schwarzschild radius: **D(r_s) ≈ 0.55503** (finite!) vs GR: D(r_s) = 0 (singularity).
+At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (singularity).
 
 ---
 
@@ -56,7 +56,7 @@ At the Schwarzschild radius: **D(r_s) ≈ 0.55503** (finite!) vs GR: D(r_s) = 0 
 - [regime_and_formula_domain_clarification.md](02_FOUNDATIONS/regime_and_formula_domain_clarification.md) — Formula domains vs physical regimes, numerical table, 6 common misunderstandings
 - [phi_geometry.md](02_FOUNDATIONS/phi_geometry.md) — Golden ratio in SSZ
 - [phi_lattice_discretization.md](02_FOUNDATIONS/phi_lattice_discretization.md) — φ-lattice x_k=φ^k, bracket theorem, QNM connection
-- [intersection_invariance.md](02_FOUNDATIONS/intersection_invariance.md) — r*/r_s = 1.387, mass-independent
+- [intersection_invariance.md](02_FOUNDATIONS/intersection_invariance.md) — two mass-independent r*/r_s comparisons: 1.594811 and 1.386562
 - [coherence_collapse.md](02_FOUNDATIONS/coherence_collapse.md) — g1→g2 irreversible transition
 - [energy_conditions.md](02_FOUNDATIONS/energy_conditions.md) — WEC/DEC/SEC/NEC in SSZ, SEC violation
 - [emergent_axes.md](02_FOUNDATIONS/emergent_axes.md) — Emergent coordinate axes
@@ -72,7 +72,7 @@ At the Schwarzschild radius: **D(r_s) ≈ 0.55503** (finite!) vs GR: D(r_s) = 0 
 - [ppn_formulas.md](03_FORMULAS/ppn_formulas.md) — PPN gamma=1, lensing, Shapiro — **CRITICAL**
 - [worked_examples.md](03_FORMULAS/worked_examples.md) — Cassini, Mercury, GPS, NS calculations
 - [unit_conversion_table.md](03_FORMULAS/unit_conversion_table.md) — SI/CGS/Natural units
-- [special_values.md](03_FORMULAS/special_values.md) — Xi(r_s)=0.80171, D(r_s)=0.55503, r*/r_s=1.387, phi-table
+- [special_values.md](03_FORMULAS/special_values.md) — Xi(r_s)=0.8017, D(r_s)=0.555, r*/r_s, phi-table
 - [phi_beta_calibration.md](03_FORMULAS/phi_beta_calibration.md) — Calibration curves
 - [forbidden_formulas.md](03_FORMULAS/forbidden_formulas.md) — Deprecated/wrong formulas to avoid
 
@@ -96,7 +96,7 @@ At the Schwarzschild radius: **D(r_s) ≈ 0.55503** (finite!) vs GR: D(r_s) = 0 
 
 ### 06_STRONG_FIELD
 - [black_hole_metric.md](06_STRONG_FIELD/black_hole_metric.md) — SSZ Schwarzschild metric
-- [singularities.md](06_STRONG_FIELD/singularities.md) — Singularity resolution, D(r_s)=0.55503
+- [singularities.md](06_STRONG_FIELD/singularities.md) — Singularity resolution, D(r_s)=0.555
 - [dark_star.md](06_STRONG_FIELD/dark_star.md) — Dark star (no true horizon)
 - [cosmic_censorship.md](06_STRONG_FIELD/cosmic_censorship.md) — SSZ version of cosmic censorship
 - [infalling_matter.md](06_STRONG_FIELD/infalling_matter.md) — Infalling matter, no freezing
@@ -108,8 +108,9 @@ At the Schwarzschild radius: **D(r_s) ≈ 0.55503** (finite!) vs GR: D(r_s) = 0 
 - [lagrangian_mechanics.md](06_STRONG_FIELD/lagrangian_mechanics.md) — Effective Lagrangian, Euler-Lagrange, orbit equations
 
 ### 07_VALIDATION
-- [test_methodology.md](07_VALIDATION/test_methodology.md) — Test framework, 1296 tests / 100% PASS
-- [consistency_checks.md](07_VALIDATION/consistency_checks.md) — 171/171 consistency checks
+- [all_tests_2026-05-07.md](07_VALIDATION/all_tests_2026-05-07.md) — Canonical all-tests snapshot: 1296/1296 PASS
+- [test_methodology.md](07_VALIDATION/test_methodology.md) — Forward-prediction test framework and method assignment
+- [consistency_checks.md](07_VALIDATION/consistency_checks.md) — Formula and cross-repository consistency checks
 - [gr_vs_ssz_tables.md](07_VALIDATION/gr_vs_ssz_tables.md) — Side-by-side comparison tables
 - [curvature_detection.md](07_VALIDATION/curvature_detection.md) — Frequency curvature observables
 - [nebulae_validation.md](07_VALIDATION/nebulae_validation.md) — G79.29+0.46 LBV nebula (Cygnus X-1)
@@ -158,9 +159,10 @@ At the Schwarzschild radius: **D(r_s) ≈ 0.55503** (finite!) vs GR: D(r_s) = 0 
 |--------|-------|
 | Papers | 25 primary + 7 additional |
 | Repositories | 35 total |
-| Tests | **1,296 / 1,296 PASS (100%)** |
+| Tests | 1296/1296 verified in canonical all-tests run |
 | Documentation files | 57 MD files (this repo) |
-| Consistency checks | 171/171 PASS |
+| Consistency checks | 0 failed in all-tests snapshot |
+
 
 ---
 
@@ -170,7 +172,7 @@ At the Schwarzschild radius: **D(r_s) ≈ 0.55503** (finite!) vs GR: D(r_s) = 0 
 2. **Need formulas?** → Go to [03_FORMULAS/formula_compendium.md](03_FORMULAS/formula_compendium.md)
 3. **Quick card** → See [03_FORMULAS/quick_reference.md](03_FORMULAS/quick_reference.md)
 4. **Method selection** → Read [11_GUARDRAILS/prime_directive.md](11_GUARDRAILS/prime_directive.md)
-5. **Validation data** → Check [07_VALIDATION/gr_vs_ssz_tables.md](07_VALIDATION/gr_vs_ssz_tables.md)
+5. **Validation data** → Check [07_VALIDATION/all_tests_2026-05-07.md](07_VALIDATION/all_tests_2026-05-07.md) and [07_VALIDATION/gr_vs_ssz_tables.md](07_VALIDATION/gr_vs_ssz_tables.md)
 6. **Regime vs formula domains?** → Read [02_FOUNDATIONS/regime_and_formula_domain_clarification.md](02_FOUNDATIONS/regime_and_formula_domain_clarification.md)
 7. **φ-Lattice** → See [02_FOUNDATIONS/phi_lattice_discretization.md](02_FOUNDATIONS/phi_lattice_discretization.md)
 8. **Experimental timeline** → See [13_FREQUENCY_FRAMEWORK/future_experimental_prospects.md](13_FREQUENCY_FRAMEWORK/future_experimental_prospects.md)

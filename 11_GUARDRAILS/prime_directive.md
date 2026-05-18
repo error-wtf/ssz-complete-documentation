@@ -83,23 +83,25 @@ PPN captures g_tt + g_rr (temporal + spatial)
 
 Before using any Ξ formula, determine regime via r/r_s:
 
-| Regime | r/r_s | Formula |
-|--------|-------|---------|
-| **very_close** | < 1.8 | Ξ = min(1 - exp(-φ·r/r_s), Ξ_max) |
+| Regime | r/r_s | Operative Xi branch |
+|--------|-------|---------------------|
+| **very_close** | < 1.8 | g2 / inner exponential |
 | **blended** | 1.8–2.2 | C² Hermite blend |
-| **photon_sphere** | 2.2–3.0 | Ξ_strong |
-| **strong** | 3.0–10.0 | Ξ_strong |
-| **weak** | > 10.0 | Ξ = r_s/(2r) |
+| **photon_sphere** | 2.2–3.0 | physical photon-sphere regime; g1 branch in current calculators |
+| **strong** | 3.0–10.0 | physical strong-field regime; g1 branch in current calculators |
+| **weak** | > 10.0 | g1 / weak field |
 
 **Never mix multiple "strong-field Ξ" formulas without an explicit blend rule.**
 
 ```
-Regime              → Formula
+Formula domain      → Formula
 ─────────────────────────────────
-r/r_s > 10          → Ξ = r_s/(2r)
-r/r_s < 1.8         → Ξ = min(1-exp(-φr/r_s), Ξ_max)
+r/r_s > 2.2         → Ξ = r_s/(2r)
+r/r_s < 1.8         → inner exponential / g2
 1.8 ≤ r/r_s ≤ 2.2   → Hermite blend
 ```
+
+Above `r/r_s=2.2`, "g1 branch" does not mean "physically weak everywhere": photon-sphere and compact-object strong-field contexts still extend up to `r/r_s=10`.
 
 ---
 

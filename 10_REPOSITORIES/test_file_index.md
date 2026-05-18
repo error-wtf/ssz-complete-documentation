@@ -1,7 +1,7 @@
 # Test File Index by Chapter
 
 **Status:** CANONICAL
-**Total:** 199+ test files across 11 repositories, 801+ validated tests
+**Total:** Canonical all-tests snapshot: 1296/1296 passed across 12 executed targets. The historical file inventory remains 199+ test files across the source repositories.
 
 ---
 
@@ -39,21 +39,21 @@
 
 ## Repository Test Counts
 
-| Repository | Python Files | Test Files | Docs |
-|-----------|-------------|-----------|------|
-| segmented-calculation-suite | 73 | 24 | 69 |
-| ssz-qubits | 54 | 12 | 89 |
-| frequency-curvature-validation | 13 | 11 | 5 |
-| ssz-lensing | 117 | 23 | 39 |
-| ssz-metric-pure | 53 | 7 | 44 |
-| ssz-schumann | 100 | 12 | 39 |
-| g79-cygnus-tests | 35 | 7 | 66 |
-| ssz-paper-plots | 49 | 6 | 52 |
-| segmented-energy | 19 | 3 | 14 |
-| Unified-Results | 395 | 47 | 1189 |
-| Starmaps | 161 | 46 | 156 |
-| ssz-lagrange | 1 | 1 | 1 |
-| **TOTAL** | **1070** | **199** | **1763** |
+| Repository / Target | Tests/checks in all-tests | Status |
+|-----------|-------------|--------|
+| ssz-qubits | 184 | PASS |
+| ssz-metric-pure | 36 | PASS |
+| segmented-calculation-suite | 158 | PASS |
+| ssz-schumann | 178 | PASS |
+| ssz-lensing | 279 | PASS |
+| Unified-Results | 147 | PASS |
+| ssz-trajectories | 63 | PASS |
+| g79-cygnus-tests | 5 | PASS |
+| ssz-lagrange | 54 | PASS |
+| segmented-energy | 7 | PASS |
+| frequency-curvature-validation | 82 | PASS |
+| chord-partition (local) | 103 | PASS |
+| **TOTAL** | **1296** | **PASS** |
 
 ---
 
@@ -84,7 +84,7 @@
 - COMPLETE_TENSOR_PACKAGE_README.md
 
 ### Unified-Results
-- full-output.md (25/25 test suites, 231s)
+- full-output.md and really-full-output.md via `ssz-all-tests`
 - TEST_METHODOLOGY_COMPLETE.md
 
 ---

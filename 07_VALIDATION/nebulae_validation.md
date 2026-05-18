@@ -23,9 +23,12 @@ SSZ predicts that expanding nebulae exhibit molecular zone structures that arise
 
 | Test | Result |
 |------|--------|
-| NH3 velocity match | PASS |
-| Temperature inversion | Confirmed |
-| Radial profile | Consistent with SSZ scaling |
+| NH3 velocity diagnostics | PASS in executed scripts |
+| Temperature-equation diagnostics | Exploratory consistency |
+| Radial profile | Consistent with SSZ scaling within current data |
+| Parsec-conversion mass integration | Warning: outside expected range in current all-tests output |
+
+The current canonical all-tests run reports `g79-cygnus-tests` as 5/5 PASS, but the verbose output also includes a parsec-conversion warning. Therefore G79 should be presented as an exploratory molecular-zone diagnostic, not as a closed "6/6 predictions confirmed" result.
 
 ---
 

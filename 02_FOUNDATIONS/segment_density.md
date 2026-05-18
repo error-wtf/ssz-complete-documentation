@@ -11,14 +11,16 @@ The segment density Ξ (Xi) is the central quantity in SSZ. It is a dimensionles
 ```
 Ξ(r) ≥ 0    for all r
 Ξ(r) → 0    as r → ∞
-Ξ(r) ≤ Ξ_max = 1 - e^(-φ) ≈ 0.802
+Ξ(r_s) = 1 - e^(-φ) ≈ 0.801712
 ```
+
+For exterior horizon comparisons (`r >= r_s`) the key finite value is `Xi(r_s)=0.801712`. Some local/inner extrapolations approach 1 as `r -> 0`; do not confuse that extrapolation with the exterior horizon value.
 
 ---
 
 ## Weak-Field Formula (g1)
 
-**Validity:** r/r_s > 10 (in practice, essentially all Solar System scales)
+**Validity:** outer g1 branch; physically weak for r/r_s > 10
 
 ```
 Ξ_weak(r) = r_s / (2r)
@@ -35,7 +37,7 @@ where r_s = 2GM/c² is the Schwarzschild radius.
 
 ---
 
-## Strong-Field Formula (g2)
+## Inner Exponential Formula (g2 / decay form)
 
 **Validity:** r/r_s < 1.8
 
@@ -46,7 +48,8 @@ where r_s = 2GM/c² is the Schwarzschild radius.
 where φ = (1+√5)/2 = 1.618033988749895 is the golden ratio.
 
 **Properties:**
-- Saturates at Ξ_max as r → 0 (no divergence!)
+- Gives the finite horizon value Ξ(r_s)=1-exp(-φ)
+- Approaches 1 in the formal r→0 extrapolation (no divergence)
 - Monotonically decreasing with r
 - At Schwarzschild radius: Ξ(r_s) = 1 - e^(-φ) = 0.80171
 - Continuous and smooth
@@ -78,13 +81,13 @@ This is not a free choice — it is the unique C² interpolant matching both fun
 
 ## Regime Boundaries Summary
 
-| Regime | r/r_s | Ξ formula | Description |
-|--------|-------|-----------|-------------|
-| very_close | < 1.8 | Ξ_strong | Near/at horizon |
+| Regime | r/r_s | Operative Xi branch | Description |
+|--------|-------|---------------------|-------------|
+| very_close | < 1.8 | g2 / inner exponential | Near/at horizon |
 | blended | 1.8–2.2 | H₅(t) | Smooth transition |
-| photon_sphere | 2.2–3.0 | Ξ_strong | SSZ optimal zone |
-| strong | 3.0–10.0 | Ξ_strong | Measurable deviations |
-| weak | > 10.0 | Ξ_weak | GR-identical |
+| photon_sphere | 2.2–3.0 | g1 branch | SSZ optimal physical zone |
+| strong | 3.0–10.0 | g1 branch | Measurable deviations |
+| weak | > 10.0 | Ξ_weak | GR-identical to tested precision |
 
 ---
 
@@ -95,25 +98,24 @@ This is not a free choice — it is the unique C² interpolant matching both fun
 | Earth surface | ~7×10⁸ | 7×10⁻¹⁰ | — | weak |
 | Sun surface | ~5×10⁵ | 1×10⁻⁶ | — | weak |
 | S2 perihelion | ~2800 | 1.8×10⁻⁴ | — | weak |
-| Neutron star | ~2–3 | 0.167–0.250 | 0.259–0.506 | strong |
-| Intersection r* | 1.595 | 0.313 | 0.313 | both equal |
+| Neutron star | ~2–3 | 0.167–0.250 | context-dependent | photon/strong |
+| D-intersection r* | 1.595 / 1.387 | context-dependent | context-dependent | specify Xi form |
 | Schwarzschild | 1.0 | 0.500 | **0.802** | strong |
 
 ---
 
-## The Intersection Point r*
+## The Intersection Points r*
 
-The two Ξ formulas cross at exactly:
+The invariant comparison is `D_SSZ = D_GR`, not a generic `Xi_weak = Xi_strong` crossing. Two source contexts exist:
 ```
-r*/r_s = 1.59481
-Ξ_weak(r*) = Ξ_strong(r*) = 0.31350
-D(r*) = 0.61071
+r*/r_s = 1.594811  for Xi_A(x)=1-exp(-phi/x), D*=0.610710
+r*/r_s = 1.386562  for Xi_B(x)=1-exp(-phi*x), D*=0.528007
 ```
 
-This intersection is:
+Both intersections are:
 - **Mass-independent** (purely geometric)
 - **Derived**, not fitted
-- The natural regime-transition marker
+- Inside the phi bracket `1 < r*/r_s < phi`
 
 ---
 

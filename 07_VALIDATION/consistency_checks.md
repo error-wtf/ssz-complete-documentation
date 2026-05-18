@@ -72,10 +72,10 @@ Each repository has a defined scope:
 
 ### 2. r*/r_s Mismatch (1.387 vs 1.595)
 **Symptom:** Two different intersection points
-**Cause:** Different Ξ formulas have different r* values
-**Reality:** Both are correct domain markers:
-- r*/r_s ≈ 1.595: Ξ_weak ∩ D_GR
-- r*/r_s ≈ 1.387: Ξ_strong ∩ D_GR
+**Cause:** Different Ξ formulas have different `D_SSZ = D_GR` comparison points
+**Reality:** Both are correct only with their source context:
+- r*/r_s ≈ 1.595: decay/global form `Xi_A(x)=1-exp(-phi/x)`
+- r*/r_s ≈ 1.387: saturation/local form `Xi_B(x)=1-exp(-phi*x)`
 
 ### 3. Regime Formula Mismatch
 **Symptom:** Ξ values differ between repos at same r/r_s

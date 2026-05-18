@@ -13,7 +13,7 @@
 | **Skalierungsfaktor** | s | Radiale Skalierung: s = 1+Ξ = 1/D. Effektiver Brechungsindex |
 | **Schwarzschild-Radius** | r_s | r_s = 2GM/c². Charakteristischer Gravitationsradius |
 | **Goldener Schnitt** | φ | φ = (1+√5)/2 = 1.618... Strukturkonstante in SSZ |
-| **Schnittpunkt** | r* | Radius wo Ξ_weak = Ξ_strong: r*/r_s = 1.595 |
+| **Schnittpunkt** | r* | Radius, an dem D_SSZ = D_GR für eine angegebene Xi-Form gilt: r*/r_s = 1.594811 (Abkling/global) oder 1.386562 (Sättigung/lokal) |
 
 ---
 
@@ -48,8 +48,8 @@
 | **Ξ_max** | 0.802 | Maximale Segmentdichte (am Horizont) |
 | **D_min** | 0.555 | Minimale Zeitdilatation (am Horizont) |
 | **z_max** | 0.802 | Maximale Rotverschiebung (am Horizont) |
-| **r*/r_s** | 1.595 | Universeller Schnittpunkt (Weak-Proxy) |
-| **r*/r_s** | 1.387 | Universeller Schnittpunkt (Strong-Field) |
+| **r*/r_s** | 1.594811 | Abkling/globaler `D_SSZ = D_GR`-Schnittpunkt |
+| **r*/r_s** | 1.386562 | Sättigung/lokaler `D_SSZ = D_GR`-Schnittpunkt |
 | **φ/2** | 0.809 | Kopplungsfaktor |
 
 ---
@@ -63,7 +63,7 @@
 | **Pound-Rebka** | 1960er Experiment zur Bestätigung der gravitativen Rotverschiebung über 22.6 m |
 | **Cassini** | 2003 Shapiro-Verzögerungsmessung: γ = 1.000021 ± 0.000023 |
 | **S2-Stern** | Stern in Sgr-A*-Orbit — Schwachfeld-Test (SSZ ≡ ART) |
-| **G79.29+0.46** | LBV-Nebel — 6/6 SSZ-Vorhersagen bestätigt |
+| **G79.29+0.46** | LBV-Nebel — exploratorische Molekülzonen-Diagnostik; aktueller All-Tests-Lauf enthält eine Parsec-Konversionswarnung |
 
 ---
 

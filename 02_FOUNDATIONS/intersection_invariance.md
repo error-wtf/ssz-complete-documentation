@@ -1,91 +1,91 @@
-# Intersection Invariance: r*/r_s = 1.387
+# Intersection Invariance: two r* values, two formula contexts
 
 **Book reference:** Ch 3, Ch 4, Appendix B.7.1  
-**Test file:** `test_intersection.py`  
-**Paper:** 04 (Metric)
+**Test files:** `test_intersection.py`, `test_ssz_physics.py`  
+**Primary sources:** `06_STRONG_FIELD/GR_SSZ_INTERSECTION_PHI_DISCRETIZATION.md`, `really-full-output.md`
 
 ---
 
 ## Definition
 
-The weak-field and strong-field segment density formulas intersect at a **universal, mass-independent radius** `r*`:
+The symbol `r*` is used in two related but distinct comparisons. Do not collapse them into one number.
+
+Both comparisons solve the same invariant equation:
 
 ```
-Xi_weak(r*) = Xi_strong(r*)
-r_s / (2*r*) = 1 - exp(-phi * r_s / r*)
+D_SSZ(x) = D_GR(x),   x = r/r_s
+D_GR(x) = sqrt(1 - 1/x)
+D_SSZ(x) = 1/(1 + Xi(x))
 ```
 
-Solution:
+The value of `r*/r_s` depends on which SSZ `Xi` form is being compared with GR.
+
+---
+
+## Canonical comparison table
+
+| Context | Xi form | r*/r_s | Xi(r*) | D*(=D_GR) | Use |
+|---|---|---:|---:|---:|---|
+| Decay / global comparison | `Xi_A(x)=1-exp(-phi/x)` | 1.594811 | 0.637439 | 0.610710 | segcalc constants, global D comparison |
+| Saturation / local metric-pure comparison | `Xi_B(x)=1-exp(-phi*x)` | 1.386562 | 0.893914 | 0.528007 | metric-pure/local saturation tests |
+
+Both values are mass-independent because the equation contains only `x=r/r_s`.
+
+---
+
+## What is not correct
+
+`r*` is not the solution of `Xi_weak = Xi_strong` in the outer domain. With `Xi_weak=1/(2x)`, the weak branch is a first-order GR-matching proxy; it is not the same object as the GR time-dilation comparison above.
+
+Therefore the phrase "universal intersection" must always say which comparison is meant:
+
+- `r*/r_s = 1.594811` for the decay/global `D_SSZ = D_GR` comparison.
+- `r*/r_s = 1.386562` for the saturation/local `D_SSZ = D_GR` comparison.
+
+---
+
+## Horizon agreement
+
+The two exponential forms agree at the Schwarzschild radius:
+
 ```
-r*/r_s = 1.387   (mass-independent!)
-```
-
-## Why Mass-Independent?
-
-Both formulas are expressed in units of `r_s`. The intersection condition involves only the ratio `r/r_s`, not the absolute values of r or r_s. Therefore r*/r_s is a **universal constant** — the same for a stellar black hole (10 M_sun) and a supermassive black hole (10^9 M_sun).
-
-## Numerical Verification
-
-```
-Xi_weak(1.387 * r_s)  = r_s / (2 * 1.387 * r_s) = 1/2.774 = 0.3605
-Xi_strong(1.387 * r_s) = 1 - exp(-phi / 1.387)   = 1 - exp(-1.167) = 0.3888
-```
-
-Note: These are approximately equal; the exact value r*/r_s = 1.387 is the numerical solution satisfying exact equality (the slight discrepancy above is from rounding).
-
-Using the operative saturation form:
-```
-1 - exp(-phi * r*/r_s) = r_s/(2r*)
-```
-
-## D at Intersection
-
-```
-D* = D_SSZ(r*) = 1 / (1 + Xi(r*)) ≈ 0.611
-```
-
-This value is also mass-independent.
-
-## Bracket Theorem
-
-The phi-lattice provides a guaranteed bracket for r*:
-```
-r*/r_s in [1.000, 1.618]
+Xi_A(1) = Xi_B(1) = 1 - exp(-phi) = 0.801711847
+D(r_s) = 1/(1 + Xi(r_s)) = 0.555027710
 ```
 
-Since `Xi_weak(r_s) < Xi_strong(r_s)` and `Xi_weak(phi*r_s) > Xi_strong(phi*r_s)`, the intermediate value theorem guarantees existence and the bracket gives a tight bound.
+This is why both notations can appear in papers without contradicting the finite-horizon result.
 
-## Table of Values
+---
 
-| Quantity | Value | Description |
-|----------|-------|-------------|
-| r*/r_s | 1.387 | Universal intersection |
-| Xi(r*) | 0.360 | Segment density at intersection |
-| D* | 0.611 | Time dilation at intersection |
-| D_GR(r*) | 0.633 | GR comparison at same point |
-| Delta(D) | -3.5% | SSZ-GR deviation at intersection |
+## Bracket theorem
 
-## Physical Significance
+Both intersection values lie in the phi bracket:
 
-The intersection r* marks the **natural transition** between weak-field and strong-field behavior in SSZ:
-
-- For `r > r*`: weak-field formula is more accurate
-- For `r < r*`: strong-field formula is more accurate
-- At `r = r*`: both give the same result (the C2 blend is centered near here)
-
-The fact that r*/r_s is universal suggests it is a **fundamental constant of the SSZ theory**, analogous to how the fine-structure constant is fundamental to electromagnetism.
-
-## Note on Variant Forms
-
-Using the decay form `Xi_strong = 1 - exp(-phi * r/r_s)` instead gives a different proxy value:
 ```
-r*_proxy/r_s ≈ 1.595
+1 < r*/r_s < phi = 1.618033988...
 ```
-This is a didactic comparison only. The canonical value r*/r_s = 1.387 uses the saturation form `Xi_strong = 1 - exp(-phi * r_s/r)` as defined in the spec.
+
+This bracket is the invariant statement. The exact numerical value inside the bracket depends on the selected `Xi` comparison.
+
+---
+
+## Relation to regime boundaries
+
+`r*` is not itself the hard code boundary of the operational blend. The canonical computational blend remains:
+
+```
+very_close: x < 1.8
+blended:    1.8 <= x <= 2.2
+outer:      x > 2.2
+```
+
+Physical regimes then classify the outer side further into photon-sphere, strong, and weak contexts. See [regime definitions](regime_definitions.md) and [regime/formula domain clarification](regime_and_formula_domain_clarification.md).
+
+---
 
 ## Relation to Other Sections
 
-- [phi-Lattice Discretization](phi_lattice_discretization.md) — bracket theorem
-- [Regime Definitions](regime_definitions.md) — r* as natural regime boundary
-- [Special Values](../03_FORMULAS/special_values.md) — Xi(r*), D*, D_GR(r*)
-- [QNM Spectrum](../06_STRONG_FIELD/qnm_spectrum.md) — QNM connection to r*
+- [GR/SSZ Intersection and Phi Discretization](../06_STRONG_FIELD/GR_SSZ_INTERSECTION_PHI_DISCRETIZATION.md) — detailed two-form derivation
+- [Regime Definitions](regime_definitions.md) — hard boundaries and physical regimes
+- [Special Values](../03_FORMULAS/special_values.md) — Xi(r_s), D(r_s), D*
+- [Confusion Prevention](../11_GUARDRAILS/confusion_prevention.md) — false-alarm patterns

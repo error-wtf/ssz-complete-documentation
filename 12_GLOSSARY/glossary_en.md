@@ -13,7 +13,7 @@
 | **Scaling Factor** | s | Radial scaling: s = 1+Ξ = 1/D. Effective refractive index |
 | **Schwarzschild Radius** | r_s | r_s = 2GM/c². Characteristic gravitational radius |
 | **Golden Ratio** | φ | φ = (1+√5)/2 = 1.618... Structural constant in SSZ |
-| **Intersection Point** | r* | Radius where Ξ_weak = Ξ_strong: r*/r_s = 1.595 |
+| **Intersection Point** | r* | Radius where D_SSZ = D_GR for a declared Xi form: r*/r_s = 1.594811 (decay/global) or 1.386562 (saturation/local) |
 
 ---
 
@@ -48,8 +48,8 @@
 | **Ξ_max** | 0.802 | Maximum segment density (at horizon) |
 | **D_min** | 0.555 | Minimum time dilation (at horizon) |
 | **z_max** | 0.802 | Maximum redshift (at horizon) |
-| **r*/r_s** | 1.595 | Universal intersection (weak proxy) |
-| **r*/r_s** | 1.387 | Universal intersection (strong field) |
+| **r*/r_s** | 1.594811 | Decay/global `D_SSZ = D_GR` intersection |
+| **r*/r_s** | 1.386562 | Saturation/local `D_SSZ = D_GR` intersection |
 | **φ/2** | 0.809 | Coupling factor |
 | **β** | 1 | PPN parameter (exact) |
 | **γ** | 1 | PPN parameter (exact) |
@@ -65,7 +65,7 @@
 | **Pound-Rebka** | 1960 experiment confirming gravitational redshift over 22.6 m |
 | **Cassini** | 2003 Shapiro delay measurement: γ = 1.000021 ± 0.000023 |
 | **S2 Star** | Star orbiting Sgr A* — weak-field test (SSZ ≡ GR) |
-| **G79.29+0.46** | LBV nebula — 6/6 SSZ predictions confirmed |
+| **G79.29+0.46** | LBV nebula — exploratory molecular-zone diagnostics; current all-tests note a parsec-conversion warning |
 
 ---
 

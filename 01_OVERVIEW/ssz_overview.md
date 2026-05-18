@@ -54,10 +54,10 @@ This ensures continuous Ξ, dΞ/dr, and d²Ξ/dr² across the regime boundary.
 
 | Regime | r/r_s | Formula |
 |--------|-------|---------|
-| very_close | < 1.8 | Ξ_strong |
+| very_close | < 1.8 | g2 / inner exponential |
 | blended | 1.8–2.2 | Hermite C² |
-| photon_sphere | 2.2–3.0 | Ξ_strong |
-| strong | 3.0–10.0 | Ξ_strong |
+| photon_sphere | 2.2–3.0 | physical photon-sphere regime; current branch is g1 |
+| strong | 3.0–10.0 | physical strong regime; current branch is g1 |
 | weak | > 10.0 | Ξ_weak |
 
 ---
@@ -93,7 +93,7 @@ The core point is not "SSZ always differs," but "SSZ differs where it should, an
 | D(r_s) | 0 (singularity) | **0.555** (finite!) |
 | z(r_s) | ∞ | **0.802** |
 | Ξ(r_s) | — | **0.802** |
-| r*/r_s (intersection) | — | **1.595** |
+| r*/r_s (D-intersections) | — | **1.594811** decay/global, **1.386562** saturation/local |
 | Singularity at horizon | YES | **NO** |
 
 ---
@@ -150,7 +150,7 @@ The most decisive tests for SSZ are those that probe strong fields:
 SSZ would be **definitively falsified** if:
 1. Neutron star redshift z_obs ≠ z_SSZ ± 5%
 2. Pulsar timing Δt_obs ≠ Δt_SSZ ± 10%
-3. Universal intersection r*/r_s ≠ 1.595 ± 0.01
+3. The measured/derived `r*` comparison is inconsistent with the declared Xi form (`1.594811` for decay/global or `1.386562` for saturation/local)
 4. BH shadow inconsistent with D_SSZ(r_s) = 0.555
 
 ---

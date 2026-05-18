@@ -17,14 +17,14 @@
 **D(r_s) = 0.555 is the single most important number in SSZ.**  
 GR predicts D = 0 (singularity). SSZ predicts D = 0.555 (finite, testable).
 
-## Universal Intersection
+## Universal Intersections
 
-| Quantity | Value | Derivation |
-|----------|-------|------------|
-| r*/r_s | **1.387** | Xi_weak(r*) = Xi_strong(r*), mass-independent |
-| Xi(r*) | 0.360 | value at intersection |
-| D* = D(r*) | **0.611** | 1/(1 + 0.360) |
-| D_GR(r*) | 0.633 | sqrt(1 - 1/1.387) |
+| Context | r*/r_s | Xi(r*) | D* = D_GR(r*) | Derivation |
+|----------|-------:|-------:|-------:|------------|
+| Decay/global form `1-exp(-φ/x)` | **1.594811** | 0.637439 | **0.610710** | D_SSZ = D_GR |
+| Saturation/local form `1-exp(-φx)` | **1.386562** | 0.893914 | **0.528007** | D_SSZ = D_GR |
+
+The invariant fact is mass-independence and the phi-bracket `1 < r*/r_s < φ`. The numerical value depends on which Xi form is used.
 
 ## phi-Related Values
 
@@ -90,7 +90,7 @@ All these are **finite** — no infinities in SSZ at any physically accessible r
 
 ## Relation to Other Sections
 
-- [Intersection Invariance](../02_FOUNDATIONS/intersection_invariance.md) — r*/r_s proof
+- [Intersection Invariance](../02_FOUNDATIONS/intersection_invariance.md) — two r*/r_s comparisons and phi bracket
 - [phi-Lattice Discretization](../02_FOUNDATIONS/phi_lattice_discretization.md) — phi^k table
 - [Holonomy Invariants](../13_FREQUENCY_FRAMEWORK/holonomy_invariants.md) — I_ABC proof
 - [Structural Constants](../02_FOUNDATIONS/structural_constants.md) — phi, alpha

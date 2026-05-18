@@ -42,7 +42,8 @@ Falsifiable GR extension with one additional dimensionless segment density field
 
 ### Segment Density Ξ(r)
 - Weak (r/r_s>10): `Ξ_weak = r_s/(2r)`
-- Strong (r/r_s<1.8): `Ξ_strong = min(1-exp(-φ·r/r_s), Ξ_max)`
+- Inner/decay branch (r/r_s<1.8): `Ξ_decay = 1-exp(-φ·r_s/r)`
+- Local saturation form (paper/metric-pure context): `Ξ_sat = min(1-exp(-φ·r/r_s), Ξ_max)`
 - Blend (1.8-2.2): Hermite C² interpolation
 - DEPRECATED/FORBIDDEN: `Ξ = (r_s/r)²·exp(-r/r_φ)` — NEVER USE
 
@@ -53,7 +54,7 @@ Falsifiable GR extension with one additional dimensionless segment density field
 
 ### Key Values
 - Ξ(r_s) = 0.80171, D(r_s) = 0.55503, z(r_s) = 0.80171
-- r*/r_s = 1.59481 (universal intersection, mass-independent)
+- r*/r_s = 1.594811 (decay/global D comparison) or 1.386562 (saturation/local D comparison), both mass-independent
 - φ/2 = 0.80902 (coupling factor)
 - β = γ = 1 (PPN, exact)
 
@@ -79,10 +80,10 @@ Falsifiable GR extension with one additional dimensionless segment density field
 
 | Regime | r/r_s | Formula |
 |--------|-------|---------|
-| very_close | <1.8 | Ξ_strong |
+| very_close | <1.8 | g2 / inner exponential |
 | blended | 1.8-2.2 | Hermite C² |
-| photon_sphere | 2.2-3.0 | Ξ_strong |
-| strong | 3.0-10.0 | Ξ_strong |
+| photon_sphere | 2.2-3.0 | physical photon-sphere regime; current operative branch is g1 |
+| strong | 3.0-10.0 | physical strong regime; current operative branch is g1 |
 | weak | >10.0 | Ξ_weak |
 
 - 90/110 are PROBE RADII, NOT regime boundaries
@@ -128,13 +129,14 @@ Falsifiable GR extension with one additional dimensionless segment density field
 - Shapiro strong-field: +12% (SKA 2028+)
 
 ### Test Infrastructure
-- 747+ tests PASS, 199+ test files, 11 repositories
-- 25 unified test suites (231s runtime, 97.9% ESO accuracy)
+- Canonical all-tests snapshot: 1296/1296 PASS, 0 failed, 12 executed targets
+- Source: `E:\clone\ssz-all-tests\really-full-output.md` (run date 2026-05-07)
+- Historical partial summaries such as 171/171, 747+, 801+, and 835 pass are superseded by the all-tests snapshot
 - Anti-circularity enforced: M→r_s→Ξ→D→Observable (one-directional)
 
 ### Falsification Criteria (SSZ is WRONG if):
 1. NS redshift ≠ z_SSZ ± 5%
-2. r*/r_s ≠ 1.595 ± 0.01
+2. r*/r_s is inconsistent with the declared Xi-form comparison
 3. BH shadow inconsistent with D(r_s)=0.555
 4. Pulsar timing ≠ Δt_SSZ ± 10%
 
@@ -145,19 +147,19 @@ Falsifiable GR extension with one additional dimensionless segment density field
 ### SSZ/Physics (18 repos)
 | Repo | Tests | Scope |
 |------|-------|-------|
-| segmented-calculation-suite | 186 | All regimes, core engine |
-| Unified-Results | 47 | 25 test suites |
-| ssz-qubits | 74 | Weak field (GPS, PR, S2) |
-| frequency-curvature-validation | 56 | PPN, Shapiro, lensing |
-| ssz-lensing | 28 | Gravitational lensing |
-| ssz-metric-pure | 7 | 4D tensors, Einstein eq. |
-| ssz-schumann | 94 | Schumann resonance |
-| g79-cygnus-tests | 14 | G79 LBV nebula |
+| segmented-calculation-suite | 158 | All regimes, core engine |
+| Unified-Results | 147 | 25 test suites and unified framework |
+| ssz-qubits | 184 | Weak field (GPS, PR, S2), qubit applications |
+| frequency-curvature-validation | 82 | PPN, Shapiro, lensing |
+| ssz-lensing | 279 | Gravitational lensing |
+| ssz-metric-pure | 36 | 4D tensors, Einstein eq. |
+| ssz-schumann | 178 | Schumann resonance |
+| g79-cygnus-tests | 5 | G79 LBV nebula |
 | ssz-lagrange | 54 | Lagrange, Kerr, quantum |
-| ssz-paper-plots | 6 | Paper plots |
-| segmented-energy | 3 | 129 astronomical objects |
-| Starmaps | 46 | Star map validation |
-| + 6 more | — | metric-final, full-metric, emergent, SEGMENTED_SPACETIME, docs, LIGO |
+| segmented-energy | 7 | 129 astronomical objects |
+| ssz-trajectories | 63 | Geodesic trajectory integration |
+| chord-partition (local) | 103 | Eigenmodes and phi resonance |
+| + archives/reference | — | paper plots, starmaps, metric-final, full-metric, emergent, SEGMENTED_SPACETIME, docs, LIGO |
 
 ### Other: 2 math, 3 research, 3 tools, 8 web, 2 private
 

@@ -23,7 +23,7 @@ The repos are **physically correct and internally consistent.** Guardrails preve
 | ssz-qubits | Weak field | r_s/(2r) | NO | GPS, PR, S2 |
 | frequency-curvature-validation | Weak field | r_s/(2r) | YES | Shapiro, lensing |
 | ssz-lensing | Weak-to-strong | Full | YES | Gravitational lensing |
-| ssz-metric-pure | Strong field | min(1-exp(-φr/r_s), Ξ_max) | YES | 4D tensors |
+| ssz-metric-pure | Strong/local metric | local saturation / metric-pure forms | YES | 4D tensors |
 | maxwell | Blend | Hermite C² | YES | EM fields |
 | Unified-Results | All regimes | Full | YES | 25 test suites |
 | g79-cygnus-tests | Specific object | As needed | NO | G79 nebula |
@@ -57,8 +57,8 @@ All repos must use the same regime boundaries:
 
 ### Rule 5: r*/r_s Values
 Two r* values exist — both are correct:
-- **r*/r_s ≈ 1.595:** Ξ_weak ∩ D_GR (weak-field proxy intersection)
-- **r*/r_s ≈ 1.387:** Ξ_strong ∩ D_GR (strong-field intersection)
+- **r*/r_s = 1.594811:** decay/global comparison, `Xi_A(x)=1-exp(-phi/x)`, `D*=0.610710`
+- **r*/r_s = 1.386562:** saturation/local comparison, `Xi_B(x)=1-exp(-phi*x)`, `D*=0.528007`
 
 These are regime-appropriate descriptions, NOT contradictions.
 

@@ -8,14 +8,19 @@
 
 ### Segment Density Ξ(r)
 
-**Weak Field** (r/r_s > 10):
+**g1 / weak-form branch** (asymptotically weak; operative outer branch above the blend):
 ```
 Ξ_weak(r) = r_s / (2r)
 ```
 
-**Strong Field** (r/r_s < 1.8):
+**Inner exponential / decay form** (operative g2 branch in `segcalc`, r/r_s < 1.8):
 ```
 Ξ_strong(r) = 1 - exp(-φ × r_s / r)
+```
+
+**Local saturation form** (metric-pure/paper-local comparison; not global weak-field asymptotic):
+```
+Ξ_sat(r) = min(1 - exp(-φ × r / r_s), Ξ_max)
 ```
 
 **Blend Zone** (1.8 ≤ r/r_s ≤ 2.2):
@@ -48,13 +53,13 @@ s(r) = 1 + Ξ(r) = 1 / D(r)
 
 ## B.2 Regime Definitions
 
-| Regime | r/r_s | Formula |
-|--------|-------|---------|
-| very_close | < 1.8 | Ξ_strong |
-| blended | 1.8–2.2 | Hermite C² |
-| photon_sphere | 2.2–3.0 | Ξ_strong |
-| strong | 3.0–10.0 | Ξ_strong |
-| weak | > 10.0 | Ξ_weak |
+| Regime | r/r_s | Operative Xi branch | Physical meaning |
+|--------|-------|---------------------|------------------|
+| very_close | < 1.8 | inner exponential / g2 | near-horizon |
+| blended | 1.8–2.2 | Hermite C² | transition |
+| photon_sphere | 2.2–3.0 | g1 formula | photon orbit zone |
+| strong | 3.0–10.0 | g1 formula | compact-object strong field |
+| weak | > 10.0 | Ξ_weak | Solar System / GPS |
 
 ### Hermite C² Interpolation
 ```
@@ -173,12 +178,15 @@ z_SSZ(r_s) = 0.80171
 ```
 **FINITE** (not 0 or ∞ like GR!)
 
-### Universal Intersection
+### D-Intersection Comparisons
 ```
-r*/r_s = 1.59481
-D_SSZ(r*) = D_GR(r*) = 0.61071 (EXACT)
+r*/r_s = 1.594811   for Xi_A(x)=1-exp(-phi/x)
+D_SSZ(r*) = D_GR(r*) = 0.610710
+
+r*/r_s = 1.386562   for Xi_B(x)=1-exp(-phi*x)
+D_SSZ(r*) = D_GR(r*) = 0.528007
 ```
-Mass-independent, purely geometric.
+Both are mass-independent. Always state which Xi form is being used.
 
 ### Natural Boundary
 ```

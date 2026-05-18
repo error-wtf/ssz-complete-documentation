@@ -26,9 +26,14 @@ SSZ predicts enhanced Shapiro delays near compact objects.
 
 ### 3. Universal Intersection Point
 ```
-r*/r_s ≠ 1.595 ± 0.01
+r*/r_s inconsistent with the declared Xi-form comparison
 ```
-The mass-independent intersection point is a hard geometric prediction. If observations of multiple compact objects show no convergence at this value, SSZ fails.
+The mass-independent intersection point is a hard geometric prediction only after the comparison is specified:
+
+- decay/global comparison: `r*/r_s = 1.594811`
+- saturation/local comparison: `r*/r_s = 1.386562`
+
+If observations of multiple compact objects show no convergence to the relevant declared value, SSZ fails in that comparison context.
 
 **Method:** Multi-object NS comparison
 **Timeline:** Ongoing
@@ -49,7 +54,7 @@ SSZ predicts a slightly smaller shadow (-1.3% vs GR). If ngEHT measures a shadow
 1. NS redshifts systematically exceed GR by ~13%
 2. Pulsar timing shows enhanced delays consistent with SSZ
 3. BH shadow is slightly smaller than GR prediction
-4. Multiple compact objects converge on r*/r_s = 1.595
+4. Multiple compact objects converge on the declared r*/r_s value for the tested Xi form
 5. No information loss signatures at horizons
 
 ---

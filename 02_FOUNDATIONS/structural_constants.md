@@ -23,11 +23,12 @@
 
 φ appears in SSZ as a **structural constraint**, not a fitted parameter:
 
-1. **Strong-field Ξ:** `Ξ_strong = min(1 - exp(-φ · r/r_s), Ξ_max)` — φ sets the exponential scale
-2. **Horizon value:** `Ξ(r_s) = 1 - e^(-φ) = 0.80171` — determined by φ
-3. **Coupling radius:** `r_φ = (φ/2) · r_s · [1 + β·Δ(M)]` — φ/2 as coupling
-4. **Frequency grid:** `R = φ^N` — discrete redshift scaling
-5. **Logarithmic spiral:** `b = ln(φ)/Δθ ≈ 0.306` — geometric growth
+1. **Inner/decay Xi:** `Xi_A(x)=1-exp(-φ/x)` — current global decay comparison, with `x=r/r_s`
+2. **Local saturation Xi:** `Xi_B(x)=min(1-exp(-φx), Xi_max)` — paper/metric-pure saturation context
+3. **Horizon value:** both forms give `Ξ(r_s) = 1 - e^(-φ) = 0.80171`
+4. **Coupling radius:** `r_φ = (φ/2) · r_s · [1 + β·Δ(M)]` — φ/2 as coupling
+5. **Frequency grid:** `R = φ^N` — discrete redshift scaling
+6. **Logarithmic spiral:** `b = ln(φ)/Δθ ≈ 0.306` — geometric growth
 
 The claim: without φ-geometry, SSZ loses predictive sharpness.
 
@@ -53,8 +54,9 @@ SSZ treats φ and π as the two fundamental geometric constants of segmented spa
 | Ξ_max | 1 - e^(-φ) | 0.80171 |
 | D_min (at r_s) | 1/(1 + Ξ_max) | 0.55503 |
 | z_max (at r_s) | Ξ_max | 0.80171 |
-| r*/r_s (weak-strong intersection) | solved from Ξ_w = Ξ_s | 1.59481 |
-| D(r*) | D_SSZ(r*) = D_GR(r*) | 0.61071 |
+| r*/r_s (decay/global D-intersection) | `D_SSZ = D_GR` with `Xi_A(x)=1-exp(-φ/x)` | 1.594811 |
+| r*/r_s (saturation/local D-intersection) | `D_SSZ = D_GR` with `Xi_B(x)=1-exp(-φx)` | 1.386562 |
+| D(r*) | depends on declared Xi form | 0.610710 / 0.528007 |
 
 ---
 
