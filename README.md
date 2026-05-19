@@ -133,7 +133,8 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 - [known_limitations.md](08_FALSIFICATION/known_limitations.md) — Known limitations and open questions
 - [ligo_open_data_position.md](08_FALSIFICATION/ligo_open_data_position.md) — Strain vs posteriors: model-bound self-confirmation problem
 - [ligo_physics_clarification.md](08_FALSIFICATION/ligo_physics_clarification.md) — Chirp mass, posteriors, L1 anomaly, anti-circularity
-- [ligo_reproducibility_critique.md](08_FALSIFICATION/ligo_reproducibility_critique.md) — Full sourced critique: Open Data != reproducible chain; calibration gap; bilby/GitLab migration provenance; PB-scale raw data vs 4 TB/yr public release ([ssz-ligo-tests/docs](https://github.com/error-wtf/ssz-ligo-tests/blob/main/docs/LIGO_REPRODUCIBILITY_CRITIQUE.md))
+- [ligo_reproducibility_critique.md](08_FALSIFICATION/ligo_reproducibility_critique.md) — Sourced critique: calibration gap, bilby migration, PB-scale data vs public release ([ssz-ligo-tests/docs](https://github.com/error-wtf/ssz-ligo-tests/blob/main/docs/LIGO_REPRODUCIBILITY_CRITIQUE.md))
+- [ligo_open_data_full_report.md](08_FALSIFICATION/ligo_open_data_full_report.md) — **Full Report** (8 parts, 14 sources): calibration chain, PCal/DARM gap, code provenance, template dependence, GW150914 reproduction failure, reproducibility standard ([ssz-ligo-tests/docs](https://github.com/error-wtf/ssz-ligo-tests/blob/main/docs/LIGO_OPEN_DATA_FULL_REPORT.md))
 
 ### 09_PAPERS
 - [paper_index.md](09_PAPERS/paper_index.md) — All 25 papers with abstracts
