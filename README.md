@@ -121,7 +121,8 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 - [power_law_universal.md](07_VALIDATION/power_law_universal.md) — E/E_rest = 1+0.32*(r_s/R)^0.98, R²=0.997
 - [ligo_gw240925_v0_pipeline.md](07_VALIDATION/ligo_gw240925_v0_pipeline.md) — GW240925 O4b forward model pipeline (EXPLORATORY, no claim) — data: [Zenodo 18600070](https://zenodo.org/records/18600070)
 - [ligo_final_interpretation_lock.md](07_VALIDATION/ligo_final_interpretation_lock.md) — Locked interpretation of LIGO pipeline results
-- [ligo_artifact_gate_gw240925.md](07_VALIDATION/ligo_artifact_gate_gw240925.md) — GW240925 L1 artifact gate: 20-40 Hz anomaly, DQ status, diagnostic chain
+- [ligo_artifact_gate_gw240925.md](07_VALIDATION/ligo_artifact_gate_gw240925.md) — L1 artifact gate: 20-40 Hz excess, kurtosis +44.9
+- [ligo_h1l1_mini_pipeline_test_plan.md](07_VALIDATION/ligo_h1l1_mini_pipeline_test_plan.md) — 10-phase hard-gate test plan for H1/L1 artifact exclusion
 - [ligo_h1l1_time_delay_replication.md](07_VALIDATION/ligo_h1l1_time_delay_replication.md) — H1/L1 FFT xcorr lag scan ±50ms, persistent systematic result
 
 ### 08_FALSIFICATION
@@ -168,7 +169,7 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 | LIGO Tests (ssz-ligo-tests) | v0.5.0 — 330+ tests, GW240925 O4b, NO CLAIM |
 | Repositories | 37 total |
 | Tests | 1296/1296 verified in canonical all-tests run |
-| Documentation files | 61 MD files (this repo) |
+| Documentation files | 62 MD files (this repo) |
 | Consistency checks | 0 failed in all-tests snapshot |
 
 
