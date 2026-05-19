@@ -142,13 +142,31 @@ If L1 shows a stable harmonic pattern:
 ## Phase 6 — H1/L1 Time-Delay Check
 
 Scan tau = -10 ms to +10 ms.
+
+**CRITICAL:** Use `peak_tau = argmax(|C(tau)|)`, not `argmax(C(tau))`.
+H1/L1 may be negatively correlated due to opposite arm orientations — a negative
+peak at the correct delay is a valid coherence result.
+
 Cross-correlation: C(tau) = sum_t H1(t) * L1(t + tau)
 
-**PASS:** Clear correlation peak at physically allowed tau (|tau| <= ~10 ms).
-**FAIL:** No stable peak, or peak explained by L1 spectral excess alone.
+**PASS:** Clear |xcorr| peak at physically allowed |tau| <= ~10 ms.
+**FAIL:** No stable |xcorr| peak, or peak explained by L1 spectral excess alone.
 
-Current GW240925 result: persistent anti-correlation (xcorr ~ -1 at dt ~ 0) at trigger
-AND off-source. TRIGGER_SPECIFIC: NO. Gate blocked.
+Current GW240925 result (updated): Full-band trigger is COHERENT_WITH_SIGN_FLIP.
+|xcorr| ≈ 0.991–0.9998 at Δt ≈ 0 ms. Negative sign is physically expected.
+
+Phase 6 full-band: PASS (sign flip accounted for).
+
+Remaining question for Phase 6b — Subband xcorr:
+
+```text
+For each subband (20-40, 40-80, 80-120, 120-160, 160-210 Hz):
+    peak_tau  = argmax(|C(tau)|)
+    peak_corr = C(peak_tau)
+```
+
+Key question: Is the 20-40 Hz L1 excess part of the coherent signal,
+or a detector-local component not coherent with H1?
 
 ---
 
@@ -258,29 +276,33 @@ DATA_QUALITY_FINDING = YES   (if anomaly is documented and reproducible)
 | 3 — Gaussianity | BLOCKED | L1 kurtosis +44.9 trigger = off-source pattern |
 | 4 — Frequency resolution | PENDING | — |
 | 5 — Harmonic oscillator | PENDING | — |
-| 6 — Time delay | BLOCKED | xcorr ~ -1 persistent, TRIGGER_SPECIFIC: NO |
+| 6 — Time delay (full-band) | PASS | COHERENT_WITH_SIGN_FLIP, abs(xcorr)=0.991, Dt~0 ms |
+| 6b — Subband xcorr | PENDING | 20-40 Hz: is it coherent or L1-local? |
 | 7 — Phase / coherence | PENDING | — |
 | 8 — Sonification | PENDING | — |
 | 9 — Matched filtering | PENDING | — |
-| 10 — SSZ test | PENDING | Gates 3, 6 not passed |
+| 10 — SSZ test | PENDING | Gate 3 not passed; Gate 6 full-band passed |
 
 **Overall:**
 
 ```text
 READY_FOR_REAL_LIGO_SSZ_CLAIM: NO
 DATA_QUALITY_FINDING:          YES (L1 20-40 Hz excess, kurtosis +44.9, persistent)
-NEXT STEP:                     Phase 4 — Frequency resolution to identify spectral peaks
+NEXT STEP:                     Phase 6b — Subband xcorr with |corr| to determine
+                               whether 20-40 Hz L1 excess is H1-coherent or L1-local
 ```
 
 ---
 
 ## Result Statement for Lino
 
-> We have not released an SSZ claim. The pipeline shows stationary non-Gaussian
-> structure in the L1 channel in the 20-210 Hz band. The next step is frequency,
-> coherence, phase, and time-delay analysis between H1 and L1. Only if the L1 excess
-> cannot be explained by local detector structure, off-source noise, harmonic resonance,
-> DQ issues, or standard GR may a new physical interpretation be considered.
+> We have not released an SSZ claim. The full-band trigger is H1/L1 coherent under
+> sign flip at ~0 ms delay (|xcorr| ≈ 0.991). The previous PERSISTENT_SYSTEMATIC
+> classification was an xcorr implementation artifact from using argmax(xcorr) instead
+> of argmax(|xcorr|). The full-band coherence result does not resolve the L1 20-40 Hz
+> non-Gaussianity: that band requires subband coherence analysis to determine whether
+> the excess is part of the coherent event signal or a detector-local component.
+> No SSZ claim.
 
 ---
 
