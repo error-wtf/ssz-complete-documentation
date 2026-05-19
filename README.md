@@ -3,7 +3,7 @@
 **Authors:** Carmen N. Wrede, Lino P. Casu
 **AI Assistants:** Bingsi, Akira
 **Status:** Canonical Reference — Single Source of Truth
-**Last Updated:** 2026-05-19
+**Last Updated:** 2026-05-19 (long-baseline replication + reproducibility critique added)
 
 ---
 
@@ -123,7 +123,8 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 - [ligo_final_interpretation_lock.md](07_VALIDATION/ligo_final_interpretation_lock.md) — Locked interpretation of LIGO pipeline results
 - [ligo_artifact_gate_gw240925.md](07_VALIDATION/ligo_artifact_gate_gw240925.md) — L1 artifact gate: 20-40 Hz excess, kurtosis +44.9
 - [ligo_h1l1_mini_pipeline_test_plan.md](07_VALIDATION/ligo_h1l1_mini_pipeline_test_plan.md) — 10-phase hard-gate test plan for H1/L1 artifact exclusion
-- [ligo_h1l1_time_delay_replication.md](07_VALIDATION/ligo_h1l1_time_delay_replication.md) — H1/L1 FFT xcorr lag scan ±50ms, persistent systematic result
+- [ligo_h1l1_time_delay_replication.md](07_VALIDATION/ligo_h1l1_time_delay_replication.md) — H1/L1 FFT xcorr lag scan ±50ms, COHERENT_WITH_SIGN_FLIP
+- [ligo_h1l1_long_baseline_plan.md](07_VALIDATION/ligo_h1l1_mini_pipeline_test_plan.md) — 100 off-source windows, Z-score, subband abs_corr (PENDING run)
 
 ### 08_FALSIFICATION
 - [falsification_criteria.md](08_FALSIFICATION/falsification_criteria.md) — When SSZ is falsified
@@ -132,6 +133,7 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 - [known_limitations.md](08_FALSIFICATION/known_limitations.md) — Known limitations and open questions
 - [ligo_open_data_position.md](08_FALSIFICATION/ligo_open_data_position.md) — Strain vs posteriors: model-bound self-confirmation problem
 - [ligo_physics_clarification.md](08_FALSIFICATION/ligo_physics_clarification.md) — Chirp mass, posteriors, L1 anomaly, anti-circularity
+- [ligo_reproducibility_critique.md](08_FALSIFICATION/ligo_reproducibility_critique.md) — Full sourced critique: Open Data != reproducible chain ([ssz-ligo-tests/docs](https://github.com/error-wtf/ssz-ligo-tests/blob/main/docs/LIGO_REPRODUCIBILITY_CRITIQUE.md))
 
 ### 09_PAPERS
 - [paper_index.md](09_PAPERS/paper_index.md) — All 25 papers with abstracts
@@ -166,10 +168,10 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 | Metric | Value |
 |--------|-------|
 | Papers | 25 primary + 7 additional |
-| LIGO Tests (ssz-ligo-tests) | v0.5.0 — 330+ tests, GW240925 O4b, NO CLAIM |
+| LIGO Tests (ssz-ligo-tests) | v0.5.0 — 330+ tests, GW240925 O4b, long-baseline xcorr, NO CLAIM |
 | Repositories | 37 total |
 | Tests | 1296/1296 verified in canonical all-tests run |
-| Documentation files | 62 MD files (this repo) |
+| Documentation files | 63+ MD files (this repo) |
 | Consistency checks | 0 failed in all-tests snapshot |
 
 
