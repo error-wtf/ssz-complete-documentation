@@ -144,19 +144,27 @@ FFT cross-correlation lag scan ±50 ms coarse / ±10 ms fine. 6 subbands (20-40,
 | OFF_m500 | 20-210 Hz | PHYSICAL_DELAY_COHERENT | −0.9999 |
 | OFF_m500 | 20-40 Hz | PHYSICAL_DELAY_COHERENT | −0.9998 |
 
-**TRIGGER_SPECIFIC: NO — PERSISTENT_SYSTEMATIC**
+**H1_L1_REPLICATION_STATUS: COHERENT_WITH_SIGN_FLIP** (updated 2026-05-19)
 
-The H1/L1 anti-correlation (xcorr ≈ −1 at dt ≈ 0) is persistent throughout the file. Trigger and off-source yield identical verdicts. Cause: persistent environmental common-mode correlation (Schumann resonances, shared noise floor) and/or expected H1/L1 opposite arm-orientation sign convention.
+The full-band trigger shows abs(xcorr) = 0.991 at dt = 0 ms. The negative sign is physically
+expected (H1/L1 opposite arm orientations). The previous PERSISTENT_SYSTEMATIC classification
+was a peak-detection artifact from using argmax(corr) instead of argmax(|corr|).
 
-**This result CANNOT be used to claim GW signal replication.**
+The L1 20–40 Hz non-Gaussianity (kurtosis +44.9) remains separately unresolved.
+Subband abs-correlation run is the next required step.
 
 ### Gate
 
-```
-TRIGGER_SPECIFIC:              NO
-READY_FOR_REAL_LIGO_SSZ_CLAIM: NO
-SSZ_SUPPORT_CLAIM_MADE:        NO
-SSZ_FALSIFICATION_CLAIM_MADE:  NO
+```text
+H1_L1_REPLICATION_STATUS:        COHERENT_WITH_SIGN_FLIP
+BEST_DELAY:                       0 ms
+BEST_ABS_CORR:                    0.991
+PREVIOUS_DT_MINUS_10MS_RESULT:    CLASSIFICATION_ARTIFACT
+TRIGGER_SPECIFIC:                 PENDING (subband abs-corr required)
+L1_20_40_STATUS:                  DQ_CONTEXT_REQUIRED
+READY_FOR_REAL_LIGO_SSZ_CLAIM:    NO
+SSZ_SUPPORT_CLAIM_MADE:           NO
+SSZ_FALSIFICATION_CLAIM_MADE:     NO
 ```
 
 ---
