@@ -133,7 +133,7 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 - [known_limitations.md](08_FALSIFICATION/known_limitations.md) — Known limitations and open questions
 - [ligo_open_data_position.md](08_FALSIFICATION/ligo_open_data_position.md) — Strain vs posteriors: model-bound self-confirmation problem
 - [ligo_physics_clarification.md](08_FALSIFICATION/ligo_physics_clarification.md) — Chirp mass, posteriors, L1 anomaly, anti-circularity
-- [ligo_reproducibility_critique.md](08_FALSIFICATION/ligo_reproducibility_critique.md) — Full sourced critique: Open Data != reproducible chain ([ssz-ligo-tests/docs](https://github.com/error-wtf/ssz-ligo-tests/blob/main/docs/LIGO_REPRODUCIBILITY_CRITIQUE.md))
+- [ligo_reproducibility_critique.md](08_FALSIFICATION/ligo_reproducibility_critique.md) — Full sourced critique: Open Data != reproducible chain; calibration gap; bilby/GitLab migration provenance; PB-scale raw data vs 4 TB/yr public release ([ssz-ligo-tests/docs](https://github.com/error-wtf/ssz-ligo-tests/blob/main/docs/LIGO_REPRODUCIBILITY_CRITIQUE.md))
 
 ### 09_PAPERS
 - [paper_index.md](09_PAPERS/paper_index.md) — All 25 papers with abstracts
