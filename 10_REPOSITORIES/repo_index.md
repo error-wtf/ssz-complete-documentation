@@ -1,7 +1,7 @@
 # Complete Repository Index
 
 **GitHub:** [github.com/error-wtf](https://github.com/error-wtf)
-**Total Repositories:** 36 (34 public, 2 private)
+**Total Repositories:** 37 (35 public, 2 private)
 
 ---
 
@@ -28,6 +28,7 @@
 | 17 | [ssz-complete-documentation](https://github.com/error-wtf/ssz-complete-documentation) | This documentation repository | — | main |
 | 18 | [ssz-lagrange](https://github.com/error-wtf/ssz-lagrange) | Lagrange formulation, Kerr analog, quantum corrections | 54 | main |
 | 19 | [TRY_TO_CALCULATE_CHIRP_MASS_OUT_OF_LIGO_STRAINS](https://github.com/error-wtf/TRY_TO_CALCULATE_CHIRP_MASS_OUT_OF_LIGO_STRAINS) | LIGO chirp mass calculation | — | main |
+| 20 | [ssz-ligo-tests](https://github.com/error-wtf/ssz-ligo-tests) | Anti-circular LIGO strain pipeline, artifact gate, H1/L1 delay test | 330+ | main |
 
 ---
 
@@ -88,7 +89,7 @@
 
 | Metric | Value |
 |--------|-------|
-| SSZ-specific repos | 18 |
+| SSZ-specific repos | 19 |
 | Total Python lines | 1,070+ |
 | Canonical all-tests targets | 12 |
 | Canonical all-tests passed | 1296/1296 |

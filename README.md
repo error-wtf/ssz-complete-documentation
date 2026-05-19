@@ -138,9 +138,10 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 - [preprints.md](09_PAPERS/preprints.md) — Preprint status
 
 ### 10_REPOSITORIES
-- [repo_index.md](10_REPOSITORIES/repo_index.md) — All repositories
+- [repo_index.md](10_REPOSITORIES/repo_index.md) — All 37 repositories
 - [test_file_index.md](10_REPOSITORIES/test_file_index.md) — All test files
 - [reproducibility.md](10_REPOSITORIES/reproducibility.md) — How to reproduce results
+- [ligo_tests_findings.md](10_REPOSITORIES/ligo_tests_findings.md) — ssz-ligo-tests: pipeline findings, H1/L1 delay test, open blockers
 
 ### 11_GUARDRAILS
 - [prime_directive.md](11_GUARDRAILS/prime_directive.md) — Observable → Class → Method → Scope
@@ -164,7 +165,8 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 | Metric | Value |
 |--------|-------|
 | Papers | 25 primary + 7 additional |
-| Repositories | 35 total |
+| LIGO Tests (ssz-ligo-tests) | v0.5.0 — 330+ tests, GW240925 O4b, NO CLAIM |
+| Repositories | 37 total |
 | Tests | 1296/1296 verified in canonical all-tests run |
 | Documentation files | 61 MD files (this repo) |
 | Consistency checks | 0 failed in all-tests snapshot |

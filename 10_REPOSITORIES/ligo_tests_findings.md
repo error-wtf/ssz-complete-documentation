@@ -2,9 +2,9 @@
 
 **Repository:** `E:\clone\ssz-ligo-tests`  
 **GitHub:** error-wtf/ssz-ligo-tests  
-**Last Updated:** 2026-05-18  
+**Last Updated:** 2026-05-19  
 **Task:** SSZ_LIGO_DERIVE_MISSING_FORWARD_EQUATIONS_FROM_SOURCES  
-**Status:** PHASES 1–8 COMPLETE
+**Status:** PHASES 1–9 COMPLETE
 
 ---
 
@@ -123,6 +123,41 @@ Three conflicting branches from corpus. No canonical branch selected.
 1. **BLOCKED_MISSING_EQUATION:** deltaPsi exact RSG phase integral (SSZ Book Ch.31 not yet final)
 2. **BLOCKED_BRANCH_CONFLICT:** epsilon_220 (3 conflicting sources: 3%, 31%, 39%)
 3. **GR_CONTROL_LIMITED:** TaylorF2 0PN only — no spin, no merger, no ringdown
+
+---
+
+## Phase 9 — H1/L1 Time-Delay Replication (2026-05-19)
+
+**Script:** `scripts/run_h1_l1_time_delay_replication.py`  
+**Output:** `reports/H1_L1_TIME_DELAY_REPLICATION_REPORT.md`, `data_manifest/h1_l1_delay_scan.csv` (2208 rows)
+
+### Method
+
+FFT cross-correlation lag scan ±50 ms coarse / ±10 ms fine. 6 subbands (20-40, 40-80, 80-120, 120-160, 160-210, 20-210 Hz). Off-source comparison window at t−500 s to detect persistent systematics. Sign-flip test for L1.
+
+### Results
+
+| Window | Band | Verdict | Peak xcorr |
+|--------|------|---------|------------|
+| TRIGGER | 20-210 Hz | PHYSICAL_DELAY_COHERENT | −0.9959 |
+| TRIGGER | 20-40 Hz | PHYSICAL_DELAY_COHERENT | −0.9998 |
+| OFF_m500 | 20-210 Hz | PHYSICAL_DELAY_COHERENT | −0.9999 |
+| OFF_m500 | 20-40 Hz | PHYSICAL_DELAY_COHERENT | −0.9998 |
+
+**TRIGGER_SPECIFIC: NO — PERSISTENT_SYSTEMATIC**
+
+The H1/L1 anti-correlation (xcorr ≈ −1 at dt ≈ 0) is persistent throughout the file. Trigger and off-source yield identical verdicts. Cause: persistent environmental common-mode correlation (Schumann resonances, shared noise floor) and/or expected H1/L1 opposite arm-orientation sign convention.
+
+**This result CANNOT be used to claim GW signal replication.**
+
+### Gate
+
+```
+TRIGGER_SPECIFIC:              NO
+READY_FOR_REAL_LIGO_SSZ_CLAIM: NO
+SSZ_SUPPORT_CLAIM_MADE:        NO
+SSZ_FALSIFICATION_CLAIM_MADE:  NO
+```
 
 ---
 
