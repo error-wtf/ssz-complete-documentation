@@ -3,7 +3,7 @@
 **Authors:** Carmen N. Wrede, Lino P. Casu
 **AI Assistants:** Bingsi, Akira
 **Status:** Canonical Reference — Single Source of Truth
-**Last Updated:** 2026-03-29
+**Last Updated:** 2026-05-19
 
 ---
 
@@ -121,12 +121,16 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 - [power_law_universal.md](07_VALIDATION/power_law_universal.md) — E/E_rest = 1+0.32*(r_s/R)^0.98, R²=0.997
 - [ligo_gw240925_v0_pipeline.md](07_VALIDATION/ligo_gw240925_v0_pipeline.md) — GW240925 O4b forward model pipeline (EXPLORATORY, no claim) — data: [Zenodo 18600070](https://zenodo.org/records/18600070)
 - [ligo_final_interpretation_lock.md](07_VALIDATION/ligo_final_interpretation_lock.md) — Locked interpretation of LIGO pipeline results
+- [ligo_artifact_gate_gw240925.md](07_VALIDATION/ligo_artifact_gate_gw240925.md) — GW240925 L1 artifact gate: 20-40 Hz anomaly, DQ status, diagnostic chain
+- [ligo_h1l1_time_delay_replication.md](07_VALIDATION/ligo_h1l1_time_delay_replication.md) — H1/L1 FFT xcorr lag scan ±50ms, persistent systematic result
 
 ### 08_FALSIFICATION
 - [falsification_criteria.md](08_FALSIFICATION/falsification_criteria.md) — When SSZ is falsified
 - [predictions.md](08_FALSIFICATION/predictions.md) — Quantitative predictions
 - [instruments.md](08_FALSIFICATION/instruments.md) — EHT, NICER, ET, LISA, Athena
 - [known_limitations.md](08_FALSIFICATION/known_limitations.md) — Known limitations and open questions
+- [ligo_open_data_position.md](08_FALSIFICATION/ligo_open_data_position.md) — Strain vs posteriors: model-bound self-confirmation problem
+- [ligo_physics_clarification.md](08_FALSIFICATION/ligo_physics_clarification.md) — Chirp mass, posteriors, L1 anomaly, anti-circularity
 
 ### 09_PAPERS
 - [paper_index.md](09_PAPERS/paper_index.md) — All 25 papers with abstracts
@@ -162,7 +166,7 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 | Papers | 25 primary + 7 additional |
 | Repositories | 35 total |
 | Tests | 1296/1296 verified in canonical all-tests run |
-| Documentation files | 57 MD files (this repo) |
+| Documentation files | 61 MD files (this repo) |
 | Consistency checks | 0 failed in all-tests snapshot |
 
 
