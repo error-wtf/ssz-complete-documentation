@@ -151,7 +151,7 @@ SSZ erzwingt eine obere Schranke _ξ_ max für Ξ:
 
 
                    - _ϕ_
-_ξ_ max = 1 − _e_ ≈ 0.8017 .
+_ξ_ max = 1 − _e_ ≈ 0.80171 .
 
 
 Damit ist die maximale Zeitdilatation am Grenzfall

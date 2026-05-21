@@ -63,7 +63,7 @@ SSZ adopts a strong‑field saturation ansatz tied to the golden ratio φ, typic
 \]
 where \(r_s\) is the Schwarzschild radius, and \(\Xi_{\max}\) is a finite packing limit. A crucial traceable value used in the suite is the **horizon value**
 \[
-\Xi(r_s)=1-e^{-\phi}\approx 0.8017,
+\Xi(r_s)=1-e^{-\phi}\approx 0.80171,
 \]
 with \(\phi\approx 1.618034\). This number recurs across strong‑field predictions and is explicitly verified in the formula‑verification notes.
 
@@ -275,7 +275,7 @@ SSZ in its validated form makes concrete, checkable predictions:
 
 1. **Weak field:** agreement with GR within tight bounds in Solar‑System regimes.  
 2. **Strong field:** systematically stronger effects (time dilation/redshift/energy) by ~11–14% in neutron‑star‑like regimes (module‑consistent).  
-3. **Saturation physics:** \(\Xi(r_s)\approx 0.8017\) as a stable near‑horizon marker.  
+3. **Saturation physics:** \(\Xi(r_s)\approx 0.80171\) as a stable near‑horizon marker.  
 4. **Universal energy scaling:** \(E_{\mathrm{tot}}/E_{\mathrm{rest}}\approx 1+0.32(r_s/R)^{0.98}\).  
 5. **Intersection domain marker:** \(r^\*/r_s \sim 1.39\) (within regime‑dependent definitions).
 
@@ -310,7 +310,7 @@ https://github.com/error-wtf/ssz-metric-pure
 ## Appendix A: Traceability Snippets (formula verification highlights)
 
 - Weak field: \(\Xi_{\mathrm{weak}}(r)=r_s/(2r)\).  
-- Strong field: \(\Xi_{\mathrm{strong}}(r)=1-e^{-\phi r/r_s}\), with \(\Xi(r_s)=1-e^{-\phi}\approx 0.8017\).  
+- Strong field: \(\Xi_{\mathrm{strong}}(r)=1-e^{-\phi r/r_s}\), with \(\Xi(r_s)=1-e^{-\phi}\approx 0.80171\).  
 - SSZ dilation: \(D_{\mathrm{SSZ}}=1/(1+\Xi)\).  
 - GR dilation: \(D_{\mathrm{GR}}=\sqrt{1-r_s/r}\).  
 - Correct redshift handling uses a multiplicative SSZ correction on \(z_{\mathrm{GR}}\), not \(1/D_{\mathrm{SSZ}}-1\).

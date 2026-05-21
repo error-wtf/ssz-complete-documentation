@@ -16,9 +16,9 @@ s(r) = 1 + Xi(r) = 1 / D(r)
 
 | Quantity | Formula | Limit r->inf | At r = r_s |
 |----------|---------|-------------|------------|
-| Xi(r) | see segment_density.md | 0 | 0.8017 |
-| D(r) | 1/(1+Xi) | 1 | 0.555 |
-| s(r) | 1+Xi = 1/D | 1 | 1.802 |
+| Xi(r) | see segment_density.md | 0 | 0.80171 |
+| D(r) | 1/(1+Xi) | 1 | 0.55503 |
+| s(r) | 1+Xi = 1/D | 1 | 1.80171 |
 
 ## Physical Meaning
 
@@ -28,7 +28,7 @@ s(r) = 1 + Xi(r) = 1 / D(r)
 - At Earth surface: `s = 1 + 6.96e-10 ≈ 1.000000001` (negligible)
 - At GPS orbit: `s = 1 + 1.67e-10` (tiny but measurable)
 - At neutron star surface (`r_s/R = 0.35`): `s ≈ 1.17` (17% scaling)
-- At Schwarzschild radius: `s = 1.802` (80% scaling, finite!)
+- At Schwarzschild radius: `s = 1.80171` (80% scaling, finite!)
 
 ## Application to Electromagnetic Fields
 

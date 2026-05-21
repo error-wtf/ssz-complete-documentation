@@ -11,7 +11,7 @@ There exists a dimensionless, non-negative scalar field **Ξ(r)** (segment densi
 - Ξ is determined by mass M and radius r (not freely tunable)
 - Ξ ≥ 0 everywhere
 - Ξ → 0 as r → ∞ (flat spacetime limit)
-- Ξ is bounded: Ξ ≤ Ξ_max = 1 - e^(-φ) ≈ 0.802
+- Ξ is bounded: Ξ ≤ Ξ_max = 1 - e^(-φ) ≈ 0.80171
 
 ---
 
@@ -26,7 +26,7 @@ This replaces the GR expression D_GR(r) = √(1 - r_s/r) in the strong field whi
 
 Consequences:
 - D(r→∞) = 1 (no dilation far from mass)
-- D(r_s) = 0.555 (finite, not zero!)
+- D(r_s) = 0.55503 (finite, not zero!)
 - D is monotonically increasing with r
 - No singularity at any finite r
 
@@ -34,7 +34,7 @@ Consequences:
 
 ## Postulate 3: Two-Regime Structure
 
-### g1 — Weak Field (r/r_s > 10)
+### g1 — Weak Field (r/r_s > 2.2)
 ```
 Ξ_weak(r) = r_s / (2r)
 ```

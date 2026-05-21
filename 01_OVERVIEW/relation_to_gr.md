@@ -18,7 +18,7 @@ SSZ is not "anti-GR." It is closer to **"GR + structured strong-field correction
 
 ## Weak-Field Identity
 
-In the weak field (r/r_s > 10), SSZ and GR are **identical** to observational precision:
+In the weak field (r/r_s > 2.2), SSZ and GR are **identical** to observational precision:
 
 | Observable | GR | SSZ | Difference |
 |-----------|-----|-----|------------|

@@ -20,7 +20,7 @@ where `phi = (1+sqrt(5))/2 = 1.618034...` is the golden ratio.
 
 | k | r/r_s  | Xi_SSZ | D_SSZ | D_GR  | Regime                  |
 |---|--------|--------|-------|-------|-------------------------|
-| 0 | 1.000  | 0.8017 | 0.555 | 0     | Natural boundary        |
+| 0 | 1.000  | 0.80171 | 0.55503 | 0     | Natural boundary        |
 | 1 | 1.618  | 0.632  | 0.613 | 0.618 | Phi bracket edge        |
 | 2 | 2.618  | 0.191  | 0.840 | 0.786 | Photon-sphere regime    |
 | 3 | 4.236  | 0.118  | 0.894 | 0.874 | Strong regime           |

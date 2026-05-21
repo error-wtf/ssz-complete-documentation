@@ -72,7 +72,7 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 - [ppn_formulas.md](03_FORMULAS/ppn_formulas.md) — PPN gamma=1, lensing, Shapiro — **CRITICAL**
 - [worked_examples.md](03_FORMULAS/worked_examples.md) — Cassini, Mercury, GPS, NS calculations
 - [unit_conversion_table.md](03_FORMULAS/unit_conversion_table.md) — SI/CGS/Natural units
-- [special_values.md](03_FORMULAS/special_values.md) — Xi(r_s)=0.8017, D(r_s)=0.555, r*/r_s, phi-table
+- [special_values.md](03_FORMULAS/special_values.md) — Xi(r_s)=0.80171, D(r_s)=0.55503, r*/r_s, phi-table
 - [phi_beta_calibration.md](03_FORMULAS/phi_beta_calibration.md) — Calibration curves
 - [forbidden_formulas.md](03_FORMULAS/forbidden_formulas.md) — Deprecated/wrong formulas to avoid
 

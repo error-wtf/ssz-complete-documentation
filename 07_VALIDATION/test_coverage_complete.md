@@ -120,7 +120,7 @@ E_obs/E_rest = 1 + 0.32·(r_s/R)^0.98
 
 | Invariant | Formula | Value | Test Status |
 |-----------|---------|-------|-------------|
-| Ξ_weak | r_s/(2r) for r/r_s > 10 | — | ✅ 100% match GR |
+| Ξ_weak | r_s/(2r) for r/r_s > 2.2 | — | ✅ 100% match GR |
 | Ξ_strong | 1 − exp(−φ·r_s/r) | saturates at 0.80171 | ✅ Finite at r_s |
 | Ξ_max | 1 − e^−φ | **0.80171** | ✅ |
 | D(r) | 1/(1+Ξ) | — | ✅ |
@@ -234,7 +234,7 @@ From 1,125+ tests across 8 Parts and 30 Chapters:
 
 1. **Mathematical consistency:** Well-defined classical field theory, bounded scalar field, smooth regime interpolation, Noether conserved quantities, positive-definite Lagrangian
 
-2. **Observational compatibility:** SSZ ≈ GR in weak field (r/r_s > 10) to precision of all current measurements
+2. **Observational compatibility:** SSZ ≈ GR in weak field (r/r_s > 2.2) to precision of all current measurements
 
 3. **Strong-field divergence:** D_min = 0.55503 at Schwarzschild radius (vs D = 0 in GR). Propagates to NS redshift (+13%), BH shadow (−1.3%), post-merger signatures
 

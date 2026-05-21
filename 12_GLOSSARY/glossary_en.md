@@ -21,7 +21,7 @@
 
 | Term | Definition |
 |------|------------|
-| **g1 (Weak Field)** | Regime where r/r_s > 10. SSZ ≡ GR. Formula: Ξ = r_s/(2r) |
+| **g1 (Weak Field)** | Regime where r/r_s > 2.2. SSZ ≡ GR. Formula: Ξ = r_s/(2r) |
 | **g2 (Strong Field)** | Regime where r/r_s < 1.8. SSZ ≠ GR. Formula: Ξ = min(1-exp(-φr/r_s), Ξ_max) |
 | **Blend Zone** | Transition region 1.8 ≤ r/r_s ≤ 2.2. Hermite C² interpolation |
 | **Photon Sphere** | Region 2.2 ≤ r/r_s ≤ 3.0. SSZ optimal zone |

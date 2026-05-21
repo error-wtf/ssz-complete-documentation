@@ -33,7 +33,7 @@ s  = (dimensionless scaling factor)
 | GPS orbit (20200 km) | 1.67e-10 | 0.999999999833 | GPS satellite |
 | Sun surface | 2.12e-6 | 0.999997880 | solar redshift |
 | NS surface (r_s/R=0.35) | 0.172 | 0.853 | strong field |
-| r = r_s (horizon) | 0.8017 | 0.555 | natural boundary |
+| r = r_s (horizon) | 0.80171 | 0.55503 | natural boundary |
 | r = r_s/2 (inside) | 0.99 | 0.502 | hypothetical |
 
 ## Physical Constants

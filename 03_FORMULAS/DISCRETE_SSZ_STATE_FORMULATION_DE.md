@@ -150,9 +150,9 @@ N'   = 4s
 
 | Komponente | Physikalische Rolle | Grenzwert (r → ∞) | Wert bei r = r_s |
 |-----------|---------------------|--------------------|------------------|
-| Ξ_k | Lokale Raumzeit-Segmentierung (Primärfeld) | 0 | 0.8017 |
-| s_k | Lokale Zeitstreckung; s=1/D | 1 | 1.8017 |
-| D_k | Lokale Zeit / Koordinatenzeit | 1 | 0.5550 |
+| Ξ_k | Lokale Raumzeit-Segmentierung (Primärfeld) | 0 | 0.80171 |
+| s_k | Lokale Zeitstreckung; s=1/D | 1 | 1.80171 |
+| D_k | Lokale Zeit / Koordinatenzeit | 1 | 0.55503 |
 | N'_k | Effektive Segmente pro Wellenperiode | 4 | 7.207 |
 | ν_k | Logarithmischer φ-Segmentierungszustand | 0 | ≈ 1.22 |
 
@@ -182,7 +182,7 @@ mit:
 
 Eigenschaften:
 - Ξ(0) = 0 — singularitätsfrei
-- Ξ(r_s) = 1 - exp(-φ) = Ξ_max ≈ 0.8017
+- Ξ(r_s) = 1 - exp(-φ) = Ξ_max ≈ 0.80171
 - Monoton steigend für x > 0
 
 **Hinweis:** Die Abklingform `1 - exp(-φ r_s/r)` ist komplementär/historisch. Die operative kanonische Form für alle Rekursionen in diesem Dokument ist die Sättigungsform.
@@ -393,7 +393,7 @@ Das ist eine geometrische Folge in logarithmischem Maßstab: ln(q_k) = -φ x_k �
 |---|-----|-----|-----|-----|------|-----|
 | −2 | 0.382 | 0.4559 | 1.4559 | 0.6868 | 5.824 | 0.793 |
 | −1 | 0.618 | 0.6329 | 1.6329 | 0.6124 | 6.532 | 1.011 |
-| 0 | 1.000 | 0.8017 | 1.8017 | 0.5550 | 7.207 | 1.225 |
+| 0 | 1.000 | 0.80171 | 1.80171 | 0.55503 | 7.207 | 1.225 |
 | 1 | 1.618 | 0.9286 | 1.9286 | 0.5185 | 7.714 | 1.404 |
 
 *(k=2: x=2.618 > 2.2, liegt im Blendübergang/Schwachfeld)*
@@ -478,7 +478,7 @@ def recursion_strong_inward(xi_k):
 
 # Randwerte bei x = 1 (Schwarzschild-Radius):
 boundary_state = ssz_state(XI_MAX)
-# boundary_state = {'Xi': 0.8017, 's': 1.8017, 'D': 0.5550, "N'": 7.2068, 'nu': 1.22}
+# boundary_state = {'Xi': 0.80171, 's': 1.80171, 'D': 0.55503, "N'": 7.2068, 'nu': 1.22}
 ```
 
 **Vollständige Implementierung:** `E:\clone\SSZ_PHI_DISCRETIZATION.py`

@@ -20,7 +20,7 @@ For exterior horizon comparisons (`r >= r_s`) the key finite value is `Xi(r_s)=0
 
 ## Weak-Field Formula (g1)
 
-**Validity:** outer g1 branch; physically weak for r/r_s > 10
+**Validity:** outer g1 branch; formula domain r/r_s > 2.2 (observationally indistinguishable from GR already for r/r_s > 10)
 
 ```
 Ξ_weak(r) = r_s / (2r)

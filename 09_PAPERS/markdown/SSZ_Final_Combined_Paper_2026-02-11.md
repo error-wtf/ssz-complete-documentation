@@ -48,7 +48,7 @@ In g1, SSZ uses a GR-matching segment density proxy such as Xi\_weak(r) = r\_s/(
 
 ## 3.2 Strong-field (g2): saturating segmentation
 
-In g2, SSZ uses a saturating functional form (phi-motivated), e.g. Xi\_strong(r) = min(1 - exp(-phi r/r\_s), Xi\_max). This yields a finite horizon value (e.g. Xi(r\_s)=1-exp(-phi) » 0.8017) and a finite minimum dilation D\_min = 1/(1+Xi\_max).
+In g2, SSZ uses a saturating functional form (phi-motivated), e.g. Xi\_strong(r) = min(1 - exp(-phi r/r\_s), Xi\_max). This yields a finite horizon value (e.g. Xi(r\_s)=1-exp(-phi) » 0.80171) and a finite minimum dilation D\_min = 1/(1+Xi\_max).
 
 ## 3.3 Fixing the regime transition r*
 
