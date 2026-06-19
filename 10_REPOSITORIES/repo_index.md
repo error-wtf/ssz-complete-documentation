@@ -27,7 +27,7 @@
 | 16 | [emergent-spacetime](https://github.com/error-wtf/emergent-spacetime) | Emergent spatial axes from temporal interference | — | main |
 | 17 | [ssz-complete-documentation](https://github.com/error-wtf/ssz-complete-documentation) | This documentation repository | — | main |
 | 18 | [ssz-lagrange](https://github.com/error-wtf/ssz-lagrange) | Lagrange formulation, Kerr analog, quantum corrections | 54 | main |
-| 19 | [TRY_TO_CALCULATE_CHIRP_MASS_OUT_OF_LIGO_STRAINS](https://github.com/error-wtf/TRY_TO_CALCULATE_CHIRP_MASS_OUT_OF_LIGO_STRAINS) | LIGO chirp mass calculation | — | main |
+| 19 | [SSZ-METRIC_COMPLETE](https://github.com/error-wtf/SSZ-METRIC_COMPLETE) | Complete Core SSZ Metric | 106 | main |
 | 20 | [ssz-ligo-tests](https://github.com/error-wtf/ssz-ligo-tests) | Anti-circular LIGO strain pipeline, artifact gate, H1/L1 delay test | 330+ | main |
 
 ---
@@ -82,6 +82,7 @@
 |---|-----------|-------------|--------|
 | 34 | [TRYING-FETCH-LIGO](https://github.com/error-wtf/TRYING-FETCH-LIGO) | LIGO data fetching *(private)* | main |
 | 35 | [speach](https://github.com/error-wtf/speach) | Voice AI Agent with Ollama + faster-whisper + ElevenLabs | main |
+| 36 | [TRY_TO_CALCULATE_CHIRP_MASS_OUT_OF_LIGO_STRAINS](https://github.com/error-wtf/TRY_TO_CALCULATE_CHIRP_MASS_OUT_OF_LIGO_STRAINS) | LIGO chirp mass calculation | — | main |
 
 ---
 
