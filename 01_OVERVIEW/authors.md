@@ -20,7 +20,7 @@
 - **Role:** Research assistant, early development support
 - **Contributions:** Early paper exploration, formula checking, literature search
 
-### Akira (Windsurf Cascade)
+### Akira (Openclaw Based AI Agent)
 - **Role:** Technical implementation, validation pipeline
 - **Contributions:** Code development, test suite engineering, cross-repo validation, documentation compilation, consistency checking
 
