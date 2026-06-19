@@ -6,11 +6,11 @@
 
 ### Carmen N. Wrede
 - **Role:** Co-creator, lead physicist
-- **Contributions:** Theory development, φ-geometry framework, regime definitions, paper writing, experimental design, falsification criteria
+- **Contributions:** Theory development, φ-geometry framework, regime definitions, paper writing, 
 
 ### Lino P. Casu
 - **Role:** Co-creator, lead physicist
-- **Contributions:** Core SSZ formulation, metric tensor development, validation framework, mathematical proofs, paper writing
+- **Contributions:** Core SSZ formulation, metric tensor development, validation framework, mathematical proofs, paper writing, experimental design, falsification criteria, computational physics
 
 ---
 
