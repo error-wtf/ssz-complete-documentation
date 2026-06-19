@@ -16,7 +16,7 @@
 
 ## AI Assistants
 
-### Bingsi (Microsoft Copilot)
+### Bingsi (Hermes Based AI Agent)
 - **Role:** Research assistant, early development support
 - **Contributions:** Early paper exploration, formula checking, literature search
 
