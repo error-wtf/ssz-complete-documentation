@@ -76,15 +76,6 @@
 
 ---
 
-## F) Private / Experimental (2)
-
-| # | Repository | Description | Branch |
-|---|-----------|-------------|--------|
-| 34 | [TRYING-FETCH-LIGO](https://github.com/error-wtf/TRYING-FETCH-LIGO) | LIGO data fetching *(private)* | main |
-| 35 | [speach](https://github.com/error-wtf/speach) | Voice AI Agent with Ollama + faster-whisper + ElevenLabs | main |
-| 36 | [TRY_TO_CALCULATE_CHIRP_MASS_OUT_OF_LIGO_STRAINS](https://github.com/error-wtf/TRY_TO_CALCULATE_CHIRP_MASS_OUT_OF_LIGO_STRAINS) | LIGO chirp mass calculation | — | main |
-
----
 
 ## SSZ Repository Statistics
 
