@@ -6,7 +6,7 @@
 
 | Symbol | LaTeX | Name | Definition | Unit | Paper |
 |--------|-------|------|------------|------|-------|
-| Ξ | `\Xi` | Segment density | g1: r_s/(2r); decay form: 1-exp(-φr_s/r); local saturation form: min(1-exp(-φr/r_s), Ξ_max) | dimensionless | 01, 03 |
+| Ξ | `\Xi` | Segment density | g1: r_s/(2r); decay form: 1-exp(-φr_s/r); local saturation form: min(1-exp(-φr_s / r), Ξ_max) | dimensionless | 01, 03 |
 | φ | `\varphi` | Golden ratio | (1+√5)/2 = 1.618... | dimensionless | All |
 | α | `\alpha` | Fine-structure const. | e²/(4πε₀ℏc) = 1/137.036 | dimensionless | 15 |
 | α_lens | `\alpha_{\text{lens}}` | Lensing deflection | (1+γ)r_s/b | rad | 01 |

@@ -194,7 +194,7 @@ All available as PDF (09_PAPERS/pdf/) and MD (09_PAPERS/markdown/).
 | Repo | Scope | Ξ Formula | PPN? |
 |------|-------|-----------|------|
 | ssz-qubits | Weak | r_s/(2r) | NO |
-| ssz-metric-pure | Strong | min(1-exp(-φr/r_s), Ξ_max) | YES |
+| ssz-metric-pure | Strong | min(1-exp(-φr_s / r), Ξ_max) | YES |
 | maxwell | Blend | Hermite C² | YES |
 | Unified-Results | All | Full | YES |
 

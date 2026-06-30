@@ -95,7 +95,7 @@
 | Repo | Scope | Ξ Formula | PPN? |
 |------|-------|-----------|------|
 | ssz-qubits | Weak | r_s/(2r) | NO |
-| ssz-metric-pure | Strong | min(1-exp(-φr/r_s), Ξ_max) | YES |
+| ssz-metric-pure | Strong | min(1-exp(-φr_s / r), Ξ_max) | YES |
 | ssz-metric-final | Strong | SSZ+GR combined | YES |
 | ssz-full-metric | Full | All regimes | YES |
 | ssz-lensing | Blend | Hermite C² | YES |
@@ -104,6 +104,6 @@
 | segmented-calculation-suite | All | All regimes | YES |
 | ssz-schumann | Weak | Exploratory | NO |
 | g79-cygnus-tests | Weak | Nebula scaling | NO |
-| ssz-lagrange | Strong | min(1-exp(-φr/r_s), Ξ_max) | YES |
+| ssz-lagrange | Strong | min(1-exp(-φr_s / r), Ξ_max) | YES |
 
 **CRITICAL:** Different repos have different scopes. Never compare results across repos without checking which regime and method each uses.
