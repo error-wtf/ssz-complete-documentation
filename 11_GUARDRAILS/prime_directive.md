@@ -7,7 +7,7 @@
 ## Interpretation Safety Notes
 
 > **(1)** "Null" refers to the **geodesic type** (ds²=0), not "no effect."
-> **(2)** Statements like "Ξ → 1" are **asymptotic** — Ξ saturates near 1 in the transition zone (blend), although strong-field is formally used for r/r_s < 1.8.
+> **(2)** Statements like "Ξ → 1" are **asymptotic** — Ξ saturates near 1 in the transition zone (blend), although strong-field is formally used for r_s/r < 1.8.
 > **(3)** Energy rules concern **observed transformation factors** (multiplicative), not statements about global GR energy conservation.
 
 ---
@@ -97,7 +97,7 @@ Before using any Ξ formula, determine regime via r/r_s:
 Formula domain      → Formula
 ─────────────────────────────────
 r/r_s > 2.2         → Ξ = r_s/(2r)
-r/r_s < 1.8         → inner exponential / g2
+r_s/r < 1.8         → inner exponential / g2
 1.8 ≤ r/r_s ≤ 2.2   → Hermite blend
 ```
 

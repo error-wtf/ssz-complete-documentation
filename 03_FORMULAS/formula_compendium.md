@@ -13,14 +13,14 @@
 Ξ_weak(r) = r_s / (2r)
 ```
 
-**Inner exponential / decay form** (operative g2 branch in `segcalc`, r/r_s < 1.8):
+**Inner exponential / decay form** (operative g2 branch in `segcalc`, r_s/r < 1.8):
 ```
 Ξ_strong(r) = 1 - exp(-φ × r_s / r)
 ```
 
 **Local saturation form** (metric-pure/paper-local comparison; not global weak-field asymptotic):
 ```
-Ξ_sat(r) = min(1 - exp(-φ × r / r_s), Ξ_max)
+Ξ_sat(r) = min(1 - exp(-φ × r_s / r), Ξ_max)
 ```
 
 **Blend Zone** (1.8 ≤ r/r_s ≤ 2.2):

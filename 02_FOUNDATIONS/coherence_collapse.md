@@ -24,7 +24,7 @@ g1 (Weak Field / PPN regime)  -->  g2 (Strong Field / structured)
 - Tests: standard PPN tests (GPS, Shapiro, lensing) — all pass
 
 ### g2: Strong Field (Structured Regime)
-- Valid for: `r/r_s < 1.8`
+- Valid for: `r_s/r < 1.8`
 - Formula: `Xi_g2(r) = 1 - exp(-phi * r_s / r)` (phi-geometry, saturation)
 - Physics: segment density approaches saturation, GR divergence is regularized
 - Tests: neutron star redshift (+13% deviation from GR), black hole shadow (-1.3%)
@@ -61,7 +61,7 @@ The collapse is irreversible because the segment density functional has a unique
 ## Anti-Patterns
 
 ```
-WRONG: Apply Xi_g1 inside r/r_s < 1.8 (gives divergence at r_s)
+WRONG: Apply Xi_g1 inside r_s/r < 1.8 (gives divergence at r_s)
 WRONG: Apply Xi_g2 for GPS calculations (wrong by 0.01%)
 CORRECT: Use regime_selector(r) to pick automatically
 ```

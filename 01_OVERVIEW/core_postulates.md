@@ -40,7 +40,7 @@ Consequences:
 ```
 Recovers GR to arbitrary precision. PPN parameters β = γ = 1 (exact).
 
-### g2 — Strong Field (r/r_s < 1.8)
+### g2 — Strong Field (r_s/r < 1.8)
 ```
 Ξ_strong(r) = 1 - exp(-φ · r_s / r)
 ```

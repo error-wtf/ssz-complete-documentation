@@ -39,7 +39,7 @@ where r_s = 2GM/c² is the Schwarzschild radius.
 
 ## Inner Exponential Formula (g2 / decay form)
 
-**Validity:** r/r_s < 1.8
+**Validity:** r_s/r < 1.8
 
 ```
 Ξ_strong(r) = 1 - exp(-φ · r_s / r)

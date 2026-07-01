@@ -9,7 +9,7 @@
 ```
 Ξ_weak(r)   = r_s / (2r)                  [outer/g1 branch]
 Ξ_decay(r)  = 1 - exp(-φ·r_s/r)            [inner/g2 branch in segcalc]
-Ξ_sat(r)    = min(1 - exp(-φ·r/r_s), Ξ_max) [local saturation form]
+Ξ_sat(r)    = min(1 - exp(-φ·r_s / r), Ξ_max) [local saturation form]
 D(r)        = 1 / (1 + Ξ(r))
 s(r)        = 1 + Ξ(r) = 1/D(r)
 z(r)        = Ξ(r)
@@ -36,7 +36,7 @@ TIMELIKE (orbits) → PPN (β,γ)
 ## Regime Boundaries
 
 ```
-very_close:    r/r_s < 1.8    → g2 / inner exponential
+very_close:    r_s/r < 1.8    → g2 / inner exponential
 blended:       1.8 – 2.2      → Hermite C²
 photon_sphere: 2.2 – 3.0      → physical regime, g1 branch
 strong:        3.0 – 10.0     → physical regime, g1 branch

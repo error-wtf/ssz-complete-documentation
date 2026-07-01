@@ -88,7 +88,7 @@ else:
 # CORRECT — use C² blend zone:
 if r/r_s > 2.2:
     xi = r_s/(2*r)
-elif r/r_s < 1.8:
+elif r_s/r < 1.8:
     xi = min(1 - exp(-phi*r_s / r), Xi_max)
 else:
     xi = hermite_c2_blend(r, r_s)  # smooth transition

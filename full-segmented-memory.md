@@ -43,7 +43,7 @@ Falsifiable GR extension with one additional dimensionless segment density field
 ### Segment Density Ξ(r)
 - Weak (r/r_s>10): `Ξ_weak = r_s/(2r)`
 - Inner/decay branch (r/r_s<1.8): `Ξ_decay = 1-exp(-φ·r_s/r)`
-- Local saturation form (paper/metric-pure context): `Ξ_sat = min(1-exp(-φ·r/r_s), Ξ_max)`
+- Local saturation form (paper/metric-pure context): `Ξ_sat = min(1-exp(-φ·r_s / r), Ξ_max)`
 - Blend (1.8-2.2): Hermite C² interpolation
 - DEPRECATED/FORBIDDEN: `Ξ = (r_s/r)²·exp(-r/r_φ)` — NEVER USE
 
