@@ -3,7 +3,7 @@
 **Authors:** Carmen N. Wrede, Lino P. Casu
 **AI Assistants:** Bingsi, Akira
 **Status:** Canonical Reference — Single Source of Truth
-**Last Updated:** 2026-05-19 (long-baseline replication + reproducibility critique added)
+**Last Updated:** 2026-10-11 (inventory audit: file counts corrected, 12 unlisted files added to index, 2 dead LIGO links resolved openly, new sections for animations + pipeline + research repos; previous content update 2026-05-19)
 
 ---
 
@@ -16,7 +16,7 @@ Segmented Spacetime (SSZ) is a falsifiable extension of General Relativity (GR) 
 D_SSZ(r) = 1 / (1 + Ξ(r))
 ```
 
-At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (singularity).
+At the Schwarzschild radius: **D(r_s) = 0.55503** (finite!) vs GR: D(r_s) = 0 (singularity).
 
 ---
 
@@ -24,6 +24,7 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 
 | # | Section | Contents |
 |---|---------|----------|
+| 00 | [Index](00_INDEX/) | Master index, completeness assessment |
 | 01 | [Overview](01_OVERVIEW/) | What is SSZ, core postulates, relation to GR |
 | 02 | [Foundations](02_FOUNDATIONS/) | Ξ(r), D(r), regimes, φ-geometry, φ-lattice, scaling factor |
 | 03 | [Formulas](03_FORMULAS/) | Complete compendium, PPN, worked examples, special values, units |
@@ -32,8 +33,8 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 | 06 | [Strong Field](06_STRONG_FIELD/) | BH metric, singularities, ISCO, QNM, Penrose, Lagrangian |
 | 07 | [Validation](07_VALIDATION/) | GPS, Cassini, Mercury, NS redshift, power law, GR vs SSZ |
 | 08 | [Falsification](08_FALSIFICATION/) | Testable predictions, instruments, falsification criteria |
-| 09 | [Papers](09_PAPERS/) | All 25 papers, bibliography, preprints |
-| 10 | [Repositories](10_REPOSITORIES/) | All 35 repos, test index, reproducibility |
+| 09 | [Papers](09_PAPERS/) | All 25 papers, bibliography, preprints + 64 mirrored paper markdown files (`markdown/`, PDFs in `pdf/`) |
+| 10 | [Repositories](10_REPOSITORIES/) | All 37 repos, test index, reproducibility |
 | 11 | [Guardrails](11_GUARDRAILS/) | Prime directive, method assignment, confusion prevention |
 | 12 | [Glossary](12_GLOSSARY/) | EN/DE terminology |
 | 13 | [Frequency Framework](13_FREQUENCY_FRAMEWORK/) | Holonomy invariants, frequency curvature, experimental prospects |
@@ -41,6 +42,11 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 ---
 
 ## Complete File Index
+
+### 00_INDEX
+- [repo_index of documentation](00_INDEX/) — master index
+- [BOOK_TO_DOC_GAP_ANALYSIS.md](00_INDEX/BOOK_TO_DOC_GAP_ANALYSIS.md) — *(deprecated)* Gap analysis book → docs
+- [DOCUMENTATION_COMPLETENESS.md](00_INDEX/DOCUMENTATION_COMPLETENESS.md) — Documentation completeness assessment
 
 ### 01_OVERVIEW
 - [ssz_overview.md](01_OVERVIEW/ssz_overview.md) — What is SSZ, executive summary
@@ -64,6 +70,7 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 - [fine_structure.md](02_FOUNDATIONS/fine_structure.md) — alpha = 1/137 derivation
 - [structural_constants.md](02_FOUNDATIONS/structural_constants.md) — phi, alpha_SSZ, r*/r_s
 - [temporal_growth.md](02_FOUNDATIONS/temporal_growth.md) — Temporal growth rate
+- [space_and_path.md](02_FOUNDATIONS/space_and_path.md) — Space, path, and emergence in SSZ theory
 
 ### 03_FORMULAS
 - [formula_compendium.md](03_FORMULAS/formula_compendium.md) — Complete formula list with origin + domain
@@ -75,6 +82,8 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 - [special_values.md](03_FORMULAS/special_values.md) — Xi(r_s)=0.80171, D(r_s)=0.55503, r*/r_s, phi-table
 - [phi_beta_calibration.md](03_FORMULAS/phi_beta_calibration.md) — Calibration curves
 - [forbidden_formulas.md](03_FORMULAS/forbidden_formulas.md) — Deprecated/wrong formulas to avoid
+- [DISCRETE_SSZ_STATE_FORMULATION.md](03_FORMULAS/DISCRETE_SSZ_STATE_FORMULATION.md) — Discrete SSZ state formulation: canonical technical reference
+- [DISCRETE_SSZ_STATE_FORMULATION_DE.md](03_FORMULAS/DISCRETE_SSZ_STATE_FORMULATION_DE.md) — Deutsche Fassung der diskreten SSZ-Zustandsformulierung
 
 ### 04_KINEMATICS
 - [dual_velocities.md](04_KINEMATICS/dual_velocities.md) — v_coord vs v_physical
@@ -106,6 +115,11 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 - [isco_comparison.md](06_STRONG_FIELD/isco_comparison.md) — ISCO: SSZ r_ISCO = 2.95 r_s vs GR 3 r_s
 - [penrose_process.md](06_STRONG_FIELD/penrose_process.md) — Penrose efficiency: SSZ 21.4% vs GR 20.71%
 - [lagrangian_mechanics.md](06_STRONG_FIELD/lagrangian_mechanics.md) — Effective Lagrangian, Euler-Lagrange, orbit equations
+- [GR_SSZ_INTERSECTION_PHI_DISCRETIZATION.md](06_STRONG_FIELD/GR_SSZ_INTERSECTION_PHI_DISCRETIZATION.md) — GR–SSZ intersection: derivation on the φ-lattice
+- [delta_a_derivation.md](06_STRONG_FIELD/delta_a_derivation.md) — deltaA_SSZ(f) derivation
+- [delta_psi_derivation.md](06_STRONG_FIELD/delta_psi_derivation.md) — deltaPsi_SSZ(f) derivation
+- [epsilon_220_derivation_status.md](06_STRONG_FIELD/epsilon_220_derivation_status.md) — epsilon_220 derivation status
+- [h_ssz_v0_derivation.md](06_STRONG_FIELD/h_ssz_v0_derivation.md) — h_SSZ(f) V0 derivation
 
 ### 07_VALIDATION
 - [all_tests_2026-05-07.md](07_VALIDATION/all_tests_2026-05-07.md) — Canonical all-tests snapshot: 1296/1296 PASS
@@ -122,9 +136,11 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 - [ligo_gw240925_v0_pipeline.md](07_VALIDATION/ligo_gw240925_v0_pipeline.md) — GW240925 O4b forward model pipeline (EXPLORATORY, no claim) — data: [Zenodo 18600070](https://zenodo.org/records/18600070)
 - [ligo_final_interpretation_lock.md](07_VALIDATION/ligo_final_interpretation_lock.md) — Locked interpretation of LIGO pipeline results
 - [ligo_artifact_gate_gw240925.md](07_VALIDATION/ligo_artifact_gate_gw240925.md) — L1 artifact gate: 20-40 Hz excess, kurtosis +44.9
-- [ligo_h1l1_mini_pipeline_test_plan.md](07_VALIDATION/ligo_h1l1_mini_pipeline_test_plan.md) — 10-phase hard-gate test plan for H1/L1 artifact exclusion
+- [ligo_h1l1_mini_pipeline_test_plan.md](07_VALIDATION/ligo_h1l1_mini_pipeline_test_plan.md) — 10-phase hard-gate test plan; trigger vs off-source windows (±100/300/500 s), subband xcorr; Phase 3–10 PENDING
 - [ligo_h1l1_time_delay_replication.md](07_VALIDATION/ligo_h1l1_time_delay_replication.md) — H1/L1 FFT xcorr lag scan ±50ms, COHERENT_WITH_SIGN_FLIP
-- [ligo_h1l1_long_baseline_plan.md](07_VALIDATION/ligo_h1l1_mini_pipeline_test_plan.md) — 100 off-source windows, Z-score, subband abs_corr (PENDING run)
+- LIGO H1/L1 long-baseline extension (off-source windows, subband xcorr statistics; PENDING run) — planned as Phases 3–10 of [ligo_h1l1_mini_pipeline_test_plan.md](07_VALIDATION/ligo_h1l1_mini_pipeline_test_plan.md). *(Listed as `ligo_h1l1_long_baseline_plan.md` in earlier README versions; no separate file exists.)*
+- [ligo_next_physics_derivation_tasks.md](07_VALIDATION/ligo_next_physics_derivation_tasks.md) — LIGO next physics derivation tasks
+- [test_coverage_complete.md](07_VALIDATION/test_coverage_complete.md) — SSZ complete test coverage
 
 ### 08_FALSIFICATION
 - [falsification_criteria.md](08_FALSIFICATION/falsification_criteria.md) — When SSZ is falsified
@@ -133,13 +149,14 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 - [known_limitations.md](08_FALSIFICATION/known_limitations.md) — Known limitations and open questions
 - [ligo_open_data_position.md](08_FALSIFICATION/ligo_open_data_position.md) — Strain vs posteriors: model-bound self-confirmation problem
 - [ligo_physics_clarification.md](08_FALSIFICATION/ligo_physics_clarification.md) — Chirp mass, posteriors, L1 anomaly, anti-circularity
-- [ligo_reproducibility_critique.md](08_FALSIFICATION/ligo_reproducibility_critique.md) — Sourced critique: calibration gap, bilby migration, PB-scale data vs public release ([ssz-ligo-tests/docs](https://github.com/error-wtf/ssz-ligo-tests/blob/main/docs/LIGO_REPRODUCIBILITY_CRITIQUE.md))
-- [ligo_open_data_full_report.md](08_FALSIFICATION/ligo_open_data_full_report.md) — **Full Report** (8 parts, 14 sources): calibration chain, PCal/DARM gap, code provenance, template dependence, GW150914 reproduction failure, reproducibility standard ([ssz-ligo-tests/docs](https://github.com/error-wtf/ssz-ligo-tests/blob/main/docs/LIGO_OPEN_DATA_FULL_REPORT.md))
+- LIGO reproducibility critique — sourced critique: calibration gap, bilby migration, PB-scale data vs public release → hosted in [ssz-ligo-tests/docs](https://github.com/error-wtf/ssz-ligo-tests/blob/main/docs/LIGO_REPRODUCIBILITY_CRITIQUE.md). *(The relative link `08_FALSIFICATION/ligo_reproducibility_critique.md` used here was dead — target exists only in the external repo; flagged by the [pipeline link check](#full-pipeline--report) and openly re-pointed to the GitHub URL in the 2026-10-11 revision.)*
+- LIGO open data full report (8 parts, 14 sources) — calibration chain, PCal/DARM gap, code provenance, template dependence, GW150914 reproduction failure, reproducibility standard → hosted in [ssz-ligo-tests/docs](https://github.com/error-wtf/ssz-ligo-tests/blob/main/docs/LIGO_OPEN_DATA_FULL_REPORT.md). *(Same dead relative link `08_FALSIFICATION/ligo_open_data_full_report.md` — openly re-pointed 2026-10-11.)*
 
 ### 09_PAPERS
 - [paper_index.md](09_PAPERS/paper_index.md) — All 25 papers with abstracts
 - [bibliography.md](09_PAPERS/bibliography.md) — References
 - [preprints.md](09_PAPERS/preprints.md) — Preprint status
+- `markdown/` — 64 mirrored paper markdown files (source PDFs in `pdf/`), plus the interactive [Exponential Triangle visualization README](09_PAPERS/markdown/README.md)
 
 ### 10_REPOSITORIES
 - [repo_index.md](10_REPOSITORIES/repo_index.md) — All 37 repositories
@@ -162,6 +179,11 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 - [frequency_curvature.md](13_FREQUENCY_FRAMEWORK/frequency_curvature.md) — d²D/dr² = 4× GR, 3-clock measurement
 - [future_experimental_prospects.md](13_FREQUENCY_FRAMEWORK/future_experimental_prospects.md) — Timeline 2024–2038: EHT, eXTP, ET, LISA, Athena
 
+### Root
+- [full-segmented-memory.md](full-segmented-memory.md) — Full segmented memory (project brain)
+- [FULL_PIPELINE_REPORT.md](FULL_PIPELINE_REPORT.md) — Latest pipeline report (generated, see below)
+- [LICENSE.md](LICENSE.md) — Anti-Capitalist Software License v1.4
+
 ---
 
 ## Key Numbers
@@ -170,11 +192,65 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 |--------|-------|
 | Papers | 25 primary + 7 additional |
 | LIGO Tests (ssz-ligo-tests) | v0.5.0 — 330+ tests, GW240925 O4b, long-baseline xcorr, NO CLAIM |
-| Repositories | 37 total |
+| Repositories | 37 total (35 public, 2 private) |
 | Tests | 1296/1296 verified in canonical all-tests run |
-| Documentation files | 63+ MD files (this repo) |
-| Consistency checks | 0 failed in all-tests snapshot |
+| Documentation files | **172 MD files** (105 core + 67 under `09_PAPERS/`: 3 indexes + 64 markdown mirrors) — audited 2026-10-11 |
+| Consistency checks | 0 failed in all-tests snapshot; pipeline formula check 11/11 OK (2026-10-11) |
 
+---
+
+## Core Physics Animations
+
+Animated GIF plots of the SSZ core physics, rendered by [`demos/render_core_physics_animations.py`](demos/render_core_physics_animations.py) (numpy + matplotlib + pillow, dark theme). All formulas are taken verbatim from the canonical documentation — sources are cited in the module docstring.
+
+| GIF | Frames | Shows |
+|-----|--------|-------|
+| `demos/output/ssz_time_dilation_gr_vs_ssz.gif` | 76 | D(r) = 1/(1+Ξ(r)) built up dynamically; GR D→0 at r_s vs SSZ D(r_s) = 0.55503 (finite) |
+| `demos/output/ssz_regime_map_animated.gif` | 80 | Weak/strong regime map with transition radii fading in (very close / blend / photon sphere / strong / weak, in r/r_s) |
+| `demos/output/ssz_phi_lattice_bracket_theorem.gif` | 66 | φ-lattice x_k = φ^k growing + bracket-theorem intervals [F_k, F_k+1] |
+
+Render (self-checks run automatically; exit code 0 on success):
+
+```bash
+/home/error/physics/venv/bin/python demos/render_core_physics_animations.py
+```
+
+See [REPRODUCE.md](REPRODUCE.md) for how to re-derive every number shown.
+
+---
+
+## Full Pipeline & Report
+
+[`tools/run_full_pipeline.py`](tools/run_full_pipeline.py) (stdlib only) runs three checks over the repository and writes [`FULL_PIPELINE_REPORT.md`](FULL_PIPELINE_REPORT.md):
+
+1. **Inventory** — MD files per section, core vs paper-mirror counts
+2. **Link check** — resolves all relative Markdown links, reports dead targets (policy: *report only, never silently fix*)
+3. **Formula consistency** — recomputes the canonical key numbers (Ξ(r_s) = 0.80171, D(r_s) = 0.55503, r*/r_s = 1.594811 and 1.386562, …) and counts their cross-file presence
+
+Latest run (2026-10-11, after this revision): **172 MD files, formula identities 11/11 OK, 0 dead links** (the two historical LIGO dead links in `08_FALSIFICATION` were openly re-pointed to their GitHub URLs in this README revision; the pipeline now resolves every link).
+
+```bash
+/home/error/physics/venv/bin/python tools/run_full_pipeline.py
+```
+
+---
+
+## Research Repositories (2026-10-11 re-certification)
+
+Numerical research lives in separate repositories; this repo is the canonical documentation.
+
+| Repository | Purpose |
+|---|---|
+| [SSZ_FULL_CLOSURE](https://github.com/error-wtf/SSZ_FULL_CLOSURE) | Full-closure numerical program: FK coupled model, SRF gates, bridge runs |
+| [SSZ-Transport-Bridge](https://github.com/error-wtf/SSZ-Transport-Bridge) | Transport-bridge calculations |
+| [SSZ-Spectroscopy-Bridge](https://github.com/error-wtf/SSZ-Spectroscopy-Bridge) | Spectroscopy-bridge calculations (QNM/ε-220 program) |
+
+**Re-certification 2026-10-11** (documented in [SSZ_FULL_CLOSURE](https://github.com/error-wtf/SSZ_FULL_CLOSURE)):
+
+- FK coupled model V1: **6/6 gates PASS**
+- SRF: **5/5 gates PASS**
+- Bridge Run 6: **STAGE1 + STAGE2 PASS**
+- SW-Diag: **verdict PEAKS_NOT_ROBUST**
 
 ---
 
@@ -188,6 +264,9 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 6. **Regime vs formula domains?** → Read [02_FOUNDATIONS/regime_and_formula_domain_clarification.md](02_FOUNDATIONS/regime_and_formula_domain_clarification.md)
 7. **φ-Lattice** → See [02_FOUNDATIONS/phi_lattice_discretization.md](02_FOUNDATIONS/phi_lattice_discretization.md)
 8. **Experimental timeline** → See [13_FREQUENCY_FRAMEWORK/future_experimental_prospects.md](13_FREQUENCY_FRAMEWORK/future_experimental_prospects.md)
+9. **See the physics animated** → Run the [animation renderer](demos/render_core_physics_animations.py), watch the GIFs in `demos/output/`
+10. **Audit the repo** → Run the [full pipeline](tools/run_full_pipeline.py), read [FULL_PIPELINE_REPORT.md](FULL_PIPELINE_REPORT.md)
+11. **Reproduce / peer-review** → Follow [REPRODUCE.md](REPRODUCE.md); review notes in [PEER_REVIEW.md](PEER_REVIEW.md)
 
 ---
 
@@ -196,7 +275,7 @@ At the Schwarzschild radius: **D(r_s) = 0.555** (finite!) vs GR: D(r_s) = 0 (sin
 > **Observable → Class → Method → Scope → Then calculate.**
 
 | Observable Type | Method | Formula |
-|----------------|--------|---------|
+|-----------------|--------|---------|
 | Timelike (clocks) | Ξ-based | D = 1/(1+Ξ) |
 | Null (light) | PPN (1+γ) | α = 2r_s/b |
 | Orbit (precession) | PPN (β,γ) | Standard PPN |
